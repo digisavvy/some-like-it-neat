@@ -97,6 +97,12 @@ function dg_add_fontawesome() {
 	echo "<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Oswald' rel='stylesheet' type='text/css'>";
 }
 add_action( 'wp_head', 'dg_add_fontawesome' );
+
+/**
+ * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
+ */
+include( 'library/tha-theme-hooks.php' );
+
 /**
  * Implement the Custom Header feature.
  */
