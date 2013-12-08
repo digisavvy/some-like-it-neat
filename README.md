@@ -6,7 +6,7 @@
 
 I got bored on a Saturday and set out to build a super basic WordPress theme. Not enough damn peyote and more than enough time makes for a potent mix of futility... I need a girlfriend. Send help!
 
-Okay, so, right now here's where we're at:
+**Okay, so, right now here's where we're at:**
 
 * Undersores (_s) based theme. There's smarter folks than me building great shit (http://underscores.me)
 * Sass. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. As of the initial writing of this ReadMe, I've been using Sass like a piece of shit asshole. I don't know what the fuck I'm doing. So if you do, please feel free to send a merge request! If you don't know Sass, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
@@ -23,5 +23,5 @@ Coming Soon
 Getting Started
 ---------------
 
-I'll be coming back tot his later
+I'll be coming back to this later
 
