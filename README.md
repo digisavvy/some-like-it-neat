@@ -4,7 +4,7 @@
 ### A WordPress Theme Using _s, Bourbon + Neat and Theme Hook Alliance
 =======
 
-I got bored on a Saturday and set out to build a super basic WordPress theme. Not enough damn peyote and more than enough time makes for a potent mix of futility... I need a girlfriend. Send help!
+I got bored on a Saturday and set out to build a super basic WordPress theme. Not enough damn peyote and more than enough time makes for a potent mix of futility... I need a girlfriend. Send help! This is my initial baseline for this project. There's stuff to add and stuff to take away... So there's that.
 
 **Okay, so, right now here's where we're at:**
 
@@ -13,7 +13,13 @@ I got bored on a Saturday and set out to build a super basic WordPress theme. No
 * Responsive — Eh. I mean, it's about as minimal as you can get, but it's there.
 * Merge requests welcome...
 
+Shit I included just because
+---------------
+I admit it. I just add things because I think they're cool. It's a bad habit... You should see my collection of hats and socks. 
 
+* Google Fonts
+* Font Awesome (http://fontawesome.io)
+* Genericons (http://genericons.com)
 
 Coming Soon
 ---------------
