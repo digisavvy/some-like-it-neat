@@ -101,7 +101,7 @@
 	border-bottom: solid 5px #f3f3f3;
 }
 ul.nav-menu li {
-	@include transition (all 200ms ease-in-out);
+	@include transition (background 200ms ease-in-out);
 	@include media($sm) {
 		text-align: center;
 		width: 100%;
@@ -114,7 +114,7 @@ ul.nav-menu li {
 	padding: 10px;
 
 	&:hover {
-		@include transition (all 200ms ease-in-out);
+		@include transition (background 200ms ease-in-out);
 		background: #f3f3f3;
 	}
 }
