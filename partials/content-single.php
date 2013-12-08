@@ -9,11 +9,11 @@
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
-<<<<<<< HEAD
+
 			<?php digistarter_posted_on(); ?>
-=======
+
 			<span class="genericon genericon-time"></span> <?php digistarter_posted_on(); ?>
->>>>>>> Added a couple genericons and some styling
+
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
