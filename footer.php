@@ -13,7 +13,7 @@
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="site-info">
 				<?php do_action( 'digistarter_credits' ); ?>
-				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'digistarter' ), 'WordPress' ); ?></a>
+				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by <span class="genericon genericon-wordpress"></span> %s', 'digistarter' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
 				<?php printf( __( 'Theme: %1$s by %2$s.', 'digistarter' ), 'digistarter', '<a href="http://alexhasnicehair.com" rel="designer">Alex Vasquez</a>' ); ?>
 			</div><!-- .site-info -->
