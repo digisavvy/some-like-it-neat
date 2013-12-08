@@ -1,0 +1,37 @@
+a, a:visited {
+	@include transition (all 200ms ease-in-out);
+	color: #666;
+	text-decoration: none;
+
+	&:hover {
+		@include transition (all 200ms ease-in-out);
+		color: #ff0000;
+	}
+}
+b, strong {
+	@include fontSize(18px);
+	color: #000;
+	font-weight: bold;
+}
+h2 {
+	@include fontSize(24px);
+	font-family: $title;
+	margin-bottom: 15px;
+}
+.entry-title {
+	font-family: $title;
+	@include media($sm) {
+		@include fontSize(40px);
+	}
+	@include media($smbg) {
+		@include fontSize(65px);
+	}
+	@include media($md) {
+		@include fontSize(100px);
+	}
+}
+#primary,
+#secondary {
+	font-family: $content;
+}
+

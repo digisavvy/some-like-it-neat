@@ -1,0 +1,45 @@
+html {
+	@include fontSize(20px);
+}
+body {
+	background: #f3f1ec;
+	font-family: $helvetica;
+	word-break: break-word;
+}
+#page {
+	@include outer-container;
+}
+.wrap {
+	box-shadow: 13px 13px 0 #ccc;
+	@include media($sm) {
+
+		background: #fff;
+		margin: 20px;
+		padding: 10px;
+	}
+	@include media($hg) {
+		margin: 40px;
+		padding: 40px;
+
+	}
+}
+#primary {
+	@include clearfix;
+	margin: auto;
+	width: 75%;
+
+	ul {
+		list-style: none;
+
+		li:before {
+			@include genericon-rules;
+		}
+	}
+
+}
+#secondary {
+	border-top: solid 10px #ccc;
+	margin: 20px auto;
+	padding: 40px 0;
+	width: 75%;
+}

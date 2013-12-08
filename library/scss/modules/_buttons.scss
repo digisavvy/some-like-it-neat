@@ -1,0 +1,16 @@
+#submit {
+	@include transition (all 200ms ease-in-out);
+	background: #fff;
+	border: solid 5px #ccc;
+	box-shadow: none;
+	padding: 20px;
+	border-radius: 50px;
+
+	&:hover {
+		@include transition (all 200ms ease-in-out);
+		background: #f3f3f3;
+		border: solid 5px #999;
+		box-shadow: none;
+		text-shadow: 1px 1px 0 #fff;
+	}
+}
