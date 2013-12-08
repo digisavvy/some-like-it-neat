@@ -24,7 +24,7 @@ I admit it. I just add things because I think they're cool. It's a bad habit... 
 Coming Soon
 ---------------
 
-* Theme Hook Alliance Integration. Yeah, I'm lazy. That's next on my to-do list! You guys sound like my mother! 
+* ~~Theme Hook Alliance Integration. Yeah, I'm lazy. That's next on my to-do list! You guys sound like my mother!~~ — Theme is now partially 'hooked-up'. That is, template part files, located in '/partials' have had THA hooks added... Other files will be done soon. Feel free to add em yourself, if you have a minute!
 * Further use of WP Customizer. I don't know how to use the fucking thing, so tips are appreciated; so don't be a lazy fucker!
 
 Getting Started
