@@ -121,3 +121,8 @@ require get_template_directory() . '/library/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/library/inc/jetpack.php';
+
+/**
+ * Post Format support
+ */
+ add_theme_support( 'post-formats', array( 'aside') );
