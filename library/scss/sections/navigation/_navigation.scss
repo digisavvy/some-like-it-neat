@@ -126,8 +126,10 @@ ul.nav-menu li {
 	}
 	a, a:visited {
 
-
 	}
+}
+ul.nav-menu li.current_page_item {
+	background: #f3f3f3;
 }
 
 .menu-toggle {
