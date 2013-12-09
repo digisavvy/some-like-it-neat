@@ -430,10 +430,11 @@ a:active {
     text-shadow: 1px 1px 0 #fff; }
 
 html {
-  font-size: 20px;
-  font-size: 1.25rem; }
+  font-size: 100%; }
 
 body {
+  font-size: 20px;
+  font-size: 1.25rem;
   background: #f3f1ec;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   word-break: break-word; }
