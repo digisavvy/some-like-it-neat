@@ -439,28 +439,9 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   word-break: break-word; }
 
-#page {
-  *zoom: 1;
-  max-width: 71.25em;
-  margin-left: auto;
-  margin-right: auto; }
-  #page:before, #page:after {
-    content: " ";
-    display: table; }
-  #page:after {
-    clear: both; }
-
-.wrap {
-  box-shadow: 13px 13px 0 #ccc; }
-  @media screen and (min-width: 320px) {
-    .wrap {
-      background: #fff;
-      margin: 20px;
-      padding: 10px; } }
-  @media screen and (min-width: 1140px) {
-    .wrap {
-      margin: 40px;
-      padding: 40px; } }
+@media screen and (min-width: 320px) {
+  .wrap {
+    background: #fff; } }
 
 #primary {
   *zoom: 1;
@@ -489,6 +470,9 @@ body {
   width: 75%; }
 
 /* Import Add-ons */
+h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
+  text-decoration: none; }
+
 a, a:visited {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -682,6 +666,9 @@ ul.nav-menu li {
   background-color: #f3f3f3;
   display: block; }
 
+ul.nav-menu li.current_page_item {
+  background: #f3f3f3; }
+
 @media screen and (min-width: 320px) {
   .menu-toggle {
     text-align: center; } }
@@ -767,6 +754,11 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
   display: block; }
+
+#content .entry-content a, #content .entry-content a:visited {
+  border-bottom: solid 1px #ff0000; }
+#content .entry-meta a, #content .entry-meta a:visited {
+  border-bottom: solid 1px #ff0000; }
 
 /* =Asides
 ----------------------------------------------- */
