@@ -10,8 +10,6 @@
 
 		<div class="entry-meta">
 
-			<?php digistarter_posted_on(); ?>
-
 			<span class="genericon genericon-time"></span> <?php digistarter_posted_on(); ?>
 
 		</div><!-- .entry-meta -->
