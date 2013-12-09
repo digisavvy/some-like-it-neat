@@ -1,0 +1,50 @@
+h1, h2, h3, h4, h5, h6 {
+	a, a:visited {
+		text-decoration: none;
+	}
+}
+a, a:visited {
+	@include transition (all 200ms ease-in-out);
+	color: #666;
+	text-decoration: none;
+
+	&:hover {
+		@include transition (all 200ms ease-in-out);
+		color: #ff0000;
+	}
+}
+b, strong {
+	@include fontSize(18px);
+	color: #000;
+	font-weight: bold;
+}
+h2 {
+	@include fontSize(24px);
+	font-family: $title;
+	margin-bottom: 15px;
+}
+.entry-title {
+	font-family: $title;
+	text-align: center;
+
+	@include media($sm) {
+		@include fontSize(40px);
+	}
+	@include media($smbg) {
+		@include fontSize(65px);
+	}
+	@include media($md) {
+		@include fontSize(100px);
+	}
+}
+#primary,
+#secondary {
+	font-family: $content;
+}
+.genericon {
+	@include fontSize(24px);
+	margin-right: 10px;
+	top: 2px;
+	position: relative;
+	vertical-align: top;
+}
