@@ -8,19 +8,16 @@ body {
 	word-break: break-word;
 }
 #page {
-	@include outer-container;
+	 // @include outer-container;
 }
 .wrap {
-	box-shadow: 13px 13px 0 #ccc;
 	@include media($sm) {
 
 		background: #fff;
-		margin: 20px;
-		padding: 10px;
+
 	}
 	@include media($hg) {
-		margin: 40px;
-		padding: 40px;
+
 
 	}
 }
