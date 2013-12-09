@@ -1,7 +1,8 @@
 html {
-	@include fontSize(20px);
+	font-size: 100%;
 }
 body {
+	@include fontSize(20px);
 	background: #f3f1ec;
 	font-family: $helvetica;
 	word-break: break-word;
