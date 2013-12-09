@@ -100,3 +100,17 @@ object {
 .infinity-end.neverending .site-footer {
 	display: block;
 }
+
+#content {
+
+	.entry-content {
+		a, a:visited {
+			border-bottom: solid 1px #ff0000;
+		}
+	}
+	.entry-meta {
+		a, a:visited {
+			border-bottom: solid 1px #ff0000;
+		}
+	}
+}
