@@ -470,8 +470,10 @@ body {
   width: 75%; }
 
 /* Import Add-ons */
-h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
-  text-decoration: none; }
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 20px; }
+  h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
+    text-decoration: none; }
 
 h1 {
   font-size: 75px;
@@ -481,21 +483,18 @@ h1 {
 h2 {
   font-size: 50px;
   font-size: 3.125rem;
-  font-family: "Oswald", helvetica, sans-serif;
-  margin-bottom: 15px; }
+  font-family: "Oswald", helvetica, sans-serif; }
 
 h3 {
   font-size: 26px;
   font-size: 1.625rem;
   font-family: "Droid Serif", Georgia, serif;
-  margin-bottom: 15px;
   text-transform: uppercase; }
 
 h4 {
   font-size: 24px;
   font-size: 1.5rem;
-  font-family: "Oswald", helvetica, sans-serif;
-  margin-bottom: 15px; }
+  font-family: "Oswald", helvetica, sans-serif; }
 
 h5 {
   font-size: 24px;
@@ -505,7 +504,6 @@ h5 {
   border-bottom: solid 1px #ff0000;
   font-family: "Droid Serif", Georgia, serif;
   font-style: italic;
-  margin-bottom: 15px;
   text-transform: uppercase; }
   h5:before, h5:after {
     content: " ";
@@ -521,7 +519,6 @@ h6 {
   border-top: solid 1px #ff0000;
   display: inline-block;
   font-family: "Oswald", helvetica, sans-serif;
-  margin-bottom: 15px;
   text-transform: uppercase; }
   h6:before, h6:after {
     content: " ";
@@ -539,9 +536,10 @@ cite {
   font-style: italic; }
 
 strong, b {
-  font-size: 24px;
-  font-size: 1.5rem;
-  color: #000; }
+  font-size: 20px;
+  font-size: 1.25rem;
+  color: #000;
+  font-family: "Oswald", helvetica, sans-serif; }
 
 a, a:visited {
   -webkit-transition: all 200ms ease-in-out;

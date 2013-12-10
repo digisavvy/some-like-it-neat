@@ -1,4 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 20px;
 	a, a:visited {
 		text-decoration: none;
 	}
@@ -10,18 +11,15 @@ h1 {
 h2 {
 	@include fontSize(50px);
 	font-family: $title;
-	margin-bottom: 15px;
 }
 h3 {
 	@include fontSize(26px);
 	font-family: $content;
-	margin-bottom: 15px;
 	text-transform: uppercase;
 }
 h4 {
 	@include fontSize(24px);
 	font-family: $title;
-	margin-bottom: 15px;
 }
 h5 {
 	@include fontSize(24px);
@@ -30,7 +28,6 @@ h5 {
 	border-bottom: solid 1px #ff0000;
 	font-family: $content;
 	font-style: italic;
-	margin-bottom: 15px;
 	text-transform: uppercase;
 }
 h6 {@include clearfix;
@@ -40,7 +37,6 @@ h6 {@include clearfix;
 	border-top: solid 1px #ff0000;
 	display: inline-block;
 	font-family: $title;
-	margin-bottom: 15px;
 	text-transform: uppercase;
 }
 blockquote {
@@ -53,8 +49,9 @@ cite {
 	font-style: italic;
 }
 strong, b {
-	@include fontSize(24px);
+	@include fontSize(20px);
 	color: #000;
+	font-family: $title;
 }
 a, a:visited {
 	@include transition (all 200ms ease-in-out);
