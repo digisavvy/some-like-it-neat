@@ -119,11 +119,23 @@ require get_template_directory() . '/library/inc/template-tags.php';
 require get_template_directory() . '/library/inc/extras.php';
 
 /**
- * Customizer additions.
+ * WP Customizer additions.
  */
 require get_template_directory() . '/library/inc/customizer.php';
+
+function dg_customizer_register( $wp_customize ) {
+   //All our sections, settings, and controls will be added here
+
+
+}
+add_action( 'customize_register', 'dg_customizer_register' );
+
 
 /**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/library/inc/jetpack.php';
+
+
+
+
