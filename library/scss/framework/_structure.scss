@@ -12,12 +12,9 @@ body {
 }
 .wrap {
 	@include media($sm) {
-
 		background: #fff;
-
 	}
 	@include media($hg) {
-
 
 	}
 }
