@@ -632,44 +632,6 @@ a, a:visited {
 
 /* =Menu
 ----------------------------------------------- */
-.main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
-
-.main-navigation ul {
-  list-style: none;
-  margin: 0;
-  padding-left: 0; }
-
-.main-navigation li {
-  float: left;
-  position: relative; }
-
-.main-navigation a {
-  display: block;
-  text-decoration: none; }
-
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  display: none;
-  float: left;
-  left: 0;
-  position: absolute;
-  top: 1.5em;
-  z-index: 99999; }
-
-.main-navigation ul ul ul {
-  left: 100%;
-  top: 0; }
-
-.main-navigation ul ul a {
-  width: 200px; }
-
-.main-navigation ul li:hover > ul {
-  display: block; }
-
 /* Small menu */
 .menu-toggle {
   cursor: pointer;
@@ -745,6 +707,29 @@ ul.nav-menu li.current_page_item {
     height: 8px;
     padding-top: 10px;
     padding-bottom: 20px; } }
+
+.sf-menu {
+  border-top: solid 5px #ccc;
+  border-bottom: solid 5px #ccc;
+  float: left;
+  width: 100%; }
+  .sf-menu li {
+    -webkit-transition: background 800ms ease-in-out;
+    -moz-transition: background 800ms ease-in-out;
+    transition: background 800ms ease-in-out;
+    background: #fff !important; }
+    .sf-menu li:hover {
+      -webkit-transition: background 800ms ease-in-out;
+      -moz-transition: background 800ms ease-in-out;
+      transition: background 800ms ease-in-out;
+      background-color: #f9f9f9 !important; }
+    .sf-menu li a, .sf-menu li a:visited {
+      color: #666;
+      font-family: "Oswald", helvetica, sans-serif !important; }
+
+.mean-container .mean-nav ul li a, .mean-container .mean-nav ul li a:visited {
+  color: #666;
+  text-align: center !important; }
 
 /* =Content
 ----------------------------------------------- */
