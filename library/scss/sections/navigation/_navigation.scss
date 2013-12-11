@@ -134,6 +134,9 @@ ul.nav-menu li.current_page_item {
 
 .menu-toggle {
 	@include media($sm) {
-			text-align: center;
-		}
+		text-align: center;
+		height: 8px;
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
 }
