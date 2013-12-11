@@ -34,7 +34,7 @@
 			</div>
 
 			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<h1 class="menu-toggle"><?php _e( 'Menu', 'digistarter' ); ?></h1>
+				<h1 class="menu-toggle"><?php _e( '<span class="genericon genericon-menu"></span>', 'digistarter' ); ?></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'digistarter' ); ?></a>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
