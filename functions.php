@@ -43,6 +43,8 @@ function digistarter_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'digistarter' ),
+		'menu_class'      => 'sf-menu',
+		'items_wrap'      => '<ul id="%1$s" class="sf-menu">%3$s</ul>'
 	) );
 
 	// Enable support for Post Formats.
@@ -100,6 +102,9 @@ function digistarter_scripts() {
 	wp_enqueue_script( 'selectivizr' );
 
 	// Superfish Scripts
+	wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/hoverIntent.js', array(), '1.0.0', false );
+	wp_enqueue_script( 'hoverintent' );
+
 	wp_register_script( 'superfish', get_template_directory_uri() . '/library/js/superfish.js', array(), '1.0.0', false );
 	wp_enqueue_script( 'superfish' );
 
@@ -114,6 +119,15 @@ function dg_add_fontawesome() {
 	echo "<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Oswald' rel='stylesheet' type='text/css'>";
 }
 add_action( 'wp_head', 'dg_add_fontawesome' );
+
+function dg_add_superfish(){ ?>
+	<script>
+		jQuery(document).ready(function() {
+			jQuery('ul.sf-menu').superfish();
+		});
+	</script>
+<?php }
+add_action( 'wp_head', 'dg_add_superfish' );
 
 /**
  * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
