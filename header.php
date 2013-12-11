@@ -33,11 +33,10 @@
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<h1 class="menu-toggle"><?php _e( '<span class="genericon genericon-menu"></span>', 'digistarter' ); ?></h1>
-				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'digistarter' ); ?></a>
+			<nav id="primary-nav" role="navigation">
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'sf-menu', ) ); ?>
+
 			</nav><!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>
 		</header><!-- #masthead -->
