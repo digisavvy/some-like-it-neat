@@ -76,15 +76,32 @@ add_action( 'widgets_init', 'digistarter_widgets_init' );
  * Enqueue scripts and styles.
  */
 function digistarter_scripts() {
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css' );
+	if (!is_admin()) {
+		wp_enqueue_script('jquery');
+	}
+
+	// Main Style
 	wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
 
+	// Genericons Style
+	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css' );
+
+	// Superfish Style
+	wp_enqueue_style( 'superfish', get_template_directory_uri() . '/library/css/superfish/superfish.css' );
+
+	// Navigation
 	wp_enqueue_script( 'digistarter-navigation', get_template_directory_uri() . '/library/js/navigation.js', array(), '20120206', true );
 
+	// Skiplink Focus Fi
 	wp_enqueue_script( 'digistarter-skip-link-focus-fix', get_template_directory_uri() . '/library/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-	wp_enqueue_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr-min.js', array(), '1.0.0', false );
+	// Selectivizr Scripts
+	wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr-min.js', array(), '1.0.0', false );
+	wp_enqueue_script( 'selectivizr' );
 
+	// Superfish Scripts
+	wp_register_script( 'superfish', get_template_directory_uri() . '/library/js/superfish.js', array(), '1.0.0', false );
+	wp_enqueue_script( 'superfish' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
