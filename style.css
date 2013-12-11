@@ -411,24 +411,6 @@ a:active {
 .site-footer:after {
   clear: both; }
 
-#submit {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
-  background: #fff;
-  border: solid 5px #ccc;
-  box-shadow: none;
-  padding: 20px;
-  border-radius: 50px; }
-  #submit:hover {
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
-    background: #f3f3f3;
-    border: solid 5px #999;
-    box-shadow: none;
-    text-shadow: 1px 1px 0 #fff; }
-
 html {
   font-size: 100%; }
 
@@ -468,6 +450,38 @@ body {
   margin: 20px auto;
   padding: 40px 0;
   width: 75%; }
+
+#submit {
+  background: white;
+  border: solid 5px #cccccc;
+  border-radius: 50px;
+  box-shadow: none;
+  font-family: "Oswald", helvetica, sans-serif;
+  padding: 20px;
+  transition: all 200ms ease-in-out; }
+  #submit:hover {
+    background: #f2f2f2;
+    border: solid 5px #999999;
+    border-radius: 50px;
+    box-shadow: none;
+    font-family: "Oswald", helvetica, sans-serif;
+    padding: 20px; }
+
+.neat-button {
+  background: white;
+  border: solid 5px #cccccc;
+  border-radius: 50px;
+  box-shadow: none;
+  font-family: "Oswald", helvetica, sans-serif;
+  padding: 20px;
+  transition: all 200ms ease-in-out; }
+  .neat-button:hover {
+    background: #f2f2f2;
+    border: solid 5px #999999;
+    border-radius: 50px;
+    box-shadow: none;
+    font-family: "Oswald", helvetica, sans-serif;
+    padding: 20px; }
 
 /* Import Add-ons */
 h1, h2, h3, h4, h5, h6 {
@@ -727,7 +741,10 @@ ul.nav-menu li.current_page_item {
 
 @media screen and (min-width: 320px) {
   .menu-toggle {
-    text-align: center; } }
+    text-align: center;
+    height: 8px;
+    padding-top: 10px;
+    padding-bottom: 20px; } }
 
 /* =Content
 ----------------------------------------------- */
