@@ -456,7 +456,9 @@ body {
   border: solid 5px #cccccc;
   border-radius: 50px;
   box-shadow: none;
+  clear: both;
   font-family: "Oswald", helvetica, sans-serif;
+  margin: 10px 0;
   padding: 20px;
   transition: all 200ms ease-in-out; }
   #submit:hover {
@@ -472,13 +474,39 @@ body {
   border: solid 5px #cccccc;
   border-radius: 50px;
   box-shadow: none;
+  clear: both;
   font-family: "Oswald", helvetica, sans-serif;
+  margin: 10px 0;
   padding: 20px;
   transition: all 200ms ease-in-out; }
   .neat-button:hover {
     background: #f2f2f2;
     border: solid 5px #999999;
     border-radius: 50px;
+    box-shadow: none;
+    font-family: "Oswald", helvetica, sans-serif;
+    padding: 20px; }
+
+.neat-3d-button {
+  background: white;
+  border-top: solid 3px #cccccc;
+  border-right: solid 3px #cccccc;
+  border-left: solid 3px #cccccc;
+  border-bottom: solid 5px #999;
+  border-radius: 10px;
+  clear: both;
+  float: left;
+  font-family: oswald;
+  margin: 15px 0;
+  padding: 20px;
+  transition: all 200ms ease-in-out; }
+  .neat-3d-button:hover {
+    background: #f2f2f2;
+    border-top: solid 3px #999999;
+    border-right: solid 3px #999999;
+    border-left: solid 3px #999999;
+    border-bottom: solid 3px #999999;
+    border-radius: 10px;
     box-shadow: none;
     font-family: "Oswald", helvetica, sans-serif;
     padding: 20px; }
