@@ -146,6 +146,15 @@ ul.nav-menu li.current_page_item {
 	float: left;
 	width: 100%;
 
+	br {
+		display: none;
+	}
+	.sub {
+		text-align: center;
+		display: block;
+		float: none;
+		font-size: 13px;
+	}
 	li {
 		@include transition (background 800ms ease-in-out);
 		background: #fff !important;

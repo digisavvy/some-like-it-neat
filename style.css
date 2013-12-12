@@ -741,6 +741,13 @@ ul.nav-menu li.current_page_item {
   border-bottom: solid 5px #ccc;
   float: left;
   width: 100%; }
+  .sf-menu br {
+    display: none; }
+  .sf-menu .sub {
+    text-align: center;
+    display: block;
+    float: none;
+    font-size: 13px; }
   .sf-menu li {
     -webkit-transition: background 800ms ease-in-out;
     -moz-transition: background 800ms ease-in-out;
