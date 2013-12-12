@@ -724,7 +724,7 @@ ul.nav-menu li.current_page_item {
       transition: background 800ms ease-in-out;
       background-color: #f9f9f9 !important; }
     .sf-menu li a, .sf-menu li a:visited {
-      color: #666;
+      color: #666 !important;
       font-family: "Oswald", helvetica, sans-serif !important; }
 
 .mean-container .mean-nav ul li a, .mean-container .mean-nav ul li a:visited {
