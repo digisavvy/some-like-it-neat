@@ -3,8 +3,9 @@
  * @package digistarter
  */
 ?>
-<?php tha_content_before(); ?>
+<?php tha_entry_before(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
@@ -16,7 +17,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php tha_content_top(); ?>
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -24,7 +24,7 @@
 				'after'  => '</div>',
 			) );
 		?>
-		<?php tha_entry_bottom(); ?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
@@ -63,5 +63,6 @@
 
 		<?php edit_post_link( __( 'Edit', 'digistarter' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post-## -->
 <?php tha_entry_after(); ?>

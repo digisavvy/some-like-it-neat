@@ -7,6 +7,7 @@
  * @package digistarter
  */
 ?><!DOCTYPE html>
+<?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
 	<?php tha_head_top(); ?>
@@ -50,6 +51,7 @@
 			</nav><!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>
 		</header><!-- #masthead -->
+		<?php tha_header_after(); ?>
 
 		<?php tha_content_before(); ?>
 		<div id="content" class="site-content">
