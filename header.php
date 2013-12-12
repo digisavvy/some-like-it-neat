@@ -35,7 +35,17 @@
 
 			<nav id="primary-nav" role="navigation">
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'sf-menu', ) ); ?>
+				<?php // wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'sf-menu', ) ); ?>
+				<?php
+			       $walker = new My_Walker;
+						wp_nav_menu(array(
+						    'echo' => true,
+							'container' => '',
+							'theme_location' => 'primary',
+							'menu_class' => 'sf-menu',
+							'walker' => $walker
+						));
+			?>
 
 			</nav><!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>
