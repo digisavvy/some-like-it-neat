@@ -22,12 +22,12 @@ I admit it. I just add things because I think they're cool. It's a bad habit... 
 * Genericons: MOAR ICON FONTS!! Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)
 * Superfish Menus: Handles drop down nav nicely. (http://users.tpg.com.au/j_birch/plugins/superfish/)
 * Meanmenu: Hamburger menu when you get down to mobile viewports (https://github.com/weare2ndfloor/meanMenu)
+* Menu Walker Class for Menu Descriptions: Menu descriptions like it's 2008, mofo!
 
 Coming Soon
 ---------------
 
-* ~~Theme Hook Alliance Integration. Yeah, I'm lazy. That's next on my to-do list! You guys sound like my mother!~~ — Theme is now partially 'hooked-up'. That is, template part files, located in '/partials' have had THA hooks added... Other files will be done soon. Feel free to add em yourself, if you have a minute!
-* Finish Hooking-up (Theme hook alliance)
+* ~~Theme Hook Alliance Integration. Yeah, I'm lazy. That's next on my to-do list! You guys sound like my mother!— Theme is now partially 'hooked-up'. That is, template part files, located in '/partials' have had THA hooks added... Other files will be done soon. Feel free to add em yourself, if you have a minute!~~  Theme template files have all been "hooked up" with THA hooks.
 * Further use of WP Customizer. I don't know how to use the fucking thing, so tips are appreciated; so don't be a lazy turd!
 
 Getting Started
