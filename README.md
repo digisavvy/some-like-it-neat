@@ -10,6 +10,7 @@ I got bored on a Saturday and set out to build a super basic WordPress theme. No
 
 * Underscores (_s) based theme. There's smarter folks than me building great shit (http://underscores.me)
 * Sass. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. As of the initial writing of this ReadMe, I've been using Sass like a piece of shit asshole. I don't know what the fuck I'm doing. So if you do, please feel free to school a chump! If you don't know Sass, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
+* Theme Hook Alliance — One of the things I learned to love about working with Frameworks were their hooks. Thematic and Genesis introduced me to the notion. Since them I've been using them like they're going out of style. When I set out to make my own starter theme I wanted to make something that had "just the right amount" of features for me. I knew I needed hooks. The THA project was intro'd to me by Brandon Dove, at the OCWP (http://ocwp.org) developer's day meetup. Thought it was super neat. So I bundled that hot mess right into this thing.
 * Responsive — Eh. I mean, it's about as minimal as you can get, but it's there.
 * Merge requests welcome...
 
@@ -75,4 +76,19 @@ theme_root/library
 ---- header (for styles, not relating to navigation, that existin within the header)  
 ---- navigation  (for nav specific styling)  
 
+### Sass Structure
+---------------
+A special thanks to all the folks who inspire me on a daily basis to "do more" with what I know and what I can contribute.
 
+* Brandon Dove
+* Jeffrey Zinn
+* Steve Zehngut
+* Chris Lema
+* Se Reed
+* Natalie MacLees
+* Ryan Cowles
+* Nathan Tyler
+* Dave Jesch
+* Devin Walker
+* Blair Williams
+* And a fuckload more that I'm missing here.
