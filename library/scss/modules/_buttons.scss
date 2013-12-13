@@ -51,7 +51,8 @@
 }
 
 .neat-button {
-	@include neat-buttons();
+	 // @include ui-tooltip(210px, bottom, rgba(0,0,0, 0.7), ".tooltip");
+	 @include neat-buttons();
 }
 
 .neat-3d-button {
