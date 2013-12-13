@@ -1,6 +1,5 @@
 /* =Content
 ----------------------------------------------- */
-
 .sticky {
 }
 .hentry {
@@ -24,6 +23,17 @@
 	margin: 0 0 1.5em;
 }
 
+/* =Breadcrumbs
+----------------------------------------------- */
+#breadcrumbs {
+	@include fontSize(14px);
+	font-family: $content;
+	padding: 20px 0 20px 50px;
+
+	a, a:visited {
+		border-bottom: solid 1px #ff0000;
+	}
+}
 /* =Media
 ----------------------------------------------- */
 
@@ -78,14 +88,11 @@ object {
 
 /* =Comments
 ----------------------------------------------- */
-
 .comment-content a {
 	word-wrap: break-word;
 }
 .bypostauthor {
 }
-
-
 
 /* =Infinite Scroll
 ----------------------------------------------- */

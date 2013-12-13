@@ -788,6 +788,16 @@ ul.nav-menu li.current_page_item {
   clear: both;
   margin: 0 0 1.5em; }
 
+/* =Breadcrumbs
+----------------------------------------------- */
+#breadcrumbs {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: "Droid Serif", Georgia, serif;
+  padding: 20px 0 20px 50px; }
+  #breadcrumbs a, #breadcrumbs a:visited {
+    border-bottom: solid 1px #ff0000; }
+
 /* =Media
 ----------------------------------------------- */
 .page-content img.wp-smiley,

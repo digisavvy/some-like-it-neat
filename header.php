@@ -50,6 +50,7 @@
 
 			</nav><!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>
+
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
 
