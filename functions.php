@@ -155,7 +155,6 @@ add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
 
 function dg_add_fontawesome() {
 	echo '<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">';
-	echo "<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Oswald' rel='stylesheet' type='text/css'>";
 }
 add_action( 'wp_head', 'dg_add_fontawesome' );
 

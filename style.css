@@ -457,7 +457,7 @@ body {
   border-radius: 50px;
   box-shadow: none;
   clear: both;
-  font-family: "Oswald", helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 10px 0;
   padding: 20px;
   transition: all 200ms ease-in-out; }
@@ -466,7 +466,7 @@ body {
     border: solid 5px #999999;
     border-radius: 50px;
     box-shadow: none;
-    font-family: "Oswald", helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 20px; }
 
 .neat-button {
@@ -475,7 +475,7 @@ body {
   border-radius: 50px;
   box-shadow: none;
   clear: both;
-  font-family: "Oswald", helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 10px 0;
   padding: 20px;
   transition: all 200ms ease-in-out; }
@@ -484,7 +484,7 @@ body {
     border: solid 5px #999999;
     border-radius: 50px;
     box-shadow: none;
-    font-family: "Oswald", helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 20px; }
 
 .neat-3d-button {
@@ -508,7 +508,7 @@ body {
     border-bottom: solid 3px #999999;
     border-radius: 10px;
     box-shadow: none;
-    font-family: "Oswald", helvetica, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 20px; }
 
 /* Import Add-ons */
@@ -520,23 +520,23 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 75px;
   font-size: 4.6875rem;
-  font-family: "Oswald", helvetica, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h2 {
   font-size: 50px;
   font-size: 3.125rem;
-  font-family: "Oswald", helvetica, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h3 {
   font-size: 26px;
   font-size: 1.625rem;
-  font-family: "Droid Serif", Georgia, serif;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   text-transform: uppercase; }
 
 h4 {
   font-size: 24px;
   font-size: 1.5rem;
-  font-family: "Oswald", helvetica, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 h5 {
   font-size: 24px;
@@ -544,7 +544,7 @@ h5 {
   *zoom: 1;
   display: inline;
   border-bottom: solid 1px #ff0000;
-  font-family: "Droid Serif", Georgia, serif;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-style: italic;
   text-transform: uppercase; }
   h5:before, h5:after {
@@ -560,7 +560,7 @@ h6 {
   border-bottom: solid 1px #ff0000;
   border-top: solid 1px #ff0000;
   display: inline-block;
-  font-family: "Oswald", helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
   h6:before, h6:after {
     content: " ";
@@ -581,7 +581,7 @@ strong, b {
   font-size: 20px;
   font-size: 1.25rem;
   color: #000;
-  font-family: "Oswald", helvetica, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 a, a:visited {
   -webkit-transition: all 200ms ease-in-out;
@@ -596,7 +596,7 @@ a, a:visited {
     color: #ff0000; }
 
 .entry-title {
-  font-family: "Oswald", helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center; }
   @media screen and (min-width: 320px) {
     .entry-title {
@@ -613,7 +613,7 @@ a, a:visited {
 
 #primary,
 #secondary {
-  font-family: "Droid Serif", Georgia, serif; }
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif; }
 
 .genericon {
   font-size: 24px;
@@ -627,7 +627,7 @@ a, a:visited {
 .site-branding {
   text-align: center; }
   .site-branding .site-title {
-    font-family: "Oswald", helvetica, sans-serif; }
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
     @media screen and (min-width: 320px) {
       .site-branding .site-title {
         font-size: 35px;
@@ -643,7 +643,7 @@ a, a:visited {
   .site-branding .site-description {
     font-size: 20px;
     font-size: 1.25rem;
-    font-family: "Droid Serif", Georgia, serif;
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
     font-style: italic; }
     @media screen and (min-width: 320px) {
       .site-branding .site-description {
@@ -759,7 +759,7 @@ ul.nav-menu li.current_page_item {
       background-color: #f9f9f9 !important; }
     .sf-menu li a, .sf-menu li a:visited {
       color: #666 !important;
-      font-family: "Oswald", helvetica, sans-serif !important; }
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
 
 #primary-nav {
   float: left;
@@ -796,7 +796,7 @@ ul.nav-menu li.current_page_item {
 #breadcrumbs {
   font-size: 14px;
   font-size: 0.875rem;
-  font-family: "Droid Serif", Georgia, serif;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   padding: 20px 0 20px 50px; }
   #breadcrumbs a, #breadcrumbs a:visited {
     border-bottom: solid 1px #ff0000; }
