@@ -114,9 +114,6 @@ function digistarter_scripts() {
 	// Main Style
 	wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
 
-	// Genericons Style
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css' );
-
 	// Superfish Style
 	wp_enqueue_style( 'superfish', get_template_directory_uri() . '/library/css/superfish/superfish.css' );
 
