@@ -76,7 +76,7 @@ theme_root/library
 ---- header (for styles, not relating to navigation, that existin within the header)  
 ---- navigation  (for nav specific styling)  
 
-### Sass Structure
+### General Credits and Thanks
 ---------------
 A special thanks to all the folks who inspire me on a daily basis to "do more" with what I know and what I can contribute.
 
