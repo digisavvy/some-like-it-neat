@@ -35,14 +35,6 @@ h2 {
 #secondary {
 	font-family: $content;
 }
-.genericon {
-	@include fontSize(24px);
-	margin-right: 10px;
-	top: 2px;
-	position: relative;
-	vertical-align: top;
-	width: inherit;
-}
 code {
 	background: #F9F9E4;
 	padding: 5px;
