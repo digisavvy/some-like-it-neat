@@ -141,10 +141,9 @@ ul.nav-menu li.current_page_item {
 	}
 }
 .sf-menu {
-	border-top: solid 5px #ccc;
-	border-bottom: solid 5px #ccc;
-	float: left;
-	width: 100%;
+	float: none !important;
+	margin: 0 auto !important;
+	width: 85% !important;
 
 	br {
 		display: none;
@@ -171,6 +170,12 @@ ul.nav-menu li.current_page_item {
 	}
 }
 
+#primary-nav {
+	border-top: solid 5px #ccc;
+	border-bottom: solid 5px #ccc;
+	float: left;
+	width: 100%;
+}
 .mean-container {
 
 	.mean-nav {

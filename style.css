@@ -737,10 +737,9 @@ ul.nav-menu li.current_page_item {
     padding-bottom: 20px; } }
 
 .sf-menu {
-  border-top: solid 5px #ccc;
-  border-bottom: solid 5px #ccc;
-  float: left;
-  width: 100%; }
+  float: none !important;
+  margin: 0 auto !important;
+  width: 85% !important; }
   .sf-menu br {
     display: none; }
   .sf-menu .sub {
@@ -761,6 +760,12 @@ ul.nav-menu li.current_page_item {
     .sf-menu li a, .sf-menu li a:visited {
       color: #666 !important;
       font-family: "Oswald", helvetica, sans-serif !important; }
+
+#primary-nav {
+  border-top: solid 5px #ccc;
+  border-bottom: solid 5px #ccc;
+  float: left;
+  width: 100%; }
 
 .mean-container .mean-nav ul li a, .mean-container .mean-nav ul li a:visited {
   color: #666;
