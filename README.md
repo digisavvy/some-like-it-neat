@@ -81,6 +81,7 @@ theme_root/library
 A special thanks to all the folks who inspire me on a daily basis to "do more" with what I know and what I can contribute.
 
 * Brandon Dove
+* Jon Brown
 * Jeffrey Zinn
 * Steve Zehngut
 * Chris Lema
