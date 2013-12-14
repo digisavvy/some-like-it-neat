@@ -1,6 +1,5 @@
 /* =Content
 ----------------------------------------------- */
-
 .sticky {
 }
 .hentry {
@@ -24,6 +23,17 @@
 	margin: 0 0 1.5em;
 }
 
+/* =Breadcrumbs
+----------------------------------------------- */
+#breadcrumbs {
+	@include fontSize(14px);
+	font-family: $content;
+	padding: 20px 0 20px 50px;
+
+	a, a:visited {
+		border-bottom: solid 1px #ff0000;
+	}
+}
 /* =Media
 ----------------------------------------------- */
 
@@ -78,14 +88,11 @@ object {
 
 /* =Comments
 ----------------------------------------------- */
-
 .comment-content a {
 	word-wrap: break-word;
 }
 .bypostauthor {
 }
-
-
 
 /* =Infinite Scroll
 ----------------------------------------------- */
@@ -99,4 +106,18 @@ object {
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
 .infinity-end.neverending .site-footer {
 	display: block;
+}
+
+#content {
+
+	.entry-content {
+		a, a:visited {
+			border-bottom: solid 1px #ff0000;
+		}
+	}
+	.entry-meta {
+		a, a:visited {
+			border-bottom: solid 1px #ff0000;
+		}
+	}
 }

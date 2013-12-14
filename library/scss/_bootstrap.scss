@@ -6,9 +6,10 @@
 /* Import Framework */
 @import "framework/reset";
 @import "framework/global";
-@import "modules/buttons";
+@import "framework/breakpoints";
 @import "modules/variables";
 @import "framework/structure";
+@import "modules/buttons";
 @import "framework/breakpoints";
 
 /* Import Add-ons */
@@ -17,7 +18,7 @@
 @import "bourbon/addons/triangle";
 @import "bourbon/addons/font-family";
 @import "bourbon/addons/prefixer";
-@import "modules/fonts";
+@import "framework/typography";
 
 
 /* Import Sections */
@@ -25,51 +26,3 @@
 @import "sections/navigation/navigation";
 @import "sections/content/content";
 @import "sections/aside/sidebar";
-
-// html {
-// 	@include fontSize(14px);
-// }
-
-
-
-// html {
-// 	@include fontSize(18px);
-// }
-// header {
-// 	@include transition (all 2.0s ease-in-out);
-// 	@include clearfix;
-// 	@include triangle(12px, gray, down);
-// 	// font-size: em(12);
-// 	@include fontSize(16px);
-// 	background-color: #ccc;
-// 	font-family: $helvetica;
-
-// 	&:hover {
-// 		@include transition (all 2.0s ease-in-out);
-// 	}
-
-// }
-// #secondary {
-// 	@include media(320px) {
-// 		background-color: blue;
-// 	}
-// 	@include transition (all 500ms ease-in-out);
-// 	@include media(480px) {
-// 		background-color: #ccc;
-// 	}
-// 	@include media(768px) {
-// 		background-color: transparent;
-// 	}
-
-
-
-// 	&:hover {
-// 		@include media($mobile) {
-// 			background-color: #000;
-// 		}
-// 		@include transition (all 200ms ease-in-out);
-// 		background-color: #f3f3f3;
-// 	}
-
-// }
-
