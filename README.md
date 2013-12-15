@@ -18,9 +18,9 @@ Shit I included just because
 ---------------
 I admit it. I just add things because I think they're cool. It's a bad habit... You should see my collection of hats and socks. 
 
-* Google Fonts (Just Oswald and Droid Serif)
-* Font Awesome: Icon Fonts! (http://fontawesome.io)
-* Genericons: MOAR ICON FONTS!! Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)
+* ~~Google Fonts (Just Oswald and Droid Serif)~~ Dropped these fonts. Not needed. If you want web fonts, you'll do it yourself anyway.
+* ~~Font Awesome: Icon Fonts! (http://fontawesome.io)~~ Already using Genericons. If you want these, you'll use em anyway.
+* Genericons: Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)
 * Superfish Menus: Handles drop down nav nicely. (http://users.tpg.com.au/j_birch/plugins/superfish/)
 * Meanmenu: Hamburger menu when you get down to mobile viewports (https://github.com/weare2ndfloor/meanMenu)
 * Menu Walker Class for Menu Descriptions: Menu descriptions like it's 2008, mofo!
