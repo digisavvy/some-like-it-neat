@@ -16,10 +16,12 @@ b, strong {
 h2 {
 	@include fontSize(24px);
 	font-family: $title;
+	font-weight: bold;
 	margin-bottom: 15px;
 }
 .entry-title {
 	font-family: $title;
+	font-weight: bold;
 	text-align: center;
 	@include media($sm) {
 		@include fontSize(40px);
