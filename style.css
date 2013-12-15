@@ -1301,3 +1301,7 @@ object {
 /* Search widget */
 .widget_search .search-submit {
   display: none; }
+
+footer .site-info {
+  margin: auto;
+  width: 75%; }
