@@ -120,12 +120,6 @@ function digistarter_scripts() {
 	// Meanmenu Style
 	wp_enqueue_style( 'meanmenu', get_template_directory_uri() . '/library/css/meanmenu/meanmenu.css' );
 
-	// Navigation
-	wp_enqueue_script( 'digistarter-navigation', get_template_directory_uri() . '/library/js/navigation.js', array(), '20120206', true );
-
-	// Skiplink Focus Fi
-	wp_enqueue_script( 'digistarter-skip-link-focus-fix', get_template_directory_uri() . '/library/js/skip-link-focus-fix.js', array(), '20130115', true );
-
 	// Selectivizr Scripts
 	wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
 	wp_enqueue_script( 'selectivizr' );
@@ -149,11 +143,6 @@ function digistarter_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
-
-function dg_add_fontawesome() {
-	echo '<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">';
-}
-add_action( 'wp_head', 'dg_add_fontawesome' );
 
 function dg_add_superfish(){ ?>
 	<script>
@@ -205,7 +194,6 @@ function dg_customizer_register( $wp_customize ) {
    //All our sections, settings, and controls will be added here
 }
 add_action( 'customize_register', 'dg_customizer_register' );
-
 
 /**
  * Load Jetpack compatibility file.
