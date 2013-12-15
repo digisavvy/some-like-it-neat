@@ -9,7 +9,7 @@ I got bored on a Saturday and set out to build a super basic WordPress theme. No
 **Okay, so, right now here's where we're at:**
 
 * Underscores (_s) based theme. There's smarter folks than me building great shit (http://underscores.me)
-* Sass. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. As of the initial writing of this ReadMe, I've been using Sass like a piece of shit asshole. I don't know what the fuck I'm doing. So if you do, please feel free to school a chump! If you don't know Sass, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
+* SASS. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. As of the initial writing of this ReadMe, I've been using SASS like a piece of shit asshole. I don't know what the fuck I'm doing. So if you do, please feel free to school a chump! If you don't know SASS, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
 * Theme Hook Alliance — One of the things I learned to love about working with Frameworks were their hooks. Thematic and Genesis introduced me to the notion. Since them I've been using them like they're going out of style. When I set out to make my own starter theme I wanted to make something that had "just the right amount" of features for me. I knew I needed hooks. The THA project was intro'd to me by Brandon Dove, at the OCWP (http://ocwp.org) developer's day meetup. Thought it was super neat. So I bundled that hot mess right into this thing.
 * Responsive — Eh. I mean, it's about as minimal as you can get, but it's there.
 * Merge requests welcome...
@@ -36,7 +36,23 @@ Getting Started
 
 ~~I'll be coming back to this later~~
 
-### Sass Structure
+### Theme Hook Alliance
+---------------
+
+What is Theme Hook Alliance? It's a pretty rad project - https://github.com/zamoose/themehookalliance. I'm a big fan of hooks, personally. They provide a means to keep things within the theme cleaner and easier to maintain.
+
+"_The Theme Hook Alliance is a community-driven effort to agree on a set of third-party action hooks that THA themes pledge to implement in order to give that desired consistency_."
+
+
+### Bourbon and Neat
+---------------
+Why use these in this project? It's a philosophical thing. I've used Foundation and Bootstrap before. I like them; they're both great, great projects run by smarter people than myself. So what's the philosophical bit? To achieve the responsiveness required of various projects, I would have to tear up my HTML, input my own selector classes and what have you, in addition to chaniging my css. I didn't like it. I heard about Neat (http://neat.bourbon.io) and really liked their approach to a grid framework. You keep your HTML structure the way you like and all of the styling in your SASS files
+
+### Use as a Parent Theme?
+---------------
+I don't see why not. I haven't done it yet. But with the addition of Theme Hook Alliance, I'd say 'Some Like it Neat' would make for a good Parent Theme for your project.
+
+### SASS Structure
 ---------------
 I definitely need some advice here. Simpler is better in my mind. OCD can be a real pain. So feel free to lend a hand.
 
@@ -44,15 +60,15 @@ theme_root/library
 
 / scss  
 
-- style.scss (The file that directly gets compiled by Sass. Output style.scss to your theme's root directory)
+- style.scss (The file that directly gets compiled by SASS. Output style.scss to your theme's root directory)
 
-- _bootstrap.scss (The file that we use to import all of our Sass files, except style.scss of course!)
+- _bootstrap.scss (The file that we use to import all of our SASS files, except style.scss of course!)
 
 - _grid-settings.scss (if you're editing grid, columns and gutters, you'll need to create and import this file) 
 
 
  
-- bourbon  (Bourbon Sass Goodies library from http://bourbon.io) 
+- bourbon  (Bourbon SASS Goodies library from http://bourbon.io) 
 
 - grid-settings  (Necessary if you're setting your own number of columns. Docs at http://neat.bourbon.io)  
 - framework  (Refers to styles that make up the bulkd of the 'standard structure' for the site's layout)
