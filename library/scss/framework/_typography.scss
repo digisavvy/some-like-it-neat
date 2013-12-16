@@ -25,7 +25,7 @@ h5 {
 	@include fontSize(24px);
 	@include clearfix;
 	display: inline;
-	border-bottom: solid 1px #ff0000;
+	border-bottom: solid 1px $primary-color;
 	font-family: $content;
 	font-style: italic;
 	text-transform: uppercase;
@@ -33,15 +33,15 @@ h5 {
 h6 {@include clearfix;
 	@include fontSize(24px);
 
-	border-bottom: solid 1px #ff0000;
-	border-top: solid 1px #ff0000;
+	border-bottom: solid 1px $primary-color;
+	border-top: solid 1px $primary-color;
 	display: inline-block;
 	font-family: $title;
 	text-transform: uppercase;
 }
 blockquote {
 	background-color: #f9f9f9;
-	border-left: solid 5px #ff0000;
+	border-left: solid 5px $primary-color;
 	font-style: italic;
 	padding: 20px;
 }
