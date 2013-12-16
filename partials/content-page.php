@@ -9,13 +9,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php tha_entry_top(); ?>
 	<header class="entry-header">
-		<?php
-			if ( !is_front_page() ) { ?>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			<? } else {
 
-			}
-		?>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
 
 	</header><!-- .entry-header -->
 
