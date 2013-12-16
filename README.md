@@ -50,7 +50,7 @@ Why use these in this project? It's a philosophical thing. I've used Foundation 
 
 ### Use as a Parent Theme?
 ---------------
-I don't see why not. I haven't done it yet. But with the addition of Theme Hook Alliance, I'd say 'Some Like it Neat' would make for a good Parent Theme for your project.
+I don't see why not. ~~I haven't done it yet.~~ ( I'm using a child theme on http://alexhasnicehair.com ) But with the addition of Theme Hook Alliance, I'd say 'Some Like it Neat' would make for a good Parent Theme for your project.
 
 ### SASS Structure
 ---------------
