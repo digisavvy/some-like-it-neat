@@ -7,7 +7,8 @@
  * @package digistarter
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?> class="no-js">
+<?php tha_html_before(); ?>
+<html <?php language_attributes(); ?>>
 <head>
 	<?php tha_head_top(); ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -33,14 +34,25 @@
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			</div>
 
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<h1 class="menu-toggle"><?php _e( 'Menu', 'digistarter' ); ?></h1>
-				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'digistarter' ); ?></a>
+			<nav id="primary-nav" role="navigation">
 
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				<?php // wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'sf-menu', ) ); ?>
+				<?php
+			       $walker = new My_Walker;
+						wp_nav_menu(array(
+						    'echo' => true,
+							'container' => '',
+							'theme_location' => 'primary',
+							'menu_class' => 'sf-menu',
+							'walker' => $walker
+						));
+			?>
+
 			</nav><!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>
+
 		</header><!-- #masthead -->
+		<?php tha_header_after(); ?>
 
 		<?php tha_content_before(); ?>
 		<div id="content" class="site-content">
