@@ -1,18 +1,21 @@
-# some-like-it-neat
-
+# Some Like it Neat
 
 ### A WordPress Theme Using _s, Bourbon + Neat and Theme Hook Alliance
-=======
 
-I got bored on a Saturday and set out to build a super basic WordPress theme. Not enough damn peyote and more than enough time makes for a potent mix of futility... I need a girlfriend. Send help! This is my initial baseline for this project. There's stuff to add and stuff to take away... So there's that.
+
+I got bored on a Saturday night and started up this project. I really need a girlfriend...
 
 **Okay, so, right now here's where we're at:**
 
-* Underscores (_s) based theme. There's smarter folks than me building great shit (http://underscores.me)
+* Underscores (_s) based theme. There's smarter folks than me building great shit (http://underscores.me)  
+
 * SASS. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. As of the initial writing of this ReadMe, I've been using SASS like a piece of shit asshole. I don't know what the fuck I'm doing. So if you do, please feel free to school a chump! If you don't know SASS, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
+
 * Theme Hook Alliance — One of the things I learned to love about working with Frameworks were their hooks. Thematic and Genesis introduced me to the notion. Since them I've been using them like they're going out of style. When I set out to make my own starter theme I wanted to make something that had "just the right amount" of features for me. I knew I needed hooks. The THA project was intro'd to me by Brandon Dove, at the OCWP (http://ocwp.org) developer's day meetup. Thought it was super neat. So I bundled that hot mess right into this thing.
+
 * Responsive — Eh. I mean, it's about as minimal as you can get, but it's there.
-* Merge requests welcome...
+
+* Pull requests welcome...
 
 Shit I included just because
 ---------------
@@ -28,8 +31,9 @@ I admit it. I just add things because I think they're cool. It's a bad habit... 
 Coming Soon
 ---------------
 
-* ~~Theme Hook Alliance Integration. Yeah, I'm lazy. That's next on my to-do list! You guys sound like my mother!— Theme is now partially 'hooked-up'. That is, template part files, located in '/partials' have had THA hooks added... Other files will be done soon. Feel free to add em yourself, if you have a minute!~~  Theme template files have all been "hooked up" with THA hooks.
-* Further use of WP Customizer. I don't know how to use the fucking thing, so tips are appreciated; so don't be a lazy turd!
+* Further use of WP Customizer. Paging Konstantin Obenland. =) I'll be getting down to business here because I'd like to learn how to use the fucker.
+
+
 * Internationalization aka i18n - I'd like to distribute this theme in the WP Repo at some point, so I need to account for this. I could use help here, =)
  
 
@@ -48,11 +52,13 @@ What is Theme Hook Alliance? It's a pretty rad project - https://github.com/zamo
 
 ### Bourbon and Neat
 ---------------
-Why use these in this project? It's a philosophical thing. I've used Foundation and Bootstrap before. I like them; they're both great, great projects run by smarter people than myself. So what's the philosophical bit? To achieve the responsiveness required of various projects, I would have to tear up my HTML, input my own selector classes and what have you, in addition to chaniging my css. I didn't like it. I heard about Neat (http://neat.bourbon.io) and really liked their approach to a grid framework. You keep your HTML structure the way you like and all of the styling in your SASS files
+Why use these in this project? It's a philosophical thing. I've used Foundation and Bootstrap before. I like them; they're both great, great projects run by smarter people than myself. So what's the philosophical bit? To achieve the responsiveness required of various projects, I would have to tear up my HTML, input my own selector classes and what have you, in addition to changing my css. I didn't like it. I heard about Neat (http://neat.bourbon.io) and really liked their approach to a grid framework. You keep your HTML structure the way you like and all of the styling in your SASS files
 
 ### Use as a Parent Theme?
 ---------------
-I don't see why not. ~~I haven't done it yet.~~ ( I'm using a child theme on http://alexhasnicehair.com ) But with the addition of Theme Hook Alliance, I'd say 'Some Like it Neat' would make for a good Parent Theme for your project.
+I don't see why not. ~~I haven't done it yet.~~ ( I'm using a child theme on http://alexhasnicehair.com ) But with the addition of Theme Hook Alliance, I'd say 'Some Like it Neat' would make for a good Parent Theme for your project and certainly more ideal if you're going to make significant edits (and why wouldn't you? By default it looks like pooh!).
+
+What I recommend is that you generate your child theme, setup your child theme folder, style.css file. Additionally, I think it's just easier to copy the 'library' folder from the parent and place it into the child theme. 
 
 ### SASS Structure
 ---------------
@@ -69,7 +75,6 @@ theme_root/library
 - _grid-settings.scss (if you're editing grid, columns and gutters, you'll need to create and import this file) 
 
 
- 
 - bourbon  (Bourbon SASS Goodies library from http://bourbon.io) 
 
 - grid-settings  (Necessary if you're setting your own number of columns. Docs at http://neat.bourbon.io)  
