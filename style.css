@@ -537,12 +537,18 @@ a:active {
   clear: both;
 }
 
-/* line 1, framework/_structure.scss */
+/* =Breakpoints
+-------------------------------------------------------------- */
+/* =Variables
+-------------------------------------------------------------- */
+/* =Structure/Scaffolding
+-------------------------------------------------------------- */
+/* line 3, framework/_structure.scss */
 html {
   font-size: 100%;
 }
 
-/* line 4, framework/_structure.scss */
+/* line 6, framework/_structure.scss */
 body {
   font-size: 20px;
   font-size: 1.25rem;
@@ -552,13 +558,13 @@ body {
 }
 
 @media screen and (min-width: 320px) {
-  /* line 13, framework/_structure.scss */
+  /* line 15, framework/_structure.scss */
   .wrap {
     background: #fff;
   }
 }
 
-/* line 21, framework/_structure.scss */
+/* line 23, framework/_structure.scss */
 #primary {
   *zoom: 1;
   margin: auto;
@@ -573,11 +579,11 @@ body {
 #primary:after {
   clear: both;
 }
-/* line 26, framework/_structure.scss */
+/* line 28, framework/_structure.scss */
 #primary ul {
   list-style: none;
 }
-/* line 29, framework/_structure.scss */
+/* line 31, framework/_structure.scss */
 #primary ul li:before {
   color: red;
   display: inline-block;
@@ -588,7 +594,7 @@ body {
   vertical-align: middle;
 }
 
-/* line 35, framework/_structure.scss */
+/* line 37, framework/_structure.scss */
 #secondary {
   border-top: solid 10px #ccc;
   margin: 20px auto;
@@ -668,6 +674,8 @@ body {
   padding: 20px;
 }
 
+/* =Breakpoints
+-------------------------------------------------------------- */
 /* Import Add-ons */
 /**
 
@@ -1334,30 +1342,32 @@ body {
   content: '\f503';
 }
 
-/* line 1, framework/_typography.scss */
+/* =Typography
+-------------------------------------------------------------- */
+/* line 3, framework/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
 }
-/* line 3, framework/_typography.scss */
+/* line 5, framework/_typography.scss */
 h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
   text-decoration: none;
 }
 
-/* line 7, framework/_typography.scss */
+/* line 9, framework/_typography.scss */
 h1 {
   font-size: 75px;
   font-size: 4.6875rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 11, framework/_typography.scss */
+/* line 13, framework/_typography.scss */
 h2 {
   font-size: 50px;
   font-size: 3.125rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 15, framework/_typography.scss */
+/* line 17, framework/_typography.scss */
 h3 {
   font-size: 26px;
   font-size: 1.625rem;
@@ -1365,14 +1375,14 @@ h3 {
   text-transform: uppercase;
 }
 
-/* line 20, framework/_typography.scss */
+/* line 22, framework/_typography.scss */
 h4 {
   font-size: 24px;
   font-size: 1.5rem;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 24, framework/_typography.scss */
+/* line 26, framework/_typography.scss */
 h5 {
   font-size: 24px;
   font-size: 1.5rem;
@@ -1393,7 +1403,7 @@ h5:after {
   clear: both;
 }
 
-/* line 33, framework/_typography.scss */
+/* line 35, framework/_typography.scss */
 h6 {
   *zoom: 1;
   font-size: 24px;
@@ -1414,7 +1424,7 @@ h6:after {
   clear: both;
 }
 
-/* line 42, framework/_typography.scss */
+/* line 44, framework/_typography.scss */
 blockquote {
   background-color: #f9f9f9;
   border-left: solid 5px red;
@@ -1422,12 +1432,12 @@ blockquote {
   padding: 20px;
 }
 
-/* line 48, framework/_typography.scss */
+/* line 50, framework/_typography.scss */
 cite {
   font-style: italic;
 }
 
-/* line 51, framework/_typography.scss */
+/* line 53, framework/_typography.scss */
 strong, b {
   font-size: 20px;
   font-size: 1.25rem;
@@ -1435,7 +1445,7 @@ strong, b {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* line 56, framework/_typography.scss */
+/* line 58, framework/_typography.scss */
 a, a:visited {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
@@ -1443,48 +1453,48 @@ a, a:visited {
   color: #666;
   text-decoration: none;
 }
-/* line 61, framework/_typography.scss */
+/* line 63, framework/_typography.scss */
 a:hover, a:visited:hover {
   -webkit-transition: all 200ms ease-in-out;
   -moz-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  color: #ff0000;
+  color: red;
 }
 
-/* line 68, framework/_typography.scss */
+/* line 69, framework/_typography.scss */
 .entry-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 @media screen and (min-width: 320px) {
-  /* line 68, framework/_typography.scss */
+  /* line 69, framework/_typography.scss */
   .entry-title {
     font-size: 40px;
     font-size: 2.5rem;
   }
 }
 @media screen and (min-width: 480px) {
-  /* line 68, framework/_typography.scss */
+  /* line 69, framework/_typography.scss */
   .entry-title {
     font-size: 65px;
     font-size: 4.0625rem;
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 68, framework/_typography.scss */
+  /* line 69, framework/_typography.scss */
   .entry-title {
     font-size: 100px;
     font-size: 6.25rem;
   }
 }
 
-/* line 82, framework/_typography.scss */
+/* line 83, framework/_typography.scss */
 #primary,
 #secondary {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-/* line 86, framework/_typography.scss */
+/* line 87, framework/_typography.scss */
 .genericon {
   font-size: 24px;
   font-size: 1.5rem;
