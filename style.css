@@ -537,7 +537,7 @@ a:active {
   clear: both;
 }
 
-/* =Breakpoints
+/* =Breakpoints.
 -------------------------------------------------------------- */
 /* =Variables
 -------------------------------------------------------------- */
@@ -557,7 +557,7 @@ body {
   word-break: break-word;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 200px) {
   /* line 15, framework/_structure.scss */
   .wrap {
     background: #fff;
@@ -674,7 +674,7 @@ body {
   padding: 20px;
 }
 
-/* =Breakpoints
+/* =Breakpoints.
 -------------------------------------------------------------- */
 /* Import Add-ons */
 /**
@@ -1466,7 +1466,7 @@ a:hover, a:visited:hover {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 200px) {
   /* line 69, framework/_typography.scss */
   .entry-title {
     font-size: 40px;
@@ -1513,7 +1513,7 @@ a:hover, a:visited:hover {
 .site-branding .site-title {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 200px) {
   /* line 4, sections/header/_header.scss */
   .site-branding .site-title {
     font-size: 35px;
@@ -1541,7 +1541,7 @@ a:hover, a:visited:hover {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   font-style: italic;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 200px) {
   /* line 17, sections/header/_header.scss */
   .site-branding .site-description {
     font-size: 15px;
@@ -1611,7 +1611,7 @@ ul.nav-menu li {
   background: #fff;
   padding: 10px;
 }
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 200px) {
   /* line 33, sections/navigation/_navigation.scss */
   ul.nav-menu li {
     text-align: center;
@@ -1644,7 +1644,7 @@ ul.nav-menu li.current_page_item {
   background: #f3f3f3;
 }
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 200px) {
   /* line 65, sections/navigation/_navigation.scss */
   .menu-toggle {
     text-align: center;
