@@ -531,6 +531,16 @@ body {
   font-style: normal; }
 
 /**
+ * Base Styling
+ */
+.genericon.genericon-aside,
+.genericon.genericon-audio {
+  font-size: 50px;
+  font-size: 3.125rem;
+  float: left;
+  top: -10px; }
+
+/**
  * All Genericons
  */
 .genericon {

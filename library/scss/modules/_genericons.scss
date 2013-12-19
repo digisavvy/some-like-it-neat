@@ -23,6 +23,15 @@
     font-style: normal;
 }
 
+/**
+ * Base Styling
+ */
+.genericon.genericon-aside,
+.genericon.genericon-audio {
+	@include fontSize(50px);
+	float: left;
+	top: -10px;
+}
 
 /**
  * All Genericons
