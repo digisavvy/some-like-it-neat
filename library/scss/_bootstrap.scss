@@ -8,6 +8,7 @@
 @import "framework/global";
 @import "framework/breakpoints";
 @import "modules/variables";
+@import "framework/typography";
 @import "framework/structure";
 @import "modules/buttons";
 @import "framework/breakpoints";
@@ -19,7 +20,8 @@
 @import "bourbon/addons/font-family";
 @import "bourbon/addons/prefixer";
 @import "modules/genericons";
-@import "framework/typography";
+@import "modules/dashicons";
+
 
 
 /* Import Sections */
