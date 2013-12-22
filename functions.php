@@ -371,4 +371,3 @@ add_action( 'tha_content_top', 'neat_add_breadcrumbs' ); {
 		}
 	}
 }
-
