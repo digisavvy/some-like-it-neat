@@ -29,7 +29,7 @@ body {
 		list-style: none;
 
 		li:before {
-			@include genericon-rules;
+			@include genericons;
 		}
 	}
 
