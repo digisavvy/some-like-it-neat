@@ -1855,8 +1855,7 @@ body {
 .site-branding {
   text-align: center; }
   .site-branding .site-title {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: normal; }
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
     @media screen and (min-width: 200px) {
       .site-branding .site-title {
         font-size: 35px;
@@ -1873,7 +1872,6 @@ body {
     font-size: 20px;
     font-size: 1.25rem;
     font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-    font-weight: normal;
     font-style: italic; }
     @media screen and (min-width: 200px) {
       .site-branding .site-description {
