@@ -84,10 +84,19 @@ a, a:visited {
 #secondary {
 	font-family: $content;
 }
-.genericon {
-	@include fontSize(24px);
-	margin-right: 10px;
-	top: 2px;
-	position: relative;
-	vertical-align: top;
+
+/* =Genericons and Dashicons
+-------------------------------------------------------------- */
+@mixin dashicons {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Dashicons';
+	vertical-align: middle;
+}
+
+@mixin genericons {
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	vertical-align: middle;
 }
