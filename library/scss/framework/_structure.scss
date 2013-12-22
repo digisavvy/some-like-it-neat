@@ -28,8 +28,8 @@ body {
 	ul {
 		list-style: none;
 
-		li:before {
-			@include genericons;
+		li {
+			list-style-type: square;
 		}
 	}
 

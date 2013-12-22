@@ -4,13 +4,3 @@ $icon-color: #ff0000;
 $primary-color: #ff0000;
 $title: $helvetica;
 $content: $georgia;
-
-@mixin genericon-rules {
-        color: $icon-color;
-        display: inline-block;
-        content: '\f418';
-        -webkit-font-smoothing: antialiased;
-        font: normal 25px/1 'Genericons';
-        padding-right: 10px;
-        vertical-align: middle;
-}

@@ -549,11 +549,8 @@ body {
     clear: both; }
   #primary ul {
     list-style: none; }
-    #primary ul li:before {
-      display: inline-block;
-      -webkit-font-smoothing: antialiased;
-      font: normal 16px/1 'Genericons';
-      vertical-align: middle; }
+    #primary ul li {
+      list-style-type: square; }
 
 #secondary {
   border-top: solid 10px #ccc;
