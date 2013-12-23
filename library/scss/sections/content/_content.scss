@@ -120,4 +120,14 @@ object {
 			border-bottom: solid 1px #ff0000;
 		}
 	}
+	.alignleft {
+	    float: left;
+	    margin-right: 10px;
+	    margin-bottom: 10px;
+	}
+	.alignright{
+	    float: right;
+	    margin-right: 10px;
+	    margin-bottom: 10px;
+	}
 }

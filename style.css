@@ -216,11 +216,6 @@ img {
   border: 0;
   max-width: 100%; }
 
-.alignleft {
-  float: left;
-  margin-right: 10px;
-  margin-bottom: 10px; }
-
 /**
  * Correct overflow displayed oddly in IE 9.
  */
@@ -1773,6 +1768,14 @@ object {
   border-bottom: solid 1px #ff0000; }
 #content .entry-meta a, #content .entry-meta a:visited {
   border-bottom: solid 1px #ff0000; }
+#content .alignleft {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px; }
+#content .alignright {
+  float: right;
+  margin-right: 10px;
+  margin-bottom: 10px; }
 
 /* =Asides
 ----------------------------------------------- */
