@@ -41,11 +41,13 @@ function digistarter_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'digistarter' ),
-		'menu_class'      => 'sf-menu',
-		'items_wrap'      => '<ul id="%1$s" class="sf-menu">%3$s</ul>'
-	) );
+	function neat_register_navigation() {
+	register_nav_menus(
+			array(
+			'primary-menu' => __( 'Primary Menu' )
+		));
+	}
+	add_action( 'init', 'neat_register_navigation' );
 
 	class My_Walker extends Walker_Nav_Menu {
 
