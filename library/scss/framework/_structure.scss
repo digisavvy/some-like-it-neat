@@ -9,16 +9,10 @@ body {
 	word-break: break-word;
 }
 #page {
-	 // @include outer-container;
+	 @include outer-container;
 }
-.wrap {
-	@include media($sm) {
-		background: #fff;
-	}
-	@include media($hg) {
+.wrap {}
 
-	}
-}
 #primary {
 	@include clearfix;
 	margin: auto;
