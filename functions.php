@@ -38,16 +38,14 @@ function digistarter_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	add_theme_support( 'post-thumbnails' );
+	//add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	function neat_register_navigation() {
-	register_nav_menus(
-			array(
-			'primary-menu' => __( 'Primary Menu', 'digistarter' )
-		));
-	}
-	add_action( 'init', 'neat_register_navigation' );
+	register_nav_menus( array(
+		'primary' => __( 'Primary Menu', 'digistarter' ),
+		'menu_class'      => 'sf-menu',
+		'items_wrap'      => '<ul id="%1$s" class="sf-menu">%3$s</ul>'
+	) );
 
 	class My_Walker extends Walker_Nav_Menu {
 
@@ -79,7 +77,7 @@ function digistarter_setup() {
 			}
 		}
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'audio', 'gallery', 'status' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'digistarter_custom_background_args', array(
@@ -182,77 +180,6 @@ require get_template_directory() . '/library/inc/template-tags.php';
  */
 require get_template_directory() . '/library/inc/extras.php';
 
-if ( ! function_exists( 'digistarter_entry_meta' ) ) :
-/**
- * Print HTML with meta information for current post: categories, tags, permalink, author, and date.
- *
- * Create your own twentythirteen_entry_meta() to override in a child theme.
- *
- * @since Twenty Thirteen 1.0
- *
- * @return void
- */
-function digistarter_entry_meta() {
-	if ( is_sticky() && is_home() && ! is_paged() )
-		echo '<span class="featured-post">' . __( 'Sticky', 'twentythirteen' ) . '</span>';
-
-	if ( ! has_post_format( 'link' ) && 'post' == get_post_type() )
-		digistarter_entry_date();
-
-	// Translators: used between list items, there is a space after the comma.
-	$categories_list = get_the_category_list( __( ', ', 'twentythirteen' ) );
-	if ( $categories_list ) {
-		echo '<span class="categories-links">' . $categories_list . '</span>';
-	}
-
-	// Translators: used between list items, there is a space after the comma.
-	$tag_list = get_the_tag_list( '', __( ', ', 'twentythirteen' ) );
-	if ( $tag_list ) {
-		echo '<span class="tags-links">' . $tag_list . '</span>';
-	}
-
-	// Post author
-	if ( 'post' == get_post_type() ) {
-		printf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
-			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'twentythirteen' ), get_the_author() ) ),
-			get_the_author()
-		);
-	}
-}
-endif;
-
-if ( ! function_exists( 'digistarter_entry_date' ) ) :
-/**
- * Print HTML with date information for current post.
- *
- * Create your own twentythirteen_entry_date() to override in a child theme.
- *
- * @since Twenty Thirteen 1.0
- *
- * @param boolean $echo (optional) Whether to echo the date. Default true.
- * @return string The HTML-formatted post date.
- */
-function digistarter_entry_date( $echo = true ) {
-	if ( has_post_format( array( 'chat', 'status' ) ) )
-		$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'twentythirteen' );
-	else
-		$format_prefix = '%2$s';
-
-	$date = sprintf( '<span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
-		esc_url( get_permalink() ),
-		esc_attr( sprintf( __( 'Permalink to %s', 'twentythirteen' ), the_title_attribute( 'echo=0' ) ) ),
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( sprintf( $format_prefix, get_post_format_string( get_post_format() ), get_the_date() ) )
-	);
-
-	if ( $echo )
-		echo $date;
-
-	return $date;
-}
-endif;
-
 /**
  * TGM Plugin Activation Class.
  */
@@ -300,14 +227,14 @@ function neat_recommended_required_plugins() {
 
 		// This is an example of how to include a plugin pre-packaged with a theme
 		array(
-			'name'     		=> 'Hensel and Gretel Breadcrumbs', // The plugin name
-			'slug'     		=> 'hensel-gretel', // The plugin slug (typically the folder name)
-			'source'   		=> get_stylesheet_directory() . '/library/plugins/hansel-gretel.zip', // The plugin source
-			'required' 		=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 		=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 	=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'name'     				=> 'Hensel and Gretel Breadcrumbs', // The plugin name
+			'slug'     				=> 'hensel-gretel', // The plugin slug (typically the folder name)
+			'source'   				=> get_stylesheet_directory() . '/library/plugins/hansel-gretel.zip', // The plugin source
+			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 		=> '', // If set, overrides default API URL and points to an external URL
+			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
 		),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
@@ -373,3 +300,4 @@ add_action( 'tha_content_top', 'neat_add_breadcrumbs' ); {
 		}
 	}
 }
+
