@@ -26,7 +26,6 @@
 		?>
 
 	</div><!-- .entry-content -->
-	<?php tha_entry_bottom(); ?>
 	<?php edit_post_link( __( 'Edit', 'digistarter' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-## -->
