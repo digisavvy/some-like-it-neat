@@ -44,7 +44,7 @@ function digistarter_setup() {
 	function neat_register_navigation() {
 	register_nav_menus(
 			array(
-			'primary-menu' => __( 'Primary Menu' )
+			'primary-menu' => __( 'Primary Menu', 'digistarter' )
 		));
 	}
 	add_action( 'init', 'neat_register_navigation' );
