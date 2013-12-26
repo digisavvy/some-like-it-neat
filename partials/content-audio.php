@@ -10,6 +10,7 @@
 <?php tha_entry_before(); ?>
 <span class="genericon genericon-audio"></span>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
 	<header class="entry-header">
 		<?php if ( is_single() ) : ?>
 		<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -35,4 +36,5 @@
 			<?php get_template_part( 'author-bio' ); ?>
 		<?php endif; ?>
 	</footer><!-- .entry-meta -->
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post -->

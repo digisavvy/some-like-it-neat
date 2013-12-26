@@ -7,9 +7,16 @@
  * @since Twenty Thirteen 1.0
  */
 ?>
+
 <?php tha_entry_before(); ?>
-<span class="genericon genericon-aside"></span>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php tha_entry_top(); ?>
+	<header class="entry-header">
+
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+
+	</header><!-- .entry-header -->
+
 	<div class="entry-content">
 		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'digistarter' ) ); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'digistarter' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
@@ -31,4 +38,6 @@
 			<?php edit_post_link( __( 'Edit', 'digistarter' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php endif; // is_single() ?>
 	</footer><!-- .entry-meta -->
+	<?php tha_entry_bottom(); ?>
 </article><!-- #post -->
+<?php tha_entry_after(); ?>
