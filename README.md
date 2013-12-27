@@ -26,6 +26,7 @@ I admit it. I just add things because I think they're cool. It's a bad habit... 
 * Genericons: Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)
 * Superfish Menus: Handles drop down nav nicely. (http://users.tpg.com.au/j_birch/plugins/superfish/)
 * Meanmenu: Hamburger menu when you get down to mobile viewports (https://github.com/weare2ndfloor/meanMenu)
+* Post Format Support. There's very basic template support for Post Formats. The templates are there for you to butcher to your little heart's content!
 * Menu Walker Class for Menu Descriptions: Menu descriptions like it's 2008, mofo!
 
 Coming Soon
@@ -35,6 +36,8 @@ Coming Soon
 
 
 * Internationalization aka i18n - I'd like to distribute this theme in the WP Repo at some point, so I need to account for this. I could use help here, =)
+
+* MOAR Page Templates!
  
 
 Getting Started
