@@ -17,8 +17,8 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-	<?php tha_head_bottom(); ?>
 	<?php wp_head(); ?>
+	<?php tha_head_bottom(); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -40,8 +40,8 @@
 				$walker = new My_Walker;
 					wp_nav_menu(array(
 						'echo' => true,
-						'container' => '',
-						'theme_location' => 'primary-menu',
+						'container' => 'nav',
+						'theme_location' => 'primary-navigation',
 						'menu_class' => 'sf-menu',
 						'walker' => $walker
 					));
