@@ -43,20 +43,12 @@ function digistarter_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	if ( !function_exists('dg_register_nav_menus') ) :
 		function dg_register_nav_menus() {
-			register_nav_menus(
-				array(
-					'primary-navigation' => __( 'Primary Menu', 'digistarter' ),
-				)
-			);
+
+			register_nav_menu( 'primary-navigation', __( 'Primary Menu' ) );
+
 		}
 		add_action( 'init', 'dg_register_nav_menus' );
 	endif;
-
-	// register_nav_menus( array(
-	// 	'primary' => __( 'Primary Menu', 'digistarter' ),
-	// 	'menu_class'      => 'sf-menu',
-	// 	'items_wrap'      => '<ul id="%1$s" class="sf-menu">%3$s</ul>'
-	// ) );
 
 	class My_Walker extends Walker_Nav_Menu {
 
