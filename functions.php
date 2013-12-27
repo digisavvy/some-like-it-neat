@@ -146,19 +146,24 @@ add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
 
 function dg_add_superfish(){ ?>
 	<script>
+		// Init Superfish
 		jQuery(document).ready(function() {
 			jQuery('ul.sf-menu').superfish();
-		});
-
-		// Init Mean Menu
-		jQuery(document).ready(function () {
-		    jQuery('header nav').meanmenu(
-
-		    );
 		});
 	</script>
 <?php }
 add_action( 'wp_head', 'dg_add_superfish' );
+
+function dg_add_meanmenu() { ?>
+	<script>
+		// Init Mean Menu
+		jQuery(document).ready(function () {
+		    jQuery('header nav').meanmenu(
+		    );
+		});
+	</script>
+<?php }
+add_action( 'wp_head', 'dg_add_meanmenu' );
 
 /**
  * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
