@@ -232,22 +232,22 @@ function neat_recommended_required_plugins() {
 
 		// This is an example of how to include a plugin pre-packaged with a theme
 		array(
-			'name'     				=> 'Hensel and Gretel Breadcrumbs', // The plugin name
-			'slug'     				=> 'hensel-gretel', // The plugin slug (typically the folder name)
-			'source'   				=> get_stylesheet_directory() . '/library/plugins/hansel-gretel.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+			'name'     		=> 'Hensel and Gretel Breadcrumbs', // The plugin name
+			'slug'     		=> 'hensel-gretel', // The plugin slug (typically the folder name)
+			'source'   		=> get_stylesheet_directory() . '/library/plugins/hansel-gretel.zip', // The plugin source
+			'required' 		=> false, // If false, the plugin is only 'recommended' instead of required
+			'version' 		=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+			'force_activation' 	=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
 			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+			'external_url' 		=> '', // If set, overrides default API URL and points to an external URL
 		),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
-		// array(
-		// 	'name' 		=> 'BuddyPress',
-		// 	'slug' 		=> 'buddypress',
-		// 	'required' 	=> false,
-		// ),
+		array(
+			'name' 		=> 'Custom Post Type Page Template',
+			'slug' 		=> 'custom-post-type-page-template',
+			'required' 	=> false,
+		),
 
 	);
 
@@ -268,7 +268,7 @@ function neat_recommended_required_plugins() {
 		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
 		'has_notices'      	=> true,                       	// Show admin notices or not
-		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
+		'is_automatic'    	=> true,					   	// Automatically activate plugins after installation or not
 		'message' 			=> '',							// Message to output right before the plugins table
 		'strings'      		=> array(
 			'page_title'                       			=> __( 'Install Required Plugins', $theme_text_domain ),
