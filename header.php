@@ -40,7 +40,7 @@
 				$walker = new My_Walker;
 					wp_nav_menu(array(
 						'echo' => true,
-						'container' => 'nav',
+						// 'container' => 'nav',
 						'theme_location' => 'primary-navigation',
 						'menu_class' => 'sf-menu',
 						'walker' => $walker
