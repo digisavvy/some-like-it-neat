@@ -171,7 +171,9 @@ if ( !function_exists('dg_add_meanmenu') ) :
 			    jQuery('header nav').meanmenu( {
 			    	 meanScreenWidth: "480",
 	   			 meanRevealPosition: "right",
-	   			 meanExpand: ""
+	   			 meanExpand: "",
+	   			 meanMenuContainer: "body",
+	   			 meanMenuClose: "X"
 
 			    } );
 			});
@@ -341,7 +343,7 @@ function tcx_register_theme_customizer( $wp_customize ) {
 			array(
 				'label'      => __( 'Link Color', 'tcx' ),
 				'section'    => 'colors',
-				'settings'   => 'tcx_link_color'
+				'settings'   => 'tcx_link_color',
 			)
 		)
 	);
