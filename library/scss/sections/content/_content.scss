@@ -155,3 +155,62 @@ object {
 	}
 }
 
+/* =Page Templates
+----------------------------------------------- */
+
+// 2col Right Sidebar
+.page-template-page-templatestemplate-right-col-php {
+	.wrap {
+		margin: 40px;
+	}
+	h1.entry-title {
+		margin: 0;
+	}
+	#primary {
+		@include media($sm) {
+			@include span-columns(4);
+		}
+		@include media($md) {
+			@include span-columns(8);
+		}
+	}
+	#secondary {
+		@include media($sm) {
+			@include span-columns(4);
+		}
+		@include media($md) {
+			@include span-columns(4);
+		}
+	}
+}
+
+
+// 2col Left Sidebar
+.page-template-page-templatestemplate-left-col-php {
+	.wrap {
+		margin: 40px;
+	}
+	h1.entry-title {
+		margin: 0;
+	}
+	#primary {
+		float: right !important;
+		@include media($sm) {
+			@include span-columns(4);
+		}
+		@include media($md) {
+			@include span-columns(8);
+		}
+		@include clearfix;
+	}
+	#secondary {
+		float: left;
+		@include media($sm) {
+			@include span-columns(4);
+		}
+		@include media($md) {
+			@include span-columns(4);
+		}
+		@include clearfix;
+	}
+}
