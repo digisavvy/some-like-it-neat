@@ -60,7 +60,7 @@ a.meanmenu-reveal {
 .mean-container .mean-nav ul {
 	padding: 0;
 	margin: 0;
-	width: 100%;
+	width: 100% !important;
 	list-style-type: none;
 }
 
