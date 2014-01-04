@@ -1691,6 +1691,10 @@ ul.nav-menu li {
   color: #666;
   text-align: center !important; }
 
+@media screen and (max-width: 480px) {
+  .sf-menu ul {
+    position: static !important; } }
+
 /* =Content
 ----------------------------------------------- */
 .hentry {
