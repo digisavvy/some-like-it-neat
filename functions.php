@@ -140,7 +140,7 @@ if ( !function_exists('dg_add_meanmenu') ) :
 			// Init Mean Menu
 			jQuery(document).ready(function () {
 			    jQuery('header nav').meanmenu( {
-			    	 meanScreenWidth: "480",
+			     meanScreenWidth: "480",
 	   			 meanRevealPosition: "right",
 	   			 meanExpand: "",
 	   			 meanMenuContainer: "body",
@@ -177,6 +177,11 @@ require get_template_directory() . '/library/inc/extras.php';
  * TGM Plugin Activation Class.
  */
 require_once dirname( __FILE__ ) . '/library/inc/class-tgm-plugin-activation.php';
+
+/**
+ * Customizer Controls.
+ */
+// require_once dirname( __FILE__ ) .'/library/inc/wordpress-theme-customizer-custom-controls/theme-customizer-demo.php';
 
 /**
  * WP Customizer additions.
@@ -237,6 +242,12 @@ function neat_recommended_required_plugins() {
 			'required' 	=> false,
 		),
 
+		array(
+			'name' 		=> 'Whistles',
+			'slug' 		=> 'whistles',
+			'required' 	=> false,
+		),
+
 	);
 
 	// Change this to your theme text domain, used for internationalising strings
@@ -283,6 +294,7 @@ function neat_recommended_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
+
 /**
  * Custom Hooks and Filters
  */
@@ -293,3 +305,148 @@ add_action( 'tha_content_top', 'neat_add_breadcrumbs' ); {
 		}
 	}
 }
+
+
+/**
+ * Customizer
+ */
+function tcx_register_theme_customizer( $wp_customize ) {
+    $wp_customize->add_setting(
+	    'tcx_link_color',
+	    array(
+	        'default'     => '#000000',
+	    )
+	);
+
+	$wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+	        $wp_customize,
+	        'link_color',
+	        array(
+	            'label'      => __( 'Link Color', 'tcx' ),
+	            'section'    => 'colors',
+	            'settings'   => 'tcx_link_color'
+	        )
+	    )
+	);
+
+	$wp_customize->add_section(
+	    'tcx_display_options',
+	    array(
+	        'title'     => 'Display Options',
+	        'priority'  => 200
+	    )
+	);
+
+	$wp_customize->add_setting(
+	    'tcx_display_header',
+	    array(
+	        'default'    =>  'true'
+	    )
+	);
+
+	$wp_customize->add_control(
+	    'tcx_display_header',
+	    array(
+	        'section'   => 'tcx_display_options',
+	        'label'     => 'Display Header?',
+	        'type'      => 'checkbox'
+	    )
+	);
+
+	$wp_customize->add_setting(
+	    'tcx_color_scheme',
+	    array(
+	        'default'   => 'normal'
+	    )
+	);
+
+	$wp_customize->add_control(
+	    'tcx_color_scheme',
+	    array(
+	        'section'  => 'tcx_display_options',
+	        'label'    => 'Color Scheme',
+	        'type'     => 'radio',
+	        'choices'  => array(
+	            'normal'    => 'Normal',
+	            'inverse'   => 'Inverse'
+	        )
+	    )
+	);
+
+	$wp_customize->add_setting(
+	    'tcx_font',
+	    array(
+	        'default'   => 'times'
+	    )
+	);
+
+	$wp_customize->add_control(
+	    'tcx_font',
+	    array(
+	        'section'  => 'tcx_display_options',
+	        'label'    => 'Theme Font',
+	        'type'     => 'select',
+	        'choices'  => array(
+	            'times'     => 'Times New Roman',
+	            'arial'     => 'Arial',
+	            'courier'   => 'Courier New'
+	        )
+	    )
+	);
+
+	$wp_customize->add_setting(
+	    'tcx_footer_copyright_text',
+	    array(
+	        'default'            => 'All Rights Reserved',
+	        'sanitize_callback'  => 'tcx_sanitize_copyright'
+	    )
+	);
+
+	$wp_customize->add_control(
+	    'tcx_footer_copyright_text',
+	    array(
+	        'section'  => 'tcx_display_options',
+	        'label'    => 'Copyright Message',
+	        'type'     => 'text'
+	    )
+	);
+}
+add_action( 'customize_register', 'tcx_register_theme_customizer' );
+
+function tcx_sanitize_copyright( $input ) {
+    return strip_tags( stripslashes( $input ) );
+}
+
+function tcx_customizer_css() {
+    ?>
+    <style type="text/css">
+		#primary { font-family: <?php echo get_theme_mod( 'tcx_font' ); ?>; }
+
+        a { color: <?php echo get_theme_mod( 'tcx_link_color' ); ?>; }
+
+        <?php if( false === get_theme_mod( 'tcx_display_header' ) ) { ?>
+		    #masthead { display: none; }
+		<?php } // end if ?>
+
+		<?php if ( 'normal' === get_theme_mod( 'tcx_color_scheme' ) ) { ?>
+
+		    background: #000;
+		    color:      #fff;
+
+		<?php } else { ?>
+
+		    background: #fff;
+		    color:      #000;
+
+		<?php } // end if/else ?>
+		}
+
+
+    </style>
+
+    <?php
+}
+add_action( 'wp_head', 'tcx_customizer_css' );
+
+

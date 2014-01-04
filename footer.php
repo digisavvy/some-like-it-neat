@@ -17,7 +17,8 @@
 				<?php do_action( 'digistarter_credits' ); ?>
 				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by <span class="genericon genericon-wordpress"></span> %s', 'digistarter' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'digistarter' ), 'Some Like it Neat, ', '<a href="http://alexhasnicehair.com" rel="designer">Alex Vasquez</a>' ); ?>
+				<?php printf( __( 'Theme: %1$s by %2$s.', 'digistarter' ), 'Some Like it Neat, ', '<a href="http://alexhasnicehair.com" rel="designer">Alex Vasquez</a>' ); ?><br />
+				 &copy; <?php echo date( 'Y' ); ?> <?php bloginfo( 'title' ); ?> <span id="copyright-message"><?php echo get_theme_mod( 'tcx_footer_copyright_text' ); ?></span>
 			</div><!-- .site-info -->
 		</footer><!-- #colophon -->
 		<?php tha_footer_bottom(); ?>
