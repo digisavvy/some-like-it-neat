@@ -81,17 +81,19 @@ theme_root/library
 - bourbon  (Bourbon SASS Goodies library from http://bourbon.io) 
 
 - grid-settings  (Necessary if you're setting your own number of columns. Docs at http://neat.bourbon.io)  
-- framework  (Refers to styles that make up the bulkd of the 'standard structure' for the site's layout)
+
+- base  (Refers to styles that make up the bulkd of the 'standard structure' for the site's layout)
 ---- _breakpoints.scss (Where we define our responsive breakpoints)  
----- _global.scss (Normalized styles)  
----- _reset.scss (Style resets)   
+---- ~~_global.scss (Normalized styles)~~  
+---- ~~_reset.scss (Style resets)~~   
+---- _normalize (Style resets+normalize based on PureUI Project)
 ---- _structure.scss (Basic structural styles for basic scaffolding. As agnostic as possible)  
 ---- _typography.scss  (Typograhpical related styles)  
 
 - modules  
 ---- _buttons.scss  (Where we'll place styles for buttons)  
 ----  _helpers.scss  (A part of the bourbon/neat grid framework)  
----- ~~typography.scss~~  (Moved this to 'framework')  
+---- ~~typography.scss~~  (Moved this to 'base')  
 ----  _variables.scss  (Site specific variables can go here)  
 
 - neat  (our grid framework. See docs over at http://neat.bourbon.io) 
@@ -107,6 +109,7 @@ theme_root/library
 A special thanks to all the folks who inspire me on a daily basis to "do more" with what I know and what I can contribute.
 
 * Brandon Dove
+* Nikhil @techvoltz
 * Jon Brown
 * Jeffrey Zinn
 * Steve Zehngut
