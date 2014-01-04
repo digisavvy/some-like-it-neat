@@ -37,13 +37,11 @@
 			<nav id="primary-nav" role="navigation">
 
 			<?php
-				$walker = new My_Walker;
-					wp_nav_menu(array(
+				wp_nav_menu(array(
 						'echo' => true,
 						// 'container' => 'nav',
 						'theme_location' => 'primary-navigation',
-						'menu_class' => 'sf-menu',
-						'walker' => $walker
+						'menu_class' => 'sf-menu'
 					));
 			?>
 
