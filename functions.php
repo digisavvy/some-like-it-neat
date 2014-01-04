@@ -302,8 +302,6 @@ function neat_add_breadcrumbs() {
 		if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
 	}
 }
-<<<<<<< HEAD
-=======
 add_action( 'tha_content_top', 'neat_add_breadcrumbs' );
 
 function neat_add_footer_divs() { ?>
@@ -315,4 +313,3 @@ function neat_add_footer_divs() { ?>
 	</div>
 <?php }
 add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
->>>>>>> 338cf21... updating footer section with Customizer Content areas
