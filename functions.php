@@ -297,10 +297,22 @@ function neat_recommended_required_plugins() {
 /**
  * Custom Hooks and Filters
  */
-add_action( 'tha_content_top', 'neat_add_breadcrumbs' ); {
-	function neat_add_breadcrumbs() {
-		if ( !is_front_page() ) {
-			if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
-		}
+function neat_add_breadcrumbs() {
+	if ( !is_front_page() ) {
+		if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
 	}
 }
+<<<<<<< HEAD
+=======
+add_action( 'tha_content_top', 'neat_add_breadcrumbs' );
+
+function neat_add_footer_divs() { ?>
+	<div class="footer-left">
+		 <?php echo get_theme_mod( 'neat_footer_left' ); ?>
+	</div>
+	<div class="footer-right">
+		<?php echo get_theme_mod( 'neat_footer_right' ); ?>
+	</div>
+<?php }
+add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
+>>>>>>> 338cf21... updating footer section with Customizer Content areas

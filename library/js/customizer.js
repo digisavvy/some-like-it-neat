@@ -98,9 +98,14 @@
 
 	});
 
-	wp.customize( 'tcx_footer_copyright_text', function( value ) {
+	wp.customize( 'neat_footer_left', function( value ) {
 	    value.bind( function( to ) {
-	        $( '#copyright-message' ).text( to );
+	        $( '.footer-left' ).text( to );
+	    });
+	});
+	wp.customize( 'neat_footer_right', function( value ) {
+	    value.bind( function( to ) {
+	        $( '.footer-right' ).text( to );
 	    });
 	});
 
