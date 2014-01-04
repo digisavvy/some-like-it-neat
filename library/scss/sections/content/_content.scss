@@ -165,6 +165,7 @@ object {
 	}
 	h1.entry-title {
 		margin: 0;
+		text-align: left;
 	}
 	#primary {
 		@include media($sm) {
@@ -189,28 +190,33 @@ object {
 .page-template-page-templatestemplate-left-col-php {
 	.wrap {
 		margin: 40px;
+
 	}
 	h1.entry-title {
 		margin: 0;
+		text-align: left;
 	}
 	#primary {
-		float: right !important;
+
 		@include media($sm) {
 			@include span-columns(4);
 		}
 		@include media($md) {
 			@include span-columns(8);
 		}
-		@include clearfix;
 	}
 	#secondary {
 		float: left;
+		padding-right: 1.5%;
 		@include media($sm) {
 			@include span-columns(4);
 		}
 		@include media($md) {
 			@include span-columns(4);
 		}
-		@include clearfix;
+	}
+	footer {
+		clear: both;
+		display: table;
 	}
 }
