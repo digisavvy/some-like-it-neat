@@ -23,7 +23,8 @@ I admit it. I just add things because I think they're cool. It's a bad habit... 
 
 * ~~Google Fonts (Just Oswald and Droid Serif)~~ Dropped these fonts. Not needed. If you want web fonts, you'll do it yourself anyway.
 * ~~Font Awesome: Icon Fonts! (http://fontawesome.io)~~ Already using Genericons. If you want these, you'll use em anyway.
-* Genericons: Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)
+* Genericons: Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)  
+* Dashicons: Alright, alright. More cool shit I just HAD to add. Happened across this project, loved it (http://melchoyce.github.io/dashicons/)
 * Superfish Menus: Handles drop down nav nicely. (http://users.tpg.com.au/j_birch/plugins/superfish/)
 * Meanmenu: Hamburger menu when you get down to mobile viewports (https://github.com/weare2ndfloor/meanMenu)
 * Post Format Support. There's very basic template support for Post Formats. The templates are there for you to butcher to your little heart's content!
@@ -83,9 +84,7 @@ theme_root/library
 - grid-settings  (Necessary if you're setting your own number of columns. Docs at http://neat.bourbon.io)  
 
 - base  (Refers to styles that make up the bulkd of the 'standard structure' for the site's layout)
----- _breakpoints.scss (Where we define our responsive breakpoints)  
----- ~~_global.scss (Normalized styles)~~  
----- ~~_reset.scss (Style resets)~~   
+---- _breakpoints.scss (Where we define our responsive breakpoints)   
 ---- _normalize (Style resets+normalize based on PureUI Project)
 ---- _structure.scss (Basic structural styles for basic scaffolding. As agnostic as possible)  
 ---- _typography.scss  (Typograhpical related styles)  
@@ -98,7 +97,7 @@ theme_root/library
 
 - neat  (our grid framework. See docs over at http://neat.bourbon.io) 
  
-- Sections  (These are styles relating to the structure and style of the site that goes beyond basic/agnostic structural styling)  
+- Sections  (These sections makeup the theme styling that goes beyond basic theme structural styles...)  
 ---- aside  (styles related to sidebars and widget areas)  
 ---- content  (styles related to primary content area)  
 ---- header (for styles, not relating to navigation, that existin within the header)  
