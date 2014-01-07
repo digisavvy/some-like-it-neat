@@ -4,10 +4,10 @@
  */
 ?>
 <?php tha_entry_before(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemType="http://schema.org/BlogPosting">
 	<?php tha_entry_top(); ?>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h1 class="entry-title" itemprop="name" ><?php the_title(); ?></h1>
 
 		<div class="entry-meta">
 
@@ -16,7 +16,7 @@
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content" itemprop="articleBody" >
 		<?php the_content(); ?>
 		<?php
 			wp_link_pages( array(
@@ -27,7 +27,7 @@
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-meta">
+	<footer class="entry-meta" itemprop="keywords" >
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$category_list = get_the_category_list( __( ', ', 'digistarter' ) );
