@@ -14,7 +14,6 @@
 
 	</header><!-- .entry-header -->
 
-
 	<div class="entry-content" itemprop="mainContentOfPage">
 
 		<?php the_content(); ?>
