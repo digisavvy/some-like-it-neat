@@ -45,7 +45,7 @@ h5 {
 	@include fontSize(20px);
 	font-family: $title;
 }
-h6 {@include clearfix;
+h6 {
 	@include fontSize(18px);
 	font-family: $title;
 }
@@ -73,7 +73,12 @@ a, a:visited {
 		color: $primary-color;
 	}
 }
-
+ul {
+	@extend %default-ul; // Adds browser default spacing back
+}
+ol {
+	@extend %default-ol; // Adds browser default spacing back
+}
 .entry-title {
 	font-family: $title;
 	text-align: center;
