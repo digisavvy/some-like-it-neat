@@ -15,7 +15,7 @@
 	</header><!-- .entry-header -->
 
 
-	<div class="entry-content" itemprop="articleBody">
+	<div class="entry-content" itemprop="mainContentOfPage">
 
 		<?php the_content(); ?>
 		<?php
