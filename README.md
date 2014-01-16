@@ -39,18 +39,21 @@ Coming Soon
 * Internationalization aka i18n - I'd like to distribute this theme in the WP Repo at some point, so I need to account for this. I could use help here, =)
 
 * ~~MOAR Page Templates!~~ (See recent additions/changes)
+* Full Schema Support within the Some Like it Neat. We've got some basic microformatting hooked up already in Blog Posts and Standard Pages; this will extend to the Post Formats, too.
 
 Recent Additions/Changes
 ---------------
-* Added 'Bitters' from https://github.com/thoughtbot/bitters
+
+Added 'Bitters' from https://github.com/thoughtbot/bitters
 * Add page 2 more page templates: 2 Col left and 2 col right sidebar templates
+* Added Schema Markup to Page and Post Templates
 * WP Customizer. We're getting there. Support for the following:  
   * Site & Tagline
   * Background Color
   * Background Image
   * Navigation Choice
   * Choosing Static Front Page
-  * Footer settings for left/right footer content
+  * Footer settings for left/right footer content    
  
 
 Getting Started
