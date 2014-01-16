@@ -20,15 +20,15 @@ function digistarter_paging_nav() {
 	}
 	?>
 	<nav class="navigation paging-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'digistarter' ); ?></h1>
+		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'digistarter' ); ?></h4>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'digistarter' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav prev">&larr;</span> Older posts', 'digistarter' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'digistarter' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav next">&rarr;</span>', 'digistarter' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -53,11 +53,11 @@ function digistarter_post_nav() {
 	}
 	?>
 	<nav class="navigation post-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'digistarter' ); ?></h1>
+		<h3 class="screen-reader-text"><?php _e( 'Post navigation', 'digistarter' ); ?></h3>
 		<div class="nav-links">
 
-			<?php previous_post_link( '%link', _x( '<span class="meta-nav">&larr;</span> %title', 'Previous post link', 'digistarter' ) ); ?>
-			<?php next_post_link(     '%link', _x( '%title <span class="meta-nav">&rarr;</span>', 'Next post link',     'digistarter' ) ); ?>
+			<?php previous_post_link( '%link', _x( '<span class="meta-nav prev">&larr;</span> %title', 'Previous post link', 'digistarter' ) ); ?>
+			<?php next_post_link(     '%link', _x( '%title <span class="meta-nav next">&rarr;</span>', 'Next post link',     'digistarter' ) ); ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
