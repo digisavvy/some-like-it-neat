@@ -23,6 +23,29 @@
 	margin: 0 0 1.5em;
 }
 
+.aligncenter {
+	display: block;
+	float: none;
+	margin-top: .5em;
+	margin-right: auto!important;
+	margin-bottom: .5em;
+	margin-left: auto!important;
+}
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.sticky{}
+.gallery-caption {}
+.bypostauthor {}
+
 /* =Breadcrumbs
 ----------------------------------------------- */
 #breadcrumbs {
@@ -119,5 +142,81 @@ object {
 		a, a:visited {
 			border-bottom: solid 1px #ff0000;
 		}
+	}
+	.alignleft {
+	    float: left;
+	    margin-right: 10px;
+	    margin-bottom: 10px;
+	}
+	.alignright{
+	    float: right;
+	    margin-left: 10px;
+	    margin-bottom: 10px;
+	}
+}
+
+/* =Page Templates
+----------------------------------------------- */
+
+// 2col Right Sidebar
+.page-template-page-templatestemplate-right-col-php {
+	.wrap {
+		margin: 40px;
+	}
+	h1.entry-title {
+		margin: 0;
+		text-align: left;
+	}
+	#primary {
+		@include media($sm) {
+			@include span-columns(4);
+		}
+		@include media($md) {
+			@include span-columns(8);
+		}
+	}
+	#secondary {
+		@include media($sm) {
+			@include span-columns(4);
+		}
+		@include media($md) {
+			@include span-columns(4);
+		}
+	}
+}
+
+
+// 2col Left Sidebar
+.page-template-page-templatestemplate-left-col-php {
+	.wrap {
+		margin: 40px;
+
+	}
+	h1.entry-title {
+		margin: 0;
+		text-align: left;
+	}
+	#primary {
+
+		@include media($sm) {
+			@include span-columns(4);
+		}
+		@include media($md) {
+			@include span-columns(8);
+		}
+	}
+	#secondary {
+		float: left;
+		padding-right: 1.5%;
+		@include media($sm) {
+			@include span-columns(4);
+		}
+		@include media($md) {
+			@include span-columns(4);
+		}
+	}
+	footer {
+		clear: both;
+		display: table;
 	}
 }

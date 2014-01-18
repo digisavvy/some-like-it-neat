@@ -13,19 +13,22 @@
    		<?php tha_footer_before(); ?>
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<?php tha_footer_top(); ?>
+			<?php wp_footer(); ?>
 			<div class="site-info">
 				<?php do_action( 'digistarter_credits' ); ?>
 				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by <span class="genericon genericon-wordpress"></span> %s', 'digistarter' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
-				<?php printf( __( 'Theme: %1$s by %2$s.', 'digistarter' ), 'Some Like it Neat, ', '<a href="http://alexhasnicehair.com" rel="designer">Alex Vasquez</a>' ); ?>
+				<?php printf( __( 'Theme: %1$s by %2$s.', 'digistarter' ), 'Some Like it Neat, ', '<a href="http://alexhasnicehair.com" rel="designer">Alex Vasquez</a>' ); ?><br />
+
 			</div><!-- .site-info -->
+			<?php tha_footer_bottom(); ?>
 		</footer><!-- #colophon -->
-		<?php tha_footer_bottom(); ?>
-	</div><!-- .wrap --<
+
+	</div><!-- .wrap -->
 </div><!-- #page -->
 <?php tha_footer_after(); ?>
 <?php tha_body_bottom(); ?>
-<?php wp_footer(); ?>
+
 
 </body>
 </html>

@@ -38,7 +38,11 @@
 	margin-bottom: 1em;
 }
 .sf-menu ul {
-	box-shadow: 2px 2px 6px rgba(0,0,0,.2);
+	/*box-shadow: 0 0 6px rgba(0,0,0,.2);*/
+	border-bottom: solid 1px #f9f9f9;
+	border-top: solid 1px #f9f9f9;
+	border-left: solid 1px #f9f9f9;
+	border-right: solid 1px #f9f9f9;
 	min-width: 12em; /* allow long menu items to determine submenu width */
 	*width: 12em; /* no auto sub width for IE7, see white-space comment below */
 }
@@ -54,7 +58,9 @@
 	color: #13a;
 }
 .sf-menu li {
-	background: #BDD2FF;
+	background: #f9f9f9 !important;
+	border-top: solid 1px #f9f9f9;
+	border-bottom: solid 1px #f9f9f9;
 	white-space: nowrap; /* no need for Supersubs plugin */
 	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 	-webkit-transition: background .2s;
@@ -68,7 +74,7 @@
 }
 .sf-menu li:hover,
 .sf-menu li.sfHover {
-	background: #CFDEFF;
+	background: #fff !important;
 	/* only transition out, not in */
 	-webkit-transition: none;
 	transition: none;

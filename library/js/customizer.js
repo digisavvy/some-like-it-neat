@@ -33,4 +33,80 @@
 			}
 		} );
 	} );
+
+	//Display Option
+	wp.customize( 'tcx_display_header', function( value ) {
+	    value.bind( function( to ) {
+	        false === to ? $( '#header' ).hide() : $( '#header' ).show();
+	    } );
+	} );
+
+	wp.customize( 'tcx_color_scheme', function( value ) {
+	    value.bind( function( to ) {
+
+	        if ( 'inverse' === to ) {
+
+	            $( 'body' ).css({
+	                background: '#000',
+	                color:      '#fff'
+	            });
+
+	        } else {
+
+	            $( 'body' ).css({
+	                background: '#fff',
+	                color:      '#000'
+	            });
+
+	        }
+
+	    });
+	});
+
+	wp.customize( 'tcx_font', function( value ) {
+	    value.bind( function( to ) {
+
+	        switch( to.toString().toLowerCase() ) {
+
+	            case 'times':
+	                sFont = 'Times New Roman';
+	                break;
+
+	            case 'arial':
+	                sFont = 'Arial';
+	                break;
+
+	            case 'courier':
+	                sFont = 'Courier New, Courier';
+	                break;
+
+	            case 'helvetica':
+	                sFont = 'Helvetica';
+	                break;
+
+	            default:
+	                sFont = 'Times New Roman';
+	                break;
+
+	        }
+
+	        $( 'body' ).css({
+	            fontFamily: sFont
+	        });
+
+	    });
+
+	});
+
+	wp.customize( 'neat_footer_left', function( value ) {
+	    value.bind( function( to ) {
+	        $( '.footer-left' ).text( to );
+	    });
+	});
+	wp.customize( 'neat_footer_right', function( value ) {
+	    value.bind( function( to ) {
+	        $( '.footer-right' ).text( to );
+	    });
+	});
+
 } )( jQuery );

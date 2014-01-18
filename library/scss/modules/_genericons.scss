@@ -1,5 +1,7 @@
 /**
+
 	Genericons Helper CSS
+
 */
 
 
@@ -9,7 +11,7 @@
 
 @font-face {
     font-family: 'Genericons';
-    src: url('..font/genericons-regular-webfont.eot');
+    src: url('../font/genericons-regular-webfont.eot');
 }
 
 @font-face {
@@ -21,6 +23,15 @@
     font-style: normal;
 }
 
+/**
+ * Base Styling
+ */
+.genericon.genericon-aside,
+.genericon.genericon-audio {
+	@include fontSize(50px);
+	float: left;
+	top: -10px;
+}
 
 /**
  * All Genericons
@@ -28,15 +39,14 @@
 
 .genericon {
 	display: inline-block;
-	width: inherit;
-	height: inherit;
-	-webkit-font-smoothing: antialiased;
-	font-size: 24px;
-	line-height: 1;
 	font-family: 'Genericons';
-	text-decoration: inherit;
 	font-weight: normal;
 	font-style: normal;
+	height: inherit;
+	width: inherit;
+	-webkit-font-smoothing: antialiased;
+	line-height: 1;
+	text-decoration: inherit;
 	vertical-align: top;
 }
 

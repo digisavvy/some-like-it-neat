@@ -38,46 +38,20 @@ function digistarter_setup() {
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
-	//add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'digistarter' ),
-		'menu_class'      => 'sf-menu',
-		'items_wrap'      => '<ul id="%1$s" class="sf-menu">%3$s</ul>'
-	) );
+	if ( !function_exists('dg_register_nav_menus') ) :
+		function dg_register_nav_menus() {
 
-	class My_Walker extends Walker_Nav_Menu {
+			register_nav_menu( 'primary-navigation', __( 'Primary Menu' ) );
 
-		function start_el(&$output, $item, $depth, $args) {
-			global $wp_query;
-			$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-
-			$class_names = $value = '';
-
-			$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-
-			$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item ) );
-			$class_names = ' class="' . esc_attr( $class_names ) . '"';
-
-			$output .= $indent . '<li id="menu-item-'. $item->ID . '"' . $value . $class_names .'>';
-
-			$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : '';
-			$attributes .= ! empty( $item->target )     ? ' target="' . esc_attr( $item->target     ) .'"' : '';
-			$attributes .= ! empty( $item->xfn )        ? ' rel="'    . esc_attr( $item->xfn        ) .'"' : '';
-			$attributes .= ! empty( $item->url )        ? ' href="'   . esc_attr( $item->url        ) .'"' : '';
-
-			$item_output = $args->before;
-			$item_output .= '<a'. $attributes .'>';
-			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-			$item_output .= '</a><br /><span class="sub">' . $item->attr_title. '</span>'; /* This is where I changed things. */
-			$item_output .= $args->after;
-
-			$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-			}
 		}
+		add_action( 'init', 'dg_register_nav_menus' );
+	endif;
+
 	// Enable support for Post Formats.
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
 
 	// Setup the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'digistarter_custom_background_args', array(
@@ -91,89 +65,93 @@ add_action( 'after_setup_theme', 'digistarter_setup' );
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function digistarter_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'digistarter' ),
-		'id'            => 'sidebar-1',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
-}
-add_action( 'widgets_init', 'digistarter_widgets_init' );
+if ( !function_exists('digistarter_widgets_init') ) :
+	function digistarter_widgets_init() {
+		register_sidebar( array(
+			'name'          => __( 'Sidebar', 'digistarter' ),
+			'id'            => 'sidebar-1',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		) );
+	}
+	add_action( 'widgets_init', 'digistarter_widgets_init' );
+endif;
 
 /**
  * Enqueue scripts and styles.
  */
-function digistarter_scripts() {
-	if (!is_admin()) {
-		wp_enqueue_script('jquery');
+if ( !function_exists('digistarter_scripts') ) :
+	function digistarter_scripts() {
+		if (!is_admin()) {
+			wp_enqueue_script('jquery');
+		}
+
+		// Main Style
+		wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
+
+		// Superfish Style
+		wp_enqueue_style( 'superfish', get_template_directory_uri() . '/library/css/superfish/superfish.css' );
+
+		// Meanmenu Style
+		wp_enqueue_style( 'meanmenu', get_template_directory_uri() . '/library/css/meanmenu/meanmenu.css' );
+
+		// Selectivizr Scripts
+		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'selectivizr' );
+
+		// Superfish Scripts
+		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/superfish/hoverintent.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'hoverintent' );
+
+		wp_register_script( 'supersubs', get_template_directory_uri() . '/library/js/superfish/supersubs.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'supersubs' );
+
+		wp_register_script( 'superfish', get_template_directory_uri() . '/library/js/superfish/superfish.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'superfish' );
+
+		// Meanmenu Script
+		wp_register_script( 'meanmenu', get_template_directory_uri() . '/library/js/meanmenu/jquery.meanmenu.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'meanmenu' );
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
 	}
+	add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
+endif;
 
-	// Main Style
-	wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
+if ( !function_exists('dg_add_superfish') ) :
+	function dg_add_superfish(){ ?>
+		<script>
+			// Init Superfish
+			jQuery(document).ready(function() {
+				jQuery('ul.sf-menu').superfish();
+			});
+		</script>
+	<?php }
+	add_action( 'wp_head', 'dg_add_superfish' );
+endif;
 
-	// Genericons Style
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/library/css/genericons.css' );
+if ( !function_exists('dg_add_meanmenu') ) :
+	function dg_add_meanmenu() { ?>
+		<script>
+			// Init Mean Menu
+			jQuery(document).ready(function () {
+			    jQuery('header nav').meanmenu( {
+			     meanScreenWidth: "480",
+	   			 meanRevealPosition: "right",
+	   			 meanExpand: "",
+	   			 meanMenuContainer: "body",
+	   			 meanMenuClose: "X"
 
-	// Superfish Style
-	wp_enqueue_style( 'superfish', get_template_directory_uri() . '/library/css/superfish/superfish.css' );
-
-	// Meanmenu Style
-	wp_enqueue_style( 'meanmenu', get_template_directory_uri() . '/library/css/meanmenu/meanmenu.css' );
-
-	// Navigation
-	wp_enqueue_script( 'digistarter-navigation', get_template_directory_uri() . '/library/js/navigation.js', array(), '20120206', true );
-
-	// Skiplink Focus Fi
-	wp_enqueue_script( 'digistarter-skip-link-focus-fix', get_template_directory_uri() . '/library/js/skip-link-focus-fix.js', array(), '20130115', true );
-
-	// Selectivizr Scripts
-	wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
-	wp_enqueue_script( 'selectivizr' );
-
-	// Superfish Scripts
-	wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/superfish/hoverintent.js', array(), '1.0.0', false );
-	wp_enqueue_script( 'hoverintent' );
-
-	wp_register_script( 'supersubs', get_template_directory_uri() . '/library/js/superfish/supersubs.js', array(), '1.0.0', false );
-	wp_enqueue_script( 'supersubs' );
-
-	wp_register_script( 'superfish', get_template_directory_uri() . '/library/js/superfish/superfish.js', array(), '1.0.0', false );
-	wp_enqueue_script( 'superfish' );
-
-	// Meanmenu Script
-	wp_register_script( 'meanmenu', get_template_directory_uri() . '/library/js/meanmenu/jquery.meanmenu.js', array(), '1.0.0', false );
-	wp_enqueue_script( 'meanmenu' );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
-}
-add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
-
-function dg_add_fontawesome() {
-	echo '<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">';
-	echo "<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Oswald' rel='stylesheet' type='text/css'>";
-}
-add_action( 'wp_head', 'dg_add_fontawesome' );
-
-function dg_add_superfish(){ ?>
-	<script>
-		jQuery(document).ready(function() {
-			jQuery('ul.sf-menu').superfish();
-		});
-
-		// Init Mean Menu
-		jQuery(document).ready(function () {
-		    jQuery('header nav').meanmenu(
-
-		    );
-		});
-	</script>
-<?php }
-add_action( 'wp_head', 'dg_add_superfish' );
+			    } );
+			});
+		</script>
+	<?php }
+	add_action( 'wp_head', 'dg_add_meanmenu' );
+endif;
 
 /**
  * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
@@ -201,6 +179,10 @@ require get_template_directory() . '/library/inc/extras.php';
 require_once dirname( __FILE__ ) . '/library/inc/class-tgm-plugin-activation.php';
 
 /**
+ * Customizer Controls.
+ */
+
+/**
  * WP Customizer additions.
  */
 require get_template_directory() . '/library/inc/customizer.php';
@@ -209,7 +191,6 @@ function dg_customizer_register( $wp_customize ) {
    //All our sections, settings, and controls will be added here
 }
 add_action( 'customize_register', 'dg_customizer_register' );
-
 
 /**
  * Load Jetpack compatibility file.
@@ -242,23 +223,35 @@ function neat_recommended_required_plugins() {
 	$plugins = array(
 
 		// This is an example of how to include a plugin pre-packaged with a theme
-		array(
-			'name'     				=> 'Hensel and Gretel Breadcrumbs', // The plugin name
-			'slug'     				=> 'hensel-gretel', // The plugin slug (typically the folder name)
-			'source'   				=> get_stylesheet_directory() . '/library/plugins/hansel-gretel.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
+		// array(
+		// 	'name'     		=> 'Hensel and Gretel Breadcrumbs', // The plugin name
+		// 	'slug'     		=> 'hensel-gretel', // The plugin slug (typically the folder name)
+		// 	'source'   		=> get_stylesheet_directory() . '/library/plugins/hansel-gretel.zip', // The plugin source
+		// 	'required' 		=> false, // If false, the plugin is only 'recommended' instead of required
+		// 	'version' 		=> '', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+		// 	'force_activation' 	=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+		// 	'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+		// 	'external_url' 		=> '', // If set, overrides default API URL and points to an external URL
+		// ),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository
-		// array(
-		// 	'name' 		=> 'BuddyPress',
-		// 	'slug' 		=> 'buddypress',
-		// 	'required' 	=> false,
-		// ),
+		array(
+			'name' 		=> 'Custom Post Type Page Template',
+			'slug' 		=> 'custom-post-type-page-template',
+			'required' 	=> false,
+		),
+
+		array(
+			'name' 		=> 'Hensel and Gretel Breadcrumbs',
+			'slug' 		=> 'hansel-gretel',
+			'required' 	=> false,
+		),
+
+		array(
+			'name' 		=> 'Whistles',
+			'slug' 		=> 'whistles',
+			'required' 	=> false,
+		),
 
 	);
 
@@ -279,7 +272,7 @@ function neat_recommended_required_plugins() {
 		'parent_url_slug' 	=> 'themes.php', 				// Default parent URL slug
 		'menu'         		=> 'install-required-plugins', 	// Menu slug
 		'has_notices'      	=> true,                       	// Show admin notices or not
-		'is_automatic'    	=> false,					   	// Automatically activate plugins after installation or not
+		'is_automatic'    	=> true,					   	// Automatically activate plugins after installation or not
 		'message' 			=> '',							// Message to output right before the plugins table
 		'strings'      		=> array(
 			'page_title'                       			=> __( 'Install Required Plugins', $theme_text_domain ),
@@ -306,14 +299,23 @@ function neat_recommended_required_plugins() {
 	tgmpa( $plugins, $config );
 }
 
+
 /**
  * Custom Hooks and Filters
  */
-add_action( 'tha_content_top', 'neat_add_breadcrumbs' ); {
-	function neat_add_breadcrumbs() {
-		if ( !is_front_page() ) {
-			if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
-		}
+function neat_add_breadcrumbs() {
+	if ( !is_front_page() ) {
+		if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
 	}
 }
+add_action( 'tha_content_top', 'neat_add_breadcrumbs' );
 
+function neat_add_footer_divs() { ?>
+	<div class="footer-left">
+		 <?php echo get_theme_mod( 'neat_footer_left' ); ?>
+	</div>
+	<div class="footer-right">
+		<?php echo get_theme_mod( 'neat_footer_right' ); ?>
+	</div>
+<?php }
+add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );

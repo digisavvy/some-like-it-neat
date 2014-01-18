@@ -1,7 +1,0 @@
-// Define your breakpoints
-$hg: new-breakpoint(min-width 1140px 16);
-$md: new-breakpoint(min-width 768px 12);
-$smbg: new-breakpoint(min-width 480px 8);
-$sm: new-breakpoint(min-width 320px 4);
-
-$special: new-breakpoint(min-width 320px max-width 479px);

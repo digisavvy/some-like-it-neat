@@ -6,21 +6,16 @@
  */
 ?>
 <?php tha_entry_before(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemType="http://schema.org/WebPage">
 	<?php tha_entry_top(); ?>
 	<header class="entry-header">
-		<?php
-			if ( !is_front_page() ) { ?>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			<? } else {
 
-			}
-		?>
+		<h1 class="entry-title" itemprop="name"><?php the_title(); ?></h1>
 
 	</header><!-- .entry-header -->
 
 
-	<div class="entry-content">
+	<div class="entry-content" itemprop="mainContentOfPage">
 
 		<?php the_content(); ?>
 		<?php
@@ -31,7 +26,6 @@
 		?>
 
 	</div><!-- .entry-content -->
-	<?php tha_entry_bottom(); ?>
 	<?php edit_post_link( __( 'Edit', 'digistarter' ), '<footer class="entry-meta"><span class="edit-link">', '</span></footer>' ); ?>
 	<?php tha_entry_bottom(); ?>
 </article><!-- #post-## -->
