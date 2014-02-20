@@ -160,9 +160,7 @@ object {
 
 // 2col Right Sidebar
 .page-template-page-templatestemplate-right-col-php {
-	.wrap {
-		margin: 40px;
-	}
+
 	h1.entry-title {
 		margin: 0;
 		text-align: left;
@@ -180,7 +178,7 @@ object {
 			@include span-columns(4);
 		}
 		@include media($md) {
-			@include span-columns(4);
+			@include span-columns(3);
 		}
 	}
 }
@@ -188,16 +186,13 @@ object {
 
 // 2col Left Sidebar
 .page-template-page-templatestemplate-left-col-php {
-	.wrap {
-		margin: 40px;
 
-	}
 	h1.entry-title {
 		margin: 0;
 		text-align: left;
 	}
 	#primary {
-
+		float: right !important;
 		@include media($sm) {
 			@include span-columns(4);
 		}
@@ -206,13 +201,13 @@ object {
 		}
 	}
 	#secondary {
-		float: left;
-		padding-right: 1.5%;
+		float: left !important;
+		margin-right: 1.5%;
 		@include media($sm) {
 			@include span-columns(4);
 		}
 		@include media($md) {
-			@include span-columns(4);
+			@include span-columns(3);
 		}
 	}
 	footer {
