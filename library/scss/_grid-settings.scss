@@ -1,8 +1,12 @@
 
 @import "neat/neat-helpers";
 
+// Adding a Visual Grid while you develop. Set to 'true.'
+$visual-grid: false;
+
 // Change the grid settings
 $column: 90px;
 $gutter: 30px;
 $grid-columns: 16;
-$max-width: em(1140);
+// $max-width: 81.42857143rem;
+$max-width: 1140px;

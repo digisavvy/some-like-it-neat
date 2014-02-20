@@ -126,3 +126,7 @@ ul.nav-menu li {
 		position: static !important;
 	}
 }
+
+.nav-links a:nth-of-type(2) {
+	float: right;
+}

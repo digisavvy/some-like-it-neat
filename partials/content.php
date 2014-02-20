@@ -13,6 +13,7 @@
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<span class="genericon genericon-time"></span> <?php digistarter_posted_on(); ?>
+			<span itemprop="dateModified" style="display:none;">Last modified: <?php the_modified_date(); ?></span>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->

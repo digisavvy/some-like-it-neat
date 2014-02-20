@@ -28,17 +28,32 @@ I admit it. I just add things because I think they're cool. It's a bad habit... 
 * Superfish Menus: Handles drop down nav nicely. (http://users.tpg.com.au/j_birch/plugins/superfish/)
 * Meanmenu: Hamburger menu when you get down to mobile viewports (https://github.com/weare2ndfloor/meanMenu)
 * Post Format Support. There's very basic template support for Post Formats. The templates are there for you to butcher to your little heart's content!
-* Menu Walker Class for Menu Descriptions: Menu descriptions like it's 2008, mofo!
+* ~~Menu Walker Class for Menu Descriptions: Menu descriptions like it's 2008, mofo!~~ (Really didn't need this, just thought it was cool, but I am, in fact, a fool!)
 
 Coming Soon
 ---------------
 
-* Further use of WP Customizer. Paging Konstantin Obenland. =) I'll be getting down to business here because I'd like to learn how to use the fucker.
+* ~~Further use of WP Customizer. Paging Konstantin Obenland. =) I'll be getting down to business here because I'd like to learn how to use the fucker.~~ (see recent additions)
 
 
 * Internationalization aka i18n - I'd like to distribute this theme in the WP Repo at some point, so I need to account for this. I could use help here, =)
 
-* MOAR Page Templates!
+* ~~MOAR Page Templates!~~ (See recent additions/changes)
+* Full Schema Support within the Some Like it Neat. We've got some basic microformatting hooked up already in Blog Posts and Standard Pages; this will extend to the Post Formats, too.
+
+Recent Additions/Changes
+---------------
+
+Added 'Bitters' from https://github.com/thoughtbot/bitters
+* Add page 2 more page templates: 2 Col left and 2 col right sidebar templates
+* Added Schema Markup to Page and Post Templates
+* WP Customizer. We're getting there. Support for the following:  
+  * Site & Tagline
+  * Background Color
+  * Background Image
+  * Navigation Choice
+  * Choosing Static Front Page
+  * Footer settings for left/right footer content    
  
 
 Getting Started
@@ -72,7 +87,7 @@ theme_root/library
 
 / scss  
 
-- style.scss (The file that directly gets compiled by SASS. Output style.scss to your theme's root directory)
+* style.scss (The file that directly gets compiled by SASS. Output style.scss to your theme's root directory)
 
 - _bootstrap.scss (The file that we use to import all of our SASS files, except style.scss of course!)
 
@@ -81,27 +96,29 @@ theme_root/library
 
 - bourbon  (Bourbon SASS Goodies library from http://bourbon.io) 
 
+- bitters  (Basic UI/Formatting implements from http://bitters.bourbon.io) 
+
 - grid-settings  (Necessary if you're setting your own number of columns. Docs at http://neat.bourbon.io)  
 
+- neat  (our grid framework. See docs over at http://neat.bourbon.io) 
+
 - base  (Refers to styles that make up the bulkd of the 'standard structure' for the site's layout)
----- _breakpoints.scss (Where we define our responsive breakpoints)   
----- _normalize (Style resets+normalize based on PureUI Project)
----- _structure.scss (Basic structural styles for basic scaffolding. As agnostic as possible)  
----- _typography.scss  (Typograhpical related styles)  
+  * _breakpoints.scss (Where we define our responsive breakpoints)  
+  * _normalize (Style resets+normalize based on PureUI Project)  
+  * _structure.scss (Basic structural styles for basic scaffolding. As agnostic as possible)  
+  * _typography.scss  (Typograhpical related styles)  
 
 - modules  
----- _buttons.scss  (Where we'll place styles for buttons)  
-----  _helpers.scss  (A part of the bourbon/neat grid framework)  
----- ~~typography.scss~~  (Moved this to 'base')  
-----  _variables.scss  (Site specific variables can go here)  
-
-- neat  (our grid framework. See docs over at http://neat.bourbon.io) 
+  * _buttons.scss  (Where we'll place styles for buttons)  
+  * _helpers.scss  (A part of the bourbon/neat grid framework)  
+  * ~~typography.scss~~  (Moved this to 'base')  
+  * _variables.scss  (Site specific variables can go here)  
  
 - Sections  (These sections makeup the theme styling that goes beyond basic theme structural styles...)  
----- aside  (styles related to sidebars and widget areas)  
----- content  (styles related to primary content area)  
----- header (for styles, not relating to navigation, that existin within the header)  
----- navigation  (for nav specific styling)  
+  * aside  (styles related to sidebars and widget areas)  
+  * content  (styles related to primary content area)  
+  * header (for styles, not relating to navigation, that existin within the header)  
+  * navigation  (for nav specific styling)  
 
 ### General Credits and Thanks
 ---------------
