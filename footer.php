@@ -11,7 +11,7 @@
 		</div><!-- #content -->
 		<?php tha_content_after(); ?>
    		<?php tha_footer_before(); ?>
-		<footer id="colophon" class="site-footer" role="contentinfo">
+		<footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 			<?php tha_footer_top(); ?>
 			<?php wp_footer(); ?>
 			<div class="site-info">
