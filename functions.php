@@ -174,11 +174,6 @@ require get_template_directory() . '/library/inc/template-tags.php';
 require get_template_directory() . '/library/inc/extras.php';
 
 /**
- * TGM Plugin Activation Class.
- */
-require_once dirname( __FILE__ ) . '/library/inc/class-tgm-plugin-activation.php';
-
-/**
  * Customizer Controls.
  */
 
