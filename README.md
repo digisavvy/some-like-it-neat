@@ -45,6 +45,7 @@ Recent Additions/Changes
 ---------------
 
 Added 'Bitters' from https://github.com/thoughtbot/bitters
+* Updated TGM Plugin Activation Class to 2.4
 * Add page 2 more page templates: 2 Col left and 2 col right sidebar templates
 * Added Schema Markup to Page and Post Templates
 * WP Customizer. We're getting there. Support for the following:  
