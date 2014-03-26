@@ -2,7 +2,7 @@
 @import "neat/neat-helpers";
 
 // Adding a Visual Grid while you develop. Set to 'true.'
-$visual-grid: true;
+$visual-grid: false;
 $visual-grid-color: #ccc;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.2;
@@ -11,4 +11,4 @@ $visual-grid-opacity: 0.2;
 $column: 90px;
 $gutter: 30px;
 $grid-columns: 12;
-$max-width: 1140px;
+$max-width: 1000px;
