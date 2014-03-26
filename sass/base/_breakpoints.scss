@@ -1,0 +1,6 @@
+/* =Breakpoints.
+-------------------------------------------------------------- */
+$sm: new-breakpoint(min-width 200px 2);
+$md: new-breakpoint(min-width 768px 6);
+$smbg: new-breakpoint(min-width 480px 4);
+$hg: new-breakpoint(min-width 1140px 12);

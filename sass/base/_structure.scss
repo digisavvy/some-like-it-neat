@@ -1,0 +1,31 @@
+/* =Structure/Scaffolding
+-------------------------------------------------------------- */
+html {
+	font-size: 100%;
+}
+body {
+	@include fontSize(20px);
+	font-family: $helvetica;
+	word-break: break-word;
+}
+#page {
+	 @include outer-container;
+}
+.wrap {}
+
+#primary {
+	@include clearfix;
+	margin: auto;
+
+	ul {
+		list-style: none;
+
+		li {
+			list-style-type: square;
+		}
+	}
+
+}
+#secondary {
+	margin: 20px auto;
+}
