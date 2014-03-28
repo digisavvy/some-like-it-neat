@@ -35,14 +35,12 @@
 			</div>
 
 			<nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-
-			<?php
-				wp_nav_menu(array(
-						'echo' => true,
-						// 'container' => 'nav',
-						'theme_location' => 'primary-navigation',
-						'menu_class' => 'sf-menu'
-					));
+			<div class="menu-button">Menu</div>
+			<?php 	wp_nav_menu( array(
+				    'theme_location' => 'primary',
+				    'menu_class' => 'flexnav', //Adding the class for FlexNav
+				    'items_wrap' => '<ul data-breakpoint="800" id="%1$s" class="%2$s">%3$s</ul>', // Adding data-breakpoint for FlexNav
+				    ));
 			?>
 
 			</nav><!-- #site-navigation -->

@@ -94,12 +94,19 @@ if ( !function_exists('digistarter_scripts') ) :
 		// Superfish Style
 		wp_enqueue_style( 'superfish', get_template_directory_uri() . '/library/css/superfish/superfish.css' );
 
+		// Flexnav Style
+		wp_enqueue_style( 'flexnav', get_template_directory_uri() . '/library/css/flexnav/flexnav.css' );
+
 		// Meanmenu Style
 		wp_enqueue_style( 'meanmenu', get_template_directory_uri() . '/library/css/meanmenu/meanmenu.css' );
 
 		// Selectivizr Scripts
 		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'selectivizr' );
+
+		// Flexnav Scripts
+		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/js/flexnav/jquery.flexnav.min.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'flexnav' );
 
 		// Superfish Scripts
 		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/superfish/hoverintent.js', array(), '1.0.0', false );
@@ -134,23 +141,17 @@ if ( !function_exists('dg_add_superfish') ) :
 	add_action( 'wp_head', 'dg_add_superfish' );
 endif;
 
-if ( !function_exists('dg_add_meanmenu') ) :
-	function dg_add_meanmenu() { ?>
+if ( !function_exists('dg_add_flexnav') ) :
+	function dg_add_flexnav() { ?>
 		<script>
 			// Init Mean Menu
-			jQuery(document).ready(function () {
-			    jQuery('header nav').meanmenu( {
-			     meanScreenWidth: "480",
-	   			 meanRevealPosition: "right",
-	   			 meanExpand: "",
-	   			 meanMenuContainer: "body",
-	   			 meanMenuClose: "X"
-
-			    } );
+			jQuery(document).ready(function($){
+				   $(".flexnav").flexNav({
+				});
 			});
 		</script>
 	<?php }
-	add_action( 'wp_head', 'dg_add_meanmenu' );
+	add_action( 'wp_head', 'dg_add_flexnav' );
 endif;
 
 /**
