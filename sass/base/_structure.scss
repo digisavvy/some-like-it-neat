@@ -10,12 +10,18 @@ body {
 }
 #page {
 	 @include outer-container;
+
 }
 .wrap {}
+
+#main {
+	padding: 0 40px;
+}
 
 #primary {
 	@include clearfix;
 	margin: auto;
+	width: 100%;
 
 	ul {
 		list-style: none;
@@ -28,4 +34,5 @@ body {
 }
 #secondary {
 	margin: 20px auto;
+	width: 100%;
 }
