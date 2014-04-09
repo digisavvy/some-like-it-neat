@@ -2,16 +2,19 @@
 ----------------------------------------------- */
 
 .site-main [class*="navigation"] {
-	margin: 0 0 1.5em;
+	float: left;
+	margin: 25px 0 1.5em;
 	overflow: hidden;
 }
 [class*="navigation"] .nav-previous {
 	float: left;
+	margin-top: 25px;
 	width: 50%;
 }
 [class*="navigation"] .nav-next {
 	float: right;
 	text-align: right;
+	margin-top: 25px;
 	width: 50%;
 }
 
