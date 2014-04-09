@@ -94,9 +94,6 @@ if ( !function_exists('digistarter_scripts') ) :
 		// Superfish Style
 		wp_enqueue_style( 'superfish', get_template_directory_uri() . '/library/css/superfish/superfish.css' );
 
-		// Flexnav Style
-		wp_enqueue_style( 'flexnav', get_template_directory_uri() . '/library/css/flexnav/flexnav.css' );
-
 		// Meanmenu Style
 		wp_enqueue_style( 'meanmenu', get_template_directory_uri() . '/library/css/meanmenu/meanmenu.css' );
 
