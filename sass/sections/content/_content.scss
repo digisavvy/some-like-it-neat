@@ -162,20 +162,21 @@ object {
 		margin: 0;
 		text-align: left;
 	}
+
 	#primary {
 		@include media($sm) {
-			@include span-columns(4);
+
 		}
 		@include media($md) {
-			@include span-columns(8);
+
 		}
 	}
 	#secondary {
 		@include media($sm) {
-			@include span-columns(4);
+
 		}
 		@include media($md) {
-			@include span-columns(3);
+
 		}
 	}
 }
