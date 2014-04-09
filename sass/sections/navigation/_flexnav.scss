@@ -51,6 +51,9 @@ $fourth_level: #cbcbc9;
 		color: $nav_text;
 		background: #a6a6a2;
 		border-bottom: 1px solid rgba(0,0,0,.15);
+		&:hover {
+			color: $primary-color;
+		}
 	}
 	li ul {
 		margin-bottom: 0;

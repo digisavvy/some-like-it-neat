@@ -1894,6 +1894,8 @@ body {
     color: #222222;
     background: #a6a6a2;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+    .flexnav li a:hover {
+      color: red; }
   .flexnav li ul {
     margin-bottom: 0;
     padding-left: 0;
