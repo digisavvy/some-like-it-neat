@@ -17,7 +17,8 @@
     -webkit-transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;
     -ms-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out; }
+    transition: all .5s ease-in-out;
+    padding-left: 0 ;}
   .flexnav.one-page {
     position: fixed;
     top: 50px;
@@ -37,6 +38,8 @@
     background: #a6a6a2;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
   .flexnav li ul {
+    margin-bottom: 0;
+    padding-left: 0;
     width: 100%; }
     .flexnav li ul li {
       font-size: 100%;
@@ -57,7 +60,8 @@
     top: 0;
     right: 0;
     width: 50px;
-    height: 50px;
+    /*height: 50px;*/
+    height: 100%;
     display: inline-block;
     background: #acaca1;
     background: rgba(0, 0, 0, 0.075);
@@ -123,6 +127,7 @@
       border-left: 1px solid #acaca1;
       border-bottom: none; }
     .flexnav li > ul {
+      padding-left: 0;
       position: absolute;
       top: auto;
       left: 0; }
