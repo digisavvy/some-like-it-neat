@@ -7,7 +7,7 @@ I got bored on a Saturday night and started up this project. I really need a gir
 
 **Okay, so, right now here's where we're at:**
 
-* Underscores (_s) based theme. There's smarter folks than me building great shit (http://underscores.me)  
+* Underscores (_s) based theme. There's smarter folks than me building great sh*t (http://underscores.me)  
 
 * SASS. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. As of the initial writing of this ReadMe, I've been using SASS like a piece of shit asshole. I don't know what the fuck I'm doing. So if you do, please feel free to school a chump! If you don't know SASS, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
 
@@ -43,8 +43,13 @@ Coming Soon
 
 Recent Additions/Changes
 ---------------
+April 8th 2014
+* Replaced Superfish Nav with Flexnav (http://jasonweaver.name/lab/flexiblenavigation/)
+* Moved Sass files up one level. Just wanted them to be "less buried."
 
-Added 'Bitters' from https://github.com/thoughtbot/bitters
+Older Changes
+---------------
+* Added 'Bitters' from https://github.com/thoughtbot/bitters
 * Updated TGM Plugin Activation Class to 2.4
 * Add page 2 more page templates: 2 Col left and 2 col right sidebar templates
 * Added Schema Markup to Page and Post Templates
@@ -84,9 +89,9 @@ What I recommend is that you generate your child theme, setup your child theme f
 ---------------
 I definitely need some advice here. Simpler is better in my mind. OCD can be a real pain. So feel free to lend a hand.
 
-theme_root/library  
+theme_root/sass
 
-/ scss  
+/ sass  
 
 * style.scss (The file that directly gets compiled by SASS. Output style.scss to your theme's root directory)
 
