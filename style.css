@@ -1949,7 +1949,8 @@ ul.nav-menu li {
 
 #primary-nav {
   float: left;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%; }
 
 .mean-container .mean-nav ul li a, .mean-container .mean-nav ul li a:visited {
   color: #666;
