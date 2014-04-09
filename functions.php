@@ -91,12 +91,6 @@ if ( !function_exists('digistarter_scripts') ) :
 		// Main Style
 		wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
 
-		// Superfish Style
-		wp_enqueue_style( 'superfish', get_template_directory_uri() . '/library/css/superfish/superfish.css' );
-
-		// Meanmenu Style
-		wp_enqueue_style( 'meanmenu', get_template_directory_uri() . '/library/css/meanmenu/meanmenu.css' );
-
 		// Selectivizr Scripts
 		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'selectivizr' );
@@ -105,19 +99,14 @@ if ( !function_exists('digistarter_scripts') ) :
 		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/js/flexnav/jquery.flexnav.min.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'flexnav' );
 
-		// Superfish Scripts
+		// Modernizr
+		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/library/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
+		wp_enqueue_script( 'modernizr' );
+
+		// Hover Intent Scripts
 		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/superfish/hoverintent.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'hoverintent' );
 
-		wp_register_script( 'supersubs', get_template_directory_uri() . '/library/js/superfish/supersubs.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'supersubs' );
-
-		wp_register_script( 'superfish', get_template_directory_uri() . '/library/js/superfish/superfish.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'superfish' );
-
-		// Meanmenu Script
-		wp_register_script( 'meanmenu', get_template_directory_uri() . '/library/js/meanmenu/jquery.meanmenu.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'meanmenu' );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -126,22 +115,10 @@ if ( !function_exists('digistarter_scripts') ) :
 	add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
 endif;
 
-if ( !function_exists('dg_add_superfish') ) :
-	function dg_add_superfish(){ ?>
-		<script>
-			// Init Superfish
-			jQuery(document).ready(function() {
-				jQuery('ul.sf-menu').superfish();
-			});
-		</script>
-	<?php }
-	add_action( 'wp_head', 'dg_add_superfish' );
-endif;
-
 if ( !function_exists('dg_add_flexnav') ) :
 	function dg_add_flexnav() { ?>
 		<script>
-			// Init Mean Menu
+			// Init Flexnav Menu
 			jQuery(document).ready(function($){
 				   $(".flexnav").flexNav({
 				});
