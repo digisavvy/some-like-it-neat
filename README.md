@@ -23,6 +23,7 @@ I admit it. I just add things because I think they're cool. It's a bad habit... 
 
 * ~~Google Fonts (Just Oswald and Droid Serif)~~ Dropped these fonts. Not needed. If you want web fonts, you'll do it yourself anyway.
 * ~~Font Awesome: Icon Fonts! (http://fontawesome.io)~~ Already using Genericons. If you want these, you'll use em anyway.
+* TGM Plugin Activation, Version 2.4. I think there are a couple of plugins that are useful with this plugin, so they're properly included as recommendations
 * Genericons: Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)  
 * Dashicons: Alright, alright. More cool shit I just HAD to add. Happened across this project, loved it (http://melchoyce.github.io/dashicons/)
 * Superfish Menus: Handles drop down nav nicely. (http://users.tpg.com.au/j_birch/plugins/superfish/)
