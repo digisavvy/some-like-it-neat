@@ -5,7 +5,12 @@
 
 I got bored on a Saturday night and started up this project. I really need a girlfriend...
 
-**Okay, so, right now here's where we're at:**
+**The Essentials:**
+
+* Bourbon (http://bourbon.io), Neat (http://neat.bourbon.io), Bitters (http://bitters.bourbon.io) and Refills (http://refills.bourbon.io) — Bourbon provides a lightweight SASS library (similar to Compass).
+
+ 
+Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. Refills and Bitters provide additional styling and UI elements. I suggest you visit each of these projects to learn more and how to use them.
 
 * Underscores (_s) based theme. There's smarter folks than me building great sh*t (http://underscores.me)  
 
@@ -17,19 +22,17 @@ I got bored on a Saturday night and started up this project. I really need a gir
 
 * Pull requests welcome...
 
-Shit I included just because
+Other things I included just because
 ---------------
 I admit it. I just add things because I think they're cool. It's a bad habit... You should see my collection of hats and socks. 
 
-* ~~Google Fonts (Just Oswald and Droid Serif)~~ Dropped these fonts. Not needed. If you want web fonts, you'll do it yourself anyway.
-* ~~Font Awesome: Icon Fonts! (http://fontawesome.io)~~ Already using Genericons. If you want these, you'll use em anyway.
+* Post Format Support. There's very basic template support for Post Formats. The templates are there for you to butcher to your little heart's content!
 * TGM Plugin Activation, Version 2.4. I think there are a couple of plugins that are useful with this plugin, so they're properly included as recommendations
 * Genericons: Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)  
 * Dashicons: Alright, alright. More cool shit I just HAD to add. Happened across this project, loved it (http://melchoyce.github.io/dashicons/)
-* Superfish Menus: Handles drop down nav nicely. (http://users.tpg.com.au/j_birch/plugins/superfish/)
-* Meanmenu: Hamburger menu when you get down to mobile viewports (https://github.com/weare2ndfloor/meanMenu)
-* Post Format Support. There's very basic template support for Post Formats. The templates are there for you to butcher to your little heart's content!
-* ~~Menu Walker Class for Menu Descriptions: Menu descriptions like it's 2008, mofo!~~ (Really didn't need this, just thought it was cool, but I am, in fact, a fool!)
+ 
+* Added Flexnav for Navigation
+* Hover Intent script
 
 Coming Soon
 ---------------
@@ -44,12 +47,17 @@ Coming Soon
 
 Recent Additions/Changes
 ---------------
+April 14th 2014
+* Modified Bitters so that it can be used with Thoughtbot's Refills project (http://thoughtbot.github.io/refills/)
+
+Older Changes
+---------------
 April 8th 2014
 * Replaced Superfish Nav with Flexnav (http://jasonweaver.name/lab/flexiblenavigation/)
 * Moved Sass files up one level. Just wanted them to be "less buried."
 
-Older Changes
----------------
+##MOAR Older...
+
 * Added 'Bitters' from https://github.com/thoughtbot/bitters
 * Updated TGM Plugin Activation Class to 2.4
 * Add page 2 more page templates: 2 Col left and 2 col right sidebar templates
