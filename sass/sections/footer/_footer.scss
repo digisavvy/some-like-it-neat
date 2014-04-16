@@ -1,10 +1,11 @@
 footer {
 	float: left;
 	margin: 0 auto;
-	width: 75%;
+	padding: 0 40px;
+	width: 100%;
 	.site-info {
 		margin: auto;
-		width: 75%;
+		width: 100%;
 	}
 	.footer-left {
 		@include span-columns(8);
