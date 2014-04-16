@@ -2,7 +2,7 @@
 @import "neat/neat-helpers";
 
 // Adding a Visual Grid while you develop. Set to 'true.'
-$visual-grid: false;
+$visual-grid: true;
 $visual-grid-color: #ccc;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.2;
@@ -11,4 +11,10 @@ $visual-grid-opacity: 0.2;
 $column: 90px;
 $gutter: 30px;
 $grid-columns: 12;
-$max-width: 1000px;
+$max-width:1140px;
+
+// Breakpoints
+$sm: new-breakpoint(min-width 200px 4);
+$smbg: new-breakpoint(min-width 480px 4);
+$md: new-breakpoint(min-width 768px 6);
+$hg: new-breakpoint(min-width 1140px 12);
