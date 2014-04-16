@@ -355,90 +355,6 @@ dl {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* line 11, sass/neat/grid/_visual-grid.scss */
-body:before {
-  content: '';
-  display: inline-block;
-  background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-  height: 100%;
-  left: 0;
-  margin: 0 auto;
-  max-width: 1140px;
-  opacity: 0.2;
-  position: fixed;
-  right: 0;
-  width: 100%;
-  pointer-events: none;
-  z-index: 9999; }
-  @media screen and (min-width: 33.75em) {
-    /* line 11, sass/neat/grid/_visual-grid.scss */
-    body:before {
-      background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 57.14286%, #cccccc 57.14286%, #cccccc 100%, rgba(0, 0, 0, 0) 100%);
-      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 57.14286%, #cccccc 57.14286%, #cccccc 100%, rgba(0, 0, 0, 0) 100%);
-      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 57.14286%, #cccccc 57.14286%, #cccccc 100%, rgba(0, 0, 0, 0) 100%);
-      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 57.14286%, #cccccc 57.14286%, #cccccc 100%, rgba(0, 0, 0, 0) 100%);
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 57.14286%, #cccccc 57.14286%, #cccccc 100%, rgba(0, 0, 0, 0) 100%);
-      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 42.85714%, rgba(0, 0, 0, 0) 42.85714%, rgba(0, 0, 0, 0) 57.14286%, #cccccc 57.14286%, #cccccc 100%, rgba(0, 0, 0, 0) 100%); } }
-  @media screen and (min-width: 47.5em) {
-    /* line 11, sass/neat/grid/_visual-grid.scss */
-    body:before {
-      background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%); } }
-  @media screen and (min-width: 57.5em) {
-    /* line 11, sass/neat/grid/_visual-grid.scss */
-    body:before {
-      background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #cccccc 12.90323%, #cccccc 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #cccccc 25.80645%, #cccccc 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #cccccc 38.70968%, #cccccc 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #cccccc 51.6129%, #cccccc 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #cccccc 64.51613%, #cccccc 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #cccccc 77.41935%, #cccccc 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #cccccc 90.32258%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #cccccc 12.90323%, #cccccc 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #cccccc 25.80645%, #cccccc 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #cccccc 38.70968%, #cccccc 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #cccccc 51.6129%, #cccccc 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #cccccc 64.51613%, #cccccc 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #cccccc 77.41935%, #cccccc 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #cccccc 90.32258%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #cccccc 12.90323%, #cccccc 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #cccccc 25.80645%, #cccccc 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #cccccc 38.70968%, #cccccc 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #cccccc 51.6129%, #cccccc 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #cccccc 64.51613%, #cccccc 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #cccccc 77.41935%, #cccccc 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #cccccc 90.32258%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #cccccc 12.90323%, #cccccc 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #cccccc 25.80645%, #cccccc 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #cccccc 38.70968%, #cccccc 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #cccccc 51.6129%, #cccccc 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #cccccc 64.51613%, #cccccc 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #cccccc 77.41935%, #cccccc 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #cccccc 90.32258%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #cccccc 12.90323%, #cccccc 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #cccccc 25.80645%, #cccccc 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #cccccc 38.70968%, #cccccc 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #cccccc 51.6129%, #cccccc 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #cccccc 64.51613%, #cccccc 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #cccccc 77.41935%, #cccccc 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #cccccc 90.32258%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 9.67742%, rgba(0, 0, 0, 0) 9.67742%, rgba(0, 0, 0, 0) 12.90323%, #cccccc 12.90323%, #cccccc 22.58065%, rgba(0, 0, 0, 0) 22.58065%, rgba(0, 0, 0, 0) 25.80645%, #cccccc 25.80645%, #cccccc 35.48387%, rgba(0, 0, 0, 0) 35.48387%, rgba(0, 0, 0, 0) 38.70968%, #cccccc 38.70968%, #cccccc 48.3871%, rgba(0, 0, 0, 0) 48.3871%, rgba(0, 0, 0, 0) 51.6129%, #cccccc 51.6129%, #cccccc 61.29032%, rgba(0, 0, 0, 0) 61.29032%, rgba(0, 0, 0, 0) 64.51613%, #cccccc 64.51613%, #cccccc 74.19355%, rgba(0, 0, 0, 0) 74.19355%, rgba(0, 0, 0, 0) 77.41935%, #cccccc 77.41935%, #cccccc 87.09677%, rgba(0, 0, 0, 0) 87.09677%, rgba(0, 0, 0, 0) 90.32258%, #cccccc 90.32258%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%); } }
-  @media screen and (min-width: 200px) {
-    /* line 11, sass/neat/grid/_visual-grid.scss */
-    body:before {
-      background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%); } }
-  @media screen and (min-width: 480px) {
-    /* line 11, sass/neat/grid/_visual-grid.scss */
-    body:before {
-      background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 20%, rgba(0, 0, 0, 0) 20%, rgba(0, 0, 0, 0) 26.66667%, #cccccc 26.66667%, #cccccc 46.66667%, rgba(0, 0, 0, 0) 46.66667%, rgba(0, 0, 0, 0) 53.33333%, #cccccc 53.33333%, #cccccc 73.33333%, rgba(0, 0, 0, 0) 73.33333%, rgba(0, 0, 0, 0) 80.0%, #cccccc 80.0%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%); } }
-  @media screen and (min-width: 768px) {
-    /* line 11, sass/neat/grid/_visual-grid.scss */
-    body:before {
-      background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 13.04348%, rgba(0, 0, 0, 0) 13.04348%, rgba(0, 0, 0, 0) 17.3913%, #cccccc 17.3913%, #cccccc 30.43478%, rgba(0, 0, 0, 0) 30.43478%, rgba(0, 0, 0, 0) 34.78261%, #cccccc 34.78261%, #cccccc 47.82609%, rgba(0, 0, 0, 0) 47.82609%, rgba(0, 0, 0, 0) 52.17391%, #cccccc 52.17391%, #cccccc 65.21739%, rgba(0, 0, 0, 0) 65.21739%, rgba(0, 0, 0, 0) 69.56522%, #cccccc 69.56522%, #cccccc 82.6087%, rgba(0, 0, 0, 0) 82.6087%, rgba(0, 0, 0, 0) 86.95652%, #cccccc 86.95652%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 13.04348%, rgba(0, 0, 0, 0) 13.04348%, rgba(0, 0, 0, 0) 17.3913%, #cccccc 17.3913%, #cccccc 30.43478%, rgba(0, 0, 0, 0) 30.43478%, rgba(0, 0, 0, 0) 34.78261%, #cccccc 34.78261%, #cccccc 47.82609%, rgba(0, 0, 0, 0) 47.82609%, rgba(0, 0, 0, 0) 52.17391%, #cccccc 52.17391%, #cccccc 65.21739%, rgba(0, 0, 0, 0) 65.21739%, rgba(0, 0, 0, 0) 69.56522%, #cccccc 69.56522%, #cccccc 82.6087%, rgba(0, 0, 0, 0) 82.6087%, rgba(0, 0, 0, 0) 86.95652%, #cccccc 86.95652%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 13.04348%, rgba(0, 0, 0, 0) 13.04348%, rgba(0, 0, 0, 0) 17.3913%, #cccccc 17.3913%, #cccccc 30.43478%, rgba(0, 0, 0, 0) 30.43478%, rgba(0, 0, 0, 0) 34.78261%, #cccccc 34.78261%, #cccccc 47.82609%, rgba(0, 0, 0, 0) 47.82609%, rgba(0, 0, 0, 0) 52.17391%, #cccccc 52.17391%, #cccccc 65.21739%, rgba(0, 0, 0, 0) 65.21739%, rgba(0, 0, 0, 0) 69.56522%, #cccccc 69.56522%, #cccccc 82.6087%, rgba(0, 0, 0, 0) 82.6087%, rgba(0, 0, 0, 0) 86.95652%, #cccccc 86.95652%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 13.04348%, rgba(0, 0, 0, 0) 13.04348%, rgba(0, 0, 0, 0) 17.3913%, #cccccc 17.3913%, #cccccc 30.43478%, rgba(0, 0, 0, 0) 30.43478%, rgba(0, 0, 0, 0) 34.78261%, #cccccc 34.78261%, #cccccc 47.82609%, rgba(0, 0, 0, 0) 47.82609%, rgba(0, 0, 0, 0) 52.17391%, #cccccc 52.17391%, #cccccc 65.21739%, rgba(0, 0, 0, 0) 65.21739%, rgba(0, 0, 0, 0) 69.56522%, #cccccc 69.56522%, #cccccc 82.6087%, rgba(0, 0, 0, 0) 82.6087%, rgba(0, 0, 0, 0) 86.95652%, #cccccc 86.95652%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 13.04348%, rgba(0, 0, 0, 0) 13.04348%, rgba(0, 0, 0, 0) 17.3913%, #cccccc 17.3913%, #cccccc 30.43478%, rgba(0, 0, 0, 0) 30.43478%, rgba(0, 0, 0, 0) 34.78261%, #cccccc 34.78261%, #cccccc 47.82609%, rgba(0, 0, 0, 0) 47.82609%, rgba(0, 0, 0, 0) 52.17391%, #cccccc 52.17391%, #cccccc 65.21739%, rgba(0, 0, 0, 0) 65.21739%, rgba(0, 0, 0, 0) 69.56522%, #cccccc 69.56522%, #cccccc 82.6087%, rgba(0, 0, 0, 0) 82.6087%, rgba(0, 0, 0, 0) 86.95652%, #cccccc 86.95652%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 13.04348%, rgba(0, 0, 0, 0) 13.04348%, rgba(0, 0, 0, 0) 17.3913%, #cccccc 17.3913%, #cccccc 30.43478%, rgba(0, 0, 0, 0) 30.43478%, rgba(0, 0, 0, 0) 34.78261%, #cccccc 34.78261%, #cccccc 47.82609%, rgba(0, 0, 0, 0) 47.82609%, rgba(0, 0, 0, 0) 52.17391%, #cccccc 52.17391%, #cccccc 65.21739%, rgba(0, 0, 0, 0) 65.21739%, rgba(0, 0, 0, 0) 69.56522%, #cccccc 69.56522%, #cccccc 82.6087%, rgba(0, 0, 0, 0) 82.6087%, rgba(0, 0, 0, 0) 86.95652%, #cccccc 86.95652%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%); } }
-  @media screen and (min-width: 1140px) {
-    /* line 11, sass/neat/grid/_visual-grid.scss */
-    body:before {
-      background-image: deprecated-webkit-gradient(linear, left top, left bottom, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%);
-      background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0, #cccccc 0, #cccccc 6.38298%, rgba(0, 0, 0, 0) 6.38298%, rgba(0, 0, 0, 0) 8.51064%, #cccccc 8.51064%, #cccccc 14.89362%, rgba(0, 0, 0, 0) 14.89362%, rgba(0, 0, 0, 0) 17.02128%, #cccccc 17.02128%, #cccccc 23.40426%, rgba(0, 0, 0, 0) 23.40426%, rgba(0, 0, 0, 0) 25.53191%, #cccccc 25.53191%, #cccccc 31.91489%, rgba(0, 0, 0, 0) 31.91489%, rgba(0, 0, 0, 0) 34.04255%, #cccccc 34.04255%, #cccccc 40.42553%, rgba(0, 0, 0, 0) 40.42553%, rgba(0, 0, 0, 0) 42.55319%, #cccccc 42.55319%, #cccccc 48.93617%, rgba(0, 0, 0, 0) 48.93617%, rgba(0, 0, 0, 0) 51.06383%, #cccccc 51.06383%, #cccccc 57.44681%, rgba(0, 0, 0, 0) 57.44681%, rgba(0, 0, 0, 0) 59.57447%, #cccccc 59.57447%, #cccccc 65.95745%, rgba(0, 0, 0, 0) 65.95745%, rgba(0, 0, 0, 0) 68.08511%, #cccccc 68.08511%, #cccccc 74.46809%, rgba(0, 0, 0, 0) 74.46809%, rgba(0, 0, 0, 0) 76.59574%, #cccccc 76.59574%, #cccccc 82.97872%, rgba(0, 0, 0, 0) 82.97872%, rgba(0, 0, 0, 0) 85.10638%, #cccccc 85.10638%, #cccccc 91.48936%, rgba(0, 0, 0, 0) 91.48936%, rgba(0, 0, 0, 0) 93.61702%, #cccccc 93.61702%, #cccccc 100.0%, rgba(0, 0, 0, 0) 100.0%); } }
-
 /* Import base */
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -961,7 +877,7 @@ body {
 /* line 11, sass/base/_structure.scss */
 #page {
   *zoom: 1;
-  max-width: 1140px;
+  max-width: 71.25em;
   margin-left: auto;
   margin-right: auto; }
   /* line 18, sass/bourbon/addons/_clearfix.scss */
@@ -1000,8 +916,6 @@ body {
   margin: 20px auto;
   width: 100%; }
 
-/* =Breakpoints.
--------------------------------------------------------------- */
 /* Import Add-ons */
 /* line 49, sass/modules/_buttons.scss */
 #submit {
@@ -2453,7 +2367,7 @@ article.type-system-slab {
       float: left;
       display: block;
       margin-right: 3.22581%;
-      width: 48.3871%; }
+      width: 30.32258%; }
       /* line 40, sass/neat/grid/_span-columns.scss */
       .bullets .three-col-bullet:last-child {
         margin-right: 0; }
@@ -2542,10 +2456,10 @@ article.type-system-slab {
       .card:last-child {
         margin-right: 0; }
       /* line 70, sass/neat/grid/_omega.scss */
-      .card:nth-child(3n) {
+      .card:nth-child(2n) {
         margin-right: 0; }
       /* line 75, sass/neat/grid/_omega.scss */
-      .card:nth-child(3n+1) {
+      .card:nth-child(2n+1) {
         clear: left; } }
   /* line 195, sass/modules/_refills-examples.scss */
   .card .card-image {
@@ -2642,6 +2556,237 @@ article.type-system-slab {
     /* line 294, sass/modules/_refills-examples.scss */
     .card:active .card-header {
       background-color: #f7f7f7; }
+
+/* line 310, sass/modules/_refills-examples.scss */
+.sliding-menu-button {
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 0 0 white;
+  color: #333333;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  background-color: white;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #e3e3e3));
+  background-image: -webkit-linear-gradient(white, #e3e3e3);
+  background-image: linear-gradient(white, #e3e3e3);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 white;
+  background-clip: padding-box;
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 1.5em;
+  position: relative;
+  outline: none; }
+  /* line 79, sass/bourbon/addons/_button.scss */
+  .sliding-menu-button:hover:not(:disabled) {
+    box-shadow: inset 0 1px 0 0 white;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #dbdbdb));
+    background-image: -webkit-linear-gradient(#f2f2f2, #dbdbdb);
+    background-image: linear-gradient(#f2f2f2, #dbdbdb); }
+  /* line 95, sass/bourbon/addons/_button.scss */
+  .sliding-menu-button:active:not(:disabled) {
+    border: 1px solid #dbdbdb;
+    box-shadow: inset 0 0 8px 4px #d4d4d4, inset 0 0 8px 4px #d4d4d4, 0 1px 1px 0 #eeeeee; }
+  /* line 38, sass/bourbon/addons/_button.scss */
+  .sliding-menu-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
+  /* line 319, sass/modules/_refills-examples.scss */
+  .sliding-menu-button img {
+    height: 1.3em; }
+
+/* line 324, sass/modules/_refills-examples.scss */
+.sliding-menu-content {
+  position: fixed;
+  top: 0px;
+  right: auto;
+  bottom: 0px;
+  left: 0px;
+  width: 220px;
+  height: 100%;
+  -webkit-transform: translateX(-220px);
+  -moz-transform: translateX(-220px);
+  -ms-transform: translateX(-220px);
+  -o-transform: translateX(-220px);
+  transform: translateX(-220px);
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  background: #404040;
+  z-index: 999999;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
+  /* line 334, sass/modules/_refills-examples.scss */
+  .sliding-menu-content li a {
+    border-bottom: 1px solid #333333;
+    color: white;
+    display: block;
+    font-weight: bold;
+    padding: 1em; }
+    /* line 341, sass/modules/_refills-examples.scss */
+    .sliding-menu-content li a:hover {
+      background-color: #477dca;
+      color: white; }
+  /* line 347, sass/modules/_refills-examples.scss */
+  .sliding-menu-content.is-visible {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0); }
+
+/* line 352, sass/modules/_refills-examples.scss */
+.menu-screen {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.15s ease-out 0;
+  -moz-transition: all 0.15s ease-out 0;
+  transition: all 0.15s ease-out 0;
+  background: #333333;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999998; }
+  /* line 360, sass/modules/_refills-examples.scss */
+  .menu-screen.is-visible {
+    opacity: .4;
+    visibility: visible; }
+
+/* line 370, sass/modules/_refills-examples.scss */
+.hover-tile-outer {
+  background-position: bottom;
+  background-size: cover;
+  background: url("https://raw.github.com/Magnus-G/Random/master/mountains.png");
+  background-size: cover;
+  background-color: #BEB56E;
+  border: 1px solid #dddddd;
+  height: 10em;
+  margin-bottom: 1.5em;
+  cursor: pointer; }
+  @media screen and (min-width: 47.5em) {
+    /* line 370, sass/modules/_refills-examples.scss */
+    .hover-tile-outer {
+      width: 40%; } }
+  /* line 387, sass/modules/_refills-examples.scss */
+  .hover-tile-outer .hover-tile-container {
+    height: 10em;
+    overflow: hidden; }
+  /* line 392, sass/modules/_refills-examples.scss */
+  .hover-tile-outer .hover-tile-container:hover > .hover-tile {
+    -webkit-transform: translate(0, -100%);
+    -moz-transform: translate(0, -100%);
+    -ms-transform: translate(0, -100%);
+    -o-transform: translate(0, -100%);
+    transform: translate(0, -100%); }
+  /* line 396, sass/modules/_refills-examples.scss */
+  .hover-tile-outer .hover-tile {
+    -webkit-transition: all, 0.2s ease-in-out;
+    -moz-transition: all, 0.2s ease-in-out;
+    transition: all, 0.2s ease-in-out;
+    background: inherit;
+    color: white;
+    height: inherit;
+    padding: 1em 1.5em; }
+  /* line 404, sass/modules/_refills-examples.scss */
+  .hover-tile-outer .hover-tile-visible {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2em;
+    font-weight: 200;
+    padding-top: 2em;
+    text-align: center; }
+  /* line 412, sass/modules/_refills-examples.scss */
+  .hover-tile-outer .hover-tile-hidden {
+    background: rgba(0, 0, 0, 0.5); }
+    /* line 414, sass/modules/_refills-examples.scss */
+    .hover-tile-outer .hover-tile-hidden h4 {
+      margin-bottom: .5em; }
+    /* line 417, sass/modules/_refills-examples.scss */
+    .hover-tile-outer .hover-tile-hidden p {
+      color: rgba(255, 255, 255, 0.7); }
+
+/* line 430, sass/modules/_refills-examples.scss */
+.grid-items-lines {
+  *zoom: 1;
+  position: relative; }
+  /* line 18, sass/bourbon/addons/_clearfix.scss */
+  .grid-items-lines:before, .grid-items-lines:after {
+    content: " ";
+    display: table; }
+  /* line 23, sass/bourbon/addons/_clearfix.scss */
+  .grid-items-lines:after {
+    clear: both; }
+  /* line 442, sass/modules/_refills-examples.scss */
+  .grid-items-lines .grid-item {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    height: 14em;
+    background: white;
+    width: 100%;
+    overflow: hidden;
+    float: left;
+    padding: 2em;
+    border-right: 1px solid rgba(51, 51, 51, 0.2);
+    border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+    cursor: pointer; }
+    @media screen and (min-width: 57.5em) {
+      /* line 442, sass/modules/_refills-examples.scss */
+      .grid-items-lines .grid-item {
+        width: 33.33333%; } }
+    /* line 458, sass/modules/_refills-examples.scss */
+    .grid-items-lines .grid-item:hover {
+      background: rgba(51, 51, 51, 0.05); }
+  /* line 463, sass/modules/_refills-examples.scss */
+  .grid-items-lines .grid-item img {
+    display: block;
+    height: 2.5em;
+    margin-bottom: 1.2em;
+    opacity: .2; }
+  /* line 470, sass/modules/_refills-examples.scss */
+  .grid-items-lines .grid-item h1 {
+    color: #333333;
+    font-size: 1.3em;
+    margin-bottom: .4em; }
+  /* line 476, sass/modules/_refills-examples.scss */
+  .grid-items-lines .grid-item p {
+    color: rgba(51, 51, 51, 0.6); }
+    @media screen and (min-width: 47.5em) {
+      /* line 476, sass/modules/_refills-examples.scss */
+      .grid-items-lines .grid-item p {
+        max-width: 70%; } }
+  @media screen and (min-width: 57.5em) {
+    /* line 483, sass/modules/_refills-examples.scss */
+    .grid-items-lines .grid-item-big {
+      width: 66.66667%; } }
+  @media screen and (min-width: 47.5em) {
+    /* line 487, sass/modules/_refills-examples.scss */
+    .grid-items-lines .grid-item-big p {
+      max-width: 60%; } }
+  /* line 495, sass/modules/_refills-examples.scss */
+  .grid-items-lines .bottom-cover {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 3px;
+    background: white; }
+  /* line 503, sass/modules/_refills-examples.scss */
+  .grid-items-lines .right-cover {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    width: 4px;
+    background: white; }
 
 /* Import Sections */
 /* line 1, sass/sections/header/_header.scss */
@@ -3333,12 +3478,13 @@ object {
 footer {
   float: left;
   margin: 0 auto;
-  width: 75%; }
-  /* line 5, sass/sections/footer/_footer.scss */
+  padding: 0 40px;
+  width: 100%; }
+  /* line 6, sass/sections/footer/_footer.scss */
   footer .site-info {
     margin: auto;
-    width: 75%; }
-  /* line 9, sass/sections/footer/_footer.scss */
+    width: 100%; }
+  /* line 10, sass/sections/footer/_footer.scss */
   footer .footer-left {
     float: left;
     display: block;
@@ -3351,7 +3497,7 @@ footer {
     /* line 40, sass/neat/grid/_span-columns.scss */
     footer .footer-left:last-child {
       margin-right: 0; }
-  /* line 16, sass/sections/footer/_footer.scss */
+  /* line 17, sass/sections/footer/_footer.scss */
   footer .footer-right {
     float: left;
     display: block;
