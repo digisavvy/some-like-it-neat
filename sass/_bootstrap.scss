@@ -6,7 +6,6 @@
 
 /* Import base */
 @import "base/normalize";
-@import "base/breakpoints";
 @import "modules/variables";
 @import "base/typography";
 @import "base/structure";
@@ -19,6 +18,7 @@
 @import "modules/buttons";
 @import "modules/genericons";
 @import "modules/dashicons";
+@import "modules/refills-examples";
 
 /* Import Sections */
 @import "sections/header/header";
