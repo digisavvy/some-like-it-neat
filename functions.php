@@ -125,7 +125,7 @@ if ( !function_exists('dg_add_flexnav') ) :
 					'transitionOpacity': true, // default opacity animation
 					'buttonSelector': '.menu-button', // default menu button class
 					'hoverIntent': true, // use with hoverIntent plugin
-					'hoverIntentTimeout': 950, // hoverIntent default timeout
+					'hoverIntentTimeout': 350, // hoverIntent default timeout
 					'calcItemWidths': false // dynamically calcs top level nav item widths
 				});
 			});
