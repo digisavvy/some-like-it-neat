@@ -101,6 +101,19 @@ function neat_add_customizer_theme_options($wp_customize) {
 		    )
 		);
 
+		// Google Analytics
+		       // Add a textarea control
+		        require_once dirname(__FILE__) . '/text/textarea-custom-control.php';
+		        $wp_manager->add_setting( 'textarea_text_setting', array(
+		            'default'        => '',
+		        ) );
+		        $wp_manager->add_control( new Textarea_Custom_Control( $wp_manager, 'textarea_text_setting', array(
+		            'label'   => 'Textarea Text Setting',
+		            'section' => 'customiser_demo_custom_section',
+		            'settings'   => 'textarea_text_setting',
+		            'priority' => 10
+		        ) ) );
+
 }
 add_action( 'customize_register', 'neat_add_customizer_theme_options' );
 

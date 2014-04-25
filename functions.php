@@ -164,7 +164,7 @@ require get_template_directory() . '/library/inc/extras.php';
 /**
  * WP Customizer additions.
  */
-require get_template_directory() . '/library/inc/customizer.php';
+require get_template_directory() . '/library/inc/wp-customizer/customizer.php';
 
 function dg_customizer_register( $wp_customize ) {
    //All our sections, settings, and controls will be added here
@@ -199,17 +199,27 @@ function neat_optional_scripts() {
 	 } else {
 	 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/css/genericons.css" rel="stylesheet">';
 	 }
+	 // Google Analytics
+	 if( get_theme_mod( 'neat_add_ga_tracking' ) == '') {
+	 	echo "No Tracking Added";
+	 } else {
+	 	 echo get_theme_mod( 'neat_add_ga_tracking' );
+	 }
+
 
 }
 add_action( 'wp_head', 'neat_optional_scripts' );
 
 function neat_add_footer_divs() { ?>
+
 	<div class="footer-left">
 		 <?php echo get_theme_mod( 'neat_footer_left' ); ?>
+
 	</div>
 	<div class="footer-right">
 		<?php echo get_theme_mod( 'neat_footer_right' ); ?>
 	</div>
+
 <?php }
 add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
 
