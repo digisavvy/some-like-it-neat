@@ -67,22 +67,39 @@ function neat_add_customizer_theme_options($wp_customize) {
 	    'priority'  => 1020
 	));
 
-	$wp_customize->add_setting('add_fontawesome_icons', array(
-	    'default'    => '0'
-	));
+		$wp_customize->add_setting('add_fontawesome_icons', array(
+		    'default'    => '0'
+		));
 
-	$wp_customize->add_control(
-	    new WP_Customize_Control(
-	        $wp_customize,
-	        'add_fontawesome_icons',
-	        array(
-	            'label'     => __('Enable Fontawesome Icons', 'digistarter'),
-	            'section'   => 'neat_theme_addons',
-	            'settings'  => 'add_fontawesome_icons',
-	            'type'      => 'checkbox',
-	        )
-	    )
-	);
+		$wp_customize->add_control(
+		    new WP_Customize_Control(
+		        $wp_customize,
+		        'add_fontawesome_icons',
+		        array(
+		            'label'     => __('Enable Fontawesome Icons', 'digistarter'),
+		            'section'   => 'neat_theme_addons',
+		            'settings'  => 'add_fontawesome_icons',
+		            'type'      => 'checkbox',
+		        )
+		    )
+		);
+
+		$wp_customize->add_setting('neat_add_genericon_icons', array(
+		    'default'    => '0'
+		));
+
+		$wp_customize->add_control(
+		    new WP_Customize_Control(
+		        $wp_customize,
+		        'neat_add_genericon_icons',
+		        array(
+		            'label'     => __('Enable Genericon Icons', 'digistarter'),
+		            'section'   => 'neat_theme_addons',
+		            'settings'  => 'neat_add_genericon_icons',
+		            'type'      => 'checkbox',
+		        )
+		    )
+		);
 
 }
 add_action( 'customize_register', 'neat_add_customizer_theme_options' );
