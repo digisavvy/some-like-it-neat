@@ -3,6 +3,9 @@
  * digistarter Theme Customizer
  *
  * @package digistarter
+ * Look, I'm sorry about this messy file, mmkay? Saw Paul Underwood's  repo for extended customizer controls and had a
+ * "moment." Okay? Below, just copy the controls you need to use and go bonkers, customize as needed. I started things
+ * off by adding a Textarea for GA.
  */
 
 
@@ -64,7 +67,7 @@ function neat_add_customizer_theme_options($wp_customize) {
 
     // Add-Ons
     $wp_customize->add_section('neat_theme_addons' , array(
-        'description' => 'Add-ons for your theme such as icon fonts, and a place to enter your Google Analytics Code. You can find how to get your Google Analytics Tracking Code by <a href="http://goo.gl/bx0iiF">Clicking Here</a> ',
+        'description' => 'Add-ons for your theme such as icon fonts, and a place to enter your Google Analytics Code. You can find how to get your Google Analytics Tracking Code by <a href="http://goo.gl/bx0iiF">Clicking Here</a><hr/> ',
         'title'     => __('Theme Add-Ons', 'digistarter'),
         'priority'  => 1020
     ));
@@ -386,18 +389,6 @@ class theme_customizer
         //     'priority' => 7
         // ) ) );
 
-        // Add a taxonomy dropdown control
-        // require_once dirname(__FILE__) . '/select/taxonomy-dropdown-custom-control.php';
-        // $wp_manager->add_setting( 'taxonomy_dropdown_setting', array(
-        //     'default'        => '',
-        // ) );
-        // $wp_manager->add_control( new Taxonomy_Dropdown_Custom_Control( $wp_manager, 'taxonomy_dropdown_setting', array(
-        //     'label'   => 'Taxonomy Dropdown Setting',
-        //     'section' => 'customiser_demo_custom_section',
-        //     'settings'   => 'taxonomy_dropdown_setting',
-        //     'priority' => 8
-        // ) ) );
-
         // Add a user dropdown control
         // require_once dirname(__FILE__) . '/select/user-dropdown-custom-control.php';
         // $wp_manager->add_setting( 'user_dropdown_setting', array(
@@ -435,17 +426,6 @@ class theme_customizer
         //     'priority' => 11
         // ) ) );
 
-        // Add a Google Font control
-        // require_once dirname(__FILE__) . '/select/google-font-dropdown-custom-control.php';
-        // $wp_manager->add_setting( 'google_font_setting', array(
-        //     'default'        => '',
-        // ) );
-        // $wp_manager->add_control( new Google_Font_Dropdown_Custom_Control( $wp_manager, 'google_font_setting', array(
-        //     'label'   => 'Google Font Setting',
-        //     'section' => 'customiser_demo_custom_section',
-        //     'settings'   => 'google_font_setting',
-        //     'priority' => 12
-        // ) ) );
     }
 
 }
