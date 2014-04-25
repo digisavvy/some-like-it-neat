@@ -60,6 +60,30 @@ function neat_add_customizer_theme_options($wp_customize) {
 			'type'     => 'text'
 		)
 	);
+
+	// Add-Ons
+	$wp_customize->add_section('neat_theme_addons' , array(
+	    'title'     => __('Theme Add-Ons', 'digistarter'),
+	    'priority'  => 1020
+	));
+
+	$wp_customize->add_setting('add_fontawesome_icons', array(
+	    'default'    => '0'
+	));
+
+	$wp_customize->add_control(
+	    new WP_Customize_Control(
+	        $wp_customize,
+	        'add_fontawesome_icons',
+	        array(
+	            'label'     => __('Enable Fontawesome Icons', 'digistarter'),
+	            'section'   => 'neat_theme_addons',
+	            'settings'  => 'add_fontawesome_icons',
+	            'type'      => 'checkbox',
+	        )
+	    )
+	);
+
 }
 add_action( 'customize_register', 'neat_add_customizer_theme_options' );
 
