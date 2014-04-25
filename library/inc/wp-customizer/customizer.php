@@ -402,17 +402,17 @@ class theme_customizer
         // ) ) );
 
         // Add a textarea control
-        require_once dirname(__FILE__) . '/text/textarea-custom-control.php';
-        $wp_manager->add_setting( 'neat_add_ga_tracking', array(
-            'default'        => '',
-        ) );
-        $wp_manager->add_control( new Textarea_Custom_Control( $wp_manager, 'neat_add_ga_tracking', array(
-            'label'   => 'Google Analytics Tracking Code',
-            'section' => 'neat_theme_addons',
-            'settings'   => 'neat_add_ga_tracking',
-            'priority' => 10,
+        // require_once dirname(__FILE__) . '/text/textarea-custom-control.php';
+        // $wp_manager->add_setting( 'neat_add_ga_tracking', array(
+        //     'default'        => '',
+        // ) );
+        // $wp_manager->add_control( new Textarea_Custom_Control( $wp_manager, 'neat_add_ga_tracking', array(
+        //     'label'   => 'Google Analytics Tracking Code',
+        //     'section' => 'neat_theme_addons',
+        //     'settings'   => 'neat_add_ga_tracking',
+        //     'priority' => 10,
 
-        ) ) );
+        // ) ) );
 
         // // Add a text editor control
         // require_once dirname(__FILE__) . '/text/text-editor-custom-control.php';
