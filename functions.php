@@ -40,6 +40,19 @@ function digistarter_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	add_action( 'init', 'neat_add_editor_style' );
+	/**
+	 * Apply theme's stylesheet to the visual editor.
+	 *
+	 * @uses add_editor_style() Links a stylesheet to visual editor
+	 * @uses get_stylesheet_uri() Returns URI of theme stylesheet
+	 */
+	function neat_add_editor_style() {
+
+	    add_editor_style( get_stylesheet_uri() );
+
+	}
+
 	// This theme uses wp_nav_menu() in one location.
 	if ( !function_exists('dg_register_nav_menus') ) :
 		function dg_register_nav_menus() {
@@ -227,4 +240,3 @@ add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
  * Including Functionality Plugin
  */
 require_once( get_template_directory() . '/library/inc/tgm-plugin-activation/required-plugins.php' );
-
