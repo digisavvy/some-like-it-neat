@@ -27,6 +27,23 @@ add_action( 'customize_register', 'digistarter_customize_register' );
  */
 
 function neat_add_customizer_theme_options($wp_customize) {
+
+	/* Color controls */
+	// General Link Colors
+	$wp_customize->add_setting( 'neat_add_link_color', array(
+	    'default'        => '#000000',
+	) );
+
+	$wp_customize->add_control( new WP_Customize_Color_Control(
+		$wp_customize, 'neat_add_link_color', array(
+			    'label'   => 'Body Link Color',
+			    'section' => 'colors',
+			    'settings'   => 'neat_add_link_color',
+			    'priority' => 6
+			)
+		)
+	);
+
     // Add Footer Section and Settings
     $wp_customize->add_section(
         'neat_footer_section_settings',

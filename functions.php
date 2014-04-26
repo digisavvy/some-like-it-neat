@@ -213,11 +213,14 @@ function neat_optional_scripts() {
 	 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/css/genericons.css" rel="stylesheet">';
 	 }
 	 // Google Analytics
-	 if( get_theme_mod( 'neat_add_ga_tracking' ) == '') {
-	 	echo "No Tracking Added";
-	 } else {
-	 	 echo get_theme_mod( 'neat_add_ga_tracking' );
-	 }
+
+	 if( get_theme_mod( 'neat_add_link_color' ) == '') {
+
+	 } else { ?>
+		<style type="text/css">
+			a { color: <?php echo get_theme_mod( 'neat_add_link_color' ); ?>; }
+		</style>
+	<?php }
 
 
 }
