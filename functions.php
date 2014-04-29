@@ -105,7 +105,7 @@ if ( !function_exists('digistarter_scripts') ) :
 		wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
 
 		// Dashicons
-		 wp_enqueue_style( 'digistarter-style', get_stylesheet_uri(), array( 'dashicons' ), '1.0' );
+		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/library/css/dashicons.css' );
 
 		// Flexnav Scripts
 		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/js/flexnav/jquery.flexnav.min.js', array(), '1.0.0', false );
@@ -212,8 +212,8 @@ function neat_optional_scripts() {
 	 } else {
 	 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/css/genericons.css" rel="stylesheet">';
 	 }
-	 // Google Analytics
 
+	 // Link Color
 	 if( get_theme_mod( 'neat_add_link_color' ) == '') {
 
 	 } else { ?>
