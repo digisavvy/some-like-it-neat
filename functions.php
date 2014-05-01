@@ -120,7 +120,7 @@ if ( !function_exists('digistarter_scripts') ) :
 		wp_enqueue_script( 'selectivizr' );
 
 		// Hover Intent Scripts
-		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/superfish/hoverintent.js', array(), '1.0.0', false );
+		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'hoverintent' );
 
 
