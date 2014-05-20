@@ -36,7 +36,8 @@ label {
 }
 
 textarea,
-#{$all-text-inputs} {
+#{$all-text-inputs},
+select[multiple=multiple] {
   @include box-sizing(border-box);
   @include transition(border-color);
   background-color: white;
@@ -47,7 +48,6 @@ textarea,
   font-size: $form-font-size;
   margin-bottom: $base-line-height / 2;
   padding: ($base-line-height / 3) ($base-line-height / 3);
-  resize: vertical;
   width: 100%;
 
   &:hover {
@@ -59,6 +59,10 @@ textarea,
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }
+}
+
+textarea {
+  resize: vertical;
 }
 
 input[type="search"] {
@@ -76,6 +80,7 @@ input[type="file"] {
 
 select {
   width: auto;
+  max-width: 100%;
   margin-bottom: $base-line-height;
 }
 
