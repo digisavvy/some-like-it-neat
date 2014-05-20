@@ -10,6 +10,25 @@
   font-size: $size; //Fallback in px
   font-size: calculateRem($size);
 }
+
+/* =Genericons and Dashicons
+-------------------------------------------------------------- */
+@mixin dashicons {
+	color: $icon-color;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Dashicons';
+	vertical-align: middle;
+}
+
+@mixin genericons {
+	color: $icon-color;
+	display: inline-block;
+	-webkit-font-smoothing: antialiased;
+	font: normal 16px/1 'Genericons';
+	vertical-align: middle;
+}
+
 /* =Typography
 -------------------------------------------------------------- */
 body {
@@ -101,20 +120,3 @@ ol {
 	font-family: $content;
 }
 
-/* =Genericons and Dashicons
--------------------------------------------------------------- */
-@mixin dashicons {
-	color: $icon-color;
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px/1 'Dashicons';
-	vertical-align: middle;
-}
-
-@mixin genericons {
-	color: $icon-color;
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px/1 'Genericons';
-	vertical-align: middle;
-}
