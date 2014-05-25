@@ -25,7 +25,6 @@
 <?php tha_body_top(); ?>
 <div id="page" class="hfeed site">
 	<div class="wrap">
-		<?php do_action( 'before' ); ?>
 		<?php tha_header_before(); ?>
 		<header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 			<?php tha_header_top(); ?>
