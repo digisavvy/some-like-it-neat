@@ -51,8 +51,12 @@ ul.flexnav {
 		z-index: 2;
 		overflow: hidden;
 		color: $nav_text;
-		background: #a6a6a2;
+		background: $top_level;
 		border-bottom: 1px solid rgba(0,0,0,.15);
+
+		&:hover {
+			color: lighten($nav_text, 50) !important;
+		}
 	}
 	li ul {
 		margin-bottom: 0;
@@ -75,12 +79,24 @@ ul.flexnav {
 	li ul li a {
 		display: block;
 		background: $second_level;
+
+		&:hover {
+			color: lighten($nav_text, 50);
+		}
 	}
 	ul li ul li a {
 		background: $third_level;
+
+		&:hover {
+			color: lighten($nav_text, 50);
+		}
 	}
 	ul li ul li ul li a {
 		background: $fourth_level;
+
+		&:hover {
+			color: lighten($nav_text, 50);
+		}
 	}
 	.touch-button {
 		position: absolute;
@@ -159,7 +175,7 @@ ul.flexnav {
 			list-style: none;
 			float: left;
 			display: block;
-			background-color: #a6a6a2;
+			background-color: $top_level;
 			overflow: visible;
       width: 20%;
 		}
@@ -222,7 +238,7 @@ ul.flexnav {
 			list-style: none;
 			float: left;
 			display: block;
-			background-color: #a6a6a2;
+			background-color: $top_level;
       width: 20%;
 			min-height: 50px;
 			overflow: visible;
