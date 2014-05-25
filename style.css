@@ -901,7 +901,7 @@ ul.flexnav {
     background: #a6a6a2;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
     .flexnav li a:hover {
-      color: #a2a2a2 !important; }
+      color: #6f6f6f !important; }
   .flexnav li ul {
     margin-bottom: 0;
     padding-left: 0;
@@ -916,15 +916,15 @@ ul.flexnav {
     display: block;
     background: #b2b2af; }
     .flexnav li ul li a:hover {
-      color: #a2a2a2; }
+      color: #6f6f6f; }
   .flexnav ul li ul li a {
     background: #bfbfbc; }
     .flexnav ul li ul li a:hover {
-      color: #a2a2a2; }
+      color: #6f6f6f; }
   .flexnav ul li ul li ul li a {
     background: #cbcbc9; }
     .flexnav ul li ul li ul li a:hover {
-      color: #a2a2a2; }
+      color: #6f6f6f; }
   .flexnav .touch-button {
     position: absolute;
     z-index: 999;

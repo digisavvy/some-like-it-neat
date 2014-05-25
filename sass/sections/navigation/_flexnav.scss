@@ -55,7 +55,7 @@ ul.flexnav {
 		border-bottom: 1px solid rgba(0,0,0,.15);
 
 		&:hover {
-			color: lighten($nav_text, 50) !important;
+			color: lighten($nav_text, 30) !important;
 		}
 	}
 	li ul {
@@ -81,21 +81,21 @@ ul.flexnav {
 		background: $second_level;
 
 		&:hover {
-			color: lighten($nav_text, 50);
+			color: lighten($nav_text, 30);
 		}
 	}
 	ul li ul li a {
 		background: $third_level;
 
 		&:hover {
-			color: lighten($nav_text, 50);
+			color: lighten($nav_text, 30);
 		}
 	}
 	ul li ul li ul li a {
 		background: $fourth_level;
 
 		&:hover {
-			color: lighten($nav_text, 50);
+			color: lighten($nav_text, 30);
 		}
 	}
 	.touch-button {
