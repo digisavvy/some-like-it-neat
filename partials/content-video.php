@@ -5,7 +5,7 @@
 ?>
 
 <?php tha_entry_before(); ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemprop="video" itemtype="http://schema.org/VideoObject">
 	<?php tha_entry_top(); ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
