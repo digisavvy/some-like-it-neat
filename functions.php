@@ -143,7 +143,7 @@ if ( !function_exists('dg_add_slimmenu') ) :
 		<script>
 			// Init Slimmenu Menu
 			jQuery(document).ready(function($){
-				   $('#menu-testing-menu').slimmenu(
+				   $('#primary-nav').slimmenu(
 						{
 						    resizeWidth: '800',
 						    collapserTitle: 'Main Menu',
