@@ -139,14 +139,17 @@ if ( !function_exists('digistarter_scripts') ) :
 endif;
 
 if ( !function_exists('dg_add_slimmenu') ) :
-	function dg_add_slimmenu() { ?>
+	function dg_add_slimmenu() {
+		$mobile_nav_txt = get_theme_mod( 'mobile_nav_text' );
+		$mobile_nav_width = get_theme_mod('mobile_nav_width');
+		 ?>
 		<script>
 			// Init Slimmenu Menu
 			jQuery(document).ready(function($){
 				   $('#primary-nav').slimmenu(
 						{
-						    resizeWidth: '800',
-						    collapserTitle: 'Main Menu',
+						    resizeWidth: "<?php echo $mobile_nav_width ?>",
+						    collapserTitle: "<?php echo $mobile_nav_txt ?>",
 						    animSpeed: 'medium',
 						    easingEffect: null,
 						    indentChildren: false,
