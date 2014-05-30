@@ -683,8 +683,6 @@ cite {
   font-style: italic; }
 
 strong, b {
-  font-size: 20px;
-  font-size: 1.25rem;
   color: #000;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
@@ -877,98 +875,10 @@ body {
   margin-top: 25px;
   width: 50%; }
 
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  display: none;
-  float: left;
-  left: 0;
-  position: absolute;
-  top: 1.5em;
-  z-index: 99999;
-  background: #fff;
-  padding: 30px; }
-
-#site-navigation {
-  border-top: solid 5px #f3f3f3;
-  border-bottom: solid 5px #f3f3f3; }
-
-ul.nav-menu li {
-  -webkit-transition: background 200ms ease-in-out;
-  -moz-transition: background 200ms ease-in-out;
-  transition: background 200ms ease-in-out;
-  background: #fff;
-  padding: 10px; }
-  @media screen and (min-width: 200px) {
-    ul.nav-menu li {
-      text-align: center;
-      width: 100%; } }
-  @media screen and (min-width: 768px) {
-    ul.nav-menu li {
-      text-align: none;
-      width: inherit; } }
-  ul.nav-menu li:hover {
-    -webkit-transition: background 200ms ease-in-out;
-    -moz-transition: background 200ms ease-in-out;
-    transition: background 200ms ease-in-out;
-    background: #f3f3f3; }
-
-.menu-main-menu-container li.current-menu-item {
-  background-color: #f3f3f3;
-  display: block; }
-
-ul.nav-menu li.current_page_item {
-  background: #f3f3f3; }
-
-@media screen and (min-width: 200px) {
-  .menu-toggle {
-    text-align: center;
-    height: 8px;
-    padding-top: 10px;
-    padding-bottom: 20px; } }
-
-ul.nav-menu li {
-  display: inline; }
-
-.sf-menu {
-  float: none !important;
-  margin: 0 auto !important;
-  width: 60% !important; }
-  .sf-menu br {
-    display: none; }
-  .sf-menu .sub {
-    text-align: center;
-    display: block;
-    float: none;
-    font-size: 13px; }
-  .sf-menu li {
-    -webkit-transition: background 800ms ease-in-out;
-    -moz-transition: background 800ms ease-in-out;
-    transition: background 800ms ease-in-out;
-    background: #fff !important; }
-    .sf-menu li:hover {
-      -webkit-transition: background 800ms ease-in-out;
-      -moz-transition: background 800ms ease-in-out;
-      transition: background 800ms ease-in-out;
-      background-color: #f9f9f9 !important; }
-    .sf-menu li a, .sf-menu li a:visited {
-      color: #666 !important;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
-
 #primary-nav {
   float: left;
   max-width: 100%;
   width: 100%; }
-
-.mean-container .mean-nav ul li a, .mean-container .mean-nav ul li a:visited {
-  color: #666;
-  text-align: center !important; }
-
-@media screen and (max-width: 480px) {
-  .sf-menu ul {
-    position: static !important; } }
-
-.nav-links a:nth-of-type(2) {
-  float: right; }
 
 /* =Content
 ----------------------------------------------- */
