@@ -147,14 +147,14 @@ if ( !function_exists('dg_add_slimmenu') ) :
 			// Init Slimmenu Menu
 			jQuery(document).ready(function($){
 				   $('#primary-nav').slimmenu(
-						{
-						    resizeWidth: "<?php echo $mobile_nav_width ?>",
-						    collapserTitle: "<?php echo $mobile_nav_txt ?>",
-						    animSpeed: 'medium',
-						    easingEffect: null,
-						    indentChildren: false,
-						    childrenIndenter: '&nbsp;'
-						});
+					{
+					    resizeWidth: "<?php echo $mobile_nav_width ?>",
+					    collapserTitle: "<?php echo $mobile_nav_txt ?>",
+					    animSpeed: 'medium',
+					    easingEffect: null,
+					    indentChildren: false,
+					    childrenIndenter: '&nbsp;'
+					});
 			});
 		</script>
 	<?php }
