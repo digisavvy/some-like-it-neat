@@ -107,13 +107,9 @@ if ( !function_exists('digistarter_scripts') ) :
 		// Dashicons
 		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/library/css/dashicons.css' );
 
-		// Slim Menu Scripts
-		wp_register_script( 'slim-menu', get_stylesheet_directory_uri() . '/library/js/slimmenu/jquery.slimmenu.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'slim-menu' );
-
-		// Jquery Easing for Slim Menu Scripts
-		wp_register_script( 'easing', get_stylesheet_directory_uri() . '/library/js/easing/jquery.easing.1.3.js', array(), '1.3', false );
-		wp_enqueue_script( 'easing' );
+		// Flexnav Scripts
+		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/js/flexnav/jquery.flexnav.min.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'flexnav' );
 
 		// Modernizr
 		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/library/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
@@ -127,9 +123,6 @@ if ( !function_exists('digistarter_scripts') ) :
 		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'hoverintent' );
 
-		// Slim Menu Style
-		wp_register_style( 'slim-menu', get_stylesheet_directory_uri() . '/library/css/slimmenu/slimmenu.css', array(), '1.0.0', false );
-		wp_enqueue_style( 'slim-menu' );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -138,27 +131,23 @@ if ( !function_exists('digistarter_scripts') ) :
 	add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
 endif;
 
-if ( !function_exists('dg_add_slimmenu') ) :
-	function dg_add_slimmenu() {
-		$mobile_nav_txt = get_theme_mod( 'mobile_nav_text' );
-		$mobile_nav_width = get_theme_mod('mobile_nav_width');
-		 ?>
+if ( !function_exists('dg_add_flexnav') ) :
+	function dg_add_flexnav() { ?>
 		<script>
-			// Init Slimmenu Menu
+			// Init Flexnav Menu
 			jQuery(document).ready(function($){
-				   $('#primary-nav').slimmenu(
-					{
-					    resizeWidth: "<?php echo $mobile_nav_width ?>",
-					    collapserTitle: "<?php echo $mobile_nav_txt ?>",
-					    animSpeed: 'medium',
-					    easingEffect: null,
-					    indentChildren: false,
-					    childrenIndenter: '&nbsp;'
-					});
+				   $(".flexnav").flexNav({
+				   	'animationSpeed' : 250, // default drop animation speed
+					'transitionOpacity': true, // default opacity animation
+					'buttonSelector': '.menu-button', // default menu button class
+					'hoverIntent': true, // use with hoverIntent plugin
+					'hoverIntentTimeout': 350, // hoverIntent default timeout
+					'calcItemWidths': false // dynamically calcs top level nav item widths
+				});
 			});
 		</script>
 	<?php }
-	add_action( 'tha_body_bottom', 'dg_add_slimmenu' );
+	add_action( 'wp_head', 'dg_add_flexnav' );
 endif;
 
 /**

@@ -81,6 +81,7 @@ cite {
 	font-style: italic;
 }
 strong, b {
+	@include fontSize(20px);
 	color: #000;
 	font-family: $title;
 }

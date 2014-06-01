@@ -44,43 +44,6 @@ function neat_add_customizer_theme_options($wp_customize) {
 		)
 	);
 
-    // Add Mobile Navigation Settings
-    // $wp_customize->add_section(
-    //     'neat_mobile_nav_settings',
-    //     array(
-    //         'title'     => 'Mobile Nav Settings',
-    //         'priority'  => 200
-    //     )
-    // );
-    $wp_customize->add_setting(
-        'mobile_nav_text',
-        array(
-            'default'            => 'Main Menu'
-        )
-    );
-    $wp_customize->add_control(
-        'mobile_nav_text',
-        array(
-            'section'  => 'nav',
-            'label'    => 'Mobile Nav Text',
-            'type'     => 'text'
-        )
-    );
-
-    $wp_customize->add_setting(
-        'mobile_nav_width',
-        array(
-            'default'            => '800'
-        )
-    );
-    $wp_customize->add_control(
-        'mobile_nav_width',
-        array(
-            'section'  => 'nav',
-            'label'    => 'Mobile Nav Resize Width',
-            'type'     => 'text'
-        )
-    );
     // Add Footer Section and Settings
     $wp_customize->add_section(
         'neat_footer_section_settings',
