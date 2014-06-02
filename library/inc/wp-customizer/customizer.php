@@ -43,7 +43,9 @@ function neat_add_customizer_theme_options($wp_customize) {
 			)
 		)
 	);
-    // Add Mobile Navigation Settings
+    /**
+     * Mobile Navigation Settings and Options
+     */
 
     // Mobile nav label
     $wp_customize->add_setting(
@@ -74,6 +76,23 @@ function neat_add_customizer_theme_options($wp_customize) {
             'section'  => 'nav',
             'label'    => 'Mobile Navigation Min-Width (numeric value)',
             'type'     => 'text'
+        )
+    );
+
+    // Mobile Nav Hide Right Arrow
+     $wp_customize->add_setting(
+        'neat_mobile_hide_arrow',
+        array(
+            'default'            => "No"
+        )
+    );
+    $wp_customize->add_control(
+        'neat_mobile_hide_arrow',
+        array(
+            'section'  => 'nav',
+            'label'    => 'Mobile Navigation Hide Right Arrow',
+            'type'    => 'radio',
+            'choices' => array("Yes", "No")
         )
     );
 

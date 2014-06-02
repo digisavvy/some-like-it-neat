@@ -34,7 +34,7 @@
 			</div>
 
 			<nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-			<div class="menu-button"><?php echo get_theme_mod( 'neat_mobile_nav_label' ); ?></div>
+			<div class="menu-button"><span><?php echo get_theme_mod( 'neat_mobile_nav_label' ); ?></span></div>
 			<?php 	wp_nav_menu( array(
 				    'theme_location' => 'primary-navigation',
 				    'menu_class' => 'flexnav', //Adding the class for FlexNav

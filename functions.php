@@ -192,6 +192,7 @@ require get_template_directory() . '/library/inc/jetpack.php';
 /**
  * Custom Hooks and Filters
  */
+
 function neat_add_breadcrumbs() {
 	if ( !is_front_page() ) {
 		if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
@@ -226,6 +227,22 @@ function neat_optional_scripts() {
 }
 add_action( 'wp_head', 'neat_optional_scripts' );
 
+function neat_mobile_styles() {
+	$value = get_theme_mod( 'neat_mobile_hide_arrow' );
+
+	 if( get_theme_mod( 'neat_mobile_hide_arrow' ) == 0 ) { ?>
+		<style>
+			.menu-button i.navicon {
+				display: none;
+			}
+		</style>
+	<?php  } else {
+
+	 }
+
+}
+add_action('wp_head', 'neat_mobile_styles' );
+
 function neat_add_footer_divs() { ?>
 
 	<div class="footer-left">
@@ -238,6 +255,7 @@ function neat_add_footer_divs() { ?>
 
 <?php }
 add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
+
 
 /**
  * Including Functionality Plugin
