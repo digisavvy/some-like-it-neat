@@ -48,7 +48,7 @@ $fourth_level: #cbcbc9;
 		z-index: 2;
 		overflow: hidden;
 		color: $nav_text;
-		background: #a6a6a2;
+		background: $top_level;
 		border-bottom: 1px solid rgba(0,0,0,.15);
 
 		&:hover {
@@ -161,7 +161,7 @@ $fourth_level: #cbcbc9;
 			list-style: none;
 			float: left;
 			display: block;
-			background-color: #a6a6a2;
+			background-color: $top_level;
 			overflow: visible;
       width: 20%;
 		}
@@ -224,7 +224,7 @@ $fourth_level: #cbcbc9;
 			list-style: none;
 			float: left;
 			display: block;
-			background-color: #a6a6a2;
+			background-color: $top_level;
       width: 20%;
 			min-height: 50px;
 			overflow: visible;
