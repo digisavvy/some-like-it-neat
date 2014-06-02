@@ -7,16 +7,14 @@ $third_level: #bfbfbc;
 $fourth_level: #cbcbc9;
 
 .flexnav {
-	transition: none;
-	-webkit-transform-style: preserve-3d; // stop webkit flicker
 	overflow: hidden;
 	margin: 0 auto;
 	width: 100%;
 	max-height: 0;
-	-webkit-transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
 	-moz-transition: all .5s ease-in-out;
 	-ms-transition: all .5s ease-in-out;
-	transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
 
   &.opacity {
     // opacity: 0;
@@ -52,9 +50,14 @@ $fourth_level: #cbcbc9;
 		color: $nav_text;
 		background: #a6a6a2;
 		border-bottom: 1px solid rgba(0,0,0,.15);
+
+		&:hover {
+			color: $primary-color !important;
+		}
 	}
 	li ul {
 		display: none;
+		margin-bottom: 0;
 		padding-left: 0;
 		width: 100%;
 
