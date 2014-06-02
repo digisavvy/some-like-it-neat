@@ -6,9 +6,6 @@ $second_level: #b2b2af;
 $third_level: #bfbfbc;
 $fourth_level: #cbcbc9;
 
-ul.flexnav {
-	padding-left: 0;
-}
 .flexnav {
 	-webkit-transition: none;
   -moz-transition: none;
@@ -51,16 +48,10 @@ ul.flexnav {
 		z-index: 2;
 		overflow: hidden;
 		color: $nav_text;
-		background: $top_level;
+		background: #a6a6a2;
 		border-bottom: 1px solid rgba(0,0,0,.15);
-
-		&:hover {
-			color: lighten($nav_text, 30) !important;
-		}
 	}
 	li ul {
-		margin-bottom: 0;
-		padding-left: 0;
 		width: 100%;
 
 		li {
@@ -79,24 +70,12 @@ ul.flexnav {
 	li ul li a {
 		display: block;
 		background: $second_level;
-
-		&:hover {
-			color: lighten($nav_text, 30);
-		}
 	}
 	ul li ul li a {
 		background: $third_level;
-
-		&:hover {
-			color: lighten($nav_text, 30);
-		}
 	}
 	ul li ul li ul li a {
 		background: $fourth_level;
-
-		&:hover {
-			color: lighten($nav_text, 30);
-		}
 	}
 	.touch-button {
 		position: absolute;
@@ -104,7 +83,7 @@ ul.flexnav {
 		top: 0;
 		right: 0;
 		width: 50px;
-		height: 55px;
+		height: 50px;
 		display: inline-block;
 		background: #acaca1;
 		background: rgba(0,0,0,.075);
@@ -175,7 +154,7 @@ ul.flexnav {
 			list-style: none;
 			float: left;
 			display: block;
-			background-color: $top_level;
+			background-color: #a6a6a2;
 			overflow: visible;
       width: 20%;
 		}
@@ -238,7 +217,7 @@ ul.flexnav {
 			list-style: none;
 			float: left;
 			display: block;
-			background-color: $top_level;
+			background-color: #a6a6a2;
       width: 20%;
 			min-height: 50px;
 			overflow: visible;
