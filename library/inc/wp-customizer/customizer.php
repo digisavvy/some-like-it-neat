@@ -43,6 +43,39 @@ function neat_add_customizer_theme_options($wp_customize) {
 			)
 		)
 	);
+    // Add Mobile Navigation Settings
+
+    // Mobile nav label
+    $wp_customize->add_setting(
+        'neat_mobile_nav_label',
+        array(
+            'default'            => 'Menu'
+        )
+    );
+    $wp_customize->add_control(
+        'neat_mobile_nav_label',
+        array(
+            'section'  => 'nav',
+            'label'    => 'Mobile Navigation Label',
+            'type'     => 'text'
+        )
+    );
+
+    // Mobile Nav Min Width
+     $wp_customize->add_setting(
+        'neat_mobile_min_width',
+        array(
+            'default'            => '768'
+        )
+    );
+    $wp_customize->add_control(
+        'neat_mobile_min_width',
+        array(
+            'section'  => 'nav',
+            'label'    => 'Mobile Navigation Min-Width (numeric value)',
+            'type'     => 'text'
+        )
+    );
 
     // Add Footer Section and Settings
     $wp_customize->add_section(
@@ -84,7 +117,7 @@ function neat_add_customizer_theme_options($wp_customize) {
 
     // Add-Ons
     $wp_customize->add_section('neat_theme_addons' , array(
-        'description' => 'Add-ons for your theme such as icon fonts, and a place to enter your Google Analytics Code. You can find how to get your Google Analytics Tracking Code by <a href="http://goo.gl/bx0iiF">Clicking Here</a><hr/> ',
+        'description' => 'Add-ons for your theme such as icon fonts. ',
         'title'     => __('Theme Add-Ons', 'digistarter'),
         'priority'  => 1020
     ));
