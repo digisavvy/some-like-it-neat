@@ -87,7 +87,7 @@ class Kirki {
 		$color_accent = isset( $options['color_accent'] ) ? $options['color_accent'] : '#FF5740';
 		$color_light  = isset( $options['color_light'] ) ? $options['color_light'] : '#8cddcd';
 		$color_select = isset( $options['color_select'] ) ? $options['color_select'] : '#34495e';
-		$color_back = isset( $options['color_back'] ) ? $options['color_back'] : '#f3f3f3';
+		$color_back = isset( $options['color_back'] ) ? $options['color_back'] : '#222';
 		?>
 
 		<style>
@@ -112,7 +112,7 @@ class Kirki {
 			}
 
 			#customize-theme-controls .accordion-section-title {
-				border-bottom: 1px solid #ccc;
+				border-bottom: 1px solid <?php echo $color_back; ?>;
 			}
 
 			#customize-theme-controls .control-section .accordion-section-title {
@@ -124,7 +124,6 @@ class Kirki {
 			#customize-theme-controls .control-section.open .accordion-section-title,
 			#customize-theme-controls .control-section:hover .accordion-section-title {
 				background: <?php echo $color_active; ?>;
-				color: #fff;
 			}
 
 			.wp-core-ui .button-primary {
@@ -149,6 +148,8 @@ class Kirki {
 			<?php if ( isset( $options['logo_image'] ) ) : ?>
 				div.kirki-customizer {
 					background: url("<?php echo $options['logo_image']; ?>") no-repeat left center;
+					height: 50px;
+					width: 275px;
 				}
 			<?php endif; ?>
 		</style>

@@ -176,10 +176,6 @@ require get_template_directory() . '/library/inc/template-tags.php';
 require get_template_directory() . '/library/inc/extras.php';
 
 /**
- * Customizer Controls.
- */
-
-/**
  * WP Customizer additions.
  */
 require get_template_directory() . '/library/inc/wp-customizer/customizer.php';
