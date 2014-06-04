@@ -156,6 +156,11 @@ endif;
 include( 'library/tha-theme-hooks.php' );
 
 /**
+ * Including Kirki Advanced Theme Customizer (https://github.com/aristath/kirki).
+ */
+include_once( dirname( __FILE__ ) . '/library/inc/kirki/kirki.php' );
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/library/inc/custom-header.php';
