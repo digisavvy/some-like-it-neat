@@ -188,6 +188,7 @@ function shoestrap_customizer_config() {
         // Change the logo image. (URL)
         // If omitted, the default theme info will be displayed.
         // A good size for the logo is 250x50.
+
         // 'logo_image'   => '/path/to/image',
 
         // The color of active menu items, help bullets etc.
@@ -215,7 +216,7 @@ function shoestrap_customizer_config() {
         // then you'll have to specify the ID of your stylesheet here.
         // The "ID" of your stylesheet is its "handle" on the wp_enqueue_style() function.
         // http://codex.wordpress.org/Function_Reference/wp_enqueue_style
-        // 'stylesheet_id' => 'digistarter-style'
+        'stylesheet_id' => 'shoestrap'
 
     );
 
@@ -223,6 +224,7 @@ function shoestrap_customizer_config() {
 
 }
 add_filter( 'kirki/config', 'shoestrap_customizer_config' );
+
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
