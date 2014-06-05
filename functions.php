@@ -193,66 +193,71 @@ require_once( get_template_directory() . '/library/inc/tgm-plugin-activation/req
 /**
  * Custom Hooks and Filters
  */
-
-function neat_add_breadcrumbs() {
-	if ( !is_front_page() ) {
-		if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
+if ( !function_exists('neat_add_breadcrumbs') ) :
+	function neat_add_breadcrumbs() {
+		if ( !is_front_page() ) {
+			if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
+		}
 	}
-}
-add_action( 'tha_content_top', 'neat_add_breadcrumbs' );
+	add_action( 'tha_content_top', 'neat_add_breadcrumbs' );
+endif;
 
-function neat_optional_scripts() {
-	// Font Awesome
-	if( get_theme_mod( 'add_fontawesome_icons' ) == '') {
+if ( !function_exists('dg_add_flexnav') ) :
+	function neat_optional_scripts() {
+		// Font Awesome
+		if( get_theme_mod( 'add_fontawesome_icons' ) == '') {
 
-	 } else {
-	 	echo '<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">';
-	 }
-	 // Genericons
-	 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
+		 } else {
+		 	echo '<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">';
+		 }
+		 // Genericons
+		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
 
-	 } else {
-	 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/css/genericons.css" rel="stylesheet">';
-	 }
+		 } else {
+		 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/css/genericons.css" rel="stylesheet">';
+		 }
 
-	 // Link Color
-	 if( get_theme_mod( 'neat_add_link_color' ) == '') {
+		 // Link Color
+		 if( get_theme_mod( 'neat_add_link_color' ) == '') {
 
-	 } else { ?>
-		<style type="text/css">
-			a { color: <?php echo get_theme_mod( 'neat_add_link_color' ); ?>; }
-		</style>
-	<?php }
+		 } else { ?>
+			<style type="text/css">
+				a { color: <?php echo get_theme_mod( 'neat_add_link_color' ); ?>; }
+			</style>
+		<?php }
 
 
-}
-add_action( 'wp_head', 'neat_optional_scripts' );
+	}
+	add_action( 'wp_head', 'neat_optional_scripts' );
+endif;
 
-function neat_mobile_styles() {
-	$value = get_theme_mod( 'neat_mobile_hide_arrow' );
+if ( !function_exists('neat_mobile_styles') ) :
+	function neat_mobile_styles() {
+		$value = get_theme_mod( 'neat_mobile_hide_arrow' );
 
-	 if( get_theme_mod( 'neat_mobile_hide_arrow' ) == 0 ) { ?>
-		<style>
-			.menu-button i.navicon {
-				display: none;
-			}
-		</style>
-	<?php  } else {
+		 if( get_theme_mod( 'neat_mobile_hide_arrow' ) == 0 ) { ?>
+			<style>
+				.menu-button i.navicon {
+					display: none;
+				}
+			</style>
+		<?php  } else {
 
-	 }
+		 }
+	}
+	add_action('wp_head', 'neat_mobile_styles' );
+endif;
 
-}
-add_action('wp_head', 'neat_mobile_styles' );
+if ( !function_exists('neat_add_footer_divs') ) :
+	function neat_add_footer_divs() { ?>
 
-function neat_add_footer_divs() { ?>
+		<div class="footer-left">
+			 <?php echo get_theme_mod( 'neat_footer_left' ); ?>
 
-	<div class="footer-left">
-		 <?php echo get_theme_mod( 'neat_footer_left' ); ?>
-
-	</div>
-	<div class="footer-right">
-		<?php echo get_theme_mod( 'neat_footer_right' ); ?>
-	</div>
-
+		</div>
+		<div class="footer-right">
+			<?php echo get_theme_mod( 'neat_footer_right' ); ?>
+		</div>
 <?php }
 add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
+endif;
