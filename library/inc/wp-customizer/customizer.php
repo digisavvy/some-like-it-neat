@@ -205,7 +205,7 @@ function shoestrap_customizer_config() {
 
         // The generic background color.
         // You should choose a dark color here as we're using white for the text color.
-        'color_back'   => '#f3f3f3',
+        'color_back'   => '#222',
 
         // If Kirki is embedded in your theme, then you can use this line to specify its location.
         // This will be used to properly enqueue the necessary stylesheets and scripts.
@@ -246,18 +246,16 @@ add_action( 'customize_register', 'my_custom_section' );
 function my_custom_setting( $controls ) {
 
     $controls[] = array(
-    'type'     => 'radio',
-    'mode'     => 'buttonset',
+    'type'     => 'slider',
     'setting'  => 'my_setting',
     'label'    => __( 'My Setting', 'textdomain' ),
     'section'  => 'my_section',
-    'default'  => 'option_1',
+    'default'  => 36,
     'priority' => 1,
     'choices'  => array(
-        'option_1' => __( 'Option 1', 'textdomain' ),
-        'option_2' => __( 'Option 2', 'textdomain' ),
-        'option_3' => __( 'Option 3', 'textdomain' ),
-        'option_4' => __( 'Option 4', 'textdomain' ),
+        'min'  => 1,
+        'max'  => 100,
+        'step' => 2,
     ),
 );
 
