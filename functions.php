@@ -176,19 +176,19 @@ require get_template_directory() . '/library/inc/template-tags.php';
 require get_template_directory() . '/library/inc/extras.php';
 
 /**
- * WP Customizer additions.
+ * WP Customizer
  */
 require get_template_directory() . '/library/inc/wp-customizer/customizer.php';
-
-function dg_customizer_register( $wp_customize ) {
-   //All our sections, settings, and controls will be added here
-}
-add_action( 'customize_register', 'dg_customizer_register' );
 
 /**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/library/inc/jetpack.php';
+
+/**
+ * Including TGM Plugin Activation
+ */
+require_once( get_template_directory() . '/library/inc/tgm-plugin-activation/required-plugins.php' );
 
 /**
  * Custom Hooks and Filters
@@ -256,9 +256,3 @@ function neat_add_footer_divs() { ?>
 
 <?php }
 add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
-
-
-/**
- * Including Functionality Plugin
- */
-require_once( get_template_directory() . '/library/inc/tgm-plugin-activation/required-plugins.php' );
