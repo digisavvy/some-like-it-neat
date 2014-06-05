@@ -153,7 +153,7 @@ endif;
 /**
  * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
  */
-include( 'library/tha-theme-hooks.php' );
+include( 'library/inc/tha-theme-hooks/tha-theme-hooks.php' );
 
 /**
  * Including Kirki Advanced Theme Customizer (https://github.com/aristath/kirki).
