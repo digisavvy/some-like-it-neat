@@ -153,7 +153,12 @@ endif;
 /**
  * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
  */
-include( 'library/tha-theme-hooks.php' );
+include( 'library/inc/tha-theme-hooks/tha-theme-hooks.php' );
+
+/**
+ * Including Kirki Advanced Theme Customizer (https://github.com/aristath/kirki).
+ */
+include_once( dirname( __FILE__ ) . '/library/inc/kirki/kirki.php' );
 
 /**
  * Implement the Custom Header feature.
@@ -171,23 +176,19 @@ require get_template_directory() . '/library/inc/template-tags.php';
 require get_template_directory() . '/library/inc/extras.php';
 
 /**
- * Customizer Controls.
- */
-
-/**
- * WP Customizer additions.
+ * WP Customizer
  */
 require get_template_directory() . '/library/inc/wp-customizer/customizer.php';
-
-function dg_customizer_register( $wp_customize ) {
-   //All our sections, settings, and controls will be added here
-}
-add_action( 'customize_register', 'dg_customizer_register' );
 
 /**
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/library/inc/jetpack.php';
+
+/**
+ * Including TGM Plugin Activation
+ */
+require_once( get_template_directory() . '/library/inc/tgm-plugin-activation/required-plugins.php' );
 
 /**
  * Custom Hooks and Filters
@@ -255,9 +256,3 @@ function neat_add_footer_divs() { ?>
 
 <?php }
 add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
-
-
-/**
- * Including Functionality Plugin
- */
-require_once( get_template_directory() . '/library/inc/tgm-plugin-activation/required-plugins.php' );

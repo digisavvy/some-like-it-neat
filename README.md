@@ -18,7 +18,7 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 
 * Theme Hook Alliance — One of the things I learned to love about working with Frameworks were their hooks. Thematic and Genesis introduced me to the notion. Since them I've been using them like they're going out of style. When I set out to make my own starter theme I wanted to make something that had "just the right amount" of features for me. I knew I needed hooks. The THA project was intro'd to me by Brandon Dove, at the OCWP (http://ocwp.org) developer's day meetup. Thought it was super neat. So I bundled that hot mess right into this thing.
 
-* Responsive — Eh. I mean, it's about as minimal as you can get, but it's there.
+* Kirki Advanced Theme Customizer Framework (http://kirki.org) — Adds some functionality to the already awesome built-in theme customizer. It adds cool extras like button sets, slider controls, radio image selectors. Read up on it! For now, I'm placing custom controls using Kirki in /library/inc/wp-customizer/customizer.php
 
 * Pull requests welcome...
 
@@ -37,22 +37,24 @@ I admit it. I just add things because I think they're cool. It's a bad habit... 
 Coming Soon
 ---------------
 
-* ~~Further use of WP Customizer. Paging Konstantin Obenland. =) I'll be getting down to business here because I'd like to learn how to use the fucker.~~ (see recent additions)
-
-
 * Internationalization aka i18n - I'd like to distribute this theme in the WP Repo at some point, so I need to account for this. I could use help here, =)
 
-* ~~MOAR Page Templates!~~ (See recent additions/changes)
 * Full Schema Support within the Some Like it Neat. We've got some basic microformatting hooked up already in Blog Posts and Standard Pages; this will extend to the Post Formats, too.
 
 Recent Additions/Changes
 ---------------
-April 14th 2014
-* Modified Bitters so that it can be used with Thoughtbot's Refills project (http://thoughtbot.github.io/refills/)
+June 4th 2014
+
+* Added Kirki Advanced Theme Customizer Framework (http://kirki.org)
 
 Older Changes
 ---------------
+April 14th 2014
+
+* Modified Bitters so that it can be used with Thoughtbot's Refills project (http://thoughtbot.github.io/refills/)
+
 April 8th 2014
+
 * Replaced Superfish Nav with Flexnav (http://jasonweaver.name/lab/flexiblenavigation/)
 * Moved Sass files up one level. Just wanted them to be "less buried."
 
