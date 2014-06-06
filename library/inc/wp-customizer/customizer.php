@@ -229,40 +229,7 @@ add_filter( 'kirki/config', 'shoestrap_customizer_config' );
  * Kirki Customizer Settings
  */
 
-function my_custom_section( $wp_customize ) {
 
-    // Create the "My Section" section
-    $wp_customize->add_section( 'my_section', array(
-        'title'    => __( 'My Section', 'digistarter' ),
-        'priority' => 12
-    ) );
-
-}
-add_action( 'customize_register', 'my_custom_section' );
-
-/**
- * Create the setting
- */
-function my_custom_setting( $controls ) {
-
-    $controls[] = array(
-            'type'     => 'slider',
-            'setting'  => 'my_setting',
-            'label'    => __( 'My Setting', 'digistarter' ),
-            'section'  => 'nav',
-            'default'  => 768,
-            'priority' => 10,
-            'choices'  => array(
-            'min'  => 1,
-            'max'  => 960,
-            'step' => 2,
-            'subtitle' => __( 'The min-width at which this will activate', 'digistarter' )
-        ),
-    );
-
-    return $controls;
-}
-add_filter( 'kirki/controls', 'my_custom_setting' );
 
 
 /**
