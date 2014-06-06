@@ -233,7 +233,7 @@ function my_custom_section( $wp_customize ) {
 
     // Create the "My Section" section
     $wp_customize->add_section( 'my_section', array(
-        'title'    => __( 'My Section', 'translation_domain' ),
+        'title'    => __( 'My Section', 'digistarter' ),
         'priority' => 12
     ) );
 
@@ -246,18 +246,19 @@ add_action( 'customize_register', 'my_custom_section' );
 function my_custom_setting( $controls ) {
 
     $controls[] = array(
-    'type'     => 'slider',
-    'setting'  => 'my_setting',
-    'label'    => __( 'My Setting', 'textdomain' ),
-    'section'  => 'my_section',
-    'default'  => 36,
-    'priority' => 1,
-    'choices'  => array(
-        'min'  => 1,
-        'max'  => 100,
-        'step' => 2,
-    ),
-);
+            'type'     => 'slider',
+            'setting'  => 'my_setting',
+            'label'    => __( 'My Setting', 'digistarter' ),
+            'section'  => 'nav',
+            'default'  => 768,
+            'priority' => 10,
+            'choices'  => array(
+            'min'  => 1,
+            'max'  => 960,
+            'step' => 2,
+            'subtitle' => __( 'The min-width at which this will activate', 'digistarter' )
+        ),
+    );
 
     return $controls;
 }
