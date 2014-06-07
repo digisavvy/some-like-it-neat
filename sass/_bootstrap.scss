@@ -5,10 +5,10 @@
 @import "neat/neat";
 
 /* Import base */
-@import "base/normalize";
+@import "normalize";
 @import "modules/variables";
-@import "base/typography";
-@import "base/structure";
+@import "typography";
+@import "structure";
 
 /* Import Add-ons */
 @import "bourbon/addons/clearfix";
@@ -18,9 +18,9 @@
 // @import "modules/genericons";
 
 /* Import Sections */
-@import "sections/header/header";
-@import "sections/navigation/flexnav";
-@import "sections/navigation/navigation";
-@import "sections/content/content";
-@import "sections/aside/sidebar";
-@import "sections/footer/footer";
+@import "header";
+@import "flexnav";
+@import "navigation";
+@import "content";
+@import "sidebar";
+@import "footer";

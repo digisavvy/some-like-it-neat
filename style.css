@@ -1244,7 +1244,7 @@ ul.nav-menu li {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   padding: 20px 0 20px 50px; }
   #breadcrumbs a, #breadcrumbs a:visited {
-    border-bottom: solid 1px #ff0000; }
+    border-bottom: solid 1px red; }
 
 /* =Media
 ----------------------------------------------- */
@@ -1307,9 +1307,9 @@ object {
   display: block; }
 
 #content .entry-content a, #content .entry-content a:visited {
-  border-bottom: solid 1px #ff0000; }
+  border-bottom: solid 1px red; }
 #content .entry-meta a, #content .entry-meta a:visited {
-  border-bottom: solid 1px #ff0000; }
+  border-bottom: solid 1px red; }
 
 /* =Page Templates
 ----------------------------------------------- */
