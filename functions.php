@@ -202,7 +202,7 @@ if ( !function_exists('neat_add_breadcrumbs') ) :
 	add_action( 'tha_content_top', 'neat_add_breadcrumbs' );
 endif;
 
-if ( !function_exists('dg_add_flexnav') ) :
+if ( !function_exists('neat_optional_scripts') ) :
 	function neat_optional_scripts() {
 		// Font Awesome
 		if( get_theme_mod( 'add_fontawesome_icons' ) == '') {
