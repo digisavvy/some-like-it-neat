@@ -1131,53 +1131,10 @@ ul.nav-menu li {
 ul.nav-menu li.current_page_item {
   background: #f3f3f3; }
 
-@media screen and (min-width: 200px) {
-  .menu-toggle {
-    text-align: center;
-    height: 8px;
-    padding-top: 10px;
-    padding-bottom: 20px; } }
-
-ul.nav-menu li {
-  display: inline; }
-
-.sf-menu {
-  float: none !important;
-  margin: 0 auto !important;
-  width: 60% !important; }
-  .sf-menu br {
-    display: none; }
-  .sf-menu .sub {
-    text-align: center;
-    display: block;
-    float: none;
-    font-size: 13px; }
-  .sf-menu li {
-    -webkit-transition: background 800ms ease-in-out;
-    -moz-transition: background 800ms ease-in-out;
-    transition: background 800ms ease-in-out;
-    background: #fff !important; }
-    .sf-menu li:hover {
-      -webkit-transition: background 800ms ease-in-out;
-      -moz-transition: background 800ms ease-in-out;
-      transition: background 800ms ease-in-out;
-      background-color: #f9f9f9 !important; }
-    .sf-menu li a, .sf-menu li a:visited {
-      color: #666 !important;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important; }
-
 #primary-nav {
   float: left;
   max-width: 100%;
   width: 100%; }
-
-.mean-container .mean-nav ul li a, .mean-container .mean-nav ul li a:visited {
-  color: #666;
-  text-align: center !important; }
-
-@media screen and (max-width: 480px) {
-  .sf-menu ul {
-    position: static !important; } }
 
 .nav-links a:nth-of-type(2) {
   float: right; }
