@@ -12,14 +12,7 @@ Tired of all the bloated options frameworks? You can use the WordPress Customize
 
 == Description ==
 
-This plugin empowers theme developers making it easier to implement advanced features:
-
-* Use [additional controls](http://kirki.org/#fields) on the WordPress Customizer.
-* Easier definition of customizer controls.
-* Advanced settings on each controls (such as subtitles and help popovers).
-
-The plugin has extensive and thorough documentation available on [kirki.org](http://kirki.org).
-Please visit the [usage and implementation advice](http://kirki.org/#configuration).
+For documentation and examples please visit [kirki.org](http://kirki.org).
 
 == Installation ==
 
