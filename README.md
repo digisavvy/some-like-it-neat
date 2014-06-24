@@ -2,10 +2,13 @@
 
 ### A WordPress Theme Using _s, Bourbon + Neat and Theme Hook Alliance
 
+Description
+---------------
 
-I got bored on a Saturday night and started up this project. I really need a girlfriend...
+Some Like it Neat is a Minimal Starter theme that is Responsive out of the box. It uses SASS along with Bourbon Neat for help with Responsive grids. It's based on _s and is pretty rad.
 
-**The Essentials:**
+What's Inside?
+---------------
 
 * Bourbon (http://bourbon.io), Neat (http://neat.bourbon.io), Bitters (http://bitters.bourbon.io) and Refills (http://refills.bourbon.io) — Bourbon provides a lightweight SASS library (similar to Compass).
 
@@ -20,58 +23,11 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 
 * Kirki Advanced Theme Customizer Framework (http://kirki.org) — Adds some functionality to the already awesome built-in theme customizer. It adds cool extras like button sets, slider controls, radio image selectors. Read up on it! For now, I'm placing custom controls using Kirki in /library/inc/wp-customizer/customizer.php
 
+* Flexnav Menu System and Hover Intent
+* TGM PLugin Activation
+* Genericons
 * Pull requests welcome...
 
-Other things I included just because
----------------
-I admit it. I just add things because I think they're cool. It's a bad habit... You should see my collection of hats and socks. 
-
-* Post Format Support. There's very basic template support for Post Formats. The templates are there for you to butcher to your little heart's content!
-* TGM Plugin Activation, Version 2.4. I think there are a couple of plugins that are useful with this plugin, so they're properly included as recommendations
-* Genericons: Truthfully, these are here because they have a WordPress Fonticon (http://genericons.com)  
-* Dashicons: Alright, alright. More cool shit I just HAD to add. Happened across this project, loved it (http://melchoyce.github.io/dashicons/)
- 
-* Added Flexnav for Navigation
-* Hover Intent script
-
-Coming Soon
----------------
-
-* Internationalization aka i18n - I'd like to distribute this theme in the WP Repo at some point, so I need to account for this. I could use help here, =)
-
-* Full Schema Support within the Some Like it Neat. We've got some basic microformatting hooked up already in Blog Posts and Standard Pages; this will extend to the Post Formats, too.
-
-Recent Additions/Changes
----------------
-June 4th 2014
-
-* Added Kirki Advanced Theme Customizer Framework (http://kirki.org)
-
-Older Changes
----------------
-April 14th 2014
-
-* Modified Bitters so that it can be used with Thoughtbot's Refills project (http://thoughtbot.github.io/refills/)
-
-April 8th 2014
-
-* Replaced Superfish Nav with Flexnav (http://jasonweaver.name/lab/flexiblenavigation/)
-* Moved Sass files up one level. Just wanted them to be "less buried."
-
-##MOAR Older...
-
-* Added 'Bitters' from https://github.com/thoughtbot/bitters
-* Updated TGM Plugin Activation Class to 2.4
-* Add page 2 more page templates: 2 Col left and 2 col right sidebar templates
-* Added Schema Markup to Page and Post Templates
-* WP Customizer. We're getting there. Support for the following:  
-  * Site & Tagline
-  * Background Color
-  * Background Image
-  * Navigation Choice
-  * Choosing Static Front Page
-  * Footer settings for left/right footer content    
- 
 
 Getting Started
 ---------------
@@ -104,12 +60,9 @@ theme_root/sass
 
 / sass  
 
-* style.scss (The file that directly gets compiled by SASS. Output style.scss to your theme's root directory)
-
-- _bootstrap.scss (The file that we use to import all of our SASS files, except style.scss of course!)
+* style.scss Imports all other active/used SASS files.
 
 - _grid-settings.scss (if you're editing grid, columns and gutters, you'll need to create and import this file) 
-
 
 - bourbon  (Bourbon SASS Goodies library from http://bourbon.io) 
 
@@ -119,7 +72,7 @@ theme_root/sass
 
 - neat  (our grid framework. See docs over at http://neat.bourbon.io) 
 
-- base  (Refers to styles that make up the bulkd of the 'standard structure' for the site's layout)
+- structure  (Refers to styles that make up the bulkd of the 'standard structure' for the site's layout)
   * _breakpoints.scss (Where we define our responsive breakpoints)  
   * _normalize (Style resets+normalize based on PureUI Project)  
   * _structure.scss (Basic structural styles for basic scaffolding. As agnostic as possible)  
@@ -155,3 +108,52 @@ A special thanks to all the folks who inspire me on a daily basis to "do more" w
 * Devin Walker
 * Blair Williams
 * And a fuckload more that I'm missing here.
+
+License
+---------------
+
+This theme is based on Underscores, (C) 2012-2013 Automattic, Inc.
+ - Source: http://underscores.me/
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: license.txt
+ 
+Kirki, (C) 2014 Aristeides Stathopoulos, Dimitris Kalliris.
+ - Source: http://kirki.org/
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: license.txt
+
+Flexnav, Copyright 2014 Jason Weaver.
+ - Source: http://jasonweaver.name/lab/flexiblenavigation/
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: https://github.com/indyplanets/flexnav/blob/master/LICENSE
+
+Genericons, Copyright 2013 Automattic, Inc.
+ - Source: http://www.genericons.com
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: /font/license.txt
+
+TGM Plugin Activation, Copyright 2014 Thomas Griffin Media, Inc.
+ - Source: http://tgmpluginactivation.com/
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: http://tgmpluginactivation.com/#license
+ 
+Theme Hook Alliance 
+ - Source: https://github.com/zamoose/themehookalliance
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: 
+ 
+Bourbon
+ - Source: http://bourbon.io, © 2013 thoughtbot
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: https://github.com/thoughtbot/bourbon/blob/master/LICENSE
+
+Neat
+ - Source: http://neat.bourbon.io, © 2013 thoughtbot
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: https://github.com/thoughtbot/neat/blob/master/LICENSE
+ 
+Hover Intent
+ - Source: hhttp://cherne.net/brian/resources/jquery.hoverIntent.html
+ - License: GNU GPL, Version 2 (or later)
+ - License URI: license.txt
+
