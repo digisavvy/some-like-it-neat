@@ -24,9 +24,10 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Import Bourbon and Neat */
 @import "bourbon/bourbon";
+@import "base/base";
 @import "grid-settings";
 @import "neat/neat";
-@import "base/base";
+
 
 
 /* Import base */
