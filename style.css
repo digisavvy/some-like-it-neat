@@ -22,53 +22,38 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 and Blueprint http://www.blueprintcss.org/
 */
 /* Import Bourbon and Neat */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 button,
 input[type="submit"] {
-  border: 1px solid #2459a6;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #89a8d5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #477dca;
+  border-radius: 0.1875em;
   color: white;
   display: inline-block;
-  font-size: 11px;
-  font-weight: bold;
-  background-color: #477dca;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #477dca), color-stop(100%, #2760b2));
-  background-image: -webkit-linear-gradient(#477dca, #2760b2);
-  background-image: linear-gradient(#477dca, #2760b2);
-  padding: 7px 18px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 #1b4f9a;
-  background-clip: padding-box;
-  -webkit-font-smoothing: antialiased;
   font-size: 1em;
   font-weight: bold;
-  line-height: 1em; }
-  button:hover:not(:disabled),
-  input[type="submit"]:hover:not(:disabled) {
-    box-shadow: inset 0 1px 0 0 #628cc8;
-    cursor: pointer;
-    background-color: #3c71bb;
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #3c71bb), color-stop(100%, #255aa5));
-    background-image: -webkit-linear-gradient(#3c71bb, #255aa5);
-    background-image: linear-gradient(#3c71bb, #255aa5); }
-  button:active:not(:disabled),
-  input[type="submit"]:active:not(:disabled) {
-    border: 1px solid #2459a6;
-    box-shadow: inset 0 0 8px 4px #235397, inset 0 0 8px 4px #235397, 0 1px 1px 0 #eeeeee; }
-  button:disabled,
-  input[type="submit"]:disabled {
-    opacity: 0.5;
-    cursor: not-allowed; }
+  line-height: 1;
+  padding: .75em 1em;
+  text-decoration: none; }
+  button:hover,
+  input[type="submit"]:hover {
+    background-color: #2c5999;
+    color: white; }
 
 body {
-  color: #333333;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
   -webkit-font-smoothing: antialiased;
-  line-height: 1.5em; }
+  background-color: white;
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   line-height: 1.25em;
   margin: 0;
   text-rendering: optimizeLegibility; }
@@ -95,11 +80,11 @@ p {
   margin: 0 0 0.75em; }
 
 a {
-  color: #477dca;
-  text-decoration: none;
   -webkit-transition: color 0.1s linear;
   -moz-transition: color 0.1s linear;
-  transition: color 0.1s linear; }
+  transition: color 0.1s linear;
+  color: #477dca;
+  text-decoration: none; }
   a:hover {
     color: #2c5999; }
   a:active, a:focus {
@@ -116,20 +101,6 @@ hr {
 img {
   margin: 0;
   max-width: 100%; }
-
-abbr, acronym {
-  border-bottom: 1px dotted #dddddd;
-  cursor: help; }
-
-address {
-  display: block;
-  margin: 0 0 0.75em; }
-
-hgroup {
-  margin-bottom: 0.75em; }
-
-del {
-  color: #595959; }
 
 blockquote {
   border-left: 2px solid #dddddd;
@@ -153,7 +124,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em; }
 
 label {
@@ -177,7 +148,7 @@ select[multiple=multiple] {
   border-radius: 0.1875em;
   border: 1px solid #dddddd;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em 0.5em;
@@ -208,24 +179,14 @@ input[type="checkbox"], input[type="radio"] {
   margin-right: 0.375em; }
 
 input[type="file"] {
+  margin-bottom: 0.75em;
+  padding-bottom: 0.5em;
   width: 100%; }
 
 select {
   width: auto;
   max-width: 100%;
   margin-bottom: 1.5em; }
-
-button,
-input[type="submit"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  cursor: pointer;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap; }
 
 table {
   border-collapse: collapse;
@@ -260,7 +221,6 @@ ul, ol {
     padding-left: 1.5em; }
 
 dl {
-  line-height: 1.5em;
   margin-bottom: 0.75em; }
   dl dt {
     font-weight: bold;
@@ -268,10 +228,18 @@ dl {
   dl dd {
     margin: 0; }
 
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
 
 /* Import base */
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
@@ -460,6 +428,7 @@ sub {
  */
 img {
   border: 0;
+  height: 100%;
   max-width: 100%; }
 
 /**
@@ -629,16 +598,14 @@ body {
   line-height: 1.5em; }
 
 h1, h2, h3, h4, h5, h6 {
-  *zoom: 1;
   clear: both;
   float: none;
   line-height: 1.25em;
   margin-bottom: 20px;
   text-transform: uppercase; }
-  h1:before, h1:after, h2:before, h2:after, h3:before, h3:after, h4:before, h4:after, h5:before, h5:after, h6:before, h6:after {
-    content: " ";
-    display: table; }
   h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+    content: "";
+    display: table;
     clear: both; }
   h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
     text-decoration: none; }
@@ -646,32 +613,32 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 75px;
   font-size: 4.6875rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 h2 {
   font-size: 50px;
   font-size: 3.125rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 h3 {
   font-size: 35px;
   font-size: 2.1875rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 h4 {
   font-size: 24px;
   font-size: 1.5rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 h5 {
   font-size: 20px;
   font-size: 1.25rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 h6 {
   font-size: 18px;
   font-size: 1.125rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 blockquote {
   background-color: #f9f9f9;
@@ -686,7 +653,7 @@ strong, b {
   font-size: 20px;
   font-size: 1.25rem;
   color: #000;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 a, a:visited {
   -webkit-transition: all 200ms ease-in-out;
@@ -701,7 +668,7 @@ a, a:visited {
     color: red; }
 
 .entry-title {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   text-align: center; }
   @media screen and (min-width: 200px) {
     .entry-title {
@@ -728,31 +695,27 @@ html {
 body {
   font-size: 16px;
   font-size: 1rem;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   word-break: break-word; }
 
 #page {
-  *zoom: 1;
   max-width: 71.25em;
   margin-left: auto;
   margin-right: auto; }
-  #page:before, #page:after {
-    content: " ";
-    display: table; }
   #page:after {
+    content: "";
+    display: table;
     clear: both; }
 
 #main {
   padding: 0 40px; }
 
 #primary {
-  *zoom: 1;
   margin: auto;
   width: 100%; }
-  #primary:before, #primary:after {
-    content: " ";
-    display: table; }
   #primary:after {
+    content: "";
+    display: table;
     clear: both; }
   #primary ul {
     list-style: none; }
@@ -770,7 +733,7 @@ body {
   border-radius: 50px;
   box-shadow: none;
   clear: both;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   margin: 10px 0;
   padding: 20px;
   transition: all 200ms ease-in-out; }
@@ -779,7 +742,7 @@ body {
     border: solid 5px #999999;
     border-radius: 50px;
     box-shadow: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     padding: 20px; }
 
 .neat-button {
@@ -788,7 +751,7 @@ body {
   border-radius: 50px;
   box-shadow: none;
   clear: both;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   margin: 10px 0;
   padding: 20px;
   transition: all 200ms ease-in-out; }
@@ -797,7 +760,7 @@ body {
     border: solid 5px #999999;
     border-radius: 50px;
     box-shadow: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     padding: 20px; }
 
 .neat-3d-button {
@@ -821,14 +784,14 @@ body {
     border-bottom: solid 3px #999999;
     border-radius: 10px;
     box-shadow: none;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
     padding: 20px; }
 
 /* Import Sections */
 .site-branding {
   text-align: center; }
   .site-branding .site-title {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
     @media screen and (min-width: 200px) {
       .site-branding .site-title {
         font-size: 35px;
@@ -1171,16 +1134,14 @@ ul.nav-menu li.current_page_item {
   margin: 0 0 1.5em; }
 
 .aligncenter {
-  *zoom: 1;
   float: none;
   margin-top: .5em;
   margin-right: auto !important;
   margin-bottom: .5em;
   margin-left: auto !important; }
-  .aligncenter:before, .aligncenter:after {
-    content: " ";
-    display: table; }
   .aligncenter:after {
+    content: "";
+    display: table;
     clear: both; }
 
 .alignleft {
