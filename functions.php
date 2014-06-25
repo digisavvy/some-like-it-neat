@@ -28,7 +28,7 @@ function digistarter_setup() {
 	 * If you're building a theme based on digistarter, use a find and replace
 	 * to change 'digistarter' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'digistarter', get_template_directory() . '/library/languages' );
+	load_theme_textdomain( 'digistarter', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -40,7 +40,7 @@ function digistarter_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_action( 'init', 'neat_add_editor_style' );
+	//add_action( 'init', 'neat_add_editor_style' );
 	/**
 	 * Apply theme's stylesheet to the visual editor.
 	 *
@@ -48,9 +48,7 @@ function digistarter_setup() {
 	 * @uses get_stylesheet_uri() Returns URI of theme stylesheet
 	 */
 	function neat_add_editor_style() {
-
 	    add_editor_style( get_stylesheet_uri() );
-
 	}
 
 	// This theme uses wp_nav_menu() in one location.
@@ -71,6 +69,8 @@ function digistarter_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	do_action( 'digistarter_after_setup' );
 }
 endif; // digistarter_setup
 add_action( 'after_setup_theme', 'digistarter_setup' );
@@ -97,31 +97,17 @@ endif;
  */
 if ( !function_exists('digistarter_scripts') ) :
 	function digistarter_scripts() {
-		if (!is_admin()) {
-			wp_enqueue_script('jquery');
-		}
-
-		// Main Style
-		wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
-
+		wp_enqueue_style( 'digistarter', get_stylesheet_uri(), false, '1.0.0' );
 		// Dashicons
-		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/library/css/dashicons.css' );
-
+		wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/assets/css/dashicons.css' );
 		// Flexnav Scripts
-		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/js/flexnav/jquery.flexnav.min.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'flexnav' );
-
+		wp_enqueue_script( 'flexnav', get_stylesheet_directory_uri() . '/assets/js/flexnav/jquery.flexnav.min.js', array('jquery'), '1.0.0', false );
 		// Modernizr
-		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/library/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
-		wp_enqueue_script( 'modernizr' );
-
+		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/assets/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
 		// Selectivizr Scripts
-		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'selectivizr' );
-
+		wp_enqueue_script( 'selectivizr', get_stylesheet_directory_uri() . '/assets/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
 		// Hover Intent Scripts
-		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'hoverintent' );
+		wp_enqueue_script( 'hoverintent', get_template_directory_uri() . '/assets/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
 
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -150,46 +136,51 @@ if ( !function_exists('dg_add_flexnav') ) :
 	add_action( 'wp_head', 'dg_add_flexnav' );
 endif;
 
+add_action( 'digistarter_after_setup', 'digistarter_includes' );
 /**
- * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
+ * Load required theme files.
+ *
  */
-include( 'library/inc/tha-theme-hooks/tha-theme-hooks.php' );
+function digistarter_includes() {
 
-/**
- * Including Kirki Advanced Theme Customizer (https://github.com/aristath/kirki).
- */
-include_once( dirname( __FILE__ ) . '/library/inc/kirki/kirki.php' );
+	$includes_dir = get_template_directory() . '/includes';
+	$vendor_dir   = $includes_dir . '/vendor';
 
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/library/inc/custom-header.php';
+	// * Including TGM Plugin Activation
+	require_once( $vendor_dir . '/tgm-plugin-activation/class-tgm-plugin-activation.php' );
 
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/library/inc/template-tags.php';
+	 //* Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
+	require_once ( $vendor_dir . '/tha-theme-hooks.php' );
 
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/library/inc/extras.php';
+	// Implement the Custom Header feature.
+	//require $includes_dir . '/includes/inc/custom-header.php';
 
-/**
- * WP Customizer
- */
-require get_template_directory() . '/library/inc/wp-customizer/customizer.php';
+	/**
+	 * Custom template tags for this theme.
+	 */
+	require_once $includes_dir . '/template-tags.php';
 
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/library/inc/jetpack.php';
+	/**
+	 * Custom functions that act independently of the theme templates.
+	 */
+	require_once $includes_dir . '/extras.php';
 
-/**
- * Including TGM Plugin Activation
- */
-require_once( get_template_directory() . '/library/inc/tgm-plugin-activation/required-plugins.php' );
+	/**
+	 * WP Customizer
+	 */
+	//require_once $includes_dir . '/wp-customizer/customizer.php';
 
+	/**
+	 * Load Jetpack compatibility file.
+	 */
+	require_once $includes_dir . '/jetpack.php';
+
+	/**
+	 * Including TGM Plugin Activation
+	 */
+	require_once( $includes_dir . '/required-plugins.php' );
+
+}
 /**
  * Custom Hooks and Filters
  */
@@ -214,7 +205,7 @@ if ( !function_exists('neat_optional_scripts') ) :
 		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
 
 		 } else {
-		 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/css/genericons.css" rel="stylesheet">';
+		 	echo '<link href=" '.get_stylesheet_directory_uri().'/assets/css/genericons.css" rel="stylesheet">';
 		 }
 
 		 // Link Color
