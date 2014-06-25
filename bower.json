@@ -7,11 +7,10 @@
   ],
   "license": "GPL-2.0+",
   "private": true,
-  "dependencies": {
-    "bourbon": "~4.0.2",
-    "neat": "~1.6.0"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "bourbon": "~4.0.2",
+    "neat": "~1.6.0",
     "modularized-normalize-scss": "~3.0.1"
   }
 }
