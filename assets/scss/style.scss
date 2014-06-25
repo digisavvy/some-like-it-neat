@@ -23,21 +23,22 @@ and Blueprint http://www.blueprintcss.org/
 */
 
 /* Import Bourbon and Neat */
-@import "../bower/bourbon/dist/bourbon";
+@import "vendor/bourbon/bourbon";
 @import "base/base";
+@import "vendor/neat/neat-helpers";
 @import "settings/neat";
-@import "../bower/neat/app/assets/stylesheets/neat";
+@import "vendor/neat/neat";
 
 /* Import base */
-@import "../bower/modularized-normalize-scss/normalize";
+@import "vendor/normalize/normalize";
 @import "partials/variables";
 @import "partials/typography";
 @import "partials/structure";
 
 /* Import Add-ons */
-@import "../bower/bourbon/dist/addons/clearfix";
-@import "../bower/bourbon/dist/addons/prefixer";
-@import "../bower/bourbon/dist/addons/font-family";
+@import "vendor/bourbon/addons/clearfix";
+@import "vendor/bourbon/addons/prefixer";
+@import "vendor/bourbon/addons/font-family";
 @import "partials/buttons";
 // @import "modules/genericons";
 
