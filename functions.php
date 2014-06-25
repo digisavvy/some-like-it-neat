@@ -153,7 +153,7 @@ function digistarter_includes() {
 	require_once ( $vendor_dir . '/tha-theme-hooks.php' );
 
 	// Implement the Custom Header feature.
-	//require $includes_dir . '/includes/inc/custom-header.php';
+	require $includes_dir . '/custom-header.php';
 
 	/**
 	 * Custom template tags for this theme.
@@ -168,7 +168,7 @@ function digistarter_includes() {
 	/**
 	 * WP Customizer
 	 */
-	//require_once $includes_dir . '/wp-customizer/customizer.php';
+	require_once $includes_dir . '/wp-customizer/customizer.php';
 
 	/**
 	 * Load Jetpack compatibility file.
