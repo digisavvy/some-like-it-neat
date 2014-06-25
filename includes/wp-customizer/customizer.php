@@ -179,60 +179,6 @@ function neat_add_customizer_theme_options($wp_customize) {
 add_action( 'customize_register', 'neat_add_customizer_theme_options' );
 
 /**
- * The configuration options for the Kirki Customizer
- */
-function shoestrap_customizer_config() {
-
-    $args = array(
-
-        // Change the logo image. (URL)
-        // If omitted, the default theme info will be displayed.
-        // A good size for the logo is 250x50.
-
-        // 'logo_image'   => '/path/to/image',
-
-        // The color of active menu items, help bullets etc.
-        'color_active' => '#1abc9c',
-
-        // Color used for secondary elements and desable/inactive controls
-        'color_light'  => '#8cddcd',
-
-        // Color used for button-set controls and other elements
-        'color_select' => '#34495e',
-
-        // Color used on slider controls and image selects
-        'color_accent' => '#FF5740',
-
-        // The generic background color.
-        // You should choose a dark color here as we're using white for the text color.
-        'color_back'   => '#222',
-
-        // If Kirki is embedded in your theme, then you can use this line to specify its location.
-        // This will be used to properly enqueue the necessary stylesheets and scripts.
-        // If you are using kirki as a plugin then please delete this line.
-        'url_path'     => get_template_directory_uri() . '/library/inc/kirki/',
-
-        // If you want to take advantage of the backround control's 'output',
-        // then you'll have to specify the ID of your stylesheet here.
-        // The "ID" of your stylesheet is its "handle" on the wp_enqueue_style() function.
-        // http://codex.wordpress.org/Function_Reference/wp_enqueue_style
-        'stylesheet_id' => 'shoestrap'
-
-    );
-
-    return $args;
-
-}
-add_filter( 'kirki/config', 'shoestrap_customizer_config' );
-
-/**
- * Kirki Customizer Settings
- */
-
-
-
-
-/**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
