@@ -1,0 +1,17 @@
+{
+  "name": "some-like-it-neat",
+  "version": "1.0.0",
+  "authors": [
+    "Alex Vasquez",
+    "Robert Neu"
+  ],
+  "license": "GPL-2.0+",
+  "private": true,
+  "dependencies": {
+    "bourbon": "~4.0.2",
+    "neat": "~1.6.0"
+  },
+  "devDependencies": {
+    "modularized-normalize-scss": "~3.0.1"
+  }
+}
