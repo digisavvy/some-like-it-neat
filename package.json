@@ -1,14 +1,15 @@
 {
-	"name": "SomeLikeitNeat",
-	"version": "1.0.0",
-	"description": "A Starter Theme built using _S, Bourbon and Neat.",
-	"copyright": "2014",
-	"author": "Alex Vasquez",
-	"license": "GPL-2.0+",
-	"devDependencies": {
-		"grunt": "^0.4.5",
-		"grunt-contrib-sass": "^0.7.3",
-		"grunt-contrib-watch": "^0.6.1",
-		"matchdep": "^0.3.0"
-	}
+  "name": "SomeLikeitNeat",
+  "version": "1.0.0",
+  "description": "A Starter Theme built using _S, Bourbon and Neat.",
+  "copyright": "2014",
+  "author": "Alex Vasquez",
+  "license": "GPL-2.0+",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bowercopy": "^1.1.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "matchdep": "^0.3.0"
+  }
 }

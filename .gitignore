@@ -6,3 +6,5 @@
 **/.sass-cache/*
 **/_grid-settings.scss
 /README.html
+/node_modules
+/bower_components

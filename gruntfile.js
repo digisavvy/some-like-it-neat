@@ -25,6 +25,32 @@ module.exports = function(grunt) {
 		 */
 		pkg: grunt.file.readJSON('package.json'),
 		/**
+		 * Bower Copy
+		 */
+		bowercopy: {
+			options: {
+				srcPrefix: 'bower_components'
+			},
+			scss: {
+				options: {
+					destPrefix: 'assets/scss/vendor'
+				},
+				files: {
+					'neat': 'neat/app/assets/stylesheets',
+					'bourbon': 'bourbon/dist',
+					'normalize': 'modularized-normalize-scss/*.scss',
+					'normalize/base': 'modularized-normalize-scss/base',
+					'normalize/embed': 'modularized-normalize-scss/embed',
+					'normalize/forms': 'modularized-normalize-scss/forms',
+					'normalize/grouping': 'modularized-normalize-scss/grouping',
+					'normalize/html5': 'modularized-normalize-scss/html5',
+					'normalize/links': 'modularized-normalize-scss/links',
+					'normalize/tables': 'modularized-normalize-scss/tables',
+					'normalize/text-level': 'modularized-normalize-scss/text-level'
+				}
+			}
+		},
+		/**
 		 * Sass
 		 */
 		sass: {
@@ -33,10 +59,10 @@ module.exports = function(grunt) {
 					style: 'expanded',
 					lineNumbers: false,
 					debugInfo: false,
-					compass: true
+					compass: false
 				},
 				files: {
-					'style.css' : 'sass/style.scss'
+					'style.css' : 'assets/scss/style.scss'
 				}
 			}
 		},
@@ -46,9 +72,9 @@ module.exports = function(grunt) {
 		watch: {
 			sass: {
 				files: [
-					'sass/*.scss',
-					'sass/**/*.scss',
-					'sass/**/**/*.scss'
+					'assets/scss/*.scss',
+					'assets/scss/**/*.scss',
+					'assets/scss/**/**/*.scss'
 				],
 				tasks: ['sass']
 			}
@@ -60,6 +86,7 @@ module.exports = function(grunt) {
 	 * Run `grunt` on the command line
 	 */
 	grunt.registerTask('default', [
+		'bowercopy',
 		'sass',
 		'watch'
 	]);
