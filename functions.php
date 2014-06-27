@@ -105,22 +105,22 @@ if ( !function_exists('digistarter_scripts') ) :
 		wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
 
 		// Dashicons
-		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/library/css/dashicons.css' );
+		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/library/assets/css/dashicons.css' );
 
 		// Flexnav Scripts
-		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/js/flexnav/jquery.flexnav.min.js', array(), '1.0.0', false );
+		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/assets/js/flexnav/jquery.flexnav.min.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'flexnav' );
 
 		// Modernizr
-		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/library/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
+		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/library/assets/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
 		wp_enqueue_script( 'modernizr' );
 
 		// Selectivizr Scripts
-		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
+		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/assets/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'selectivizr' );
 
 		// Hover Intent Scripts
-		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
+		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/assets/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'hoverintent' );
 
 
@@ -153,42 +153,42 @@ endif;
 /**
  * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
  */
-include( 'library/inc/tha-theme-hooks/tha-theme-hooks.php' );
+include( 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' );
 
 /**
  * Including Kirki Advanced Theme Customizer (https://github.com/aristath/kirki).
  */
-include_once( dirname( __FILE__ ) . '/library/inc/kirki/kirki.php' );
+include_once( dirname( __FILE__ ) . '/library/vendors/kirki/kirki.php' );
 
 /**
  * Implement the Custom Header feature.
  */
-//require get_template_directory() . '/library/inc/custom-header.php';
+//require get_template_directory() . '/library/vendors/custom-header.php';
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/library/inc/template-tags.php';
+require get_template_directory() . '/library/vendors/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/library/inc/extras.php';
+require get_template_directory() . '/library/vendors/extras.php';
 
 /**
  * WP Customizer
  */
-require get_template_directory() . '/library/inc/wp-customizer/customizer.php';
+require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/library/inc/jetpack.php';
+require get_template_directory() . '/library/vendors/jetpack.php';
 
 /**
  * Including TGM Plugin Activation
  */
-require_once( get_template_directory() . '/library/inc/tgm-plugin-activation/required-plugins.php' );
+require_once( get_template_directory() . '/library/vendors/tgm-plugin-activation/required-plugins.php' );
 
 /**
  * Custom Hooks and Filters
@@ -214,7 +214,7 @@ if ( !function_exists('neat_optional_scripts') ) :
 		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
 
 		 } else {
-		 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/css/genericons.css" rel="stylesheet">';
+		 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/assets/css/genericons.css" rel="stylesheet">';
 		 }
 
 		 // Link Color
