@@ -12,7 +12,7 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'partials/content', 'single' ); ?>
+			<?php get_template_part( 'page-templates/partials/content', 'single' ); ?>
 
 			<?php digistarter_post_nav(); ?>
 
