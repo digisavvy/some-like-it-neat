@@ -25,7 +25,7 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
-* Genericons
+* Genericons/Dashicons
 * Pull requests welcome...
 
 
@@ -52,43 +52,28 @@ I don't see why not. ~~I haven't done it yet.~~ ( I'm using a child theme on htt
 
 What I recommend is that you generate your child theme, setup your child theme folder, style.css file. Additionally, I think it's just easier to copy the 'library' folder from the parent and place it into the child theme. 
 
-### SASS Structure
+### Getting Started aka What You Need to Know...
 ---------------
-I definitely need some advice here. Simpler is better in my mind. OCD can be a real pain. So feel free to lend a hand.
+Well, to use this theme, you'll definitely want to learn SASS. It's what Bourbon and Neat are built on top of and is at the core of this theme's build. 
 
-theme_root/sass
+Folder Structure
+---------------
+* Theme Root
+  * **library**
+    * **assets** ( js, css, sass )
+      * css
+      * font
+      * js
+      * sass ( Where all scss files are stored )
+    * **languages**
+    * **vendors** ( 3rd party utilities like Theme Hook Alliance, Kirki, TGM Plugin     Activation etc... )
+      * kirki
+      * tgm-plugin-activation
+      * tha-theme-hooks
+      * wp-customizer
+  * **page-templates** ( Standard Page Templates for Pages )
+      * partials ( Template Parts viea get_template_parts() )
 
-/ sass  
-
-* style.scss Imports all other active/used SASS files.
-
-- _grid-settings.scss (if you're editing grid, columns and gutters, you'll need to create and import this file) 
-
-- bourbon  (Bourbon SASS Goodies library from http://bourbon.io) 
-
-- bitters  (Basic UI/Formatting implements from http://bitters.bourbon.io) 
-
-- grid-settings  (Necessary if you're setting your own number of columns. Docs at http://neat.bourbon.io)  
-
-- neat  (our grid framework. See docs over at http://neat.bourbon.io) 
-
-- structure  (Refers to styles that make up the bulkd of the 'standard structure' for the site's layout)
-  * _breakpoints.scss (Where we define our responsive breakpoints)  
-  * _normalize (Style resets+normalize based on PureUI Project)  
-  * _structure.scss (Basic structural styles for basic scaffolding. As agnostic as possible)  
-  * _typography.scss  (Typograhpical related styles)  
-
-- modules  
-  * _buttons.scss  (Where we'll place styles for buttons)  
-  * _helpers.scss  (A part of the bourbon/neat grid framework)  
-  * ~~typography.scss~~  (Moved this to 'base')  
-  * _variables.scss  (Site specific variables can go here)  
- 
-- Sections  (These sections makeup the theme styling that goes beyond basic theme structural styles...)  
-  * aside  (styles related to sidebars and widget areas)  
-  * content  (styles related to primary content area)  
-  * header (for styles, not relating to navigation, that existin within the header)  
-  * navigation  (for nav specific styling)  
 
 ### General Credits and Thanks
 ---------------
@@ -107,6 +92,7 @@ A special thanks to all the folks who inspire me on a daily basis to "do more" w
 * Dave Jesch
 * Devin Walker
 * Blair Williams
+* Robert Neu
 * And a fuckload more that I'm missing here.
 
 License
