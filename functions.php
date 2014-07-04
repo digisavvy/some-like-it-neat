@@ -108,7 +108,7 @@ if ( !function_exists('digistarter_scripts') ) :
 		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/library/assets/css/dashicons.css' );
 
 		// Flexnav Scripts
-		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/assets/js/flexnav/jquery.flexnav.min.js', array(), '1.0.0', false );
+		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/assets/js/flexnav/jquery.flexnav.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'flexnav' );
 
 		// Modernizr
@@ -116,7 +116,7 @@ if ( !function_exists('digistarter_scripts') ) :
 		wp_enqueue_script( 'modernizr' );
 
 		// Selectivizr Scripts
-		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/assets/js/selectivizr/selectivizr-min.js', array(), '1.0.0', false );
+		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/assets/js/selectivizr/selectivizr.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'selectivizr' );
 
 		// Hover Intent Scripts
@@ -261,3 +261,11 @@ if ( !function_exists('neat_add_footer_divs') ) :
 <?php }
 add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
 endif;
+
+add_action( 'tha_head_bottom', 'neat_add_selectivizr' );
+function neat_add_selectivizr() { ?>
+	<!--[if (gte IE 6)&(lte IE 8)]>
+  		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
+  		<noscript><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" /></noscript>
+	<![endif]-->
+<?php }
