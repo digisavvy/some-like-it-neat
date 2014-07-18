@@ -210,7 +210,7 @@ function shoestrap_customizer_config() {
         // If Kirki is embedded in your theme, then you can use this line to specify its location.
         // This will be used to properly enqueue the necessary stylesheets and scripts.
         // If you are using kirki as a plugin then please delete this line.
-        'url_path'     => get_template_directory_uri() . '/library/inc/kirki/',
+        'url_path'     => get_template_directory_uri() . '/library/vendors/kirki/',
 
         // If you want to take advantage of the backround control's 'output',
         // then you'll have to specify the ID of your stylesheet here.
