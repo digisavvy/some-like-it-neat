@@ -161,6 +161,11 @@ include( 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' );
 include_once( dirname( __FILE__ ) . '/library/vendors/kirki/kirki.php' );
 
 /**
+ * WP Customizer
+ */
+require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
+
+/**
  * Implement the Custom Header feature.
  */
 //require get_template_directory() . '/library/vendors/custom-header.php';
@@ -175,10 +180,6 @@ require get_template_directory() . '/library/vendors/template-tags.php';
  */
 require get_template_directory() . '/library/vendors/extras.php';
 
-/**
- * WP Customizer
- */
-require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
