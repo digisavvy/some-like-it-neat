@@ -124,22 +124,22 @@ TGM Plugin Activation, Copyright 2014 Thomas Griffin Media, Inc.
  - License URI: http://tgmpluginactivation.com/#license
  
 Theme Hook Alliance 
- - Source: https://github.com/zamoose/themehookalliance
+ - Source: https://github.com/zamoose/themehookalliance/blob/master/tha-theme-hooks.php
  - License: GNU GPL, Version 2 (or later)
  - License URI: 
  
 Bourbon
  - Source: http://bourbon.io, © 2013 thoughtbot
- - License: GNU GPL, Version 2 (or later)
+ - License: The MIT License
  - License URI: https://github.com/thoughtbot/bourbon/blob/master/LICENSE
 
 Neat
  - Source: http://neat.bourbon.io, © 2013 thoughtbot
- - License: GNU GPL, Version 2 (or later)
+ - License: The MIT License
  - License URI: https://github.com/thoughtbot/neat/blob/master/LICENSE
  
 Hover Intent
- - Source: hhttp://cherne.net/brian/resources/jquery.hoverIntent.html
- - License: GNU GPL, Version 2 (or later)
+ - Source: https://github.com/tristen/hoverintent
+ - License: the MIT
  - License URI: license.txt
 
