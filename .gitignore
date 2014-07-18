@@ -1,10 +1,15 @@
-/codekit-config.json
-*.codekit
 
 # sass cache
 **/.sass-cache
 **/.sass-cache/*
+
+# Codekit
+/codekit-config.json
+*.codekit
+**.codekit-cache/*
+
 /README.html
 
 /node_modules/
 /dist/
+/min/
