@@ -50,7 +50,8 @@ $fourth_level: #cbcbc9;
 		color: $nav_text;
 		background: $top_level;
 		border-bottom: 1px solid rgba(0,0,0,.15);
-
+		white-space: nowrap;
+		
 		&:hover {
 			color: $primary-color !important;
 		}

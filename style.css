@@ -236,10 +236,15 @@ input[type="submit"] {
   vertical-align: middle;
   white-space: nowrap; }
 
-* {
+html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
 
 /* Import base */
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
@@ -857,7 +862,8 @@ body {
     overflow: hidden;
     color: #222222;
     background: #a6a6a2;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    white-space: nowrap; }
     .flexnav li a:hover {
       color: red !important; }
   .flexnav li ul {
@@ -1154,6 +1160,10 @@ ul.nav-menu li.current_page_item {
   float: right;
   margin-left: 1.5em; }
 
+.sticky {
+  float: left;
+  padding: 20px; }
+
 /* =Breadcrumbs
 ----------------------------------------------- */
 #breadcrumbs {
@@ -1279,182 +1289,6 @@ object {
 .page-template-page-templatestemplate-left-col-php footer {
   clear: both;
   display: table; }
-
-.modal label {
-  cursor: pointer;
-  margin-bottom: 0; }
-.modal label img {
-  border-radius: 150px;
-  display: block;
-  max-width: 300px; }
-.modal input[type="checkbox"] {
-  display: none; }
-.modal .btn {
-  border: 1px solid #dbdbdb;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 white;
-  color: #333333;
-  display: inline-block;
-  font-size: inherit;
-  font-weight: bold;
-  background-color: white;
-  background-image: -webkit-linear-gradient(white, #e3e3e3);
-  background-image: linear-gradient(white, #e3e3e3);
-  padding: 7px 18px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 white;
-  background-clip: padding-box;
-  border: 1px solid #dfd8d8;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 white;
-  color: #333333;
-  display: inline-block;
-  font-size: inherit;
-  font-weight: bold;
-  background-color: white;
-  background-image: -webkit-linear-gradient(white, #e5e0e0);
-  background-image: linear-gradient(white, #e5e0e0);
-  padding: 7px 18px;
-  text-decoration: none;
-  text-shadow: 0 1px 0 white;
-  background-clip: padding-box;
-  font-size: 1em;
-  margin-bottom: 1.5em; }
-  .modal .btn:hover:not(:disabled) {
-    box-shadow: inset 0 1px 0 0 white;
-    cursor: pointer;
-    background-color: #f2f2f2;
-    background-image: -webkit-linear-gradient(#f2f2f2, #dbdbdb);
-    background-image: linear-gradient(#f2f2f2, #dbdbdb); }
-  .modal .btn:active:not(:disabled), .modal .btn:focus:not(:disabled) {
-    border: 1px solid #dbdbdb;
-    box-shadow: inset 0 0 8px 4px #d4d4d4, inset 0 0 8px 4px #d4d4d4; }
-  .modal .btn:hover:not(:disabled) {
-    box-shadow: inset 0 1px 0 0 white;
-    cursor: pointer;
-    background-color: #f2f2f2;
-    background-image: -webkit-linear-gradient(#f2f2f2, #ded8d8);
-    background-image: linear-gradient(#f2f2f2, #ded8d8); }
-  .modal .btn:active:not(:disabled), .modal .btn:focus:not(:disabled) {
-    border: 1px solid #dfd8d8;
-    box-shadow: inset 0 0 8px 4px #d7d1d1, inset 0 0 8px 4px #d7d1d1; }
-  .modal .btn:disabled {
-    opacity: 0.5;
-    cursor: not-allowed; }
-.modal .modal-open {
-  overflow: hidden; }
-.modal .modal-window {
-  -webkit-transition: opacity 0.25s ease;
-  -moz-transition: opacity 0.25s ease;
-  transition: opacity 0.25s ease;
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background: rgba(0, 0, 0, 0.85);
-  opacity: 0;
-  text-align: left;
-  visibility: hidden;
-  z-index: 99999999999; }
-  .modal .modal-window .modal-bg {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    cursor: pointer; }
-.modal .modal-close {
-  position: absolute;
-  top: 1.5em;
-  right: 1.5em;
-  bottom: 0;
-  left: 0;
-  height: 1.5em;
-  width: 1.5em;
-  cursor: pointer;
-  background: white; }
-  .modal .modal-close:after, .modal .modal-close:before {
-    position: absolute;
-    top: 3px;
-    right: 3px;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    height: 1.5em;
-    width: 0.15em;
-    background: #dddddd;
-    content: '';
-    display: block;
-    margin: -3px 0 0 -1px; }
-  .modal .modal-close:hover:after, .modal .modal-close:hover:before {
-    background: #c4c4c4; }
-  .modal .modal-close:before {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-.modal .modal-inner {
-  -webkit-transition: opacity 0.25s ease;
-  -moz-transition: opacity 0.25s ease;
-  transition: opacity 0.25s ease;
-  border-radius: 0.1875em;
-  background: white;
-  margin: auto;
-  max-height: 95%;
-  position: relative;
-  overflow: auto;
-  width: 95%;
-  padding: 1.5em;
-  margin-top: .6em; }
-  @media screen and (min-width: 40em) {
-    .modal .modal-inner {
-      padding: 3em;
-      width: 60%;
-      max-height: 60%;
-      margin-top: 10em; } }
-  @media screen and (min-width: 53.75em) {
-    .modal .modal-inner {
-      width: 50%;
-      margin-top: 10em; } }
-  .modal .modal-inner h1 {
-    color: #333333;
-    margin-bottom: .6em;
-    text-align: left;
-    text-transform: capitalize; }
-  .modal .modal-inner p {
-    font-size: 1em;
-    max-width: 100% !important;
-    padding: 0;
-    text-align: left; }
-    .modal .modal-inner p.intro {
-      color: #477dca;
-      line-height: 1.6em; }
-    .modal .modal-inner p.body {
-      color: #333333;
-      line-height: 1.45em; }
-      @media screen and (min-width: 40em) {
-        .modal .modal-inner p.body {
-          -webkit-columns: 2 8em;
-          -moz-columns: 2 8em;
-          columns: 2 8em; } }
-  .modal .modal-inner a.cta {
-    color: white;
-    display: inline-block;
-    margin-right: .5em;
-    margin-top: 1em; }
-    .modal .modal-inner a.cta:last-child {
-      padding: 0 2em; }
-.modal .modal-state:checked + .modal-window {
-  opacity: 1;
-  visibility: visible; }
-.modal .modal-state:checked + .modal-window .modal-inner {
-  top: 0; }
 
 /* =Asides
 ----------------------------------------------- */
