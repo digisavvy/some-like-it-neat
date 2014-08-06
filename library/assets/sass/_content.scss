@@ -169,7 +169,13 @@ object {
 
 	#primary {
 		@include media($sm) {
-
+			float: left !important;
+			@include media($sm) {
+				@include span-columns(4);
+			}
+			@include media($md) {
+				@include span-columns(4);
+			}
 		}
 		@include media($md) {
 
@@ -180,7 +186,14 @@ object {
 
 		}
 		@include media($md) {
-
+			float: right !important;
+			margin-right: 1.5%;
+			@include media($sm) {
+				@include span-columns(4);
+			}
+			@include media($md) {
+				@include span-columns(2);
+			}
 		}
 	}
 }
@@ -199,7 +212,7 @@ object {
 			@include span-columns(4);
 		}
 		@include media($md) {
-			@include span-columns(8);
+			@include span-columns(4);
 		}
 	}
 	#secondary {
@@ -209,7 +222,7 @@ object {
 			@include span-columns(4);
 		}
 		@include media($md) {
-			@include span-columns(3);
+			@include span-columns(2);
 		}
 	}
 	footer {
