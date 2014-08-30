@@ -74,6 +74,11 @@ function my_theme_register_required_plugins() {
             'slug'      => 'webmaster-user-role',
             'required'  => false,
         ),
+        array(
+            'name'      => 'Ninja Forms',
+            'slug'      => 'ninja-forms',
+            'required'  => false,
+        ),
 
     );
 
