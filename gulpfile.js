@@ -1,5 +1,7 @@
 // Load plugins
 var gulp = require('gulp'),
+    browserSync = require('browser-sync'),
+    reload      = browserSync.reload, 
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
@@ -11,7 +13,15 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    livereload = require('gulp-livereload');
+    cache = require('gulp-cache')
+    // livereload = require('gulp-livereload');
+
+// Browser Sync
+gulp.task('browser-sync', function() {
+    browserSync({
+        proxy: "somelikeitneat.dev"
+    });
+});
 
 // Styles
 gulp.task('styles', function() {
@@ -19,6 +29,7 @@ gulp.task('styles', function() {
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(gulp.dest('./'))
+    .pipe(reload({stream:true}))
     .pipe(rename({ suffix: '.min' }))
     .pipe(minifycss())
     .pipe(gulp.dest('dist/styles'))
@@ -53,8 +64,9 @@ gulp.task('clean', function() {
 });
 
 // Default task
-gulp.task('default', ['clean'], function() {
+gulp.task('default', ['clean', 'browser-sync'], function() {
     gulp.start('styles', 'scripts', 'images');
+    gulp.watch('library/assets/sass/**/*.scss', ['styles']);
 });
 
 // Watch
@@ -70,7 +82,7 @@ gulp.task('watch', function() {
   gulp.watch('src/images/**/*', ['images']);
 
   // Create LiveReload server
-  var server = livereload();
+  // var server = livereload();
 
   // Watch any files in dist/, reload on change
   gulp.watch(['dist/**']).on('change', function(file) {
