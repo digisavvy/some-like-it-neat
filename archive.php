@@ -59,6 +59,9 @@ get_header(); ?>
 						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
 							_e( 'Links', 'digistarter' );
 
+						elseif ( is_tax() ) :
++							single_term_title();
+
 						else :
 							_e( 'Archives', 'digistarter' );
 
