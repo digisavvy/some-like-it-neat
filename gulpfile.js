@@ -1,7 +1,11 @@
+// Project configuration
+var project   = 'my-theme';
+
 // Load plugins
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload, 
+    livereload = require('gulp-livereload'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
@@ -12,14 +16,17 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
-    cache = require('gulp-cache'),
-    build     = './'+project+'/';
+    cache = require('gulp-cache');
+    // build     = './'+project+'/';
 
 // Browser Sync
 gulp.task('browser-sync', function() {
-    browserSync({
+    
+    browserSync.init({
+        files: ["./**/*.php", "./**./*.html"],
         proxy: "somelikeitneat.dev"
     });
+
 });
 
 // Styles
@@ -30,8 +37,9 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./'))
     .pipe(reload({stream:true}))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(minifyCSS({keepBreaks:true}))
+    .pipe(minifycss({keepBreaks:true}))
     .pipe(gulp.dest('dist/styles'))
+    // .pipe(gulp.dest(build))
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -44,6 +52,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('dist/scripts'))
     .pipe(rename({ suffix: '.min' }))
     .pipe(uglify())
+    // .pipe(gulp.dest(build))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(notify({ message: 'Scripts task complete' }));
 });
