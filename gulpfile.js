@@ -12,8 +12,8 @@ var gulp = require('gulp'),
     clean = require('gulp-clean'),
     concat = require('gulp-concat'),
     notify = require('gulp-notify'),
-    cache = require('gulp-cache')
-    // livereload = require('gulp-livereload');
+    cache = require('gulp-cache'),
+    build     = './'+project+'/';
 
 // Browser Sync
 gulp.task('browser-sync', function() {
@@ -30,7 +30,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('./'))
     .pipe(reload({stream:true}))
     .pipe(rename({ suffix: '.min' }))
-    .pipe(minifycss())
+    .pipe(minifyCSS({keepBreaks:true}))
     .pipe(gulp.dest('dist/styles'))
     .pipe(notify({ message: 'Styles task complete' }));
 });
@@ -58,14 +58,8 @@ gulp.task('images', function() {
 
 // Clean
 gulp.task('clean', function() {
-  return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], {read: false})
+  return gulp.src(['**/.codekit-cache','**/.DS_Store','dist/styles', 'dist/scripts', 'dist/images'], {read: false})
     .pipe(clean());
-});
-
-// Default task
-gulp.task('default', ['clean', 'browser-sync'], function() {
-    gulp.start('styles', 'scripts', 'images');
-    gulp.watch('library/assets/sass/**/*.scss', ['styles']);
 });
 
 // Watch
@@ -78,7 +72,7 @@ gulp.task('watch', function() {
   gulp.watch('library/assets/js/**/*.js', ['scripts']);
 
   // Watch image files
-  gulp.watch('src/images/**/*', ['images']);
+  gulp.watch('images/**/*', ['images']);
 
   // Create LiveReload server
   // var server = livereload();
@@ -88,4 +82,10 @@ gulp.task('watch', function() {
     server.changed(file.path);
   });
 
+});
+
+// Default task
+gulp.task('default', ['clean', 'browser-sync'], function() {
+    gulp.start('styles', 'scripts', 'images');
+    gulp.watch('library/assets/sass/**/*.scss', ['styles']);
 });
