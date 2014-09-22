@@ -103,6 +103,13 @@ gulp.task('images', function() {
     .pipe(notify({ message: 'Images task complete' }));
 });
 
+//Fonts
+gulp.task('fonts', function() {
+    return gulp.src(fontSrc)
+    //don't do anything to fonts, just save 'em
+    .pipe(gulp.dest(fontDest));
+});
+
 // Clean
 gulp.task('clean', function() {
   return gulp.src(['**/.codekit-cache','**/.DS_Store', 'src/images/*'], {read: false})
