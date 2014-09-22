@@ -102,26 +102,30 @@ if ( !function_exists('digistarter_scripts') ) :
 		}
 
 		// Main Style
-		wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
+		wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
 
 		// Dashicons
-		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/src/css/dashicons.css' );
+		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/assets/css/dashicons.css' );
 
 		// Flexnav Scripts
-		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/src/js/flexnav/jquery.flexnav.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'flexnav' );
+		// wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/src/js/flexnav/jquery.flexnav.js', array(), '1.0.0', false );
+		// wp_enqueue_script( 'flexnav' );
 
-		// Modernizr
-		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/src/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
-		wp_enqueue_script( 'modernizr' );
+		// // Modernizr
+		// wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/src/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
+		// wp_enqueue_script( 'modernizr' );
 
-		// Selectivizr Scripts
-		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/src/js/selectivizr/selectivizr.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'selectivizr' );
+		// // Selectivizr Scripts
+		// wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/src/js/selectivizr/selectivizr.js', array(), '1.0.0', false );
+		// wp_enqueue_script( 'selectivizr' );
 
-		// Hover Intent Scripts
-		wp_register_script( 'hoverintent', get_template_directory_uri() . '/src/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'hoverintent' );
+		// // Hover Intent Scripts
+		// wp_register_script( 'hoverintent', get_template_directory_uri() . '/src/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
+		// wp_enqueue_script( 'hoverintent' );
+
+		// Concatonated Scripts
+		wp_register_script( 'production-js', get_template_directory_uri() . '/assets/js/production-min.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'production-js' );
 
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
