@@ -5,6 +5,7 @@
     "gulp-autoprefixer": "0.0.8",
     "gulp-cache": "^0.2.0",
     "gulp-clean": "^0.3.1",
+    "gulp-combine-media-queries": "^0.1.0",
     "gulp-concat": "^2.2.0",
     "gulp-imagemin": "^0.6.1",
     "gulp-jshint": "^1.6.4",
@@ -13,6 +14,7 @@
     "gulp-notify": "^1.4.0",
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
+    "gulp-run-sequence": "^0.3.2",
     "gulp-uglify": "^0.3.1"
   },
   "engines": {
