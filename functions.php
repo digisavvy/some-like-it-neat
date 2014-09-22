@@ -105,22 +105,22 @@ if ( !function_exists('digistarter_scripts') ) :
 		wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
 
 		// Dashicons
-		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/library/assets/css/dashicons.css' );
+		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/src/css/dashicons.css' );
 
 		// Flexnav Scripts
-		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/assets/js/flexnav/jquery.flexnav.js', array(), '1.0.0', false );
+		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/src/js/flexnav/jquery.flexnav.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'flexnav' );
 
 		// Modernizr
-		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/library/assets/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
+		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/src/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
 		wp_enqueue_script( 'modernizr' );
 
 		// Selectivizr Scripts
-		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/assets/js/selectivizr/selectivizr.js', array(), '1.0.0', false );
+		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/src/js/selectivizr/selectivizr.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'selectivizr' );
 
 		// Hover Intent Scripts
-		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/assets/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
+		wp_register_script( 'hoverintent', get_template_directory_uri() . '/src/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
 		wp_enqueue_script( 'hoverintent' );
 
 
@@ -210,7 +210,7 @@ if ( !function_exists('neat_optional_scripts') ) :
 		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
 
 		 } else {
-		 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/assets/css/genericons.css" rel="stylesheet">';
+		 	echo '<link href=" '.get_stylesheet_directory_uri().'/src/css/genericons.css" rel="stylesheet">';
 		 }
 
 		 // Link Color
