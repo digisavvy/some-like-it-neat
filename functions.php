@@ -156,11 +156,6 @@ endif;
 include( 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' );
 
 /**
- * Including Kirki Advanced Theme Customizer (https://github.com/aristath/kirki).
- */
-include_once( dirname( __FILE__ ) . '/library/vendors/kirki/kirki.php' );
-
-/**
  * WP Customizer
  */
 require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
