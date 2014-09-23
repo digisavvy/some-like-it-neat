@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 //Set Source Files
 var imgSrc = 'src/images/**/*.{png,jpg,jpeg,gif}',
     imgDest = 'assets/',
-    cssSrc = 'src/scss/**/*.scss',
+    cssSrc = 'src/sass/**/*.scss',
     cssDest = 'assets/css',
     fontSrc = 'src/fonts/**/*',
     fontDest = 'assets/fonts',
@@ -45,11 +45,11 @@ var handleErrors = function() {
 gulp.task('browser-sync', function() {
     var files = [
     //only minified JS
-    jsDest + '/**/*-min.js',
+    'src/js/**/*.js',
     //only minified CSS
-    cssDest + '/**/*-min.css',
+    'src/sass/**/*.scss',
     //all images
-    imgSrc + '/**/*.{png,jpg,jpeg,gif}',
+    'assets/images/**/*.{png,jpg,jpeg,gif}',
     //all php files
     '**/*.php'
     ];
@@ -123,10 +123,10 @@ gulp.task('watch', function() {
   gulp.watch('src/sass/**/*.scss', ['styles']);
 
   // Watch .js files
-  gulp.watch(jsDest + '/**/*.js', ['scripts']);
+  gulp.watch('src/js/**/*.js', ['scripts']);
 
   // Watch image files
-  gulp.watch(imgSrc + '/**/*.{png,jpg,jpeg,gif}', ['images']);
+  gulp.watch('src/images/**/*.{png,jpg,jpeg,gif}', ['images']);
 
   // Watch any files in src/, reload on change
   gulp.watch(['src/**']).on('change', function(file) {
