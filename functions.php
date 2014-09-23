@@ -71,26 +71,46 @@ function digistarter_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	/**
+	 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
+	 */
+	include( 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' );
+
+	/**
+	 * WP Customizer
+	 */
+	require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
+
+	/**
+	 * Implement the Custom Header feature.
+	 */
+	//require get_template_directory() . '/library/vendors/custom-header.php';
+
+	/**
+	 * Custom template tags for this theme.
+	 */
+	require get_template_directory() . '/library/vendors/template-tags.php';
+
+	/**
+	 * Custom functions that act independently of the theme templates.
+	 */
+	require get_template_directory() . '/library/vendors/extras.php';
+
+
+	/**
+	 * Load Jetpack compatibility file.
+	 */
+	require get_template_directory() . '/library/vendors/jetpack.php';
+
+	/**
+	 * Including TGM Plugin Activation
+	 */
+	require_once( get_template_directory() . '/library/vendors/tgm-plugin-activation/required-plugins.php' );
+
 }
 endif; // digistarter_setup
 add_action( 'after_setup_theme', 'digistarter_setup' );
-
-/**
- * Register widgetized area and update sidebar with default widgets.
- */
-if ( !function_exists('digistarter_widgets_init') ) :
-	function digistarter_widgets_init() {
-		register_sidebar( array(
-			'name'          => __( 'Sidebar', 'digistarter' ),
-			'id'            => 'sidebar-1',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h4 class="widget-title">',
-			'after_title'   => '</h4>',
-		) );
-	}
-	add_action( 'widgets_init', 'digistarter_widgets_init' );
-endif;
 
 /**
  * Enqueue scripts and styles.
@@ -133,8 +153,28 @@ if ( !function_exists('digistarter_scripts') ) :
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
+endif; // Enqueue Scripts and Styles
+
+/**
+ * Register widgetized area and update sidebar with default widgets.
+ */
+if ( !function_exists('digistarter_widgets_init') ) :
+	function digistarter_widgets_init() {
+		register_sidebar( array(
+			'name'          => __( 'Sidebar', 'digistarter' ),
+			'id'            => 'sidebar-1',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		) );
+	}
+	add_action( 'widgets_init', 'digistarter_widgets_init' );
 endif;
 
+/**
+ * Initializing Flexnav Menu System
+ */
 if ( !function_exists('dg_add_flexnav') ) :
 	function dg_add_flexnav() { ?>
 		<script>
@@ -153,42 +193,6 @@ if ( !function_exists('dg_add_flexnav') ) :
 	<?php }
 	add_action( 'wp_head', 'dg_add_flexnav' );
 endif;
-
-/**
- * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
- */
-include( 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' );
-
-/**
- * WP Customizer
- */
-require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/library/vendors/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/library/vendors/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/library/vendors/extras.php';
-
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/library/vendors/jetpack.php';
-
-/**
- * Including TGM Plugin Activation
- */
-require_once( get_template_directory() . '/library/vendors/tgm-plugin-activation/required-plugins.php' );
 
 /**
  * Custom Hooks and Filters
@@ -214,7 +218,7 @@ if ( !function_exists('neat_optional_scripts') ) :
 		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
 
 		 } else {
-		 	echo '<link href=" '.get_stylesheet_directory_uri().'/src/css/genericons.css" rel="stylesheet">';
+		 	echo '<link href=" '.get_stylesheet_directory_uri().'/assets/css/genericons.css" rel="stylesheet">';
 		 }
 
 		 // Link Color

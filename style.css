@@ -26,6 +26,9 @@ and Blueprint http://www.blueprintcss.org/
 PLEASE READ!!!
 You're probably wondering what the eff is going on here. It's cool. I get it. 
 
+If you do want a regular style.css file to pop up, uncomment the following line in your gulpfile.js file, in the style task.
+.pipe(gulp.dest('./'))
+
 This file is just hear so we have a header for our theme. The actual loaded CSS file is located in /assets/css/style-min.css.
 Why? It's minified, smaller, good for performance a bone density!
 

@@ -126,10 +126,10 @@ gulp.task('watch', function() {
   gulp.watch(jsDest + '/**/*.js', ['scripts']);
 
   // Watch image files
-  gulp.watch('src/images/**/*.{png,jpg,jpeg,gif}', ['images']);
+  gulp.watch(imgSrc + '/**/*.{png,jpg,jpeg,gif}', ['images']);
 
   // Watch any files in src/, reload on change
-  gulp.watch(['assets/**']).on('change', function(file) {
+  gulp.watch(['src/**']).on('change', function(file) {
     server.changed(file.path);
   });
 
