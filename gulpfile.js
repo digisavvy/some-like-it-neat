@@ -138,7 +138,7 @@ gulp.task('watch', function() {
 // Default task
 gulp.task('default', ['browser-sync'], function(cb) {
     // gulp.start('styles', 'scripts', 'images', 'clean');
-    runSequence('styles', 'scripts', 'images', 'clean', cb);
+    runSequence('styles', 'scripts', 'images', 'fonts', 'clean', cb);
     gulp.watch('src/sass/**/*.scss', ['styles']);
 });
 
