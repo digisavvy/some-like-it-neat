@@ -1,6 +1,6 @@
 // Source; http://www.ataylor.me/code/tutorials/using-gulp-js-in-wordpress-development/
 
-// Load plugins
+// Load plugins 
 var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload      = browserSync.reload,
@@ -18,7 +18,7 @@ var gulp = require('gulp'),
     runSequence = require('gulp-run-sequence'),
     cache = require('gulp-cache');
 
-//Set Source Files
+//Set Source Files A comment test
 var imgSrc = 'src/images/**/*.{png,jpg,jpeg,gif}',
     imgDest = 'assets/',
     cssSrc = 'src/sass/**/*.scss',
@@ -47,7 +47,7 @@ gulp.task('browser-sync', function() {
     //only minified JS
     'src/js/**/*.js',
     //only minified CSS
-    'src/sass/**/*.scss',
+    // 'src/sass/**/*.scss',
     //all images
     'assets/images/**/*.{png,jpg,jpeg,gif}',
     //all php files
