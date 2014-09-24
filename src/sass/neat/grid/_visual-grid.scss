@@ -1,9 +1,10 @@
 @mixin grid-column-gradient($values...) {
-  background-image: -webkit-linear-gradient(left, $values);
-  background-image: -moz-linear-gradient(left, $values);
-  background-image: -ms-linear-gradient(left, $values);
-  background-image: -o-linear-gradient(left, $values);
-  background-image: unquote("linear-gradient(to left, #{$values})");
+  background-image: deprecated-webkit-gradient(linear, left top, left bottom, $values);
+  background-image:  -webkit-linear-gradient(left, $values);
+  background-image:     -moz-linear-gradient(left, $values);
+  background-image:      -ms-linear-gradient(left, $values);
+  background-image:       -o-linear-gradient(left, $values);
+  background-image: unquote("linear-gradient(left, #{$values})");
 }
 
 @if $visual-grid == true or $visual-grid == yes {

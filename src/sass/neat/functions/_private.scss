@@ -1,19 +1,30 @@
 // Checks if a number is even
 @function is-even($int) {
-  @return $int % 2 == 0
+  @if $int%2 == 0   {
+    @return true;
+  }
+
+  @return false;
 }
 
 // Checks if an element belongs to a list
 @function belongs-to($tested-item, $list) {
-  @return index($list, $tested-item) != false;
+  @each $item in $list {
+    @if $item == $tested-item {
+      @return true;
+    }
+  }
+
+  @return false;
 }
 
 // Contains display value
 @function contains-display-value($query) {
-  @return belongs-to(table, $query) 
-       or belongs-to(block, $query) 
-       or belongs-to(inline-block, $query) 
-       or belongs-to(inline, $query);
+  @if belongs-to(table, $query) or belongs-to(block, $query) or belongs-to(inline-block, $query) or belongs-to(inline, $query) {
+    @return true;
+  }
+
+  @return false;
 }
 
 // Parses the first argument of span-columns()
