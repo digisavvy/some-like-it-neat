@@ -10,7 +10,10 @@
 
 /README.html
 
+# npm and bower modules
 /node_modules/
+/bower_components/
+
 /dist/
 /min/
 
