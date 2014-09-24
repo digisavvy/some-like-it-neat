@@ -16,6 +16,7 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     cmq = require('gulp-combine-media-queries'),
     runSequence = require('gulp-run-sequence'),
+    plugins     = require('gulp-load-plugins')({ camelize: true }),
     cache = require('gulp-cache');
 
 //Set Source Files A comment test
@@ -29,18 +30,6 @@ var imgSrc = 'src/images/**/*.{png,jpg,jpeg,gif}',
     jsDest = 'assets/js',
     phpSrc = ['**/*.php', !'vendors/**/*.php'];
 
-//Error Handler
-var handleErrors = function() {
-    // Send error to notification center with gulp-notify
-    notify.onError({
-    title: "Compile Error",
-    message: "<%= error.message %>"
-    }).apply(this, arguments);
-
-    // Keep gulp from hanging on this task
-    this.emit('end');
-};
-
 // Browser Sync
 gulp.task('browser-sync', function() {
     var files = [
@@ -49,7 +38,7 @@ gulp.task('browser-sync', function() {
     //only minified CSS
     // 'src/sass/**/*.scss',
     //all images
-    'assets/images/**/*.{png,jpg,jpeg,gif}',
+    'src/images/**/*.{png,jpg,jpeg,gif}',
     //all php files
     '**/*.php'
     ];
@@ -63,8 +52,6 @@ gulp.task('browser-sync', function() {
 // Styles
 gulp.task('styles', function() {
   return gulp.src('src/sass/**/*.scss')
-    //send SASS errors to console
-    .on('error', handleErrors)
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     // Write style.css to root theme directory
@@ -96,12 +83,12 @@ gulp.task('scripts', function() {
 
 // Images
 gulp.task('images', function() {
-  return gulp.src('src/**/*.{png,jpg,jpeg,gif}')
-    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-    //save optimized image files
-    .pipe(gulp.dest(imgDest))
-    .pipe(notify({ message: 'Images task complete' }));
+  return gulp.src('src/images/**/*')
+	.pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
+	.pipe(gulp.dest('assets/images'))
+	.pipe(plugins.notify({ message: 'Images task complete' }));
 });
+
 
 //Fonts
 gulp.task('fonts', function() {
