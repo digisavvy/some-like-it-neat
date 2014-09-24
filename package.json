@@ -15,7 +15,8 @@
     "gulp-rename": "^1.2.0",
     "gulp-ruby-sass": "^0.7.1",
     "gulp-run-sequence": "^0.3.2",
-    "gulp-uglify": "^0.3.1"
+    "gulp-uglify": "^0.3.1",
+    "gulp-wp-rev": "0.0.1"
   },
   "engines": {
     "node": ">=0.10.0"
