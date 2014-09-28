@@ -25,6 +25,8 @@ var gulp = require('gulp'),
     ignore = require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
     rimraf = require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
     zip = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
+    consolidate = require("gulp-consolidate"),
+    swig = require("gulp-swig"),
     cache = require('gulp-cache');
 
 /**
