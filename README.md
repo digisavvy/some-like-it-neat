@@ -93,18 +93,13 @@ A special thanks to all the folks who inspire me on a daily basis to "do more" w
 * Devin Walker
 * Blair Williams
 * Robert Neu
-* And a fuckload more that I'm missing here.
+* And a <del>fuckload</del> lot more that I'm missing here.
 
 License
 ---------------
 
 This theme is based on Underscores, (C) 2012-2013 Automattic, Inc.
  - Source: http://underscores.me/
- - License: GNU GPL, Version 2 (or later)
- - License URI: license.txt
- 
-Kirki, (C) 2014 Aristeides Stathopoulos, Dimitris Kalliris.
- - Source: http://kirki.org/
  - License: GNU GPL, Version 2 (or later)
  - License URI: license.txt
 
@@ -142,4 +137,9 @@ Hover Intent
  - Source: https://github.com/tristen/hoverintent
  - License: the MIT
  - License URI: license.txt
+
+ Font awesome
+ - Source: http://fontawesome.io
+ - License: SIL, OFL
+ - License URI: https://github.com/FortAwesome/Font-Awesome/blob/master/README.md
 
