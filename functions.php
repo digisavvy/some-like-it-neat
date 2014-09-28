@@ -5,13 +5,6 @@
  * @package digistarter
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 if ( ! function_exists( 'digistarter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -22,6 +15,13 @@ if ( ! function_exists( 'digistarter_setup' ) ) :
  */
 function digistarter_setup() {
 
+	/**
+	 * Set the content width based on the theme's design and stylesheet.
+	 */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 640; /* pixels */
+	}
+	
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -212,7 +212,7 @@ if ( !function_exists('neat_optional_scripts') ) :
 		if( get_theme_mod( 'add_fontawesome_icons' ) == '') {
 
 		 } else {
-		 	echo '<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">';
+		 	echo '<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">';
 		 }
 		 // Genericons
 		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
