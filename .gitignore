@@ -16,6 +16,7 @@
 
 /dist/
 /min/
+/build/
 
 # Source Files Uncomment the line below to ignore the src folder
 # **/src
