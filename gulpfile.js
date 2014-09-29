@@ -39,15 +39,12 @@ gulp.task('browser-sync', function() {
     var files = [
     //only minified JS
     'assets/js/src/**/*.js',
-    //only minified CSS
-    // 'src/sass/**/*.scss',
-    //all images
+    //all images — TO-DO: This isn't working
     'assets/images/**/*.{png,jpg,jpeg,gif}',
     //all php files
     '**/*.php'
     ];
     browserSync.init(files, {
-        // files: ["./**/*.php", "./**./*.html"],
         proxy: "somelikeitneat.dev"
     });
 
@@ -64,15 +61,14 @@ gulp.task('styles', function() {
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     // Write style.css to root theme directory
     .pipe(gulp.dest(source+'css'))
+    //combine media queries
+    .pipe(cmq())
     .pipe(rename({ suffix: '-min' }))
     .pipe(minifycss({keepBreaks:true}))
     .pipe(minifycss({ keepSpecialComments: 1 }))
     .pipe(reload({stream:true}))
-    
     //Write minified file
     .pipe(gulp.dest(source+'css'))
-    //combine media queries
-    .pipe(cmq())
     .pipe(notify({ message: 'Styles task complete' }));
 });
 
@@ -83,7 +79,7 @@ gulp.task('styles', function() {
 */
 gulp.task('scripts', function() {
   return gulp.src('assets/js/src/**/*.js')
-    // .pipe(jshint('.jshintrc'))
+    // .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
     // .pipe(jshint.reporter('default'))
     .pipe(concat('production.js'))
     .pipe(gulp.dest('assets/js'))
@@ -114,7 +110,6 @@ gulp.task('fonts', function() {
     return gulp.src(source+'fonts/**')
     //don't do anything to fonts, just ship 'em
     .pipe(gulp.dest(build+'assets/fonts/'))
-
     .pipe(notify({ message: 'Fonts task complete' }));
 });
 
@@ -125,12 +120,10 @@ gulp.task('fonts', function() {
  * clearing out unoptimized image files in zip as those will have been moved and optimized
 */
 gulp.task('clean', function() {
-  return gulp.src(['**/build','**/.codekit-cache','**/.DS_Store', 'src/images/*'], {read: false})
+  return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], {read: false})
     .pipe(clean())
     .pipe(notify({ message: 'Clean task complete' }));
 });
-
-
 
 /**
  * Watch
@@ -169,8 +162,6 @@ gulp.task('buildImages', function() {
 	.pipe(gulp.dest(build+'assets/images/'))
 	.pipe(plugins.notify({ message: 'Images task complete' }));
 });
-
-
 
 /**
  * Copy PHP source files to the build directory
