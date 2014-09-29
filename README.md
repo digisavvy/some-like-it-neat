@@ -12,7 +12,6 @@ What's Inside?
 
 * Bourbon (http://bourbon.io), Neat (http://neat.bourbon.io), Bitters (http://bitters.bourbon.io) and Refills (http://refills.bourbon.io) — Bourbon provides a lightweight Sass library (similar to Compass).
 
- 
 Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. Refills and Bitters provide additional styling and UI elements. I suggest you visit each of these projects to learn more and how to use them.
 
 * Underscores (_s) based theme. There's smarter folks than me building great sh*t (http://underscores.me)  
@@ -58,21 +57,68 @@ Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon
 
 Folder Structure
 ---------------
-* Theme Root
-  * **library**
-    * **assets** ( js, css, sass )
-      * css
-      * font
-      * js
-      * sass ( Where all scss files are stored )
-    * **languages**
-    * **vendors** ( 3rd party utilities like Theme Hook Alliance, Kirki, TGM Plugin     Activation etc... )
-      * kirki
-      * tgm-plugin-activation
-      * tha-theme-hooks
-      * wp-customizer
-  * **page-templates** ( Standard Page Templates for Pages )
-      * partials ( Template Parts viea get_template_parts() )
+Theme Root
+ |    ├── assets
+│   ├── css
+│   ├── fonts
+│   ├── images
+│    |   └── originals 
+│   ├── js
+│    |   └── src 
+│   ├── sass
+│    |   └── base (Bitters)
+│    |   └── bourbon 
+│    |   └── font-awesome 
+│    |   └── modules 
+│    |   └── neat 
+ |    ├── _content.scss
+ |    ├── _flexnav.scss
+ |    ├── _footer.scss
+ |    ├── _grid-settings.scss
+ |    ├── _header.scss
+ |    ├── _navigation.scss
+ |    ├── _normalize.scss
+ |    ├── _sidebar.scss
+ |    ├── _structure.scss
+ |    ├── _typography.scss
+ |    └── style.scss
+├── library
+│   ├── languages
+│    |    ├── digistarter.pot
+│   ├── vendors
+│   │   ├── js
+│   │   ├── tgm-plugin-activation
+│   │   ├── tha-theme-hooks
+│   │   ├── wp-customizer
+│   ├── custom-header.php
+│   ├── extras.php
+│   ├── jetpack.php
+│   ├── template-tags.php
+├── page-templates
+│   ├── partials
+ |     |   ├── content-aside.php
+ |     |   ├── content-audio.php
+ |     |   ├── content-chat.php
+ |     |   ├── content-gallery.php
+ |     |   ├── content-image.php
+ |     |   ├── content-link.php
+ |     |   ├── content-none.php
+ |     |   ├── content-page.php
+ |     |   ├── content-quote.php
+ |     |   ├── content-single.php
+ |     |   ├── content-status.php
+ |     |   ├── content-video.php
+ |     |   └── content.php
+├── template-full-width.php
+├── template-left-col.php
+└── template-right-col.php
+│   ├── vendors
+│    |   └── src 
+│   ├── sass
+├── _bootstrap.scss
+├── _global.scss
+├── _variables.scss
+└── main.scss
 
 
 ### General Credits and Thanks
@@ -132,6 +178,11 @@ Neat
  - Source: http://neat.bourbon.io, © 2013 thoughtbot
  - License: The MIT License
  - License URI: https://github.com/thoughtbot/neat/blob/master/LICENSE
+
+ Gulpjs
+  - Source: http://gulpjs.com, Copyright (c) 2014 Fractal <contact@wearefractal.com>
+  - License: The MIT License
+  - License URI: https://github.com/gulpjs/gulp/blob/master/LICENSE
  
 Hover Intent
  - Source: https://github.com/tristen/hoverintent
