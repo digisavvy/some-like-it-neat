@@ -55,8 +55,9 @@ What I recommend is that you generate your child theme, setup your child theme f
 ---------------
 Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon and Neat are built on top of and is at the core of this theme's build. 
 
-Folder Structure
+### Folder Structure
 ---------------
+<<<<<<< HEAD
 Theme Root
  |    ├── assets
 │   ├── css
@@ -65,6 +66,21 @@ Theme Root
 │    |   └── originals 
 │   ├── js
 │    |   └── src 
+=======
+I haven't listed out every single file here; but just enough so you know where most of the important files are now
+located.
+
+Theme Root
+ |    ├── assets
+│    |   ├── css
+ |     |    |   ├── style-style.css
+ |     |    |   ├── style.css
+│    |   ├── fonts
+│    |   ├── images
+│    |    |   └── originals 
+│    |   ├── js
+│    |    |   └── src 
+>>>>>>> updating readme
 │   ├── sass
 │    |   └── base (Bitters)
 │    |   └── bourbon 
@@ -109,6 +125,7 @@ Theme Root
  |     |   ├── content-status.php
  |     |   ├── content-video.php
  |     |   └── content.php
+<<<<<<< HEAD
 ├── template-full-width.php
 ├── template-left-col.php
 └── template-right-col.php
@@ -120,6 +137,29 @@ Theme Root
 ├── _variables.scss
 └── main.scss
 
+=======
+ |    ├── template-full-width.php
+ |    ├── template-left-col.php
+ |    └── template-right-col.php
+├── 404.php
+├── archive.php
+├── comments.php
+├── footer.php
+├── functions.php
+├── gulpfile.js
+├── header.php
+├── index.php
+├── license.txt
+├── package.json
+├── page.php
+├── README.md
+├── rtl.css
+├── search.png
+├── searchform.php
+├── sidebar.php
+├── single.php
+└── style.css
+>>>>>>> updating readme
 
 ### General Credits and Thanks
 ---------------
