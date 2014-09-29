@@ -55,16 +55,6 @@ Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon
 
 ### Folder Structure
 ---------------
-<<<<<<< HEAD
-Theme Root
- |    ├── assets
-│   ├── css
-│   ├── fonts
-│   ├── images
-│    |   └── originals 
-│   ├── js
-│    |   └── src 
-=======
 I haven't listed out every single file here; but just enough so you know where most of the important files are now
 located.
 
@@ -78,7 +68,6 @@ Theme Root
 │    |    |   └── originals 
 │    |   ├── js
 │    |    |   └── src 
->>>>>>> updating readme
 │   ├── sass
 │    |   └── base (Bitters)
 │    |   └── bourbon 
@@ -123,19 +112,6 @@ Theme Root
  |     |   ├── content-status.php
  |     |   ├── content-video.php
  |     |   └── content.php
-<<<<<<< HEAD
-├── template-full-width.php
-├── template-left-col.php
-└── template-right-col.php
-│   ├── vendors
-│    |   └── src 
-│   ├── sass
-├── _bootstrap.scss
-├── _global.scss
-├── _variables.scss
-└── main.scss
-
-=======
  |    ├── template-full-width.php
  |    ├── template-left-col.php
  |    └── template-right-col.php
@@ -157,7 +133,6 @@ Theme Root
 ├── sidebar.php
 ├── single.php
 └── style.css
->>>>>>> updating readme
 
 ### General Credits and Thanks
 ---------------
