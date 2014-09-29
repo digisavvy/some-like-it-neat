@@ -1,8 +1,8 @@
 // Project configuration
-var project     = 'my-theme'
+var project     = 'some-like-it-neat'
   build       = './build/',
   dist        = './dist/',
-  source      = './src/', 	// 'source' instead of 'src' to avoid confusion with gulp.src
+  source      = './assets/', 	// 'source' instead of 'src' to avoid confusion with gulp.src
   bower       = './bower_components/';
 
 // Load plugins 
@@ -38,11 +38,11 @@ var gulp = require('gulp'),
 gulp.task('browser-sync', function() {
     var files = [
     //only minified JS
-    'src/js/**/*.js',
+    'assets/js/src/**/*.js',
     //only minified CSS
     // 'src/sass/**/*.scss',
     //all images
-    'src/images/**/*.{png,jpg,jpeg,gif}',
+    'assets/images/**/*.{png,jpg,jpeg,gif}',
     //all php files
     '**/*.php'
     ];
@@ -59,18 +59,18 @@ gulp.task('browser-sync', function() {
  * Looking at src/sass and compiling the files into Expanded format, Autoprefixing and sending the files to the build folder
 */
 gulp.task('styles', function() {
-  return gulp.src('src/sass/**/*.scss')
+  return gulp.src(source+'sass/**/*.scss')
     .pipe(sass({ style: 'expanded', }))
     .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     // Write style.css to root theme directory
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest(source+'css'))
     .pipe(rename({ suffix: '-min' }))
     .pipe(minifycss({keepBreaks:true}))
     .pipe(minifycss({ keepSpecialComments: 1 }))
     .pipe(reload({stream:true}))
     
     //Write minified file
-    .pipe(gulp.dest(build))
+    .pipe(gulp.dest(source+'css'))
     //combine media queries
     .pipe(cmq())
     .pipe(notify({ message: 'Styles task complete' }));
@@ -82,7 +82,7 @@ gulp.task('styles', function() {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('scripts', function() {
-  return gulp.src('src/js/**/*.js')
+  return gulp.src('assets/js/src/**/*.js')
     // .pipe(jshint('.jshintrc'))
     // .pipe(jshint.reporter('default'))
     .pipe(concat('production.js'))
@@ -99,9 +99,9 @@ gulp.task('scripts', function() {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('images', function() {
-  return gulp.src('src/images/**/*')
+  return gulp.src('assets/images/originals/**/*')
 	.pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-	.pipe(gulp.dest(build+'assets/images/'))
+	.pipe(gulp.dest('assets/images/'))
 	.pipe(plugins.notify({ message: 'Images task complete' }));
 });
 
@@ -112,8 +112,9 @@ gulp.task('images', function() {
 */
 gulp.task('fonts', function() {
     return gulp.src(source+'fonts/**')
-    //don't do anything to fonts, just save 'em
-    .pipe(gulp.dest(build+'fonts/'))
+    //don't do anything to fonts, just ship 'em
+    .pipe(gulp.dest(build+'assets/fonts/'))
+
     .pipe(notify({ message: 'Fonts task complete' }));
 });
 
@@ -129,17 +130,7 @@ gulp.task('clean', function() {
     .pipe(notify({ message: 'Clean task complete' }));
 });
 
-/**
- * Zipping build directory for distribution
- *
- * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
-*/
-gulp.task('zip', function () {
-    return gulp.src(build+'/**/')
-        .pipe(zip(project+'.zip'))
-        .pipe(gulp.dest('./'))
-        .pipe(notify({ message: 'Zip task complete' }));
-});
+
 
 /**
  * Watch
@@ -150,22 +141,35 @@ gulp.task('zip', function () {
 gulp.task('watch', function() {
 
   // Watch .scss files
-  gulp.watch('src/sass/**/*.scss', ['styles']);
+  gulp.watch(source+'sass/**/*.scss', ['styles']);
 
   // Watch .js files
-  gulp.watch('src/js/**/*.js', ['scripts']);
+  gulp.watch('assets/js/src/**/*.js', ['scripts']);
 
   // Watch image files
-  gulp.watch('src/images/**/*.{png,jpg,jpeg,gif}', ['images']);
+  gulp.watch('assets/images/originals/**/*', ['images']);
 
   // Watch any files in src/, reload on change
-  gulp.watch(['src/**']).on('change', function(file) {
+  gulp.watch(['assets/**']).on('change', function(file) {
     server.changed(file.path);
   });
 
 });
 
-// ==== FILE AND DIRECTORY MOVING ==== //
+// ==== Packaging Tasks, File/Directory Moving etc. ==== //
+
+/**
+ * Images
+ *
+ * Look at src/images, optimize the images and send them to the appropriate place
+*/
+gulp.task('buildImages', function() {
+  return gulp.src('assets/images/**/*')
+	// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
+	.pipe(gulp.dest(build+'assets/images/'))
+	.pipe(plugins.notify({ message: 'Images task complete' }));
+});
+
 
 
 /**
@@ -189,18 +193,30 @@ gulp.task('library', function() {
   .pipe(notify({ message: 'Copy of Library directory complete' }));
 });
 
+/**
+ * Zipping build directory for distribution
+ *
+ * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
+*/
+gulp.task('zip', function () {
+    return gulp.src(build+'/**/')
+        .pipe(zip(project+'.zip'))
+        .pipe(gulp.dest('./'))
+        .pipe(notify({ message: 'Zip task complete' }));
+});
+
 // ==== TASKS ==== //
 
 // Default task
 gulp.task('default', ['browser-sync'], function(cb) {
     // gulp.start('styles', 'scripts', 'images', 'clean');
     runSequence('styles', 'scripts', 'images', 'fonts', 'clean', cb);
-    gulp.watch('src/sass/**/*.scss', ['styles']);
+    gulp.watch(source+'/sass/**/*.scss', ['styles']);
 });
 
 // Package Distributable Theme
 gulp.task('package', function(cb) {
     // gulp.start('styles', 'scripts', 'images', 'clean');
-    runSequence('clean', 'php', 'library', 'styles', 'scripts', 'fonts', 'zip', cb);
+    runSequence('clean', 'php', 'library', 'styles', 'scripts', 'buildImages', 'fonts', 'zip', cb);
 });
 

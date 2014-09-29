@@ -21,7 +21,7 @@ function digistarter_setup() {
 	if ( ! isset( $content_width ) ) {
 		$content_width = 640; /* pixels */
 	}
-	
+
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -208,12 +208,7 @@ endif;
 
 if ( !function_exists('neat_optional_scripts') ) :
 	function neat_optional_scripts() {
-		// Font Awesome
-		if( get_theme_mod( 'add_fontawesome_icons' ) == '') {
 
-		 } else {
-		 	echo '<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">';
-		 }
 		 // Genericons
 		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
 

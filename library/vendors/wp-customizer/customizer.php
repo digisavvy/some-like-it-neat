@@ -32,6 +32,8 @@ function neat_add_customizer_theme_options($wp_customize) {
 	// General Link Colors
 	$wp_customize->add_setting( 'neat_add_link_color', array(
 	    'default'        => '#000000',
+	    'sanitize_callback' => 'maybe_hash_hex_color',
+
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control(
@@ -143,7 +145,6 @@ function neat_add_customizer_theme_options($wp_customize) {
 
         $wp_customize->add_setting('neat_add_genericon_icons', array(
             'default'    => '0',
-            'sanitize_callback' => 'sanitize_genericons',
         ));
 
         $wp_customize->add_control(
