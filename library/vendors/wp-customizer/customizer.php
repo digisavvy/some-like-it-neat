@@ -32,6 +32,8 @@ function neat_add_customizer_theme_options($wp_customize) {
 	// General Link Colors
 	$wp_customize->add_setting( 'neat_add_link_color', array(
 	    'default'        => '#000000',
+	    'sanitize_callback' => 'maybe_hash_hex_color',
+
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control(
@@ -141,25 +143,8 @@ function neat_add_customizer_theme_options($wp_customize) {
         'priority'  => 1020
     ));
 
-        $wp_customize->add_setting('add_fontawesome_icons', array(
-            'default'    => '0'
-        ));
-
-        $wp_customize->add_control(
-            new WP_Customize_Control(
-                $wp_customize,
-                'add_fontawesome_icons',
-                array(
-                    'label'     => __('Enable Fontawesome Icons', 'digistarter'),
-                    'section'   => 'neat_theme_addons',
-                    'settings'  => 'add_fontawesome_icons',
-                    'type'      => 'checkbox',
-                )
-            )
-        );
-
         $wp_customize->add_setting('neat_add_genericon_icons', array(
-            'default'    => '0'
+            'default'    => '0',
         ));
 
         $wp_customize->add_control(
@@ -179,64 +164,10 @@ function neat_add_customizer_theme_options($wp_customize) {
 add_action( 'customize_register', 'neat_add_customizer_theme_options' );
 
 /**
- * The configuration options for the Kirki Customizer
- */
-function shoestrap_customizer_config() {
-
-    $args = array(
-
-        // Change the logo image. (URL)
-        // If omitted, the default theme info will be displayed.
-        // A good size for the logo is 250x50.
-
-        // 'logo_image'   => '/path/to/image',
-
-        // The color of active menu items, help bullets etc.
-        'color_active' => '#1abc9c',
-
-        // Color used for secondary elements and desable/inactive controls
-        'color_light'  => '#8cddcd',
-
-        // Color used for button-set controls and other elements
-        'color_select' => '#34495e',
-
-        // Color used on slider controls and image selects
-        'color_accent' => '#FF5740',
-
-        // The generic background color.
-        // You should choose a dark color here as we're using white for the text color.
-        'color_back'   => '#222',
-
-        // If Kirki is embedded in your theme, then you can use this line to specify its location.
-        // This will be used to properly enqueue the necessary stylesheets and scripts.
-        // If you are using kirki as a plugin then please delete this line.
-        'url_path'     => get_template_directory_uri() . '/library/vendors/kirki/',
-
-        // If you want to take advantage of the backround control's 'output',
-        // then you'll have to specify the ID of your stylesheet here.
-        // The "ID" of your stylesheet is its "handle" on the wp_enqueue_style() function.
-        // http://codex.wordpress.org/Function_Reference/wp_enqueue_style
-        'stylesheet_id' => 'shoestrap'
-
-    );
-
-    return $args;
-
-}
-add_filter( 'kirki/config', 'shoestrap_customizer_config' );
-
-/**
- * Kirki Customizer Settings
- */
-
-
-
-
-/**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 
 function digistarter_customize_preview_js() {
-    wp_enqueue_script( 'digistarter_customizer', get_template_directory_uri() . '/library/assets/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+    wp_enqueue_script( 'digistarter_customizer', get_template_directory_uri() . '/library/vendors/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'digistarter_customize_preview_js' );

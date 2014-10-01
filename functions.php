@@ -5,13 +5,6 @@
  * @package digistarter
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 640; /* pixels */
-}
-
 if ( ! function_exists( 'digistarter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -21,6 +14,13 @@ if ( ! function_exists( 'digistarter_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function digistarter_setup() {
+
+	/**
+	 * Set the content width based on the theme's design and stylesheet.
+	 */
+	if ( ! isset( $content_width ) ) {
+		$content_width = 640; /* pixels */
+	}
 
 	/*
 	 * Make theme available for translation.
@@ -71,9 +71,89 @@ function digistarter_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	/**
+	 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
+	 */
+	include( 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' );
+
+	/**
+	 * WP Customizer
+	 */
+	require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
+
+	/**
+	 * Implement the Custom Header feature.
+	 */
+	//require get_template_directory() . '/library/vendors/custom-header.php';
+
+	/**
+	 * Custom template tags for this theme.
+	 */
+	require get_template_directory() . '/library/vendors/template-tags.php';
+
+	/**
+	 * Custom functions that act independently of the theme templates.
+	 */
+	require get_template_directory() . '/library/vendors/extras.php';
+
+
+	/**
+	 * Load Jetpack compatibility file.
+	 */
+	require get_template_directory() . '/library/vendors/jetpack.php';
+
+	/**
+	 * Including TGM Plugin Activation
+	 */
+	require_once( get_template_directory() . '/library/vendors/tgm-plugin-activation/required-plugins.php' );
+
 }
 endif; // digistarter_setup
 add_action( 'after_setup_theme', 'digistarter_setup' );
+
+/**
+ * Enqueue scripts and styles.
+ */
+if ( !function_exists('digistarter_scripts') ) :
+	function digistarter_scripts() {
+		if (!is_admin()) {
+			wp_enqueue_script('jquery');
+		}
+
+		// Main Style
+		wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
+
+		// Dashicons
+		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/assets/css/dashicons.css' );
+
+		// Flexnav Scripts
+		// wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/src/js/flexnav/jquery.flexnav.js', array(), '1.0.0', false );
+		// wp_enqueue_script( 'flexnav' );
+
+		// // Modernizr
+		// wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/src/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
+		// wp_enqueue_script( 'modernizr' );
+
+		// // Selectivizr Scripts
+		// wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/src/js/selectivizr/selectivizr.js', array(), '1.0.0', false );
+		// wp_enqueue_script( 'selectivizr' );
+
+		// // Hover Intent Scripts
+		// wp_register_script( 'hoverintent', get_template_directory_uri() . '/src/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
+		// wp_enqueue_script( 'hoverintent' );
+
+		// Concatonated Scripts
+		wp_register_script( 'production-js', get_template_directory_uri() . '/assets/js/production-min.js', array(), '1.0.0', false );
+		wp_enqueue_script( 'production-js' );
+
+
+		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+	}
+	add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
+endif; // Enqueue Scripts and Styles
 
 /**
  * Register widgetized area and update sidebar with default widgets.
@@ -93,44 +173,8 @@ if ( !function_exists('digistarter_widgets_init') ) :
 endif;
 
 /**
- * Enqueue scripts and styles.
+ * Initializing Flexnav Menu System
  */
-if ( !function_exists('digistarter_scripts') ) :
-	function digistarter_scripts() {
-		if (!is_admin()) {
-			wp_enqueue_script('jquery');
-		}
-
-		// Main Style
-		wp_enqueue_style( 'digistarter-style', get_stylesheet_uri() );
-
-		// Dashicons
-		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/library/assets/css/dashicons.css' );
-
-		// Flexnav Scripts
-		wp_register_script( 'flexnav', get_stylesheet_directory_uri() . '/library/assets/js/flexnav/jquery.flexnav.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'flexnav' );
-
-		// Modernizr
-		wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/library/assets/js/modernizr/modernizr-2.7.1.js', array(), '2.7.1', false );
-		wp_enqueue_script( 'modernizr' );
-
-		// Selectivizr Scripts
-		wp_register_script( 'selectivizr', get_stylesheet_directory_uri() . '/library/assets/js/selectivizr/selectivizr.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'selectivizr' );
-
-		// Hover Intent Scripts
-		wp_register_script( 'hoverintent', get_template_directory_uri() . '/library/assets/js/hoverintent/hoverintent.js', array(), '1.0.0', false );
-		wp_enqueue_script( 'hoverintent' );
-
-
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
-	}
-	add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
-endif;
-
 if ( !function_exists('dg_add_flexnav') ) :
 	function dg_add_flexnav() { ?>
 		<script>
@@ -151,47 +195,6 @@ if ( !function_exists('dg_add_flexnav') ) :
 endif;
 
 /**
- * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
- */
-include( 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' );
-
-/**
- * Including Kirki Advanced Theme Customizer (https://github.com/aristath/kirki).
- */
-include_once( dirname( __FILE__ ) . '/library/vendors/kirki/kirki.php' );
-
-/**
- * WP Customizer
- */
-require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
-
-/**
- * Implement the Custom Header feature.
- */
-//require get_template_directory() . '/library/vendors/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/library/vendors/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/library/vendors/extras.php';
-
-
-/**
- * Load Jetpack compatibility file.
- */
-require get_template_directory() . '/library/vendors/jetpack.php';
-
-/**
- * Including TGM Plugin Activation
- */
-require_once( get_template_directory() . '/library/vendors/tgm-plugin-activation/required-plugins.php' );
-
-/**
  * Custom Hooks and Filters
  */
 if ( !function_exists('neat_add_breadcrumbs') ) :
@@ -205,17 +208,12 @@ endif;
 
 if ( !function_exists('neat_optional_scripts') ) :
 	function neat_optional_scripts() {
-		// Font Awesome
-		if( get_theme_mod( 'add_fontawesome_icons' ) == '') {
 
-		 } else {
-		 	echo '<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">';
-		 }
 		 // Genericons
 		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
 
 		 } else {
-		 	echo '<link href=" '.get_stylesheet_directory_uri().'/library/assets/css/genericons.css" rel="stylesheet">';
+		 	echo '<link href=" '.get_stylesheet_directory_uri().'/assets/css/genericons.css" rel="stylesheet">';
 		 }
 
 		 // Link Color

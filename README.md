@@ -12,7 +12,6 @@ What's Inside?
 
 * Bourbon (http://bourbon.io), Neat (http://neat.bourbon.io), Bitters (http://bitters.bourbon.io) and Refills (http://refills.bourbon.io) — Bourbon provides a lightweight Sass library (similar to Compass).
 
- 
 Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. Refills and Bitters provide additional styling and UI elements. I suggest you visit each of these projects to learn more and how to use them.
 
 * Underscores (_s) based theme. There's smarter folks than me building great sh*t (http://underscores.me)  
@@ -21,11 +20,14 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 
 * Theme Hook Alliance — One of the things I learned to love about working with Frameworks were their hooks. Thematic and Genesis introduced me to the notion. Since them I've been using them like they're going out of style. When I set out to make my own starter theme I wanted to make something that had "just the right amount" of features for me. I knew I needed hooks. The THA project was intro'd to me by Brandon Dove, at the OCWP (http://ocwp.org) developer's day meetup. Thought it was super neat. So I bundled that hot mess right into this thing.
 
-* Kirki Advanced Theme Customizer Framework (http://kirki.org) — Adds some functionality to the already awesome built-in theme customizer. It adds cool extras like button sets, slider controls, radio image selectors. Read up on it! For now, I'm placing custom controls using Kirki in /library/inc/wp-customizer/customizer.php
+* Gulpjs Task Automation — This has been a biggy! Lots of work done and yet to-do. Your gulpjs file will help automate nifty
+tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
+your theme! Cool. Right? 
 
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
 * Genericons/Dashicons
+* Bower
 * Pull requests welcome...
 
 
@@ -56,24 +58,94 @@ What I recommend is that you generate your child theme, setup your child theme f
 ---------------
 Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon and Neat are built on top of and is at the core of this theme's build. 
 
-Folder Structure
+### Folder Structure
 ---------------
-* Theme Root
-  * **library**
-    * **assets** ( js, css, sass )
-      * css
-      * font
-      * js
-      * sass ( Where all scss files are stored )
-    * **languages**
-    * **vendors** ( 3rd party utilities like Theme Hook Alliance, Kirki, TGM Plugin     Activation etc... )
-      * kirki
-      * tgm-plugin-activation
-      * tha-theme-hooks
-      * wp-customizer
-  * **page-templates** ( Standard Page Templates for Pages )
-      * partials ( Template Parts viea get_template_parts() )
+I haven't listed out every single file here; but I have listed out the files that you'll most likely work with during
+a project.
 
+Theme Root
+ |    ├── assets
+│    |   ├── css
+ |     |    |   ├── style-style.css
+ |     |    |   ├── style.css
+│    |   ├── fonts
+│    |   ├── images
+│    |    |   └── originals 
+│    |   ├── js
+│    |    |   └── vendor 
+│   ├── sass
+│    |   └── base (Bitters)
+│    |   └── bourbon 
+│    |   └── font-awesome 
+│    |   └── components 
+ |     |    |   ├── _buttons.scss
+ |     |    |   ├── _dashicons.scss
+ |     |    |   ├── _flexnav.scss
+ |     |    |   ├── _navigation.scss
+ |     |    |   ├── _genericons.scss
+ |     |    |   ├── _ui-bourbon.scss
+ |     |    |   └── _variables.scss
+│    |   └── layouts 
+ |     |    |   ├── _content.scss
+ |     |    |   ├── _footer.scss
+ |     |    |   ├── _header.scss
+ |     |    |   ├── _navigation.scss
+ |     |    |   ├── _normalize.scss
+ |     |    |   ├── _sidebar.scss
+ |     |    |   ├── _structure.scss
+ |     |    |   └── _typography.scss
+│    |   └── neat 
+ |    ├── _flexnav.scss
+ |    ├── _grid-settings.scss
+ |    └── style.scss
+├── library
+│   ├── languages
+│    |    ├── digistarter.pot
+│   ├── vendors
+│   │   ├── js
+│   │   ├── tgm-plugin-activation
+│   │   ├── tha-theme-hooks
+│   │   └── wp-customizer
+│   ├── custom-header.php
+│   ├── extras.php
+│   ├── jetpack.php
+│   └── template-tags.php
+├── page-templates
+│   ├── partials
+ |     |   ├── content-aside.php
+ |     |   ├── content-audio.php
+ |     |   ├── content-chat.php
+ |     |   ├── content-gallery.php
+ |     |   ├── content-image.php
+ |     |   ├── content-link.php
+ |     |   ├── content-none.php
+ |     |   ├── content-page.php
+ |     |   ├── content-quote.php
+ |     |   ├── content-single.php
+ |     |   ├── content-status.php
+ |     |   ├── content-video.php
+ |     |   └── content.php
+ |    ├── template-full-width.php
+ |    ├── template-left-col.php
+ |    └── template-right-col.php
+├── 404.php
+├── archive.php
+├── comments.php
+├── footer.php
+├── functions.php
+├── gulpfile.js
+├── header.php
+├── index.php
+├── license.txt
+├── package.json
+├── page.php
+├── README.md
+├── rtl.css
+├── search.png
+├── searchform.php
+├── sidebar.php
+├── single.php
+└── style.css
 
 ### General Credits and Thanks
 ---------------
@@ -93,18 +165,13 @@ A special thanks to all the folks who inspire me on a daily basis to "do more" w
 * Devin Walker
 * Blair Williams
 * Robert Neu
-* And a fuckload more that I'm missing here.
+* And a <del>fuckload</del> lot more that I'm missing here.
 
 License
 ---------------
 
 This theme is based on Underscores, (C) 2012-2013 Automattic, Inc.
  - Source: http://underscores.me/
- - License: GNU GPL, Version 2 (or later)
- - License URI: license.txt
- 
-Kirki, (C) 2014 Aristeides Stathopoulos, Dimitris Kalliris.
- - Source: http://kirki.org/
  - License: GNU GPL, Version 2 (or later)
  - License URI: license.txt
 
@@ -137,9 +204,19 @@ Neat
  - Source: http://neat.bourbon.io, © 2013 thoughtbot
  - License: The MIT License
  - License URI: https://github.com/thoughtbot/neat/blob/master/LICENSE
+
+ Gulpjs
+  - Source: http://gulpjs.com, Copyright (c) 2014 Fractal <contact@wearefractal.com>
+  - License: The MIT License
+  - License URI: https://github.com/gulpjs/gulp/blob/master/LICENSE
  
 Hover Intent
  - Source: https://github.com/tristen/hoverintent
  - License: the MIT
  - License URI: license.txt
+
+ Font awesome
+ - Source: http://fontawesome.io
+ - License: SIL, OFL
+ - License URI: https://github.com/FortAwesome/Font-Awesome/blob/master/README.md
 
