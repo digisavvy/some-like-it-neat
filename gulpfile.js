@@ -1,9 +1,8 @@
 // Project configuration
-var project     = 'some-like-it-neat'
-  build       = './build/',
-  dist        = './dist/',
-  source      = './assets/', 	// 'source' instead of 'src' to avoid confusion with gulp.src
-  bower       = './bower_components/';
+var project     = 'some-like-it-neat', // Optional - Use your own project name here...
+  build       = './build/', // Files that you want to package into a zip go here
+  source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
+  bower       = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 
 // Load plugins 
 var gulp = require('gulp'),
@@ -37,11 +36,11 @@ var gulp = require('gulp'),
 */
 gulp.task('browser-sync', function() {
     var files = [
-    //only minified JS
+    // Watch Source js files and reload on change
     'assets/js/src/**/*.js',
     //all images — TO-DO: This isn't working
     'assets/images/**/*.{png,jpg,jpeg,gif}',
-    //all php files
+    // Watch all PHP files and reload on change
     '**/*.php'
     ];
     browserSync.init(files, {
@@ -65,7 +64,7 @@ gulp.task('styles', function() {
     .pipe(cmq())
     .pipe(rename({ suffix: '-min' }))
     .pipe(minifycss({keepBreaks:true}))
-    .pipe(minifycss({ keepSpecialComments: 1 }))
+    .pipe(minifycss({ keepSpecialComments: 0 }))
     .pipe(reload({stream:true}))
     //Write minified file
     .pipe(gulp.dest(source+'css'))
@@ -137,13 +136,13 @@ gulp.task('watch', function() {
   gulp.watch(source+'sass/**/*.scss', ['styles']);
 
   // Watch .js files
-  gulp.watch('assets/js/src/**/*.js', ['scripts']);
+  gulp.watch(source+'js/src/**/*.js', ['scripts']);
 
   // Watch image files
-  gulp.watch('assets/images/originals/**/*', ['images']);
+  gulp.watch(source+'images/originals/**/*', ['images']);
 
-  // Watch any files in src/, reload on change
-  gulp.watch(['assets/**']).on('change', function(file) {
+  // Watch any files in assets/, reload on change
+  gulp.watch([source+'**']).on('change', function(file) {
     server.changed(file.path);
   });
 

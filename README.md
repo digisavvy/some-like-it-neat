@@ -55,8 +55,8 @@ Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon
 
 ### Folder Structure
 ---------------
-I haven't listed out every single file here; but just enough so you know where most of the important files are now
-located.
+I haven't listed out every single file here; but I have listed out the files that you'll most likely work with during
+a project.
 
 Theme Root
  |    ├── assets
@@ -72,18 +72,26 @@ Theme Root
 │    |   └── base (Bitters)
 │    |   └── bourbon 
 │    |   └── font-awesome 
-│    |   └── modules 
+│    |   └── components 
+ |     |    |   ├── _buttons.scss
+ |     |    |   ├── _dashicons.scss
+ |     |    |   ├── _flexnav.scss
+ |     |    |   ├── _navigation.scss
+ |     |    |   ├── _genericons.scss
+ |     |    |   ├── _ui-bourbon.scss
+ |     |    |   └── _variables.scss
+│    |   └── layouts 
+ |     |    |   ├── _content.scss
+ |     |    |   ├── _footer.scss
+ |     |    |   ├── _header.scss
+ |     |    |   ├── _navigation.scss
+ |     |    |   ├── _normalize.scss
+ |     |    |   ├── _sidebar.scss
+ |     |    |   ├── _structure.scss
+ |     |    |   └── _typography.scss
 │    |   └── neat 
- |    ├── _content.scss
  |    ├── _flexnav.scss
- |    ├── _footer.scss
  |    ├── _grid-settings.scss
- |    ├── _header.scss
- |    ├── _navigation.scss
- |    ├── _normalize.scss
- |    ├── _sidebar.scss
- |    ├── _structure.scss
- |    ├── _typography.scss
  |    └── style.scss
 ├── library
 │   ├── languages
@@ -92,11 +100,11 @@ Theme Root
 │   │   ├── js
 │   │   ├── tgm-plugin-activation
 │   │   ├── tha-theme-hooks
-│   │   ├── wp-customizer
+│   │   └── wp-customizer
 │   ├── custom-header.php
 │   ├── extras.php
 │   ├── jetpack.php
-│   ├── template-tags.php
+│   └── template-tags.php
 ├── page-templates
 │   ├── partials
  |     |   ├── content-aside.php

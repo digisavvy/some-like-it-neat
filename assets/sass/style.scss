@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: Some Like it Neat
 Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
@@ -24,30 +24,32 @@ and Blueprint http://www.blueprintcss.org/
 
 /* Import Bourbon and Neat */
 @import "bourbon/bourbon";
-@import "base/base";
+@import "base/base"; // Bitters
 @import "grid-settings";
 @import "neat/neat"; 
 
-/* Import base */
-@import "normalize";
-@import "modules/variables";
-@import "typography";
-@import "structure";
+/* Normalize and import variables/fonts */
+@import "layouts/normalize";
+@import "components/variables";
+@import "layouts/typography";
 
-/* Import Add-ons */
+/* Import normalization and scaffolding/structure */
+@import "layouts/structure";
+
+/* Import Add-ons/Components */
 @import "bourbon/addons/clearfix";
 @import "bourbon/addons/prefixer";
 @import "bourbon/addons/font-family";
-@import "modules/buttons";
-// @import "modules/genericons";
+@import "components/buttons";
+// @import "components/genericons";
 
 /* Import Sections */
-@import "header";
-@import "flexnav";
-@import "navigation";
-@import "content";
-@import "sidebar";
-@import "footer";
+@import "layouts/header";
+@import "components/flexnav";
+@import "layouts/navigation";
+@import "layouts/content";
+@import "layouts/sidebar";
+@import "layouts/footer";
 
 /* Import Font Awesome */
 @import "font-awesome/variables";

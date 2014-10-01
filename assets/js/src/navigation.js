@@ -13,7 +13,7 @@
 	button = container.getElementsByTagName( 'h1' )[0];
 	if ( 'undefined' === typeof button )
 		return;
-
+ 
 	menu = container.getElementsByTagName( 'ul' )[0];
 
 	// Hide menu toggle button if menu is empty and return early.

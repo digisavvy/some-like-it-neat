@@ -1,6 +1,6 @@
 .site-branding {
-	text-align: center;
-
+	text-align: center; 
+	
 	.site-title {
 		@include media($sm) {
 			@include fontSize(35px);
