@@ -1,18 +1,13 @@
 {
   "name": "some-like-it-neat",
-  "version": "1.0.4",
+  "version": "1.0.1",
   "homepage": "http://alexhasnicehair.com",
   "authors": [
-    "Alex Vasquez <alexjvas@gmail.com>"
+    "Ben Word <alexjvas@gmail.com>"
   ],
-  "license": "GPL",
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "assets/vendor"
-  ]
-  // "dependencies": {
-  //   "modernizr": "2.8.3"
-  // }
+  "dependencies": {
+    "bourbon": "~4.0.2",
+    "neat": "~1.6.0",
+    "bitters": "~0.10.1"
+  }
 }
