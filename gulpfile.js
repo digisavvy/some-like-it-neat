@@ -1,5 +1,11 @@
+/**
+ * Project Setup
+ *
+ * Setting up variables for project name and directories
+*/
+
 // Project configuration
-var project     = 'some-like-it-neat', // Optional - Use your own project name here...
+var project     = 'your-project-here', // Optional - Use your own project name here...
 	build       = './build/', // Files that you want to package into a zip go here
 	source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 	bower       = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
@@ -155,7 +161,7 @@ gulp.task('watch', function() {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('buildImages', function() {
-	return gulp.src(source+'images/**/*')
+	return gulp.src(source+'images/**/*', '!assets/images/originals/**')
 		// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
 		.pipe(gulp.dest(build+'assets/images/'))
 		.pipe(plugins.notify({ message: 'Images task complete' }));
@@ -173,6 +179,20 @@ gulp.task('php', function() {
 	return gulp.src(['**/*.php', './screenshot.png','!./build/**','!./library/**','!./src/**']) 
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving PHP files complete' }));
+});
+
+// Copy Sass Files to Build
+gulp.task('sass', function() {
+	return gulp.src(['**/*.scss','!./build/**','!./library/**','!./src/**']) 
+		.pipe(gulp.dest(build))
+		.pipe(notify({ message: 'Moving Sass files complete' }));
+});
+
+// Copy CSS Files to Build
+gulp.task('css', function() {
+	return gulp.src([source+'css/**/*.css','!./build/**','!./library/**','!./src/**']) 
+		.pipe(gulp.dest(build+'assets/css'))
+		.pipe(notify({ message: 'Moving CSS files complete' }));
 });
 
 // Copy Library to Build
@@ -206,6 +226,6 @@ gulp.task('default', ['browser-sync'], function(cb) {
 // Package Distributable Theme
 gulp.task('package', function(cb) {
 	// gulp.start('styles', 'scripts', 'images', 'clean');
-	runSequence('clean', 'php', 'library', 'styles', 'scripts', 'buildImages', 'fonts', 'zip', cb);
+	runSequence('clean', 'php', 'library', 'sass','css','styles', 'scripts', 'buildImages', 'fonts', 'zip','clean', cb);
 });
 
