@@ -35,9 +35,9 @@ var gulp = require('gulp'),
 gulp.task('browser-sync', function() {
 	var files = [
 		// Watch Source js files and reload on change
-		'assets/js/src/**/*.js',
+		source+'js/vendor/**/*.js',
 		//all images — TO-DO: This isn't working
-		'assets/images/**/*.{png,jpg,jpeg,gif}',
+		source+'images/**/*.{png,jpg,jpeg,gif}',
 		// Watch all PHP files and reload on change
 		'**/*.php'
 	];
@@ -76,11 +76,11 @@ gulp.task('styles', function() {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('scripts', function() {
-	return gulp.src('assets/js/src/**/*.js')
+	return gulp.src(source+'js/vendor/**/*.js')
 		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
 		// .pipe(jshint.reporter('default'))
 		.pipe(concat('production.js'))
-		.pipe(gulp.dest('assets/js'))
+		.pipe(gulp.dest(source+'js'))
 		.pipe(rename({ suffix: '-min' }))
 		.pipe(uglify())
 		.pipe(gulp.dest(build+'assets/js/'))
@@ -93,9 +93,9 @@ gulp.task('scripts', function() {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('images', function() {
-	return gulp.src('assets/images/originals/**/*')
+	return gulp.src(source+'images/originals/**/*')
 		.pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-		.pipe(gulp.dest('assets/images/'))
+		.pipe(gulp.dest(source+'images/'))
 		.pipe(plugins.notify({ message: 'Images task complete' }));
 });
 
@@ -135,7 +135,7 @@ gulp.task('watch', function() {
 	gulp.watch(source+'sass/**/*.scss', ['styles']);
 
 	// Watch .js files
-	gulp.watch(source+'js/src/**/*.js', ['scripts']);
+	gulp.watch(source+'js/vendor/**/*.js', ['scripts']);
 
 	// Watch image files
 	gulp.watch(source+'images/originals/**/*', ['images']);
@@ -155,7 +155,7 @@ gulp.task('watch', function() {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('buildImages', function() {
-	return gulp.src('assets/images/**/*')
+	return gulp.src(source+'images/**/*')
 		// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
 		.pipe(gulp.dest(build+'assets/images/'))
 		.pipe(plugins.notify({ message: 'Images task complete' }));
