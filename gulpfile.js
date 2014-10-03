@@ -49,7 +49,7 @@ gulp.task('browser-sync', function() {
 	];
 
 	browserSync.init(files, {
-	    proxy: "somelikeitneat.dev"
+	    proxy: project+".dev"
 	});
 
 });
