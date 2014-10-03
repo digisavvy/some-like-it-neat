@@ -5,7 +5,7 @@
 */
 
 // Project configuration
-var project     = 'your-project-here', // Optional - Use your own project name here...
+var project     = 'somelikeitneat', // Optional - Use your own project name here...
 	build       = './build/', // Files that you want to package into a zip go here
 	source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 	bower       = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
@@ -20,7 +20,6 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	imagemin = require('gulp-imagemin'),
 	rename = require('gulp-rename'),
-	clean = require('gulp-clean'),
 	concat = require('gulp-concat'),
 	notify = require('gulp-notify'),
 	cmq = require('gulp-combine-media-queries'),
