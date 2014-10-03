@@ -122,10 +122,12 @@ gulp.task('fonts', function() {
  * Being a little overzealous, but we're cleaning out the build folder, codekit-cache directory and annoying DS_Store files and Also
  * clearing out unoptimized image files in zip as those will have been moved and optimized
 */
-gulp.task('clean', function() {
-	return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], {read: false})
-		.pipe(clean())
-		.pipe(notify({ message: 'Clean task complete' }));
+
+gulp.task('cleanup', function() {
+  return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
+    .pipe(rimraf())
+    .pipe(notify({ message: 'Clean task complete' }));
 });
 
 /**
@@ -218,13 +220,13 @@ gulp.task('zip', function () {
 // Default task
 gulp.task('default', ['browser-sync'], function(cb) {
 	// gulp.start('styles', 'scripts', 'images', 'clean');
-	runSequence('styles', 'scripts', 'images', 'fonts', 'clean', cb);
+	runSequence('styles', 'scripts', 'images', 'fonts', 'cleanup', cb);
 	gulp.watch(source+'/sass/**/*.scss', ['styles']);
 });
 
 // Package Distributable Theme
 gulp.task('package', function(cb) {
 	// gulp.start('styles', 'scripts', 'images', 'clean');
-	runSequence('clean', 'php', 'library', 'sass','css','styles', 'scripts', 'buildImages', 'fonts', 'zip','clean', cb);
+	runSequence('cleanup', 'php', 'library', 'sass','css','styles', 'scripts', 'buildImages', 'fonts', 'zip','cleanup', cb);
 });
 
