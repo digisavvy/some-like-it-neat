@@ -30,7 +30,7 @@ If you do want a regular style.css file to pop up, uncomment the following line 
 .pipe(gulp.dest('./'))
 
 This file is just hear so we have a header for our theme. The actual loaded CSS file is located in /assets/css/style-min.css.
-Why? It's minified, smaller, good for performance a bone density!
+Why? It's minified, smaller, good for performance, beard growth and bone density!
 
 In fact, you'll notice we're doing the same thing with Images and Javascripts, too.
 
