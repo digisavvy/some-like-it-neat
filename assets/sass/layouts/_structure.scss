@@ -1,11 +1,10 @@
 /* =Structure/Scaffolding
 -------------------------------------------------------------- */
 html {
-	font-size: 62.5;
+
 }
 body {
-	@include fontSize(20px);
-	color: $font-dark;
+	color: #000;
 	font-family: $content;
 	line-height: 1.5em;
 	word-break: break-word;
