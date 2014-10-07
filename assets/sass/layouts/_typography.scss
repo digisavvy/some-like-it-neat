@@ -32,8 +32,7 @@
 /* =Typography
 -------------------------------------------------------------- */
 body {
-	@include fontSize(18px);
-	line-height: 1.5em;
+
 }
 h1, h2, h3, h4, h5, h6 {
 	@include clearfix;
@@ -49,6 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	@include fontSize(75px);
+	color: #000;
 	font-family: $title;
 }
 h2 {
