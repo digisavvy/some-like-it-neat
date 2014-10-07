@@ -10,7 +10,7 @@ var project     = 'somelikeitneat', // Optional - Use your own project name here
 	source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 	bower       = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 
-// Load plugins 
+// Load plugins
 var gulp = require('gulp'),
 	browserSync = require('browser-sync'), // Asynchronous browser loading on .scss file changes
 	reload      = browserSync.reload,
@@ -29,6 +29,8 @@ var gulp = require('gulp'),
 	ignore = require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
 	rimraf = require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
 	zip = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
+	plumber = require('gulp-plumber'), // Helps prevent stream crashing on errors
+	pipe = require('gulp-coffee'),
 	cache = require('gulp-cache');
 
 /**
@@ -41,6 +43,7 @@ gulp.task('browser-sync', function() {
 	var files = [
 		// Watch Source js files and reload on change
 		source+'js/vendor/**/*.js',
+		source+'sass/**/*.scss',
 		//all images — TO-DO: This isn't working
 		source+'images/**/*.{png,jpg,jpeg,gif}',
 		// Watch all PHP files and reload on change
@@ -60,9 +63,11 @@ gulp.task('browser-sync', function() {
 */
 gulp.task('styles', function() {
 	return gulp.src(source+'sass/**/*.scss')
+		.pipe(plumber())
 		.pipe(sass({ style: 'expanded', }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		// Write style.css to root theme directory
+		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
 		//combine media queries
 		.pipe(cmq())
@@ -133,7 +138,7 @@ gulp.task('cleanup', function() {
 /**
  * Watch
  *
- * Redundancy going on here, for sure. 
+ * Redundancy going on here, for sure.
  * TO-DO: Need to double check that last watch task.
 */
 gulp.task('watch', function() {
@@ -177,21 +182,21 @@ gulp.task('buildImages', function() {
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
 gulp.task('php', function() {
-	return gulp.src(['**/*.php', './screenshot.png','!./build/**','!./library/**','!./src/**']) 
+	return gulp.src(['**/*.php', './style.css','./screenshot.png','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving PHP files complete' }));
 });
 
 // Copy Sass Files to Build
 gulp.task('sass', function() {
-	return gulp.src(['**/*.scss','!./build/**','!./library/**','!./src/**']) 
+	return gulp.src(['**/*.scss','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving Sass files complete' }));
 });
 
 // Copy CSS Files to Build
 gulp.task('css', function() {
-	return gulp.src([source+'css/**/*.css','!./build/**','!./library/**','!./src/**']) 
+	return gulp.src([source+'css/**/*.css','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build+'assets/css'))
 		.pipe(notify({ message: 'Moving CSS files complete' }));
 });
