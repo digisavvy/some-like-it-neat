@@ -43,7 +43,6 @@ gulp.task('browser-sync', function() {
 	var files = [
 		// Watch Source js files and reload on change
 		source+'js/vendor/**/*.js',
-		source+'sass/**/*.scss',
 		//all images — TO-DO: This isn't working
 		source+'images/**/*.{png,jpg,jpeg,gif}',
 		// Watch all PHP files and reload on change
@@ -181,28 +180,28 @@ gulp.task('buildImages', function() {
  * there that need to get moved as well. So I put the library directory into its own task. Excluding src because, well, we don't want to
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
-gulp.task('php', function() {
+gulp.task('buildPhp', function() {
 	return gulp.src(['**/*.php', './style.css','./screenshot.png','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving PHP files complete' }));
 });
 
 // Copy Sass Files to Build
-gulp.task('sass', function() {
+gulp.task('buildSass', function() {
 	return gulp.src(['**/*.scss','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving Sass files complete' }));
 });
 
 // Copy CSS Files to Build
-gulp.task('css', function() {
+gulp.task('buildCss', function() {
 	return gulp.src([source+'css/**/*.css','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build+'assets/css'))
 		.pipe(notify({ message: 'Moving CSS files complete' }));
 });
 
 // Copy Library to Build
-gulp.task('library', function() {
+gulp.task('buildLibrary', function() {
 	return gulp.src(['./library/**'])
 		.pipe(gulp.dest(build+'library'))
 		.pipe(notify({ message: 'Copy of Library directory complete' }));
@@ -213,7 +212,7 @@ gulp.task('library', function() {
  *
  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
 */
-gulp.task('zip', function () {
+gulp.task('buildZip', function () {
 	return gulp.src(build+'/**/')
 		.pipe(zip(project+'.zip'))
 		.pipe(gulp.dest('./'))
@@ -229,9 +228,14 @@ gulp.task('default', ['browser-sync'], function(cb) {
 	gulp.watch(source+'/sass/**/*.scss', ['styles']);
 });
 
+// Watch Task
+gulp.task('watch', ['styles', 'browser-sync'], function () {
+    gulp.watch(source+"sass/**/*.scss", ['styles']);
+});
+
 // Package Distributable Theme
-gulp.task('package', function(cb) {
+gulp.task('build', function(cb) {
 	// gulp.start('styles', 'scripts', 'images', 'clean');
-	runSequence('cleanup', 'php', 'library', 'sass','css','styles', 'scripts', 'buildImages', 'fonts', 'zip','cleanup', cb);
+	runSequence('cleanup', 'buildPhp', 'buildLibrary', 'buildSass','buildCss','styles', 'scripts', 'buildImages', 'fonts', 'zip','cleanup', cb);
 });
 
