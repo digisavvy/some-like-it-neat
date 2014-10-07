@@ -695,10 +695,13 @@ table {
 -------------------------------------------------------------- */
 /* =Typography
 -------------------------------------------------------------- */
+html {
+  font-size: 100%;
+}
+
 body {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.5em;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -720,6 +723,7 @@ h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, 
 h1 {
   font-size: 75px;
   font-size: 4.6875rem;
+  color: #000;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 
@@ -814,14 +818,10 @@ a:hover, a:visited:hover {
 /* Import normalization and scaffolding/structure */
 /* =Structure/Scaffolding
 -------------------------------------------------------------- */
-html {
-  font-size: 62.5;
-}
-
 body {
-  font-size: 16px;
-  font-size: 1rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  color: #000;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.5em;
   word-break: break-word;
 }
 

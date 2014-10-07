@@ -5,12 +5,12 @@
 */
 
 // Project configuration
-var project     = 'your-project-here', // Optional - Use your own project name here...
+var project     = 'somelikeitneat', // Optional - Use your own project name here...
 	build       = './build/', // Files that you want to package into a zip go here
 	source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 	bower       = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 
-// Load plugins 
+// Load plugins
 var gulp = require('gulp'),
 	browserSync = require('browser-sync'), // Asynchronous browser loading on .scss file changes
 	reload      = browserSync.reload,
@@ -20,7 +20,6 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	imagemin = require('gulp-imagemin'),
 	rename = require('gulp-rename'),
-	clean = require('gulp-clean'),
 	concat = require('gulp-concat'),
 	notify = require('gulp-notify'),
 	cmq = require('gulp-combine-media-queries'),
@@ -30,6 +29,8 @@ var gulp = require('gulp'),
 	ignore = require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
 	rimraf = require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
 	zip = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
+	plumber = require('gulp-plumber'), // Helps prevent stream crashing on errors
+	pipe = require('gulp-coffee'),
 	cache = require('gulp-cache');
 
 /**
@@ -49,7 +50,7 @@ gulp.task('browser-sync', function() {
 	];
 
 	browserSync.init(files, {
-	    proxy: "somelikeitneat.dev"
+	    proxy: project+".dev"
 	});
 
 });
@@ -61,9 +62,11 @@ gulp.task('browser-sync', function() {
 */
 gulp.task('styles', function() {
 	return gulp.src(source+'sass/**/*.scss')
+		.pipe(plumber())
 		.pipe(sass({ style: 'expanded', }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		// Write style.css to root theme directory
+		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
 		//combine media queries
 		.pipe(cmq())
@@ -123,16 +126,18 @@ gulp.task('fonts', function() {
  * Being a little overzealous, but we're cleaning out the build folder, codekit-cache directory and annoying DS_Store files and Also
  * clearing out unoptimized image files in zip as those will have been moved and optimized
 */
-gulp.task('clean', function() {
-	return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], {read: false})
-		.pipe(clean())
-		.pipe(notify({ message: 'Clean task complete' }));
+
+gulp.task('cleanup', function() {
+  return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
+    .pipe(rimraf())
+    .pipe(notify({ message: 'Clean task complete' }));
 });
 
 /**
  * Watch
  *
- * Redundancy going on here, for sure. 
+ * Redundancy going on here, for sure.
  * TO-DO: Need to double check that last watch task.
 */
 gulp.task('watch', function() {
@@ -175,28 +180,28 @@ gulp.task('buildImages', function() {
  * there that need to get moved as well. So I put the library directory into its own task. Excluding src because, well, we don't want to
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
-gulp.task('php', function() {
-	return gulp.src(['**/*.php', './screenshot.png','!./build/**','!./library/**','!./src/**']) 
+gulp.task('buildPhp', function() {
+	return gulp.src(['**/*.php', './style.css','./screenshot.png','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving PHP files complete' }));
 });
 
 // Copy Sass Files to Build
-gulp.task('sass', function() {
-	return gulp.src(['**/*.scss','!./build/**','!./library/**','!./src/**']) 
+gulp.task('buildSass', function() {
+	return gulp.src(['**/*.scss','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving Sass files complete' }));
 });
 
 // Copy CSS Files to Build
-gulp.task('css', function() {
-	return gulp.src([source+'css/**/*.css','!./build/**','!./library/**','!./src/**']) 
+gulp.task('buildCss', function() {
+	return gulp.src([source+'css/**/*.css','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build+'assets/css'))
 		.pipe(notify({ message: 'Moving CSS files complete' }));
 });
 
 // Copy Library to Build
-gulp.task('library', function() {
+gulp.task('buildLibrary', function() {
 	return gulp.src(['./library/**'])
 		.pipe(gulp.dest(build+'library'))
 		.pipe(notify({ message: 'Copy of Library directory complete' }));
@@ -207,7 +212,7 @@ gulp.task('library', function() {
  *
  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
 */
-gulp.task('zip', function () {
+gulp.task('buildZip', function () {
 	return gulp.src(build+'/**/')
 		.pipe(zip(project+'.zip'))
 		.pipe(gulp.dest('./'))
@@ -219,13 +224,18 @@ gulp.task('zip', function () {
 // Default task
 gulp.task('default', ['browser-sync'], function(cb) {
 	// gulp.start('styles', 'scripts', 'images', 'clean');
-	runSequence('styles', 'scripts', 'images', 'fonts', 'clean', cb);
+	runSequence('styles', 'scripts', 'images', 'fonts', 'cleanup', cb);
 	gulp.watch(source+'/sass/**/*.scss', ['styles']);
 });
 
+// Watch Task
+gulp.task('watch', ['styles', 'browser-sync'], function () {
+    gulp.watch(source+"sass/**/*.scss", ['styles']);
+});
+
 // Package Distributable Theme
-gulp.task('package', function(cb) {
+gulp.task('build', function(cb) {
 	// gulp.start('styles', 'scripts', 'images', 'clean');
-	runSequence('clean', 'php', 'library', 'sass','css','styles', 'scripts', 'buildImages', 'fonts', 'zip','clean', cb);
+	runSequence('cleanup', 'buildPhp', 'buildLibrary', 'buildSass','buildCss','styles', 'scripts', 'buildImages', 'fonts', 'zip','cleanup', cb);
 });
 

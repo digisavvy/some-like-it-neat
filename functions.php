@@ -200,7 +200,26 @@ endif;
 if ( !function_exists('neat_add_breadcrumbs') ) :
 	function neat_add_breadcrumbs() {
 		if ( !is_front_page() ) {
-			if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); }
+			if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(array(
+			  'prefix'     => 'You are here: ',
+			  'last_link'  => true,
+			  'separator'  => '|',
+			  'excluded_taxonomies' => array(
+			    'post_format'
+			  ),
+			  'taxonomy_excluded_terms' => array(
+			    'category' => array('uncategorized')
+			  ),
+			  'post_types' => array(
+			    'gizmo' => array(
+			      'last_show'          => false,
+			      'taxonomy_preferred' => 'category'
+			    ),
+			    'whatzit' => array(
+			      'separator' => '&raquo;'
+			    )
+			  )
+			)); }
 		}
 	}
 	add_action( 'tha_content_top', 'neat_add_breadcrumbs' );
@@ -268,3 +287,8 @@ function neat_add_selectivizr() { ?>
   		<noscript><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" /></noscript>
 	<![endif]-->
 <?php }
+
+add_action( 'wp_head', 'neat_add_google_font', 5 );
+function neat_add_google_font() {
+	echo "<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>";
+}

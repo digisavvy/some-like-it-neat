@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "homepage": "http://alexhasnicehair.com",
   "authors": [
-    "Ben Word <alexjvas@gmail.com>"
+    "Alex Vasquez <alexjvas@gmail.com>"
   ],
   "dependencies": {
     "bourbon": "~4.0.2",
