@@ -96,9 +96,9 @@ a project.
     |    |    |   ├── _structure.scss
     |    |    |   └── _typography.scss
     │    |    └── neat 
-    |     ├── _flexnav.scss
-    |     ├── _grid-settings.scss
-    |     └── style.scss
+    |    ├── _flexnav.scss
+    |    ├── _grid-settings.scss
+    |    └── style.scss
     ├── library
     │   ├── languages
     │   |    ├── digistarter.pot
@@ -129,6 +129,7 @@ a project.
     |     ├── template-full-width.php
     |     ├── template-left-col.php
     |     └── template-right-col.php
+    ├── .bowerrc
     ├── 404.php
     ├── archive.php
     ├── comments.php
