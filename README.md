@@ -64,7 +64,7 @@ Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon
 I haven't listed out every single file here; but I have listed out the files that you'll most likely work with during
 a project.
 
-<pre><code>Theme Root
+<pre style="max-height: 300px;"><code>Theme Root
     |    ├── assets
     │    |   ├── css
     |    |   |   |── style-style.css
