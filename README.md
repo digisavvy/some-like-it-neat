@@ -64,7 +64,7 @@ Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon
 I haven't listed out every single file here; but I have listed out the files that you'll most likely work with during
 a project.
 
-Theme Root
+<pre><code>Theme Root
     |    ├── assets
     │    |   ├── css
     |    |   |   |── style-style.css
@@ -146,7 +146,7 @@ Theme Root
     ├── searchform.php
     ├── sidebar.php
     ├── single.php
-    └── style.css
+    └── style.css</code></pre>
 
 ### General Credits and Thanks
 ---------------
