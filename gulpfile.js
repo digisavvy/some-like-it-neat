@@ -109,18 +109,6 @@ gulp.task('images', function() {
 });
 
 /**
- * Fonts
- *
- * I don't even know why the fuck this is here... Might as well be "cute" everywhere...
-*/
-gulp.task('fonts', function() {
-	return gulp.src(source+'fonts/**')
-		//don't do anything to fonts, just ship 'em
-		.pipe(gulp.dest(build+'assets/fonts/'))
-		.pipe(notify({ message: 'Fonts task complete' }));
-});
-
-/**
  * Clean
  *
  * Being a little overzealous, but we're cleaning out the build folder, codekit-cache directory and annoying DS_Store files and Also
@@ -173,7 +161,7 @@ gulp.task('buildImages', function() {
 });
 
 /**
- * Copy PHP source files to the build directory
+ * Build task that moves essential theme files for production-ready sites
  *
  * First, we're moving PHP files to the build folder for redistribution. Also we're excluding the library, build and src directories. Why?
  * Excluding build prevents recursive copying and Inception levels of bullshit. We exclude library because there are certain non-php files
@@ -186,18 +174,11 @@ gulp.task('buildPhp', function() {
 		.pipe(notify({ message: 'Moving files complete' }));
 });
 
-// Copy Sass Files to Build
-gulp.task('buildSass', function() {
-	return gulp.src(['**/*.scss','!./build/**','!./library/**','!./src/**'])
-		.pipe(gulp.dest(build))
-		.pipe(notify({ message: 'Moving Sass files complete' }));
-});
-
-// Copy CSS Files to Build
-gulp.task('buildCss', function() {
-	return gulp.src([source+'css/**/*.css','!./build/**','!./library/**','!./src/**'])
-		.pipe(gulp.dest(build+'assets/css'))
-		.pipe(notify({ message: 'Moving CSS files complete' }));
+// Copy Library to Build
+gulp.task('buildAssets', function() {
+	return gulp.src([source+'**'])
+		.pipe(gulp.dest(build+'/assets'))
+		.pipe(notify({ message: 'Copy of Assets directory complete' }));
 });
 
 // Copy Library to Build
@@ -236,6 +217,6 @@ gulp.task('watch', ['styles', 'browser-sync'], function () {
 // Package Distributable Theme
 gulp.task('build', function(cb) {
 	// gulp.start('styles', 'scripts', 'images', 'clean');
-	runSequence('cleanup', 'buildPhp', 'buildLibrary', 'buildSass','buildCss','styles', 'scripts', 'buildImages', 'fonts', 'zip','cleanup', cb);
+	runSequence('cleanup', 'styles', 'scripts', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanup', cb);
 });
 
