@@ -85,7 +85,7 @@ gulp.task('styles', function() {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('scripts', function() {
-	return gulp.src(source+'js/vendor/**/*.js')
+	return gulp.src(source+'js/vendor/**/*.js', source+'bower/**')
 		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
 		// .pipe(jshint.reporter('default'))
 		.pipe(concat('production.js'))
