@@ -65,88 +65,88 @@ I haven't listed out every single file here; but I have listed out the files tha
 a project.
 
 Theme Root
- |    ├── assets
-│    |   ├── css
- |     |    |   ├── style-style.css
- |     |    |   ├── style.css
-│    |   ├── fonts
-│    |   ├── images
-│    |    |   └── originals 
-│    |   ├── js
-│    |    |   └── vendor 
-│   ├── sass
-│    |   └── base (Bitters)
-│    |   └── bourbon 
-│    |   └── font-awesome 
-│    |   └── components 
- |     |    |   ├── _buttons.scss
- |     |    |   ├── _dashicons.scss
- |     |    |   ├── _flexnav.scss
- |     |    |   ├── _navigation.scss
- |     |    |   ├── _genericons.scss
- |     |    |   ├── _ui-bourbon.scss
- |     |    |   └── _variables.scss
-│    |   └── layouts 
- |     |    |   ├── _content.scss
- |     |    |   ├── _footer.scss
- |     |    |   ├── _header.scss
- |     |    |   ├── _navigation.scss
- |     |    |   ├── _normalize.scss
- |     |    |   ├── _sidebar.scss
- |     |    |   ├── _structure.scss
- |     |    |   └── _typography.scss
-│    |   └── neat 
- |    ├── _flexnav.scss
- |    ├── _grid-settings.scss
- |    └── style.scss
-├── library
-│   ├── languages
-│    |    ├── digistarter.pot
-│   ├── vendors
-│   │   ├── js
-│   │   ├── tgm-plugin-activation
-│   │   ├── tha-theme-hooks
-│   │   └── wp-customizer
-│   ├── custom-header.php
-│   ├── extras.php
-│   ├── jetpack.php
-│   └── template-tags.php
-├── page-templates
-│   ├── partials
- |     |   ├── content-aside.php
- |     |   ├── content-audio.php
- |     |   ├── content-chat.php
- |     |   ├── content-gallery.php
- |     |   ├── content-image.php
- |     |   ├── content-link.php
- |     |   ├── content-none.php
- |     |   ├── content-page.php
- |     |   ├── content-quote.php
- |     |   ├── content-single.php
- |     |   ├── content-status.php
- |     |   ├── content-video.php
- |     |   └── content.php
- |    ├── template-full-width.php
- |    ├── template-left-col.php
- |    └── template-right-col.php
-├── 404.php
-├── archive.php
-├── comments.php
-├── footer.php
-├── functions.php
-├── gulpfile.js
-├── header.php
-├── index.php
-├── license.txt
-├── package.json
-├── page.php
-├── README.md
-├── rtl.css
-├── search.png
-├── searchform.php
-├── sidebar.php
-├── single.php
-└── style.css
+    |    ├── assets
+    │    |   ├── css
+    |    |   |   |── style-style.css
+    |    |   |   ├── style.css
+    │    |   ├── fonts
+    │    |   ├── images
+    │    |    |   └── originals 
+    │    |   ├── js
+    │    |    |   └── vendor 
+    │    ├── sass
+    │    |   └── base (Bitters)
+    │    |   └── bourbon 
+    │    |   └── font-awesome 
+    │    |   └── components 
+    |    |    |   ├── _buttons.scss
+    |    |    |   ├── _dashicons.scss
+    |    |    |   ├── _flexnav.scss
+    |    |    |   ├── _navigation.scss
+    |    |    |   ├── _genericons.scss
+    |    |    |   ├── _ui-bourbon.scss
+    |    |    |   └── _variables.scss
+    │    |    └── layouts 
+    |    |    |   ├── _content.scss
+    |    |    |   ├── _footer.scss
+    |    |    |   ├── _header.scss
+    |    |    |   ├── _navigation.scss
+    |    |    |   ├── _normalize.scss
+    |    |    |   ├── _sidebar.scss
+    |    |    |   ├── _structure.scss
+    |    |    |   └── _typography.scss
+    │    |    └── neat 
+    |     ├── _flexnav.scss
+    |     ├── _grid-settings.scss
+    |     └── style.scss
+    ├── library
+    │   ├── languages
+    │   |    ├── digistarter.pot
+    │   ├── vendors
+    │   │   ├── js
+    │   │   ├── tgm-plugin-activation
+    │   │   ├── tha-theme-hooks
+    │   │   └── wp-customizer
+    │   ├── custom-header.php
+    │   ├── extras.php
+    │   ├── jetpack.php
+    │   └── template-tags.php
+    ├── page-templates
+    │     ├── partials
+    |     |   ├── content-aside.php
+    |     |   ├── content-audio.php
+    |     |   ├── content-chat.php
+    |     |   ├── content-gallery.php
+    |     |   ├── content-image.php
+    |     |   ├── content-link.php
+    |     |   ├── content-none.php
+    |     |   ├── content-page.php
+    |     |   ├── content-quote.php
+    |     |   ├── content-single.php
+    |     |   ├── content-status.php
+    |     |   ├── content-video.php
+    |     |   └── content.php
+    |     ├── template-full-width.php
+    |     ├── template-left-col.php
+    |     └── template-right-col.php
+    ├── 404.php
+    ├── archive.php
+    ├── comments.php
+    ├── footer.php
+    ├── functions.php
+    ├── gulpfile.js
+    ├── header.php
+    ├── index.php
+    ├── license.txt
+    ├── package.json
+    ├── page.php
+    ├── README.md
+    ├── rtl.css
+    ├── search.png
+    ├── searchform.php
+    ├── sidebar.php
+    ├── single.php
+    └── style.css
 
 ### General Credits and Thanks
 ---------------
