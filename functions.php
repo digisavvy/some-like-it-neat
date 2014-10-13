@@ -228,13 +228,6 @@ endif;
 if ( !function_exists('neat_optional_scripts') ) :
 	function neat_optional_scripts() {
 
-		 // Genericons
-		 if( get_theme_mod( 'neat_add_genericon_icons' ) == '') {
-
-		 } else {
-		 	echo '<link href=" '.get_stylesheet_directory_uri().'/assets/css/genericons.css" rel="stylesheet">';
-		 }
-
 		 // Link Color
 		 if( get_theme_mod( 'neat_add_link_color' ) == '') {
 
