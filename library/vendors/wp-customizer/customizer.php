@@ -28,120 +28,118 @@ add_action( 'customize_register', 'digistarter_customize_register' );
 
 function neat_add_customizer_theme_options($wp_customize) {
 
-	/* Color controls */
-	// General Link Colors
-	$wp_customize->add_setting( 'neat_add_link_color', array(
-	    'default'        => '#000000',
-	    'sanitize_callback' => 'maybe_hash_hex_color',
+/* Color controls */
+// General Link Colors
+$wp_customize->add_setting( 'neat_add_link_color', array(
+	'default'			=> '#000000',
+	'sanitize_callback' 	=> 'maybe_hash_hex_color',
 
-	) );
+) );
 
-	$wp_customize->add_control( new WP_Customize_Color_Control(
-		$wp_customize, 'neat_add_link_color', array(
-			    'label'   => 'Body Link Color',
-			    'section' => 'colors',
-			    'settings'   => 'neat_add_link_color',
-			    'priority' => 6
-			)
+$wp_customize->add_control( new WP_Customize_Color_Control(
+	$wp_customize, 'neat_add_link_color', array(
+		'label'			=> 'Body Link Color',
+		'section'		=> 'colors',
+		'settings'		=> 'neat_add_link_color',
+		'priority'		=> 6
+	)
+)
+);
+/**
+* Mobile Navigation Settings and Options
+*/
+
+// Mobile nav label
+$wp_customize->add_setting(
+	'neat_mobile_nav_label',
+		array(
+			'default'			=> 'Menu'
 		)
-	);
-    /**
-     * Mobile Navigation Settings and Options
-     */
+);
+$wp_customize->add_control(
+	'neat_mobile_nav_label',
+	array(
+		'section'			=> 'nav',
+		'label'				=> 'Mobile Navigation Label',
+		'type'				=> 'text',
+		'sanitize_callback'	=> 'absint'
+	)
+);
 
-    // Mobile nav label
-    $wp_customize->add_setting(
-        'neat_mobile_nav_label',
-        array(
-            'default'            => 'Menu'
-        )
-    );
-    $wp_customize->add_control(
-        'neat_mobile_nav_label',
-        array(
-            'section'  => 'nav',
-            'label'    => 'Mobile Navigation Label',
-            'type'     => 'text'
-        )
-    );
+// Mobile Nav Min Width
+$wp_customize->add_setting(
+	'neat_mobile_min_width',
+	array(
+		'default'            => '768'
+	)
+);
+$wp_customize->add_control(
+	'neat_mobile_min_width',
+	array(
+		'section'	=> 'nav',
+		'label'		=> 'Mobile Navigation Min-Width (numeric value)',
+		'type'		=> 'text',
+		'sanitize_callback'	=> 'absint'
+	)
+);
 
-    // Mobile Nav Min Width
-     $wp_customize->add_setting(
-        'neat_mobile_min_width',
-        array(
-            'default'            => '768'
-        )
-    );
-    $wp_customize->add_control(
-        'neat_mobile_min_width',
-        array(
-            'section'  => 'nav',
-            'label'    => 'Mobile Navigation Min-Width (numeric value)',
-            'type'     => 'text'
-        )
-    );
+// Mobile Nav Hide Right Arrow
+$wp_customize->add_setting(
+'neat_mobile_hide_arrow',
+	array(
+		'default'		=> "No"
+	)
+);
+$wp_customize->add_control(
+'neat_mobile_hide_arrow',
+	array(
+		'section'			=> 'nav',
+		'label'				=> 'Mobile Navigation Hide Right Arrow',
+		'type'				=> 'radio',
+		'choices'			=> array("Yes", "No"),
+		'sanitize_callback'	=> 'neat_sanitize_checkbox'
+	)
+);
 
-    // Mobile Nav Hide Right Arrow
-     $wp_customize->add_setting(
-        'neat_mobile_hide_arrow',
-        array(
-            'default'            => "No"
-        )
-    );
-    $wp_customize->add_control(
-        'neat_mobile_hide_arrow',
-        array(
-            'section'  => 'nav',
-            'label'    => 'Mobile Navigation Hide Right Arrow',
-            'type'    => 'radio',
-            'choices' => array("Yes", "No")
-        )
-    );
+// Add Footer Section and Settings
+$wp_customize->add_section(
+'neat_footer_section_settings',
+	array(
+		'title'		=> 'Footer Settings',
+		'priority'	=> 200
+	)
+);
+$wp_customize->add_setting(
+'neat_footer_left',
+	array(
+		'default'			=> '&copy; All Rights Reserved',
+		'sanitize_callback'	=> 'absint'
+	)
+);
+$wp_customize->add_control(
+'neat_footer_left',
+	array(
+		'section'	=> 'neat_footer_section_settings',
+		'label'		=> 'Left Footer',
+		'type'		=> 'text'
+	)
+);
 
-    // Add Footer Section and Settings
-    $wp_customize->add_section(
-        'neat_footer_section_settings',
-        array(
-            'title'     => 'Footer Settings',
-            'priority'  => 200
-        )
-    );
-    $wp_customize->add_setting(
-        'neat_footer_left',
-        array(
-            'default'            => '&copy; All Rights Reserved'
-        )
-    );
-    $wp_customize->add_control(
-        'neat_footer_left',
-        array(
-            'section'  => 'neat_footer_section_settings',
-            'label'    => 'Left Footer',
-            'type'     => 'text'
-        )
-    );
-
-    $wp_customize->add_setting(
-        'neat_footer_right',
-        array(
-            'default'            => 'Footer Content Right'
-        )
-    );
-    $wp_customize->add_control(
-        'neat_footer_right',
-        array(
-            'section'  => 'neat_footer_section_settings',
-            'label'    => 'Right Footer',
-            'type'     => 'text'
-        )
-    );
-
-    // Add-Ons
-    $wp_customize->add_section('neat_theme_addons' , array(
-        'description' => 'Add-ons for your theme such as icon fonts. ',
-        'title'     => __('Theme Add-Ons', 'digistarter'),
-        'priority'  => 1020
-    ));
+$wp_customize->add_setting(
+'neat_footer_right',
+	array(
+		'default'			=> 'Footer Content Right',
+		'sanitize_callback'	=> 'absint'
+	)
+);
+$wp_customize->add_control(
+'neat_footer_right',
+	array(
+		'section'	=> 'neat_footer_section_settings',
+		'label'		=> 'Right Footer',
+		'type'		=> 'text'
+	)
+);
 
 }
 add_action( 'customize_register', 'neat_add_customizer_theme_options' );

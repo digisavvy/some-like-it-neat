@@ -176,7 +176,7 @@ gulp.task('buildPhp', function() {
 
 // Copy Library to Build
 gulp.task('buildAssets', function() {
-	return gulp.src([source+'**'])
+	return gulp.src([source+'**', source+'js/production.js'])
 		.pipe(gulp.dest(build+'/assets'))
 		.pipe(notify({ message: 'Copy of Assets directory complete' }));
 });

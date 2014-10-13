@@ -378,7 +378,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
             <div class="tgmpa wrap">
 
                 <?php if ( version_compare( $this->wp_version, '3.8', '<' ) ) {
-                    screen_icon( apply_filters( 'tgmpa_default_screen_icon', 'themes' ) );
+                    // Not doing anything here
                 } ?>
                 <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
                 <?php $plugin_table->prepare_items(); ?>
