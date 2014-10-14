@@ -263,11 +263,11 @@ if ( !function_exists('neat_add_footer_divs') ) :
 	function neat_add_footer_divs() { ?>
 
 		<div class="footer-left">
-			 <?php echo get_theme_mod( 'neat_footer_left' ); ?>
+			 <?php echo esc_attr( get_theme_mod( 'neat_footer_left' ) ); ?>
 
 		</div>
 		<div class="footer-right">
-			<?php echo get_theme_mod( 'neat_footer_right' ); ?>
+			<?php echo esc_attr( get_theme_mod( 'neat_footer_right' ) );  ?>
 		</div>
 <?php }
 add_action( 'tha_footer_bottom', 'neat_add_footer_divs' );
