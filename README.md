@@ -34,7 +34,8 @@ your theme! Cool. Right?
 Getting Started
 ---------------
 
-~~I'll be coming back to this later~~
+* Prerequisites
+*
 
 ### Theme Hook Alliance
 ---------------
