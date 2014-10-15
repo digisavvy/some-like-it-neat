@@ -34,9 +34,24 @@ your theme! Cool. Right?
 Getting Started
 ---------------
 
-* Prerequisites
-*
-
+* #### Prerequisites
+  * You'll need to download and install [Node](http://nodejs.com)
+  * You will also need to download and install [Sass](http://sass-lang.org/install)
+  
+* #### Getting and Installing the Theme
+  * The first thing you’ll want to do is grab a copy of the theme —
+**git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
+  
+* #### Install Gulpjs and Plugins
+  Once you have Node, Sass and the theme installed, the next step is simple enough. 
+  * Open a command prompt/terminal and navigate to your theme's root directory and run this command: **npm install**  
+ _(note - you may have to run this command as admin or sudo)_
+ 
+* #### Gulp Tasks
+There are a couple of tasks built into Some Like it Neat to help get you going.
+  * **gulp watch** This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
+  * **gulp build** This command removes unneccessary files and packs up the required files into a nice and neat, installable, zip package. Honestly, this is here because I was uploading my theme to the WP.org uploader so many times... Epitome of the laze.
+  
 ### Theme Hook Alliance
 ---------------
 
