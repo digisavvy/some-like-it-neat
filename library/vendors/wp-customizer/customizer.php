@@ -53,7 +53,8 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 $wp_customize->add_setting(
 	'neat_mobile_nav_label',
 		array(
-			'default'			=> 'Menu'
+			'default'			=> 'Menu',
+			'sanitize_callback'	=> 'absint'
 		)
 );
 $wp_customize->add_control(
@@ -62,7 +63,6 @@ $wp_customize->add_control(
 		'section'			=> 'nav',
 		'label'				=> 'Mobile Navigation Label',
 		'type'				=> 'text',
-		'sanitize_callback'	=> 'absint'
 	)
 );
 
@@ -70,7 +70,8 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'neat_mobile_min_width',
 	array(
-		'default'            => '768'
+		'default'            => '768',
+		'sanitize_callback'	=> 'absint'
 	)
 );
 $wp_customize->add_control(
@@ -79,7 +80,6 @@ $wp_customize->add_control(
 		'section'	=> 'nav',
 		'label'		=> 'Mobile Navigation Min-Width (numeric value)',
 		'type'		=> 'text',
-		'sanitize_callback'	=> 'absint'
 	)
 );
 
@@ -87,7 +87,8 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 'neat_mobile_hide_arrow',
 	array(
-		'default'		=> "No"
+		'default'		=> "No",
+		'sanitize_callback'	=> 'neat_sanitize_checkbox'
 	)
 );
 $wp_customize->add_control(
@@ -97,7 +98,6 @@ $wp_customize->add_control(
 		'label'				=> 'Mobile Navigation Hide Right Arrow',
 		'type'				=> 'radio',
 		'choices'			=> array("Yes", "No"),
-		'sanitize_callback'	=> 'neat_sanitize_checkbox'
 	)
 );
 
