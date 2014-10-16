@@ -1,4 +1,12 @@
-### 1.0.7 (released)
+### 1.0.8
+-------------
+
+**Features:**
+
+* No, seriously, added a getting started area in the README.md file. Be sure to check it out.
+
+
+### 1.0.7 (initial release)
 -------------
 
 **Features:**
