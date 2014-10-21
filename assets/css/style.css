@@ -939,15 +939,14 @@ body {
 /* Import Sections */
 .site-branding {
   text-align: center;
-  background: #ddd;
 }
 .site-branding .site-title {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 @media screen and (min-width: 200px) {
   .site-branding .site-title {
-    font-size: 10px;
-    font-size: 0.625rem;
+    font-size: 35px;
+    font-size: 2.1875rem;
   }
 }
 @media screen and (min-width: 480px) {
@@ -1332,14 +1331,6 @@ ul.nav-menu li.current_page_item {
 
 /* =Content
 ----------------------------------------------- */
-h1.entry-title {
-  color: #ff0000;
-}
-
-body {
-  background: #ccc;
-}
-
 .sticky {
   background: #f1f1f1;
 }
