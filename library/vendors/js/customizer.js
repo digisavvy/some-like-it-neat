@@ -98,12 +98,12 @@
 
 	});
 
-	wp.customize( 'neat_footer_left', function( value ) {
+	wp.customize( 'digistarter_footer_left', function( value ) {
 	    value.bind( function( to ) {
 	        $( '.footer-left' ).text( to );
 	    });
 	});
-	wp.customize( 'neat_footer_right', function( value ) {
+	wp.customize( 'digistarter_footer_right', function( value ) {
 	    value.bind( function( to ) {
 	        $( '.footer-right' ).text( to );
 	    });
