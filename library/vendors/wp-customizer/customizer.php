@@ -28,6 +28,14 @@ function digistarter_sanitize_text( $input ) {
     return wp_kses_post( force_balance_tags( $input ) );
 }
 
+function digistarter_sanitize_checkbox( $input ) {
+	if ( $input == 1 ) {
+		return 1;
+	} else {
+		return '';
+	}
+}
+
 /**
  * Customizer Some Like it Neat Additions
  */
@@ -96,7 +104,7 @@ $wp_customize->add_setting(
 'digistarter_mobile_hide_arrow',
 	array(
 		'default'		=> "No",
-		'sanitize_callback'	=> 'absint'
+		'sanitize_callback'	=> 'digistarter_sanitize_checkbox'
 	)
 );
 $wp_customize->add_control(
@@ -121,7 +129,7 @@ $wp_customize->add_setting(
 'digistarter_footer_left',
 	array(
 		'default'			=> '&copy; All Rights Reserved',
-		'sanitize_callback'	=> 'absint'
+		'sanitize_callback' => 'digistarter_sanitize_text'
 	)
 );
 $wp_customize->add_control(
@@ -137,7 +145,7 @@ $wp_customize->add_setting(
 'digistarter_footer_right',
 	array(
 		'default'			=> 'Footer Content Right',
-		'sanitize_callback'	=> 'absint'
+		'sanitize_callback' => 'digistarter_sanitize_text'
 	)
 );
 $wp_customize->add_control(
