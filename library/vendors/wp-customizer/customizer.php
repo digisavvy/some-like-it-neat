@@ -21,6 +21,12 @@ function digistarter_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'digistarter_customize_register' );
 
+/**
+ * Customizer Sanitization Functions
+ */
+function digistarter_sanitize_text( $input ) {
+    return wp_kses_post( force_balance_tags( $input ) );
+}
 
 /**
  * Customizer Some Like it Neat Additions
@@ -50,11 +56,13 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 */
 
 // Mobile nav label
+
+
 $wp_customize->add_setting(
 	'digistarter_mobile_nav_label',
 		array(
 			'default'			=> 'Menu',
-			'sanitize_callback'	=> 'absint'
+			'sanitize_callback' => 'digistarter_sanitize_text'
 		)
 );
 $wp_customize->add_control(
@@ -88,7 +96,7 @@ $wp_customize->add_setting(
 'digistarter_mobile_hide_arrow',
 	array(
 		'default'		=> "No",
-		'sanitize_callback'	=> 'digistarter_sanitize_checkbox'
+		'sanitize_callback'	=> 'absint'
 	)
 );
 $wp_customize->add_control(
