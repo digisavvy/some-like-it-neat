@@ -128,8 +128,8 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 'digistarter_footer_left',
 	array(
-		'default'			=> '&copy; All Rights Reserved',
-		'sanitize_callback' => 'digistarter_sanitize_text'
+		'sanitize_callback' => 'digistarter_sanitize_text',
+		'default'			=> '&copy; All Rights Reserved'
 	)
 );
 $wp_customize->add_control(
