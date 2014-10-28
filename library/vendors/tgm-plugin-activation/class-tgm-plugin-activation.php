@@ -1580,9 +1580,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 
                 // Wrap the install process with the appropriate HTML.
                 echo '<div class="tgmpa wrap">';
-                    if ( version_compare( TGM_Plugin_Activation::$instance->wp_version, '3.8', '<' ) ) {
-                        screen_icon( apply_filters( 'tgmpa_default_screen_icon', 'themes' ) );
-                    }
+
                     echo '<h2>' . esc_html( get_admin_page_title() ) . '</h2>';
                     // Process the bulk installation submissions.
                     $installer->bulk_install( $sources );
