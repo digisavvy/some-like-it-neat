@@ -10,7 +10,7 @@ License: GNU General Public License
 License URI: license.txt
 Text Domain: digistarter
 Domain Path: /languages/
-Tags: white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready
+Tags: white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready, accessibility-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -22,7 +22,26 @@ Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
 along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 and Blueprint http://www.blueprintcss.org/
 */
-/* Import Bourbon and Neat */
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Bourbon, Bitters, Neat
+2.0 - Normalize
+3.0 - Elements
+4.0 - Forms
+5.0 - Navigation
+6.0 - Layout and Structure
+	6.1 - Header
+	6.2 - Navigation
+	6.3 - Content
+	6.4 - Sidebar
+	6.5 - Footer
+	6.6 - Accessbility
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+1.0 Bourbon, Bitters, Neat
+--------------------------------------------------------------*/
 /* Bitters 0.10.0
  * http://bitters.bourbon.io
  * Copyright 2013–2014 thoughtbot, inc.
@@ -305,7 +324,9 @@ input[type="submit"] {
   box-sizing: border-box;
 }
 
-/* Normalize and import variables/fonts */
+/*--------------------------------------------------------------
+2.0 Normalize/Reset
+--------------------------------------------------------------*/
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -687,8 +708,14 @@ table {
   border-spacing: 0;
 }
 
+/*--------------------------------------------------------------
+3.0 Variables
+--------------------------------------------------------------*/
 /* =Variables
 -------------------------------------------------------------- */
+/*--------------------------------------------------------------
+4.0 Typography
+--------------------------------------------------------------*/
 /* =Typographical Mixins/Functions
 -------------------------------------------------------------- */
 /* =Genericons and Dashicons
@@ -818,53 +845,9 @@ a:hover, a:visited:hover {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
-/* Import normalization and scaffolding/structure */
-/* =Structure/Scaffolding
--------------------------------------------------------------- */
-body {
-  color: #000;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
-  line-height: 1.5em;
-  word-break: break-word;
-}
-
-#page {
-  max-width: 71.25em;
-  margin-left: auto;
-  margin-right: auto;
-}
-#page:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-#main {
-  padding: 0 40px;
-}
-
-#primary {
-  margin: auto;
-  width: 100%;
-}
-#primary:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-#primary ul {
-  list-style: none;
-}
-#primary ul li {
-  list-style-type: square;
-}
-
-#secondary {
-  margin: 20px auto;
-  width: 100%;
-}
-
-/* Import Add-ons/Components */
+/*--------------------------------------------------------------
+5.0 Components/Add-ons
+--------------------------------------------------------------*/
 #submit {
   background: #cccccc;
   border: solid 5px #cccccc;
@@ -939,7 +922,57 @@ body {
   padding: 20px;
 }
 
-/* Import Sections */
+/*--------------------------------------------------------------
+6.0 Layout and Structure
+--------------------------------------------------------------*/
+/* =Structure/Scaffolding
+-------------------------------------------------------------- */
+body {
+  color: #000;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.5em;
+  word-break: break-word;
+}
+
+#page {
+  max-width: 71.25em;
+  margin-left: auto;
+  margin-right: auto;
+}
+#page:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#main {
+  padding: 0 40px;
+}
+
+#primary {
+  margin: auto;
+  width: 100%;
+}
+#primary:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#primary ul {
+  list-style: none;
+}
+#primary ul li {
+  list-style-type: square;
+}
+
+#secondary {
+  margin: 20px auto;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+6.1 Layout and Structure
+--------------------------------------------------------------*/
 .site-branding {
   text-align: center;
 }
@@ -989,6 +1022,9 @@ body {
   }
 }
 
+/*--------------------------------------------------------------
+6.2 Navigation
+--------------------------------------------------------------*/
 /* Flexnav Base Styles */
 .flexnav {
   overflow: hidden;
@@ -1332,6 +1368,9 @@ ul.nav-menu li.current_page_item {
   float: right;
 }
 
+/*--------------------------------------------------------------
+6.3 Content
+--------------------------------------------------------------*/
 /* =Content
 ----------------------------------------------- */
 .sticky {
@@ -1616,6 +1655,9 @@ object {
   display: table;
 }
 
+/*--------------------------------------------------------------
+6.4 Sidebar
+--------------------------------------------------------------*/
 /* =Asides
 ----------------------------------------------- */
 .blog .format-aside .entry-title,
@@ -1639,6 +1681,9 @@ object {
   display: none;
 }
 
+/*--------------------------------------------------------------
+6.5 Footer
+--------------------------------------------------------------*/
 footer {
   float: left;
   margin: 0 auto;
@@ -1676,6 +1721,9 @@ footer .footer-right:last-child {
   margin-right: 0;
 }
 
+/*--------------------------------------------------------------
+6.6 Accessbility
+--------------------------------------------------------------*/
 /* Text meant only for screen readers */
 .screen-reader-text {
   position: absolute !important;
