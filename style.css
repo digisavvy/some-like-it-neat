@@ -4,7 +4,7 @@ Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
 Author URI: http://alexhasnicehair.com
 Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
-Version: 1.0.9
+Version: 1.1.0
 License: GNU General Public License
 License URI: license.txt
 Text Domain: digistarter
@@ -24,7 +24,7 @@ and Blueprint http://www.blueprintcss.org/
 
 
 PLEASE READ!!!
-You're probably wondering what the eff is going on here. It's cool. I get it.
+You're probably wondering what is going on here. It's cool. I get it.
 
 If you do want a regular style.css file to pop up, uncomment the following line in your gulpfile.js file, in the style task.
 .pipe(gulp.dest('./'))
@@ -34,11 +34,9 @@ Why? It's minified, smaller, good for performance, beard growth and bone density
 
 In fact, you'll notice we're doing the same thing with Images and Javascripts, too.
 
-The source versions of css, images and js reside in the 'src' folder, within their respective folder names.
+The source versions of css, images and js reside in the 'assets/css' folder, within their respective file names.
 
-What should you do? Or what the fuck?
-
-Admittedly I'm still trying to figure this part out, but place your un-minified assets in the src directories. The gulp default task
+Admittedly I'm still trying to figure this part out, but place your un-minified assets in the assets directories. The gulp default task
 will take your files, do some crazy shit to them, such as minifying, renaming and moving to the assets folder, again, under
 their respective folder names.
 
