@@ -719,6 +719,9 @@ h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
 h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
   text-decoration: none;
 }
+h1 a:hover, h1 a:visited:hover, h2 a:hover, h2 a:visited:hover, h3 a:hover, h3 a:visited:hover, h4 a:hover, h4 a:visited:hover, h5 a:hover, h5 a:visited:hover, h6 a:hover, h6 a:visited:hover {
+  text-decoration: underline;
+}
 
 h1 {
   font-size: 75px;
@@ -1059,7 +1062,7 @@ body {
   top: 0;
   right: 0;
   width: 50px;
-  height: 50px;
+  height: 100%;
   display: inline-block;
   background: #acaca1;
   background: rgba(0, 0, 0, 0.075);
@@ -1671,4 +1674,35 @@ footer .footer-right {
 }
 footer .footer-right:last-child {
   margin-right: 0;
+}
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.screen-reader-text .screen-reader-text:hover,
+.screen-reader-text .screen-reader-text:active,
+.screen-reader-text .screen-reader-text:focus {
+  top: 5px;
+  left: 5px;
+  z-index: 100000;
+  /* Above WP toolbar */
+  clip: auto !important;
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 15px 23px 14px;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: normal;
+  color: #21759b;
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 }
