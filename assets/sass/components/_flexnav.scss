@@ -53,8 +53,12 @@ $fourth_level: #cbcbc9;
 		white-space: nowrap;
 
 		&:hover {
+			background: #fff;
 			color: $primary-color !important;
 		}
+		 &:focus {
+		 	background: #fff;
+		 }
 	}
 	li ul {
 		display: none;
@@ -169,6 +173,7 @@ $fourth_level: #cbcbc9;
 		}
 		li a {
 			border-left: 1px solid #acaca1;
+			border-right: 1px solid #acaca1;
 			border-bottom: none;
 		}
 		li > ul {
