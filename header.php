@@ -24,12 +24,13 @@
 <body <?php body_class(); ?>>
 <?php tha_body_top(); ?>
 <div id="page" class="hfeed site">
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
 	<div class="wrap">
 		<?php tha_header_before(); ?>
 		<header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 			<?php tha_header_top(); ?>
 			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php the_title(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 				<h2 class="site-description"><?php bloginfo( 'description' ) ?></h2>
 			</div>
 
