@@ -1684,9 +1684,7 @@ footer .footer-right:last-child {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
 }
-.screen-reader-text .screen-reader-text:hover,
-.screen-reader-text .screen-reader-text:active,
-.screen-reader-text .screen-reader-text:focus {
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
   top: 5px;
   left: 5px;
   z-index: 100000;
