@@ -1,3 +1,10 @@
+### 1.1.0
+-------------
+
+**Features:**
+
+* Making this theme accessibility ready out-of-the-box
+
 ### 1.0.9
 -------------
 
