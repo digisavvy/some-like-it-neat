@@ -1065,7 +1065,11 @@ body {
   white-space: nowrap;
 }
 .flexnav li a:hover {
+  background: #fff;
   color: red !important;
+}
+.flexnav li a:focus {
+  background: #fff;
 }
 .flexnav li ul {
   display: none;
@@ -1174,6 +1178,7 @@ body {
   }
   .flexnav li a {
     border-left: 1px solid #acaca1;
+    border-right: 1px solid #acaca1;
     border-bottom: none;
   }
   .flexnav li > ul {
