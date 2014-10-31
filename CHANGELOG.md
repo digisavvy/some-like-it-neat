@@ -3,6 +3,17 @@
 
 **Features:**
 
+* Flagged theme as 'accessibility-ready'
+
+**Bugfixes:**
+
+* Removed duplicate hooks from content-none.php
+
+### 1.1.0
+-------------
+
+**Features:**
+
 * Making this theme accessibility ready out-of-the-box
 
 ### 1.0.9
