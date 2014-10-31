@@ -9,7 +9,6 @@
 ?>
 <?php tha_entry_before(); ?>
 <section class="no-results not-found">
-<?php tha_entry_top(); ?>
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'digistarter' ); ?></h1>
 	</header><!-- .page-header -->
@@ -34,6 +33,5 @@
 		<?php tha_entry_bottom(); ?>
 	</div><!-- .page-content -->
 	<?php tha_content_after(); ?>
-	<?php tha_entry_bottom(); ?>
 </section><!-- .no-results -->
 <?php tha_entry_after(); ?>
