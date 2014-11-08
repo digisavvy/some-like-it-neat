@@ -40,19 +40,6 @@ function digistarter_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_action( 'init', 'digistarter_add_editor_style' );
-	/**
-	 * Apply theme's stylesheet to the visual editor.
-	 *
-	 * @uses add_editor_style() Links a stylesheet to visual editor
-	 * @uses get_stylesheet_uri() Returns URI of theme stylesheet
-	 */
-	function digistarter_add_editor_style() {
-
-	    add_editor_style( get_stylesheet_uri() );
-
-	}
-
 	// This theme uses wp_nav_menu() in one location.
 	if ( !function_exists('dg_register_nav_menus') ) :
 		function dg_register_nav_menus() {
