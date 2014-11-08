@@ -861,6 +861,15 @@ a:hover, a:visited:hover {
   -webkit-transition: all 200ms ease-in-out;
           transition: all 200ms ease-in-out;
 }
+#submit:focus {
+  background: #bfbfbf;
+  border: solid 5px #999999;
+  border-radius: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  padding: 20px;
+}
 #submit:hover {
   background: #bfbfbf;
   border: solid 5px #999999;
@@ -883,6 +892,15 @@ a:hover, a:visited:hover {
   padding: 20px;
   -webkit-transition: all 200ms ease-in-out;
           transition: all 200ms ease-in-out;
+}
+.neat-button:focus {
+  background: #f2f2f2;
+  border: solid 5px #999999;
+  border-radius: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  padding: 20px;
 }
 .neat-button:hover {
   background: #f2f2f2;
@@ -908,6 +926,18 @@ a:hover, a:visited:hover {
   padding: 20px;
   -webkit-transition: all 200ms ease-in-out;
           transition: all 200ms ease-in-out;
+}
+.neat-3d-button:focus {
+  background: #f2f2f2;
+  border-top: solid 3px #999999;
+  border-right: solid 3px #999999;
+  border-left: solid 3px #999999;
+  border-bottom: solid 3px #999999;
+  border-radius: 10px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  padding: 20px;
 }
 .neat-3d-button:hover {
   background: #f2f2f2;
@@ -977,6 +1007,7 @@ body {
   text-align: center;
 }
 .site-branding .site-title {
+  padding-top: 40px;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
 @media screen and (min-width: 200px) {
@@ -998,6 +1029,7 @@ body {
   }
 }
 .site-branding .site-description {
+  padding: 25px 0;
   font-size: 20px;
   font-size: 1.25rem;
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
@@ -1126,6 +1158,7 @@ body {
   color: #222222;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 .menu-button.one-page {
   position: fixed;
