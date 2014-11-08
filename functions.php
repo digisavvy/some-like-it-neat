@@ -99,7 +99,7 @@ if ( !function_exists('digistarter_scripts') ) :
 	function digistarter_scripts() {
 
 		// Main Style
-		wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
+		wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style.css' );
 
 		// Dashicons
 		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/assets/css/dashicons.css' );
