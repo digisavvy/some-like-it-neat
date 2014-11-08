@@ -41,14 +41,7 @@ function digistarter_setup() {
 	add_theme_support( 'post-thumbnails' );
 
 	// This theme uses wp_nav_menu() in one location.
-	if ( !function_exists('dg_register_nav_menus') ) :
-		function dg_register_nav_menus() {
-
-			register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'digistarter' ) );
-
-		}
-		add_action( 'init', 'dg_register_nav_menus' );
-	endif;
+	register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'digistarter' ) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
