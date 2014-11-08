@@ -24,7 +24,13 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content" itemprop="articleBody">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'digistarter' ) ); ?>
+		<?php
+			the_content( sprintf(
+				__( 'Continue reading%s &rarr;', 'digistarter' ),
+				'<span class="screen-reader-text">  '.get_the_title().'</span>'
+			)  );
+		?>
+
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'digistarter' ),

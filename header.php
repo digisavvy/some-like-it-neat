@@ -24,24 +24,26 @@
 <body <?php body_class(); ?>>
 <?php tha_body_top(); ?>
 <div id="page" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_s' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'digistarter' ); ?></a>
 	<div class="wrap">
 		<?php tha_header_before(); ?>
 		<header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 			<?php tha_header_top(); ?>
 			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php the_title(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-				<h2 class="site-description"><?php bloginfo( 'description' ) ?></h2>
+				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php the_title(); ?>"><?php bloginfo( 'name' ); ?></a></div>
+				<div class="site-description"><?php bloginfo( 'description' ) ?></div>
 			</div>
 
 			<nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-			<div class="menu-button"><span><?php echo get_theme_mod( 'digistarter_mobile_nav_label' ); ?></span></div>
-			<?php 	wp_nav_menu( array(
-				    'theme_location' => 'primary-navigation',
-				    'menu_class' => 'flexnav', //Adding the class for FlexNav
-				    'items_wrap' => '<ul data-breakpoint=" '. esc_attr( get_theme_mod( 'digistarter_mobile_min_width' ) ) .' " id="%1$s" class="%2$s">%3$s</ul>', // Adding data-breakpoint for FlexNav
-				    ));
-			?>
+				<button class="menu-button">
+					<span class="dashicons <?php echo get_theme_mod( 'digistarter_mobile_nav_icon' ); ?>"></span><?php echo get_theme_mod( 'digistarter_mobile_nav_label' ); ?>
+				</button>
+				<?php 	wp_nav_menu( array(
+					    'theme_location' => 'primary-navigation',
+					    'menu_class' => 'flexnav', //Adding the class for FlexNav
+					    'items_wrap' => '<ul data-breakpoint=" '. esc_attr( get_theme_mod( 'digistarter_mobile_min_width' ) ) .' " id="%1$s" class="%2$s">%3$s</ul>', // Adding data-breakpoint for FlexNav
+					    ));
+				?>
 
 			</nav><!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>

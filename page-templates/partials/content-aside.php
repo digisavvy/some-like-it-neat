@@ -14,7 +14,13 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'digistarter' ) ); ?>
+		<?php
+			the_content( sprintf(
+				__( 'Continue reading%s &rarr;', 'digistarter' ),
+				'<span class="screen-reader-text">  '.get_the_title().'</span>'
+			)  );
+		?>
+
 		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'digistarter' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div><!-- .entry-content -->
 
