@@ -1,7 +1,9 @@
 .site-branding {
-	text-align: center; 
-	
+	text-align: center;
+
 	.site-title {
+		padding-top: 40px;
+
 		@include media($sm) {
 			@include fontSize(35px);
 		}
@@ -15,7 +17,9 @@
 	}
 
 	.site-description {
+		padding: 25px 0;
 		@include fontSize(20px);
+
 		@include media($sm) {
 			@include fontSize(15px);
 		}
