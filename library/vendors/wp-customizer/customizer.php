@@ -99,21 +99,20 @@ $wp_customize->add_control(
 	)
 );
 
-// Mobile Nav Hide Right Arrow
+// Mobile Nav Icon
 $wp_customize->add_setting(
-'digistarter_mobile_hide_arrow',
+'digistarter_mobile_nav_icon',
 	array(
-		'default'		=> "No",
-		'sanitize_callback'	=> 'digistarter_sanitize_checkbox'
+		'default'		=> "dashicons-menu",
+		'sanitize_callback' => 'digistarter_sanitize_text'
 	)
 );
 $wp_customize->add_control(
-'digistarter_mobile_hide_arrow',
+'digistarter_mobile_nav_icon',
 	array(
 		'section'			=> 'nav',
-		'label'				=> 'Mobile Navigation Hide Right Arrow',
-		'type'				=> 'radio',
-		'choices'			=> array("Yes", "No"),
+		'label'				=> 'Mobile Navigation Icon',
+		'type'				=> 'text'
 	)
 );
 
