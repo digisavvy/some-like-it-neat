@@ -1,3 +1,11 @@
+### 1.1.2
+-------------
+
+**Features:**
+
+* Making more changes to make theme accessibility friendly
+
+
 ### 1.1.0
 -------------
 
