@@ -19,6 +19,8 @@ var gulp = require('gulp'),
 	jshint = require('gulp-jshint'),
 	uglify = require('gulp-uglify'),
 	imagemin = require('gulp-imagemin'),
+	newer = require('gulp-newer'),
+	pngcrush = require('imagemin-pngcrush'),
 	rename = require('gulp-rename'),
 	concat = require('gulp-concat'),
 	notify = require('gulp-notify'),
@@ -44,7 +46,7 @@ gulp.task('browser-sync', function() {
 		// Watch Source js files and reload on change
 		source+'js/vendor/**/*.js',
 		//all images — TO-DO: This isn't working
-		source+'images/**/*.{png,jpg,jpeg,gif}',
+		source+'img/**/',
 		// Watch all PHP files and reload on change
 		'**/*.php'
 	];
@@ -60,24 +62,23 @@ gulp.task('browser-sync', function() {
  *
  * Looking at src/sass and compiling the files into Expanded format, Autoprefixing and sending the files to the build folder
 */
-gulp.task('styles', function() {
+gulp.task('styles', function () {
 	return gulp.src(source+'sass/**/*.scss')
 		.pipe(plumber())
 		.pipe(sass({ style: 'expanded', }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-		// Write style.css to root theme directory
 		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
-		//combine media queries
-		.pipe(cmq())
+		.pipe(cmq()) // Combines Media Queries
+		.pipe(reload({stream:true})) // Inject Styles when style file is created
 		.pipe(rename({ suffix: '-min' }))
 		.pipe(minifycss({keepBreaks:true}))
 		.pipe(minifycss({ keepSpecialComments: 0 }))
-		.pipe(reload({stream:true}))
-		//Write minified file
 		.pipe(gulp.dest(source+'css'))
-		.pipe(notify({ message: 'Styles task complete' }));
+		.pipe(reload({stream:true})) // Inject Styles when min style file is created
+		.pipe(notify({ message: 'Styles task complete' }))
 });
+
 
 /**
  * Scripts
@@ -102,10 +103,13 @@ gulp.task('scripts', function() {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('images', function() {
-	return gulp.src(source+'images/originals/**/*')
-		.pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-		.pipe(gulp.dest(source+'images/'))
-		.pipe(plugins.notify({ message: 'Images task complete' }));
+
+// Add the newer pipe to pass through newer images only
+	return gulp.src(source+'img**/*.{png,jpg,gif}')
+		.pipe(newer(source+'img**/*.{png,jpg,gif}'))
+		.pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
+		.pipe(gulp.dest(source));
+
 });
 
 /**
@@ -137,7 +141,7 @@ gulp.task('watch', function() {
 	gulp.watch(source+'js/vendor/**/*.js', ['scripts']);
 
 	// Watch image files
-	gulp.watch(source+'img/**/*', ['images']);
+	gulp.watch(source+'**/*.{png,jpg,gif}', ['images']);
 
 	// Watch any files in assets/, reload on change
 	gulp.watch([source+'**']).on('change', function(file) {
@@ -216,7 +220,6 @@ gulp.task('watch', ['styles', 'browser-sync'], function () {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-	// gulp.start('styles', 'scripts', 'images', 'clean');
 	runSequence('cleanup', 'styles', 'scripts', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanup', cb);
 });
 
