@@ -16,19 +16,18 @@ body {
 .wrap {}
 
 #main {
-
+	padding: 0 50px;
 }
 
 #primary {
 	@include clearfix;
-	padding: 30px;
 
 	@include media($sm) {
 		@include span-columns( 4 );
 	}
 	@include media($md) {
-		@include span-columns( 3.5 );
-		padding: 0 0 0 30px;
+		@include span-columns( 4 );
+		@include omega( block );
 	}
 	margin: auto;
 	width: 100%;
@@ -49,6 +48,7 @@ body {
 	}
 	@include media($md) {
 		@include span-columns( 2 );
+		@include omega( block );
 	}
 	margin: 20px auto;
 	padding: 0 30px 0 0;
