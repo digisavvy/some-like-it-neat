@@ -105,7 +105,7 @@ if ( !function_exists('digistarter_scripts') ) :
 		 wp_enqueue_style( 'dashicons' );
 
 		// Concatonated Scripts
-		wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
+		wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production.js', array( 'jquery' ), '1.0.0', false );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
