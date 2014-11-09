@@ -49,8 +49,10 @@ Getting Started
 
 * #### Gulp Tasks
 There are a couple of tasks built into Some Like it Neat to help get you going.
-  * **gulp watch** This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
+  * **gulp** This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
   * **gulp build** This command removes unneccessary files and packs up the required files into a nice and neat, installable, zip package. Honestly, this is here because I was uploading my theme to the WP.org uploader so many times... Epitome of the laze.
+
+Each task such as 'js', 'images' or 'browser-sync' may be started individually. Although, the only one of them you'd do that with is the 'images' task since that's not auto-optimizing at the moment.
 
 ### Theme Hook Alliance
 ---------------
@@ -141,6 +143,8 @@ a project.
     |     ├── template-full-width.php
     |     ├── template-left-col.php
     |     └── template-right-col.php
+  │   ├── tasks
+   |        └── build.js
     ├── .bowerrc
     ├── 404.php
     ├── archive.php
