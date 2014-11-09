@@ -1053,6 +1053,7 @@ body {
 --------------------------------------------------------------*/
 .site-branding {
   text-align: center;
+  background: #ccc;
 }
 .site-branding .site-title {
   padding-top: 40px;
