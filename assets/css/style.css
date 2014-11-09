@@ -1053,7 +1053,7 @@ body {
 --------------------------------------------------------------*/
 .site-branding {
   text-align: center;
-  background: #ccc;
+  background: #fff;
 }
 .site-branding .site-title {
   padding-top: 40px;
@@ -1116,6 +1116,9 @@ body {
   transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
 }
 .flexnav.opacity {
+  padding-left: 0;
+}
+.flexnav ul {
   padding-left: 0;
 }
 .flexnav.flexnav-show {
@@ -1256,7 +1259,7 @@ body {
     display: block;
     background-color: #a6a6a2;
     overflow: visible;
-    width: 20%;
+    width: 25%;
   }
   .flexnav li a {
     border-left: 1px solid #acaca1;
