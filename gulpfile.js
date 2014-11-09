@@ -20,7 +20,6 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	imagemin = require('gulp-imagemin'),
 	newer = require('gulp-newer'),
-	pngcrush = require('imagemin-pngcrush'),
 	rename = require('gulp-rename'),
 	concat = require('gulp-concat'),
 	notify = require('gulp-notify'),
@@ -43,11 +42,6 @@ var gulp = require('gulp'),
 */
 gulp.task('browser-sync', function() {
 	var files = [
-		// Watch Source js files and reload on change
-		source+'js/vendor/**/*.js',
-		//all images — TO-DO: This isn't working
-		source+'img/**/',
-		// Watch all PHP files and reload on change
 		'**/*.php'
 	];
 
@@ -85,7 +79,7 @@ gulp.task('styles', function () {
  *
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
-gulp.task('scripts', function() {
+gulp.task('js', function() {
 	return gulp.src(source+'js/vendor/**/*.js', source+'bower/**')
 		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
 		// .pipe(jshint.reporter('default'))
@@ -126,29 +120,6 @@ gulp.task('cleanup', function() {
     .pipe(notify({ message: 'Clean task complete' }));
 });
 
-/**
- * Watch
- *
- * Redundancy going on here, for sure.
- * TO-DO: Need to double check that last watch task.
-*/
-gulp.task('watch', function() {
-
-	// Watch .scss files
-	gulp.watch(source+'sass/**/*.scss', ['styles']);
-
-	// Watch .js files
-	gulp.watch(source+'js/vendor/**/*.js', ['scripts']);
-
-	// Watch image files
-	gulp.watch(source+'**/*.{png,jpg,gif}', ['images']);
-
-	// Watch any files in assets/, reload on change
-	gulp.watch([source+'**']).on('change', function(file) {
-		server.changed(file.path);
-  });
-
-});
 
 // ==== Packaging Tasks, File/Directory Moving etc. ==== //
 
@@ -216,6 +187,7 @@ gulp.task('default', ['browser-sync'], function(cb) {
 // Watch Task
 gulp.task('watch', ['styles', 'browser-sync'], function () {
     gulp.watch(source+"sass/**/*.scss", ['styles']);
+    gulp.watch(source+"js/*.js", ['js', browserSync.reload]);
 });
 
 // Package Distributable Theme
