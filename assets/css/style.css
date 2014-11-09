@@ -1052,6 +1052,7 @@ body {
 6.1 Layout and Structure
 --------------------------------------------------------------*/
 .site-branding {
+  background: #ccc;
   text-align: center;
 }
 .site-branding .site-title {
