@@ -65,13 +65,16 @@ gulp.task('styles', function() {
 		.pipe(plumber())
 		.pipe(sass({ style: 'expanded', }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+		// Write style.css to root theme directory
 		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
+		//combine media queries
 		.pipe(cmq())
 		.pipe(rename({ suffix: '-min' }))
 		.pipe(minifycss({keepBreaks:true}))
 		.pipe(minifycss({ keepSpecialComments: 0 }))
 		.pipe(reload({stream:true}))
+		//Write minified file
 		.pipe(gulp.dest(source+'css'))
 		.pipe(notify({ message: 'Styles task complete' }));
 });
@@ -83,14 +86,12 @@ gulp.task('styles', function() {
 */
 gulp.task('scripts', function() {
 	return gulp.src(source+'js/vendor/**/*.js', source+'bower/**')
-		.pipe(plumber())
-		.pipe(jshint('.jshintrc'))
+		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
+		// .pipe(jshint.reporter('default'))
 		.pipe(concat('production.js'))
 		.pipe(gulp.dest(source+'js'))
-		.pipe(jshint.reporter('default'))
 		.pipe(rename({ suffix: '-min' }))
 		.pipe(uglify())
-		.pipe(plumber.stop())
 		.pipe(gulp.dest(build+'assets/js/'))
 		.pipe(notify({ message: 'Scripts task complete' }));
 });
@@ -203,6 +204,7 @@ gulp.task('buildZip', function () {
 
 // Default task
 gulp.task('default', ['browser-sync'], function(cb) {
+	// gulp.start('styles', 'scripts', 'images', 'clean');
 	runSequence('styles', 'scripts', 'images', 'fonts', 'cleanup', cb);
 	gulp.watch(source+'/sass/**/*.scss', ['styles']);
 });
@@ -214,6 +216,7 @@ gulp.task('watch', ['styles', 'browser-sync'], function () {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
+	// gulp.start('styles', 'scripts', 'images', 'clean');
 	runSequence('cleanup', 'styles', 'scripts', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanup', cb);
 });
 
