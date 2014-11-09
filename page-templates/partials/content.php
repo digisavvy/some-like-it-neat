@@ -8,6 +8,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemType="http://schema.org/BlogPosting" >
 	<?php tha_entry_top(); ?>
 	<header class="entry-header">
+
 		<h1 class="entry-title" itemprop="name" ><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
@@ -24,7 +25,13 @@
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content" itemprop="articleBody">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'digistarter' ) ); ?>
+		<?php
+			the_content( sprintf(
+				__( 'Continue reading%s &rarr;', 'digistarter' ),
+				'<span class="screen-reader-text">  '.get_the_title().'</span>'
+			)  );
+		?>
+
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'digistarter' ),

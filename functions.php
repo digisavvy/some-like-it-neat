@@ -40,28 +40,8 @@ function digistarter_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	add_action( 'init', 'digistarter_add_editor_style' );
-	/**
-	 * Apply theme's stylesheet to the visual editor.
-	 *
-	 * @uses add_editor_style() Links a stylesheet to visual editor
-	 * @uses get_stylesheet_uri() Returns URI of theme stylesheet
-	 */
-	function digistarter_add_editor_style() {
-
-	    add_editor_style( get_stylesheet_uri() );
-
-	}
-
 	// This theme uses wp_nav_menu() in one location.
-	if ( !function_exists('dg_register_nav_menus') ) :
-		function dg_register_nav_menus() {
-
-			register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'digistarter' ) );
-
-		}
-		add_action( 'init', 'dg_register_nav_menus' );
-	endif;
+	register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'digistarter' ) );
 
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
@@ -119,13 +99,13 @@ if ( !function_exists('digistarter_scripts') ) :
 	function digistarter_scripts() {
 
 		// Main Style
-		wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
+		wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style.css' );
 
 		// Dashicons
-		 wp_enqueue_style( 'dashicons', get_stylesheet_directory_uri() . '/assets/css/dashicons.css' );
+		 wp_enqueue_style( 'dashicons' );
 
 		// Concatonated Scripts
-		wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
+		wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production.js', array( 'jquery' ), '1.0.0', false );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
