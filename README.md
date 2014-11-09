@@ -80,13 +80,13 @@ I haven't listed out every single file here; but I have listed out the files tha
 a project.
 
 <pre style="max-height: 300px;"><code>Theme Root
-    │   ├── assets
-    │   │  ├── css
-    │   │       ├── style-min.css
-    │   │       ├── style.css
-    │   │  ├── js
-    │   │       ├── production-min.js
-    │   │       ├── production.js
+    │    ├── assets
+    │    │   ├── css
+    │    │        ├── style-min.css
+    │    │        ├── style.css
+    │    │   ├── js
+    │    │        ├── production-min.js
+    │    │        ├── production.js
     │    ├── sass
     │    |   └── base (Bitters)
     │    |   └── bourbon
