@@ -975,8 +975,11 @@ body {
   clear: both;
 }
 
+#main {
+  padding: 0 50px;
+}
+
 #primary {
-  padding: 30px;
   margin: auto;
   width: 100%;
 }
@@ -1001,8 +1004,8 @@ body {
     float: left;
     display: block;
     margin-right: 4.34783%;
-    width: 56.52174%;
-    padding: 0 0 0 30px;
+    width: 65.21739%;
+    margin-right: 0;
   }
   #primary:last-child {
     margin-right: 0;
@@ -1038,6 +1041,7 @@ body {
     display: block;
     margin-right: 4.34783%;
     width: 30.43478%;
+    margin-right: 0;
   }
   #secondary:last-child {
     margin-right: 0;
