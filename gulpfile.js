@@ -136,7 +136,7 @@ gulp.task('watch', function() {
 	gulp.watch(source+'js/vendor/**/*.js', ['scripts']);
 
 	// Watch image files
-	gulp.watch(source+'images/originals/**/*', ['images']);
+	gulp.watch(source+'img/**/*', ['images']);
 
 	// Watch any files in assets/, reload on change
 	gulp.watch([source+'**']).on('change', function(file) {
@@ -153,9 +153,9 @@ gulp.task('watch', function() {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('buildImages', function() {
-	return gulp.src(source+'images/**/*', '!assets/images/originals/**')
+	return gulp.src(source+'img/**/*', '!assets/images/originals/**')
 		// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-		.pipe(gulp.dest(build+'assets/images/'))
+		.pipe(gulp.dest(build+'assets/img/'))
 		.pipe(plugins.notify({ message: 'Images task complete' }));
 });
 
