@@ -1,3 +1,14 @@
+### 1.1.3
+-------------
+
+**Features:**
+
+*
+
+**Bugfixes:**
+
+* Fixed browser reload issue on changes to js files
+
 ### 1.1.2
 -------------
 
