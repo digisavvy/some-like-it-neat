@@ -36,7 +36,7 @@ var gulp = require('gulp'),
 	cache = require('gulp-cache');
 
 // Required directories
-var dir = requireDir('./tasks');
+var dir = requireDir('./gulp/tasks/');
 
 /**
  * Browser Sync
