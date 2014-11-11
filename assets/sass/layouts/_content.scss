@@ -156,77 +156,9 @@ object {
 	}
 }
 
-/* =Page Templates
------------------------------------------------ */
-
-// 2col Right Sidebar
-.page-template-page-templatestemplate-right-col-php {
-
-	h1.entry-title {
-		margin: 0;
-		text-align: left;
-	}
-
-	#primary {
-		@include media($sm) {
-			float: left !important;
-			@include media($sm) {
-				@include span-columns(4);
-			}
-			@include media($md) {
-				@include span-columns(4);
-			}
-		}
-		@include media($md) {
-
-		}
-	}
-	#secondary {
-		@include media($sm) {
-
-		}
-		@include media($md) {
-			float: right !important;
-			margin-right: 1.5%;
-			@include media($sm) {
-				@include span-columns(4);
-			}
-			@include media($md) {
-				@include span-columns(2);
-			}
-		}
-	}
-}
 
 
-// 2col Left Sidebar
-.page-template-page-templatestemplate-left-col-php {
 
-	h1.entry-title {
-		margin: 0;
-		text-align: left;
-	}
-	#primary {
-		float: right !important;
-		@include media($sm) {
-			@include span-columns(4);
-		}
-		@include media($md) {
-			@include span-columns(4);
-		}
-	}
-	#secondary {
-		float: left !important;
-		margin-right: 1.5%;
-		@include media($sm) {
-			@include span-columns(4);
-		}
-		@include media($md) {
-			@include span-columns(2);
-		}
-	}
-	footer {
-		clear: both;
-		display: table;
-	}
-}
+
+
+
