@@ -34,9 +34,10 @@ and Blueprint http://www.blueprintcss.org/
 	6.1 - Header
 	6.2 - Navigation
 	6.3 - Content
-	6.4 - Sidebar
-	6.5 - Footer
-	6.6 - Accessbility
+	6.4 - Page Templates
+	6.5 - Sidebar
+	6.6 - Footer
+	6.7 - Accessbility
 
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -1621,8 +1622,69 @@ object {
   border-bottom: solid 1px red;
 }
 
-/* =Page Templates
------------------------------------------------ */
+/*--------------------------------------------------------------
+6.4 Page Templates
+--------------------------------------------------------------*/
+.page-template-page-templatestemplate-left-col-php h1.entry-title {
+  margin: 0;
+  text-align: left;
+}
+.page-template-page-templatestemplate-left-col-php #primary {
+  float: right !important;
+}
+@media screen and (min-width: 200px) {
+  .page-template-page-templatestemplate-left-col-php #primary {
+    float: left;
+    display: block;
+    margin-right: 6.66667%;
+    width: 100%;
+  }
+  .page-template-page-templatestemplate-left-col-php #primary:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-template-page-templatestemplate-left-col-php #primary {
+    float: left;
+    display: block;
+    margin-right: 4.34783%;
+    width: 65.21739%;
+  }
+  .page-template-page-templatestemplate-left-col-php #primary:last-child {
+    margin-right: 0;
+  }
+}
+.page-template-page-templatestemplate-left-col-php #secondary {
+  float: left !important;
+  margin-right: 1.5%;
+}
+@media screen and (min-width: 200px) {
+  .page-template-page-templatestemplate-left-col-php #secondary {
+    float: left;
+    display: block;
+    margin-right: 6.66667%;
+    width: 100%;
+  }
+  .page-template-page-templatestemplate-left-col-php #secondary:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-template-page-templatestemplate-left-col-php #secondary {
+    float: left;
+    display: block;
+    margin-right: 4.34783%;
+    width: 30.43478%;
+  }
+  .page-template-page-templatestemplate-left-col-php #secondary:last-child {
+    margin-right: 0;
+  }
+}
+.page-template-page-templatestemplate-left-col-php footer {
+  clear: both;
+  display: table;
+}
+
 .page-template-page-templatestemplate-right-col-php h1.entry-title {
   margin: 0;
   text-align: left;
@@ -1684,68 +1746,15 @@ object {
   }
 }
 
-.page-template-page-templatestemplate-left-col-php h1.entry-title {
-  margin: 0;
-  text-align: left;
+.page-template-page-templatestemplate-full-width-php #primary {
+  width: 100%;
 }
-.page-template-page-templatestemplate-left-col-php #primary {
-  float: right !important;
-}
-@media screen and (min-width: 200px) {
-  .page-template-page-templatestemplate-left-col-php #primary {
-    float: left;
-    display: block;
-    margin-right: 6.66667%;
-    width: 100%;
-  }
-  .page-template-page-templatestemplate-left-col-php #primary:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .page-template-page-templatestemplate-left-col-php #primary {
-    float: left;
-    display: block;
-    margin-right: 4.34783%;
-    width: 65.21739%;
-  }
-  .page-template-page-templatestemplate-left-col-php #primary:last-child {
-    margin-right: 0;
-  }
-}
-.page-template-page-templatestemplate-left-col-php #secondary {
-  float: left !important;
-  margin-right: 1.5%;
-}
-@media screen and (min-width: 200px) {
-  .page-template-page-templatestemplate-left-col-php #secondary {
-    float: left;
-    display: block;
-    margin-right: 6.66667%;
-    width: 100%;
-  }
-  .page-template-page-templatestemplate-left-col-php #secondary:last-child {
-    margin-right: 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .page-template-page-templatestemplate-left-col-php #secondary {
-    float: left;
-    display: block;
-    margin-right: 4.34783%;
-    width: 30.43478%;
-  }
-  .page-template-page-templatestemplate-left-col-php #secondary:last-child {
-    margin-right: 0;
-  }
-}
-.page-template-page-templatestemplate-left-col-php footer {
-  clear: both;
-  display: table;
+.page-template-page-templatestemplate-full-width-php #secondary {
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
-6.4 Sidebar
+6.5 Sidebar
 --------------------------------------------------------------*/
 /* =Asides
 ----------------------------------------------- */
@@ -1771,7 +1780,7 @@ object {
 }
 
 /*--------------------------------------------------------------
-6.5 Footer
+6.6 Footer
 --------------------------------------------------------------*/
 footer {
   float: left;
@@ -1811,7 +1820,7 @@ footer .footer-right:last-child {
 }
 
 /*--------------------------------------------------------------
-6.6 Accessbility
+6.7 Accessbility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers */
 .screen-reader-text {
