@@ -1,9 +1,20 @@
-### 1.1.3
+### 1.1.5
 -------------
 
 **Features:**
 
-*
+* Adding sass files for page templates
+
+### 1.1.4
+-------------
+
+**Features:**
+
+* Splitting Gulp Config into multiple files
+
+
+### 1.1.3
+-------------
 
 **Bugfixes:**
 
