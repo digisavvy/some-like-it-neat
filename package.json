@@ -26,6 +26,7 @@
     "gulp-util": "^3.0.1",
     "gulp-wp-rev": "0.0.1",
     "gulp-zip": "^2.0.2",
+    "require-dir": "^0.1.0",
     "swig": "^1.4.2"
   },
   "engines": {

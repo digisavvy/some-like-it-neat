@@ -32,7 +32,11 @@ var gulp = require('gulp'),
 	zip = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
 	plumber = require('gulp-plumber'), // Helps prevent stream crashing on errors
 	pipe = require('gulp-coffee'),
+	requireDir = require('require-dir'),
 	cache = require('gulp-cache');
+
+// Required directories
+var dir = requireDir('./gulp/tasks/');
 
 /**
  * Browser Sync
@@ -120,78 +124,16 @@ gulp.task('cleanup', function() {
     .pipe(notify({ message: 'Clean task complete' }));
 });
 
-
-// ==== Packaging Tasks, File/Directory Moving etc. ==== //
-
-/**
- * Images
- *
- * Look at src/images, optimize the images and send them to the appropriate place
-*/
-gulp.task('buildImages', function() {
-	return gulp.src(source+'img/**/*', '!assets/images/originals/**')
-		// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-		.pipe(gulp.dest(build+'assets/img/'))
-		.pipe(plugins.notify({ message: 'Images task complete' }));
-});
-
-/**
- * Build task that moves essential theme files for production-ready sites
- *
- * First, we're moving PHP files to the build folder for redistribution. Also we're excluding the library, build and src directories. Why?
- * Excluding build prevents recursive copying and Inception levels of bullshit. We exclude library because there are certain non-php files
- * there that need to get moved as well. So I put the library directory into its own task. Excluding src because, well, we don't want to
- * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
-*/
-gulp.task('buildPhp', function() {
-	return gulp.src(['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./build/**','!./library/**','!./src/**'])
-		.pipe(gulp.dest(build))
-		.pipe(notify({ message: 'Moving files complete' }));
-});
-
-// Copy Library to Build
-gulp.task('buildAssets', function() {
-	return gulp.src([source+'**', source+'js/production.js'])
-		.pipe(gulp.dest(build+'/assets'))
-		.pipe(notify({ message: 'Copy of Assets directory complete' }));
-});
-
-// Copy Library to Build
-gulp.task('buildLibrary', function() {
-	return gulp.src(['./library/**'])
-		.pipe(gulp.dest(build+'library'))
-		.pipe(notify({ message: 'Copy of Library directory complete' }));
-});
-
-/**
- * Zipping build directory for distribution
- *
- * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
-*/
-gulp.task('buildZip', function () {
-	return gulp.src(build+'/**/')
-		.pipe(zip(project+'.zip'))
-		.pipe(gulp.dest('./'))
-		.pipe(notify({ message: 'Zip task complete' }));
-});
-
 // ==== TASKS ==== //
-
-// Default task
-gulp.task('default', ['browser-sync'], function(cb) {
-	// gulp.start('styles', 'scripts', 'images', 'clean');
-	runSequence('styles', 'scripts', 'images', 'fonts', 'cleanup', cb);
-	gulp.watch(source+'/sass/**/*.scss', ['styles']);
-});
+/**
+ * Gulp Default Task
+ *
+ * Compiles styles, fires-up browser sync, watches js and php files. Note browser sync task watches php files
+ * EXTRA NOTE - Build task has been moved to /tasks/build.js
+*/
 
 // Watch Task
-gulp.task('watch', ['styles', 'browser-sync'], function () {
+gulp.task('default', ['styles', 'browser-sync'], function () {
     gulp.watch(source+"sass/**/*.scss", ['styles']);
     gulp.watch(source+"js/*.js", ['js', browserSync.reload]);
 });
-
-// Package Distributable Theme
-gulp.task('build', function(cb) {
-	runSequence('cleanup', 'styles', 'scripts', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanup', cb);
-});
-
