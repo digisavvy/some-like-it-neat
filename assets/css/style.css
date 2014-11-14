@@ -1056,8 +1056,8 @@ body {
   text-align: center;
 }
 .site-branding .site-title {
-  padding-top: 40px;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  padding: 40px;
 }
 @media screen and (min-width: 200px) {
   .site-branding .site-title {
@@ -1076,6 +1076,9 @@ body {
     font-size: 75px;
     font-size: 4.6875rem;
   }
+}
+.site-branding .site-title a, .site-branding .site-title a:visited {
+  line-height: 1;
 }
 .site-branding .site-description {
   padding: 25px 0;
