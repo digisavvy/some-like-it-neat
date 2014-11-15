@@ -1239,6 +1239,26 @@ body {
   color: #666;
 }
 
+.menu-button:hover {
+  color: #fff;
+}
+.menu-button:hover i.navicon {
+  color: #fff;
+}
+.menu-button:hover i.navicon:after {
+  color: #fff;
+  content: 'Menu';
+}
+.menu-button i.navicon {
+  display: block !important;
+  position: relative;
+  right: 30px;
+}
+.menu-button i.navicon:after {
+  color: #555;
+  content: 'Menu';
+}
+
 @media all and (min-width: 800px) {
   body.one-page {
     padding-top: 70px;

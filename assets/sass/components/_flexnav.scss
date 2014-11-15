@@ -151,7 +151,27 @@ $fourth_level: #cbcbc9;
 		}
 	}
 }
-
+.menu-button {
+	&:hover {
+		color: #fff;
+		i.navicon {
+			color: #fff;
+				&:after {
+					color: #fff;
+					content:'Menu';
+			}
+		}
+	}
+	i.navicon {
+		display: block !important;
+		position: relative;
+		right: 30px;
+		&:after {
+			color: #555;
+			content:'Menu';
+		}
+	}
+}
 @media all and (min-width: 800px) {
 	body.one-page {
 		padding-top: 70px;
