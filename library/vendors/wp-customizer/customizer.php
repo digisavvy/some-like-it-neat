@@ -99,7 +99,7 @@ $wp_customize->add_control(
 	)
 );
 
-// Mobile Nav Icon
+// Mobile Nav Icon Text
 $wp_customize->add_setting(
 'digistarter_mobile_nav_icon',
 	array(
@@ -113,6 +113,24 @@ $wp_customize->add_control(
 		'section'			=> 'nav',
 		'label'				=> 'Mobile Navigation Icon',
 		'type'				=> 'text'
+	)
+);
+
+// Mobile genesis_pre_load_favicon
+$wp_customize->add_setting(
+	'digistarter_mobile_hide_arrow',
+	array(
+		'default'		=> "No",
+		'sanitize_callback'	=> 'digistarter_sanitize_checkbox'
+	)
+);
+$wp_customize->add_control(
+	'digistarter_mobile_hide_arrow',
+	array(
+		'section'			=> 'nav',
+		'label'				=> 'Mobile Navigation Hide Right Arrow',
+		'type'				=> 'radio',
+		'choices'			=> array("Yes", "No"),
 	)
 );
 
@@ -164,6 +182,6 @@ add_action( 'customize_register', 'digistarter_add_customizer_theme_options' );
  */
 
 function digistarter_customize_preview_js() {
-    wp_enqueue_script( 'digistarter_customizer', get_template_directory_uri() . '/library/vendors/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+    wp_enqueue_script( 'digistarter_customizer', get_template_directory_uri() . '/library/vendors/wp-customizer/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'digistarter_customize_preview_js' );

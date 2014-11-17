@@ -2,7 +2,8 @@
 	text-align: center;
 
 	.site-title {
-		padding-top: 40px;
+		font-family: $title;
+		padding: 40px;
 
 		@include media($sm) {
 			@include fontSize(35px);
@@ -13,7 +14,11 @@
 		@include media($md) {
 			@include fontSize(75px);
 		}
-		font-family: $title;
+
+		a,a:visited {
+			line-height: 1;
+		}
+
 	}
 
 	.site-description {
