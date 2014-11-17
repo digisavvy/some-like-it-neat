@@ -32,7 +32,6 @@ var gulp = require('gulp'),
 	zip = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
 	plumber = require('gulp-plumber'), // Helps prevent stream crashing on errors
 	pipe = require('gulp-coffee'),
-	requireDir = require('require-dir'),
 	cache = require('gulp-cache');
 
 /**
