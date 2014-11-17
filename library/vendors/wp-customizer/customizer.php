@@ -182,6 +182,6 @@ add_action( 'customize_register', 'digistarter_add_customizer_theme_options' );
  */
 
 function digistarter_customize_preview_js() {
-    wp_enqueue_script( 'digistarter_customizer', get_template_directory_uri() . '/library/vendors/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+    wp_enqueue_script( 'digistarter_customizer', get_template_directory_uri() . '/library/vendors/wp-customizer/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'digistarter_customize_preview_js' );
