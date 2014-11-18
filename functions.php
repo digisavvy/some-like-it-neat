@@ -233,11 +233,11 @@ if ( !function_exists('digistarter_add_footer_divs') ) :
 	function digistarter_add_footer_divs() { ?>
 
 		<div class="footer-left">
-			 <?php echo esc_attr( get_theme_mod( 'digistarter_footer_left' ) ); ?>
+			 <?php echo esc_attr( get_theme_mod( 'digistarter_footer_left', '© All Rights Reserved' ) ); ?>
 
 		</div>
 		<div class="footer-right">
-			<?php echo esc_attr( get_theme_mod( 'digistarter_footer_right' ) );  ?>
+			<?php echo esc_attr( get_theme_mod( 'digistarter_footer_right', 'Footer Content Right' ) );  ?>
 		</div>
 <?php }
 add_action( 'tha_footer_bottom', 'digistarter_add_footer_divs' );

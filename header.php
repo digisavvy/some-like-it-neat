@@ -36,7 +36,7 @@
 
 			<nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 				<button class="menu-button">
-					<span class="dashicons <?php echo get_theme_mod( 'digistarter_mobile_nav_icon' ); ?>"></span><?php echo get_theme_mod( 'digistarter_mobile_nav_label' ); ?>
+					<span class="dashicons <?php echo get_theme_mod( 'digistarter_mobile_nav_icon', 'dashicons-menu' ); ?>"></span><?php echo get_theme_mod( 'digistarter_mobile_nav_label', 'Menu' ); ?>
 				</button>
 				<?php 	wp_nav_menu( array(
 					    'theme_location' => 'primary-navigation',
