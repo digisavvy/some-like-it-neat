@@ -1,9 +1,25 @@
+### 1.1.6
+-------------
+
+**Features:**
+
+*
+
+**Bugfixes:**
+
+*
+
 ### 1.1.5
 -------------
 
 **Features:**
 
 * Adding sass files for page templates
+* Accessibility Improvements
+
+**Bugfixes:**
+
+* Fixed issue with multiple line endings in production.js
 
 ### 1.1.4
 -------------
