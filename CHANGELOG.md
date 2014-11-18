@@ -7,6 +7,7 @@
 
 **Bugfixes:**
 
+* Fixed issue with Customizer Defaults not showing on front-end upon theme activation
 *
 
 ### 1.1.5
