@@ -92,7 +92,7 @@ function digistarter_comment( $comment, $args, $depth ) {
 				</div><!-- .comment-author -->
 
 				<div class="comment-metadata">
-					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>" title="<?php echo get_the_title( ); ?>">
+					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
 							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'digistarter' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
@@ -143,11 +143,11 @@ function digistarter_posted_on() {
 	);
 
 	printf( __( '<span class="posted-on" itemprop="datePublished" >Posted on %1$s</span><span class="byline" itemscope itemtype="http://schema.org/Person"> <span itemprop="author" > by %2$s</span></span>', 'digistarter' ),
-		sprintf( '<a href="%1$s" rel="bookmark" title="'.esc_url( get_permalink() ).'">%2$s</a>',
+		sprintf( '<a href="%1$s" rel="bookmark" >%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
 		),
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="'.esc_html( get_the_author() ).'">%2$s</a></span>',
+		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 			esc_html( get_the_author() )
 		)

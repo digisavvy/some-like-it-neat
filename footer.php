@@ -15,7 +15,7 @@
 			<?php tha_footer_top(); ?>
 			<div class="site-info">
 				<?php do_action( 'digistarter_credits' ); ?>
-				<a href="http://wordpress.org/" rel="generator" title="Powered by WordPress"><?php printf( __( 'Proudly powered by <span class="genericon genericon-wordpress"></span> %s', 'digistarter' ), 'WordPress' ); ?></a>
+				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by <span class="genericon genericon-wordpress"></span> %s', 'digistarter' ), 'WordPress' ); ?></a>
 				<span class="sep"> | </span>
 
 				<?php echo esc_attr( get_theme_mod( 'digistarter_footer_colophon', 'Some Like it Neat, by Alex Vasquez' ) );  ?><br />
