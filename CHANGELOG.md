@@ -1,14 +1,24 @@
+### 1.1.7
+-------------
+
+**Features:**
+* Improve Accessibility
+*** Removed Link Title Text in all page templates
+*** Created greater contrast for menus and buttons
+***
+
+**Bugfixes:**
+* Replace touch button navicon with nav button now that Customizer properly shows on default
+
 ### 1.1.6
 -------------
 
 **Features:**
 
-*
 
 **Bugfixes:**
 
 * Fixed issue with Customizer Defaults not showing on front-end upon theme activation
-*
 
 ### 1.1.5
 -------------
