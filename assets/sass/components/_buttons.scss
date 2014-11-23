@@ -68,7 +68,10 @@
 }
 
 #submit {
-	@include neat-buttons($button-bg: #ccc );
+	@include neat-buttons($button-bg: #000, $border-color: #555 );
+		&:hover {
+			background-color: #555;
+		}
 }
 
 .neat-button {
