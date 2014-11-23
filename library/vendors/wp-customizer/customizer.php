@@ -64,8 +64,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 */
 
 // Mobile nav label
-
-
 $wp_customize->add_setting(
 	'digistarter_mobile_nav_label',
 		array(
@@ -116,7 +114,7 @@ $wp_customize->add_control(
 	)
 );
 
-// Mobile genesis_pre_load_favicon
+// Mobile Settings
 $wp_customize->add_setting(
 	'digistarter_mobile_hide_arrow',
 	array(
@@ -171,6 +169,23 @@ $wp_customize->add_control(
 		'section'	=> 'digistarter_footer_section_settings',
 		'label'		=> 'Right Footer',
 		'type'		=> 'text'
+	)
+);
+
+$wp_customize->add_setting(
+'digistarter_footer_colophon',
+	array(
+		'default'			=> 'Some Like it Neat, by Alex Vasquez',
+		'sanitize_callback'	=> 'digistarter_sanitize_text'
+	)
+);
+$wp_customize->add_control(
+'digistarter_footer_colophon',
+	array(
+		'section'		=> 'digistarter_footer_section_settings',
+		'label'			=> 'Footer Colophon',
+		'type'			=> 'text',
+		'transport'	=> 'postMessage'
 	)
 );
 
