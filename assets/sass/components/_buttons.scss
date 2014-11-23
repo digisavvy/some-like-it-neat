@@ -82,3 +82,10 @@
 .neat-3d-button {
 	@include neat-3d-buttons();
 }
+
+input[type="submit"] {
+	@include neat-buttons($button-bg: #000, $border-color: #555 );
+		&:hover {
+			background-color: #555;
+		}
+}

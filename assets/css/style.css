@@ -5,7 +5,7 @@ Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
 Author URI: http://alexhasnicehair.com
 Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
-Version: 1.1.6
+Version: 1.1.7
 License: GNU General Public License
 License URI: license.txt
 Text Domain: digistarter
@@ -954,6 +954,41 @@ a:hover, a:visited:hover {
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   padding: 20px;
+}
+
+input[type="submit"] {
+  background: black;
+  border: solid 5px #555555;
+  border-radius: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  clear: both;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  margin: 10px 0;
+  padding: 20px;
+  -webkit-transition: all 200ms ease-in-out;
+          transition: all 200ms ease-in-out;
+}
+input[type="submit"]:focus {
+  background: black;
+  border: solid 5px #222222;
+  border-radius: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  padding: 20px;
+}
+input[type="submit"]:hover {
+  background: black;
+  border: solid 5px #222222;
+  border-radius: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  padding: 20px;
+}
+input[type="submit"]:hover {
+  background-color: #555;
 }
 
 /*--------------------------------------------------------------
