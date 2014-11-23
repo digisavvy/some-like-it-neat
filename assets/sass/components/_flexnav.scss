@@ -1,10 +1,10 @@
 /* Flexnav Base Styles */
 
-$nav_text: #222;
-$top_level: #a6a6a2;
-$second_level: #b2b2af;
-$third_level: #bfbfbc;
-$fourth_level: #cbcbc9;
+$nav_text: #fff;
+$top_level: #000;
+$second_level: #333;
+$third_level: #666;
+$fourth_level: #999;
 
 .flexnav {
 	overflow: hidden;
@@ -140,7 +140,7 @@ $fourth_level: #cbcbc9;
 		right: 0;
 		width: 50px;
 		height: 50px;
-		display: inline-block;
+		display: none;
 		text-align: center;
 
 		.navicon {

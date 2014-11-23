@@ -8,7 +8,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemType="http://schema.org/AudioObject">
 	<?php tha_entry_top(); ?>
 	<header class="entry-header">
-		<h1 class="entry-title" itemprop="name"><a href="<?php the_permalink(); ?>" title ="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h1 class="entry-title" itemprop="name"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">

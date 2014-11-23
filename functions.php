@@ -40,6 +40,13 @@ function digistarter_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+	/*
+	 * Add Editor Style for adequate styling in text editor.
+	 *
+	 * @link http://codex.wordpress.org/Function_Reference/add_editor_style
+	 */
+	add_editor_style( '/assets/css/style.css' );
+
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'digistarter' ) );
 
@@ -233,11 +240,11 @@ if ( !function_exists('digistarter_add_footer_divs') ) :
 	function digistarter_add_footer_divs() { ?>
 
 		<div class="footer-left">
-			 <?php echo esc_attr( get_theme_mod( 'digistarter_footer_left' ) ); ?>
+			 <?php echo esc_attr( get_theme_mod( 'digistarter_footer_left', '© All Rights Reserved' ) ); ?>
 
 		</div>
 		<div class="footer-right">
-			<?php echo esc_attr( get_theme_mod( 'digistarter_footer_right' ) );  ?>
+			<?php echo esc_attr( get_theme_mod( 'digistarter_footer_right', 'Footer Content Right' ) );  ?>
 		</div>
 <?php }
 add_action( 'tha_footer_bottom', 'digistarter_add_footer_divs' );
