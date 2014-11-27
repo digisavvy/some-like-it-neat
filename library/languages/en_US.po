@@ -1,0 +1,701 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Some Like it Neat\n"
+"POT-Creation-Date: 2014-11-26 22:05-0800\n"
+"PO-Revision-Date: 2014-11-26 22:06-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.10\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr ""
+
+#. translators: %1$s: smiley
+#: 404.php:44
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr ""
+
+#: archive.php:32
+#, php-format
+msgid "Author: %s"
+msgstr ""
+
+#: archive.php:40
+#, php-format
+msgid "Day: %s"
+msgstr ""
+
+#: archive.php:43
+#, php-format
+msgid "Month: %s"
+msgstr ""
+
+#: archive.php:43
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:46
+#, php-format
+msgid "Year: %s"
+msgstr ""
+
+#: archive.php:46
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:49
+msgid "Asides"
+msgstr ""
+
+#: archive.php:52
+msgid "Images"
+msgstr ""
+
+#: archive.php:55
+msgid "Videos"
+msgstr ""
+
+#: archive.php:58
+msgid "Quotes"
+msgstr ""
+
+#: archive.php:61
+msgid "Links"
+msgstr ""
+
+#: archive.php:67 sidebar.php:19
+msgid "Archives"
+msgstr ""
+
+#: comments.php:31
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:38 comments.php:58
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:39 comments.php:59
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:40 comments.php:60
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:70
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:18
+#, php-format
+msgid ""
+"Proudly powered by <span class=\"genericon genericon-wordpress\"></span> %s"
+msgstr ""
+
+#: footer.php:21
+msgid "Some Like it Neat, by Alex Vasquez"
+msgstr ""
+
+#: functions.php:51
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:141
+msgid "Sidebar"
+msgstr ""
+
+#: header.php:27
+msgid "Skip to content"
+msgstr ""
+
+#: library/vendors/extras.php:63
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: library/vendors/template-tags.php:23
+msgid "Posts navigation"
+msgstr ""
+
+#: library/vendors/template-tags.php:27
+msgid "<span class=\"meta-nav prev\">&larr;</span> Older posts"
+msgstr ""
+
+#: library/vendors/template-tags.php:31
+msgid "Newer posts <span class=\"meta-nav next\">&rarr;</span>"
+msgstr ""
+
+#: library/vendors/template-tags.php:56
+msgid "Post navigation"
+msgstr ""
+
+#: library/vendors/template-tags.php:59
+msgctxt "Previous post link"
+msgid "<span class=\"meta-nav prev\">&larr;</span> %title"
+msgstr ""
+
+#: library/vendors/template-tags.php:60
+msgctxt "Next post link"
+msgid "%title <span class=\"meta-nav next\">&rarr;</span>"
+msgstr ""
+
+#: library/vendors/template-tags.php:81
+msgid "Pingback:"
+msgstr ""
+
+#: library/vendors/template-tags.php:81 library/vendors/template-tags.php:100
+#: page-templates/partials/content-aside.php:30
+#: page-templates/partials/content-aside.php:40
+#: page-templates/partials/content-audio.php:69
+#: page-templates/partials/content-chat.php:69
+#: page-templates/partials/content-gallery.php:69
+#: page-templates/partials/content-image.php:69
+#: page-templates/partials/content-link.php:69
+#: page-templates/partials/content-page.php:29
+#: page-templates/partials/content-quote.php:69
+#: page-templates/partials/content-single.php:64
+#: page-templates/partials/content-status.php:69
+#: page-templates/partials/content-video.php:69
+#: page-templates/partials/content.php:71
+msgid "Edit"
+msgstr ""
+
+#: library/vendors/template-tags.php:91
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr ""
+
+#: library/vendors/template-tags.php:97
+#, php-format
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: library/vendors/template-tags.php:104
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: library/vendors/template-tags.php:145
+#, php-format
+msgid ""
+"<span class=\"posted-on\" itemprop=\"datePublished\" >Posted on %1$s</"
+"span><span class=\"byline\" itemscope itemtype=\"http://schema.org/Person\"> "
+"<span itemprop=\"author\" > by %2$s</span></span>"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:161
+#: library/vendors/tgm-plugin-activation/required-plugins.php:101
+msgid "Install Required Plugins"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:162
+#: library/vendors/tgm-plugin-activation/required-plugins.php:102
+msgid "Install Plugins"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:163
+#: library/vendors/tgm-plugin-activation/required-plugins.php:103
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:164
+msgid "Something went wrong."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:165
+#: library/vendors/tgm-plugin-activation/required-plugins.php:105
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:166
+#: library/vendors/tgm-plugin-activation/required-plugins.php:106
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:167
+#: library/vendors/tgm-plugin-activation/required-plugins.php:107
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to install the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins installed."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:168
+#: library/vendors/tgm-plugin-activation/required-plugins.php:108
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:169
+#: library/vendors/tgm-plugin-activation/required-plugins.php:109
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:170
+#: library/vendors/tgm-plugin-activation/required-plugins.php:110
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugins. Contact the administrator of this site for help on getting the "
+"plugins activated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:171
+#: library/vendors/tgm-plugin-activation/required-plugins.php:111
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:172
+#: library/vendors/tgm-plugin-activation/required-plugins.php:112
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgid_plural ""
+"Sorry, but you do not have the correct permissions to update the %s plugins. "
+"Contact the administrator of this site for help on getting the plugins "
+"updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:173
+#: library/vendors/tgm-plugin-activation/required-plugins.php:113
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:174
+#: library/vendors/tgm-plugin-activation/required-plugins.php:114
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:175
+#: library/vendors/tgm-plugin-activation/required-plugins.php:115
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:176
+msgid "Return to the dashboard"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:177
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1943
+#: library/vendors/tgm-plugin-activation/required-plugins.php:116
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:178
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1634
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:179
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:180
+msgid "Dismiss this notice"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:534
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2160
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1169
+msgid "Private Repository"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1172
+msgid "Pre-Packaged"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1177
+msgid "WordPress Repository"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1180
+msgid "Required"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1180
+msgid "Recommended"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1183
+msgid "Not Installed"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1185
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1290
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1398
+msgid "Install"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1312
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1399
+msgid "Activate"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1361
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1377
+msgid "Plugin"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1378
+msgid "Source"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1379
+msgid "Type"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1380
+msgid "Status"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1926
+msgid "Install package not available."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1927
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1928
+msgid "Unpacking the package&#8230;"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1929
+msgid "Installing the plugin&#8230;"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1930
+msgid "Plugin install failed."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1931
+msgid "Plugin installed successfully."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:1942
+msgid "Plugin activation failed."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2056
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2057
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2057
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2066
+msgid "Show Details"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2057
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2066
+msgid "Hide Details"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2058
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2059
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2063
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2064
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2065
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2066
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2067
+msgid "All installations have been completed."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php:2068
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/required-plugins.php:104
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: library/vendors/tgm-plugin-activation/required-plugins.php:117
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: page-templates/partials/content-aside.php:19
+#: page-templates/partials/content-audio.php:28
+#: page-templates/partials/content-chat.php:28
+#: page-templates/partials/content-gallery.php:28
+#: page-templates/partials/content-image.php:28
+#: page-templates/partials/content-link.php:28
+#: page-templates/partials/content-quote.php:28
+#: page-templates/partials/content-status.php:28
+#: page-templates/partials/content-video.php:28
+#: page-templates/partials/content.php:30
+#, php-format
+msgid "Continue reading%s &rarr;"
+msgstr ""
+
+#: page-templates/partials/content-aside.php:24
+#: page-templates/partials/content-audio.php:35
+#: page-templates/partials/content-chat.php:35
+#: page-templates/partials/content-gallery.php:35
+#: page-templates/partials/content-image.php:35
+#: page-templates/partials/content-link.php:35
+#: page-templates/partials/content-page.php:23
+#: page-templates/partials/content-quote.php:35
+#: page-templates/partials/content-single.php:23
+#: page-templates/partials/content-status.php:35
+#: page-templates/partials/content-video.php:35
+#: page-templates/partials/content.php:37
+msgid "Pages:"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: page-templates/partials/content-audio.php:46
+#: page-templates/partials/content-audio.php:56
+#: page-templates/partials/content-chat.php:46
+#: page-templates/partials/content-chat.php:56
+#: page-templates/partials/content-gallery.php:46
+#: page-templates/partials/content-gallery.php:56
+#: page-templates/partials/content-image.php:46
+#: page-templates/partials/content-image.php:56
+#: page-templates/partials/content-link.php:46
+#: page-templates/partials/content-link.php:56
+#: page-templates/partials/content-quote.php:46
+#: page-templates/partials/content-quote.php:56
+#: page-templates/partials/content-single.php:33
+#: page-templates/partials/content-single.php:36
+#: page-templates/partials/content-status.php:46
+#: page-templates/partials/content-status.php:56
+#: page-templates/partials/content-video.php:46
+#: page-templates/partials/content-video.php:56
+#: page-templates/partials/content.php:48
+#: page-templates/partials/content.php:58
+msgid ", "
+msgstr ""
+
+#: page-templates/partials/content-audio.php:50
+#: page-templates/partials/content-chat.php:50
+#: page-templates/partials/content-gallery.php:50
+#: page-templates/partials/content-image.php:50
+#: page-templates/partials/content-link.php:50
+#: page-templates/partials/content-quote.php:50
+#: page-templates/partials/content-status.php:50
+#: page-templates/partials/content-video.php:50
+#: page-templates/partials/content.php:52
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: page-templates/partials/content-audio.php:60
+#: page-templates/partials/content-chat.php:60
+#: page-templates/partials/content-gallery.php:60
+#: page-templates/partials/content-image.php:60
+#: page-templates/partials/content-link.php:60
+#: page-templates/partials/content-quote.php:60
+#: page-templates/partials/content-status.php:60
+#: page-templates/partials/content-video.php:60
+#: page-templates/partials/content.php:62
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: page-templates/partials/content-audio.php:66
+#: page-templates/partials/content-chat.php:66
+#: page-templates/partials/content-gallery.php:66
+#: page-templates/partials/content-image.php:66
+#: page-templates/partials/content-link.php:66
+#: page-templates/partials/content-quote.php:66
+#: page-templates/partials/content-status.php:66
+#: page-templates/partials/content-video.php:66
+#: page-templates/partials/content.php:68
+msgid "Leave a comment"
+msgstr ""
+
+#: page-templates/partials/content-audio.php:66
+#: page-templates/partials/content-chat.php:66
+#: page-templates/partials/content-gallery.php:66
+#: page-templates/partials/content-image.php:66
+#: page-templates/partials/content-link.php:66
+#: page-templates/partials/content-quote.php:66
+#: page-templates/partials/content-status.php:66
+#: page-templates/partials/content-video.php:66
+#: page-templates/partials/content.php:68
+msgid "1 Comment"
+msgstr ""
+
+#: page-templates/partials/content-audio.php:66
+#: page-templates/partials/content-chat.php:66
+#: page-templates/partials/content-gallery.php:66
+#: page-templates/partials/content-image.php:66
+#: page-templates/partials/content-link.php:66
+#: page-templates/partials/content-quote.php:66
+#: page-templates/partials/content-status.php:66
+#: page-templates/partials/content-video.php:66
+#: page-templates/partials/content.php:68
+msgid "% Comments"
+msgstr ""
+
+#: page-templates/partials/content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: page-templates/partials/content-none.php:20
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: page-templates/partials/content-none.php:24
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: page-templates/partials/content-none.php:29
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: page-templates/partials/content-single.php:41
+#, php-format
+msgid ""
+"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+
+#: page-templates/partials/content-single.php:43
+#, php-format
+msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: page-templates/partials/content-single.php:49
+#, php-format
+msgid ""
+"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
+"rel=\"bookmark\">permalink</a>."
+msgstr ""
+
+#: page-templates/partials/content-single.php:51
+#, php-format
+msgid ""
+"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: sidebar.php:26
+msgid "Meta"
+msgstr ""
