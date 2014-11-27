@@ -196,9 +196,10 @@ $fourth_level: #999;
 			width: 25%;
 		}
 		li a {
+			border-bottom: 1px solid #acaca1;
 			border-left: 1px solid #acaca1;
 			border-right: 1px solid #acaca1;
-			border-bottom: none;
+			border-top: 1px solid #acaca1;
 		}
 		li > ul {
 			position: absolute;
