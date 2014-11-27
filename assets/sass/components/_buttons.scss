@@ -1,4 +1,4 @@
-@mixin neat-buttons($border-color: #ccc, $border-radius: 50px, $button-padding: 20px, $button-bg: #ffffff ) {
+@mixin neat-buttons($border-color: #ccc, $border-radius: 0, $button-padding: 20px, $button-bg: #ffffff ) {
 	background: $button-bg;
 	border: solid 5px $border-color;
 	border-radius: $border-radius;
@@ -28,7 +28,7 @@
 	}
 }
 
-@mixin neat-3d-buttons($border-color: #ccc, $border-radius: 10px, $button-padding: 20px, $button-bg: #ffffff) {
+@mixin neat-3d-buttons($border-color: #ccc, $border-radius: 0, $button-padding: 20px, $button-bg: #ffffff) {
 	background: $button-bg;
 	border-top: solid 3px $border-color;
 	border-right: solid 3px $border-color;
@@ -68,7 +68,7 @@
 }
 
 #submit {
-	@include neat-buttons($button-bg: #000, $border-color: #555 );
+	@include neat-buttons($button-bg: #000, $border-radius: 0, $border-color: #555 );
 		&:hover {
 			background-color: #555;
 		}
@@ -84,8 +84,14 @@
 }
 
 input[type="submit"] {
-	@include neat-buttons($button-bg: #000, $border-color: #555 );
+	@include neat-buttons($button-bg: #000, $border-radius: 0, $border-color: #555 );
+	margin: 0;
+	padding: 8px;
 		&:hover {
 			background-color: #555;
 		}
+}
+input#s {
+	float: left;
+	width: 70%;
 }
