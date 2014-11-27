@@ -1,3 +1,11 @@
+### 1.1.8
+-------------
+
+**Features:**
+* Push for Internationalization and Localization
+*** Translations for EN US
+*** Transoations for Spanish (I hope...)
+
 ### 1.1.7
 -------------
 
