@@ -1,0 +1,341 @@
+# Copyright (C) 2013 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Some Like it Neat 1.3-wpcom\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/some-like-it-neat\n"
+"POT-Creation-Date: 2013-09-25 22:06:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2014-11-26 22:38-0800\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.6.10\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: es\n"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "¡Huy! Esa página no se puede encontrar."
+
+#: 404.php:19
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Parece que no se encontró nada en este lugar. Tal vez probar uno de los "
+"enlaces de abajo o una búsqueda?"
+
+#: 404.php:27
+msgid "Most Used Categories"
+msgstr "Categorías más usados"
+
+#. translators: %1$s: smiley
+#: 404.php:44
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Trate de buscar en los archivos mensuales. %1$s"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "Autor: %s"
+
+#: archive.php:39
+msgid "Day: %s"
+msgstr "Día: %s"
+
+#: archive.php:42
+msgid "Month: %s"
+msgstr "Mes: %s"
+
+#: archive.php:45
+msgid "Year: %s"
+msgstr "Año: %s"
+
+#: archive.php:48
+msgid "Asides"
+msgstr "Los apartes"
+
+#: archive.php:51
+msgid "Images"
+msgstr "Imágenes"
+
+#: archive.php:54
+msgid "Videos"
+msgstr "Videos"
+
+#: archive.php:57
+msgid "Quotes"
+msgstr "Comillas"
+
+#: archive.php:60
+msgid "Links"
+msgstr "Enlaces"
+
+#: archive.php:63 sidebar.php:17
+msgid "Archives"
+msgstr "Archivo"
+
+#: comments.php:29
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un pensamiento en &ldquo;%2$s&rdquo;"
+msgstr[1] "Un pensamiento en &ldquo;%2$s&rdquo;"
+
+#: comments.php:36 comments.php:56
+msgid "Comment navigation"
+msgstr "Comentario de navegación"
+
+#: comments.php:37 comments.php:57
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios más viejos"
+
+#: comments.php:38 comments.php:58
+msgid "Newer Comments &rarr;"
+msgstr "Fecha Comentarios &rarr;"
+
+#: comments.php:68
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr "nada Encontrado"
+
+#: content-none.php:19
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Listo para publicar su primer post? <a href=\"%1$s\"> Iniciar aquí </a>."
+
+#: content-none.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Lo sentimos, pero no hay nada igualó los términos de búsqueda. Inténtalo de "
+"nuevo con algunas palabras clave diferentes."
+
+#: content-none.php:28
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Parece que no podemos encontrar lo que estás buscando. Puede que la búsqueda "
+"puede ayudar."
+
+#: content-page.php:18 content-single.php:20 content.php:27 image.php:58
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: content-page.php:23 content-single.php:60 content.php:61 image.php:32
+#: image.php:64 inc/template-tags.php:71 inc/template-tags.php:90
+msgid "Edit"
+msgstr "editar"
+
+#. translators: used between list items, there is a space after the comma
+#: content-single.php:29 content-single.php:32 content.php:38 content.php:48
+msgid ", "
+msgstr ", "
+
+#: content-single.php:37
+msgid ""
+"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"Esta entrada fue etiquetado %2$s. ookmark la <a href=\"%3$s\" rel=\"bookmark"
+"\"> permanente </a>."
+
+#: content-single.php:39
+msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Guarda el enlace permanente <a href=\"%3$s\" rel=\"bookmark\">enlace "
+"permanente </a>."
+
+#: content-single.php:45
+msgid ""
+"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
+"rel=\"bookmark\">permalink</a>."
+msgstr ""
+"Esta entrada fue publicada en %1$s y etiquetado %2$s. Marcar el <a href="
+"\"%3$s\" rel=\"bookmark\">permanente</a>."
+
+#: content-single.php:47
+msgid ""
+"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
+"\">permalink</a>."
+msgstr ""
+"Esta entrada fue publicada en %1$s. Marcar el <a href=\"%3$s\" rel=\"bookmark"
+"\">permanente</a>."
+
+#: content.php:24
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Seguir leyendo <span class=\"meta-nav\">&rarr;</span>"
+
+#: content.php:42
+msgid "Posted in %1$s"
+msgstr "Publicado en %1$s"
+
+#: content.php:52
+msgid "Tagged %1$s"
+msgstr "Etiquetado %1$s"
+
+#: content.php:58
+msgid "Leave a comment"
+msgstr "Deja un comentario"
+
+#: content.php:58
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: content.php:58
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: footer.php:16
+msgid "Proudly powered by %s"
+msgstr "Con la tecnología de %s"
+
+#: footer.php:18
+msgid "Theme: %1$s by %2$s."
+msgstr "tema: %1$s by %2$s."
+
+#: functions.php:48
+msgid "Primary Menu"
+msgstr "Menú primaria"
+
+#: functions.php:72
+msgid "Sidebar"
+msgstr "Sidebar"
+
+#: header.php:31
+msgid "Menu"
+msgstr "menú"
+
+#: header.php:32
+msgid "Skip to content"
+msgstr "Saltear el contenido"
+
+#: image.php:22
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+"publicado <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> en <a href=\"%3$s\">%4$s &times; %5$s</a> en <a "
+"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+
+#: image.php:37
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> anterior"
+
+#: image.php:38
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "¡Siguiente <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/extras.php:66
+msgid "Page %s"
+msgstr "pagina %s"
+
+#: inc/template-tags.php:34
+msgid "Post navigation"
+msgstr "Mensaje de navegación"
+
+#: inc/template-tags.php:38
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/template-tags.php:39
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/template-tags.php:44
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Las entradas más antiguas"
+
+#: inc/template-tags.php:48
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Los mensajes más recientes  <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:71
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/template-tags.php:81
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">dice:</span>"
+
+#: inc/template-tags.php:87
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s en %2$s"
+
+#: inc/template-tags.php:94
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario está esperando ser moderado."
+
+#: inc/template-tags.php:185
+msgid ""
+"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
+"%2$s</span>"
+msgstr ""
+"<span class=\"posted-on\">Publicado el %1$s</span><span class=\"byline\"> "
+"por %2$s</span>"
+
+#: search.php:16
+msgid "Search Results for: %s"
+msgstr "Resultados de la búsqueda para: %s"
+
+#: searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr "Buscar:"
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "búsqueda &hellip;"
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "búsqueda"
+
+#: sidebar.php:24
+msgid "Meta"
+msgstr "Meta"
+
+#. Theme Name of the plugin/theme
+msgid "Some Like it Neat"
+msgstr "Some Like it Neat"
+
+#. Theme URI of the plugin/theme
+msgid "http://somelikeitneat.com"
+msgstr "http://somelikeitneat.com"
+
+#. Description of the plugin/theme
+msgid ""
+"<code>Some Like it Neat</code> is a simple yet advanced Starter Theme built "
+"using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://"
+"neat.bourbon.io). Please refer to the README.md file for basic usage "
+"instructions and prerequisites. You can always grab the latest version over "
+"at http://github.com/digisavvy.some-like-it-neat"
+msgstr ""
+"<code> Some Like it Neat </ code> es una simple y avanzada Tema de arranque "
+"construido utilizando _S, Bourbon y puro (http://underscores.me, http://"
+"bourbon.io, http: //neat.bourbon. io). Por favor, consulte el archivo README."
+"md para las instrucciones y los requisitos previos de uso básicos. Siempre "
+"se puede obtener la última versión de encima en http://github.com/digisavvy."
+"some-like-it-neat"
+
+#. Author of the plugin/theme
+msgid "Alex Vasquez, DigiSavvy"
+msgstr "Alex Vasquez, DigiSavvy"
+
+#. Author URI of the plugin/theme
+msgid "http://automattic.com/"
+msgstr "http://automattic.com/"
