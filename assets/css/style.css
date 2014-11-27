@@ -852,7 +852,7 @@ a:hover, a:visited:hover {
 #submit {
   background: black;
   border: solid 5px #555555;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   clear: both;
@@ -865,7 +865,7 @@ a:hover, a:visited:hover {
 #submit:focus {
   background: black;
   border: solid 5px #222222;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -874,7 +874,7 @@ a:hover, a:visited:hover {
 #submit:hover {
   background: black;
   border: solid 5px #222222;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -887,7 +887,7 @@ a:hover, a:visited:hover {
 .neat-button {
   background: white;
   border: solid 5px #cccccc;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   clear: both;
@@ -900,7 +900,7 @@ a:hover, a:visited:hover {
 .neat-button:focus {
   background: #f2f2f2;
   border: solid 5px #999999;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -909,7 +909,7 @@ a:hover, a:visited:hover {
 .neat-button:hover {
   background: #f2f2f2;
   border: solid 5px #999999;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -922,7 +922,7 @@ a:hover, a:visited:hover {
   border-right: solid 3px #cccccc;
   border-left: solid 3px #cccccc;
   border-bottom: solid 5px #999;
-  border-radius: 0;
+  border-radius: 10px;
   clear: both;
   float: left;
   font-family: oswald;
@@ -937,7 +937,7 @@ a:hover, a:visited:hover {
   border-right: solid 3px #999999;
   border-left: solid 3px #999999;
   border-bottom: solid 3px #999999;
-  border-radius: 0;
+  border-radius: 10px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -949,7 +949,7 @@ a:hover, a:visited:hover {
   border-right: solid 3px #999999;
   border-left: solid 3px #999999;
   border-bottom: solid 3px #999999;
-  border-radius: 0;
+  border-radius: 10px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -959,7 +959,7 @@ a:hover, a:visited:hover {
 input[type="submit"] {
   background: black;
   border: solid 5px #555555;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   clear: both;
@@ -968,13 +968,11 @@ input[type="submit"] {
   padding: 20px;
   -webkit-transition: all 200ms ease-in-out;
           transition: all 200ms ease-in-out;
-  margin: 0;
-  padding: 8px;
 }
 input[type="submit"]:focus {
   background: black;
   border: solid 5px #222222;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -983,7 +981,7 @@ input[type="submit"]:focus {
 input[type="submit"]:hover {
   background: black;
   border: solid 5px #222222;
-  border-radius: 0;
+  border-radius: 50px;
   -webkit-box-shadow: none;
           box-shadow: none;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -991,11 +989,6 @@ input[type="submit"]:hover {
 }
 input[type="submit"]:hover {
   background-color: #555;
-}
-
-input#s {
-  float: left;
-  width: 70%;
 }
 
 /*--------------------------------------------------------------
@@ -1330,10 +1323,9 @@ body {
     width: 25%;
   }
   .flexnav li a {
-    border-bottom: 1px solid #acaca1;
     border-left: 1px solid #acaca1;
     border-right: 1px solid #acaca1;
-    border-top: 1px solid #acaca1;
+    border-bottom: none;
   }
   .flexnav li > ul {
     position: absolute;
