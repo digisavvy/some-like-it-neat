@@ -70,7 +70,7 @@ gulp.task('styles', function () {
 		.pipe(minifycss({ keepSpecialComments: 0 }))
 		.pipe(gulp.dest(source+'css'))
 		.pipe(reload({stream:true})) // Inject Styles when min style file is created
-		.pipe(notify({ message: 'Styles task complete' }))
+		.pipe(notify({ message: 'Styles task complete', onLast: true }))
 });
 
 
@@ -88,7 +88,7 @@ gulp.task('js', function() {
 		.pipe(rename({ suffix: '-min' }))
 		.pipe(uglify())
 		.pipe(gulp.dest(build+'assets/js/'))
-		.pipe(notify({ message: 'Scripts task complete' }));
+		.pipe(notify({ message: 'Scripts task complete', onLast: true }));
 });
 
 /**
@@ -117,7 +117,7 @@ gulp.task('cleanup', function() {
   return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
     // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
     .pipe(rimraf())
-    .pipe(notify({ message: 'Clean task complete' }));
+    .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 
 
@@ -132,21 +132,21 @@ gulp.task('cleanup', function() {
 gulp.task('buildPhp', function() {
 	return gulp.src(['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
-		.pipe(notify({ message: 'Moving files complete' }));
+		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
 
 // Copy Library to Build
 gulp.task('buildAssets', function() {
 	return gulp.src([source+'**', source+'js/production.js'])
 		.pipe(gulp.dest(build+'/assets'))
-		.pipe(notify({ message: 'Copy of Assets directory complete' }));
+		.pipe(notify({ message: 'Copy of Assets directory complete', onLast: true }));
 });
 
 // Copy Library to Build
 gulp.task('buildLibrary', function() {
 	return gulp.src(['./library/**'])
 		.pipe(gulp.dest(build+'library'))
-		.pipe(notify({ message: 'Copy of Library directory complete' }));
+		.pipe(notify({ message: 'Copy of Library directory complete', onLast: true }));
 });
 
 /**
@@ -158,7 +158,7 @@ gulp.task('buildZip', function () {
 	return gulp.src([build+'/**/'])
 		.pipe(zip(project+'.zip'))
 		.pipe(gulp.dest('./'))
-		.pipe(notify({ message: 'Zip task complete' }));
+		.pipe(notify({ message: 'Zip task complete', onLast: true }));
 });
 
 /**
@@ -170,7 +170,7 @@ gulp.task('buildImages', function() {
 	return gulp.src([source+'img/**/*', '!assets/images/originals/**'])
 		// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
 		.pipe(gulp.dest(build+'assets/img/'))
-		.pipe(plugins.notify({ message: 'Images task complete' }));
+		.pipe(plugins.notify({ message: 'Images task complete', onLast: true }));
 });
 
 // ==== TASKS ==== //
