@@ -50,7 +50,7 @@ and Blueprint http://www.blueprintcss.org/
 button,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
-  background-color: #477dca;
+  background-color: #477DCA;
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -74,7 +74,7 @@ input[type="submit"]:disabled {
 body {
   -webkit-font-smoothing: antialiased;
   background-color: white;
-  color: #333333;
+  color: #333;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1em;
   line-height: 1.5;
@@ -123,7 +123,7 @@ p {
 a {
   -webkit-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #477dca;
+  color: #477DCA;
   text-decoration: none;
 }
 a:hover {
@@ -135,7 +135,7 @@ a:active, a:focus {
 }
 
 hr {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -149,7 +149,7 @@ picture {
 }
 
 blockquote {
-  border-left: 2px solid #dddddd;
+  border-left: 2px solid #DDD;
   color: #595959;
   margin: 1.5em 0;
   padding-left: 0.75em;
@@ -165,7 +165,7 @@ cite:before {
 
 fieldset {
   background: #f7f7f7;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   margin: 0 0 0.75em 0;
   padding: 1.5em;
 }
@@ -198,7 +198,7 @@ select[multiple=multiple] {
   transition: border-color;
   background-color: white;
   border-radius: 3px;
-  border: 1px solid #dddddd;
+  border: 1px solid #DDD;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
           box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
@@ -215,7 +215,7 @@ select[multiple=multiple]:hover {
 textarea:focus,
 input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
 select[multiple=multiple]:focus {
-  border-color: #477dca;
+  border-color: #477DCA;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
           box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
   outline: none;
@@ -265,7 +265,7 @@ th {
 }
 
 td {
-  border-bottom: 1px solid #dddddd;
+  border-bottom: 1px solid #DDD;
   padding: 0.75em 0;
 }
 
@@ -790,7 +790,7 @@ h6 {
 
 blockquote {
   background-color: #f9f9f9;
-  border-left: solid 5px red;
+  border-left: solid 5px #ff0000;
   font-style: italic;
   padding: 20px;
 }
@@ -815,7 +815,7 @@ a, a:visited {
 a:hover, a:visited:hover {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  color: red;
+  color: #ff0000;
 }
 
 .entry-title {
@@ -850,8 +850,8 @@ a:hover, a:visited:hover {
 5.0 Components/Add-ons
 --------------------------------------------------------------*/
 #submit {
-  background: black;
-  border: solid 5px #555555;
+  background: #000;
+  border: solid 5px #555;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -885,8 +885,8 @@ a:hover, a:visited:hover {
 }
 
 .neat-button {
-  background: white;
-  border: solid 5px #cccccc;
+  background: #ffffff;
+  border: solid 5px #ccc;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -917,10 +917,10 @@ a:hover, a:visited:hover {
 }
 
 .neat-3d-button {
-  background: white;
-  border-top: solid 3px #cccccc;
-  border-right: solid 3px #cccccc;
-  border-left: solid 3px #cccccc;
+  background: #ffffff;
+  border-top: solid 3px #ccc;
+  border-right: solid 3px #ccc;
+  border-left: solid 3px #ccc;
   border-bottom: solid 5px #999;
   border-radius: 0;
   clear: both;
@@ -957,8 +957,8 @@ a:hover, a:visited:hover {
 }
 
 input[type="submit"] {
-  background: black;
-  border: solid 5px #555555;
+  background: #000;
+  border: solid 5px #555;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1191,14 +1191,14 @@ body {
   padding: .80em;
   z-index: 2;
   overflow: hidden;
-  color: white;
-  background: black;
+  color: #fff;
+  background: #000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   white-space: nowrap;
 }
 .flexnav li a:hover {
   background: #fff;
-  color: red !important;
+  color: #ff0000 !important;
 }
 .flexnav li a:focus {
   background: #fff;
@@ -1220,13 +1220,13 @@ body {
 }
 .flexnav li ul li a {
   display: block;
-  background: #333333;
+  background: #333;
 }
 .flexnav ul li ul li a {
-  background: #666666;
+  background: #666;
 }
 .flexnav ul li ul li ul li a {
-  background: #999999;
+  background: #999;
 }
 .flexnav .touch-button {
   position: absolute;
@@ -1254,8 +1254,8 @@ body {
   position: relative;
   display: block;
   padding: 1em;
-  background: black;
-  color: white;
+  background: #000;
+  color: #fff;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -1325,7 +1325,7 @@ body {
     list-style: none;
     float: left;
     display: block;
-    background-color: black;
+    background-color: #000;
     overflow: visible;
     width: 25%;
   }
@@ -1385,7 +1385,7 @@ body {
   list-style: none;
   float: left;
   display: block;
-  background-color: black;
+  background-color: #000;
   width: 20%;
   min-height: 50px;
   overflow: visible;
@@ -1608,7 +1608,7 @@ ul.nav-menu li.current_page_item {
   padding: 20px 0 20px 50px;
 }
 #breadcrumbs a, #breadcrumbs a:visited {
-  border-bottom: solid 1px red;
+  border-bottom: solid 1px #ff0000;
 }
 
 /* =Media
@@ -1685,10 +1685,10 @@ object {
 }
 
 #content .entry-content a, #content .entry-content a:visited {
-  border-bottom: solid 1px red;
+  border-bottom: solid 1px #ff0000;
 }
 #content .entry-meta a, #content .entry-meta a:visited {
-  border-bottom: solid 1px red;
+  border-bottom: solid 1px #ff0000;
 }
 
 /*--------------------------------------------------------------

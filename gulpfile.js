@@ -57,7 +57,7 @@ gulp.task('browser-sync', function() {
  * Looking at src/sass and compiling the files into Expanded format, Autoprefixing and sending the files to the build folder
 */
 gulp.task('styles', function () {
-	return gulp.src(source+'sass/**/*.scss')
+	return gulp.src([source+'sass/**/*.scss'])
 		.pipe(plumber())
 		.pipe(sass({ style: 'expanded', }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
@@ -80,7 +80,7 @@ gulp.task('styles', function () {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('js', function() {
-	return gulp.src(source+'js/vendor/**/*.js', source+'bower/**')
+	return gulp.src([source+'js/vendor/**/*.js', source+'bower/**'])
 		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
 		// .pipe(jshint.reporter('default'))
 		.pipe(concat('production.js'))
@@ -99,7 +99,7 @@ gulp.task('js', function() {
 gulp.task('images', function() {
 
 // Add the newer pipe to pass through newer images only
-	return gulp.src(source+'img**/*.{png,jpg,gif}')
+	return gulp.src([source+'img**/*.{png,jpg,gif}'])
 		.pipe(newer(source+'img**/*.{png,jpg,gif}'))
 		.pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
 		.pipe(gulp.dest(source));
@@ -155,7 +155,7 @@ gulp.task('buildLibrary', function() {
  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
 */
 gulp.task('buildZip', function () {
-	return gulp.src(build+'/**/')
+	return gulp.src([build+'/**/'])
 		.pipe(zip(project+'.zip'))
 		.pipe(gulp.dest('./'))
 		.pipe(notify({ message: 'Zip task complete' }));
@@ -167,7 +167,7 @@ gulp.task('buildZip', function () {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('buildImages', function() {
-	return gulp.src(source+'img/**/*', '!assets/images/originals/**')
+	return gulp.src([source+'img/**/*', '!assets/images/originals/**'])
 		// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
 		.pipe(gulp.dest(build+'assets/img/'))
 		.pipe(plugins.notify({ message: 'Images task complete' }));
