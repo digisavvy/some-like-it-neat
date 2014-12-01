@@ -1,22 +1,17 @@
-
 # sass cache
 **/.sass-cache
 **/.sass-cache/*
-
 # Codekit
 /codekit-config.json
 *.codekit
 **.codekit-cache/*
-
 /README.html
-
 # npm and bower modules
 /node_modules/
 /bower_components/
-
 /dist/
 /min/
 /build/
-
 # Source Files Uncomment the line below to ignore the src folder
 # **/src
+somelikeitneat.zip
