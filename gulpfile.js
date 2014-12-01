@@ -57,7 +57,7 @@ gulp.task('browser-sync', function() {
  * Looking at src/sass and compiling the files into Expanded format, Autoprefixing and sending the files to the build folder
 */
 gulp.task('styles', function () {
-	return gulp.src(source+'sass/**/*.scss')
+	return gulp.src([source+'sass/**/*.scss'])
 		.pipe(plumber())
 		.pipe(sass({ style: 'expanded', }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
@@ -70,7 +70,7 @@ gulp.task('styles', function () {
 		.pipe(minifycss({ keepSpecialComments: 0 }))
 		.pipe(gulp.dest(source+'css'))
 		.pipe(reload({stream:true})) // Inject Styles when min style file is created
-		.pipe(notify({ message: 'Styles task complete' }))
+		.pipe(notify({ message: 'Styles task complete', onLast: true }))
 });
 
 
@@ -80,7 +80,7 @@ gulp.task('styles', function () {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('js', function() {
-	return gulp.src(source+'js/vendor/**/*.js', source+'bower/**')
+	return gulp.src([source+'js/vendor/**/*.js', source+'bower/**'])
 		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
 		// .pipe(jshint.reporter('default'))
 		.pipe(concat('production.js'))
@@ -88,7 +88,7 @@ gulp.task('js', function() {
 		.pipe(rename({ suffix: '-min' }))
 		.pipe(uglify())
 		.pipe(gulp.dest(build+'assets/js/'))
-		.pipe(notify({ message: 'Scripts task complete' }));
+		.pipe(notify({ message: 'Scripts task complete', onLast: true }));
 });
 
 /**
@@ -99,7 +99,7 @@ gulp.task('js', function() {
 gulp.task('images', function() {
 
 // Add the newer pipe to pass through newer images only
-	return gulp.src(source+'img**/*.{png,jpg,gif}')
+	return gulp.src([source+'img**/*.{png,jpg,gif}'])
 		.pipe(newer(source+'img**/*.{png,jpg,gif}'))
 		.pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
 		.pipe(gulp.dest(source));
@@ -117,7 +117,7 @@ gulp.task('cleanup', function() {
   return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
     // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
     .pipe(rimraf())
-    .pipe(notify({ message: 'Clean task complete' }));
+    .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 
 
@@ -132,21 +132,21 @@ gulp.task('cleanup', function() {
 gulp.task('buildPhp', function() {
 	return gulp.src(['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
-		.pipe(notify({ message: 'Moving files complete' }));
+		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
 
 // Copy Library to Build
 gulp.task('buildAssets', function() {
 	return gulp.src([source+'**', source+'js/production.js'])
 		.pipe(gulp.dest(build+'/assets'))
-		.pipe(notify({ message: 'Copy of Assets directory complete' }));
+		.pipe(notify({ message: 'Copy of Assets directory complete', onLast: true }));
 });
 
 // Copy Library to Build
 gulp.task('buildLibrary', function() {
 	return gulp.src(['./library/**'])
 		.pipe(gulp.dest(build+'library'))
-		.pipe(notify({ message: 'Copy of Library directory complete' }));
+		.pipe(notify({ message: 'Copy of Library directory complete', onLast: true }));
 });
 
 /**
@@ -155,10 +155,10 @@ gulp.task('buildLibrary', function() {
  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
 */
 gulp.task('buildZip', function () {
-	return gulp.src(build+'/**/')
+	return gulp.src([build+'/**/'])
 		.pipe(zip(project+'.zip'))
 		.pipe(gulp.dest('./'))
-		.pipe(notify({ message: 'Zip task complete' }));
+		.pipe(notify({ message: 'Zip task complete', onLast: true }));
 });
 
 /**
@@ -167,10 +167,10 @@ gulp.task('buildZip', function () {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('buildImages', function() {
-	return gulp.src(source+'img/**/*', '!assets/images/originals/**')
+	return gulp.src([source+'img/**/*', '!assets/images/originals/**'])
 		// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
 		.pipe(gulp.dest(build+'assets/img/'))
-		.pipe(plugins.notify({ message: 'Images task complete' }));
+		.pipe(plugins.notify({ message: 'Images task complete', onLast: true }));
 });
 
 // ==== TASKS ==== //
