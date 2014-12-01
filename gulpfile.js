@@ -11,28 +11,28 @@ var project     = 'somelikeitneat', // Optional - Use your own project name here
 	bower       = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 
 // Load plugins
-var gulp = require('gulp'),
-	browserSync = require('browser-sync'), // Asynchronous browser loading on .scss file changes
-	reload      = browserSync.reload,
-	autoprefixer = require('gulp-autoprefixer'), // Autoprefixing magic
-	minifycss = require('gulp-minify-css'),
-	jshint = require('gulp-jshint'),
-	uglify = require('gulp-uglify'),
-	imagemin = require('gulp-imagemin'),
-	newer = require('gulp-newer'),
-	rename = require('gulp-rename'),
-	concat = require('gulp-concat'),
-	notify = require('gulp-notify'),
-	cmq = require('gulp-combine-media-queries'),
-	runSequence = require('gulp-run-sequence'),
-	sass = require('gulp-ruby-sass'), // Our Sass compiler
-	plugins     = require('gulp-load-plugins')({ camelize: true }),
-	ignore = require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
-	rimraf = require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
-	zip = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
-	plumber = require('gulp-plumber'), // Helps prevent stream crashing on errors
-	pipe = require('gulp-coffee'),
-	cache = require('gulp-cache');
+var gulp 	= require('gulp'),
+	browserSync	= require('browser-sync'), // Asynchronous browser loading on .scss file changes
+	reload				= browserSync.reload,
+	autoprefixer 	= require('gulp-autoprefixer'), // Autoprefixing magic
+	minifycss 		= require('gulp-minify-css'),
+	jshint 				= require('gulp-jshint'),
+	uglify 				= require('gulp-uglify'),
+	imagemin 			= require('gulp-imagemin'),
+	newer 				= require('gulp-newer'),
+	rename 				= require('gulp-rename'),
+	concat 				= require('gulp-concat'),
+	notify 				= require('gulp-notify'),
+	cmq 					= require('gulp-combine-media-queries'),
+	runSequence 	= require('gulp-run-sequence'),
+	sass 					= require('gulp-ruby-sass'), // Our Sass compiler
+	plugins 			= require('gulp-load-plugins')({ camelize: true }),
+	ignore 				= require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
+	rimraf 				= require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
+	zip 					= require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
+	plumber 			= require('gulp-plumber'), // Helps prevent stream crashing on errors
+	pipe 					= require('gulp-coffee'),
+	cache 				= require('gulp-cache');
 
 /**
  * Browser Sync
@@ -119,6 +119,12 @@ gulp.task('cleanup', function() {
     .pipe(rimraf())
     .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
+gulp.task('cleanupFinal', function() {
+  return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
+    .pipe(rimraf())
+    .pipe(notify({ message: 'Build task complete', onLast: true }));
+});
 
 
 /**
@@ -178,12 +184,12 @@ gulp.task('buildImages', function() {
  * Gulp Default Task
  *
  * Compiles styles, fires-up browser sync, watches js and php files. Note browser sync task watches php files
- * EXTRA NOTE - Build task has been moved to /tasks/build.js
+ *
 */
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-		runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanup', cb);
+		runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
 
 
