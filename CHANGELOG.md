@@ -1,10 +1,20 @@
+### 1.1.9
+-------------
+
+**Features:**
+*
+
+**Bugfixes:**
+* Updated non-tanslated strings in Customizer
+* Updated textdomain in TGMPA script to "digistarter"
+
 ### 1.1.8
 -------------
 
 **Features:**
 * Push for Internationalization and Localization
-*** Translations for EN US
-*** Transoations for Spanish (I hope...)
+* Translations for EN US
+* Transoations for Spanish (I hope...)
 
 ### 1.1.7
 -------------
