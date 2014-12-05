@@ -2,309 +2,302 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Some Like it Neat 1.3-wpcom\n"
+"Project-Id-Version: Some Like it Neat 1.1.9-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/some-like-it-neat\n"
 "POT-Creation-Date: 2013-09-25 22:06:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2014-12-05 10:00-0800\n"
+"Last-Translator: Alex Vasquez <alex@digisavvy.com>\n"
+"Language-Team: US English <info@digisavvy.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: en_US\n"
+"X-Generator: Poedit 1.7.1\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: 404.php:15
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "﻿Oops! That page can't be found."
 
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
 
 #: 404.php:27
 msgid "Most Used Categories"
-msgstr ""
+msgstr "Most Used Categories"
 
 #. translators: %1$s: smiley
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
-msgstr ""
+msgstr "Try looking in the monthly archives. %1$s"
 
 #: archive.php:31
 msgid "Author: %s"
-msgstr ""
+msgstr "Author: %s"
 
 #: archive.php:39
 msgid "Day: %s"
-msgstr ""
+msgstr "Day: %s"
 
 #: archive.php:42
 msgid "Month: %s"
-msgstr ""
+msgstr "Month: %s"
 
 #: archive.php:45
 msgid "Year: %s"
-msgstr ""
+msgstr "Year: %s"
 
 #: archive.php:48
 msgid "Asides"
-msgstr ""
+msgstr "Asides"
 
 #: archive.php:51
 msgid "Images"
-msgstr ""
+msgstr "Images"
 
 #: archive.php:54
 msgid "Videos"
-msgstr ""
+msgstr "Videos"
 
 #: archive.php:57
 msgid "Quotes"
-msgstr ""
+msgstr "Quotes"
 
 #: archive.php:60
 msgid "Links"
-msgstr ""
+msgstr "Links"
 
 #: archive.php:63 sidebar.php:17
 msgid "Archives"
-msgstr ""
+msgstr "Archives"
 
 #: comments.php:29
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "One thought on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s thoughts on &ldquo;%2$s&rdquo;"
 
 #: comments.php:36 comments.php:56
 msgid "Comment navigation"
-msgstr ""
+msgstr "Comment navigation"
 
 #: comments.php:37 comments.php:57
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; Older Comments"
 
 #: comments.php:38 comments.php:58
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Newer Comments &rarr;"
 
 #: comments.php:68
 msgid "Comments are closed."
-msgstr ""
+msgstr "Comments are closed."
 
 #: content-none.php:13
 msgid "Nothing Found"
-msgstr ""
+msgstr "Nothing Found"
 
 #: content-none.php:19
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 
 #: content-none.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Sorry, but nothing matched your search terms. Please try again with some different keywords."
 
 #: content-none.php:28
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 
 #: content-page.php:18 content-single.php:20 content.php:27 image.php:58
 msgid "Pages:"
-msgstr ""
+msgstr "Pages:"
 
-#: content-page.php:23 content-single.php:60 content.php:61 image.php:32
-#: image.php:64 inc/template-tags.php:71 inc/template-tags.php:90
+#: content-page.php:23 content-single.php:60 content.php:61 image.php:32 image.php:64 inc/template-tags.php:71
+#: inc/template-tags.php:90
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #. translators: used between list items, there is a space after the comma
 #: content-single.php:29 content-single.php:32 content.php:38 content.php:48
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: content-single.php:37
-msgid ""
-"This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
-msgstr ""
+msgid "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "This entry was tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 
 #: content-single.php:39
 msgid "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
-msgstr ""
+msgstr "Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 
 #: content-single.php:45
-msgid ""
-"This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" "
-"rel=\"bookmark\">permalink</a>."
-msgstr ""
+msgid "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "This entry was posted in %1$s and tagged %2$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 
 #: content-single.php:47
-msgid ""
-"This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark"
-"\">permalink</a>."
-msgstr ""
+msgid "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
+msgstr "This entry was posted in %1$s. Bookmark the <a href=\"%3$s\" rel=\"bookmark\">permalink</a>."
 
 #: content.php:24
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 
 #: content.php:42
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Posted in %1$s"
 
 #: content.php:52
 msgid "Tagged %1$s"
-msgstr ""
+msgstr "Tagged %1$s"
 
 #: content.php:58
 msgid "Leave a comment"
-msgstr ""
+msgstr "Leave a comment"
 
 #: content.php:58
 msgid "1 Comment"
-msgstr ""
+msgstr "1 Comment"
 
 #: content.php:58
 msgid "% Comments"
-msgstr ""
+msgstr "% Comments"
 
 #: footer.php:16
 msgid "Proudly powered by %s"
-msgstr ""
+msgstr "Proudly powered by %s"
 
 #: footer.php:18
 msgid "Theme: %1$s by %2$s."
-msgstr ""
+msgstr "Theme: %1$s by %2$s."
 
 #: functions.php:48
 msgid "Primary Menu"
-msgstr ""
+msgstr "Primary Menu"
 
 #: functions.php:72
 msgid "Sidebar"
-msgstr ""
+msgstr "Sidebar"
 
 #: header.php:31
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: header.php:32
 msgid "Skip to content"
-msgstr ""
+msgstr "Skip to content"
 
 #: image.php:22
 msgid ""
-"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s &times; %5$s</a> in <a "
-"href=\"%6$s\" rel=\"gallery\">%7$s</a>"
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s "
+"&times; %5$s</a> in <a href=\"%6$s\" rel=\"gallery\">%7$s</a>"
 msgstr ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\">%4$s "
+"&times; %5$s</a> in <a href=\"%6$s\" rel=\"gallery\">%7$s</a>"
 
 #: image.php:37
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Previous"
 
 #: image.php:38
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Next <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/extras.php:66
 msgid "Page %s"
-msgstr ""
+msgstr "Page %s"
 
 #: inc/template-tags.php:34
 msgid "Post navigation"
-msgstr ""
+msgstr "Post navigation"
 
 #: inc/template-tags.php:38
 msgctxt "Previous post link"
 msgid "&larr;"
-msgstr ""
+msgstr "&larr;"
 
 #: inc/template-tags.php:39
 msgctxt "Next post link"
 msgid "&rarr;"
-msgstr ""
+msgstr "&rarr;"
 
 #: inc/template-tags.php:44
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Older posts"
 
 #: inc/template-tags.php:48
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:71
 msgid "Pingback:"
-msgstr ""
+msgstr "Pingback"
 
 #: inc/template-tags.php:81
 msgid "%s <span class=\"says\">says:</span>"
-msgstr ""
+msgstr "%s <span class=\"says\">says:</span>"
 
 #: inc/template-tags.php:87
 msgctxt "1: date, 2: time"
 msgid "%1$s at %2$s"
-msgstr ""
+msgstr "%1$s at %2$s"
 
 #: inc/template-tags.php:94
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Your comment is awaiting moderation."
 
 #: inc/template-tags.php:185
-msgid ""
-"<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by "
-"%2$s</span>"
-msgstr ""
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
 
 #: search.php:16
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Search Results for: %s"
 
 #: searchform.php:10
 msgctxt "label"
 msgid "Search for:"
-msgstr ""
+msgstr "Search for:"
 
 #: searchform.php:11
 msgctxt "placeholder"
 msgid "Search &hellip;"
-msgstr ""
+msgstr "Search &hellip;"
 
 #: searchform.php:13
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
+msgstr "Search"
 
 #: sidebar.php:24
 msgid "Meta"
-msgstr ""
+msgstr "Meta"
 
 #. Theme Name of the plugin/theme
 msgid "Some Like it Neat"
-msgstr ""
+msgstr "Some Like it Neat"
 
 #. Theme URI of the plugin/theme
 msgid "http://somelikeitneat.com"
-msgstr ""
+msgstr "http://somelikeitneat.com"
 
 #. Description of the plugin/theme
 msgid ""
 "<code>Some Like it Neat</code> is a simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, "
-"http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites."
-" You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat"
+"http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. "
+"You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat"
 msgstr ""
+"<code>Some Like it Neat</code> is a simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, "
+"http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. "
+"You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat"
 
 #. Author of the plugin/theme
 msgid "Alex Vasquez, DigiSavvy"
-msgstr ""
+msgstr "Alex Vasquez, DigiSavvy"
 
 #. Author URI of the plugin/theme
 msgid "http://automattic.com/"
-msgstr ""
+msgstr "http://automattic.com/"
