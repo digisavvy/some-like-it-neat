@@ -196,5 +196,5 @@ gulp.task('build', function(cb) {
 // Watch Task
 gulp.task('default', ['styles', 'browser-sync'], function () {
     gulp.watch(source+"sass/**/*.scss", ['styles']);
-    gulp.watch(source+"js/*.js", ['js', browserSync.reload]);
+    gulp.watch(source+"js/vendor/**/*.js", ['js', browserSync.reload]);
 });
