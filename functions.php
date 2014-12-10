@@ -178,7 +178,7 @@ if ( !function_exists('digistarter_add_breadcrumbs') ) :
 	function digistarter_add_breadcrumbs() {
 		if ( !is_front_page() ) {
 			if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(array(
-			  'prefix'     => 'You are here: ',
+			  'prefix'     => __('You are here: ', 'digistarter'),
 			  'last_link'  => true,
 			  'separator'  => '|',
 			  'excluded_taxonomies' => array(
@@ -240,7 +240,7 @@ if ( !function_exists('digistarter_add_footer_divs') ) :
 	function digistarter_add_footer_divs() { ?>
 
 		<div class="footer-left">
-			 <?php echo esc_attr( get_theme_mod( 'digistarter_footer_left', '© All Rights Reserved' ) ); ?>
+			 <?php echo esc_attr( get_theme_mod( 'digistarter_footer_left', __( '&copy; All Rights Reserved', 'digistarter' ) ) ); ?>
 
 		</div>
 		<div class="footer-right">

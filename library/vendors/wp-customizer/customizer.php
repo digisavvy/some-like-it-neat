@@ -52,7 +52,7 @@ $wp_customize->add_setting( 'digistarter_add_link_color', array(
 
 $wp_customize->add_control( new WP_Customize_Color_Control(
 	$wp_customize, 'digistarter_add_link_color', array(
-		'label'			=> 'Body Link Color',
+		'label'			=> __('Body Link Color', 'digistarter'),
 		'section'		=> 'colors',
 		'settings'		=> 'digistarter_add_link_color',
 		'priority'		=> 6
@@ -75,7 +75,7 @@ $wp_customize->add_control(
 	'digistarter_mobile_nav_label',
 	array(
 		'section'			=> 'nav',
-		'label'				=> 'Mobile Navigation Label',
+		'label'				=> __('Mobile Navigation Label', 'digistarter'),
 		'type'				=> 'text',
 	)
 );
@@ -92,7 +92,7 @@ $wp_customize->add_control(
 	'digistarter_mobile_min_width',
 	array(
 		'section'	=> 'nav',
-		'label'		=> 'Mobile Navigation Min-Width (numeric value)',
+		'label'		=> __('Mobile Navigation Min-Width (numeric value)', 'digistarter'),
 		'type'		=> 'text',
 	)
 );
@@ -109,7 +109,7 @@ $wp_customize->add_control(
 'digistarter_mobile_nav_icon',
 	array(
 		'section'			=> 'nav',
-		'label'				=> 'Mobile Navigation Icon',
+		'label'				=> __('Mobile Navigation Icon', 'digistarter'),
 		'type'				=> 'text'
 	)
 );
@@ -126,7 +126,7 @@ $wp_customize->add_control(
 	'digistarter_mobile_hide_arrow',
 	array(
 		'section'			=> 'nav',
-		'label'				=> 'Mobile Navigation Hide Right Arrow',
+		'label'				=> __('Mobile Navigation Hide Right Arrow', 'digistarter'),
 		'type'				=> 'radio',
 		'choices'			=> array("Yes", "No"),
 	)
@@ -151,7 +151,7 @@ $wp_customize->add_control(
 'digistarter_footer_left',
 	array(
 		'section'	=> 'digistarter_footer_section_settings',
-		'label'		=> 'Left Footer',
+		'label'		=> __('Left Footer', 'digistarter'),
 		'type'		=> 'text'
 	)
 );
@@ -167,7 +167,7 @@ $wp_customize->add_control(
 'digistarter_footer_right',
 	array(
 		'section'	=> 'digistarter_footer_section_settings',
-		'label'		=> 'Right Footer',
+		'label'		=> __('Right Footer', 'digistarter'),
 		'type'		=> 'text'
 	)
 );
@@ -183,7 +183,7 @@ $wp_customize->add_control(
 'digistarter_footer_colophon',
 	array(
 		'section'		=> 'digistarter_footer_section_settings',
-		'label'			=> 'Footer Colophon',
+		'label'			=> __('Footer Colophon', 'digistarter'),
 		'type'			=> 'text',
 		'transport'	=> 'postMessage'
 	)
