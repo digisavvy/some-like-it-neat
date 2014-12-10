@@ -36,7 +36,7 @@ Getting Started
 
 * #### Prerequisites
   * You'll need to download and install [Node](http://nodejs.com)
-  * You will also need to download and install [Sass](http://sass-lang.org/install)
+  * You will also need to download and install [Sass](http://sass-lang.com/install)
 
 * #### Getting and Installing the Theme
   * The first thing you’ll want to do is grab a copy of the theme —
