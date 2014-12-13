@@ -189,6 +189,129 @@ $wp_customize->add_control(
 	)
 );
 
+/* Example Section and 4.0 customizer controls
+*  @link — https://gist.github.com/devinsays/e9c6754340a5253c3ec9
+*  @author — devinsays
+*/
+$wp_customize->add_panel( 'panel_id', array(
+	    'priority' => 10,
+	    'capability' => 'edit_theme_options',
+	    'theme_supports' => '',
+	    'title' => __( 'Example Panel', 'textdomain' ),
+	    'description' => __( 'Description of what this panel does.', 'textdomain' ),
+	) );
+
+	$wp_customize->add_section( 'section_id', array(
+	    'priority' => 10,
+	    'capability' => 'edit_theme_options',
+	    'theme_supports' => '',
+	    'title' => __( 'Example Section', 'textdomain' ),
+	    'description' => '',
+	    'panel' => 'panel_id',
+	) );
+
+	$wp_customize->add_setting( 'url_field_id', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+		'sanitize_callback' => 'esc_url',
+	) );
+
+	$wp_customize->add_control( 'url_field_id', array(
+	    'type' => 'url',
+	    'priority' => 10,
+	    'section' => 'section_id',
+	    'label' => __( 'URL Field', 'textdomain' ),
+	    'description' => '',
+	) );
+
+	$wp_customize->add_setting( 'email_field_id', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+		'sanitize_callback' => 'sanitize_email',
+	) );
+
+	$wp_customize->add_control( 'email_field_id', array(
+	    'type' => 'email',
+	    'priority' => 10,
+	    'section' => 'section_id',
+	    'label' => __( 'Email Field', 'textdomain' ),
+	    'description' => '',
+	) );
+
+	$wp_customize->add_setting( 'password_field_id', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+
+	$wp_customize->add_control( 'password_field_id', array(
+	    'type' => 'password',
+	    'priority' => 10,
+	    'section' => 'section_id',
+	    'label' => __( 'Password Field', 'textdomain' ),
+	    'description' => '',
+	) );
+
+	$wp_customize->add_setting( 'textarea_field_id', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+		'sanitize_callback' => 'esc_textarea',
+	) );
+
+	$wp_customize->add_control( 'textarea_field_id', array(
+	    'type' => 'textarea',
+	    'priority' => 10,
+	    'section' => 'section_id',
+	    'label' => __( 'Textarea Field', 'textdomain' ),
+	    'description' => '',
+	) );
+
+	$wp_customize->add_setting( 'date_field_id', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+		'sanitize_callback' => ''
+	) );
+
+	$wp_customize->add_control( 'date_field_id', array(
+	    'type' => 'date',
+	    'priority' => 10,
+	    'section' => 'section_id',
+	    'label' => __( 'Date Field', 'textdomain' ),
+	    'description' => '',
+	) );
+
+	$wp_customize->add_setting( 'range_field_id', array(
+		'default' => '',
+		'type' => 'theme_mod',
+		'capability' => 'edit_theme_options',
+		'transport' => '',
+		'sanitize_callback' => 'intval',
+	) );
+
+	$wp_customize->add_control( 'range_field_id', array(
+	    'type' => 'range',
+	    'priority' => 10,
+	    'section' => 'section_id',
+	    'label' => __( 'Range Field', 'textdomain' ),
+	    'description' => '',
+	    'input_attrs' => array(
+	        'min' => 0,
+	        'max' => 100,
+	        'step' => 1,
+	        'class' => 'example-class',
+	        'style' => 'color: #0a0',
+	    ),
+	) );
 }
 add_action( 'customize_register', 'digistarter_add_customizer_theme_options' );
 
