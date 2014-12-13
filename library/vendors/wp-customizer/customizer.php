@@ -197,15 +197,15 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'priority' => 10,
 	    'capability' => 'edit_theme_options',
 	    'theme_supports' => '',
-	    'title' => __( 'Example Panel', 'textdomain' ),
-	    'description' => __( 'Description of what this panel does.', 'textdomain' ),
+	    'title' => __( 'Example Panel', 'digistarter' ),
+	    'description' => __( 'Description of what this panel does.', 'digistarter' ),
 	) );
 
 	$wp_customize->add_section( 'section_id', array(
 	    'priority' => 10,
 	    'capability' => 'edit_theme_options',
 	    'theme_supports' => '',
-	    'title' => __( 'Example Section', 'textdomain' ),
+	    'title' => __( 'Example Section', 'digistarter' ),
 	    'description' => '',
 	    'panel' => 'panel_id',
 	) );
@@ -222,7 +222,7 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'type' => 'url',
 	    'priority' => 10,
 	    'section' => 'section_id',
-	    'label' => __( 'URL Field', 'textdomain' ),
+	    'label' => __( 'URL Field', 'digistarter' ),
 	    'description' => '',
 	) );
 
@@ -238,7 +238,7 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'type' => 'email',
 	    'priority' => 10,
 	    'section' => 'section_id',
-	    'label' => __( 'Email Field', 'textdomain' ),
+	    'label' => __( 'Email Field', 'digistarter' ),
 	    'description' => '',
 	) );
 
@@ -254,7 +254,7 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'type' => 'password',
 	    'priority' => 10,
 	    'section' => 'section_id',
-	    'label' => __( 'Password Field', 'textdomain' ),
+	    'label' => __( 'Password Field', 'digistarter' ),
 	    'description' => '',
 	) );
 
@@ -270,7 +270,7 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'type' => 'textarea',
 	    'priority' => 10,
 	    'section' => 'section_id',
-	    'label' => __( 'Textarea Field', 'textdomain' ),
+	    'label' => __( 'Textarea Field', 'digistarter' ),
 	    'description' => '',
 	) );
 
@@ -286,7 +286,7 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'type' => 'date',
 	    'priority' => 10,
 	    'section' => 'section_id',
-	    'label' => __( 'Date Field', 'textdomain' ),
+	    'label' => __( 'Date Field', 'digistarter' ),
 	    'description' => '',
 	) );
 
@@ -302,7 +302,7 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'type' => 'range',
 	    'priority' => 10,
 	    'section' => 'section_id',
-	    'label' => __( 'Range Field', 'textdomain' ),
+	    'label' => __( 'Range Field', 'digistarter' ),
 	    'description' => '',
 	    'input_attrs' => array(
 	        'min' => 0,
