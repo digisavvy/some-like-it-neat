@@ -2,11 +2,11 @@
 -------------
 
 **Features:**
-*
+* Added Example Customizer 4.0 Controls and Settings with a Panel for use/customization
 
 **Bugfixes:**
 * Updated non-tanslated strings in Customizer
-* Updated textdomain in TGMPA script to "digistarter"
+* Updated textdomain in Thomas Griffin Plugin Activation script to "digistarter"
 
 ### 1.1.8
 -------------
