@@ -210,60 +210,12 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'panel' => 'panel_id',
 	) );
 
-	$wp_customize->add_setting( 'url_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => 'esc_url',
-	) );
-
-	$wp_customize->add_control( 'url_field_id', array(
-	    'type' => 'url',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'URL Field', 'digistarter' ),
-	    'description' => '',
-	) );
-
-	$wp_customize->add_setting( 'email_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => 'sanitize_email',
-	) );
-
-	$wp_customize->add_control( 'email_field_id', array(
-	    'type' => 'email',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'Email Field', 'digistarter' ),
-	    'description' => '',
-	) );
-
-	$wp_customize->add_setting( 'password_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => 'sanitize_text_field',
-	) );
-
-	$wp_customize->add_control( 'password_field_id', array(
-	    'type' => 'password',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'Password Field', 'digistarter' ),
-	    'description' => '',
-	) );
-
 	$wp_customize->add_setting( 'textarea_field_id', array(
 		'default' => '',
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
 		'transport' => '',
-		'sanitize_callback' => 'esc_textarea',
+		'sanitize_callback' => 'digistarter_sanitize_text',
 	) );
 
 	$wp_customize->add_control( 'textarea_field_id', array(
@@ -272,45 +224,6 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'section' => 'section_id',
 	    'label' => __( 'Textarea Field', 'digistarter' ),
 	    'description' => '',
-	) );
-
-	$wp_customize->add_setting( 'date_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => ''
-	) );
-
-	$wp_customize->add_control( 'date_field_id', array(
-	    'type' => 'date',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'Date Field', 'digistarter' ),
-	    'description' => '',
-	) );
-
-	$wp_customize->add_setting( 'range_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => 'intval',
-	) );
-
-	$wp_customize->add_control( 'range_field_id', array(
-	    'type' => 'range',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'Range Field', 'digistarter' ),
-	    'description' => '',
-	    'input_attrs' => array(
-	        'min' => 0,
-	        'max' => 100,
-	        'step' => 1,
-	        'class' => 'example-class',
-	        'style' => 'color: #0a0',
-	    ),
 	) );
 }
 add_action( 'customize_register', 'digistarter_add_customizer_theme_options' );
