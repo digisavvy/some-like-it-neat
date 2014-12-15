@@ -56,7 +56,7 @@ $wp_customize->get_section('colors')->panel = 'color_panel';
 * Adding Panels for Home Page and Colors
 */
 $wp_customize->add_panel( 'home_page', array(
-    'priority' => 10,
+    'priority' => 5,
     'capability' => 'edit_theme_options',
     'theme_supports' => '',
     'title' => __( 'Home Page Settings', 'digistarter' ),
@@ -92,7 +92,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 * Mobile Navigation Settings and Options
 */
 $wp_customize->add_panel( 'navigation_panel', array(
-    'priority' => 400,
+    'priority' => 15,
     'capability' => 'edit_theme_options',
     'theme_supports' => '',
     'title' => __( 'Navigation Settings', 'digistarter' ),
@@ -184,7 +184,7 @@ $wp_customize->add_control(
 
 // Add Footer Section and Settings
 $wp_customize->add_panel( 'footer_settings_panel', array(
-    'priority' => 400,
+    'priority' => 25,
     'capability' => 'edit_theme_options',
     'theme_supports' => '',
     'title' => __( 'Footer Settings', 'digistarter' ),
