@@ -200,7 +200,7 @@ gulp.task('buildImages', function() {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-		runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
+	runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
 
 
