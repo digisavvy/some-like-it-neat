@@ -43,23 +43,22 @@ function digistarter_sanitize_checkbox( $input ) {
 function digistarter_add_customizer_theme_options($wp_customize) {
 
 // Remove Default Sections, Settings and Controls
-$wp_customize->remove_section( 'title_tagline');
-// $wp_customize->remove_section( 'colors');
-$wp_customize->remove_section( 'background_image');
-// $wp_customize->remove_section( 'static_front_page');
 $wp_customize->remove_section( 'nav');
 
-$wp_customize->get_section('static_front_page')->panel = 'home_page';
+// Changing panels for default Customizer settings
+$wp_customize->get_section('static_front_page')->panel = 'site_content';
 $wp_customize->get_section('colors')->panel = 'color_panel';
+$wp_customize->get_section('title_tagline')->panel = 'site_content';
+$wp_customize->get_section('background_image')->panel = 'site_content';
 
 /**
 * Adding Panels for Home Page and Colors
 */
-$wp_customize->add_panel( 'home_page', array(
+$wp_customize->add_panel( 'site_content', array(
     'priority' => 5,
     'capability' => 'edit_theme_options',
     'theme_supports' => '',
-    'title' => __( 'Home Page Settings', 'digistarter' ),
+    'title' => __( 'General Site Content Settings', 'digistarter' ),
     'description' => __( 'Navigation related settings and config.', 'digistarter' ),
 ) );
 
@@ -76,7 +75,6 @@ $wp_customize->add_panel( 'color_panel', array(
 $wp_customize->add_setting( 'digistarter_add_link_color', array(
 	'default'			=> '#000000',
 	'sanitize_callback' 	=> 'maybe_hash_hex_color',
-
 ) );
 
 $wp_customize->add_control( new WP_Customize_Color_Control(
