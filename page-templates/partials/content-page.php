@@ -19,10 +19,10 @@
 
 		<?php the_content(); ?>
 
-		<?php if (function_exists('get_the_post_navigation')) {
+		<?php if ( function_exists( 'get_the_post_navigation' ) ) {
 				echo get_the_post_navigation( array(
-					'prev_text'	=> 'Previous Page',
-					'next_text'	=> 'Next Page'
+					'prev_text'	=> __('&larr; Previous Page', 'digistarter'),
+					'next_text'	=> __( 'Next Page &rarr;', 'digistarter')
 				));
 			} else {
 
