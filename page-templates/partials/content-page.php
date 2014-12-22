@@ -18,6 +18,16 @@
 	<div class="entry-content" itemprop="mainContentOfPage">
 
 		<?php the_content(); ?>
+
+		<?php if (function_exists('get_the_post_navigation')) {
+				echo get_the_post_navigation( array(
+					'prev_text'	=> 'Previous Page',
+					'next_text'	=> 'Next Page'
+				));
+			} else {
+
+			} ?>
+
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'digistarter' ),
