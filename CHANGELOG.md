@@ -1,4 +1,10 @@
 # Changelog
+### 1.1.10
+-------------
+
+**Features:**
+* Added support for get_the_archive_title() in the archive template
+* Added support for 
 
 ### 1.1.9
 -------------
