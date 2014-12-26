@@ -20,17 +20,20 @@
 		<?php the_content(); ?>
 
 		<?php if ( function_exists( 'get_the_post_navigation' ) ) {
+
 				echo get_the_post_navigation( array(
 					'prev_text'	=> __('&larr; Previous Page', 'digistarter'),
-					'next_text'	=> __( 'Next Page &rarr;', 'digistarter')
+					'next_text'	=> __( 'Next Page &rarr;', 'digistarter'),
+					'screen_reader_text' => __( 'Page navigation', 'digistarter' )
 				));
+
 			} else {
 
 				wp_link_pages( array(
 					'before' => '<div class="page-links">' . __( 'Pages:', 'digistarter' ),
 					'after'  => '</div>',
 					) );
- 
+
 			} ?>
 
 
