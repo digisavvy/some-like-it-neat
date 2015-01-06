@@ -14,7 +14,7 @@
 **Features:**
 * Push for Internationalization and Localization
 * Translations for EN US
-* Transoations for Spanish (I hope...)
+* Translations for Spanish (I hope...)
 
 ### 1.1.7
 -------------
