@@ -42,12 +42,39 @@ function digistarter_sanitize_checkbox( $input ) {
 
 function digistarter_add_customizer_theme_options($wp_customize) {
 
+// Remove Default Sections, Settings and Controls
+$wp_customize->remove_section( 'nav');
+
+// Changing panels for default Customizer settings
+$wp_customize->get_section('static_front_page')->panel = 'site_content';
+$wp_customize->get_section('colors')->panel = 'color_panel';
+$wp_customize->get_section('title_tagline')->panel = 'site_content';
+$wp_customize->get_section('background_image')->panel = 'site_content';
+
+/**
+* Adding Panels for Home Page and Colors
+*/
+$wp_customize->add_panel( 'site_content', array(
+    'priority' => 5,
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '',
+    'title' => __( 'General Site Content Settings', 'digistarter' ),
+    'description' => __( 'Navigation related settings and config.', 'digistarter' ),
+) );
+
 /* Color controls */
 // General Link Colors
+$wp_customize->add_panel( 'color_panel', array(
+    'priority' => 10,
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '',
+    'title' => __( 'Color Palette Settings', 'digistarter' ),
+    'description' => __( 'Color palette related settings and config.', 'digistarter' ),
+) );
+
 $wp_customize->add_setting( 'digistarter_add_link_color', array(
 	'default'			=> '#000000',
 	'sanitize_callback' 	=> 'maybe_hash_hex_color',
-
 ) );
 
 $wp_customize->add_control( new WP_Customize_Color_Control(
@@ -62,6 +89,22 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 /**
 * Mobile Navigation Settings and Options
 */
+$wp_customize->add_panel( 'navigation_panel', array(
+    'priority' => 15,
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '',
+    'title' => __( 'Navigation Settings', 'digistarter' ),
+    'description' => __( 'Navigation related settings and config.', 'digistarter' ),
+) );
+
+	$wp_customize->add_section( 'navigation_section', array(
+	    'priority' => 10,
+	    'capability' => 'edit_theme_options',
+	    'theme_supports' => '',
+	    'title' => __( 'Navigation Setup', 'digistarter' ),
+	    'description' => '',
+	    'panel' => 'navigation_panel',
+	) );
 
 // Mobile nav label
 $wp_customize->add_setting(
@@ -74,7 +117,7 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'digistarter_mobile_nav_label',
 	array(
-		'section'			=> 'nav',
+		'section'			=> 'navigation_section',
 		'label'				=> __('Mobile Navigation Label', 'digistarter'),
 		'type'				=> 'text',
 	)
@@ -91,7 +134,7 @@ $wp_customize->add_setting(
 $wp_customize->add_control(
 	'digistarter_mobile_min_width',
 	array(
-		'section'	=> 'nav',
+		'section'	=> 'navigation_section',
 		'label'		=> __('Mobile Navigation Min-Width (numeric value)', 'digistarter'),
 		'type'		=> 'text',
 	)
@@ -105,12 +148,15 @@ $wp_customize->add_setting(
 		'sanitize_callback' => 'digistarter_sanitize_text'
 	)
 );
+
+$dashicons = '<a href="https://developer.wordpress.org/resource/dashicons/#pressthis" title="Dashicons Link" target="_blank">Dashicons Link</a>';
 $wp_customize->add_control(
 'digistarter_mobile_nav_icon',
 	array(
-		'section'			=> 'nav',
+		'section'			=> 'navigation_section',
 		'label'				=> __('Mobile Navigation Icon', 'digistarter'),
-		'type'				=> 'text'
+		'type'				=> 'text',
+		'description' =>  __('Dashicons are enabled and you can use them here! '.$dashicons.'', 'digistarter'),
 	)
 );
 
@@ -122,6 +168,8 @@ $wp_customize->add_setting(
 		'sanitize_callback'	=> 'digistarter_sanitize_checkbox'
 	)
 );
+
+
 $wp_customize->add_control(
 	'digistarter_mobile_hide_arrow',
 	array(
@@ -133,13 +181,23 @@ $wp_customize->add_control(
 );
 
 // Add Footer Section and Settings
-$wp_customize->add_section(
-'digistarter_footer_section_settings',
-	array(
-		'title'		=> 'Footer Settings',
-		'priority'	=> 200
-	)
-);
+$wp_customize->add_panel( 'footer_settings_panel', array(
+    'priority' => 25,
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '',
+    'title' => __( 'Footer Settings', 'digistarter' ),
+    'description' => __( 'Settings related to the Footer Section.', 'digistarter' ),
+) );
+
+$wp_customize->add_section( 'digistarter_footer_section_settings', array(
+    'priority' => 10,
+    'capability' => 'edit_theme_options',
+    'theme_supports' => '',
+    'title' => __( 'Footer Area Settings', 'digistarter' ),
+    'description' => 'Enter copy for right, left and colophon footer areas',
+    'panel' => 'footer_settings_panel',
+) );
+
 $wp_customize->add_setting(
 'digistarter_footer_left',
 	array(
@@ -194,7 +252,7 @@ $wp_customize->add_control(
 *  @author — devinsays
 */
 $wp_customize->add_panel( 'panel_id', array(
-	    'priority' => 10,
+	    'priority' => 1000,
 	    'capability' => 'edit_theme_options',
 	    'theme_supports' => '',
 	    'title' => __( 'Example Panel', 'digistarter' ),
@@ -210,60 +268,12 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'panel' => 'panel_id',
 	) );
 
-	$wp_customize->add_setting( 'url_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => 'esc_url',
-	) );
-
-	$wp_customize->add_control( 'url_field_id', array(
-	    'type' => 'url',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'URL Field', 'digistarter' ),
-	    'description' => '',
-	) );
-
-	$wp_customize->add_setting( 'email_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => 'sanitize_email',
-	) );
-
-	$wp_customize->add_control( 'email_field_id', array(
-	    'type' => 'email',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'Email Field', 'digistarter' ),
-	    'description' => '',
-	) );
-
-	$wp_customize->add_setting( 'password_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => 'sanitize_text_field',
-	) );
-
-	$wp_customize->add_control( 'password_field_id', array(
-	    'type' => 'password',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'Password Field', 'digistarter' ),
-	    'description' => '',
-	) );
-
 	$wp_customize->add_setting( 'textarea_field_id', array(
 		'default' => '',
 		'type' => 'theme_mod',
 		'capability' => 'edit_theme_options',
 		'transport' => '',
-		'sanitize_callback' => 'esc_textarea',
+		'sanitize_callback' => 'digistarter_sanitize_text',
 	) );
 
 	$wp_customize->add_control( 'textarea_field_id', array(
@@ -274,44 +284,7 @@ $wp_customize->add_panel( 'panel_id', array(
 	    'description' => '',
 	) );
 
-	$wp_customize->add_setting( 'date_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => ''
-	) );
 
-	$wp_customize->add_control( 'date_field_id', array(
-	    'type' => 'date',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'Date Field', 'digistarter' ),
-	    'description' => '',
-	) );
-
-	$wp_customize->add_setting( 'range_field_id', array(
-		'default' => '',
-		'type' => 'theme_mod',
-		'capability' => 'edit_theme_options',
-		'transport' => '',
-		'sanitize_callback' => 'intval',
-	) );
-
-	$wp_customize->add_control( 'range_field_id', array(
-	    'type' => 'range',
-	    'priority' => 10,
-	    'section' => 'section_id',
-	    'label' => __( 'Range Field', 'digistarter' ),
-	    'description' => '',
-	    'input_attrs' => array(
-	        'min' => 0,
-	        'max' => 100,
-	        'step' => 1,
-	        'class' => 'example-class',
-	        'style' => 'color: #0a0',
-	    ),
-	) );
 }
 add_action( 'customize_register', 'digistarter_add_customizer_theme_options' );
 

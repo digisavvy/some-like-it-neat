@@ -18,7 +18,15 @@ get_header(); ?>
 			<header class="page-header">
 				<h1 class="page-title">
 					<?php
-						if ( is_category() ) :
+					if (function_exists('get_the_archive_title')) :
+						echo get_the_archive_title();
+
+						/*
+						* TO-DO Might remove this code block at some point, since
+						*	get_the_archive_title() does the same thing
+						*	the below code does
+						*/
+						elseif ( is_category() ):
 							single_cat_title();
 
 						elseif ( is_tag() ) :
@@ -67,13 +75,16 @@ get_header(); ?>
 							_e( 'Archives', 'digistarter' );
 
 						endif;
+						/*
+						* END TO-DO
+						*/
 					?>
 				</h1>
 				<?php
 					// Show an optional term description.
 					$term_description = term_description();
 					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
+						printf( '<div class="taxonomy-description">%s</div>', 	$term_description );
 					endif;
 				?>
 			</header><!-- .page-header -->
