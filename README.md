@@ -8,6 +8,11 @@ Description
 
 Some Like it Neat is a Minimal Starter theme that is Responsive out of the box. It uses Sass along with Bourbon Neat for help with Responsive grids. It's based on _s and is pretty rad.
 
+
+Donate (or submit a pull request)
+---------------
+<a href='https://pledgie.com/campaigns/27978'><img alt='Click here to lend your support to: Some Like it Neat, a WordPress Starter Theme and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27978.png?skin_name=chrome' border='0' ></a>
+
 What's Inside?
 ---------------
 
