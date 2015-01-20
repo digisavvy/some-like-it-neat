@@ -15,3 +15,5 @@
 # Source Files Uncomment the line below to ignore the src folder
 # **/src
 somelikeitneat.zip
+# PhpStorm Project Files
+.idea/
