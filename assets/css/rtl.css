@@ -284,12 +284,12 @@ ol {
 ul {
   list-style-type: disc;
   margin-bottom: 0.75em;
-  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 ol {
   list-style-type: decimal;
   margin-bottom: 0.75em;
-  padding-right: 1.5em;
+  padding-left: 1.5em;
 }
 
 dl {
