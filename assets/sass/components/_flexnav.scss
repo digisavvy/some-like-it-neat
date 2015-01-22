@@ -17,11 +17,11 @@ $fourth_level: #999;
 	transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
 	&.opacity {
 		// opacity: 0;
-		padding-left: 0;
+		@include padding-left(0);
 	}
 
 	ul {
-		padding-left: 0;
+		@include padding-left(0);
 	}
 
 	&.flexnav-show {
@@ -35,7 +35,7 @@ $fourth_level: #999;
 	&.one-page {
 		position: fixed;
 		top: 50px;
-		right: 5%;
+		@include right(5%);
 		max-width: 200px;
 	}
 
@@ -66,7 +66,7 @@ $fourth_level: #999;
 	li ul {
 		display: none;
 		margin-bottom: 0;
-		padding-left: 0;
+		@include padding-left(0);
 		width: 100%;
 		z-index: 5;
 
@@ -97,7 +97,7 @@ $fourth_level: #999;
 		position: absolute;
 		z-index: 999;
 		top: 0;
-		right: 0;
+		@include right(0);
 		width: 50px;
 		height: 100%;
 		display: inline-block;
@@ -128,8 +128,8 @@ $fourth_level: #999;
 	&.one-page {
 		position: fixed;
 		top: 0;
-		right: 5%;
-		padding-right: 45px;
+		@include right(5%);
+		@include padding-right(45px);
 	}
 
 	.touch-button {
@@ -137,7 +137,7 @@ $fourth_level: #999;
 		position: absolute;
 		z-index: 999;
 		top: 0;
-		right: 0;
+		@include right(0);
 		width: 50px;
 		height: 50px;
 		display: none;
@@ -165,7 +165,7 @@ $fourth_level: #999;
 	i.navicon {
 		display: block !important;
 		position: relative;
-		right: 30px;
+		@include right(30px);
 		&:after {
 			color: #555;
 			content:'Menu';
@@ -183,13 +183,13 @@ $fourth_level: #999;
 		}
 		&.one-page {
 			top: 0;
-			right: auto;
+			@include right(auto);
 			max-width: 1080px;
 		}
 		li {
 			position: relative;
 			list-style: none;
-			float: left;
+			@include float(left);
 			display: block;
 			background-color: $top_level;
 			overflow: visible;
@@ -204,14 +204,14 @@ $fourth_level: #999;
 		li > ul {
 			position: absolute;
 			top: auto;
-			left: 0;
+			@include left(0);
 
 			li {
 				width: 100%;
 			}
 		}
 		li ul li > ul {
-			margin-left: 100%;
+			@include margin-left(100%);
 			top: 0;
 		}
 		li ul li:hover > ul,
@@ -230,7 +230,7 @@ $fourth_level: #999;
 				max-height: 100px;
 			}
 			ul.open {
-				margin-left: 100%;
+				@include margin-left(100%);
 				top: 0;
 			}
 		}
@@ -248,13 +248,13 @@ $fourth_level: #999;
 		overflow: visible;
 		&.one-page {
 			top: 0;
-			right: auto;
+			@include right(auto);
 			max-width: 1080px;
 		}
 		li {
 			position: relative;
 			list-style: none;
-			float: left;
+			@include float(left);
 			display: block;
 			background-color: $top_level;
       width: 20%;
@@ -271,7 +271,7 @@ $fourth_level: #999;
 			}
 		}
 		li a {
-			border-left: 1px solid #acaca1;
+			@include border-left(1px solid #acaca1);
 			border-bottom: none;
 			overflow: visible;
 		}
@@ -279,7 +279,7 @@ $fourth_level: #999;
 			background:#acaca1;
 			position: absolute;
 			top: auto;
-			left: 0;
+			@include left(0);
 			display: none;
 			z-index: 1;
 			overflow: visible;
@@ -298,7 +298,7 @@ $fourth_level: #999;
 				width: 100%;
 			}
 			ul.open {
-				margin-left: 100%;
+				@include margin-left(100%);
 				top: 0;
   				display: block;
 				width: 100%;
@@ -306,7 +306,7 @@ $fourth_level: #999;
 			}
 		}
 		ul li:hover ul {
-			margin-left: 100%;
+			@include margin-left(100%);
 			top: 0;
 		}
 	}

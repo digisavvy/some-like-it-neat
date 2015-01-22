@@ -34,23 +34,23 @@
 	@include clearfix;
 	float: none;
 	margin-top: .5em;
-	margin-right: auto!important;
+	@include margin-right(auto!important);
 	margin-bottom: .5em;
-	margin-left: auto!important;
+	@include margin-left(auto!important);
 }
 .alignleft {
 	display: inline;
-	float: left;
-	margin-right: 1.5em;
+	@include float(left);
+	@include margin-right(1.5em);
 }
 .alignright {
 	display: inline;
-	float: right;
-	margin-left: 1.5em;
+	@include float(right);
+	@include margin-left(1.5em);
 }
 
 .sticky{
-	float: left;
+	@include float(left);
 	padding: 20px;
 }
 .gallery-caption {}

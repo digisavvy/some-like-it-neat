@@ -36,7 +36,7 @@
 	border-bottom: solid 5px #999;
 	border-radius: $border-radius;
 	clear: both;
-	float: left;
+	@include float(left);
 	font-family: oswald;
 	margin: 15px 0;
 	padding: $button-padding;
@@ -93,6 +93,6 @@ input[type="submit"] {
 		}
 }
 input#s {
-	float: left;
+	@include float(left);
 	width: 70%;
 }
