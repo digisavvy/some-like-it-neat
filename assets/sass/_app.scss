@@ -1,0 +1,116 @@
+/*
+Theme Name: Some Like it Neat
+Theme URI: https://github.com/digisavvy/some-like-it-neat
+Author: Alex Vasquez
+Author URI: http://alexhasnicehair.com
+Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
+Version: 1.1.11
+License: GNU General Public License
+License URI: license.txt
+Text Domain: digistarter
+Domain Path: /library/languages/
+Tags: white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready, accessibility-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Some Like it Neat is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 - Bourbon, Bitters, Neat
+2.0 - Normalize
+3.0 - Elements
+4.0 - Forms
+5.0 - Components/ Add-ons
+6.0 - Layout and Structure
+	6.1 - Header
+	6.2 - Navigation
+	6.3 - Content
+	6.4 - Page Templates
+	6.5 - Sidebar
+	6.6 - Footer
+	6.7 - Accessbility
+
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Bourbon, Bitters, Neat
+--------------------------------------------------------------*/
+@import "bourbon/bourbon";
+@import "base/base"; // Bitters
+@import "grid-settings";
+@import "neat/neat";
+
+/*--------------------------------------------------------------
+2.0 Normalize/Reset
+--------------------------------------------------------------*/
+@import "layouts/normalize";
+
+/*--------------------------------------------------------------
+3.0 Variables
+--------------------------------------------------------------*/
+@import "components/variables";
+
+/*--------------------------------------------------------------
+4.0 Typography
+--------------------------------------------------------------*/
+@import "layouts/typography";
+
+/*--------------------------------------------------------------
+5.0 Components/Add-ons
+--------------------------------------------------------------*/
+@import "bourbon/addons/clearfix";
+@import "bourbon/addons/prefixer";
+@import "bourbon/addons/font-family";
+@import "components/buttons";
+
+/*--------------------------------------------------------------
+6.0 Layout and Structure
+--------------------------------------------------------------*/
+@import "layouts/structure";
+
+	/*--------------------------------------------------------------
+	6.1 Layout and Structure
+	--------------------------------------------------------------*/
+	@import "layouts/header";
+
+	/*--------------------------------------------------------------
+	6.2 Navigation
+	--------------------------------------------------------------*/
+	@import "components/flexnav";
+	@import "layouts/navigation";
+
+	/*--------------------------------------------------------------
+	6.3 Content
+	--------------------------------------------------------------*/
+	@import "layouts/content";
+
+	/*--------------------------------------------------------------
+	6.4 Page Templates
+	--------------------------------------------------------------*/
+	@import "layouts/template-2col-l-sidebar";
+	@import "layouts/template-2col-r-sidebar";
+	@import "layouts/template-full-width";
+
+	/*--------------------------------------------------------------
+	6.5 Sidebar
+	--------------------------------------------------------------*/
+	@import "layouts/sidebar";
+
+	/*--------------------------------------------------------------
+	6.6 Footer
+	--------------------------------------------------------------*/
+	@import "layouts/footer";
+
+	/*--------------------------------------------------------------
+	6.7 Accessbility
+	--------------------------------------------------------------*/
+	@import "layouts/accessibility";
