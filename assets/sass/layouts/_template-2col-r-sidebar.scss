@@ -3,12 +3,12 @@
 
 	h1.entry-title {
 		margin: 0;
-		text-align: left;
+		@include text-align(left);
 	}
 
 	#primary {
 		@include media($sm) {
-			float: left !important;
+			@include float(left);
 			@include media($sm) {
 				@include span-columns(4);
 			}
@@ -25,8 +25,8 @@
 
 		}
 		@include media($md) {
-			float: right !important;
-			margin-right: 1.5%;
+			@include float(right);
+			@include margin-right(1.5%);
 			@include media($sm) {
 				@include span-columns(4);
 			}

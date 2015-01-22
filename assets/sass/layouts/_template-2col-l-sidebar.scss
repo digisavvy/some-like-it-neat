@@ -3,10 +3,10 @@
 
 	h1.entry-title {
 		margin: 0;
-		text-align: left;
+		@include text-align(left);
 	}
 	#primary {
-		float: right !important;
+		@include float(right);
 		@include media($sm) {
 			@include span-columns(4);
 		}
@@ -15,8 +15,8 @@
 		}
 	}
 	#secondary {
-		float: left !important;
-		margin-right: 1.5%;
+		@include float(left);
+		@include margin-right(1.5%);
 		@include media($sm) {
 			@include span-columns(4);
 		}

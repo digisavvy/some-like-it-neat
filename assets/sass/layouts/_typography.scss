@@ -81,7 +81,7 @@ h6 {
 }
 blockquote {
 	background-color: #f9f9f9;
-	border-left: solid 5px $primary-color;
+	@include border-left(solid 5px $primary-color);
 	font-style: italic;
 	padding: 20px;
 }
