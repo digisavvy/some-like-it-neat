@@ -3,7 +3,7 @@
 -------------
 
 **Features:**
-* Adding RTL Support
+* This is a doozy. Adding RTL Support using Bi-App. For this to work, we're changing how we compile styles a bit. Instead of putting all of your styles in style.scss, we're now placing them in app.scss. Will explain more in the Readme.md file.
 
 ### 1.1.10
 -------------

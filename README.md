@@ -47,6 +47,10 @@ Getting Started
   * The first thing you’ll want to do is grab a copy of the theme —
 **git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
 
+* #### Generating your styles
+  * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
+  support using a set of mixins from the Bi-App-Sass [view](http://anasnakawa.github.io/bi-app-sass/) project which helps us generate styles for RTL configurations. All LTR styles are output to style.css and RTL styles are output to rtl.css.
+
 * #### Install Gulpjs and Plugins
   Once you have Node, Sass and the theme installed, the next step is simple enough.
   * Open a command prompt/terminal and navigate to your theme's root directory and run this command: **npm install**
@@ -89,6 +93,8 @@ a project.
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
     │    │   ├── css
+    │    │        ├── rtl-min.css
+    │    │        ├── rtl.css
     │    │        ├── style-min.css
     │    │        ├── style.css
     │    │   ├── js
@@ -115,8 +121,10 @@ a project.
     |    |    |   ├── _structure.scss
     |    |    |   └── _typography.scss
     │    |    └── neat
+    |    ├── _app.scss
     |    ├── _flexnav.scss
     |    ├── _grid-settings.scss
+    |    ├── _rtl.scss
     |    └── style.scss
     ├── library
     │   ├── languages
@@ -148,8 +156,6 @@ a project.
     |     ├── template-full-width.php
     |     ├── template-left-col.php
     |     └── template-right-col.php
-  │   ├── tasks
-   |        └── build.js
     ├── .bowerrc
     ├── 404.php
     ├── archive.php
@@ -232,4 +238,9 @@ Hover Intent
  - Source: https://github.com/tristen/hoverintent
  - License: the MIT
  - License URI: license.txt
+
+Bi-App-Sass
+- Source: http://anasnakawa.github.io/bi-app-sass/
+- License: the MIT License
+- License URI: https://github.com/anasnakawa/bi-app-sass/blob/master/LICENSE
 
