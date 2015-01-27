@@ -59,7 +59,7 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function () {
 	return gulp.src([source+'sass/**/*.scss'])
 		.pipe(plumber())
-		.pipe(sass({ style: 'expanded' }))
+		.pipe(sass({ style: 'expanded', }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
@@ -81,8 +81,8 @@ gulp.task('styles', function () {
 */
 gulp.task('js', function() {
 	return gulp.src( [ source + 'js/**/*.js', '!'+ source + 'js/**/*.min.js', '!' + source + 'js/vendor/**/*.js' ] )
-		.pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
-		.pipe(jshint.reporter('default'))
+		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
+		// .pipe(jshint.reporter('default'))
 		.pipe(concat('production.js'))
 		.pipe(gulp.dest(source+'js'))
 		.pipe(rename({ suffix: '-min' }))
