@@ -59,7 +59,7 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function () {
 	return gulp.src([source+'sass/**/*.scss'])
 		.pipe(plumber())
-		.pipe(sass({ style: 'expanded', }))
+		.pipe(sass({ style: 'expanded' }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
@@ -80,9 +80,7 @@ gulp.task('styles', function () {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('js', function() {
-	return gulp.src([source+'js/vendor/**/*.js', source+'bower/**'])
-		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
-		// .pipe(jshint.reporter('default'))
+	return gulp.src([source+'js/vendor/**/*.js', source+'js/app/**/*.js', source+'bower/**'])
 		.pipe(concat('production.js'))
 		.pipe(gulp.dest(source+'js'))
 		.pipe(rename({ suffix: '-min' }))
@@ -90,6 +88,17 @@ gulp.task('js', function() {
 		.pipe(gulp.dest(build+'assets/js/'))
 		.pipe(notify({ message: 'Scripts task complete', onLast: true }));
 });
+
+/**
+ * jsHint Tasks
+ *
+ * Scan our own JS code excluding vendor JS libraries and perform jsHint task.
+ */
+gulp.task( 'jsHint', function() {
+	return gulp.src( [ source+'js/app/**/*.js' ] )
+		.pipe(jshint('.jshintrc'))
+		.pipe(jshint.reporter('default'));
+} );
 
 /**
  * Images
@@ -194,7 +203,8 @@ gulp.task('build', function(cb) {
 
 
 // Watch Task
-gulp.task('default', ['styles', 'browser-sync'], function () {
+gulp.task('default', ['styles', 'js', 'jsHint', 'browser-sync'], function () {
     gulp.watch(source+"sass/**/*.scss", ['styles']);
-    gulp.watch(source+"js/vendor/**/*.js", ['js', browserSync.reload]);
+    gulp.watch(source+'js/app/**/*.js', ['js', browserSync.reload]);
+	gulp.watch(source+'js/app/**/*.js', ['jsHint']);
 });
