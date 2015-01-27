@@ -80,7 +80,7 @@ gulp.task('styles', function () {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('js', function() {
-	return gulp.src([source+'js/vendor/**/*.js', source+'bower/**'])
+	return gulp.src( [ source + 'js/**/*.js', '!'+ source + 'js/**/*.min.js', '!' + source + 'js/vendor/**/*.js' ] )
 		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
 		// .pipe(jshint.reporter('default'))
 		.pipe(concat('production.js'))
@@ -194,7 +194,7 @@ gulp.task('build', function(cb) {
 
 
 // Watch Task
-gulp.task('default', ['styles', 'browser-sync'], function () {
-    gulp.watch(source+"sass/**/*.scss", ['styles']);
-    gulp.watch(source+"js/vendor/**/*.js", ['js', browserSync.reload]);
+gulp.task('default', ['styles', 'js','browser-sync'], function () {
+    gulp.watch( source + "sass/**/*.scss", [ 'styles' ] );
+    gulp.watch( [ source + 'js/**/*.js', '!'+ source + 'js/**/*.min.js', '!' + source + 'js/vendor/**/*.js' ], ['js', browserSync.reload]);
 });
