@@ -2,18 +2,18 @@
 ----------------------------------------------- */
 
 .site-main [class*="navigation"] {
-	float: left;
+	@include float(left);
 	margin: 25px 0 1.5em;
 	overflow: hidden;
 }
 [class*="navigation"] .nav-previous {
-	float: left;
+	@include float(left);
 	margin-top: 25px;
 	width: 50%;
 }
 [class*="navigation"] .nav-next {
-	float: right;
-	text-align: right;
+	@include float(right);
+	@include text-align(right);
 	margin-top: 25px;
 	width: 50%;
 }
@@ -21,8 +21,8 @@
 .main-navigation ul ul {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	display: none;
-	float: left;
-	left: 0;
+	@include float(left);
+	@include left(0);
 	position: absolute;
 	top: 1.5em;
 	z-index: 99999;
@@ -66,11 +66,11 @@ ul.nav-menu li.current_page_item {
 }
 
 #primary-nav {
-	float: left;
+	@include float(left);
 	max-width: 100%;
 	width: 100%;
 }
 
 .nav-links a:nth-of-type(2) {
-	float: right;
+	@include float(right);
 }

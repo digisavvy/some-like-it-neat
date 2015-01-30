@@ -22,7 +22,7 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 
 * Underscores (_s) based theme. There's smarter folks than me building great sh*t (http://underscores.me)
 
-* Sass. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. As of the initial writing of this ReadMe, I've been using Sass like a piece of shit asshole. I don't know what the fuck I'm doing. So if you do, please feel free to school a chump! If you don't know Sass, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
+* Sass. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. If you don't know Sass, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
 
 * Theme Hook Alliance — One of the things I learned to love about working with Frameworks were their hooks. Thematic and Genesis introduced me to the notion. Since them I've been using them like they're going out of style. When I set out to make my own starter theme I wanted to make something that had "just the right amount" of features for me. I knew I needed hooks. The THA project was intro'd to me by Brandon Dove, at the OCWP (http://ocwp.org) developer's day meetup. Thought it was super neat. So I bundled that hot mess right into this thing.
 
@@ -30,9 +30,12 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
 your theme! Cool. Right?
 
+* RTL Support via the most excellent bi-app-sass project
+* Built for Accessibility
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
-* Bower
+* Bower. It's in there
+
 * Pull requests welcome...
 
 
@@ -46,6 +49,10 @@ Getting Started
 * #### Getting and Installing the Theme
   * The first thing you’ll want to do is grab a copy of the theme —
 **git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
+
+* #### Generating your styles
+  * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
+  support using a set of mixins from the Bi-App-Sass [view](http://anasnakawa.github.io/bi-app-sass/) project which helps us generate styles for RTL configurations. All LTR styles are output to style.css and RTL styles are output to rtl.css.
 
 * #### Install Gulpjs and Plugins
   Once you have Node, Sass and the theme installed, the next step is simple enough.
@@ -89,11 +96,13 @@ a project.
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
     │    │   ├── css
-    │    │        ├── style-min.css
-    │    │        ├── style.css
-    │    │   ├── js
+    |    |   |    ├── rtl-min.css
+    |    |   |    ├── rtl.css
+    |    |   |    ├── style-min.css
+    |    |   |    └──style.css
+    │    |   └──  js
     │    │        ├── production-min.js
-    │    │        ├── production.js
+    │    │        └── production.js
     │    ├── sass
     │    |   └── base (Bitters)
     │    |   └── bourbon
@@ -115,13 +124,15 @@ a project.
     |    |    |   ├── _structure.scss
     |    |    |   └── _typography.scss
     │    |    └── neat
+    |    ├── _app.scss
     |    ├── _flexnav.scss
     |    ├── _grid-settings.scss
+    |    ├── _rtl.scss
     |    └── style.scss
     ├── library
-    │   ├── languages
+    │   └── languages
     │   │   ├── digistarter.pot
-    │   ├── vendors
+    │   └── vendors
     │   │   ├── js
     │   │   ├── tgm-plugin-activation
     │   │   ├── tha-theme-hooks
@@ -131,7 +142,7 @@ a project.
     │   ├── jetpack.php
     │   └── template-tags.php
     ├── page-templates
-    │     ├── partials
+    │     └── partials
     |     |   ├── content-aside.php
     |     |   ├── content-audio.php
     |     |   ├── content-chat.php
@@ -148,8 +159,6 @@ a project.
     |     ├── template-full-width.php
     |     ├── template-left-col.php
     |     └── template-right-col.php
-  │   ├── tasks
-   |        └── build.js
     ├── .bowerrc
     ├── 404.php
     ├── archive.php
@@ -232,4 +241,9 @@ Hover Intent
  - Source: https://github.com/tristen/hoverintent
  - License: the MIT
  - License URI: license.txt
+
+Bi-App-Sass
+- Source: http://anasnakawa.github.io/bi-app-sass/
+- License: the MIT License
+- License URI: https://github.com/anasnakawa/bi-app-sass/blob/master/LICENSE
 

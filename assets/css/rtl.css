@@ -790,7 +790,7 @@ h6 {
 
 blockquote {
   background-color: #f9f9f9;
-  border-left: solid 5px #ff0000;
+  border-right: solid 5px #ff0000;
   font-style: italic;
   padding: 20px;
 }
@@ -924,7 +924,7 @@ a:hover, a:visited:hover {
   border-bottom: solid 5px #999;
   border-radius: 0;
   clear: both;
-  float: left;
+  float: right;
   font-family: oswald;
   margin: 15px 0;
   padding: 20px;
@@ -995,7 +995,7 @@ input[type="submit"]:hover {
 }
 
 input#s {
-  float: left;
+  float: right;
   width: 70%;
 }
 
@@ -1009,6 +1009,8 @@ body {
   font-family: Georgia, Cambria, "Times New Roman", Times, serif;
   line-height: 1.5em;
   word-break: break-word;
+  direction: rtl;
+  unicode-bidi: embed;
 }
 
 #page {
@@ -1165,10 +1167,10 @@ body {
   transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
 }
 .flexnav.opacity {
-  padding-left: 0;
+  padding-right: 0;
 }
 .flexnav ul {
-  padding-left: 0;
+  padding-right: 0;
 }
 .flexnav.flexnav-show {
   max-height: 2000px;
@@ -1178,7 +1180,7 @@ body {
 .flexnav.one-page {
   position: fixed;
   top: 50px;
-  right: 5%;
+  left: 5%;
   max-width: 200px;
 }
 .flexnav li {
@@ -1207,7 +1209,7 @@ body {
 .flexnav li ul {
   display: none;
   margin-bottom: 0;
-  padding-left: 0;
+  padding-right: 0;
   width: 100%;
   z-index: 5;
 }
@@ -1233,7 +1235,7 @@ body {
   position: absolute;
   z-index: 999;
   top: 0;
-  right: 0;
+  left: 0;
   width: 50px;
   height: 100%;
   display: inline-block;
@@ -1264,15 +1266,15 @@ body {
 .menu-button.one-page {
   position: fixed;
   top: 0;
-  right: 5%;
-  padding-right: 45px;
+  left: 5%;
+  padding-left: 45px;
 }
 .menu-button .touch-button {
   background: transparent;
   position: absolute;
   z-index: 999;
   top: 0;
-  right: 0;
+  left: 0;
   width: 50px;
   height: 50px;
   display: none;
@@ -1298,7 +1300,7 @@ body {
 .menu-button i.navicon {
   display: block !important;
   position: relative;
-  right: 30px;
+  left: 30px;
 }
 .menu-button i.navicon:after {
   color: #555;
@@ -1318,13 +1320,13 @@ body {
   }
   .flexnav.one-page {
     top: 0;
-    right: auto;
+    left: auto;
     max-width: 1080px;
   }
   .flexnav li {
     position: relative;
     list-style: none;
-    float: left;
+    float: right;
     display: block;
     background-color: #000;
     overflow: visible;
@@ -1339,13 +1341,13 @@ body {
   .flexnav li > ul {
     position: absolute;
     top: auto;
-    left: 0;
+    right: 0;
   }
   .flexnav li > ul li {
     width: 100%;
   }
   .flexnav li ul li > ul {
-    margin-left: 100%;
+    margin-right: 100%;
     top: 0;
   }
   .flexnav li ul li a {
@@ -1362,7 +1364,7 @@ body {
     max-height: 100px;
   }
   .flexnav li ul.open ul.open {
-    margin-left: 100%;
+    margin-right: 100%;
     top: 0;
   }
 
@@ -1378,13 +1380,13 @@ body {
 }
 .oldie .flexnav.one-page {
   top: 0;
-  right: auto;
+  left: auto;
   max-width: 1080px;
 }
 .oldie .flexnav li {
   position: relative;
   list-style: none;
-  float: left;
+  float: right;
   display: block;
   background-color: #000;
   width: 20%;
@@ -1401,7 +1403,7 @@ body {
   float: none;
 }
 .oldie .flexnav li a {
-  border-left: 1px solid #acaca1;
+  border-right: 1px solid #acaca1;
   border-bottom: none;
   overflow: visible;
 }
@@ -1409,7 +1411,7 @@ body {
   background: #acaca1;
   position: absolute;
   top: auto;
-  left: 0;
+  right: 0;
   display: none;
   z-index: 1;
   overflow: visible;
@@ -1429,14 +1431,14 @@ body {
   width: 100%;
 }
 .oldie .flexnav li ul.open ul.open {
-  margin-left: 100%;
+  margin-right: 100%;
   top: 0;
   display: block;
   width: 100%;
   overflow: visible;
 }
 .oldie .flexnav ul li:hover ul {
-  margin-left: 100%;
+  margin-right: 100%;
   top: 0;
 }
 .oldie .menu-button {
@@ -1449,20 +1451,20 @@ body {
 /* =Menu
 ----------------------------------------------- */
 .site-main [class*="navigation"] {
-  float: left;
+  float: right;
   margin: 25px 0 1.5em;
   overflow: hidden;
 }
 
 [class*="navigation"] .nav-previous {
-  float: left;
+  float: right;
   margin-top: 25px;
   width: 50%;
 }
 
 [class*="navigation"] .nav-next {
-  float: right;
-  text-align: right;
+  float: left;
+  text-align: left;
   margin-top: 25px;
   width: 50%;
 }
@@ -1471,8 +1473,8 @@ body {
   -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
           box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
-  float: left;
-  left: 0;
+  float: right;
+  right: 0;
   position: absolute;
   top: 1.5em;
   z-index: 99999;
@@ -1519,13 +1521,13 @@ ul.nav-menu li.current_page_item {
 }
 
 #primary-nav {
-  float: left;
+  float: right;
   max-width: 100%;
   width: 100%;
 }
 
 .nav-links a:nth-of-type(2) {
-  float: right;
+  float: left;
 }
 
 /*--------------------------------------------------------------
@@ -1573,9 +1575,9 @@ ul.nav-menu li.current_page_item {
 .aligncenter {
   float: none;
   margin-top: .5em;
-  margin-right: auto !important;
-  margin-bottom: .5em;
   margin-left: auto !important;
+  margin-bottom: .5em;
+  margin-right: auto !important;
 }
 .aligncenter:after {
   content: "";
@@ -1585,18 +1587,18 @@ ul.nav-menu li.current_page_item {
 
 .alignleft {
   display: inline;
-  float: left;
-  margin-right: 1.5em;
-}
-
-.alignright {
-  display: inline;
   float: right;
   margin-left: 1.5em;
 }
 
-.sticky {
+.alignright {
+  display: inline;
   float: left;
+  margin-right: 1.5em;
+}
+
+.sticky {
+  float: right;
   padding: 20px;
 }
 
@@ -1697,10 +1699,10 @@ object {
 --------------------------------------------------------------*/
 .page-template-page-templatestemplate-left-col-php h1.entry-title {
   margin: 0;
-  text-align: left;
+  text-align: right;
 }
 .page-template-page-templatestemplate-left-col-php #primary {
-  float: right;
+  float: left;
 }
 @media screen and (min-width: 200px) {
   .page-template-page-templatestemplate-left-col-php #primary {
@@ -1725,8 +1727,8 @@ object {
   }
 }
 .page-template-page-templatestemplate-left-col-php #secondary {
-  float: left;
-  margin-right: 1.5%;
+  float: right;
+  margin-left: 1.5%;
 }
 @media screen and (min-width: 200px) {
   .page-template-page-templatestemplate-left-col-php #secondary {
@@ -1757,11 +1759,11 @@ object {
 
 .page-template-page-templatestemplate-right-col-php h1.entry-title {
   margin: 0;
-  text-align: left;
+  text-align: right;
 }
 @media screen and (min-width: 200px) {
   .page-template-page-templatestemplate-right-col-php #primary {
-    float: left;
+    float: right;
   }
 }
 @media screen and (min-width: 200px) and (min-width: 200px) {
@@ -1789,8 +1791,8 @@ object {
 
 @media screen and (min-width: 768px) {
   .page-template-page-templatestemplate-right-col-php #secondary {
-    float: right;
-    margin-right: 1.5%;
+    float: left;
+    margin-left: 1.5%;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 200px) {
@@ -1853,7 +1855,7 @@ object {
 6.6 Footer
 --------------------------------------------------------------*/
 footer {
-  float: left;
+  float: right;
   margin: 0 auto;
   padding: 0 40px;
   width: 100%;
@@ -1870,7 +1872,7 @@ footer .footer-left {
   margin-top: 30px;
   margin-bottom: 40px;
   padding: 10px;
-  text-align: left;
+  text-align: right;
 }
 footer .footer-left:last-child {
   margin-right: 0;
@@ -1883,7 +1885,7 @@ footer .footer-right {
   margin-top: 30px;
   margin-bottom: 40px;
   padding: 10px;
-  text-align: right;
+  text-align: left;
 }
 footer .footer-right:last-child {
   margin-right: 0;

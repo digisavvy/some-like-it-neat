@@ -3,11 +3,24 @@
 html {
 
 }
-body {
-	color: #000;
-	font-family: $content;
-	line-height: 1.5em;
-	word-break: break-word;
+@include ltr {
+		body {
+		color: #000;
+		font-family: $content;
+		line-height: 1.5em;
+		word-break: break-word;
+	}
+}
+
+@include rtl {
+	body {
+		color: #000;
+		font-family: $content;
+		line-height: 1.5em;
+		word-break: break-word;
+		direction: rtl;
+	  unicode-bidi: embed;
+	}
 }
 #page {
 	 @include outer-container;
@@ -39,7 +52,6 @@ body {
 			list-style-type: square;
 		}
 	}
-
 }
 #secondary {
 	@include media($sm) {
