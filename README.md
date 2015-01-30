@@ -96,13 +96,13 @@ a project.
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
     │    │   ├── css
-    │    │        ├── rtl-min.css
-    │    │        ├── rtl.css
-    │    │        ├── style-min.css
-    │    │        ├── style.css
-    │    │   ├── js
+    |    |   |    ├── rtl-min.css
+    |    |   |    ├── rtl.css
+    |    |   |    ├── style-min.css
+    |    |   |    └──style.css
+    │    |   └──  js
     │    │        ├── production-min.js
-    │    │        ├── production.js
+    │    │        └── production.js
     │    ├── sass
     │    |   └── base (Bitters)
     │    |   └── bourbon
@@ -130,9 +130,9 @@ a project.
     |    ├── _rtl.scss
     |    └── style.scss
     ├── library
-    │   ├── languages
+    │   └── languages
     │   │   ├── digistarter.pot
-    │   ├── vendors
+    │   └── vendors
     │   │   ├── js
     │   │   ├── tgm-plugin-activation
     │   │   ├── tha-theme-hooks
@@ -142,7 +142,7 @@ a project.
     │   ├── jetpack.php
     │   └── template-tags.php
     ├── page-templates
-    │     ├── partials
+    │     └── partials
     |     |   ├── content-aside.php
     |     |   ├── content-audio.php
     |     |   ├── content-chat.php
