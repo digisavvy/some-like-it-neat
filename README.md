@@ -30,9 +30,12 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
 your theme! Cool. Right?
 
+* RTL Support via the most excellent bi-app-sass project
+* Built for Accessibility
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
-* Bower
+* Bower. It's in there
+
 * Pull requests welcome...
 
 
