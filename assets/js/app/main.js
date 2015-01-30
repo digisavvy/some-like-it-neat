@@ -3,7 +3,7 @@
  */
 'use strict';
 
-jQuery(document).ready(function($) {
+jQuery( document ).ready( function( $ ) {
 	// Sample code
 	console.log( 'Theme JS Init' );
 });
