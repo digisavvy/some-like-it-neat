@@ -179,6 +179,15 @@ a project.
     ├── single.php
     └── style.css</code></pre>
 
+Road Map
+---------------
+* Firm up i18n for RTL and language support. Looking for contributors here
+* Ensure Accessibility has been properly and thoroughly addressed
+* Implement Yeoman
+* Get Bower properly setup and configured
+* And more...
+
+
 ### General Credits and Thanks
 ---------------
 A special thanks to all the folks who inspire me on a daily basis to "do more" with what I know and what I can contribute.
