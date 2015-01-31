@@ -74,6 +74,9 @@ $fourth_level: #999;
 			font-size: 100%;
 			position: relative;
 			overflow: hidden;
+			&:last-child {
+				border-bottom: 1px solid $third_level;
+			}
 		}
 	}
 	li ul.flexnav-show {
