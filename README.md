@@ -66,6 +66,9 @@ There are a couple of tasks built into Some Like it Neat to help get you going.
 
 Each task such as 'js', 'images' or 'browser-sync' may be started individually. Although, the only one of them you'd do that with is the 'images' task since that's not auto-optimizing at the moment.
 
+* #### Theme Development, Minification and You
+When developing your theme note that the output style.css file and production.js file are in expanded (readable) format if WP_DEBUG is set to true in wp-config.php. If WP_DEBUG is NOT set to true, then style.css and production.js are minified for you. While developing your theme, I recommend that WP_DEBUG is set to true. Just a good practice anyway.
+
 ### Theme Hook Alliance
 ---------------
 
