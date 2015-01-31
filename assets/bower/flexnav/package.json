@@ -1,0 +1,14 @@
+{
+    "name": "flexnav",
+    "version": "1.1",
+    "repository": "https://github.com/indyplanets/flexnav",
+    "license": "http://unlicense.org/",
+    "devDependencies": {
+        "grunt": "latest",
+        "grunt-contrib-coffee": "latest",
+        "grunt-contrib-sass": "latest",
+        "grunt-coffeelint": "latest",
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-watch": "latest"
+    }
+}

@@ -1,8 +1,8 @@
 /*
-  FlexNav.js 1.3.3
+	FlexNav.js 1.3.3
 
-  Created by Jason Weaver http://jasonweaver.name
-  Released under http://unlicense.org/
+	Created by Jason Weaver http://jasonweaver.name
+	Released under http://unlicense.org/
 
 //
 */
