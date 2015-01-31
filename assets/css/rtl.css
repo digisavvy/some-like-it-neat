@@ -1223,6 +1223,9 @@ body {
   position: relative;
   overflow: hidden;
 }
+.flexnav li ul li:last-child {
+  border-bottom: 1px solid #666;
+}
 .flexnav li ul.flexnav-show li {
   overflow: visible;
 }
