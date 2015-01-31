@@ -1,0 +1,32 @@
+{
+  "name": "neat",
+  "homepage": "http://neat.bourbon.io/",
+  "main": "app/assets/stylesheets/_neat.scss",
+  "ignore": [
+    "bin",
+    "lib",
+    ".gitignore",
+    "Gemfile",
+    "Gemfile.lock",
+    "Rakefile",
+    "neat.gemspec",
+    "CONTRIBUTING.md",
+    "NEWS.md",
+    "test",
+    "spec"
+  ],
+  "dependencies": {
+    "bourbon": ">=4.0"
+  },
+  "version": "1.7.1",
+  "_release": "1.7.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.7.1",
+    "commit": "2b5134ec350c22ff310c36512bd1f565ec407e8e"
+  },
+  "_source": "git://github.com/thoughtbot/neat.git",
+  "_target": "~1.7.1",
+  "_originalSource": "neat",
+  "_direct": true
+}

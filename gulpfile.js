@@ -32,6 +32,7 @@ var gulp 	= require('gulp'),
 	zip 					= require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
 	plumber 			= require('gulp-plumber'), // Helps prevent stream crashing on errors
 	pipe 					= require('gulp-coffee'),
+	gulpFilter		= require('gulp-filter'),
 	cache 				= require('gulp-cache');
 
 /**
@@ -59,7 +60,7 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function () {
 	return gulp.src([source+'sass/**/*.scss'])
 		.pipe(plumber())
-		.pipe(sass({ style: 'expanded', }))
+		.pipe(sass({ style: 'expanded', 'sourcemap=none': true }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
