@@ -5,7 +5,13 @@
   "authors": [
     "Alex Vasquez <alexjvas@gmail.com>"
   ],
-  "dependencies": {
-
+  "dependencies" : {
+    "bourbon" : "~4.1",
+    "neat" : "~1.7",
+    "flexnav" : "~1.3.3",
+    "bi-app-sass" : "latest",
+    "jquery-hoverIntent" : "~1.8.1",
+    "modernizr": "2.8.2",
+    "selectivizr" : "latest"
   }
 }
