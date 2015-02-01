@@ -34,7 +34,7 @@ your theme! Cool. Right?
 * Built for Accessibility
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
-* Bower. It's in there
+* Bower for managing packages and dependencies
 
 * Pull requests welcome...
 
