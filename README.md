@@ -50,15 +50,16 @@ Getting Started
   * The first thing you’ll want to do is grab a copy of the theme —
 **git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
 
-* #### Generating your styles
-  * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
-  support using a set of mixins from the Bi-App-Sass [view](http://anasnakawa.github.io/bi-app-sass/) project which helps us generate styles for RTL configurations. All LTR styles are output to style.css and RTL styles are output to rtl.css.
-
-* #### Install Gulpjs and Bower Dependencies
+* #### Install Gulpjs and Bower + Dependencies
   Once you have Node, Sass and the theme installed, the next step is simple enough.
-  * Open a command prompt/terminal and navigate to your theme's root directory and run this command: **npm install** - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync!
-  * Next run this command: **bower install** - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
+  * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: **npm install** - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync!
+  * **Install Bower** - In the command prompt/terminal run this command: **npm install -g bower**. This installs Bower (the -g flag installs globally, not just in the current directory, super friends).
+  * **Install Bower Dependencies** - There are Sass and Js packages that are required by Some Like it Neat. To get them run this command: **bower install** - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
  _(note - you may have to run this command as admin or sudo)_
+
+ * #### Generating your styles
+   * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
+   support using a set of mixins from the Bi-App-Sass [view](http://anasnakawa.github.io/bi-app-sass/) project which helps us generate styles for RTL configurations. All LTR styles are output to style.css and RTL styles are output to rtl.css.
 
 * #### Gulp Tasks
 There are a couple of tasks built into Some Like it Neat to help get you going.
