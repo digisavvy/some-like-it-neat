@@ -1,54 +1,17 @@
-# Packages #
-############
-*.7z
-*.dmg
-*.gz
-*.bz2
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-*.tgz
-
-# Logs and databases #
-######################
-*.log
-*.sql
-
-# OS generated files #
-######################
-**.DS_Store*
-ehthumbs.db
-Icon?
-Thumbs.db
-._*
-
-# Vim generated files #
-######################
-*.un~
-
-# SASS #
-##########
+# sass cache
 **/.sass-cache
 **/.sass-cache/*
-
-# Bower #
-##########
-assets/bower_components/*
-
-# Codekit #
-##########
+# Codekit
 /codekit-config.json
 *.codekit
 **.codekit-cache/*
-
-
-# NPM #
-##########
-node_modules
-
-# Compiled Files and Build Dirs #
-##########
 /README.html
+# npm and bower modules
+/node_modules/
+/bower_components/
+/dist/
+/min/
 /build/
+# Source Files Uncomment the line below to ignore the src folder
+# **/src
+somelikeitneat.zip
