@@ -8,7 +8,7 @@
 var project     = 'somelikeitneat', // Optional - Use your own project name here...
 	build       = './build/', // Files that you want to package into a zip go here
 	source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
-	bower       = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
+	bower       = './assets/bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 
 // Load plugins
 var gulp 	= require('gulp'),
@@ -32,7 +32,7 @@ var gulp 	= require('gulp'),
 	zip 					= require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
 	plumber 			= require('gulp-plumber'), // Helps prevent stream crashing on errors
 	pipe 					= require('gulp-coffee'),
-	gulpFilter		= require('gulp-filter'),
+	filter				= require('gulp-filter'),
 	cache 				= require('gulp-cache');
 
 /**
@@ -81,14 +81,14 @@ gulp.task('styles', function () {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('js', function() {
-	return gulp.src([source+'js/vendor/**/*.js', source+'bower/selectivizr/selectivizr.js', source+'bower/jquery-hoverIntent/jquery.hoverIntent.js', source+'bower/flexnav/js/jquery.flexnav.js'])
+	return gulp.src([source+'js/vendor/**/*.js', source+'bower_components/selectivizr/selectivizr.js', source+'bower_components/modernizr/modernizr.js', source+'bower_components/jquery-hoverIntent/jquery.hoverIntent.js', source+'bower_components/flexnav/js/jquery.flexnav.js'])
 		// .pipe(jshint('.jshintrc')) // TO-DO: Reporting seems to be broken for js errors.
 		// .pipe(jshint.reporter('default'))
 		.pipe(concat('production.js'))
 		.pipe(gulp.dest(source+'js'))
 		.pipe(rename({ suffix: '-min' }))
 		.pipe(uglify())
-		.pipe(gulp.dest(build+'assets/js/'))
+		.pipe(gulp.dest(source+'js/'))
 		.pipe(notify({ message: 'Scripts task complete', onLast: true }));
 });
 
@@ -114,15 +114,14 @@ gulp.task('images', function() {
  * clearing out unoptimized image files in zip as those will have been moved and optimized
 */
 
+
 gulp.task('cleanup', function() {
   return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
-    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
     .pipe(rimraf())
     .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 gulp.task('cleanupFinal', function() {
   return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
-    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
     .pipe(rimraf())
     .pipe(notify({ message: 'Build task complete', onLast: true }));
 });
@@ -137,7 +136,7 @@ gulp.task('cleanupFinal', function() {
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
 gulp.task('buildPhp', function() {
-	return gulp.src(['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./build/**','!./library/**','!./src/**'])
+	return gulp.src(['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./build/**','!./library/**','!./assets/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
@@ -195,7 +194,7 @@ gulp.task('build', function(cb) {
 
 
 // Watch Task
-gulp.task('default', ['styles', 'browser-sync'], function () {
+gulp.task('default', ['styles', 'browser-sync', 'js'], function () {
     gulp.watch(source+"sass/**/*.scss", ['styles']);
-    gulp.watch(source+"js/vendor/**/*.js", ['js', browserSync.reload]);
+    gulp.watch(source+"js/**/*.js", ['js', browserSync.reload]);
 });
