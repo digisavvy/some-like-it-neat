@@ -53,3 +53,6 @@ node_modules
 ##########
 /README.html
 /build/
+
+# PhpStrom Project Files #
+.idea/
