@@ -59,7 +59,7 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function () {
 	return gulp.src([source+'sass/**/*.scss'])
 		.pipe(plumber())
-		.pipe(sass({ style: 'expanded' }))
+		.pipe(sass({ style: 'expanded', 'sourcemap=none': true }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
 		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
@@ -80,7 +80,7 @@ gulp.task('styles', function () {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('js', function() {
-	return gulp.src([source+'js/vendor/**/*.js', source+'js/app/**/*.js', source+'bower/**'])
+	return gulp.src([source+'js/vendor/**/*.js', source+'js/app/**/*.js', source+'bower_components/**/*.js'])
 		.pipe(concat('production.js'))
 		.pipe(gulp.dest(source+'js'))
 		.pipe(rename({ suffix: '-min' }))
@@ -123,13 +123,13 @@ gulp.task('images', function() {
 */
 
 gulp.task('cleanup', function() {
-  return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+  return gulp.src(['**/build','assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
     // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
     .pipe(rimraf())
     .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 gulp.task('cleanupFinal', function() {
-  return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+  return gulp.src(['**/build','assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
     // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
     .pipe(rimraf())
     .pipe(notify({ message: 'Build task complete', onLast: true }));
