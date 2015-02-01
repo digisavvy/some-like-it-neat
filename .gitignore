@@ -35,7 +35,7 @@ Thumbs.db
 
 # Bower #
 ##########
-assets/bower_components/jquery
+assets/bower_components/*
 
 # Codekit #
 ##########
