@@ -10,7 +10,7 @@
 *.tar
 *.zip
 *.tgz
-*.map
+
 
 # Logs and databases #
 ######################
@@ -33,6 +33,7 @@ Thumbs.db
 ##########
 **/.sass-cache
 **/.sass-cache/*
+*.map
 
 # PhpStorm Project Files #
 ##########
