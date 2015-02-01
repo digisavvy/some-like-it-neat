@@ -116,12 +116,12 @@ gulp.task('images', function() {
 
 
 gulp.task('cleanup', function() {
-  return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+  return gulp.src(['**/build','./assets/bower_components/*','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
     .pipe(rimraf())
     .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 gulp.task('cleanupFinal', function() {
-  return gulp.src(['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+  return gulp.src(['**/build','./assets/bower_components/*','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
     .pipe(rimraf())
     .pipe(notify({ message: 'Build task complete', onLast: true }));
 });
