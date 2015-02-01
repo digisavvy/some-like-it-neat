@@ -44,10 +44,10 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 1.0 Bourbon, Bitters, Neat
 --------------------------------------------------------------*/
-@import "bourbon/bourbon";
+@import "../../assets/bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "base/base"; // Bitters
 @import "grid-settings";
-@import "neat/neat";
+@import "../../assets/bower_components/neat/app/assets/stylesheets/neat";
 
 /*--------------------------------------------------------------
 2.0 Normalize/Reset
@@ -67,9 +67,9 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 5.0 Components/Add-ons
 --------------------------------------------------------------*/
-@import "bourbon/addons/clearfix";
-@import "bourbon/addons/prefixer";
-@import "bourbon/addons/font-family";
+@import "../../assets/bower_components/bourbon/app/assets/stylesheets/addons/clearfix";
+@import "../../assets/bower_components/bourbon/app/assets/stylesheets/addons/prefixer";
+@import "../../assets/bower_components/bourbon/app/assets/stylesheets/addons/font-family";
 @import "components/buttons";
 
 /*--------------------------------------------------------------

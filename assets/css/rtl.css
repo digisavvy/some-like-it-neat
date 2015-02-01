@@ -75,7 +75,7 @@ body {
   -webkit-font-smoothing: antialiased;
   background-color: white;
   color: #333;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   line-height: 1.5;
 }
@@ -86,7 +86,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   line-height: 1.25;
   margin: 0;
   text-rendering: optimizeLegibility;
@@ -174,7 +174,7 @@ input,
 label,
 select {
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
 }
 
@@ -201,7 +201,7 @@ select[multiple=multiple] {
   border: 1px solid #DDD;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
           box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em 0.5em;
@@ -320,9 +320,14 @@ input[type="submit"] {
   white-space: nowrap;
 }
 
-* {
+html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /*--------------------------------------------------------------
@@ -739,10 +744,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 20px;
   text-transform: uppercase;
 }
-h1:after, h2:after, h3:after, h4:after, h5:after, h6:after {
+h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
   text-decoration: none;
@@ -755,37 +760,37 @@ h1 {
   font-size: 75px;
   font-size: 4.6875rem;
   color: #000;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 h2 {
   font-size: 50px;
   font-size: 3.125rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 h3 {
   font-size: 35px;
   font-size: 2.1875rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 h4 {
   font-size: 24px;
   font-size: 1.5rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 h5 {
   font-size: 20px;
   font-size: 1.25rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 h6 {
   font-size: 18px;
   font-size: 1.125rem;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 blockquote {
@@ -803,7 +808,7 @@ strong, b {
   font-size: 20px;
   font-size: 1.25rem;
   color: #000;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 a, a:visited {
@@ -819,7 +824,7 @@ a:hover, a:visited:hover {
 }
 
 .entry-title {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   text-align: center;
 }
 @media screen and (min-width: 200px) {
@@ -843,7 +848,7 @@ a:hover, a:visited:hover {
 
 #primary,
 #secondary {
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
 }
 
 /*--------------------------------------------------------------
@@ -856,7 +861,7 @@ a:hover, a:visited:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   clear: both;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   margin: 10px 0;
   padding: 20px;
   -webkit-transition: all 200ms ease-in-out;
@@ -868,7 +873,7 @@ a:hover, a:visited:hover {
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 20px;
 }
 #submit:hover {
@@ -877,7 +882,7 @@ a:hover, a:visited:hover {
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 20px;
 }
 #submit:hover {
@@ -891,7 +896,7 @@ a:hover, a:visited:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   clear: both;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   margin: 10px 0;
   padding: 20px;
   -webkit-transition: all 200ms ease-in-out;
@@ -903,7 +908,7 @@ a:hover, a:visited:hover {
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 20px;
 }
 .neat-button:hover {
@@ -912,7 +917,7 @@ a:hover, a:visited:hover {
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 20px;
 }
 
@@ -940,7 +945,7 @@ a:hover, a:visited:hover {
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 20px;
 }
 .neat-3d-button:hover {
@@ -952,7 +957,7 @@ a:hover, a:visited:hover {
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 20px;
 }
 
@@ -963,7 +968,7 @@ input[type="submit"] {
   -webkit-box-shadow: none;
           box-shadow: none;
   clear: both;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   margin: 10px 0;
   padding: 20px;
   -webkit-transition: all 200ms ease-in-out;
@@ -977,7 +982,7 @@ input[type="submit"]:focus {
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 20px;
 }
 input[type="submit"]:hover {
@@ -986,7 +991,7 @@ input[type="submit"]:hover {
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 20px;
 }
 input[type="submit"]:hover {
@@ -1006,7 +1011,7 @@ input#s {
 -------------------------------------------------------------- */
 body {
   color: #000;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   line-height: 1.5em;
   word-break: break-word;
   direction: rtl;
@@ -1018,10 +1023,10 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-#page:after {
+#page::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 
 #main {
@@ -1032,10 +1037,10 @@ body {
   margin: auto;
   width: 100%;
 }
-#primary:after {
+#primary::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 @media screen and (min-width: 200px) {
   #primary {
@@ -1104,7 +1109,7 @@ body {
   text-align: center;
 }
 .site-branding .site-title {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 40px;
 }
 @media screen and (min-width: 200px) {
@@ -1132,7 +1137,7 @@ body {
   padding: 25px 0;
   font-size: 20px;
   font-size: 1.25rem;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   font-style: italic;
 }
 @media screen and (min-width: 200px) {
@@ -1217,6 +1222,9 @@ body {
   font-size: 100%;
   position: relative;
   overflow: hidden;
+}
+.flexnav li ul li:last-child {
+  border-bottom: 1px solid #666;
 }
 .flexnav li ul.flexnav-show li {
   overflow: visible;
@@ -1579,10 +1587,10 @@ ul.nav-menu li.current_page_item {
   margin-bottom: .5em;
   margin-right: auto !important;
 }
-.aligncenter:after {
+.aligncenter::after {
+  clear: both;
   content: "";
   display: table;
-  clear: both;
 }
 
 .alignleft {
@@ -1607,7 +1615,7 @@ ul.nav-menu li.current_page_item {
 #breadcrumbs {
   font-size: 14px;
   font-size: 0.875rem;
-  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   padding: 20px 0 20px 50px;
 }
 #breadcrumbs a, #breadcrumbs a:visited {

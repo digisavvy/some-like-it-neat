@@ -8,33 +8,31 @@
 var project     = 'somelikeitneat', // Optional - Use your own project name here...
 	build       = './build/', // Files that you want to package into a zip go here
 	source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
-	bower       = './bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
-	phpSource   = [ '**/*(.php|.js)', '!node_modules/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
+	bower       = './assets/bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 
 // Load plugins
-var gulp 	= require( 'gulp' ),
-	browserSync	= require( 'browser-sync' ), // Asynchronous browser loading on .scss file changes
-	phpcs = require( 'gulp-phpcs' ),
+var gulp 	= require('gulp'),
+	browserSync	= require('browser-sync'), // Asynchronous browser loading on .scss file changes
 	reload				= browserSync.reload,
-	autoprefixer 	= require( 'gulp-autoprefixer' ), // Autoprefixing magic
-	minifycss 		= require( 'gulp-minify-css' ),
-	jshint 				= require( 'gulp-jshint' ),
-	uglify 				= require( 'gulp-uglify' ),
-	imagemin 			= require( 'gulp-imagemin' ),
-	newer 				= require( 'gulp-newer' ),
-	rename 				= require( 'gulp-rename' ),
-	concat 				= require( 'gulp-concat' ),
-	notify 				= require( 'gulp-notify' ),
-	cmq 					= require( 'gulp-combine-media-queries' ),
-	runSequence 	= require( 'gulp-run-sequence' ),
-	sass 					= require( 'gulp-ruby-sass' ), // Our Sass compiler
-	plugins 			= require( 'gulp-load-plugins' )({ camelize: true }),
-	ignore 				= require( 'gulp-ignore' ), // Helps with ignoring files and directories in our run tasks
-	rimraf 				= require( 'gulp-rimraf' ), // Helps with removing files and directories in our run tasks
-	zip 					= require( 'gulp-zip' ), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
-	plumber 			= require( 'gulp-plumber' ), // Helps prevent stream crashing on errors
-	pipe 					= require( 'gulp-coffee' ),
-	cache 				= require( 'gulp-cache' );
+	autoprefixer 	= require('gulp-autoprefixer'), // Autoprefixing magic
+	minifycss 		= require('gulp-minify-css'),
+	jshint 				= require('gulp-jshint'),
+	uglify 				= require('gulp-uglify'),
+	imagemin 			= require('gulp-imagemin'),
+	newer 				= require('gulp-newer'),
+	rename 				= require('gulp-rename'),
+	concat 				= require('gulp-concat'),
+	notify 				= require('gulp-notify'),
+	cmq 					= require('gulp-combine-media-queries'),
+	runSequence 	= require('gulp-run-sequence'),
+	sass 					= require('gulp-ruby-sass'), // Our Sass compiler
+	plugins 			= require('gulp-load-plugins')({ camelize: true }),
+	ignore 				= require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
+	rimraf 				= require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
+	zip 					= require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
+	plumber 			= require('gulp-plumber'), // Helps prevent stream crashing on errors
+	pipe 					= require('gulp-coffee'),
+	cache 				= require('gulp-cache');
 
 /**
  * Browser Sync
@@ -48,27 +46,10 @@ gulp.task('browser-sync', function() {
 	];
 
 	browserSync.init(files, {
-	    proxy: project + ".dev"
+	    proxy: project+".dev"
 	});
 
 });
-
-/**
- * PHP Code Sniffer
- *
- * PHP Tasks
- *
- * phpcs --ignore='node_modules/*,*-min.css,assets/js/vendor/*,assets/css/*,*-min.js,assets/js/production.js' --standard=WordPress-Core .
- *
- */
-gulp.task( 'phpcs', function() {
-	return gulp.src( phpSource )
-		.pipe( phpcs( {
-			standard: 'WordPress-Core'
-		} ) )
-		.pipe( phpcs.reporter( 'log' ) )
-		.pipe( notify( { message: 'phpcs task complete', onLast: true } ) );
-} );
 
 /**
  * Styles
@@ -76,20 +57,20 @@ gulp.task( 'phpcs', function() {
  * Looking at src/sass and compiling the files into Expanded format, Autoprefixing and sending the files to the build folder
 */
 gulp.task('styles', function () {
-	return gulp.src( [source + 'sass/**/*.scss'] )
-		.pipe( plumber() )
-		.pipe( sass( { style: 'expanded' } ) )
-		.pipe( autoprefixer( 'last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4' ) )
-		.pipe( plumber.stop() )
-		.pipe( gulp.dest( source + 'css' ) )
-		.pipe( cmq() ) // Combines Media Queries
-		.pipe( reload( {stream:true} ) ) // Inject Styles when style file is created
-		.pipe( rename( { suffix: '-min' } ) )
-		.pipe( minifycss( {keepBreaks:true} ) )
-		.pipe( minifycss( { keepSpecialComments: 0 } ) )
-		.pipe( gulp.dest( source + 'css' ) )
-		.pipe( reload( {stream:true} ) ) // Inject Styles when min style file is created
-		.pipe( notify( { message: 'Styles task complete', onLast: true } ) )
+	return gulp.src([source+'sass/**/*.scss'])
+		.pipe(plumber())
+		.pipe(sass({ style: 'expanded', 'sourcemap=none': true }))
+		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+		.pipe(plumber.stop())
+		.pipe(gulp.dest(source+'css'))
+		.pipe(cmq()) // Combines Media Queries
+		.pipe(reload({stream:true})) // Inject Styles when style file is created
+		.pipe(rename({ suffix: '-min' }))
+		.pipe(minifycss({keepBreaks:true}))
+		.pipe(minifycss({ keepSpecialComments: 0 }))
+		.pipe(gulp.dest(source+'css'))
+		.pipe(reload({stream:true})) // Inject Styles when min style file is created
+		.pipe(notify({ message: 'Styles task complete', onLast: true }))
 });
 
 
@@ -99,13 +80,13 @@ gulp.task('styles', function () {
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
 gulp.task('js', function() {
-	return gulp.src( [source + 'js/vendor/**/*.js', source + 'js/app/**/*.js', source + 'bower/**'] )
-		.pipe( concat( 'production.js' ) )
-		.pipe( gulp.dest( source + 'js' ) )
-		.pipe( rename( { suffix: '-min' } ) )
-		.pipe( uglify() )
-		.pipe( gulp.dest( build + 'assets/js/' ) )
-		.pipe( notify( { message: 'Scripts task complete', onLast: true } ) );
+	return gulp.src([source+'js/vendor/**/*.js', source+'js/app/**/*.js', source+'bower_components/**/*.js'])
+		.pipe(concat('production.js'))
+		.pipe(gulp.dest(source+'js'))
+		.pipe(rename({ suffix: '-min' }))
+		.pipe(uglify())
+		.pipe(gulp.dest(build+'assets/js/'))
+		.pipe(notify({ message: 'Scripts task complete', onLast: true }));
 });
 
 /**
@@ -114,10 +95,9 @@ gulp.task('js', function() {
  * Scan our own JS code excluding vendor JS libraries and perform jsHint task.
  */
 gulp.task( 'jsHint', function() {
-	return gulp.src( [ source + 'js/app/**/*.js' ] )
-		.pipe( jshint( '.jshintrc' ) )
-		.pipe( jshint.reporter( 'default' ) )
-		.pipe( notify( { message: 'jsHint task complete', onLast: true } ) );
+	return gulp.src( [ source+'js/app/**/*.js' ] )
+		.pipe(jshint('.jshintrc'))
+		.pipe(jshint.reporter('default'));
 } );
 
 /**
@@ -127,11 +107,11 @@ gulp.task( 'jsHint', function() {
 */
 gulp.task('images', function() {
 
-	// Add the newer pipe to pass through newer images only
-	return gulp.src( [source + 'img**/*.{png,jpg,gif}'] )
-		.pipe( newer( source + 'img**/*.{png,jpg,gif}' ) )
-		.pipe( imagemin( { optimizationLevel: 7, progressive: true, interlaced: true } ) )
-		.pipe( gulp.dest( source ) );
+// Add the newer pipe to pass through newer images only
+	return gulp.src([source+'img**/*.{png,jpg,gif}'])
+		.pipe(newer(source+'img**/*.{png,jpg,gif}'))
+		.pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
+		.pipe(gulp.dest(source));
 
 });
 
@@ -143,16 +123,16 @@ gulp.task('images', function() {
 */
 
 gulp.task('cleanup', function() {
-	return gulp.src( ['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false } ) // much faster
-	// .pipe(ignore('node_modules/**')) //Example of a directory to ignore
-	.pipe( rimraf() )
-	.pipe( notify( { message: 'Clean task complete', onLast: true } ) );
+  return gulp.src(['**/build','assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
+    .pipe(rimraf())
+    .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 gulp.task('cleanupFinal', function() {
-	return gulp.src( ['**/build','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false } ) // much faster
-	// .pipe(ignore('node_modules/**')) //Example of a directory to ignore
-	.pipe( rimraf() )
-	.pipe( notify( { message: 'Build task complete', onLast: true } ) );
+  return gulp.src(['**/build','assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
+    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
+    .pipe(rimraf())
+    .pipe(notify({ message: 'Build task complete', onLast: true }));
 });
 
 
@@ -165,23 +145,23 @@ gulp.task('cleanupFinal', function() {
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
 gulp.task('buildPhp', function() {
-	return gulp.src( ['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./build/**','!./library/**','!./src/**'] )
-		.pipe( gulp.dest( build ) )
-		.pipe( notify( { message: 'Moving files complete', onLast: true } ) );
+	return gulp.src(['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./build/**','!./library/**','!./src/**'])
+		.pipe(gulp.dest(build))
+		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
 
 // Copy Library to Build
 gulp.task('buildAssets', function() {
-	return gulp.src( [source + '**', source + 'js/production.js'] )
-		.pipe( gulp.dest( build + '/assets' ) )
-		.pipe( notify( { message: 'Copy of Assets directory complete', onLast: true } ) );
+	return gulp.src([source+'**', source+'js/production.js'])
+		.pipe(gulp.dest(build+'/assets'))
+		.pipe(notify({ message: 'Copy of Assets directory complete', onLast: true }));
 });
 
 // Copy Library to Build
 gulp.task('buildLibrary', function() {
-	return gulp.src( ['./library/**'] )
-		.pipe( gulp.dest( build + 'library' ) )
-		.pipe( notify( { message: 'Copy of Library directory complete', onLast: true } ) );
+	return gulp.src(['./library/**'])
+		.pipe(gulp.dest(build+'library'))
+		.pipe(notify({ message: 'Copy of Library directory complete', onLast: true }));
 });
 
 /**
@@ -190,10 +170,10 @@ gulp.task('buildLibrary', function() {
  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
 */
 gulp.task('buildZip', function () {
-	return gulp.src( [build + '/**/'] )
-		.pipe( zip( project + '.zip' ) )
-		.pipe( gulp.dest( './' ) )
-		.pipe( notify( { message: 'Zip task complete', onLast: true } ) );
+	return gulp.src([build+'/**/'])
+		.pipe(zip(project+'.zip'))
+		.pipe(gulp.dest('./'))
+		.pipe(notify({ message: 'Zip task complete', onLast: true }));
 });
 
 /**
@@ -202,10 +182,10 @@ gulp.task('buildZip', function () {
  * Look at src/images, optimize the images and send them to the appropriate place
 */
 gulp.task('buildImages', function() {
-	return gulp.src( [source + 'img/**/*', '!assets/images/originals/**'] )
+	return gulp.src([source+'img/**/*', '!assets/images/originals/**'])
 		// .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-		.pipe( gulp.dest( build + 'assets/img/' ) )
-		.pipe( plugins.notify( { message: 'Images task complete', onLast: true } ) );
+		.pipe(gulp.dest(build+'assets/img/'))
+		.pipe(plugins.notify({ message: 'Images task complete', onLast: true }));
 });
 
 // ==== TASKS ==== //
@@ -218,14 +198,13 @@ gulp.task('buildImages', function() {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-		runSequence( 'cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb );
+		runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
 
 
 // Watch Task
-gulp.task('default', ['styles', 'js', 'jsHint', 'browser-sync', 'phpcs'], function () {
-	gulp.watch( source + "sass/**/*.scss", ['styles'] );
-	gulp.watch( source + 'js/app/**/*.js', ['js', browserSync.reload] );
-	gulp.watch( source + 'js/app/**/*.js', ['jsHint'] );
-	gulp.watch( phpSource, ['phpcs'] );
+gulp.task('default', ['styles', 'js', 'jsHint', 'browser-sync'], function () {
+    gulp.watch(source+"sass/**/*.scss", ['styles']);
+    gulp.watch(source+'js/app/**/*.js', ['js', browserSync.reload]);
+	gulp.watch(source+'js/app/**/*.js', ['jsHint']);
 });
