@@ -10,6 +10,7 @@
     "gulp-consolidate": "^0.1.2",
     "gulp-ignore": "^1.2.0",
     "gulp-imagemin": "^0.6.1",
+    "gulp-phpcs": "^0.4",
     "gulp-jshint": "^1.6.4",
     "gulp-livereload": "^2.1.0",
     "gulp-load-plugins": "^0.6.0",
