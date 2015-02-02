@@ -103,14 +103,19 @@ a project.
 
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
+    │    │   ├── bower_components
     │    │   ├── css
     |    |   |    ├── rtl-min.css
     |    |   |    ├── rtl.css
     |    |   |    ├── style-min.css
     |    |   |    └──style.css
     │    |   └──  js
-    │    │        ├── production-min.js
-    │    │        └── production.js
+    │    │   |    ├── app
+    │    │   |    └── vendor
+    │    |   |    |   ├── _buttons.scss
+    │    |   |    |   └── _dashicons.scss    
+    │    │   |    ├── production-min.js
+    │    │   |    └── production.js
     │    ├── sass
     │    |   └── base (Bitters)
     │    |   └── bourbon
