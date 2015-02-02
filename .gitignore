@@ -11,7 +11,6 @@
 *.zip
 *.tgz
 
-
 # Logs and databases #
 ######################
 *.log
@@ -33,11 +32,11 @@ Thumbs.db
 ##########
 **/.sass-cache
 **/.sass-cache/*
-*.map
+**/.map
 
-# PhpStorm Project Files #
+# Bower #
 ##########
-.idea/
+assets/bower_components/*
 
 # Codekit #
 ##########
@@ -45,14 +44,15 @@ Thumbs.db
 *.codekit
 **.codekit-cache/*
 
-# NPM and Bower Modules #
-##########
-/node_modules/
-assets/bower_components/
 
-# Compiled Files and build directory #
+# NPM #
 ##########
-README.html
+node_modules
+
+# Compiled Files and Build Dirs #
+##########
+/README.html
 /build/
 
-
+# PhpStrom Project Files #
+.idea/
