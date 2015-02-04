@@ -79,6 +79,8 @@ gulp.task('styles', function () {
  *
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
+
+
 gulp.task('js', function() {
 	return gulp.src([source+'js/app/**/*.js', source+'js/vendor/**/*.js', source+'bower_components/**/*.js'])
 		.pipe(concat('production.js'))
