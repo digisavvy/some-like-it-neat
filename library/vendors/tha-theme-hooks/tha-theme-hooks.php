@@ -65,10 +65,12 @@ add_theme_support( 'tha_hooks', array(
 	'sidebar',
 	'footer',
 
-	//	 If/when WordPress Core implements similar methodology, Themes and Plugins
-	//	 will be able to check whether the version of THA supplied by the theme
-	//	 supports Core hooks.
-	//	'core',
+	/**
+	 * If/when WordPress Core implements similar methodology, Themes and Plugins
+	 * will be able to check whether the version of THA supplied by the theme
+	 * supports Core hooks.
+	 */
+//	'core'
 ) );
 
 /**
@@ -99,22 +101,22 @@ add_filter( 'current_theme_supports-tha_hooks', 'tha_current_theme_supports', 10
  * Special case, useful for <DOCTYPE>, etc.
  * $tha_supports[] = 'html;
  */
-function tha_html_before() {
-	do_action( 'tha_html_before' );
-}
-	/**
+ function tha_html_before() {
+	 do_action( 'tha_html_before' );
+ }
+/**
  * HTML <body> hooks
  * $tha_supports[] = 'body';
  */
-function tha_body_top() {
-	do_action( 'tha_body_top' );
-}
+ function tha_body_top() {
+	 do_action( 'tha_body_top' );
+ }
 
-function tha_body_bottom() {
-	do_action( 'tha_body_bottom' );
-}
+ function tha_body_bottom() {
+	 do_action( 'tha_body_bottom' );
+ }
 
-	/**
+/**
 * HTML <head> hooks
 *
 * $tha_supports[] = 'head';
@@ -127,7 +129,7 @@ function tha_head_bottom() {
 	do_action( 'tha_head_bottom' );
 }
 
-	/**
+/**
 * Semantic <header> hooks
 *
 * $tha_supports[] = 'header';
@@ -148,7 +150,7 @@ function tha_header_bottom() {
 	do_action( 'tha_header_bottom' );
 }
 
-	/**
+/**
 * Semantic <content> hooks
 *
 * $tha_supports[] = 'content';
@@ -158,7 +160,7 @@ function tha_content_before() {
 }
 
 function tha_content_after() {
-		do_action( 'tha_content_after' );
+	do_action( 'tha_content_after' );
 }
 
 function tha_content_top() {
@@ -169,7 +171,7 @@ function tha_content_bottom() {
 	do_action( 'tha_content_bottom' );
 }
 
-	/**
+/**
 * Semantic <entry> hooks
 *
 * $tha_supports[] = 'entry';
@@ -190,7 +192,7 @@ function tha_entry_bottom() {
 	do_action( 'tha_entry_bottom' );
 }
 
-	/**
+/**
 * Comments block hooks
 *
 * $tha_supports[] = 'comments';
@@ -203,7 +205,7 @@ function tha_comments_after() {
 	do_action( 'tha_comments_after' );
 }
 
-	/**
+/**
 * Semantic <sidebar> hooks
 *
 * $tha_supports[] = 'sidebar';
@@ -224,7 +226,7 @@ function tha_sidebar_bottom() {
 	do_action( 'tha_sidebar_bottom' );
 }
 
-	/**
+/**
 * Semantic <footer> hooks
 *
 * $tha_supports[] = 'footer';
