@@ -82,8 +82,8 @@ get_header(); ?>
 				</h1>
 				<?php
 					// Show an optional term description.
-					if ( function_exists( 'get_the_archive_description' ) ) :
-						echo '<div class="taxonomy-description">'.get_the_archive_description().'</div>';
+				if ( function_exists( 'get_the_archive_description' ) ) :
+					echo '<div class="taxonomy-description">'.get_the_archive_description().'</div>';
 					/*
 					* TO-DO Might remove this code block at some point, since
 					*	get_the_archive_description() does the same thing
