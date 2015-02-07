@@ -38,6 +38,7 @@ Thumbs.db
 ##########
 vendor
 wpcs
+composer.lock
 
 # Bower #
 ##########
@@ -61,4 +62,7 @@ node_modules
 
 # PhpStrom Project Files #
 .idea/
+
+# Composer Files #
+vendor/
 composer.lock
