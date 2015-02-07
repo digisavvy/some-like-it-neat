@@ -63,6 +63,3 @@ node_modules
 # PhpStrom Project Files #
 .idea/
 
-# Composer Files #
-vendor/
-composer.lock
