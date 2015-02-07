@@ -184,15 +184,15 @@ if ( ! function_exists( 'digistarter_add_breadcrumbs' ) ) :
 			    'post_format'
 				),
 				'taxonomy_excluded_terms' => array(
-			    'category' => array('uncategorized')
+			    'category' => array( 'uncategorized' )
 				),
 				'post_types' => array(
 			    'gizmo' => array(
 			      'last_show'          => false,
-			      'taxonomy_preferred' => 'category'
+			      'taxonomy_preferred' => 'category',
 			    ),
 			    'whatzit' => array(
-			      'separator' => '&raquo;'
+			      'separator' => '&raquo;',
 			    )
 				)
 			)); }
@@ -205,7 +205,7 @@ if ( ! function_exists( 'digistarter_optional_scripts' ) ) :
 	function digistarter_optional_scripts() {
 
 		 // Link Color
-		if ( get_theme_mod( 'digistarter_add_link_color' ) == '' ) {
+		if ( '' == get_theme_mod( 'digistarter_add_link_color' )  ) {
 
 		} else { ?>
 			<style type="text/css">
@@ -221,7 +221,7 @@ if ( ! function_exists( 'digistarter_mobile_styles' ) ) :
 	function digistarter_mobile_styles() {
 		$value = get_theme_mod( 'digistarter_mobile_hide_arrow' );
 
-		if ( get_theme_mod( 'digistarter_mobile_hide_arrow' ) == 0 ) { ?>
+		if ( 0 == get_theme_mod( 'digistarter_mobile_hide_arrow' ) ) { ?>
 			<style>
 				.menu-button i.navicon {
 					display: none;
