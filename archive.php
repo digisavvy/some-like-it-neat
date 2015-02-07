@@ -18,7 +18,7 @@ get_header(); ?>
 			<header class="page-header">
 				<h1 class="page-title">
 					<?php
-					if (function_exists('get_the_archive_title')) :
+					if ( function_exists( 'get_the_archive_title' ) ) :
 						echo get_the_archive_title();
 
 						/*
@@ -57,7 +57,7 @@ get_header(); ?>
 							_e( 'Asides', 'digistarter' );
 
 						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'digistarter');
+							_e( 'Images', 'digistarter' );
 
 						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
 							_e( 'Videos', 'digistarter' );
@@ -69,7 +69,7 @@ get_header(); ?>
 							_e( 'Links', 'digistarter' );
 
 						elseif ( is_tax() ) :
-+							single_term_title();
+							+ single_term_title();
 
 						else :
 							_e( 'Archives', 'digistarter' );
@@ -83,8 +83,8 @@ get_header(); ?>
 				<?php
 					// Show an optional term description.
 					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', 	$term_description );
+				if ( ! empty( $term_description ) ) :
+					printf( '<div class="taxonomy-description">%s</div>', 	$term_description );
 					endif;
 				?>
 			</header><!-- .page-header -->
