@@ -1,5 +1,6 @@
 {
     "require-dev": {
-        "squizlabs/php_codesniffer": "2.*"
+        "squizlabs/php_codesniffer": "2.*",
+        "wp-coding-standards/wpcs": "0.3.*"
     }
 }
