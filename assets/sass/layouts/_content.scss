@@ -63,9 +63,6 @@
 	font-family: $content;
 	padding: 20px 0 20px 50px;
 
-	a, a:visited {
-		border-bottom: solid 1px $primary-color;
-	}
 }
 /* =Media
 ----------------------------------------------- */
@@ -146,12 +143,20 @@ object {
 
 	.entry-content {
 		a, a:visited {
-			border-bottom: solid 1px $primary-color;
+			// border-bottom: solid 1px $primary-color;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 	.entry-meta {
 		a, a:visited {
-			border-bottom: solid 1px $primary-color;
+			// border-bottom: solid 1px $primary-color;
+			text-decoration: underline;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 	}
 }
