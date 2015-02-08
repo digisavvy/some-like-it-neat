@@ -4,7 +4,7 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 ?>
 		<?php tha_content_bottom(); ?>

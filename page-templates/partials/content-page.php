@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 ?>
 <?php tha_entry_before(); ?>

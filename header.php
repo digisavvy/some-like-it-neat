@@ -4,7 +4,7 @@
  *
  * Displays all of the <head> section and everything up till <div id="content">
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 ?><!DOCTYPE html>
 <?php tha_html_before(); ?>

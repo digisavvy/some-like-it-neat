@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 get_header(); ?>

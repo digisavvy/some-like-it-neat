@@ -12,7 +12,7 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 /**
@@ -22,7 +22,7 @@
  * @uses some_like_it_neat_admin_header_style()
  * @uses some_like_it_neat_admin_header_image()
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 function some_like_it_neat_custom_header_setup() {
 	add_theme_support( 'custom-header', apply_filters( 'some_like_it_neat_custom_header_args', array(

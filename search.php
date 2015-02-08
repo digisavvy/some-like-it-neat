@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 get_header(); ?>

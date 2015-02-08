@@ -147,7 +147,7 @@ a project.
     |    └── style.scss
     ├── library
     │   └── languages
-    │   │   ├── digistarter.pot
+    │   │   ├── some_like_it_neat.pot
     │   └── vendors
     │   │   ├── js
     │   │   ├── tgm-plugin-activation

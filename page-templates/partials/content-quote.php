@@ -1,6 +1,6 @@
 <?php
 /**
- * @package digistarter
+ * @package some_like_it_neat
  */
 ?>
 

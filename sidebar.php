@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 ?>
 	<?php tha_sidebars_before(); ?>

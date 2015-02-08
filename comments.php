@@ -7,7 +7,7 @@
  * handled by a callback to some_like_it_neat_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 /*

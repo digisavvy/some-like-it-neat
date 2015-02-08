@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 get_header(); ?>

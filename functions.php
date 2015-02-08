@@ -1,8 +1,8 @@
 <?php
 /**
- * digistarter functions and definitions
+ * some_like_it_neat functions and definitions
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
@@ -25,7 +25,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on digistarter, use a find and replace
+		 * If you're building a theme based on some_like_it_neat, use a find and replace
 		 * to change 'some-like-it-neat' to the name of your theme in all the template files
 		 */
 		load_theme_textdomain( 'some-like-it-neat', get_template_directory() . '/library/languages' );
@@ -122,7 +122,7 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 			wp_enqueue_script( 'production-js', get_stylesheet_directory_uri() . '/assets/js/production.js', array( 'jquery' ), '1.0.0', false );
 
 			// Main Style
-			wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style.css' );
+			wp_enqueue_style( 'some_like_it_neat-style',  get_stylesheet_directory_uri() . '/assets/css/style.css' );
 
 		else :
 			// Vendor Scripts
@@ -135,7 +135,7 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 			wp_enqueue_script( 'production-js', get_stylesheet_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
 
 			// Main Style
-			wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
+			wp_enqueue_style( 'some_like_it_neat-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
 
 		endif;
 
@@ -164,19 +164,17 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-if ( ! function_exists( 'some_like_it_neat_widgets_init' ) ) :
-	function some_like_it_neat_widgets_init() {
-		register_sidebar( array(
-			'name'          => __( 'Sidebar', 'some-like-it-neat' ),
-			'id'            => 'sidebar-1',
-			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</aside>',
-			'before_title'  => '<h4 class="widget-title">',
-			'after_title'   => '</h4>',
-		) );
-	}
-	add_action( 'widgets_init', 'some_like_it_neat_widgets_init' );
-endif;
+function some_like_it_neat_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'Sidebar', 'some-like-it-neat' ),
+		'id'            => 'sidebar-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
+}
+add_action( 'widgets_init', 'some_like_it_neat_widgets_init' );
 
 /**
  * Initializing Flexnav Menu System

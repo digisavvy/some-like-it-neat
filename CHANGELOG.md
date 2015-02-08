@@ -13,7 +13,7 @@
 
 **Bugfixes:**
 * Fixed some text translation issues in code
-* Changed prefix and text-domains to some_like_it_neat_ from digistarter_
+* Changed prefix and text-domains to some_like_it_neat_ from some_like_it_neat_
 * Removed Example Content such as Customizer Example panel and tgm-example-plugin.zip
 * Rename wp-customizer folder and functions to just customizer, for purposes relating to core naming conventions and avoiding conflicts there.
 * Remove orphaned rtl.css file
@@ -50,7 +50,7 @@
 
 **Bugfixes:**
 * Updated non-tanslated strings in Customizer
-* Updated textdomain in Thomas Griffin Plugin Activation script to "digistarter"
+* Updated textdomain in Thomas Griffin Plugin Activation script to "some_like_it_neat"
 
 ### 1.1.8
 -------------

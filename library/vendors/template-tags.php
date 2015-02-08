@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 if ( ! function_exists( 'some_like_it_neat_paging_nav' ) ) :
