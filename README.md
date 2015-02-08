@@ -74,7 +74,7 @@ Each task such as 'js', 'images' or 'browser-sync' may be started individually. 
 * #### Theme Development, Minification and You
 When developing your theme note that the output style.css file and production.js file are in expanded (readable) format if WP_DEBUG is set to true in wp-config.php. If WP_DEBUG is NOT set to true, then style.css and production.js are minified for you. While developing your theme, I recommend that WP_DEBUG is set to true. Just a good practice anyway.
 
-* **A Note About Javascript Files** - If you have JS files that are not managed by Bower, you should place those files inside the assets/js/app folder. Why? Gulp runs a task that concatenates js files in that directory and checks them for errors, which is pretty nifty. You can modify Gulp task behavior to suit your tastes, of course.
+* **A Note About Javascript Files** - If you have JS files that are not managed by Bower, you should place those files inside the assets/js/app folder. Why? Gulp runs a task that concatenates js files in that directory and checks them for errors, which is pretty nifty. You can modify Gulp task behavior to suit your tastes, of course. **Extra Note!** If you've set WP Debug true, the concatenated file is unminified and if set to false, then the concatenated file is minified. If you don't intend to use this functionality, you should comment-out or remove the lines referring to development.js and production-min.js.
 
 
 ### Theme Hook Alliance
