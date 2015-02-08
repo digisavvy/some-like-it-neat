@@ -31,6 +31,8 @@ tasks such as autoprefixing, compiling and minifying Sass files; cleaning up you
 your theme! Cool. Right?
 
 * RTL Support via the most excellent bi-app-sass project
+* Composer for pulling in dev dependencies like PHPCS
+* PHPCS w/ WordPress Coding Standards
 * Built for Accessibility
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
@@ -55,6 +57,7 @@ Getting Started
   * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: **npm install** - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync!
   * **Install Bower** - In the command prompt/terminal run this command: **npm install -g bower**. This installs Bower (the -g flag installs globally, not just in the current directory, super friends).
   * **Install Bower Dependencies** - There are Sass and Js packages that are required by Some Like it Neat. To get them run this command: **bower install** - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
+  * **Install Composer Dependencies** -
  _(note - you may have to run this command as admin or sudo)_
 
  * #### Generating your styles
@@ -113,7 +116,7 @@ a project.
     │    │   |    ├── app
     │    │   |    └── vendor
     │    |   |    |   ├── _buttons.scss
-    │    |   |    |   └── _dashicons.scss    
+    │    |   |    |   └── _dashicons.scss
     │    │   |    ├── production-min.js
     │    │   |    └── production.js
     │    ├── sass
