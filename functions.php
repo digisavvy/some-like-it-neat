@@ -74,7 +74,7 @@ if ( ! function_exists( 'digistarter_setup' ) ) :
 		/**
 	 * WP Customizer
 	 */
-		require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
+		require get_template_directory() . '/library/vendors/customizer/customizer.php';
 
 		/**
 	 * Implement the Custom Header feature.
