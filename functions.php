@@ -26,9 +26,9 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
 		 * If you're building a theme based on digistarter, use a find and replace
-		 * to change 'digistarter' to the name of your theme in all the template files
+		 * to change 'some-like-it-neat' to the name of your theme in all the template files
 		 */
-		load_theme_textdomain( 'digistarter', get_template_directory() . '/library/languages' );
+		load_theme_textdomain( 'some-like-it-neat', get_template_directory() . '/library/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -55,7 +55,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		add_editor_style( '/assets/css/style.css' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'digistarter' ) );
+		register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'some-like-it-neat' ) );
 
 		// Enable support for Post Formats.
 		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
@@ -167,7 +167,7 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 if ( ! function_exists( 'some_like_it_neat_widgets_init' ) ) :
 	function some_like_it_neat_widgets_init() {
 		register_sidebar( array(
-			'name'          => __( 'Sidebar', 'digistarter' ),
+			'name'          => __( 'Sidebar', 'some-like-it-neat' ),
 			'id'            => 'sidebar-1',
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
@@ -207,7 +207,7 @@ if ( ! function_exists( 'some_like_it_neat_add_breadcrumbs' ) ) :
 	function some_like_it_neat_add_breadcrumbs() {
 		if ( ! is_front_page() ) {
 			if ( function_exists( 'HAG_Breadcrumbs' ) ) { HAG_Breadcrumbs(array(
-				'prefix'     => __( 'You are here: ', 'digistarter' ),
+				'prefix'     => __( 'You are here: ', 'some-like-it-neat' ),
 				'last_link'  => true,
 				'separator'  => '|',
 				'excluded_taxonomies' => array(
@@ -268,7 +268,7 @@ if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
 	function some_like_it_neat_add_footer_divs() { ?>
 
 		<div class="footer-left">
-				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_left', __( '&copy; All Rights Reserved', 'digistarter' ) ) ); ?>
+				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_left', __( '&copy; All Rights Reserved', 'some-like-it-neat' ) ) ); ?>
 
 		</div>
 		<div class="footer-right">

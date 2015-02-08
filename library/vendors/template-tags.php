@@ -20,15 +20,15 @@ if ( ! function_exists( 'some_like_it_neat_paging_nav' ) ) :
 		}
 		?>
 		<nav class="navigation paging-navigation" role="navigation">
-		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'digistarter' ); ?></h4>
+		<h4 class="screen-reader-text"><?php _e( 'Posts navigation', 'some-like-it-neat' ); ?></h4>
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link() ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav prev">&larr;</span> Older posts', 'digistarter' ) ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav prev">&larr;</span> Older posts', 'some-like-it-neat' ) ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link() ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav next">&rarr;</span>', 'digistarter' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav next">&rarr;</span>', 'some-like-it-neat' ) ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
@@ -53,11 +53,11 @@ if ( ! function_exists( 'some_like_it_neat_post_nav' ) ) :
 		}
 		?>
 		<nav class="navigation post-navigation" role="navigation">
-		<h3 class="screen-reader-text"><?php _e( 'Post navigation', 'digistarter' ); ?></h3>
+		<h3 class="screen-reader-text"><?php _e( 'Post navigation', 'some-like-it-neat' ); ?></h3>
 		<div class="nav-links">
 
-			<?php previous_post_link( '%link', _x( '<span class="meta-nav prev">&larr;</span> %title', 'Previous post link', 'digistarter' ) ); ?>
-			<?php next_post_link( '%link', _x( '%title <span class="meta-nav next">&rarr;</span>', 'Next post link',     'digistarter' ) ); ?>
+			<?php previous_post_link( '%link', _x( '<span class="meta-nav prev">&larr;</span> %title', 'Previous post link', 'some-like-it-neat' ) ); ?>
+			<?php next_post_link( '%link', _x( '%title <span class="meta-nav next">&rarr;</span>', 'Next post link',     'some-like-it-neat' ) ); ?>
 
 		</div><!-- .nav-links -->
 	</nav><!-- .navigation -->
@@ -78,7 +78,7 @@ if ( ! function_exists( 'some_like_it_neat_comment' ) ) :
 
 		<li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 			<div class="comment-body">
-				<?php _e( 'Pingback:', 'digistarter' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'digistarter' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php _e( 'Pingback:', 'some-like-it-neat' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
 			</div>
 
 		<?php else : ?>
@@ -88,20 +88,20 @@ if ( ! function_exists( 'some_like_it_neat_comment' ) ) :
 			<footer class="comment-meta">
 				<div class="comment-author vcard">
 					<?php if ( 0 != $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'digistarter' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s <span class="says">says:</span>', 'some-like-it-neat' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author -->
 
 				<div class="comment-metadata">
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>">
 						<time datetime="<?php comment_time( 'c' ); ?>">
-							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'digistarter' ), get_comment_date(), get_comment_time() ); ?>
+							<?php printf( _x( '%1$s at %2$s', '1: date, 2: time', 'some-like-it-neat' ), get_comment_date(), get_comment_time() ); ?>
 						</time>
 					</a>
-					<?php edit_comment_link( __( 'Edit', 'digistarter' ), '<span class="edit-link">', '</span>' ); ?>
+					<?php edit_comment_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-metadata -->
 
 				<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'digistarter' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'some-like-it-neat' ); ?></p>
 				<?php endif; ?>
 			</footer><!-- .comment-meta -->
 
@@ -142,7 +142,7 @@ if ( ! function_exists( 'some_like_it_neat_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		printf( __( '<span class="posted-on" itemprop="datePublished" >Posted on %1$s</span><span class="byline" itemscope itemtype="http://schema.org/Person"> <span itemprop="author" > by %2$s</span></span>', 'digistarter' ),
+		printf( __( '<span class="posted-on" itemprop="datePublished" >Posted on %1$s</span><span class="byline" itemscope itemtype="http://schema.org/Person"> <span itemprop="author" > by %2$s</span></span>', 'some-like-it-neat' ),
 			sprintf( '<a href="%1$s" rel="bookmark" >%2$s</a>',
 				esc_url( get_permalink() ),
 				$time_string

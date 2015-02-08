@@ -16,18 +16,18 @@
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(
-				__( 'Continue reading%s &rarr;', 'digistarter' ),
+				__( 'Continue reading%s &rarr;', 'some-like-it-neat' ),
 				'<span class="screen-reader-text">  '.get_the_title().'</span>'
 			)  );
 		?>
 
-		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'digistarter' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'some-like-it-neat' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
 		<?php if ( is_single() ) : ?>
 			<?php some_like_it_neat_entry_meta(); ?>
-			<?php edit_post_link( __( 'Edit', 'digistarter' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
 
 			<?php if ( get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
 				<?php get_template_part( 'author-bio' ); ?>
@@ -37,7 +37,7 @@
 			<div class="entry-meta">
 				<span class="genericon genericon-time"></span> <?php some_like_it_neat_posted_on(); ?>
 			</div><!-- .entry-meta -->
-			<?php edit_post_link( __( 'Edit', 'digistarter' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
 		<?php endif; // is_single() ?>
 	</footer><!-- .entry-meta -->
 	<?php tha_entry_bottom(); ?>

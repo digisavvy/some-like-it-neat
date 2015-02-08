@@ -58,8 +58,8 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 	    'priority' => 5,
 	    'capability' => 'edit_theme_options',
 	    'theme_supports' => '',
-	    'title' => __( 'General Site Content Settings', 'digistarter' ),
-	    'description' => __( 'Navigation related settings and config.', 'digistarter' ),
+	    'title' => __( 'General Site Content Settings', 'some-like-it-neat' ),
+	    'description' => __( 'Navigation related settings and config.', 'some-like-it-neat' ),
 	) );
 
 	/* Color controls */
@@ -68,8 +68,8 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 	    'priority' => 10,
 	    'capability' => 'edit_theme_options',
 	    'theme_supports' => '',
-	    'title' => __( 'Color Palette Settings', 'digistarter' ),
-	    'description' => __( 'Color palette related settings and config.', 'digistarter' ),
+	    'title' => __( 'Color Palette Settings', 'some-like-it-neat' ),
+	    'description' => __( 'Color palette related settings and config.', 'some-like-it-neat' ),
 	) );
 
 	$wp_customize->add_setting( 'some_like_it_neat_add_link_color', array(
@@ -79,7 +79,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize, 'some_like_it_neat_add_link_color', array(
-			'label'			=> __( 'Body Link Color', 'digistarter' ),
+			'label'			=> __( 'Body Link Color', 'some-like-it-neat' ),
 			'section'		=> 'colors',
 			'settings'		=> 'some_like_it_neat_add_link_color',
 			'priority'		=> 6,
@@ -92,15 +92,15 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 	    'priority' => 15,
 	    'capability' => 'edit_theme_options',
 	    'theme_supports' => '',
-	    'title' => __( 'Navigation Settings', 'digistarter' ),
-	    'description' => __( 'Navigation related settings and config.', 'digistarter' ),
+	    'title' => __( 'Navigation Settings', 'some-like-it-neat' ),
+	    'description' => __( 'Navigation related settings and config.', 'some-like-it-neat' ),
 	) );
 
 		$wp_customize->add_section( 'navigation_section', array(
 		    'priority' => 10,
 		    'capability' => 'edit_theme_options',
 		    'theme_supports' => '',
-		    'title' => __( 'Navigation Setup', 'digistarter' ),
+		    'title' => __( 'Navigation Setup', 'some-like-it-neat' ),
 		    'description' => '',
 		    'panel' => 'navigation_panel',
 		) );
@@ -117,7 +117,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'some_like_it_neat_mobile_nav_label',
 			array(
 			'section'			=> 'navigation_section',
-			'label'				=> __( 'Mobile Navigation Label', 'digistarter' ),
+			'label'				=> __( 'Mobile Navigation Label', 'some-like-it-neat' ),
 			'type'				=> 'text',
 			)
 		);
@@ -134,7 +134,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'some_like_it_neat_mobile_min_width',
 			array(
 			'section'	=> 'navigation_section',
-			'label'		=> __( 'Mobile Navigation Min-Width (numeric value)', 'digistarter' ),
+			'label'		=> __( 'Mobile Navigation Min-Width (numeric value)', 'some-like-it-neat' ),
 			'type'		=> 'text',
 			)
 		);
@@ -153,9 +153,9 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'some_like_it_neat_mobile_nav_icon',
 			array(
 			'section'			=> 'navigation_section',
-			'label'				=> __( 'Mobile Navigation Icon', 'digistarter' ),
+			'label'				=> __( 'Mobile Navigation Icon', 'some-like-it-neat' ),
 			'type'				=> 'text',
-			'description'       => __( 'Dashicons are enabled and you can use them here! ' . $dashicons . '', 'digistarter' ),
+			'description'       => __( 'Dashicons are enabled and you can use them here! ' . $dashicons . '', 'some-like-it-neat' ),
 			)
 		);
 
@@ -172,7 +172,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'some_like_it_neat_mobile_hide_arrow',
 			array(
 			'section'			=> 'nav',
-			'label'				=> __( 'Mobile Navigation Hide Right Arrow', 'digistarter' ),
+			'label'				=> __( 'Mobile Navigation Hide Right Arrow', 'some-like-it-neat' ),
 			'type'				=> 'radio',
 			'choices'			=> array( 'Yes', 'No' ),
 			)
@@ -183,15 +183,15 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'priority' => 25,
 			'capability' => 'edit_theme_options',
 			'theme_supports' => '',
-			'title' => __( 'Footer Settings', 'digistarter' ),
-			'description' => __( 'Settings related to the Footer Section.', 'digistarter' ),
+			'title' => __( 'Footer Settings', 'some-like-it-neat' ),
+			'description' => __( 'Settings related to the Footer Section.', 'some-like-it-neat' ),
 		) );
 
 		$wp_customize->add_section( 'some_like_it_neat_footer_section_settings', array(
 			'priority' => 10,
 			'capability' => 'edit_theme_options',
 			'theme_supports' => '',
-			'title' => __( 'Footer Area Settings', 'digistarter' ),
+			'title' => __( 'Footer Area Settings', 'some-like-it-neat' ),
 			'description' => 'Enter copy for right, left and colophon footer areas',
 			'panel' => 'footer_settings_panel',
 		) );
@@ -207,7 +207,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'some_like_it_neat_footer_left',
 			array(
 			'section'	=> 'some_like_it_neat_footer_section_settings',
-			'label'		=> __( 'Left Footer', 'digistarter' ),
+			'label'		=> __( 'Left Footer', 'some-like-it-neat' ),
 			'type'		=> 'text',
 			)
 		);
@@ -223,7 +223,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'some_like_it_neat_footer_right',
 			array(
 			'section'	=> 'some_like_it_neat_footer_section_settings',
-			'label'		=> __( 'Right Footer', 'digistarter' ),
+			'label'		=> __( 'Right Footer', 'some-like-it-neat' ),
 			'type'		=> 'text',
 			)
 		);
@@ -239,7 +239,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'some_like_it_neat_footer_colophon',
 			array(
 			'section'		=> 'some_like_it_neat_footer_section_settings',
-			'label'			=> __( 'Footer Colophon', 'digistarter' ),
+			'label'			=> __( 'Footer Colophon', 'some-like-it-neat' ),
 			'type'			=> 'text',
 			'transport'	=> 'postMessage',
 			)
@@ -253,15 +253,15 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 		// 	'priority' => 1000,
 		// 	'capability' => 'edit_theme_options',
 		// 	'theme_supports' => '',
-		// 	'title' => __( 'Example Panel', 'digistarter' ),
-		// 	'description' => __( 'Description of what this panel does.', 'digistarter' ),
+		// 	'title' => __( 'Example Panel', 'some-like-it-neat' ),
+		// 	'description' => __( 'Description of what this panel does.', 'some-like-it-neat' ),
 		// ) );
 
 		// $wp_customize->add_section( 'section_id', array(
 		// 	'priority' => 10,
 		// 	'capability' => 'edit_theme_options',
 		// 	'theme_supports' => '',
-		// 	'title' => __( 'Example Section', 'digistarter' ),
+		// 	'title' => __( 'Example Section', 'some-like-it-neat' ),
 		// 	'description' => '',
 		// 	'panel' => 'panel_id',
 		// ) );
@@ -278,7 +278,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 		// 	'type' => 'textarea',
 		// 	'priority' => 10,
 		// 	'section' => 'section_id',
-		// 	'label' => __( 'Textarea Field', 'digistarter' ),
+		// 	'label' => __( 'Textarea Field', 'some-like-it-neat' ),
 		// 	'description' => '',
 		// ) );
 

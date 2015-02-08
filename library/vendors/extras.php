@@ -60,7 +60,7 @@ function some_like_it_neat_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'digistarter' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'some-like-it-neat' ), max( $paged, $page ) );
 	}
 
 	return $title;
