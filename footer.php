@@ -14,11 +14,11 @@
 		<footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 			<?php tha_footer_top(); ?>
 			<div class="site-info">
-				<?php do_action( 'digistarter_credits' ); ?>
+				<?php do_action( 'some_like_it_neat_credits' ); ?>
 				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s WordPress', 'digistarter' ), '<span class="genericon genericon-wordpress"></span>' ); ?></a>
 				<span class="sep"> | </span>
 
-				<?php echo esc_attr( get_theme_mod( 'digistarter_footer_colophon', __( 'Some Like it Neat, by Alex Vasquez', 'digistarter' ) ) );  ?><br />
+				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_colophon', __( 'Some Like it Neat, by Alex Vasquez', 'digistarter' ) ) );  ?><br />
 
 			</div><!-- .site-info -->
 			<?php tha_footer_bottom(); ?>

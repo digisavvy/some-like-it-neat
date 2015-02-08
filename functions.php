@@ -5,7 +5,7 @@
  * @package digistarter
  */
 
-if ( ! function_exists( 'digistarter_setup' ) ) :
+if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 	/**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -13,7 +13,7 @@ if ( ! function_exists( 'digistarter_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-	function digistarter_setup() {
+	function some_like_it_neat_setup() {
 
 		/**
 	 * Set the content width based on the theme's design and stylesheet.
@@ -61,7 +61,7 @@ if ( ! function_exists( 'digistarter_setup' ) ) :
 		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
 
 		// Setup the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'digistarter_custom_background_args', array(
+		add_theme_support( 'custom-background', apply_filters( 'some_like_it_neat_custom_background_args', array(
 			'default-color' => 'ffffff',
 			'default-image' => '',
 		) ) );
@@ -102,14 +102,14 @@ if ( ! function_exists( 'digistarter_setup' ) ) :
 		require_once( get_template_directory() . '/library/vendors/tgm-plugin-activation/required-plugins.php' );
 
 	}
-endif; // digistarter_setup
-add_action( 'after_setup_theme', 'digistarter_setup' );
+endif; // some_like_it_neat_setup
+add_action( 'after_setup_theme', 'some_like_it_neat_setup' );
 
 /**
  * Enqueue scripts and styles.
  */
-if ( ! function_exists( 'digistarter_scripts' ) ) :
-	function digistarter_scripts() {
+if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
+	function some_like_it_neat_scripts() {
 
 		if ( SCRIPT_DEBUG || WP_DEBUG ) :
 			// Vendor Scripts
@@ -146,7 +146,7 @@ if ( ! function_exists( 'digistarter_scripts' ) ) :
 			wp_enqueue_script( 'comment-reply' );
 		}
 	}
-	add_action( 'wp_enqueue_scripts', 'digistarter_scripts' );
+	add_action( 'wp_enqueue_scripts', 'some_like_it_neat_scripts' );
 endif; // Enqueue Scripts and Styles
 
 /**
@@ -164,8 +164,8 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-if ( ! function_exists( 'digistarter_widgets_init' ) ) :
-	function digistarter_widgets_init() {
+if ( ! function_exists( 'some_like_it_neat_widgets_init' ) ) :
+	function some_like_it_neat_widgets_init() {
 		register_sidebar( array(
 			'name'          => __( 'Sidebar', 'digistarter' ),
 			'id'            => 'sidebar-1',
@@ -175,7 +175,7 @@ if ( ! function_exists( 'digistarter_widgets_init' ) ) :
 			'after_title'   => '</h4>',
 		) );
 	}
-	add_action( 'widgets_init', 'digistarter_widgets_init' );
+	add_action( 'widgets_init', 'some_like_it_neat_widgets_init' );
 endif;
 
 /**
@@ -203,8 +203,8 @@ endif;
 /**
  * Custom Hooks and Filters
  */
-if ( ! function_exists( 'digistarter_add_breadcrumbs' ) ) :
-	function digistarter_add_breadcrumbs() {
+if ( ! function_exists( 'some_like_it_neat_add_breadcrumbs' ) ) :
+	function some_like_it_neat_add_breadcrumbs() {
 		if ( ! is_front_page() ) {
 			if ( function_exists( 'HAG_Breadcrumbs' ) ) { HAG_Breadcrumbs(array(
 				'prefix'     => __( 'You are here: ', 'digistarter' ),
@@ -228,30 +228,30 @@ if ( ! function_exists( 'digistarter_add_breadcrumbs' ) ) :
 			)); }
 		}
 	}
-	add_action( 'tha_content_top', 'digistarter_add_breadcrumbs' );
+	add_action( 'tha_content_top', 'some_like_it_neat_add_breadcrumbs' );
 endif;
 
-if ( ! function_exists( 'digistarter_optional_scripts' ) ) :
-	function digistarter_optional_scripts() {
+if ( ! function_exists( 'some_like_it_neat_optional_scripts' ) ) :
+	function some_like_it_neat_optional_scripts() {
 
 		 // Link Color
-		if ( '' == get_theme_mod( 'digistarter_add_link_color' )  ) {
+		if ( '' == get_theme_mod( 'some_like_it_neat_add_link_color' )  ) {
 
 		} else { ?>
 			<style type="text/css">
-				a { color: <?php echo get_theme_mod( 'digistarter_add_link_color' ); ?>; }
+				a { color: <?php echo get_theme_mod( 'some_like_it_neat_add_link_color' ); ?>; }
 			</style>
 		<?php }
 
 	}
-	add_action( 'wp_head', 'digistarter_optional_scripts' );
+	add_action( 'wp_head', 'some_like_it_neat_optional_scripts' );
 endif;
 
-if ( ! function_exists( 'digistarter_mobile_styles' ) ) :
-	function digistarter_mobile_styles() {
-		$value = get_theme_mod( 'digistarter_mobile_hide_arrow' );
+if ( ! function_exists( 'some_like_it_neat_mobile_styles' ) ) :
+	function some_like_it_neat_mobile_styles() {
+		$value = get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' );
 
-		if ( 0 == get_theme_mod( 'digistarter_mobile_hide_arrow' ) ) { ?>
+		if ( 0 == get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' ) ) { ?>
 			<style>
 				.menu-button i.navicon {
 					display: none;
@@ -261,25 +261,25 @@ if ( ! function_exists( 'digistarter_mobile_styles' ) ) :
 
 }
 	}
-	add_action( 'wp_head', 'digistarter_mobile_styles' );
+	add_action( 'wp_head', 'some_like_it_neat_mobile_styles' );
 endif;
 
-if ( ! function_exists( 'digistarter_add_footer_divs' ) ) :
-	function digistarter_add_footer_divs() { ?>
+if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
+	function some_like_it_neat_add_footer_divs() { ?>
 
 		<div class="footer-left">
-				<?php echo esc_attr( get_theme_mod( 'digistarter_footer_left', __( '&copy; All Rights Reserved', 'digistarter' ) ) ); ?>
+				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_left', __( '&copy; All Rights Reserved', 'digistarter' ) ) ); ?>
 
 		</div>
 		<div class="footer-right">
-			<?php echo esc_attr( get_theme_mod( 'digistarter_footer_right', 'Footer Content Right' ) );  ?>
+			<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_right', 'Footer Content Right' ) );  ?>
 		</div>
 <?php }
-	add_action( 'tha_footer_bottom', 'digistarter_add_footer_divs' );
+	add_action( 'tha_footer_bottom', 'some_like_it_neat_add_footer_divs' );
 endif;
 
-add_action( 'tha_head_bottom', 'digistarter_add_selectivizr' );
-function digistarter_add_selectivizr() { ?>
+add_action( 'tha_head_bottom', 'some_like_it_neat_add_selectivizr' );
+function some_like_it_neat_add_selectivizr() { ?>
 	<!--[if (gte IE 6)&(lte IE 8)]>
   		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
   		<noscript><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" /></noscript>

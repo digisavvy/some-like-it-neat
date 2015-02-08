@@ -7,13 +7,13 @@
  * @package digistarter
  */
 
-if ( ! function_exists( 'digistarter_paging_nav' ) ) :
+if ( ! function_exists( 'some_like_it_neat_paging_nav' ) ) :
 	/**
  * Display navigation to next/previous set of posts when applicable.
  *
  * @return void
  */
-	function digistarter_paging_nav() {
+	function some_like_it_neat_paging_nav() {
 		// Don't print empty markup if there's only one page.
 		if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
 			return;
@@ -37,13 +37,13 @@ if ( ! function_exists( 'digistarter_paging_nav' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'digistarter_post_nav' ) ) :
+if ( ! function_exists( 'some_like_it_neat_post_nav' ) ) :
 	/**
  * Display navigation to next/previous post when applicable.
  *
  * @return void
  */
-	function digistarter_post_nav() {
+	function some_like_it_neat_post_nav() {
 		// Don't print empty markup if there's nowhere to navigate.
 		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
 		$next     = get_adjacent_post( false, '', false );
@@ -65,13 +65,13 @@ if ( ! function_exists( 'digistarter_post_nav' ) ) :
 	}
 endif;
 
-if ( ! function_exists( 'digistarter_comment' ) ) :
+if ( ! function_exists( 'some_like_it_neat_comment' ) ) :
 	/**
  * Template for comments and pingbacks.
  *
  * Used as a callback by wp_list_comments() for displaying the comments.
  */
-	function digistarter_comment( $comment, $args, $depth ) {
+	function some_like_it_neat_comment( $comment, $args, $depth ) {
 		$GLOBALS['comment'] = $comment;
 
 		if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
@@ -123,13 +123,13 @@ if ( ! function_exists( 'digistarter_comment' ) ) :
 	<?php
 	endif;
 	}
-endif; // ends check for digistarter_comment()
+endif; // ends check for some_like_it_neat_comment()
 
-if ( ! function_exists( 'digistarter_posted_on' ) ) :
+if ( ! function_exists( 'some_like_it_neat_posted_on' ) ) :
 	/**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-	function digistarter_posted_on() {
+	function some_like_it_neat_posted_on() {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 			$time_string .= '<time class="updated" datetime="%3$s">%4$s</time>';
@@ -158,7 +158,7 @@ endif;
 /**
  * Returns true if a blog has more than 1 category.
  */
-function digistarter_categorized_blog() {
+function some_like_it_neat_categorized_blog() {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
@@ -172,20 +172,20 @@ function digistarter_categorized_blog() {
 	}
 
 	if ( '1' != $all_the_cool_cats ) {
-		// This blog has more than 1 category so digistarter_categorized_blog should return true.
+		// This blog has more than 1 category so some_like_it_neat_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so digistarter_categorized_blog should return false.
+		// This blog has only 1 category so some_like_it_neat_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in digistarter_categorized_blog.
+ * Flush out the transients used in some_like_it_neat_categorized_blog.
  */
-function digistarter_category_transient_flusher() {
+function some_like_it_neat_category_transient_flusher() {
 	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
-add_action( 'edit_category', 'digistarter_category_transient_flusher' );
-add_action( 'save_post',     'digistarter_category_transient_flusher' );
+add_action( 'edit_category', 'some_like_it_neat_category_transient_flusher' );
+add_action( 'save_post',     'some_like_it_neat_category_transient_flusher' );

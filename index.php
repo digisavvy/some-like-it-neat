@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php digistarter_paging_nav(); ?>
+			<?php some_like_it_neat_paging_nav(); ?>
 
 		<?php else : ?>
 

@@ -12,7 +12,7 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<span class="genericon genericon-time"></span> <?php digistarter_posted_on(); ?>
+			<span class="genericon genericon-time"></span> <?php some_like_it_neat_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
@@ -44,7 +44,7 @@
 			<?php
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', 'digistarter' ) );
-			if ( $categories_list && digistarter_categorized_blog() ) :
+			if ( $categories_list && some_like_it_neat_categorized_blog() ) :
 			?>
 			<span class="cat-links">
 			<?php printf( __( 'Posted in %1$s', 'digistarter' ), $categories_list ); ?>

@@ -22,7 +22,7 @@ get_header(); ?>
 
 					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<?php if ( digistarter_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+					<?php if ( some_like_it_neat_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 					<div class="widget widget_categories">
 						<h2 class="widgettitle"><?php _e( 'Most Used Categories', 'digistarter' ); ?></h2>
 						<ul>
