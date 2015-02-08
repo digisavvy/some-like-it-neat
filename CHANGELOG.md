@@ -1,4 +1,25 @@
 # Changelog
+### 1.2
+-------------
+
+**Features:**
+* Added Composer for dependencies
+* Added support for PHPCS and WordPress Coding Standards
+* Bourbon, Neat and Bi-App are now controlled via Bower, so make sure you do bower install
+* Bower dependent js have been been removed from bower and instead enqueued in the theme directly for greater compatibility
+* Making use of title tag support
+* Added Archive description via get_the_archive_description()
+
+
+**Bugfixes:**
+* Fixed some text translation issues in code
+* Changed prefix and text-domains to some_like_it_neat_ from digistarter_
+* Removed Example Content such as Customizer Example panel and tgm-example-plugin.zip
+* Rename wp-customizer folder and functions to just customizer, for purposes relating to core naming conventions and avoiding conflicts there.
+* Remove orphaned rtl.css file
+* Resolve 2 Yoda conditions
+* General Style Tweaks/Fixes
+
 ### 1.1.11
 -------------
 
