@@ -102,9 +102,12 @@ gulp.task('styles', function () {
 */
 gulp.task('js', function() {
 	return gulp.src([source+'js/app/**/*.js', source+'bower_components/**/*.js'])
-		.pipe(concat('production.js'))
+		.pipe(concat('development.js'))
 		.pipe(gulp.dest(source+'js'))
-		.pipe(rename({ suffix: '-min' }))
+		.pipe(rename( {
+			basename: "production",
+			suffix: '-min'
+		}))
 		.pipe(uglify())
 		.pipe(gulp.dest(source+'js/'))
 		.pipe(notify({ message: 'Scripts task complete', onLast: true }));
