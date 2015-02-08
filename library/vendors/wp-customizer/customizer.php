@@ -249,38 +249,38 @@ function digistarter_add_customizer_theme_options($wp_customize) {
 		*  @link — https://gist.github.com/devinsays/e9c6754340a5253c3ec9
 		*  @author — devinsays
 		*/
-		$wp_customize->add_panel( 'panel_id', array(
-			'priority' => 1000,
-			'capability' => 'edit_theme_options',
-			'theme_supports' => '',
-			'title' => __( 'Example Panel', 'digistarter' ),
-			'description' => __( 'Description of what this panel does.', 'digistarter' ),
-		) );
+		// $wp_customize->add_panel( 'panel_id', array(
+		// 	'priority' => 1000,
+		// 	'capability' => 'edit_theme_options',
+		// 	'theme_supports' => '',
+		// 	'title' => __( 'Example Panel', 'digistarter' ),
+		// 	'description' => __( 'Description of what this panel does.', 'digistarter' ),
+		// ) );
 
-		$wp_customize->add_section( 'section_id', array(
-			'priority' => 10,
-			'capability' => 'edit_theme_options',
-			'theme_supports' => '',
-			'title' => __( 'Example Section', 'digistarter' ),
-			'description' => '',
-			'panel' => 'panel_id',
-		) );
+		// $wp_customize->add_section( 'section_id', array(
+		// 	'priority' => 10,
+		// 	'capability' => 'edit_theme_options',
+		// 	'theme_supports' => '',
+		// 	'title' => __( 'Example Section', 'digistarter' ),
+		// 	'description' => '',
+		// 	'panel' => 'panel_id',
+		// ) );
 
-		$wp_customize->add_setting( 'textarea_field_id', array(
-			'default' => '',
-			'type' => 'theme_mod',
-			'capability' => 'edit_theme_options',
-			'transport' => '',
-			'sanitize_callback' => 'digistarter_sanitize_text',
-		) );
+		// $wp_customize->add_setting( 'textarea_field_id', array(
+		// 	'default' => '',
+		// 	'type' => 'theme_mod',
+		// 	'capability' => 'edit_theme_options',
+		// 	'transport' => '',
+		// 	'sanitize_callback' => 'digistarter_sanitize_text',
+		// ) );
 
-		$wp_customize->add_control( 'textarea_field_id', array(
-			'type' => 'textarea',
-			'priority' => 10,
-			'section' => 'section_id',
-			'label' => __( 'Textarea Field', 'digistarter' ),
-			'description' => '',
-		) );
+		// $wp_customize->add_control( 'textarea_field_id', array(
+		// 	'type' => 'textarea',
+		// 	'priority' => 10,
+		// 	'section' => 'section_id',
+		// 	'label' => __( 'Textarea Field', 'digistarter' ),
+		// 	'description' => '',
+		// ) );
 
 }
 add_action( 'customize_register', 'digistarter_add_customizer_theme_options' );
