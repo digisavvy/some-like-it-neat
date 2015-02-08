@@ -74,7 +74,9 @@ Each task such as 'js', 'images' or 'browser-sync' may be started individually. 
 * #### Theme Development, Minification and You
 When developing your theme note that the output style.css file and production.js file are in expanded (readable) format if WP_DEBUG is set to true in wp-config.php. If WP_DEBUG is NOT set to true, then style.css and production.js are minified for you. While developing your theme, I recommend that WP_DEBUG is set to true. Just a good practice anyway.
 
-* **A Note About Javascript Files** - If you have JS files that are not managed by Bower, you should place those files inside the assets/js/app folder. Why? Gulp runs a task that concatenates js files in that directory and checks them for errors, which is pretty nifty. You can modify Gulp task behavior to suit your tastes, of course. **Extra Note!** If you've set WP Debug true, the concatenated file is unminified and if set to false, then the concatenated file is minified. If you don't intend to use this functionality, you should comment-out or remove the lines referring to development.js and production-min.js.
+* **A Note About Javascript Files** - If you have JS files that are not managed by Bower, you should place those files inside the assets/js/app folder. Why? Gulp runs a task that concatenates js files in that directory and checks them for errors, which is pretty nifty. You can modify Gulp task behavior to suit your tastes, of course. 
+
+* **Extra Note!** If you've set WP Debug true, the concatenated file is unminified and if set to false, then the concatenated file is minified. If you don't intend to use this functionality, you should comment-out or remove the lines referring to development.js and production-min.js.
 
 
 ### Theme Hook Alliance
@@ -107,22 +109,25 @@ a project.
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
     │    │   ├── bower_components
+    │    │   |   ├── bi-app-sass
+    │    │   |   ├── bourbon
+    │    │   |   └── neat
     │    │   ├── css
     |    |   |    ├── rtl-min.css
     |    |   |    ├── rtl.css
     |    |   |    ├── style-min.css
-    |    |   |    └──style.css
+    |    |   |    └── style.css
     │    |   └──  js
     │    │   |    ├── app
     │    │   |    └── vendor
-    │    |   |    |   ├── _buttons.scss
-    │    |   |    |   └── _dashicons.scss
+    │    |   |    |   ├── flexnav
+    │    |   |    |   ├── hoverintent    
+    │    |   |    |   ├── modernizr  
+    │    |   |    |   └── selectivizr
     │    │   |    ├── production-min.js
-    │    │   |    └── production.js
+    │    │   |    └── development.js
     │    ├── sass
     │    |   └── base (Bitters)
-    │    |   └── bourbon
-    │    |   └── font-awesome
     │    |   └── components
     |    |    |   ├── _buttons.scss
     |    |    |   ├── _dashicons.scss
@@ -139,9 +144,7 @@ a project.
     |    |    |   ├── _sidebar.scss
     |    |    |   ├── _structure.scss
     |    |    |   └── _typography.scss
-    │    |    └── neat
     |    ├── _app.scss
-    |    ├── _flexnav.scss
     |    ├── _grid-settings.scss
     |    ├── _rtl.scss
     |    └── style.scss
