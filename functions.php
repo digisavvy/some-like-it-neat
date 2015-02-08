@@ -41,6 +41,13 @@ if ( ! function_exists( 'digistarter_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		/*
+		 * Enable title tag support for all posts.
+		 *
+		 * @link http://codex.wordpress.org/Title_Tag
+		 */
+		add_theme_support( 'title-tag' );
+
+		/*
 		 * Add Editor Style for adequate styling in text editor.
 		 *
 		 * @link http://codex.wordpress.org/Function_Reference/add_editor_style
@@ -143,6 +150,18 @@ if ( ! function_exists( 'digistarter_scripts' ) ) :
 endif; // Enqueue Scripts and Styles
 
 /**
+ * Title Tag Backward Comaptibility for < 4.1 installs
+ */
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+	function theme_slug_render_title() {
+?>
+<title><?php wp_title( '|', true, 'right' ); ?></title>
+<?php
+	}
+	add_action( 'wp_head', 'theme_slug_render_title' );
+}
+
+/**
  * Register widgetized area and update sidebar with default widgets.
  */
 if ( ! function_exists( 'digistarter_widgets_init' ) ) :
@@ -178,7 +197,7 @@ if ( ! function_exists( 'dg_add_flexnav' ) ) :
 			});
 		</script>
 	<?php }
-	add_action( 'wp_head', 'dg_add_flexnav' );
+	add_action( 'wp_footer', 'dg_add_flexnav' );
 endif;
 
 /**
