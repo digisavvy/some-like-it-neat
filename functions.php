@@ -1,4 +1,4 @@
-b<?php
+<?php
 /**
  * digistarter functions and definitions
  *
