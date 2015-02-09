@@ -155,7 +155,7 @@ a project.
     │   │   ├── js
     │   │   ├── tgm-plugin-activation
     │   │   ├── tha-theme-hooks
-    │   │   └── wp-customizer
+    │   │   └── customizer
     │   ├── custom-header.php
     │   ├── extras.php
     │   ├── jetpack.php
