@@ -1,4 +1,4 @@
-	<?php
+<?php
 	/**
 	* @package some_like_it_neat
 	*/

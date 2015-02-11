@@ -38,7 +38,7 @@ function some_like_it_neat_custom_header_setup() {
 }
 add_action( 'after_setup_theme', 'some_like_it_neat_custom_header_setup' );
 
-<<<<<<< HEAD
+<< << <<< HEAD
 if ( ! function_exists( 'digistarter_header_style' ) ) :
 /**
 =======

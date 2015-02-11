@@ -18,14 +18,14 @@ get_header(); ?>
 			<header class="page-header">
 				<h1 class="page-title">
 			<?php
-		if ( function_exists( 'get_the_archive_title' ) ) :
-			echo get_the_archive_title();
+			if ( function_exists( 'get_the_archive_title' ) ) :
+				echo get_the_archive_title();
 
-			/*
-            * TO-DO Might remove this code block at some point, since
-            *	get_the_archive_title() does the same thing
-            *	the below code does
-            */
+				/*
+				* TO-DO Might remove this code block at some point, since
+				*   get_the_archive_title() does the same thing
+				*   the below code does
+				*/
 						elseif ( is_category() ) :
 							single_cat_title();
 
