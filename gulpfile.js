@@ -5,19 +5,16 @@
 */
 
 // Project configuration
-var project     = 'somelikeitneat', // Optional - Use your own project name here...
+var project   = 'somelikeitneat', // Optional - Use your own project name here...
 	build       = './build/', // Files that you want to package into a zip go here
 	source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
-<<<<<<< HEAD
-	bower       = './assets/bower_components/'; // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
-=======
 	bower       = './assets/bower_components/', // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
-	phpSource   = [ '**/*.php' , '**/*.js', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
->>>>>>> 1.2.1
+	phpSource   = [ '**/*.php' , 'page-templates/**/*.php' , '**/*.js', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
 
 // Load plugins
-var gulp 	= require('gulp'),
-	browserSync	= require('browser-sync'), // Asynchronous browser loading on .scss file changes
+var gulp 				= require('gulp'),
+	browserSync		= require('browser-sync'), // Asynchronous browser loading on .scss file changes
+	phpcs 				= require('gulp-phpcs'),
 	reload				= browserSync.reload,
 	autoprefixer 	= require('gulp-autoprefixer'), // Autoprefixing magic
 	minifycss 		= require('gulp-minify-css'),
@@ -57,8 +54,6 @@ gulp.task('browser-sync', function() {
 });
 
 /**
-<<<<<<< HEAD
-=======
  * PHP Code Sniffer
  *
  * PHP Tasks
@@ -70,7 +65,7 @@ gulp.task( 'phpcs', function() {
 	return gulp.src( phpSource )
 		.pipe( phpcs( {
 			bin: 'vendor/bin/phpcs',
-			standard: 'vendor/wp-coding-standards/wpcs/WordPress-Core'
+			standard: 'WordPress-Core'
 		} ) )
 		.pipe( phpcs.reporter( 'log' ) )
 		.pipe( notify( { message: 'phpcs task complete', onLast: true } ) );
@@ -78,7 +73,6 @@ gulp.task( 'phpcs', function() {
 
 
 /**
->>>>>>> 1.2.1
  * Styles
  *
  * Looking at src/sass and compiling the files into Expanded format, Autoprefixing and sending the files to the build folder
@@ -129,7 +123,8 @@ gulp.task('js', function() {
 gulp.task( 'jsHint', function() {
 	return gulp.src( [ source+'js/app/**/*.js' ] )
 		.pipe(jshint('.jshintrc'))
-		.pipe(jshint.reporter('default'));
+		.pipe(jshint.reporter('default'))
+		.pipe( notify( { message: 'jsHint task complete', onLast: true } ) );
 } );
 
 /**
@@ -235,8 +230,9 @@ gulp.task('build', function(cb) {
 
 
 // Watch Task
-gulp.task('default', ['styles', 'js', 'jsHint', 'browser-sync'], function () {
+gulp.task('default', ['styles', 'js', 'jsHint', 'browser-sync', 'phpcs'], function () {
     gulp.watch(source+"sass/**/*.scss", ['styles']);
     gulp.watch(source+'js/app/**/*.js', ['js', browserSync.reload]);
 	gulp.watch(source+'js/app/**/*.js', ['jsHint']);
+	gulp.watch( phpSource, ['phpcs'] );
 });
