@@ -4,15 +4,15 @@
  *
  * Contains the closing of the #content div and all content after
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 ?>
 		<?php tha_content_bottom(); ?>
 		</div><!-- #content -->
 		<?php tha_content_after(); ?>
-   		<?php tha_footer_before(); ?>
+			<?php tha_footer_before(); ?>
 		<footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
-			<?php tha_footer_top(); ?>
+		<?php tha_footer_top(); ?>
 			<div class="site-info">
 				<?php do_action( 'some_like_it_neat_credits' ); ?>
 				<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s WordPress', 'some-like-it-neat' ), '<span class="genericon genericon-wordpress"></span>' ); ?></a>
@@ -21,7 +21,7 @@
 				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_colophon', __( 'Some Like it Neat, by Alex Vasquez', 'some-like-it-neat' ) ) );  ?><br />
 
 			</div><!-- .site-info -->
-			<?php tha_footer_bottom(); ?>
+		<?php tha_footer_bottom(); ?>
 		</footer><!-- #colophon -->
 		<?php tha_footer_after(); ?>
 	</div><!-- .wrap -->

@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 get_header(); ?>
@@ -10,26 +10,28 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+			<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'some-like-it-neat' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'page-templates/partials/content', 'search' ); ?>
 
-			<?php endwhile; ?>
+		<?php
+endwhile; ?>
 
-			<?php some_like_it_neat_paging_nav(); ?>
+		<?php some_like_it_neat_paging_nav(); ?>
 
 		<?php else : ?>
 
-			<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
+		<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
 
-		<?php endif; ?>
+		<?php
+endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

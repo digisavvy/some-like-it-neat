@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 
@@ -17,16 +17,16 @@ get_header(); ?>
 
 			<header class="page-header">
 				<h1 class="page-title">
-					<?php
-					if ( function_exists( 'get_the_archive_title' ) ) :
-						echo get_the_archive_title();
+			<?php
+			if ( function_exists( 'get_the_archive_title' ) ) :
+				echo get_the_archive_title();
 
-						/*
-						* TO-DO Might remove this code block at some point, since
-						*	get_the_archive_title() does the same thing
-						*	the below code does
-						*/
-						elseif ( is_category() ):
+				/*
+				* TO-DO Might remove this code block at some point, since
+				*   get_the_archive_title() does the same thing
+				*   the below code does
+				*/
+						elseif ( is_category() ) :
 							single_cat_title();
 
 						elseif ( is_tag() ) :
@@ -34,14 +34,14 @@ get_header(); ?>
 
 						elseif ( is_author() ) :
 							/* Queue the first post, that way we know
-							 * what author we're dealing with (if that is the case).
-							*/
+                            * what author we're dealing with (if that is the case).
+                            */
 							the_post();
 							printf( __( 'Author: %s', 'some-like-it-neat' ), '<span class="vcard">' . get_the_author() . '</span>' );
 							/* Since we called the_post() above, we need to
-							 * rewind the loop back to the beginning that way
-							 * we can run the loop properly, in full.
-							 */
+                            * rewind the loop back to the beginning that way
+                            * we can run the loop properly, in full.
+                            */
 							rewind_posts();
 
 						elseif ( is_day() ) :
@@ -76,9 +76,9 @@ get_header(); ?>
 
 						endif;
 						/*
-						* END TO-DO
-						*/
-					?>
+                        * END TO-DO
+                        */
+	?>
 				</h1>
 				<?php
 					// Show an optional term description.
@@ -86,17 +86,17 @@ get_header(); ?>
 					echo '<div class="taxonomy-description">'.get_the_archive_description().'</div>';
 					/*
 					* TO-DO Might remove this code block at some point, since
-					*	get_the_archive_description() does the same thing
-					*	the below code does
+					*   get_the_archive_description() does the same thing
+					*   the below code does
 					*/
 					elseif ( $term_description = term_description() ) :
-						printf( '<div class="taxonomy-description">%s</div>', 	$term_description );
+						printf( '<div class="taxonomy-description">%s</div>',     $term_description );
 					endif;
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
 					/* Include the Post-Format-specific template for the content.
@@ -106,15 +106,17 @@ get_header(); ?>
 					get_template_part( 'page-templates/partials/content', get_post_format() );
 				?>
 
-			<?php endwhile; ?>
+		<?php
+endwhile; ?>
 
-			<?php some_like_it_neat_paging_nav(); ?>
+		<?php some_like_it_neat_paging_nav(); ?>
 
-		<?php else : ?>
+			<?php else : ?>
 
 			<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
 
-		<?php endif; ?>
+			<?php
+endif; ?>
 
 		</main><!-- #main -->
 	</section><!-- #primary -->

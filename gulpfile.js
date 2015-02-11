@@ -9,7 +9,7 @@ var project   = 'somelikeitneat', // Optional - Use your own project name here..
 	build       = './build/', // Files that you want to package into a zip go here
 	source      = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 	bower       = './assets/bower_components/', // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
-	phpSource   = [ '**/*.php' , '**/*.js', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
+	phpSource   = [ '**/*.php' , 'page-templates/**/*.php' , '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
 
 // Load plugins
 var gulp 				= require('gulp'),
@@ -65,7 +65,7 @@ gulp.task( 'phpcs', function() {
 	return gulp.src( phpSource )
 		.pipe( phpcs( {
 			bin: 'vendor/bin/phpcs',
-			standard: 'vendor/wp-coding-standards/wpcs/WordPress-Core'
+			standard: 'WordPress-Core'
 		} ) )
 		.pipe( phpcs.reporter( 'log' ) )
 		.pipe( notify( { message: 'phpcs task complete', onLast: true } ) );
@@ -100,11 +100,16 @@ gulp.task('styles', function () {
  *
  * Look at src/js and concatenate those files, send them to assets/js where we then minimize the concatenated file.
 */
+
+
 gulp.task('js', function() {
 	return gulp.src([source+'js/app/**/*.js', source+'bower_components/**/*.js'])
-		.pipe(concat('production.js'))
+		.pipe(concat('development.js'))
 		.pipe(gulp.dest(source+'js'))
-		.pipe(rename({ suffix: '-min' }))
+		.pipe(rename( {
+			basename: "production",
+			suffix: '-min'
+		}))
 		.pipe(uglify())
 		.pipe(gulp.dest(source+'js/'))
 		.pipe(notify({ message: 'Scripts task complete', onLast: true }));
@@ -167,7 +172,7 @@ gulp.task('cleanupFinal', function() {
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
 gulp.task('buildPhp', function() {
-	return gulp.src(['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./build/**','!./library/**','!./src/**'])
+	return gulp.src(['**/*.php', './style.css','./gulpfile.js','./package.json','./.bowercc','.gitignore', './screenshot.png','!./vendor/**','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
@@ -220,7 +225,7 @@ gulp.task('buildImages', function() {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-		runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
+	runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
 
 

@@ -7,7 +7,7 @@
  * handled by a callback to some_like_it_neat_comment() which is
  * located in the inc/template-tags.php file.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 /*
@@ -23,14 +23,16 @@ if ( post_password_required() ) {
 <?php tha_comments_before(); ?>
 <div id="comments" class="comments-area">
 
-	<?php // You can start editing here -- including this comment! ?>
+			<?php // You can start editing here -- including this comment! ?>
 
-	<?php if ( have_comments() ) : ?>
+			<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'some-like-it-neat' ),
-				number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
+				printf(
+					_nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'some-like-it-neat' ),
+					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>'
+				);
+	?>
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
@@ -39,10 +41,11 @@ if ( post_password_required() ) {
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'some-like-it-neat' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'some-like-it-neat' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
+		<?php
+endif; // check for comment navigation ?>
 
 		<ol class="comment-list">
-			<?php
+		<?php
 				/* Loop through and list the comments. Tell wp_list_comments()
 				 * to use some_like_it_neat_comment() to format the comments.
 				 * If you want to override this in a child theme, then you can
@@ -50,7 +53,7 @@ if ( post_password_required() ) {
 				 * See some_like_it_neat_comment() in inc/template-tags.php for more.
 				 */
 				wp_list_comments( array( 'callback' => 'some_like_it_neat_comment' ) );
-			?>
+	?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
@@ -59,18 +62,21 @@ if ( post_password_required() ) {
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'some-like-it-neat' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'some-like-it-neat' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
-		<?php endif; // check for comment navigation ?>
+		<?php
+endif; // check for comment navigation ?>
 
-	<?php endif; // have_comments() ?>
+		<?php
+endif; // have_comments() ?>
 
-	<?php
+		<?php
 		// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-	<p class="no-comments"><?php _e( 'Comments are closed.', 'some-like-it-neat' ); ?></p>
-	<?php endif; ?>
+		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+		?>
+		<p class="no-comments"><?php _e( 'Comments are closed.', 'some-like-it-neat' ); ?></p>
+		<?php
+	endif; ?>
 
-	<?php comment_form(); ?>
+		<?php comment_form(); ?>
 
 </div><!-- #comments -->
 <?php tha_comments_after(); ?>

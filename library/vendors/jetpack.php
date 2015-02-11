@@ -3,7 +3,7 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 /**

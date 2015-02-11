@@ -36,8 +36,9 @@ Thumbs.db
 
 # Composer #
 ##########
-vendor
-wpcs
+vendor/
+!assets/js/vendor/
+wpcs/
 composer.lock
 
 # Bower #
@@ -59,7 +60,10 @@ node_modules
 ##########
 /README.html
 /build/
+<<<<<<< HEAD
+=======
 
 # PhpStrom Project Files #
 .idea/
 
+>>>>>>> 1.2.1

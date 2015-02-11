@@ -2,10 +2,10 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 ?>
-	<?php tha_sidebars_before(); ?>
+		<?php tha_sidebars_before(); ?>
 	<div id="secondary" class="widget-area" role="complementary">
 		<?php tha_sidebar_top(); ?>
 		<?php do_action( 'before_sidebar' ); ?>
@@ -31,7 +31,8 @@
 				</ul>
 			</aside>
 
-		<?php endif; // end sidebar widget area ?>
-		<?php tha_sidebar_bottom(); ?>
+    <?php
+endif; // end sidebar widget area ?>
+    <?php tha_sidebar_bottom(); ?>
 	</div><!-- #secondary -->
-	<?php tha_sidebars_after(); ?>
+    <?php tha_sidebars_after(); ?>
