@@ -46,13 +46,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 20px;
 	text-transform: uppercase;
 
-	a, a:visited {
-		text-decoration: none;
-
-		&:hover {
-			text-decoration: underline;
-		}
-	}
 }
 h1 {
 	@include fontSize(75px);
@@ -105,9 +98,15 @@ a, a:visited {
 }
 ul {
 	@extend %default-ul; // Adds browser default spacing back
+	&:nth-child(n+2) {
+		margin-bottom: 0;
+	}
 }
 ol {
 	@extend %default-ol; // Adds browser default spacing back
+	&:nth-child(n+2) {
+		margin-bottom: 0;
+	}
 }
 .entry-title {
 	font-family: $title;

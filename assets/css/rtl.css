@@ -5,10 +5,10 @@ Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
 Author URI: http://alexhasnicehair.com
 Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
-Version: 1.1.11
+Version: 1.2
 License: GNU General Public License
 License URI: license.txt
-Text Domain: digistarter
+Text Domain: some_like_it_neat
 Domain Path: /library/languages/
 Tags: white, light, one-column, two-columns, right-sidebar, responsive-layout, custom-header, custom-menu, editor-style, featured-images, microformats, post-formats, sticky-post, translation-ready, accessibility-ready
 
@@ -749,12 +749,6 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
   content: "";
   display: table;
 }
-h1 a, h1 a:visited, h2 a, h2 a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
-  text-decoration: none;
-}
-h1 a:hover, h1 a:visited:hover, h2 a:hover, h2 a:visited:hover, h3 a:hover, h3 a:visited:hover, h4 a:hover, h4 a:visited:hover, h5 a:hover, h5 a:visited:hover, h6 a:hover, h6 a:visited:hover {
-  text-decoration: underline;
-}
 
 h1 {
   font-size: 75px;
@@ -821,6 +815,14 @@ a:hover, a:visited:hover {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
   color: #ff0000;
+}
+
+ul:nth-child(n+2) {
+  margin-bottom: 0;
+}
+
+ol:nth-child(n+2) {
+  margin-bottom: 0;
 }
 
 .entry-title {
@@ -1618,9 +1620,6 @@ ul.nav-menu li.current_page_item {
   font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
   padding: 20px 0 20px 50px;
 }
-#breadcrumbs a, #breadcrumbs a:visited {
-  border-bottom: solid 1px #ff0000;
-}
 
 /* =Media
 ----------------------------------------------- */
@@ -1696,10 +1695,16 @@ object {
 }
 
 #content .entry-content a, #content .entry-content a:visited {
-  border-bottom: solid 1px #ff0000;
+  text-decoration: underline;
+}
+#content .entry-content a:hover, #content .entry-content a:visited:hover {
+  text-decoration: none;
 }
 #content .entry-meta a, #content .entry-meta a:visited {
-  border-bottom: solid 1px #ff0000;
+  text-decoration: underline;
+}
+#content .entry-meta a:hover, #content .entry-meta a:visited:hover {
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------

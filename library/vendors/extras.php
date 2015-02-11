@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 /**
@@ -13,11 +13,11 @@
  * @param array $args Configuration arguments.
  * @return array
  */
-function digistarter_page_menu_args( $args ) {
+function some_like_it_neat_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'digistarter_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'some_like_it_neat_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
@@ -25,7 +25,7 @@ add_filter( 'wp_page_menu_args', 'digistarter_page_menu_args' );
  * @param array $classes Classes for the body element.
  * @return array
  */
-function digistarter_body_classes( $classes ) {
+function some_like_it_neat_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -33,7 +33,7 @@ function digistarter_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'digistarter_body_classes' );
+add_filter( 'body_class', 'some_like_it_neat_body_classes' );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
@@ -42,7 +42,7 @@ add_filter( 'body_class', 'digistarter_body_classes' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  */
-function digistarter_wp_title( $title, $sep ) {
+function some_like_it_neat_wp_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() ) {
@@ -60,9 +60,9 @@ function digistarter_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 ) {
-		$title .= " $sep " . sprintf( __( 'Page %s', 'digistarter' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'some-like-it-neat' ), max( $paged, $page ) );
 	}
 
 	return $title;
 }
-add_filter( 'wp_title', 'digistarter_wp_title', 10, 2 );
+add_filter( 'wp_title', 'some_like_it_neat_wp_title', 10, 2 );

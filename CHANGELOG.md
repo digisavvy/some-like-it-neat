@@ -1,14 +1,39 @@
 # Changelog
+### 1.2
+-------------
+
+**Features:**
+
+* Added Composer for dependencies
+* Added support for PHPCS and WordPress Coding Standards
+* Bourbon, Neat and Bi-App are now controlled via Bower, so make sure you do bower install
+* Bower dependent js have been been removed from bower and instead enqueued in the theme directly for greater compatibility
+* Making use of title tag support
+* Added Archive description via get_the_archive_description()
+
+
+**Bugfixes:**
+
+* Fixed some text translation issues in code
+* Changed prefix and text-domains to some_like_it_neat_ from some_like_it_neat_
+* Removed Example Content such as Customizer Example panel and tgm-example-plugin.zip
+* Rename wp-customizer folder and functions to just customizer, for purposes relating to core naming conventions and avoiding conflicts there.
+* Remove orphaned rtl.css file
+* Resolve 2 Yoda conditions
+* General Style Tweaks/Fixes
+
 ### 1.1.11
 -------------
 
 **Features:**
+
 * This is a doozy. Adding RTL Support using Bi-App. For this to work, we're changing how we compile styles a bit. Instead of putting all of your styles in style.scss, we're now placing them in app.scss. Will explain more in the Readme.md file.
 
 ### 1.1.10
 -------------
 
 **Features:**
+
 * Added support for get_the_archive_title() in the archive template
 * Added support for
 
@@ -16,25 +41,30 @@
 -------------
 
 **Features:**
+
 * General tweaks to Customizer Settings Area. Utilizing panels to separate settings.
 
 **Bugfixes:**
+
 *
 
 ### 1.1.9
 -------------
 
 **Features:**
+
 * Added Example Customizer 4.0 Controls and Settings with a Panel for use/customization
 
 **Bugfixes:**
+
 * Updated non-tanslated strings in Customizer
-* Updated textdomain in Thomas Griffin Plugin Activation script to "digistarter"
+* Updated textdomain in Thomas Griffin Plugin Activation script to "some_like_it_neat"
 
 ### 1.1.8
 -------------
 
 **Features:**
+
 * Push for Internationalization and Localization
 * Translations for EN US
 * Translations for Spanish (I hope...)
@@ -43,12 +73,14 @@
 -------------
 
 **Features:**
+
 * Improve Accessibility
 *** Removed Link Title Text in all page templates
 *** Created greater contrast for menus and buttons
 ***
 
 **Bugfixes:**
+
 * Replace touch button navicon with nav button now that Customizer properly shows on default
 
 ### 1.1.6

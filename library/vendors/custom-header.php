@@ -12,51 +12,51 @@
 	<?php endif; // End header image check. ?>
 
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 /**
  * Setup the WordPress core custom header feature.
  *
- * @uses digistarter_header_style()
- * @uses digistarter_admin_header_style()
- * @uses digistarter_admin_header_image()
+ * @uses some_like_it_neat_header_style()
+ * @uses some_like_it_neat_admin_header_style()
+ * @uses some_like_it_neat_admin_header_image()
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
-function digistarter_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'digistarter_custom_header_args', array(
+function some_like_it_neat_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'some_like_it_neat_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'digistarter_header_style',
-		'admin-head-callback'    => 'digistarter_admin_header_style',
-		'admin-preview-callback' => 'digistarter_admin_header_image',
+		'wp-head-callback'       => 'some_like_it_neat_header_style',
+		'admin-head-callback'    => 'some_like_it_neat_admin_header_style',
+		'admin-preview-callback' => 'some_like_it_neat_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'digistarter_custom_header_setup' );
+add_action( 'after_setup_theme', 'some_like_it_neat_custom_header_setup' );
 
-if ( ! function_exists( 'digistarter_header_style' ) ) :
-/**
+if ( ! function_exists( 'some_like_it_neat_header_style' ) ) :
+	/**
  * Styles the header image and text displayed on the blog
  *
- * @see digistarter_custom_header_setup().
+ * @see some_like_it_neat_custom_header_setup().
  */
-function digistarter_header_style() {
-	$header_text_color = get_header_textcolor();
+	function some_like_it_neat_header_style() {
+		$header_text_color = get_header_textcolor();
 
-	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
-		return;
-	}
+		// If no custom options for text are set, let's bail
+		// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
+		if ( HEADER_TEXTCOLOR == $header_text_color ) {
+			return;
+		}
 
-	// If we get this far, we have custom styles. Let's do this.
-	?>
-	<style type="text/css">
-	<?php
+		// If we get this far, we have custom styles. Let's do this.
+		?>
+		<style type="text/css">
+		<?php
 		// Has the text been hidden?
 		if ( 'blank' == $header_text_color ) :
 	?>
@@ -67,26 +67,26 @@ function digistarter_header_style() {
 		}
 	<?php
 		// If the user has set a custom color for the text use that
-		else :
+	else :
 	?>
-		.site-title a,
-		.site-description {
-			color: #<?php echo $header_text_color; ?>;
-		}
+	.site-title a,
+	.site-description {
+		color: #<?php echo $header_text_color; ?>;
+	}
 	<?php endif; ?>
 	</style>
 	<?php
-}
-endif; // digistarter_header_style
+	}
+endif; // some_like_it_neat_header_style
 
-if ( ! function_exists( 'digistarter_admin_header_style' ) ) :
-/**
+if ( ! function_exists( 'some_like_it_neat_admin_header_style' ) ) :
+	/**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see digistarter_custom_header_setup().
+ * @see some_like_it_neat_custom_header_setup().
  */
-function digistarter_admin_header_style() {
-?>
+	function some_like_it_neat_admin_header_style() {
+	?>
 	<style type="text/css">
 		.appearance_page_custom-header #headimg {
 			border: none;
@@ -103,19 +103,19 @@ function digistarter_admin_header_style() {
 		#headimg img {
 		}
 	</style>
-<?php
-}
-endif; // digistarter_admin_header_style
+	<?php
+	}
+endif; // some_like_it_neat_admin_header_style
 
-if ( ! function_exists( 'digistarter_admin_header_image' ) ) :
-/**
+if ( ! function_exists( 'some_like_it_neat_admin_header_image' ) ) :
+	/**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see digistarter_custom_header_setup().
+ * @see some_like_it_neat_custom_header_setup().
  */
-function digistarter_admin_header_image() {
-	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
-?>
+	function some_like_it_neat_admin_header_image() {
+		$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
+	?>
 	<div id="headimg">
 		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
@@ -124,5 +124,5 @@ function digistarter_admin_header_image() {
 		<?php endif; ?>
 	</div>
 <?php
-}
-endif; // digistarter_admin_header_image
+	}
+endif; // some_like_it_neat_admin_header_image
