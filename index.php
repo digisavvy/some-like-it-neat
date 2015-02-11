@@ -16,10 +16,10 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-    <?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-    <?php /* Start the Loop */ ?>
-    <?php while ( have_posts() ) : the_post(); ?>
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php
 					/* Include the Post-Format-specific template for the content.
@@ -29,16 +29,16 @@ get_header(); ?>
 					get_template_part( 'page-templates/partials/content', get_post_format() );
 				?>
 
-    <?php
+		<?php
 endwhile; ?>
 
-    <?php some_like_it_neat_paging_nav(); ?>
+		<?php some_like_it_neat_paging_nav(); ?>
 
-    <?php else : ?>
+		<?php else : ?>
 
-    <?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
+		<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
 
-    <?php
+		<?php
 endif; ?>
 
 		</main><!-- #main -->

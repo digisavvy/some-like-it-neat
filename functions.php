@@ -162,8 +162,8 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 	function theme_slug_render_title()
 	{
 	?>
-      <title><?php wp_title( '|', true, 'right' ); ?></title>
-    <?php
+			<title><?php wp_title( '|', true, 'right' ); ?></title>
+		<?php
 	}
 	add_action( 'wp_head', 'theme_slug_render_title' );
 }
@@ -193,20 +193,20 @@ if ( ! function_exists( 'dg_add_flexnav' ) ) :
 	function dg_add_flexnav()
 	{
 	?>
-     <script>
-      // Init Flexnav Menu
-      jQuery(document).ready(function($){
-          $(".flexnav").flexNav({
-           'animationSpeed' : 250, // default drop animation speed
-        'transitionOpacity': true, // default opacity animation
-        'buttonSelector': '.menu-button', // default menu button class
-        'hoverIntent': true, // use with hoverIntent plugin
-        'hoverIntentTimeout': 350, // hoverIntent default timeout
-        'calcItemWidths': false // dynamically calcs top level nav item widths
-       });
-      });
-     </script>
-    <?php
+			<script>
+				// Init Flexnav Menu
+				jQuery(document).ready(function($){
+					$(".flexnav").flexNav({
+						'animationSpeed' : 250, // default drop animation speed
+						'transitionOpacity': true, // default opacity animation
+							'buttonSelector': '.menu-button', // default menu button class
+							'hoverIntent': true, // use with hoverIntent plugin
+							'hoverIntentTimeout': 350, // hoverIntent default timeout
+							'calcItemWidths': false // dynamically calcs top level nav item widths
+						});
+				});
+			</script>
+			<?php
 	}
 	add_action( 'wp_footer', 'dg_add_flexnav' );
 endif;
@@ -252,10 +252,10 @@ if ( ! function_exists( 'some_like_it_neat_optional_scripts' ) ) :
 		// Link Color
 		if ( '' != get_theme_mod( 'some_like_it_neat_add_link_color' )  ) {
 		} ?>
-      <style type="text/css">
-       a { color: <?php echo get_theme_mod( 'some_like_it_neat_add_link_color' ); ?>; }
-      </style>
-    <?php
+			<style type="text/css">
+				a { color: <?php echo get_theme_mod( 'some_like_it_neat_add_link_color' ); ?>; }
+			</style>
+		<?php
 	}
 	add_action( 'wp_head', 'some_like_it_neat_optional_scripts' );
 endif;
@@ -266,12 +266,12 @@ if ( ! function_exists( 'some_like_it_neat_mobile_styles' ) ) :
 		$value = get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' );
 
 		if ( 0 == get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' ) ) { ?>
-               <style>
-                .menu-button i.navicon {
-                 display: none;
-                }
-               </style>
-                <?php
+								<style>
+								.menu-button i.navicon {
+									display: none;
+								}
+								</style>
+							<?php
 		} else {
 
 		}
@@ -284,14 +284,14 @@ if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
 	{
 	?>
 
-     <div class="footer-left">
-        <?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_left', __( '&copy; All Rights Reserved', 'some-like-it-neat' ) ) ); ?>
+			<div class="footer-left">
+				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_left', __( '&copy; All Rights Reserved', 'some-like-it-neat' ) ) ); ?>
 
-     </div>
-     <div class="footer-right">
-        <?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_right', 'Footer Content Right' ) );  ?>
-     </div>
-    <?php
+			</div>
+			<div class="footer-right">
+				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_right', 'Footer Content Right' ) );  ?>
+			</div>
+		<?php
 	}
 	add_action( 'tha_footer_bottom', 'some_like_it_neat_add_footer_divs' );
 endif;
