@@ -78,7 +78,7 @@ get_header(); ?>
 						/*
                         * END TO-DO
                         */
-		?>
+	?>
 				</h1>
 				<?php
 					// Show an optional term description.
