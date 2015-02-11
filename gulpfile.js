@@ -103,13 +103,8 @@ gulp.task('styles', function () {
 
 
 gulp.task('js', function() {
-<<<<<<< HEAD
-	return gulp.src([source+'js/app/**/*.js', source+'js/vendor/**/*.js', source+'bower_components/**/*.js'])
-		.pipe(concat('production.js'))
-=======
 	return gulp.src([source+'js/app/**/*.js', source+'bower_components/**/*.js'])
 		.pipe(concat('development.js'))
->>>>>>> 1.2
 		.pipe(gulp.dest(source+'js'))
 		.pipe(rename( {
 			basename: "production",
