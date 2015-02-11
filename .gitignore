@@ -34,6 +34,13 @@ Thumbs.db
 **/.sass-cache/*
 **/.map
 
+# Composer #
+##########
+vendor/
+!assets/js/vendor/
+wpcs/
+composer.lock
+
 # Bower #
 ##########
 assets/bower_components/*
@@ -53,3 +60,10 @@ node_modules
 ##########
 /README.html
 /build/
+<<<<<<< HEAD
+=======
+
+# PhpStrom Project Files #
+.idea/
+
+>>>>>>> 1.2.1

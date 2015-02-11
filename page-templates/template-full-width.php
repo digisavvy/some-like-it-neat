@@ -5,7 +5,7 @@
  * This template display content at full with, with no sidebars.
  * Please note that this is the WordPress construct of pages and that other 'pages' on your WordPress site will use a different template.
  *
- * @package digistarter
+ * @package some_like_it_neat
  */
 
 get_header(); ?>
@@ -18,13 +18,22 @@ get_header(); ?>
                                 <?php get_template_part( 'page-templates/partials/content', 'page' ); ?>
 
                                 <?php
+<<<<<<< HEAD
                                         // If comments are open or we have at least one comment, load up the comment template
                                         if ( comments_open() || '0' != get_comments_number() ) :
                                                 comments_template();
                                         endif;
                                 ?>
+=======
+								// If comments are open or we have at least one comment, load up the comment template
+								if ( comments_open() || '0' != get_comments_number() ) :
+									comments_template();
+								endif;
+								?>
+>>>>>>> 1.2.1
 
-                        <?php endwhile; // end of the loop. ?>
+                        <?php
+endwhile; // end of the loop. ?>
 
                 </main><!-- #main -->
         </div><!-- #primary -->

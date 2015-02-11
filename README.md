@@ -31,6 +31,8 @@ tasks such as autoprefixing, compiling and minifying Sass files; cleaning up you
 your theme! Cool. Right?
 
 * RTL Support via the most excellent bi-app-sass project
+* Composer for pulling in dev dependencies like PHPCS
+* PHPCS w/ WordPress Coding Standards
 * Built for Accessibility
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
@@ -50,12 +52,22 @@ Getting Started
   * The first thing you’ll want to do is grab a copy of the theme —
 **git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
 
-* #### Install Gulpjs and Bower + Dependencies
+
+
+* #### Install Gulpjs, Composer and Bower + Dependencies 
+
   Once you have Node, Sass and the theme installed, the next step is simple enough.
-  * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: **npm install** - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync!
-  * **Install Bower** - In the command prompt/terminal run this command: **npm install -g bower**. This installs Bower (the -g flag installs globally, not just in the current directory, super friends).
-  * **Install Bower Dependencies** - There are Sass and Js packages that are required by Some Like it Neat. To get them run this command: **bower install** - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
- _(note - you may have to run this command as admin or sudo)_
+  
+   **_(note - you may have to run the following commands as admin or sudo)_**
+   
+  * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: `npm install` - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync!
+  * **Install Bower** - In the command prompt/terminal run this command: `npm install -g bower`. This installs Bower (the -g flag installs globally, not just in the current directory, super friends).
+  * **Install Bower Dependencies** - There are Sass and Js packages that are required by Some Like it Neat. To get them run this command: `bower install` - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
+  * **Install Composer Dependencies** - The only Composer Dependency setup at this time is PHPCS w/ WordPress Coding Standards. This allows us to run a Gulp task to "sniff" out any code in your theme that isn't standards-compliant. You can then go back and fix the offending code.
+  
+  	* [Install Composer](https://getcomposer.org/doc/00-intro.md#globally)
+  	* Once you have completed the Composer install, you should be able to run the following command to install PHPCS: `php composer.phar install`  
+
 
  * #### Generating your styles
    * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
@@ -63,8 +75,8 @@ Getting Started
 
 * #### Gulp Tasks
 There are a couple of tasks built into Some Like it Neat to help get you going.
-  * **gulp** This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
-  * **gulp build** This command removes unneccessary files and packs up the required files into a nice and neat, installable, zip package. Honestly, this is here because I was uploading my theme to the WP.org uploader so many times... Epitome of the laze.
+  * `gulp` This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
+  * `gulp build` This command removes unneccessary files and packs up the required files into a nice and neat, installable, zip package. Honestly, this is here because I was uploading my theme to the WP.org uploader so many times... Epitome of the laze.
 
 Each task such as 'js', 'images' or 'browser-sync' may be started individually. Although, the only one of them you'd do that with is the 'images' task since that's not auto-optimizing at the moment.
 
@@ -73,6 +85,7 @@ When developing your theme note that the output style.css file and production.js
 
 * **A Note About Javascript Files** - If you have JS files that are not managed by Bower, you should place those files inside the assets/js/app folder. Why? Gulp runs a task that concatenates js files in that directory and checks them for errors, which is pretty nifty. You can modify Gulp task behavior to suit your tastes, of course.
 
+* **Extra Note!** If you've set WP Debug true, the concatenated file is unminified and if set to false, then the concatenated file is minified. If you don't intend to use this functionality, you should comment-out or remove the lines referring to development.js and production-min.js.
 
 ### Theme Hook Alliance
 ---------------
@@ -104,22 +117,25 @@ a project.
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
     │    │   ├── bower_components
+    │    │   |   ├── bi-app-sass
+    │    │   |   ├── bourbon
+    │    │   |   └── neat
     │    │   ├── css
     |    |   |    ├── rtl-min.css
     |    |   |    ├── rtl.css
     |    |   |    ├── style-min.css
-    |    |   |    └──style.css
+    |    |   |    └── style.css
     │    |   └──  js
     │    │   |    ├── app
     │    │   |    └── vendor
-    │    |   |    |   ├── _buttons.scss
-    │    |   |    |   └── _dashicons.scss    
+    │    |   |    |   ├── flexnav
+    │    |   |    |   ├── hoverintent
+    │    |   |    |   ├── modernizr
+    │    |   |    |   └── selectivizr
     │    │   |    ├── production-min.js
-    │    │   |    └── production.js
+    │    │   |    └── development.js
     │    ├── sass
     │    |   └── base (Bitters)
-    │    |   └── bourbon
-    │    |   └── font-awesome
     │    |   └── components
     |    |    |   ├── _buttons.scss
     |    |    |   ├── _dashicons.scss
@@ -136,20 +152,18 @@ a project.
     |    |    |   ├── _sidebar.scss
     |    |    |   ├── _structure.scss
     |    |    |   └── _typography.scss
-    │    |    └── neat
     |    ├── _app.scss
-    |    ├── _flexnav.scss
     |    ├── _grid-settings.scss
     |    ├── _rtl.scss
     |    └── style.scss
     ├── library
     │   └── languages
-    │   │   ├── digistarter.pot
+    │   │   ├── some_like_it_neat.pot
     │   └── vendors
     │   │   ├── js
     │   │   ├── tgm-plugin-activation
     │   │   ├── tha-theme-hooks
-    │   │   └── wp-customizer
+    │   │   └── customizer
     │   ├── custom-header.php
     │   ├── extras.php
     │   ├── jetpack.php

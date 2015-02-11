@@ -8,9 +8,6 @@
   "dependencies" : {
     "bourbon" : "~4.1",
     "neat" : "~1.7",
-    "flexnav" : "~1.3.3",
-    "bi-app-sass" : "latest",
-    "jquery-hoverIntent" : "~1.8.1",
-    "selectivizr" : "latest"
+    "bi-app-sass" : "latest"
   }
 }
