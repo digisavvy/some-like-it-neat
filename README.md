@@ -20,6 +20,8 @@ What's Inside?
 
 Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. Refills and Bitters provide additional styling and UI elements. I suggest you visit each of these projects to learn more and how to use them.
 
+Bitters is baked-in, too! You get some basic nifty styles out of the gate.
+
 * Underscores (_s) based theme. There's smarter folks than me building great sh*t (http://underscores.me)
 
 * Sass. We're using it and to update this theme you should be cozy with it or get ready to learn how to use. If you don't know Sass, you should definitely jump in. The water's fine and you'll thank me later. I accept thanks in burritos, doritos, fritos and cheetos only.
@@ -30,8 +32,11 @@ Neat extends bourbon and provides a nice and lightweight grid framework as a bas
 tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
 your theme! Cool. Right?
 
+* Bower — We're using bower to manage certain theme dependencies, specifically Bourbon, Neat and Bi-App-Sass. Cool, right? That's what I said when I learned the awesomeness that is Bower. Ya hurd?!
+
+* Composer — This one is a bit 
+
 * RTL Support via the most excellent bi-app-sass project
-* Composer for pulling in dev dependencies like PHPCS
 * PHPCS w/ WordPress Coding Standards
 * Built for Accessibility
 * Flexnav Menu System and Hover Intent
@@ -53,21 +58,22 @@ Getting Started
 **git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
 
 
-
 * #### Install Gulpjs, Composer and Bower + Dependencies 
 
   Once you have Node, Sass and the theme installed, the next step is simple enough.
   
    **_(note - you may have to run the following commands as admin or sudo)_**
    
-  * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: `npm install` - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync!
-  * **Install Bower** - In the command prompt/terminal run this command: `npm install -g bower`. This installs Bower (the -g flag installs globally, not just in the current directory, super friends).
+  * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: `npm install` - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync! You'll need to run this step on each of your projects, going forward.
+  * **Install Bower** - In the command prompt/terminal run this command: `npm install -g bower`. This installs Bower (the -g flag installs globally, not just in the current directory, super friends). Your only need to do this step once.
   * **Install Bower Dependencies** - There are Sass and Js packages that are required by Some Like it Neat. To get them run this command: `bower install` - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
-  * **Install Composer Dependencies** - The only Composer Dependency setup at this time is PHPCS w/ WordPress Coding Standards. This allows us to run a Gulp task to "sniff" out any code in your theme that isn't standards-compliant. You can then go back and fix the offending code.
   
-  	* [Install Composer](https://getcomposer.org/doc/00-intro.md#globally)
-  	* Once you have completed the Composer install, you should be able to run the following command to install PHPCS: `php composer.phar install`  
+  * **Install Composer** - Install Composer, Globally, so that it will be available in your other projects, too! You only have to do this part once. 
+    	* [Install Composer](https://getcomposer.org/doc/00-intro.md#globally)
+  
+  * **Install Composer Dependencies** - The only Composer Dependency setup at this time is PHPCS w/ WordPress Coding Standards. This allows us to run a Gulp task to "sniff" out any code in your theme that isn't standards-compliant. You can then go back and fix the offending code. The Phpcs task in gulpfile.js can be configured to included/exclude any directory within your theme. By default, it looks at php files in theme-root and files within the page-templates directory.  
 
+  	* Once you have completed the Composer install, you should be able to run the following command to install PHPCS: `php composer.phar install`.
 
  * #### Generating your styles
    * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
@@ -211,8 +217,7 @@ Road Map
 * Firm up i18n for RTL and language support. Looking for contributors here
 * Ensure Accessibility has been properly and thoroughly addressed
 * Implement Yeoman
-* Get Bower properly setup and configured
-* And more...
+* <s>Get Bower properly setup and configured</s>
 
 
 ### General Credits and Thanks
@@ -222,6 +227,7 @@ A special thanks to all the folks who inspire me on a daily basis to "do more" w
 * Brandon Dove
 * Nikhil @techvoltz
 * Jon Brown
+* Udit Desai
 * Jeffrey Zinn
 * Steve Zehngut
 * Chris Lema
