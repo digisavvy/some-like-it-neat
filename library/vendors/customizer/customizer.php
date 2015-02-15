@@ -290,6 +290,6 @@ add_action( 'customize_register', 'some_like_it_neat_add_customizer_theme_option
  */
 
 function some_like_it_neat_customize_preview_js() {
-	wp_enqueue_script( 'some_like_it_neat_customizer', get_stylesheet_uri() . '/library/vendors/customizer/js/customizer.js', array( 'customize-preview' ), '20130508', true );
+	wp_enqueue_script( 'some_like_it_neat_customizer', get_stylesheet_directory_uri() . '/library/vendors/customizer/js/customizer.js', array( 'customize-preview' ), '20130508', true );
 }
 add_action( 'customize_preview_init', 'some_like_it_neat_customize_preview_js' );

@@ -48,6 +48,11 @@ your theme! Cool. Right?
 
 Getting Started
 ---------------
+There's a lot to this theme, but don't be intimidated, even if you're not an "advanced-level" developer, you got this! I'll be honest with you, I don't know how half the stuff here works, it just sorta does. =)
+
+Bourbon and Neat are used for providing simple Sass mixins and leverages a simple grid system that let's you markup your theme how you want, while you use their math, unlike Bootstrap and Foundation, presently.
+
+There are things you need to install before you hack away at things. There are three package managers to install: Node (which installs the NPM package manager), Bower and Composer. Each of these have dependencies that also need to be installed. Fortunately, this is all "fairly easy". 
 
 * #### Prerequisites
   * You'll need to download and install [Node](http://nodejs.com)
@@ -74,6 +79,12 @@ Getting Started
   * **Install Composer Dependencies** - The only Composer Dependency setup at this time is PHPCS w/ WordPress Coding Standards. This allows us to run a Gulp task to "sniff" out any code in your theme that isn't standards-compliant. You can then go back and fix the offending code. The Phpcs task in gulpfile.js can be configured to included/exclude any directory within your theme. By default, it looks at php files in theme-root and files within the page-templates directory.  
 
   	* Once you have completed the Composer install, you should be able to run the following command to install PHPCS: `php composer.phar install`.
+  	
+  	
+  	
+ * #### Set your project configuration in Gulpfile.js!!
+ 
+ 	* This is important for using Browser-Sync with your project. Make sure in gulpfile.js that you set the `project` variable to the appropriate name for your project URL. Default is "somelikeitneat."
 
  * #### Generating your styles
    * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
@@ -110,10 +121,6 @@ Why use these in this project? It's a philosophical thing. I've used Foundation 
 I don't see why not. ~~I haven't done it yet.~~ ( I'm using a child theme on http://alexhasnicehair.com ) But with the addition of Theme Hook Alliance, I'd say 'Some Like it Neat' would make for a good Parent Theme for your project and certainly more ideal if you're going to make significant edits (and why wouldn't you? By default it looks like pooh!).
 
 What I recommend is that you generate your child theme, setup your child theme folder, style.css file. Additionally, I think it's just easier to copy the 'library' folder from the parent and place it into the child theme.
-
-### Getting Started aka What You Need to Know...
----------------
-Well, to use this theme, you'll definitely want to learn Sass. It's what Bourbon and Neat are built on top of and is at the core of this theme's build.
 
 ### Folder Structure
 ---------------
