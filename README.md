@@ -34,7 +34,7 @@ your theme! Cool. Right?
 
 * Bower — We're using bower to manage certain theme dependencies, specifically Bourbon, Neat and Bi-App-Sass. Cool, right? That's what I said when I learned the awesomeness that is Bower. Ya hurd?!
 
-* Composer — This one is a bit 
+* Composer — This one is a bit
 
 * RTL Support via the most excellent bi-app-sass project
 * PHPCS w/ WordPress Coding Standards
@@ -52,7 +52,7 @@ There's a lot to this theme, but don't be intimidated, even if you're not an "ad
 
 Bourbon and Neat are used for providing simple Sass mixins and leverages a simple grid system that let's you markup your theme how you want, while you use their math, unlike Bootstrap and Foundation, presently.
 
-There are things you need to install before you hack away at things. There are three package managers to install: Node (which installs the NPM package manager), Bower and Composer. Each of these have dependencies that also need to be installed. Fortunately, this is all "fairly easy". 
+There are things you need to install before you hack away at things. There are three package managers to install: Node (which installs the NPM package manager), Bower and Composer. Each of these have dependencies that also need to be installed. Fortunately, this is all "fairly easy".
 
 * #### Prerequisites
   * You'll need to download and install [Node](http://nodejs.com)
@@ -63,27 +63,27 @@ There are things you need to install before you hack away at things. There are t
 **git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
 
 
-* #### Install Gulpjs, Composer and Bower + Dependencies 
+* #### Install Gulpjs, Composer and Bower + Dependencies
 
   Once you have Node, Sass and the theme installed, the next step is simple enough.
-  
+
    **_(note - you may have to run the following commands as admin or sudo)_**
-   
+
   * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: `npm install` - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync! You'll need to run this step on each of your projects, going forward.
   * **Install Bower** - In the command prompt/terminal run this command: `npm install -g bower`. This installs Bower (the -g flag installs globally, not just in the current directory, super friends). Your only need to do this step once.
   * **Install Bower Dependencies** - There are Sass and Js packages that are required by Some Like it Neat. To get them run this command: `bower install` - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
-  
-  * **Install Composer** - Install Composer, Globally, so that it will be available in your other projects, too! You only have to do this part once. 
+
+  * **Install Composer** - Install Composer, Globally, so that it will be available in your other projects, too! You only have to do this part once.
     	* [Install Composer](https://getcomposer.org/doc/00-intro.md#globally)
-  
-  * **Install Composer Dependencies** - The only Composer Dependency setup at this time is PHPCS w/ WordPress Coding Standards. This allows us to run a Gulp task to "sniff" out any code in your theme that isn't standards-compliant. You can then go back and fix the offending code. The Phpcs task in gulpfile.js can be configured to included/exclude any directory within your theme. By default, it looks at php files in theme-root and files within the page-templates directory.  
+
+  * **Install Composer Dependencies** - The only Composer Dependency setup at this time is PHPCS w/ WordPress Coding Standards. This allows us to run a Gulp task to "sniff" out any code in your theme that isn't standards-compliant. You can then go back and fix the offending code. The Phpcs task in gulpfile.js can be configured to included/exclude any directory within your theme. By default, it looks at php files in theme-root and files within the page-templates directory.
 
   	* Once you have completed the Composer install, you should be able to run the following command to install PHPCS: `php composer.phar install`.
-  	
-  	
-  	
+
+
+
  * #### Set your project configuration in Gulpfile.js!!
- 
+
  	* This is important for using Browser-Sync with your project. Make sure in gulpfile.js that you set the `project` variable to the appropriate name for your project URL. Default is "somelikeitneat."
 
  * #### Generating your styles
@@ -120,7 +120,8 @@ Why use these in this project? It's a philosophical thing. I've used Foundation 
 ---------------
 I don't see why not. ~~I haven't done it yet.~~ ( I'm using a child theme on http://alexhasnicehair.com ) But with the addition of Theme Hook Alliance, I'd say 'Some Like it Neat' would make for a good Parent Theme for your project and certainly more ideal if you're going to make significant edits (and why wouldn't you? By default it looks like pooh!).
 
-What I recommend is that you generate your child theme, setup your child theme folder, style.css file. Additionally, I think it's just easier to copy the 'library' folder from the parent and place it into the child theme.
+<del>What I recommend is that you generate your child theme, setup your child theme folder, style.css file. Additionally, I think it's just easier to copy the 'library' folder from the parent and place it into the child theme.</del>
+I'm gonna recommend you [have a look at this issue here] (https://github.com/digisavvy/some-like-it-neat/issues/58) for details on how to go about this.
 
 ### Folder Structure
 ---------------
