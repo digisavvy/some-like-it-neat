@@ -5,11 +5,11 @@
  *
  * You can add an optional custom header image to header.php like so ...
 
-	<?php if ( get_header_image() ) : ?>
-	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-		<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
-	</a>
-	<?php endif; // End header image check. ?>
+<?php if ( get_header_image() ) : ?>
+<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+<img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="">
+</a>
+<?php endif; // End header image check. ?>
 
  *
  * @package some_like_it_neat
@@ -38,134 +38,91 @@ function some_like_it_neat_custom_header_setup() {
 }
 add_action( 'after_setup_theme', 'some_like_it_neat_custom_header_setup' );
 
-<< << <<< HEAD
-if ( ! function_exists( 'digistarter_header_style' ) ) :
-/**
-=======
 if ( ! function_exists( 'some_like_it_neat_header_style' ) ) :
 	/**
->>>>>>> 1.2.1
- * Styles the header image and text displayed on the blog
- *
- * @see some_like_it_neat_custom_header_setup().
- */
-<<<<<<< HEAD
-function digistarter_header_style() {
-	$header_text_color = get_header_textcolor();
-=======
+	 * Styles the header image and text displayed on the blog
+	 *
+	 * @see some_like_it_neat_custom_header_setup().
+	 */
 	function some_like_it_neat_header_style() {
 		$header_text_color = get_header_textcolor();
->>>>>>> 1.2.1
 
-	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == $header_text_color ) {
-		return;
-	}
-
-	// If we get this far, we have custom styles. Let's do this.
-	?>
-	<style type="text/css">
-	<?php
-		// Has the text been hidden?
-		if ( 'blank' == $header_text_color ) :
-	?>
-		.site-title,
-		.site-description {
-			position: absolute;
-			clip: rect(1px, 1px, 1px, 1px);
+		// If no custom options for text are set, let's bail
+		// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
+		if ( HEADER_TEXTCOLOR == $header_text_color ) {
+			return;
 		}
-	<?php
-		// If the user has set a custom color for the text use that
-		else :
-	?>
-		.site-title a,
-		.site-description {
-			color: #<?php echo $header_text_color; ?>;
-		}
-	<?php endif; ?>
-	</style>
-	<?php
-<<<<<<< HEAD
-}
-endif; // digistarter_header_style
 
-if ( ! function_exists( 'digistarter_admin_header_style' ) ) :
-/**
-=======
+		// If we get this far, we have custom styles. Let's do this.
+		?>
+		<style type="text/css">
+			<?php
+			// Has the text been hidden?
+			if ( 'blank' == $header_text_color ) :
+		?>
+			.site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+			<?php
+				// If the user has set a custom color for the text use that
+			else :
+			?>
+			.site-title a,
+			.site-description {
+				color: #<?php echo $header_text_color; ?>;
+			}
+			<?php endif; ?>
+		</style>
+	<?php
 	}
 endif; // some_like_it_neat_header_style
 
 if ( ! function_exists( 'some_like_it_neat_admin_header_style' ) ) :
 	/**
->>>>>>> 1.2.1
- * Styles the header image displayed on the Appearance > Header admin panel.
- *
- * @see some_like_it_neat_custom_header_setup().
- */
-<<<<<<< HEAD
-function digistarter_admin_header_style() {
-?>
-=======
+	 * Styles the header image displayed on the Appearance > Header admin panel.
+	 *
+	 * @see some_like_it_neat_custom_header_setup().
+	 */
 	function some_like_it_neat_admin_header_style() {
-	?>
->>>>>>> 1.2.1
-	<style type="text/css">
-		.appearance_page_custom-header #headimg {
-			border: none;
-		}
-		#headimg h1,
-		#desc {
-		}
-		#headimg h1 {
-		}
-		#headimg h1 a {
-		}
-		#desc {
-		}
-		#headimg img {
-		}
-	</style>
-<<<<<<< HEAD
-<?php
-}
-endif; // digistarter_admin_header_style
-
-if ( ! function_exists( 'digistarter_admin_header_image' ) ) :
-/**
-=======
+		?>
+		<style type="text/css">
+			.appearance_page_custom-header #headimg {
+				border: none;
+			}
+			#headimg h1,
+			#desc {
+			}
+			#headimg h1 {
+			}
+			#headimg h1 a {
+			}
+			#desc {
+			}
+			#headimg img {
+			}
+		</style>
 	<?php
 	}
 endif; // some_like_it_neat_admin_header_style
 
 if ( ! function_exists( 'some_like_it_neat_admin_header_image' ) ) :
 	/**
->>>>>>> 1.2.1
- * Custom header image markup displayed on the Appearance > Header admin panel.
- *
- * @see some_like_it_neat_custom_header_setup().
- */
-<<<<<<< HEAD
-function digistarter_admin_header_image() {
-	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
-?>
-=======
+	 * Custom header image markup displayed on the Appearance > Header admin panel.
+	 *
+	 * @see some_like_it_neat_custom_header_setup().
+	 */
 	function some_like_it_neat_admin_header_image() {
 		$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
-	?>
->>>>>>> 1.2.1
-	<div id="headimg">
-		<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
-		<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
-		<?php if ( get_header_image() ) : ?>
-		<img src="<?php header_image(); ?>" alt="">
-		<?php endif; ?>
-	</div>
-<?php
-<<<<<<< HEAD
-}
-endif; // digistarter_admin_header_image
-=======
+		?>
+		<div id="headimg">
+			<h1 class="displaying-header-text"><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<div class="displaying-header-text" id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
+			<?php if ( get_header_image() ) : ?>
+				<img src="<?php header_image(); ?>" alt="">
+			<?php endif; ?>
+		</div>
+	<?php
 	}
 endif; // some_like_it_neat_admin_header_image
->>>>>>> 1.2.1
