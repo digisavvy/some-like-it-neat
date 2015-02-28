@@ -55,5 +55,5 @@
 		<?php tha_header_after(); ?>
 
 		<?php tha_content_before(); ?>
-		<div id="content" class="site-content">
+		<main id="main" class="site-main" role="main">
 			<?php tha_content_top(); ?>
