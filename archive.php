@@ -11,7 +11,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div id="content" class="site-content">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -118,7 +118,7 @@ endwhile; ?>
 			<?php
 endif; ?>
 
-		</main><!-- #main -->
+		</div><!-- #content -->
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
