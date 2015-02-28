@@ -61,6 +61,24 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		// Enable support for Post Formats.
 		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
 
+		// Enable Support for Jetpack Infinite Scroll
+		add_theme_support( 'infinite-scroll', array(
+			'type'           => 'scroll',
+			'footer_widgets' => false,
+			'container'      => 'content',
+			'wrapper'        => true,
+			'render'         => false,
+			'posts_per_page' => false,
+			'render'    => 'some_like_it_neat_infinite_scroll_render',
+		) );
+
+		function some_like_it_neat_infinite_scroll_render() {
+			if ( have_posts() ) : while ( have_posts() ) : the_post();
+				get_template_part( 'page-templates/partials/content', get_post_format() );
+			endwhile;
+			endif;
+		}
+
 		// Setup the WordPress core custom background feature.
 		add_theme_support(
 			'custom-background', apply_filters(
@@ -125,7 +143,7 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 			wp_enqueue_script( 'hoverintent-js', get_stylesheet_directory_uri() . '/assets/js/vendor/hoverintent/jquery.hoverIntent.js', array( 'jquery' ), '1.0.0', true );
 
 			// Concatonated Scripts
-			wp_enqueue_script( 'development-js', get_stylesheet_directory_uri() . '/assets/js/development.js', array( 'jquery' ), '1.0.0', false );
+			// wp_enqueue_script( 'development-js', get_stylesheet_directory_uri() . '/assets/js/development.js', array( 'jquery' ), '1.0.0', false );
 
 			// Main Style
 			wp_enqueue_style( 'some_like_it_neat-style',  get_stylesheet_directory_uri() . '/assets/css/style.css' );
