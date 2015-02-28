@@ -1,4 +1,15 @@
 # Changelog
+
+### 1.2.4
+-------------
+**Features:**
+
+* Added theme support for Infinite Scroll
+
+**Bugfixes:**
+
+* Moved around markup. Specifically moved the "Main" selector/tag to wrap both "Primary" and "Secondary" selectors and moved "Content" inside of the "Primary" selector.
+
 ### 1.2
 -------------
 
@@ -10,7 +21,6 @@
 * Bower dependent js have been been removed from bower and instead enqueued in the theme directly for greater compatibility
 * Making use of title tag support
 * Added Archive description via get_the_archive_description()
-
 
 **Bugfixes:**
 
