@@ -8,7 +8,7 @@
  */
 ?>
 		<?php tha_content_bottom(); ?>
-		</div><!-- #content -->
+		</div><!-- #main -->
 		<?php tha_content_after(); ?>
 			<?php tha_footer_before(); ?>
 		<footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
