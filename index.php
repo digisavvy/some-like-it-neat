@@ -14,7 +14,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<div id="content" class="site-content">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -41,7 +41,7 @@ endwhile; ?>
 		<?php
 endif; ?>
 
-		</main><!-- #main -->
+		</div><!-- #content -->
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
