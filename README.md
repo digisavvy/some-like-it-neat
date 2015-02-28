@@ -42,6 +42,7 @@ your theme! Cool. Right?
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
 * Bower for managing packages and dependencies
+* Infinite Scroll Support for Jetpack
 
 * Pull requests welcome...
 
@@ -111,6 +112,9 @@ What is Theme Hook Alliance? It's a pretty rad project - https://github.com/zamo
 
 "_The Theme Hook Alliance is a community-driven effort to agree on a set of third-party action hooks that THA themes pledge to implement in order to give that desired consistency_."
 
+### Infinite Scroll and Jetpack
+---------------
+Infinite Scroll is now supported. Requires that you have Jetpack installed and have configured the plugin to use Infinite Scroll. Additionally, you'll need to go into the Customizer to add theme support. Why? While redundant, didn't really want code running that wasn't in use... Aaand seemed like a nice use of the Customizer. If you hate it, open an issue. =)
 
 ### Bourbon and Neat
 ---------------
