@@ -59,7 +59,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 	    'capability' => 'edit_theme_options',
 	    'theme_supports' => '',
 	    'title' => __( 'General Site Content Settings', 'some-like-it-neat' ),
-	    'description' => __( 'Navigation related settings and config.', 'some-like-it-neat' ),
+	    'description' => __( 'Various site settings and config.', 'some-like-it-neat' ),
 	) );
 
 	/* Color controls */
@@ -245,42 +245,60 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			)
 		);
 
-		/* Example Section and 4.0 customizer controls
-		*  @link — https://gist.github.com/devinsays/e9c6754340a5253c3ec9
-		*  @author — devinsays
+		/**
+		* Adding Infinite Scroll Section and Config
 		*/
-		// $wp_customize->add_panel( 'panel_id', array(
-		// 	'priority' => 1000,
-		// 	'capability' => 'edit_theme_options',
-		// 	'theme_supports' => '',
-		// 	'title' => __( 'Example Panel', 'some-like-it-neat' ),
-		// 	'description' => __( 'Description of what this panel does.', 'some-like-it-neat' ),
-		// ) );
+		$wp_customize->add_section( 'infinite_scroll', array(
+			'priority' => 0,
+			'capability' => 'edit_theme_options',
+			'theme_supports' => '',
+			'title' => __( 'Infinite Scroll Configuration', 'some-like-it-neat' ),
+			'description' => '',
+			'panel' => 'site_content',
+		) );
 
-		// $wp_customize->add_section( 'section_id', array(
-		// 	'priority' => 10,
-		// 	'capability' => 'edit_theme_options',
-		// 	'theme_supports' => '',
-		// 	'title' => __( 'Example Section', 'some-like-it-neat' ),
-		// 	'description' => '',
-		// 	'panel' => 'panel_id',
-		// ) );
+		$wp_customize->add_setting(
+			'some-like-it-neat_infinite_scroll_support',
+				array(
+					'default'   => 'no',
+					'transport' => 'postMessage'
+			)
+		);
 
-		// $wp_customize->add_setting( 'textarea_field_id', array(
-		// 	'default' => '',
-		// 	'type' => 'theme_mod',
-		// 	'capability' => 'edit_theme_options',
-		// 	'transport' => '',
-		// 	'sanitize_callback' => 'some_like_it_neat_sanitize_text',
-		// ) );
+		$wp_customize->add_control(
+			'some-like-it-neat_infinite_scroll_support',
+				array(
+					'section'  => 'infinite_scroll',
+					'label'		=> __( 'Enable Infinite Scroll Theme Support', 'some-like-it-neat' ),
+					'type'     => 'radio',
+					'description' => __( 'If enabled, you must install the Jetpack Plugin and Activate it.', 'some-like-it-neat' ),
+						'choices'  => array(
+						'no'    => 'No',
+						'yes'   => 'Yes'
+					)
+				)
+			);
 
-		// $wp_customize->add_control( 'textarea_field_id', array(
-		// 	'type' => 'textarea',
-		// 	'priority' => 10,
-		// 	'section' => 'section_id',
-		// 	'label' => __( 'Textarea Field', 'some-like-it-neat' ),
-		// 	'description' => '',
-		// ) );
+		$wp_customize->add_setting(
+			'some-like-it-neat_infinite_scroll_type',
+				array(
+					'default'   => 'scroll',
+					'transport' => 'postMessage'
+			)
+		);
+
+		$wp_customize->add_control(
+			'some-like-it-neat_infinite_scroll_type',
+				array(
+					'section'	=> 'infinite_scroll',
+					'label'		=> __( 'Infinite Scroll Type', 'some-like-it-neat' ),
+					'type'		=> 'radio',
+					'choices'	=> array(
+						'scroll'	=> 'Scroll',
+						'click'		=> 'Click'
+					)
+				)
+			);
 
 }
 add_action( 'customize_register', 'some_like_it_neat_add_customizer_theme_options' );
