@@ -62,21 +62,24 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
 
 		// Enable Support for Jetpack Infinite Scroll
-		add_theme_support( 'infinite-scroll', array(
-			'type'           => 'scroll',
-			'footer_widgets' => false,
-			'container'      => 'content',
-			'wrapper'        => true,
-			'render'         => false,
-			'posts_per_page' => false,
-			'render'    => 'some_like_it_neat_infinite_scroll_render',
-		) );
+		if ( 'yes' === get_theme_mod( 'some-like-it-neat_infinite_scroll_support' ) ) {
+			$scroll_type = get_theme_mod( 'some-like-it-neat_infinite_scroll_type' );
+			add_theme_support( 'infinite-scroll', array(
+				'type'				=> $scroll_type,
+				'footer_widgets'	=> false,
+				'container'			=> 'content',
+				'wrapper'			=> true,
+				'render'			=> false,
+				'posts_per_page' 	=> false,
+				'render'			=> 'some_like_it_neat_infinite_scroll_render',
+			) );
 
-		function some_like_it_neat_infinite_scroll_render() {
-			if ( have_posts() ) : while ( have_posts() ) : the_post();
-					get_template_part( 'page-templates/partials/content', get_post_format() );
-			endwhile;
-			endif;
+			function some_like_it_neat_infinite_scroll_render() {
+				if ( have_posts() ) : while ( have_posts() ) : the_post();
+						get_template_part( 'page-templates/partials/content', get_post_format() );
+				endwhile;
+				endif;
+			}
 		}
 
 		// Setup the WordPress core custom background feature.
@@ -182,6 +185,7 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 	?>
 			<title><?php wp_title( '|', true, 'right' ); ?></title>
 		<?php
+
 	}
 	add_action( 'wp_head', 'theme_slug_render_title' );
 }
