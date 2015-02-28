@@ -74,7 +74,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 
 		function some_like_it_neat_infinite_scroll_render() {
 			if ( have_posts() ) : while ( have_posts() ) : the_post();
-				get_template_part( 'page-templates/partials/content', get_post_format() );
+					get_template_part( 'page-templates/partials/content', get_post_format() );
 			endwhile;
 			endif;
 		}
