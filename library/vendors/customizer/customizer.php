@@ -62,7 +62,6 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 	    'description' => __( 'Various site settings and config.', 'some-like-it-neat' ),
 	) );
 
-	/* Color controls */
 	// General Link Colors
 	$wp_customize->add_panel( 'color_panel', array(
 	    'priority' => 10,
@@ -85,6 +84,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			'priority'		=> 6,
 		)
 	) );
+
 	/**
 	* Mobile Navigation Settings and Options
 	*/
@@ -178,7 +178,9 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 			)
 		);
 
-		// Add Footer Section and Settings
+		/**
+		* Adding Footer Panel and settings
+		*/
 		$wp_customize->add_panel( 'footer_settings_panel', array(
 			'priority' => 25,
 			'capability' => 'edit_theme_options',
@@ -246,17 +248,49 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 		);
 
 		/**
-		* Adding Infinite Scroll Section and Config
+		* Content Extras Panel Config and Settings
 		*/
-		$wp_customize->add_section( 'infinite_scroll', array(
+
+		// Add Content Extras Panel
+		$wp_customize->add_section( 'content_extras', array(
 			'priority' => 0,
 			'capability' => 'edit_theme_options',
 			'theme_supports' => '',
-			'title' => __( 'Infinite Scroll Configuration', 'some-like-it-neat' ),
+			'title' => __( 'Content Extras', 'some-like-it-neat' ),
 			'description' => '',
 			'panel' => 'site_content',
 		) );
 
+		/**
+		* Enable/Disable Post Format support
+		* @link http://codex.wordpress.org/Post_Formats
+		*/
+		$wp_customize->add_setting(
+			'some-like-it-neat_post_format_support',
+				array(
+					'default'   => 'yes',
+					'transport' => 'postMessage'
+			)
+		);
+
+		$wp_customize->add_control(
+			'some-like-it-neat_post_format_support',
+				array(
+					'section'	=> 'content_extras',
+					'label'		=> __( 'Enable Post Format support', 'some-like-it-neat' ),
+					'type'		=> 'radio',
+					'choices'	=> array(
+						'yes'	=> 'Yes',
+						'no'		=> 'No'
+					)
+				)
+			);
+
+		/**
+		* Enable/Disable Infinite Scroll support
+		* @uses Jetpack
+		* @link http://downloads.wordpress.org/plugin/jetpack.latest-stable.zip
+		*/
 		$wp_customize->add_setting(
 			'some-like-it-neat_infinite_scroll_support',
 				array(
@@ -268,7 +302,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 		$wp_customize->add_control(
 			'some-like-it-neat_infinite_scroll_support',
 				array(
-					'section'  => 'infinite_scroll',
+					'section'  => 'content_extras',
 					'label'		=> __( 'Enable Infinite Scroll Theme Support', 'some-like-it-neat' ),
 					'type'     => 'radio',
 					'description' => __( 'If enabled, you must install the Jetpack Plugin and Activate it.', 'some-like-it-neat' ),
@@ -279,6 +313,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 				)
 			);
 
+		// Set the type of Infinite Scroll
 		$wp_customize->add_setting(
 			'some-like-it-neat_infinite_scroll_type',
 				array(
@@ -290,7 +325,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 		$wp_customize->add_control(
 			'some-like-it-neat_infinite_scroll_type',
 				array(
-					'section'	=> 'infinite_scroll',
+					'section'	=> 'content_extras',
 					'label'		=> __( 'Infinite Scroll Type', 'some-like-it-neat' ),
 					'type'		=> 'radio',
 					'choices'	=> array(
