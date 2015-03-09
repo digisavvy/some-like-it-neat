@@ -17,15 +17,8 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content" itemprop="articleBody" >
+
 	<?php the_content(); ?>
-	<?php
-	wp_link_pages(
-		array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'some-like-it-neat' ),
-				'after'  => '</div>',
-		)
-	);
-	?>
 
 	</div><!-- .entry-content -->
 
