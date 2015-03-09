@@ -1,4 +1,11 @@
 # Changelog
+### 1.2.5
+-------------
+**Features:**
+
+* Added Customizer Controls/Settings for enabling/disabling post formats
+* Added Customizer Controls/Settings for hiding/showing WordPress Credits
+* Removed built-in adjacent post navigation in favor of get_the_post_navigation()
 
 ### 1.2.4
 -------------
