@@ -34,7 +34,9 @@ var gulp 			= require('gulp'),
 	zip 			= require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
 	plumber 		= require('gulp-plumber'), // Helps prevent stream crashing on errors
 	pipe 			= require('gulp-coffee'),
-	cache 			= require('gulp-cache');
+	cache 			= require('gulp-cache'),
+	filter 			= require('gulp-filter'),
+	sourcemaps		= require('gulp-sourcemaps');
 
 /**
  * Browser Sync
@@ -77,10 +79,12 @@ gulp.task( 'phpcs', function() {
 gulp.task('styles', function () {
 	return gulp.src([source+'sass/**/*.scss'])
 		.pipe(plumber())
-		.pipe(sass({ style: 'expanded', 'sourcemap=none': true }))
+		.pipe(sass({ style: 'expanded' }))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+		.pipe(sourcemaps.write())
 		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
+		.pipe(filter('**/*.css')) // Filtering stream to only css files
 		.pipe(cmq()) // Combines Media Queries
 		.pipe(reload({stream:true})) // Inject Styles when style file is created
 		.pipe(rename({ suffix: '-min' }))
