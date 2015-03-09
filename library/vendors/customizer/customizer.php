@@ -262,6 +262,30 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize) {
 		) );
 
 		/**
+		* Hide or Show WordPress Credits
+		*
+		*/
+		$wp_customize->add_setting(
+			'some-like-it-neat_hide_WordPress_credits',
+				array(
+					'default'   => 'no'
+			)
+		);
+
+		$wp_customize->add_control(
+		'some-like-it-neat_hide_WordPress_credits',
+			array(
+				'section'	=> 'content_extras',
+				'label'		=> __( 'Hide WordPress Credits in Footer?', 'some-like-it-neat' ),
+				'type'		=> 'radio',
+				'choices'	=> array(
+					'yes'	=> 'Yes',
+					'no'		=> 'No'
+				)
+			)
+		);
+
+		/**
 		* Enable/Disable Post Format support
 		* @link http://codex.wordpress.org/Post_Formats
 		*/

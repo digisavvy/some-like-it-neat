@@ -236,6 +236,31 @@ if ( ! function_exists( 'dg_add_flexnav' ) ) :
 endif;
 
 /**
+ * Add Singular Post Template Navigation
+ */
+if ( ! function_exists( 'some_like_it_neat_post_navigation' ) ) :
+	function some_like_it_neat_post_navigation() {
+		if ( function_exists( 'get_the_post_navigation' ) && is_singular() ) {
+			echo get_the_post_navigation(
+				array(
+				'prev_text'    => __( '&larr; %title', 'some-like-it-neat' ),
+				'next_text'    => __( '%title &rarr;', 'some-like-it-neat' ),
+				'screen_reader_text' => __( 'Page navigation', 'some-like-it-neat' )
+				)
+			);
+		} else {
+			wp_link_pages(
+				array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'some-like-it-neat' ),
+				'after'  => '</div>',
+				)
+			);
+		}
+	}
+endif;
+add_action( 'tha_entry_after', 'some_like_it_neat_post_navigation' );
+
+/**
  * Custom Hooks and Filters
  */
 if ( ! function_exists( 'some_like_it_neat_add_breadcrumbs' ) ) :
@@ -325,8 +350,8 @@ function some_like_it_neat_add_selectivizr()
 {
 	?>
 	<!--[if (gte IE 6)&(lte IE 8)]>
-  		<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/selectivizr/selectivizr-min.js"></script>
-  		<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css" /></noscript>
+  		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
+  		<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" /></noscript>
 	<![endif]-->
 <?php
 }

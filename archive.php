@@ -109,8 +109,6 @@ get_header(); ?>
 		<?php
 endwhile; ?>
 
-		<?php some_like_it_neat_paging_nav(); ?>
-
 			<?php else : ?>
 
 			<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
