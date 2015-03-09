@@ -1,8 +1,5 @@
 @charset "UTF-8";
 /*
-* Note: _app.scss is now the file through which all other Sass files are compiled.
-*/
-/*
 Theme Name: Some Like it Neat
 Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
@@ -802,8 +799,6 @@ cite {
 }
 
 strong, b {
-  font-size: 20px;
-  font-size: 1.25rem;
   color: #000;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
@@ -1555,8 +1550,6 @@ ul.nav-menu li.current_page_item {
 /*--------------------------------------------------------------
 6.3 Content
 --------------------------------------------------------------*/
-/* =Content
------------------------------------------------ */
 .sticky {
   background: #f1f1f1;
 }
