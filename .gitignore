@@ -10,6 +10,7 @@
 *.tar
 *.zip
 *.tgz
+*.map
 
 # Logs and databases #
 ######################
