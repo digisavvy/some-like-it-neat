@@ -142,29 +142,29 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 
 		if ( SCRIPT_DEBUG || WP_DEBUG ) :
 			// Vendor Scripts
-			wp_enqueue_script( 'modernizr-js', get_stylesheet_directory_uri() . '/assets/js/vendor/modernizr/modernizr.js', array( 'jquery' ), '2.8.2', true );
-			wp_enqueue_script( 'selectivizr-js', get_stylesheet_directory_uri() . '/assets/js/vendor/selectivizr/selectivizr.js', array( 'jquery' ), '1.0.2b', true );
-			wp_enqueue_script( 'flexnav-js', get_stylesheet_directory_uri() . '/assets/js/vendor/flexnav/jquery.flexnav.js', array( 'jquery' ), '1.3.3', true );
-			wp_enqueue_script( 'hoverintent-js', get_stylesheet_directory_uri() . '/assets/js/vendor/hoverintent/jquery.hoverIntent.js', array( 'jquery' ), '1.0.0', true );
+			wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/assets/js/vendor/modernizr/modernizr.js', array( 'jquery' ), '2.8.2', true );
+			wp_enqueue_script( 'selectivizr-js', get_template_directory_uri() . '/assets/js/vendor/selectivizr/selectivizr.js', array( 'jquery' ), '1.0.2b', true );
+			wp_enqueue_script( 'flexnav-js', get_template_directory_uri() . '/assets/js/vendor/flexnav/jquery.flexnav.js', array( 'jquery' ), '1.3.3', true );
+			wp_enqueue_script( 'hoverintent-js', get_template_directory_uri() . '/assets/js/vendor/hoverintent/jquery.hoverIntent.js', array( 'jquery' ), '1.0.0', true );
 
 			// Concatonated Scripts
-			// wp_enqueue_script( 'development-js', get_stylesheet_directory_uri() . '/assets/js/development.js', array( 'jquery' ), '1.0.0', false );
+			// wp_enqueue_script( 'development-js', get_template_directory_uri() . '/assets/js/development.js', array( 'jquery' ), '1.0.0', false );
 
 			// Main Style
-			wp_enqueue_style( 'some_like_it_neat-style',  get_stylesheet_directory_uri() . '/assets/css/style.css' );
+			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style.css' );
 
 	 else :
 			// Vendor Scripts
-			wp_enqueue_script( 'modernizr-js', get_stylesheet_directory_uri() . '/assets/js/vendor/modernizr/modernizr.js', array( 'jquery' ), '2.8.2', true );
-			wp_enqueue_script( 'selectivizr-js', get_stylesheet_directory_uri() . '/assets/js/vendor/selectivizr/selectivizr.js', array( 'jquery' ), '1.0.2b', true );
-			wp_enqueue_script( 'flexnav-js', get_stylesheet_directory_uri() . '/assets/js/vendor/flexnav/jquery.flexnav.js', array( 'jquery' ), '1.3.3', true );
-			wp_enqueue_script( 'hoverintent-js', get_stylesheet_directory_uri() . '/assets/js/vendor/hoverintent/jquery.hoverIntent.js', array( 'jquery' ), '1.0.0', true );
+			wp_enqueue_script( 'modernizr-js', get_template_directory_uri() . '/assets/js/vendor/modernizr/modernizr.js', array( 'jquery' ), '2.8.2', true );
+			wp_enqueue_script( 'selectivizr-js', get_template_directory_uri() . '/assets/js/vendor/selectivizr/selectivizr.js', array( 'jquery' ), '1.0.2b', true );
+			wp_enqueue_script( 'flexnav-js', get_template_directory_uri() . '/assets/js/vendor/flexnav/jquery.flexnav.js', array( 'jquery' ), '1.3.3', true );
+			wp_enqueue_script( 'hoverintent-js', get_template_directory_uri() . '/assets/js/vendor/hoverintent/jquery.hoverIntent.js', array( 'jquery' ), '1.0.0', true );
 
 			// Concatonated Scripts
-			wp_enqueue_script( 'production-js', get_stylesheet_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
+			wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
 
 			// Main Style
-			wp_enqueue_style( 'some_like_it_neat-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
+			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style-min.css' );
 
 	 endif;
 
@@ -325,8 +325,8 @@ function some_like_it_neat_add_selectivizr()
 {
 	?>
 	<!--[if (gte IE 6)&(lte IE 8)]>
-  		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
-  		<noscript><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" /></noscript>
+  		<script type="text/javascript" src="<?php echo get_template_directory_uri() ?>/assets/js/selectivizr/selectivizr-min.js"></script>
+  		<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css" /></noscript>
 	<![endif]-->
 <?php
 }
