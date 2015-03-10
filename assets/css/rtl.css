@@ -1545,8 +1545,36 @@ ul.nav-menu li.current_page_item {
   width: 100%;
 }
 
-.nav-links a:nth-of-type(2) {
-  float: left;
+nav.post-navigation {
+  width: 100%;
+}
+
+.nav-links {
+  width: 100%;
+}
+@media screen and (min-width: 200px) {
+  .nav-links .nav-previous {
+    float: left;
+    display: block;
+    margin-right: 6.66667%;
+    width: 46.66667%;
+    margin-right: 0;
+  }
+  .nav-links .nav-previous:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 200px) {
+  .nav-links .nav-next {
+    float: left;
+    display: block;
+    margin-right: 6.66667%;
+    width: 46.66667%;
+    margin-right: 0;
+  }
+  .nav-links .nav-next:last-child {
+    margin-right: 0;
+  }
 }
 
 /*--------------------------------------------------------------
