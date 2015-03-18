@@ -1,4 +1,10 @@
 # Changelog
+### 1.2.6
+-------------
+**Bugfixes:**
+
+* Fix project URL implementation. Bad developer (smacks hand!). Project variable should be the complete project string. The domain extension was hardcoded in the browser-sync task. #failhard.bomb
+
 ### 1.2.5
 -------------
 **Features:**
