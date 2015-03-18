@@ -84,8 +84,9 @@ There are things you need to install before you hack away at things. There are t
 
 
  * #### Set your project configuration in Gulpfile.js!!
+_Be sure to go into gulpfile.js and setup the project configuration variables._
 
- 	* This is important for using Browser-Sync with your project. Make sure in gulpfile.js that you set the `project` variable to the appropriate name for your project URL. Default is "somelikeitneat."
+ 	* This is important for using Browser-Sync with your project. Make sure in gulpfile.js that you set the `project` variable to the appropriate name for your project URL. Default is "yourlocal.dev"
 
  * #### Generating your styles
    * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
