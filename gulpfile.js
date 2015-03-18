@@ -5,7 +5,7 @@
 */
 
 // Project configuration
-var project 	= 'somelikeitneat.dev', // Should be the URL of YOUR local project without a prefix i.e. example.local
+var project 	= 'somelikeitneat.dev', // IMPORTANT - Input your local site URL for this project i.e. yourlocal.dev, no prefix
 	build 		= './build/', // Files that you want to package into a zip go here
 	source 		= './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 	bower 		= './assets/bower_components/', // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
@@ -49,7 +49,7 @@ gulp.task('browser-sync', function() {
 		'**/*.php'
 	];
 	browserSync.init(files, {
-		proxy: project+
+		proxy: project
 	});
 });
 
