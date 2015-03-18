@@ -50,7 +50,7 @@ and Blueprint http://www.blueprintcss.org/
 button,
 input[type="submit"] {
   -webkit-font-smoothing: antialiased;
-  background-color: #477DCA;
+  background-color: #477dca;
   border-radius: 3px;
   color: white;
   display: inline-block;
@@ -74,7 +74,7 @@ input[type="submit"]:disabled {
 body {
   -webkit-font-smoothing: antialiased;
   background-color: white;
-  color: #333;
+  color: #333333;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
   line-height: 1.5;
@@ -123,7 +123,7 @@ p {
 a {
   -webkit-transition: color 0.1s linear;
   transition: color 0.1s linear;
-  color: #477DCA;
+  color: #477dca;
   text-decoration: none;
 }
 a:hover {
@@ -135,7 +135,7 @@ a:active, a:focus {
 }
 
 hr {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #dddddd;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -149,7 +149,7 @@ picture {
 }
 
 blockquote {
-  border-left: 2px solid #DDD;
+  border-left: 2px solid #dddddd;
   color: #595959;
   margin: 1.5em 0;
   padding-left: 0.75em;
@@ -165,7 +165,7 @@ cite:before {
 
 fieldset {
   background: #f7f7f7;
-  border: 1px solid #DDD;
+  border: 1px solid #dddddd;
   margin: 0 0 0.75em 0;
   padding: 1.5em;
 }
@@ -198,7 +198,7 @@ select[multiple=multiple] {
   transition: border-color;
   background-color: white;
   border-radius: 3px;
-  border: 1px solid #DDD;
+  border: 1px solid #dddddd;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
           box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
@@ -215,7 +215,7 @@ select[multiple=multiple]:hover {
 textarea:focus,
 input[type="email"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="url"]:focus, input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus,
 select[multiple=multiple]:focus {
-  border-color: #477DCA;
+  border-color: #477dca;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
           box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
   outline: none;
@@ -265,7 +265,7 @@ th {
 }
 
 td {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #dddddd;
   padding: 0.75em 0;
 }
 
@@ -322,12 +322,12 @@ input[type="submit"] {
 
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*, *::after, *::before {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /*--------------------------------------------------------------
@@ -789,7 +789,7 @@ h6 {
 
 blockquote {
   background-color: #f9f9f9;
-  border-right: solid 5px #ff0000;
+  border-right: solid 5px red;
   font-style: italic;
   padding: 20px;
 }
@@ -812,7 +812,7 @@ a, a:visited {
 a:hover, a:visited:hover {
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
-  color: #ff0000;
+  color: red;
 }
 
 ul:nth-child(n+2) {
@@ -855,8 +855,8 @@ ol:nth-child(n+2) {
 5.0 Components/Add-ons
 --------------------------------------------------------------*/
 #submit {
-  background: #000;
-  border: solid 5px #555;
+  background: black;
+  border: solid 5px #555555;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -890,8 +890,8 @@ ol:nth-child(n+2) {
 }
 
 .neat-button {
-  background: #ffffff;
-  border: solid 5px #ccc;
+  background: white;
+  border: solid 5px #cccccc;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -922,10 +922,10 @@ ol:nth-child(n+2) {
 }
 
 .neat-3d-button {
-  background: #ffffff;
-  border-top: solid 3px #ccc;
-  border-right: solid 3px #ccc;
-  border-left: solid 3px #ccc;
+  background: white;
+  border-top: solid 3px #cccccc;
+  border-right: solid 3px #cccccc;
+  border-left: solid 3px #cccccc;
   border-bottom: solid 5px #999;
   border-radius: 0;
   clear: both;
@@ -962,8 +962,8 @@ ol:nth-child(n+2) {
 }
 
 input[type="submit"] {
-  background: #000;
-  border: solid 5px #555;
+  background: black;
+  border: solid 5px #555555;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -1210,14 +1210,14 @@ body {
   padding: .80em;
   z-index: 2;
   overflow: hidden;
-  color: #fff;
-  background: #000;
+  color: white;
+  background: black;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   white-space: nowrap;
 }
 .flexnav li a:hover {
   background: #fff;
-  color: #ff0000 !important;
+  color: red !important;
 }
 .flexnav li a:focus {
   background: #fff;
@@ -1235,20 +1235,20 @@ body {
   overflow: hidden;
 }
 .flexnav li ul li:last-child {
-  border-bottom: 1px solid #666;
+  border-bottom: 1px solid #666666;
 }
 .flexnav li ul.flexnav-show li {
   overflow: visible;
 }
 .flexnav li ul li a {
   display: block;
-  background: #333;
+  background: #333333;
 }
 .flexnav ul li ul li a {
-  background: #666;
+  background: #666666;
 }
 .flexnav ul li ul li ul li a {
-  background: #999;
+  background: #999999;
 }
 .flexnav .touch-button {
   position: absolute;
@@ -1276,8 +1276,8 @@ body {
   position: relative;
   display: block;
   padding: 1em;
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
   cursor: pointer;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
@@ -1347,7 +1347,7 @@ body {
     list-style: none;
     float: right;
     display: block;
-    background-color: #000;
+    background-color: black;
     overflow: visible;
     width: 25%;
   }
@@ -1407,7 +1407,7 @@ body {
   list-style: none;
   float: right;
   display: block;
-  background-color: #000;
+  background-color: black;
   width: 20%;
   min-height: 50px;
   overflow: visible;
