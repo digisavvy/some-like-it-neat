@@ -52,7 +52,6 @@ assets/bower_components/*
 *.codekit
 **.codekit-cache/*
 
-
 # NPM #
 ##########
 node_modules
@@ -61,7 +60,8 @@ node_modules
 ##########
 /README.html
 /build/
-/assets/css/
 
 # PhpStrom Project Files #
 .idea/
+
+
