@@ -5,9 +5,12 @@
   "authors": [
     "Alex Vasquez <alexjvas@gmail.com>"
   ],
-  "dependencies" : {
-    "bourbon" : "~4.1",
-    "neat" : "~1.7",
-    "bi-app-sass" : "latest"
+  "dependencies": {
+    "bourbon": "~4.2.1",
+    "neat": "~1.7.2",
+    "bi-app-sass": "latest"
+  },
+  "resolutions": {
+    "bourbon": "~4.2.1"
   }
 }
