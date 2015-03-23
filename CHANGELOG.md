@@ -1,4 +1,12 @@
 # Changelog
+### 1.2.7
+-------------
+**Features:**
+
+* Now using gulp-sass (libsass) for compiling Sass files. MUCH quicker compiling now
+* Sourcemaps are working now, they are created by default. Should make developing a little more simple. Only tested in Chrome thus far.
+* Added 'Attachment' page template. Why? Cause I'm anal like that.
+
 ### 1.2.6
 -------------
 **Bugfixes:**
