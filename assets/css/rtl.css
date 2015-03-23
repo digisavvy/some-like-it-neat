@@ -820,7 +820,7 @@ body {
     #primary {
       float: left;
       display: block;
-      margin-right: 6.66667%;
+      margin-right: 6.6666666667%;
       width: 100%; }
       #primary:last-child {
         margin-right: 0; } }
@@ -828,8 +828,8 @@ body {
     #primary {
       float: left;
       display: block;
-      margin-right: 4.34783%;
-      width: 65.21739%;
+      margin-right: 4.347826087%;
+      width: 65.2173913043%;
       margin-right: 0; }
       #primary:last-child {
         margin-right: 0; } }
@@ -846,7 +846,7 @@ body {
     #secondary {
       float: left;
       display: block;
-      margin-right: 6.66667%;
+      margin-right: 6.6666666667%;
       width: 100%;
       padding: 30px; }
       #secondary:last-child {
@@ -855,8 +855,8 @@ body {
     #secondary {
       float: left;
       display: block;
-      margin-right: 4.34783%;
-      width: 30.43478%;
+      margin-right: 4.347826087%;
+      width: 30.4347826087%;
       margin-right: 0; }
       #secondary:last-child {
         margin-right: 0; } }
@@ -1211,8 +1211,8 @@ nav.post-navigation {
     .nav-links .nav-previous {
       float: left;
       display: block;
-      margin-right: 6.66667%;
-      width: 46.66667%;
+      margin-right: 6.6666666667%;
+      width: 46.6666666667%;
       margin-right: 0; }
       .nav-links .nav-previous:last-child {
         margin-right: 0; } }
@@ -1220,8 +1220,8 @@ nav.post-navigation {
     .nav-links .nav-next {
       float: left;
       display: block;
-      margin-right: 6.66667%;
-      width: 46.66667%;
+      margin-right: 6.6666666667%;
+      width: 46.6666666667%;
       margin-right: 0; }
       .nav-links .nav-next:last-child {
         margin-right: 0; } }
@@ -1364,7 +1364,7 @@ embed, iframe, object {
     .page-template-page-templatestemplate-left-col-php #primary {
       float: left;
       display: block;
-      margin-right: 6.66667%;
+      margin-right: 6.6666666667%;
       width: 100%; }
       .page-template-page-templatestemplate-left-col-php #primary:last-child {
         margin-right: 0; } }
@@ -1372,8 +1372,8 @@ embed, iframe, object {
     .page-template-page-templatestemplate-left-col-php #primary {
       float: left;
       display: block;
-      margin-right: 4.34783%;
-      width: 65.21739%; }
+      margin-right: 4.347826087%;
+      width: 65.2173913043%; }
       .page-template-page-templatestemplate-left-col-php #primary:last-child {
         margin-right: 0; } }
 .page-template-page-templatestemplate-left-col-php #secondary {
@@ -1383,7 +1383,7 @@ embed, iframe, object {
     .page-template-page-templatestemplate-left-col-php #secondary {
       float: left;
       display: block;
-      margin-right: 6.66667%;
+      margin-right: 6.6666666667%;
       width: 100%; }
       .page-template-page-templatestemplate-left-col-php #secondary:last-child {
         margin-right: 0; } }
@@ -1391,8 +1391,8 @@ embed, iframe, object {
     .page-template-page-templatestemplate-left-col-php #secondary {
       float: left;
       display: block;
-      margin-right: 4.34783%;
-      width: 30.43478%; }
+      margin-right: 4.347826087%;
+      width: 30.4347826087%; }
       .page-template-page-templatestemplate-left-col-php #secondary:last-child {
         margin-right: 0; } }
 .page-template-page-templatestemplate-left-col-php footer {
@@ -1409,7 +1409,7 @@ embed, iframe, object {
       .page-template-page-templatestemplate-right-col-php #primary {
         float: left;
         display: block;
-        margin-right: 6.66667%;
+        margin-right: 6.6666666667%;
         width: 100%; }
         .page-template-page-templatestemplate-right-col-php #primary:last-child {
           margin-right: 0; } }
@@ -1417,8 +1417,8 @@ embed, iframe, object {
       .page-template-page-templatestemplate-right-col-php #primary {
         float: left;
         display: block;
-        margin-right: 4.34783%;
-        width: 65.21739%; }
+        margin-right: 4.347826087%;
+        width: 65.2173913043%; }
         .page-template-page-templatestemplate-right-col-php #primary:last-child {
           margin-right: 0; } } }
 @media screen and (min-width: 768px)  {
@@ -1429,7 +1429,7 @@ embed, iframe, object {
       .page-template-page-templatestemplate-right-col-php #secondary {
         float: left;
         display: block;
-        margin-right: 6.66667%;
+        margin-right: 6.6666666667%;
         width: 100%; }
         .page-template-page-templatestemplate-right-col-php #secondary:last-child {
           margin-right: 0; } }
@@ -1437,8 +1437,8 @@ embed, iframe, object {
       .page-template-page-templatestemplate-right-col-php #secondary {
         float: left;
         display: block;
-        margin-right: 4.34783%;
-        width: 30.43478%; }
+        margin-right: 4.347826087%;
+        width: 30.4347826087%; }
         .page-template-page-templatestemplate-right-col-php #secondary:last-child {
           margin-right: 0; } } }
 
@@ -1482,8 +1482,8 @@ footer {
   footer .footer-left {
     float: left;
     display: block;
-    margin-right: 2.12766%;
-    width: 48.93617%;
+    margin-right: 2.1276595745%;
+    width: 48.9361702128%;
     margin-top: 30px;
     margin-bottom: 40px;
     padding: 10px;
@@ -1493,8 +1493,8 @@ footer {
   footer .footer-right {
     float: left;
     display: block;
-    margin-right: 2.12766%;
-    width: 48.93617%;
+    margin-right: 2.1276595745%;
+    width: 48.9361702128%;
     margin-top: 30px;
     margin-bottom: 40px;
     padding: 10px;
