@@ -18,7 +18,8 @@ var gulp 			= require('gulp'),
 	phpcs 			= require('gulp-phpcs'),
 	reload			= browserSync.reload,
 	autoprefixer 	= require('gulp-autoprefixer'), // Autoprefixing magic
-	minifycss 		= require('gulp-minify-css'),
+	// minifycss 		= require('gulp-minify-css'),
+	minifycss 		= require('gulp-uglifycss'),
 	jshint 			= require('gulp-jshint'),
 	uglify 			= require('gulp-uglify'),
 	imagemin 		= require('gulp-imagemin'),
@@ -81,24 +82,27 @@ gulp.task( 'phpcs', function() {
 gulp.task('styles', function () {
 	return gulp.src([source+'sass/**/*.scss'])
 		.pipe(plumber())
+		.pipe(sourcemaps.init())
 			.pipe(sass({
 				// outputStyle: 'compressed',
 				outputStyle: 'nested',
-				precision: 10,
-				onError: function (err) {
-					notify().write(err);
-				}
+				precision: 10
 			}))
-
+		.pipe(sourcemaps.write({includeContent: false}))
+		.pipe(sourcemaps.init({loadMaps: true}))
 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+		.pipe(sourcemaps.write('.'))
 		.pipe(plumber.stop())
 		.pipe(gulp.dest(source+'css'))
 		.pipe(filter('**/*.css')) // Filtering stream to only css files
 		.pipe(cmq()) // Combines Media Queries
 		.pipe(reload({stream:true})) // Inject Styles when style file is created
 		.pipe(rename({ suffix: '-min' }))
-		.pipe(minifycss({keepBreaks:true}))
-		.pipe(minifycss({ keepSpecialComments: 0 }))
+		.pipe(minifycss({
+			maxLineLen: 80
+		}))
+		// .pipe(minifycss({keepBreaks:true}))
+		// .pipe(minifycss({ keepSpecialComments: 0 }))
 		.pipe(gulp.dest(source+'css'))
 		.pipe(reload({stream:true})) // Inject Styles when min style file is created
 		.pipe(notify({ message: 'Styles task complete', onLast: true }))
