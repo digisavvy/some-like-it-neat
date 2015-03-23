@@ -28,8 +28,8 @@ var gulp 			= require('gulp'),
 	notify 			= require('gulp-notify'),
 	cmq 			= require('gulp-combine-media-queries'),
 	runSequence 	= require('gulp-run-sequence'),
-	// sass 			= require('gulp-ruby-sass'), // Our Sass compiler
 	sass 			= require('gulp-sass'),
+	// sass 			= require('gulp-ruby-sass'), // Our Sass compiler
 	plugins 		= require('gulp-load-plugins')({ camelize: true }),
 	ignore 			= require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
 	rimraf 			= require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
@@ -78,38 +78,31 @@ gulp.task( 'phpcs', function() {
  *
  * Looking at src/sass and compiling the files into Expanded format, Autoprefixing and sending the files to the build folder
 */
-// gulp.task('styles', function () {
-// 	return gulp.src([source+'sass/**/*.scss'])
-// 		.pipe(plumber())
-// 		.pipe(sass({ style: 'expanded' }))
-// 		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-// 		.pipe(sourcemaps.write())
-// 		.pipe(plumber.stop())
-// 		.pipe(gulp.dest(source+'css'))
-// 		.pipe(filter('**/*.css')) // Filtering stream to only css files
-// 		.pipe(cmq()) // Combines Media Queries
-// 		.pipe(reload({stream:true})) // Inject Styles when style file is created
-// 		.pipe(rename({ suffix: '-min' }))
-// 		.pipe(minifycss({keepBreaks:true}))
-// 		.pipe(minifycss({ keepSpecialComments: 0 }))
-// 		.pipe(gulp.dest(source+'css'))
-// 		.pipe(reload({stream:true})) // Inject Styles when min style file is created
-// 		.pipe(notify({ message: 'Styles task complete', onLast: true }))
-// });
-	gulp.task('styles', function () {
-		return gulp.src('assets/sass/**/*.scss')
-			.pipe(sourcemaps.init())
+gulp.task('styles', function () {
+	return gulp.src([source+'sass/**/*.scss'])
+		.pipe(plumber())
 			.pipe(sass({
-				//outputStyle: 'compressed',
+				// outputStyle: 'compressed',
 				outputStyle: 'nested',
 				precision: 10,
-				onError: function (err) { notify().write(err);
-			} }))
-			.pipe(sourcemaps.write())
-			.pipe(gulp.dest('assets/css'))
-			.pipe(filter('sass**/*.css'))
-			.pipe(browserSync.reload({stream:true}));
-		});
+				onError: function (err) {
+					notify().write(err);
+				}
+			}))
+
+		.pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
+		.pipe(plumber.stop())
+		.pipe(gulp.dest(source+'css'))
+		.pipe(filter('**/*.css')) // Filtering stream to only css files
+		.pipe(cmq()) // Combines Media Queries
+		.pipe(reload({stream:true})) // Inject Styles when style file is created
+		.pipe(rename({ suffix: '-min' }))
+		.pipe(minifycss({keepBreaks:true}))
+		.pipe(minifycss({ keepSpecialComments: 0 }))
+		.pipe(gulp.dest(source+'css'))
+		.pipe(reload({stream:true})) // Inject Styles when min style file is created
+		.pipe(notify({ message: 'Styles task complete', onLast: true }))
+});
 
 /**
  * Scripts
