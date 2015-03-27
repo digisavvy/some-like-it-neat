@@ -85,6 +85,7 @@ gulp.task('styles', function () {
 		.pipe(sourcemaps.init())
 			.pipe(sass({
 				// outputStyle: 'compressed',
+				errLogToConsole: true,
 				outputStyle: 'nested',
 				precision: 10
 			}))
