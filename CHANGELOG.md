@@ -7,6 +7,9 @@
 * Sourcemaps are working now, they are created by default. Should make developing a little more simple. Only tested in Chrome thus far.
 * Added 'Attachment' page template. Why? Cause I'm anal like that.
 
+**Bugfixes:**
+* Removed duplicate "main" markup.
+
 ### 1.2.6
 -------------
 **Bugfixes:**

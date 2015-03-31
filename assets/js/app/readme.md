@@ -1,7 +1,4 @@
 JS Files for Theme
 ==================
 
-This folder named `app` should have all the required custom JS in theme.
-This folder is linked with Gulp.
-So it will automatically be included in the main `production.js` file.
-Hence, only production.js needs to be included in theme.
+Any JS files placed within this folder "app" will be concatenated and even minified. You don't need to link to files placed in this folder. Instead, link to either production.js or development.js files.

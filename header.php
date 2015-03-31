@@ -60,7 +60,7 @@
 
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
-
+		</div><!-- .wrap -->
 		<?php tha_content_before(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php tha_content_top(); ?>

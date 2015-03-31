@@ -8,7 +8,6 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
 
 			<?php if ( have_posts() ) : ?>
 
@@ -24,8 +23,6 @@ get_header(); ?>
 		<?php
 endwhile; ?>
 
-		<?php some_like_it_neat_paging_nav(); ?>
-
 		<?php else : ?>
 
 		<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
@@ -33,7 +30,6 @@ endwhile; ?>
 		<?php
 endif; ?>
 
-		</main><!-- #main -->
 	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
