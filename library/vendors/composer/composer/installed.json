@@ -1,5 +1,39 @@
 [
     {
+        "name": "zamoose/themehookalliance",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zamoose/themehookalliance.git",
+            "reference": "4f9979c658d55f51565674cbafa5b6040cb431c1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zamoose/themehookalliance/zipball/4f9979c658d55f51565674cbafa5b6040cb431c1",
+            "reference": "4f9979c658d55f51565674cbafa5b6040cb431c1",
+            "shasum": ""
+        },
+        "time": "2015-03-24 22:01:23",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Doug Stewart",
+                "homepage": "http://literalbarrage.org"
+            }
+        ],
+        "description": "Theme Hook Alliance",
+        "homepage": "https://github.com/zamoose/themehookalliance",
+        "keywords": [
+            "wordpress"
+        ]
+    },
+    {
         "name": "tgm/plugin-activation",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -166,40 +200,6 @@
         "keywords": [
             "phpcs",
             "standards",
-            "wordpress"
-        ]
-    },
-    {
-        "name": "zamoose/themehookalliance",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/zamoose/themehookalliance.git",
-            "reference": "4f9979c658d55f51565674cbafa5b6040cb431c1"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/zamoose/themehookalliance/zipball/4f9979c658d55f51565674cbafa5b6040cb431c1",
-            "reference": "4f9979c658d55f51565674cbafa5b6040cb431c1",
-            "shasum": ""
-        },
-        "time": "2015-03-24 22:01:23",
-        "type": "library",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-2.0+"
-        ],
-        "authors": [
-            {
-                "name": "Doug Stewart",
-                "homepage": "http://literalbarrage.org"
-            }
-        ],
-        "description": "Theme Hook Alliance",
-        "homepage": "https://github.com/zamoose/themehookalliance",
-        "keywords": [
             "wordpress"
         ]
     }
