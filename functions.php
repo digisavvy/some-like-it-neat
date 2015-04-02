@@ -97,7 +97,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		/**
 	 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
 	 */
-		include 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' ;
+		include 'library/vendors/zamoose/themehookalliance/tha-theme-hooks.php' ;
 
 		/**
 	 * WP Customizer
@@ -127,7 +127,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		/**
 	 * Including TGM Plugin Activation
 	 */
-		include_once get_template_directory() . '/library/vendors/tgm-plugin-activation/recommended-plugins.php' ;
+		include_once get_template_directory() . '/library/vendors/tgm/plugin-activatoin/class-tgm-plugin-activation.php' ;
 
 	}
 endif; // some_like_it_neat_setup
