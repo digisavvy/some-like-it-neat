@@ -1,6 +1,10 @@
 {
+	"config": {
+	       "vendor-dir": "library/vendors"
+	   },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
+        "zamoose/themehookalliance": "dev-master",
         "wp-coding-standards/wpcs": "dev-master"
     },
     "scripts": {
