@@ -1,35 +1,53 @@
 [
     {
-        "name": "zamoose/themehookalliance",
+        "name": "tgm/plugin-activation",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/zamoose/themehookalliance.git",
-            "reference": "4f9979c658d55f51565674cbafa5b6040cb431c1"
+            "url": "https://github.com/thomasgriffin/TGM-Plugin-Activation.git",
+            "reference": "e61b32fc8b609d6a3711a55f6e54900d3ca03d59"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/zamoose/themehookalliance/zipball/4f9979c658d55f51565674cbafa5b6040cb431c1",
-            "reference": "4f9979c658d55f51565674cbafa5b6040cb431c1",
+            "url": "https://api.github.com/repos/thomasgriffin/TGM-Plugin-Activation/zipball/e61b32fc8b609d6a3711a55f6e54900d3ca03d59",
+            "reference": "e61b32fc8b609d6a3711a55f6e54900d3ca03d59",
             "shasum": ""
         },
-        "time": "2015-03-24 22:01:23",
+        "require": {
+            "php": ">=5.2"
+        },
+        "time": "2015-01-11 23:21:40",
         "type": "library",
         "installation-source": "source",
+        "autoload": {
+            "files": [
+                "class-tgm-plugin-activation.php"
+            ]
+        },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
             "GPL-2.0+"
         ],
         "authors": [
             {
-                "name": "Doug Stewart",
-                "homepage": "http://literalbarrage.org"
+                "name": "Thomas Griffin",
+                "homepage": "http://thomasgriffinmedia.com",
+                "role": "Developer"
+            },
+            {
+                "name": "Gary Jones",
+                "homepage": "https://github.com/GaryJones",
+                "role": "Developer"
             }
         ],
-        "description": "Theme Hook Alliance",
-        "homepage": "https://github.com/zamoose/themehookalliance",
+        "description": "TGM Plugin Activation is a PHP library that allows you to easily require or recommend plugins for your WordPress themes (and plugins).",
+        "homepage": "http://tgmpluginactivation.com",
         "keywords": [
+            "activation",
+            "library",
+            "plugins",
+            "theme",
             "wordpress"
         ]
     },
@@ -148,6 +166,40 @@
         "keywords": [
             "phpcs",
             "standards",
+            "wordpress"
+        ]
+    },
+    {
+        "name": "zamoose/themehookalliance",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/zamoose/themehookalliance.git",
+            "reference": "4f9979c658d55f51565674cbafa5b6040cb431c1"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/zamoose/themehookalliance/zipball/4f9979c658d55f51565674cbafa5b6040cb431c1",
+            "reference": "4f9979c658d55f51565674cbafa5b6040cb431c1",
+            "shasum": ""
+        },
+        "time": "2015-03-24 22:01:23",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Doug Stewart",
+                "homepage": "http://literalbarrage.org"
+            }
+        ],
+        "description": "Theme Hook Alliance",
+        "homepage": "https://github.com/zamoose/themehookalliance",
+        "keywords": [
             "wordpress"
         ]
     }
