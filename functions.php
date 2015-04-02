@@ -127,7 +127,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		/**
 	 * Including TGM Plugin Activation
 	 */
-		include_once get_template_directory() . '/library/vendors/tgm/plugin-activatoin/class-tgm-plugin-activation.php' ;
+		include_once get_template_directory() . '/library/vendors/tgm/plugin-activation/class-tgm-plugin-activation.php' ;
 
 	}
 endif; // some_like_it_neat_setup
