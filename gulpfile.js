@@ -161,16 +161,16 @@ gulp.task('images', function() {
 */
 
 gulp.task('cleanup', function() {
-	return gulp.src(['**/build','**/vendor','./assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
-		// .pipe(ignore('node_modules/**')) //Example of a directory to ignore
-		.pipe(rimraf())
-		.pipe(notify({ message: 'Clean task complete', onLast: true }));
+	return gulp.src(['**/build','./assets/bower_components','./library/vendors/composer','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
+		.pipe(ignore('node_modules/**')) //Example of a directory to ignore
+		.pipe(rimraf({ force: true }))
+		// .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 gulp.task('cleanupFinal', function() {
-	return gulp.src(['**/build','**/vendor','./assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
-		// .pipe(ignore('node_modules/**')) //Example of a directory to ignore
-		.pipe(rimraf())
-		.pipe(notify({ message: 'Build task complete', onLast: true }));
+	return gulp.src(['**/build','./assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
+		.pipe(ignore('node_modules/**')) //Example of a directory to ignore
+		.pipe(rimraf({ force: true }))
+		// .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 
 /**
@@ -182,7 +182,7 @@ gulp.task('cleanupFinal', function() {
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
 gulp.task('buildPhp', function() {
-	return gulp.src(['**/*.php', './style.css','./gulpfile.js', './.bowercc','.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png','!./vendor/**','!./build/**','!./library/**','!./src/**'])
+	return gulp.src(['**/*.php', './style.css','./gulpfile.js', '.bowerrc','.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png','!./library/vendors/composer**','!./build/**','!./library/**','!./src/**'])
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
