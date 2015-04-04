@@ -6,7 +6,7 @@
 
 // Project configuration
 var project 	= 'somelikeitneat', // Project name, used for build zip.
-	url 		= project+'.dev', // Local Development URL for BrowserSync. Change as-needed.
+	url 		= 'somelikeitneat.dev', // Local Development URL for BrowserSync. Change as-needed.
 	build 		= './build/', // Files that you want to package into a zip go here
 	vendors		= './library/vendors/',
 	source 		= './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
