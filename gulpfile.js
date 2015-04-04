@@ -6,11 +6,13 @@
 
 // Project configuration
 var project 	= 'somelikeitneat', // Project name, used for build zip.
-	url 		= 'somelikeitneat.dev', // Local Development URL for BrowserSync
+	url 		= project+'.dev', // Local Development URL for BrowserSync. Change as-needed.
 	build 		= './build/', // Files that you want to package into a zip go here
+	vendors		= './library/vendors/',
 	source 		= './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 	bower 		= './assets/bower_components/', // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 	phpSource 	= [ '**/*.php' , 'page-templates/**/*.php' , '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
+	themeBuild 	= [ '**/*.php' , 'page-templates/**/*.php' , './style.css','./gulpfile.js', './.jshintrc','./.bowerrc','./.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png', '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
 
 // Load plugins
 var gulp 			= require('gulp'),
@@ -65,7 +67,7 @@ gulp.task('browser-sync', function() {
 gulp.task( 'phpcs', function() {
 	return gulp.src( phpSource )
 		.pipe( phpcs( {
-			bin: 'vendor/bin/phpcs',
+			bin: vendors+'composer/bin/phpcs',
 			standard: 'WordPress-Core'
 		} ) )
 		.pipe( phpcs.reporter( 'log' ) )
@@ -182,7 +184,7 @@ gulp.task('cleanupFinal', function() {
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
 gulp.task('buildPhp', function() {
-	return gulp.src(['**/*.php', './style.css','./gulpfile.js', '.bowerrc','.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png','!./library/vendors/composer**','!./build/**','!./library/**','!./src/**'])
+	return gulp.src(themeBuild)
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
@@ -207,7 +209,7 @@ gulp.task('buildLibrary', function() {
  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
 */
 gulp.task('buildZip', function () {
-	return gulp.src([build+'/**/'])
+	return gulp.src([build+'/**/', './.jshintrc','./.bowerrc','./.gitignore' ])
 		.pipe(zip(project+'.zip'))
 		.pipe(gulp.dest('./'))
 		.pipe(notify({ message: 'Zip task complete', onLast: true }));
@@ -235,7 +237,7 @@ gulp.task('buildImages', function() {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-	runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
+	runSequence('styles', 'cleanup', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
 
 // Watch Task
