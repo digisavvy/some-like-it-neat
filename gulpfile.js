@@ -103,8 +103,6 @@ gulp.task('styles', function () {
 		.pipe(minifycss({
 			maxLineLen: 80
 		}))
-		// .pipe(minifycss({keepBreaks:true}))
-		// .pipe(minifycss({ keepSpecialComments: 0 }))
 		.pipe(gulp.dest(source+'css'))
 		.pipe(reload({stream:true})) // Inject Styles when min style file is created
 		.pipe(notify({ message: 'Styles task complete', onLast: true }))
