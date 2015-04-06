@@ -64,3 +64,4 @@ node_modules
 # PhpStrom Project Files #
 .idea/
 library/vendors/composer
+assets/img/.DS_Store
