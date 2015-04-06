@@ -1,4 +1,15 @@
 # Changelog
+
+### 1.2.9
+-------------
+
+**Features:**
+* Added TGM Plugin Activation and Theme Hook Alliance to Composer for better package mgmt.
+* Moved Composer and dependencies to /library/vendors/composer. Thx to Mr. Rob Neu for adding THA to Packagist
+
+**Bugfixes:**
+* Got build process working again
+
 ### 1.2.7
 -------------
 **Features:**
