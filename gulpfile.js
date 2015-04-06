@@ -6,11 +6,13 @@
 
 // Project configuration
 var project 	= 'somelikeitneat', // Project name, used for build zip.
-	url 		= 'somelikeitneat.dev', // Local Development URL for BrowserSync
+	url 		= 'somelikeitneat.dev', // Local Development URL for BrowserSync. Change as-needed.
 	build 		= './build/', // Files that you want to package into a zip go here
+	vendors		= './library/vendors/',
 	source 		= './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 	bower 		= './assets/bower_components/', // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 	phpSource 	= [ '**/*.php' , 'page-templates/**/*.php' , '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
+	themeBuild 	= [ '**/*.php' , 'page-templates/**/*.php' , './style.css','./gulpfile.js', './.jshintrc','./.bowerrc','./.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png', '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
 
 // Load plugins
 var gulp 			= require('gulp'),
@@ -18,7 +20,6 @@ var gulp 			= require('gulp'),
 	phpcs 			= require('gulp-phpcs'),
 	reload			= browserSync.reload,
 	autoprefixer 	= require('gulp-autoprefixer'), // Autoprefixing magic
-	// minifycss 		= require('gulp-minify-css'),
 	minifycss 		= require('gulp-uglifycss'),
 	jshint 			= require('gulp-jshint'),
 	uglify 			= require('gulp-uglify'),
@@ -30,7 +31,6 @@ var gulp 			= require('gulp'),
 	cmq 			= require('gulp-combine-media-queries'),
 	runSequence 	= require('gulp-run-sequence'),
 	sass 			= require('gulp-sass'),
-	// sass 			= require('gulp-ruby-sass'), // Our Sass compiler
 	plugins 		= require('gulp-load-plugins')({ camelize: true }),
 	ignore 			= require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
 	rimraf 			= require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
@@ -49,7 +49,8 @@ var gulp 			= require('gulp'),
 */
 gulp.task('browser-sync', function() {
 	var files = [
-		'**/*.php'
+		'**/*.php',
+		'**/*.{png,jpg,gif}'
 	];
 	browserSync.init(files, {
 		proxy: url
@@ -67,7 +68,7 @@ gulp.task('browser-sync', function() {
 gulp.task( 'phpcs', function() {
 	return gulp.src( phpSource )
 		.pipe( phpcs( {
-			bin: 'vendor/bin/phpcs',
+			bin: vendors+'composer/bin/phpcs',
 			standard: 'WordPress-Core'
 		} ) )
 		.pipe( phpcs.reporter( 'log' ) )
@@ -102,8 +103,6 @@ gulp.task('styles', function () {
 		.pipe(minifycss({
 			maxLineLen: 80
 		}))
-		// .pipe(minifycss({keepBreaks:true}))
-		// .pipe(minifycss({ keepSpecialComments: 0 }))
 		.pipe(gulp.dest(source+'css'))
 		.pipe(reload({stream:true})) // Inject Styles when min style file is created
 		.pipe(notify({ message: 'Styles task complete', onLast: true }))
@@ -148,10 +147,11 @@ gulp.task( 'jsHint', function() {
 gulp.task('images', function() {
 
 // Add the newer pipe to pass through newer images only
-	return gulp.src([source+'img**/*.{png,jpg,gif}'])
-		.pipe(newer(source+'img**/*.{png,jpg,gif}'))
-		.pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
-		.pipe(gulp.dest(source));
+	return gulp.src([source+'img/raw/**/*.{png,jpg,gif}'])
+		// .pipe(newer(source+'img/raw/**/*.{png,jpg,gif}'))
+		.pipe(rimraf({ force: true }))
+		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
+		.pipe(gulp.dest(source+'img/'))
 
 });
 
@@ -163,16 +163,16 @@ gulp.task('images', function() {
 */
 
 gulp.task('cleanup', function() {
-	return gulp.src(['**/build','**/vendor','./assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
-		// .pipe(ignore('node_modules/**')) //Example of a directory to ignore
-		.pipe(rimraf())
-		.pipe(notify({ message: 'Clean task complete', onLast: true }));
+	return gulp.src(['**/build','./assets/bower_components','./library/vendors/composer','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
+		.pipe(ignore('node_modules/**')) //Example of a directory to ignore
+		.pipe(rimraf({ force: true }))
+		// .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 gulp.task('cleanupFinal', function() {
-	return gulp.src(['**/build','**/vendor','./assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
-		// .pipe(ignore('node_modules/**')) //Example of a directory to ignore
-		.pipe(rimraf())
-		.pipe(notify({ message: 'Build task complete', onLast: true }));
+	return gulp.src(['**/build','./assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
+		.pipe(ignore('node_modules/**')) //Example of a directory to ignore
+		.pipe(rimraf({ force: true }))
+		// .pipe(notify({ message: 'Clean task complete', onLast: true }));
 });
 
 /**
@@ -184,7 +184,7 @@ gulp.task('cleanupFinal', function() {
  * distribute uniminified/unoptimized files. And, uh, grabbing screenshot.png cause I'm janky like that!
 */
 gulp.task('buildPhp', function() {
-	return gulp.src(['**/*.php', './style.css','./gulpfile.js', './.bowercc','.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png','!./vendor/**','!./build/**','!./library/**','!./src/**'])
+	return gulp.src(themeBuild)
 		.pipe(gulp.dest(build))
 		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
@@ -209,7 +209,7 @@ gulp.task('buildLibrary', function() {
  * Taking the build folder, which has been cleaned, containing optimized files and zipping it up to send out as an installable theme
 */
 gulp.task('buildZip', function () {
-	return gulp.src([build+'/**/'])
+	return gulp.src([build+'/**/', './.jshintrc','./.bowerrc','./.gitignore' ])
 		.pipe(zip(project+'.zip'))
 		.pipe(gulp.dest('./'))
 		.pipe(notify({ message: 'Zip task complete', onLast: true }));
@@ -237,13 +237,14 @@ gulp.task('buildImages', function() {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-	runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
+	runSequence('styles', 'cleanup', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
 });
 
 // Watch Task
-gulp.task('default', ['styles', 'js', 'jsHint', 'browser-sync', 'phpcs'], function () {
+gulp.task('default', ['styles', 'js', 'jsHint', 'images', 'browser-sync', 'phpcs'], function () {
 	gulp.watch(source+"sass/**/*.scss", ['styles']);
 	gulp.watch(source+'js/app/**/*.js', ['js', browserSync.reload]);
 	gulp.watch(source+'js/app/**/*.js', ['jsHint']);
+	gulp.watch(source+'img**/*.{png,jpg,gif}', ['images']);
 	gulp.watch( phpSource, ['phpcs'] );
 });

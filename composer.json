@@ -1,11 +1,16 @@
 {
+	"config": {
+	       "vendor-dir": "library/vendors/composer"
+	   },
     "require-dev": {
         "squizlabs/php_codesniffer": "2.*",
+        "zamoose/themehookalliance": "dev-master",
+        "tgm/plugin-activation": "dev-master",
         "wp-coding-standards/wpcs": "dev-master"
     },
     "scripts": {
         "post-install-cmd": [
-            "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs/"
+            "library/vendors/composer/bin/phpcs --config-set installed_paths library/vendors/composer/wp-coding-standards/wpcs/"
         ]
     }
 }
