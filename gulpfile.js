@@ -49,7 +49,8 @@ var gulp 			= require('gulp'),
 */
 gulp.task('browser-sync', function() {
 	var files = [
-		'**/*.php'
+		'**/*.php',
+		'**/*.{png,jpg,gif}'
 	];
 	browserSync.init(files, {
 		proxy: url
@@ -150,7 +151,7 @@ gulp.task('images', function() {
 // Add the newer pipe to pass through newer images only
 	return gulp.src([source+'img**/*.{png,jpg,gif}'])
 		.pipe(newer(source+'img**/*.{png,jpg,gif}'))
-		.pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
+		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
 		.pipe(gulp.dest(source));
 
 });
@@ -241,9 +242,10 @@ gulp.task('build', function(cb) {
 });
 
 // Watch Task
-gulp.task('default', ['styles', 'js', 'jsHint', 'browser-sync', 'phpcs'], function () {
+gulp.task('default', ['styles', 'js', 'jsHint', 'images', 'browser-sync', 'phpcs'], function () {
 	gulp.watch(source+"sass/**/*.scss", ['styles']);
 	gulp.watch(source+'js/app/**/*.js', ['js', browserSync.reload]);
 	gulp.watch(source+'js/app/**/*.js', ['jsHint']);
+	gulp.watch(source+'img**/*.{png,jpg,gif}', ['images']);
 	gulp.watch( phpSource, ['phpcs'] );
 });
