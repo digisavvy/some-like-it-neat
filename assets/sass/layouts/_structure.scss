@@ -42,7 +42,7 @@ html {
 		@include span-columns( 4 );
 		@include omega( block );
 	}
-	margin: auto;
+	margin: 0 auto;
 	width: 100%;
 
 	ul {
