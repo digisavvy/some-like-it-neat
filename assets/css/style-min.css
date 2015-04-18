@@ -67,7 +67,7 @@ input[type="submit"]:hover{background-color:#555;padding:8px}input#s{float:left;
 .infinite-scroll #navigation,.infinite-scroll.neverending #footer{display:none}.infinity-end.neverending #footer{display:block}
 body{color:#000;font-family:"Georgia","Cambria","Times New Roman","Times",serif;line-height:1.5em;word-break:break-word}
 #page{max-width:71.25em;margin-left:auto;margin-right:auto}#page::after{clear:both;content:"";display:table}
-#main{padding:0 50px}#primary{margin:auto;width:100%}#primary::after{clear:both;content:"";display:table}
+#main{padding:0 50px}#primary{margin:0 auto;width:100%}#primary::after{clear:both;content:"";display:table}
 #primary ul{list-style:none}#primary ul li{list-style-type:square}#secondary{margin:20px auto;padding:0 30px 0 0;width:100%}
 .site-branding{text-align:center}.site-branding .site-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;padding:40px}
 .site-branding .site-title a,.site-branding .site-title a:visited{line-height:1}.site-branding .site-description{padding:25px 0;font-size:20px;font-size:1.25rem;font-family:"Georgia","Cambria","Times New Roman","Times",serif;font-style:italic}
@@ -119,7 +119,7 @@ nav.post-navigation{width:100%}.nav-links{width:100%}.sticky{background:#f1f1f1}
 #content .entry-content a:hover,#content .entry-content a:visited:hover{text-decoration:none}
 #content .entry-meta a,#content .entry-meta a:visited{text-decoration:underline}#content .entry-meta a:hover,#content .entry-meta a:visited:hover{text-decoration:none}
 .page-template-page-templatestemplate-left-col-php h1.entry-title{margin:0;text-align:left}
-.page-template-page-templatestemplate-left-col-php #primary{float:right}.page-template-page-templatestemplate-left-col-php #secondary{float:left;margin-right:1.5%}
+.page-template-page-templatestemplate-left-col-php #main #secondary{margin-right:1.5%}
 .page-template-page-templatestemplate-left-col-php footer{clear:both;display:table}
 .page-template-page-templatestemplate-right-col-php h1.entry-title{margin:0;text-align:left}
 .page-template-page-templatestemplate-full-width-php #primary{width:100%}.page-template-page-templatestemplate-full-width-php #secondary{width:100%}
@@ -137,10 +137,10 @@ footer .footer-right:last-child{margin-right:0}.screen-reader-text{position:abso
 .site-branding .site-description{font-size:15px;font-size:.9375rem}ul.nav-menu li{text-align:center;width:100%}
 .nav-links .nav-previous{float:left;display:block;margin-right:6.6666666667%;width:46.6666666667%;margin-right:0}
 .nav-links .nav-previous:last-child{margin-right:0}.nav-links .nav-next{float:left;display:block;margin-right:6.6666666667%;width:46.6666666667%;margin-right:0}
-.nav-links .nav-next:last-child{margin-right:0}.page-template-page-templatestemplate-left-col-php #primary{float:left;display:block;margin-right:6.6666666667%;width:100%}
-.page-template-page-templatestemplate-left-col-php #primary:last-child{margin-right:0}
-.page-template-page-templatestemplate-left-col-php #secondary{float:left;display:block;margin-right:6.6666666667%;width:100%}
-.page-template-page-templatestemplate-left-col-php #secondary:last-child{margin-right:0}
+.nav-links .nav-next:last-child{margin-right:0}.page-template-page-templatestemplate-left-col-php #main #primary{float:left;display:block;margin-right:6.6666666667%;width:100%}
+.page-template-page-templatestemplate-left-col-php #main #primary:last-child{margin-right:0}
+.page-template-page-templatestemplate-left-col-php #main #secondary{float:left;display:block;margin-right:6.6666666667%;width:100%}
+.page-template-page-templatestemplate-left-col-php #main #secondary:last-child{margin-right:0}
 .page-template-page-templatestemplate-right-col-php #primary{float:left}}@media screen and (min-width:480px){.entry-title{font-size:65px;font-size:4.0625rem}
 .site-branding .site-title{font-size:55px;font-size:3.4375rem}.site-branding .site-description{font-size:18px;font-size:1.125rem}
 }@media screen and (min-width:768px){.entry-title{font-size:100px;font-size:6.25rem}
@@ -148,10 +148,11 @@ footer .footer-right:last-child{margin-right:0}.screen-reader-text{position:abso
 #primary:last-child{margin-right:0}#secondary{float:left;display:block;margin-right:4.347826087%;width:30.4347826087%;margin-right:0}
 #secondary:last-child{margin-right:0}.site-branding .site-title{font-size:75px;font-size:4.6875rem}
 .site-branding .site-description{font-size:25px;font-size:1.5625rem}ul.nav-menu li{text-align:none;width:inherit}
-.page-template-page-templatestemplate-left-col-php #primary{float:left;display:block;margin-right:4.347826087%;width:65.2173913043%}
-.page-template-page-templatestemplate-left-col-php #primary:last-child{margin-right:0}
-.page-template-page-templatestemplate-left-col-php #secondary{float:left;display:block;margin-right:4.347826087%;width:30.4347826087%}
-.page-template-page-templatestemplate-left-col-php #secondary:last-child{margin-right:0}
+.page-template-page-templatestemplate-left-col-php #main{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex}
+.page-template-page-templatestemplate-left-col-php #main #primary{float:left;display:block;margin-right:4.347826087%;width:65.2173913043%;-webkit-box-ordinal-group:3;-webkit-order:2;-ms-flex-order:2;order:2}
+.page-template-page-templatestemplate-left-col-php #main #primary:last-child{margin-right:0}
+.page-template-page-templatestemplate-left-col-php #main #secondary{float:left;display:block;margin-right:4.347826087%;width:30.4347826087%;-webkit-box-ordinal-group:2;-webkit-order:1;-ms-flex-order:1;order:1}
+.page-template-page-templatestemplate-left-col-php #main #secondary:last-child{margin-right:0}
 .page-template-page-templatestemplate-right-col-php #secondary{float:right;margin-right:1.5%}
 }@media all and (min-width:800px){body.one-page{padding-top:70px}.flexnav{overflow:visible}
 .flexnav.opacity{opacity:1}.flexnav.one-page{top:0;right:auto;max-width:1080px}.flexnav li{position:relative;list-style:none;float:left;display:block;background-color:#000;overflow:visible;width:25%}
