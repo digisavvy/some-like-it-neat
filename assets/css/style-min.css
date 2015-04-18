@@ -71,7 +71,7 @@ body{color:#000;font-family:"Georgia","Cambria","Times New Roman","Times",serif;
 #primary ul{list-style:none}#primary ul li{list-style-type:square}#secondary{margin:20px auto;padding:0 30px 0 0;width:100%}
 .site-branding{text-align:center}.site-branding .site-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;padding:40px}
 .site-branding .site-title a,.site-branding .site-title a:visited{line-height:1}.site-branding .site-description{padding:25px 0;font-size:20px;font-size:1.25rem;font-family:"Georgia","Cambria","Times New Roman","Times",serif;font-style:italic}
-.flexnav{overflow:hidden;margin:0 auto;width:100%;max-height:0;-webkit-transition:all .5s ease-in-out,width 0,height 0,top 0,left 0;transition:all .5s ease-in-out,width 0,height 0,top 0,left 0}
+.flexnav{overflow:hidden;margin:0 auto;width:100%;max-height:0;-webkit-transition:all .5s ease-in-out,width 0,height 0,top 0,left 0;transition:all .5s ease-in-out,width 0,height 0,top 0,left 0;-webkit-transform-style:preserve-3d}
 .flexnav.opacity{padding-left:0}.flexnav ul{padding-left:0}.flexnav.flexnav-show{max-height:2000px;-webkit-transition:all .5s ease-in-out;transition:all .5s ease-in-out}
 .flexnav.one-page{position:fixed;top:50px;right:5%;max-width:200px}.flexnav li{font-size:100%;position:relative;overflow:hidden}
 .flexnav li a{position:relative;display:block;padding:.8em;z-index:2;overflow:hidden;color:#fff;background:#000;border-bottom:1px solid rgba(0,0,0,0.15);white-space:nowrap}
@@ -94,7 +94,7 @@ body{color:#000;font-family:"Georgia","Cambria","Times New Roman","Times",serif;
 .oldie .flexnav li ul li ul{top:0}.oldie .flexnav li ul li a{border-bottom:0}.oldie .flexnav li ul.open{display:block;width:100%;overflow:visible}
 .oldie .flexnav li ul.open li{width:100%}.oldie .flexnav li ul.open ul.open{margin-left:100%;top:0;display:block;width:100%;overflow:visible}
 .oldie .flexnav ul li:hover ul{margin-left:100%;top:0}.oldie .menu-button{display:none}
-.oldie.ie7 .flexnav li{width:19.9%}.site-main [class*="navigation"]{float:left;margin:25px 0 1.5em;overflow:hidden}
+.oldie.ie7 .flexnav li{width:19.9%}.site-main [class*="navigation"]{width:100%;float:left;margin:25px 0 1.5em;overflow:hidden}
 [class*="navigation"] .nav-previous{float:left;margin-top:25px;width:50%}
 [class*="navigation"] .nav-next{float:right;text-align:right;margin-top:25px;width:50%}
 .main-navigation ul ul{box-shadow:0 3px 3px rgba(0,0,0,0.2);display:none;float:left;left:0;position:absolute;top:1.5em;z-index:99999;background:#fff;padding:30px}

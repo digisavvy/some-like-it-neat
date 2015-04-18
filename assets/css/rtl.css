@@ -912,7 +912,8 @@ body {
   width: 100%;
   max-height: 0;
   -webkit-transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
-  transition: all .5s ease-in-out, width 0, height 0, top 0, left 0; }
+  transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
+  -webkit-transform-style: preserve-3d; }
   .flexnav.opacity {
     padding-right: 0; }
   .flexnav ul {
@@ -1142,6 +1143,7 @@ body {
 /* =Menu
 ----------------------------------------------- */
 .site-main [class*="navigation"] {
+  width: 100%;
   float: right;
   margin: 25px 0 1.5em;
   overflow: hidden; }
