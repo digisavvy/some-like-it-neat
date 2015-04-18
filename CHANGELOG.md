@@ -9,6 +9,7 @@
 
 **Bugfixes:**
 * Got build process working again
+* Fixed Left Sidebar Template issue where sidebar wouldn't display on the left.
 
 ### 1.2.7
 -------------
