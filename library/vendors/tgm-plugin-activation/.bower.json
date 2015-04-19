@@ -1,0 +1,12 @@
+{
+  "name": "tgm-plugin-activation",
+  "_cacheHeaders": {
+    "ETag": "\"e61b32fc8b609d6a3711a55f6e54900d3ca03d59\"",
+    "Content-Type": "application/zip",
+    "Content-Disposition": "attachment; filename=TGM-Plugin-Activation-master.zip"
+  },
+  "_release": "e-tag:e61b32fc8",
+  "_source": "https://github.com/thomasgriffin/TGM-Plugin-Activation/archive/master.zip",
+  "_target": "*",
+  "_originalSource": "https://github.com/thomasgriffin/TGM-Plugin-Activation/archive/master.zip"
+}
