@@ -2,6 +2,7 @@
 ----------------------------------------------- */
 
 .site-main [class*="navigation"] {
+	@include fill-parent;
 	@include float(left);
 	margin: 25px 0 1.5em;
 	overflow: hidden;

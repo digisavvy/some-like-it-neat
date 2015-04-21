@@ -1,0 +1,12 @@
+{
+  "name": "theme-hook-alliance",
+  "_cacheHeaders": {
+    "ETag": "\"4f9979c658d55f51565674cbafa5b6040cb431c1\"",
+    "Content-Type": "application/zip",
+    "Content-Disposition": "attachment; filename=themehookalliance-master.zip"
+  },
+  "_release": "e-tag:4f9979c65",
+  "_source": "https://github.com/zamoose/themehookalliance/archive/master.zip",
+  "_target": "*",
+  "_originalSource": "https://github.com/zamoose/themehookalliance/archive/master.zip"
+}

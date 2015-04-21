@@ -15,6 +15,7 @@ $fourth_level: #999;
 	-moz-transition: all .5s ease-in-out;
 	-ms-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
+	-webkit-transform-style: preserve-3d; // stop webkit flicker
 	&.opacity {
 		// opacity: 0;
 		@include padding-left(0);

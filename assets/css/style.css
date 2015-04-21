@@ -714,7 +714,7 @@ ol:nth-child(n+2) {
   border-bottom: solid 5px #999;
   border-radius: 0;
   clear: both;
-  float: left;
+  float: left ;
   font-family: oswald;
   margin: 15px 0;
   padding: 20px;
@@ -773,7 +773,7 @@ input[type="submit"] {
     padding: 8px; }
 
 input#s {
-  float: left;
+  float: left ;
   width: 70%; }
 
 /* Hides navigation links and site footer when infinite scroll is active */
@@ -808,7 +808,7 @@ body {
   padding: 0 50px; }
 
 #primary {
-  margin: auto;
+  margin: 0 auto;
   width: 100%; }
   #primary::after {
     clear: both;
@@ -910,7 +910,8 @@ body {
   width: 100%;
   max-height: 0;
   -webkit-transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
-  transition: all .5s ease-in-out, width 0, height 0, top 0, left 0; }
+  transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
+  -webkit-transform-style: preserve-3d; }
   .flexnav.opacity {
     padding-left: 0; }
   .flexnav ul {
@@ -1042,7 +1043,7 @@ body {
     .flexnav li {
       position: relative;
       list-style: none;
-      float: left;
+      float: left ;
       display: block;
       background-color: #000;
       overflow: visible;
@@ -1088,7 +1089,7 @@ body {
   .oldie .flexnav li {
     position: relative;
     list-style: none;
-    float: left;
+    float: left ;
     display: block;
     background-color: #000;
     width: 20%;
@@ -1140,17 +1141,18 @@ body {
 /* =Menu
 ----------------------------------------------- */
 .site-main [class*="navigation"] {
-  float: left;
+  width: 100%;
+  float: left ;
   margin: 25px 0 1.5em;
   overflow: hidden; }
 
 [class*="navigation"] .nav-previous {
-  float: left;
+  float: left ;
   margin-top: 25px;
   width: 50%; }
 
 [class*="navigation"] .nav-next {
-  float: right;
+  float: right ;
   text-align: right;
   margin-top: 25px;
   width: 50%; }
@@ -1158,7 +1160,7 @@ body {
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   display: none;
-  float: left;
+  float: left ;
   left: 0;
   position: absolute;
   top: 1.5em;
@@ -1196,7 +1198,7 @@ ul.nav-menu li.current_page_item {
   background: #f3f3f3; }
 
 #primary-nav {
-  float: left;
+  float: left ;
   max-width: 100%;
   width: 100%; }
 
@@ -1265,16 +1267,16 @@ nav.post-navigation {
 
 .alignleft {
   display: inline;
-  float: left;
+  float: left ;
   margin-right: 1.5em; }
 
 .alignright {
   display: inline;
-  float: right;
+  float: right ;
   margin-left: 1.5em; }
 
 .sticky {
-  float: left;
+  float: left ;
   padding: 20px; }
 
 /* =Breadcrumbs
@@ -1356,42 +1358,53 @@ embed, iframe, object {
 .page-template-page-templatestemplate-left-col-php h1.entry-title {
   margin: 0;
   text-align: left; }
-.page-template-page-templatestemplate-left-col-php #primary {
-  float: right; }
-  @media screen and (min-width: 200px)  {
-    .page-template-page-templatestemplate-left-col-php #primary {
-      float: left;
-      display: block;
-      margin-right: 6.6666666667%;
-      width: 100%; }
-      .page-template-page-templatestemplate-left-col-php #primary:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 768px)  {
-    .page-template-page-templatestemplate-left-col-php #primary {
-      float: left;
-      display: block;
-      margin-right: 4.347826087%;
-      width: 65.2173913043%; }
-      .page-template-page-templatestemplate-left-col-php #primary:last-child {
-        margin-right: 0; } }
-.page-template-page-templatestemplate-left-col-php #secondary {
-  float: left;
+@media screen and (min-width: 768px)  {
+  .page-template-page-templatestemplate-left-col-php #main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; } }
+@media screen and (min-width: 200px)  {
+  .page-template-page-templatestemplate-left-col-php #main #primary {
+    float: left;
+    display: block;
+    margin-right: 6.6666666667%;
+    width: 100%; }
+    .page-template-page-templatestemplate-left-col-php #main #primary:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 768px)  {
+  .page-template-page-templatestemplate-left-col-php #main #primary {
+    float: left;
+    display: block;
+    margin-right: 4.347826087%;
+    width: 65.2173913043%;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
+    .page-template-page-templatestemplate-left-col-php #main #primary:last-child {
+      margin-right: 0; } }
+.page-template-page-templatestemplate-left-col-php #main #secondary {
   margin-right: 1.5%; }
   @media screen and (min-width: 200px)  {
-    .page-template-page-templatestemplate-left-col-php #secondary {
+    .page-template-page-templatestemplate-left-col-php #main #secondary {
       float: left;
       display: block;
       margin-right: 6.6666666667%;
       width: 100%; }
-      .page-template-page-templatestemplate-left-col-php #secondary:last-child {
+      .page-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 768px)  {
-    .page-template-page-templatestemplate-left-col-php #secondary {
+    .page-template-page-templatestemplate-left-col-php #main #secondary {
       float: left;
       display: block;
       margin-right: 4.347826087%;
-      width: 30.4347826087%; }
-      .page-template-page-templatestemplate-left-col-php #secondary:last-child {
+      width: 30.4347826087%;
+      -webkit-box-ordinal-group: 2;
+      -webkit-order: 1;
+          -ms-flex-order: 1;
+              order: 1; }
+      .page-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
 .page-template-page-templatestemplate-left-col-php footer {
   clear: both;
@@ -1402,7 +1415,7 @@ embed, iframe, object {
   text-align: left; }
 @media screen and (min-width: 200px)  {
   .page-template-page-templatestemplate-right-col-php #primary {
-    float: left; }
+    float: left ; }
     @media screen and (min-width: 200px)  {
       .page-template-page-templatestemplate-right-col-php #primary {
         float: left;
@@ -1421,7 +1434,7 @@ embed, iframe, object {
           margin-right: 0; } } }
 @media screen and (min-width: 768px)  {
   .page-template-page-templatestemplate-right-col-php #secondary {
-    float: right;
+    float: right ;
     margin-right: 1.5%; }
     @media screen and (min-width: 200px)  {
       .page-template-page-templatestemplate-right-col-php #secondary {
@@ -1470,7 +1483,7 @@ embed, iframe, object {
 	6.6 Footer
 	--------------------------------------------------------------*/
 footer {
-  float: left;
+  float: left ;
   margin: 0 auto;
   padding: 0 40px;
   width: 100%; }

@@ -6,9 +6,12 @@
 **Features:**
 * Added TGM Plugin Activation and Theme Hook Alliance to Composer for better package mgmt.
 * Moved Composer and dependencies to /library/vendors/composer. Thx to Mr. Rob Neu for adding THA to Packagist
+* Added Omega Reset Mixin
 
 **Bugfixes:**
 * Got build process working again
+* Fixed Left Sidebar Template issue where sidebar wouldn't display on the left.
+* Fixed issue with #main and #page selectors improperly placed.
 
 ### 1.2.7
 -------------

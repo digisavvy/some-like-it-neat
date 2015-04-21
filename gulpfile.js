@@ -152,7 +152,7 @@ gulp.task('images', function() {
 		.pipe(rimraf({ force: true }))
 		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
 		.pipe(gulp.dest(source+'img/'))
-
+		.pipe( notify( { message: 'images task complete', onLast: true } ) );
 });
 
 /**
