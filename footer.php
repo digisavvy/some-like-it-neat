@@ -8,10 +8,10 @@
  */
 ?>
 		<?php tha_content_bottom(); ?>
-		</div><!-- #main -->
+		</main><!-- #main -->
 		<?php tha_content_after(); ?>
 			<?php tha_footer_before(); ?>
-		<footer id="colophon" class="site-footer" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+		<footer id="colophon" class="site-footer wrap" role="contentinfo" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
 		<?php tha_footer_top(); ?>
 			<div class="site-info">
 				<?php do_action( 'some_like_it_neat_credits' ); ?>

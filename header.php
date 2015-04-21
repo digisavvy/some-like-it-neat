@@ -32,9 +32,9 @@
 <?php tha_body_top(); ?>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'some-like-it-neat' ); ?></a>
-	<div class="wrap">
+
 		<?php tha_header_before(); ?>
-		<header id="masthead" class="site-header" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+		<header id="masthead" class="site-header wrap" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<?php tha_header_top(); ?>
 			<div class="site-branding">
 				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
@@ -60,7 +60,7 @@
 
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
-		</div><!-- .wrap -->
+
 		<?php tha_content_before(); ?>
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main wrap" role="main">
 			<?php tha_content_top(); ?>
