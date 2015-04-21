@@ -1,4 +1,12 @@
 # Changelog
+### 1.3.0
+-------------
+
+**Features:**
+* Aaaand removed TGM and THA from composer. See commit: 704de21e for details
+
+**Bugfixes:**
+
 
 ### 1.2.9
 -------------
