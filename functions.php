@@ -53,7 +53,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
         *
         * @link http://codex.wordpress.org/Function_Reference/add_editor_style
         */
-		add_editor_style( '/assets/css/style.css' );
+		add_editor_style( '/assets/css/editor-style.css' );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'some-like-it-neat' ) );

@@ -1,0 +1,136 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 0.75em; }
+
+p {
+  margin: 0 0 0.75em; }
+
+a {
+  color: #477dca;
+  text-decoration: none;
+  -webkit-transition: color 0.1s linear;
+          transition: color 0.1s linear; }
+  a:active, a:focus, a:hover {
+    color: #2c5999; }
+  a:active, a:focus {
+    outline: none; }
+
+hr {
+  border-bottom: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: 1.5em 0; }
+
+img, picture {
+  margin: 0;
+  max-width: 100%; }
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+  html {
+    font-size: 100%; }
+
+/* =Typography
+-------------------------------------------------------------- */
+  body {
+    font-size: 20px;
+    font-size: 1.25rem; }
+
+  h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    float: none;
+    line-height: 1.25em;
+    margin-bottom: 20px;
+    text-transform: uppercase; }
+    h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
+      clear: both;
+      content: "";
+      display: table; }
+
+  h1 {
+    font-size: 75px;
+    font-size: 4.6875rem;
+    color: #000;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+  h2 {
+    font-size: 50px;
+    font-size: 3.125rem;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+  h3 {
+    font-size: 35px;
+    font-size: 2.1875rem;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+  h4 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+  h5 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+  h6 {
+    font-size: 18px;
+    font-size: 1.125rem;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+  blockquote {
+    background-color: #f9f9f9;
+    border-left: solid 5px #ff0000;
+    font-style: italic;
+    padding: 20px; }
+
+  cite {
+    font-style: italic; }
+
+  strong, b {
+    color: #000;
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
+
+  a, a:visited {
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+    color: #666;
+    text-decoration: none; }
+    a:hover, a:visited:hover {
+      -webkit-transition: all 200ms ease-in-out;
+      transition: all 200ms ease-in-out;
+      color: #ff0000; }
+
+  ul:nth-child(n+2) {
+    margin-bottom: 0; }
+
+  ol:nth-child(n+2) {
+    margin-bottom: 0; }
+
+  .entry-title {
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+    text-align: center; }
