@@ -46,7 +46,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
         *
         * @link http://codex.wordpress.org/Title_Tag
         */
-		//add_theme_support( 'title-tag' );
+		add_theme_support( 'title-tag' );
 
 		/*
         * Add Editor Style for adequate styling in text editor.
