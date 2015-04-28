@@ -148,7 +148,6 @@ gulp.task('images', function() {
 
 // Add the newer pipe to pass through newer images only
 	return gulp.src([source+'img/raw/**/*.{png,jpg,gif}'])
-		// .pipe(newer(source+'img/raw/**/*.{png,jpg,gif}'))
 		.pipe(rimraf({ force: true }))
 		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
 		.pipe(gulp.dest(source+'img/'))
@@ -245,6 +244,6 @@ gulp.task('default', ['styles', 'js', 'jsHint', 'images', 'browser-sync', 'phpcs
 	gulp.watch(source+"sass/**/*.scss", ['styles']);
 	gulp.watch(source+'js/app/**/*.js', ['js', browserSync.reload]);
 	gulp.watch(source+'js/app/**/*.js', ['jsHint']);
-	gulp.watch(source+'img**/*.{png,jpg,gif}', ['images']);
+	gulp.watch(source+'img/**/*.{png,jpg,gif}', ['images']);
 	gulp.watch( phpSource, ['phpcs'] );
 });
