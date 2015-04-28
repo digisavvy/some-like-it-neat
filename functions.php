@@ -193,20 +193,6 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 endif; // Enqueue Scripts and Styles
 
 /**
- * Title Tag Backward Comaptibility for < 4.1 installs
- */
-if ( ! function_exists( '_wp_render_title_tag' ) ) {
-	function theme_slug_render_title()
-	{
-	?>
-			<title><?php wp_title( '|', true, 'right' ); ?></title>
-		<?php
-
-	}
-	add_action( 'wp_head', 'theme_slug_render_title' );
-}
-
-/**
  * Register widgetized area and update sidebar with default widgets.
  */
 function some_like_it_neat_widgets_init()
