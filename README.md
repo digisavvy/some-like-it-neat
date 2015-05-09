@@ -80,6 +80,7 @@ There are things you need to install before you hack away at things. There are t
   * **Install Composer Dependencies** - The only Composer Dependency setup at this time is PHPCS w/ WordPress Coding Standards. This allows us to run a Gulp task to "sniff" out any code in your theme that isn't standards-compliant. You can then go back and fix the offending code. The Phpcs task in gulpfile.js can be configured to included/exclude any directory within your theme. By default, it looks at php files in theme-root and files within the page-templates directory.
 
   	* Once you have completed the Composer install, you should be able to run the following command to install PHPCS: `php composer.phar install`.
+  	* You can update the composer file via `sudo composer self-update` command.
 
 
 
