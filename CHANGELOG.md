@@ -6,7 +6,7 @@
 * Aaaand removed TGM and THA from composer. See commit: 704de21e for details
 
 **Bugfixes:**
-
+* Fix issue with duplicate title being written.
 
 ### 1.2.9
 -------------
