@@ -129,6 +129,8 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 	 */
 		include_once get_template_directory() . '/library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php' ;
 
+		include_once get_template_directory() . '/library/vendors/tgm-plugin-activation/tgm-plugin-activation.php' ;
+
 	}
 endif; // some_like_it_neat_setup
 add_action( 'after_setup_theme', 'some_like_it_neat_setup' );
