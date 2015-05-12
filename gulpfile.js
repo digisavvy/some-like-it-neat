@@ -5,41 +5,41 @@
 */
 
 // Project configuration
-var project 	= 'somelikeitneat', // Project name, used for build zip.
-	url 		= 'somelikeitneat.dev', // Local Development URL for BrowserSync. Change as-needed.
-	build 		= './build/', // Files that you want to package into a zip go here
-	vendors		= './library/vendors/',
-	source 		= './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
-	bower 		= './assets/bower_components/', // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
-	phpSource 	= [ '**/*.php' , 'page-templates/**/*.php' , '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
-	themeBuild 	= [ '**/*.php' , 'page-templates/**/*.php' , './style.css','./gulpfile.js', './.jshintrc','./.bowerrc','./.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png', '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
+var project 	   = 'somelikeitneat', // Project name, used for build zip.
+	url 		       = 'somelikeitneat.dev', // Local Development URL for BrowserSync. Change as-needed.
+	build 		     = './build/', // Files that you want to package into a zip go here
+	vendors		     = './library/vendors/',
+	source 		     = './assets/', 	// Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
+	bower 		     = './assets/bower_components/', // Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
+	phpSource 	   = [ '**/*.php' , 'page-templates/**/*.php' , '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
+	themeBuild 	   = [ '**/*.php' , 'page-templates/**/*.php' , './style.css','./gulpfile.js', './.jshintrc','./.bowerrc','./.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png', '!library/**/*', '!wpcs/**/*','!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js' ];
 
 // Load plugins
-var gulp 			= require('gulp'),
-	browserSync		= require('browser-sync'), // Asynchronous browser loading on .scss file changes
-	phpcs 			= require('gulp-phpcs'),
-	reload			= browserSync.reload,
-	autoprefixer 	= require('gulp-autoprefixer'), // Autoprefixing magic
-	minifycss 		= require('gulp-uglifycss'),
-	jshint 			= require('gulp-jshint'),
-	uglify 			= require('gulp-uglify'),
-	imagemin 		= require('gulp-imagemin'),
-	newer 			= require('gulp-newer'),
-	rename 			= require('gulp-rename'),
-	concat 			= require('gulp-concat'),
-	notify 			= require('gulp-notify'),
-	cmq 			= require('gulp-combine-media-queries'),
-	runSequence 	= require('gulp-run-sequence'),
-	sass 			= require('gulp-sass'),
-	plugins 		= require('gulp-load-plugins')({ camelize: true }),
-	ignore 			= require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
-	rimraf 			= require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
-	zip 			= require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
-	plumber 		= require('gulp-plumber'), // Helps prevent stream crashing on errors
-	pipe 			= require('gulp-coffee'),
-	cache 			= require('gulp-cache'),
-	filter 			= require('gulp-filter'),
-	sourcemaps		= require('gulp-sourcemaps');
+var gulp 			   = require('gulp'),
+	browserSync		 = require('browser-sync'), // Asynchronous browser loading on .scss file changes
+	phpcs 			   = require('gulp-phpcs'),
+	reload			   = browserSync.reload,
+	autoprefixer 	 = require('gulp-autoprefixer'), // Autoprefixing magic
+	minifycss 		 = require('gulp-uglifycss'),
+	jshint 			   = require('gulp-jshint'),
+	uglify 			   = require('gulp-uglify'),
+	imagemin 		   = require('gulp-imagemin'),
+	newer 			   = require('gulp-newer'),
+	rename 			   = require('gulp-rename'),
+	concat 			   = require('gulp-concat'),
+	notify 			   = require('gulp-notify'),
+	cmq 			     = require('gulp-combine-media-queries'),
+	runSequence 	 = require('gulp-run-sequence'),
+	sass 			     = require('gulp-sass'),
+	plugins 		   = require('gulp-load-plugins')({ camelize: true }),
+	ignore 			   = require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
+	rimraf 			   = require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
+	zip 			     = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
+	plumber 		   = require('gulp-plumber'), // Helps prevent stream crashing on errors
+	pipe 			     = require('gulp-coffee'),
+	cache 			   = require('gulp-cache'),
+	filter 			   = require('gulp-filter'),
+	sourcemaps		 = require('gulp-sourcemaps');
 
 /**
  * Browser Sync
@@ -115,7 +115,7 @@ gulp.task('styles', function () {
 */
 
 gulp.task('js', function() {
-	return gulp.src([source+'js/app/**/*.js', source+'bower_components/**/*.js'])
+	return gulp.src([source+'js/app/**/*.js'])
 		.pipe(concat('development.js'))
 		.pipe(gulp.dest(source+'js'))
 		.pipe(rename( {
@@ -236,7 +236,7 @@ gulp.task('buildImages', function() {
 
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-	runSequence('styles', 'cleanup', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip','cleanupFinal', cb);
+  runSequence('styles', 'cleanup', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip', 'cleanupFinal', cb);
 });
 
 // Watch Task
