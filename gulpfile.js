@@ -177,7 +177,7 @@ gulp.task('buildPhp', function() {
 		.pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
 
-// Copy Library to Build
+// Copy Assets to Build
 gulp.task('buildAssets', function() {
 	return gulp.src([source+'**', source+'js/**/*.js'])
 		.pipe(gulp.dest(build+'/assets'))
