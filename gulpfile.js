@@ -24,7 +24,6 @@ var gulp 			   = require('gulp'),
 	jshint 			   = require('gulp-jshint'),
 	uglify 			   = require('gulp-uglify'),
 	imagemin 		   = require('gulp-imagemin'),
-	newer 			   = require('gulp-newer'),
 	rename 			   = require('gulp-rename'),
 	concat 			   = require('gulp-concat'),
 	notify 			   = require('gulp-notify'),
@@ -32,12 +31,9 @@ var gulp 			   = require('gulp'),
 	runSequence 	 = require('gulp-run-sequence'),
 	sass 			     = require('gulp-sass'),
 	plugins 		   = require('gulp-load-plugins')({ camelize: true }),
-	ignore 			   = require('gulp-ignore'), // Helps with ignoring files and directories in our run tasks
-	rimraf 			   = require('gulp-rimraf'), // Helps with removing files and directories in our run tasks
+	del   			 	 = require('del'), // Helps with removing files and directories in our run tasks
 	zip 			     = require('gulp-zip'), // Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
 	plumber 		   = require('gulp-plumber'), // Helps prevent stream crashing on errors
-	pipe 			     = require('gulp-coffee'),
-	cache 			   = require('gulp-cache'),
 	filter 			   = require('gulp-filter'),
 	sourcemaps		 = require('gulp-sourcemaps');
 
@@ -148,7 +144,6 @@ gulp.task('images', function() {
 
 // Add the newer pipe to pass through newer images only
 	return gulp.src([source+'img/raw/**/*.{png,jpg,gif}'])
-		.pipe(rimraf({ force: true }))
 		.pipe(imagemin({ optimizationLevel: 5, progressive: true, interlaced: true }))
 		.pipe(gulp.dest(source+'img/'))
 		.pipe( notify( { message: 'images task complete', onLast: true } ) );
@@ -161,17 +156,11 @@ gulp.task('images', function() {
  * clearing out unoptimized image files in zip as those will have been moved and optimized
 */
 
-gulp.task('cleanup', function() {
-	return gulp.src(['**/build','./assets/bower_components','./library/vendors/composer','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
-		.pipe(ignore('node_modules/**')) //Example of a directory to ignore
-		.pipe(rimraf({ force: true }))
-		// .pipe(notify({ message: 'Clean task complete', onLast: true }));
+gulp.task('cleanup', function(cb) {
+	return del(['**/build','./assets/bower_components','./library/vendors/composer','**/.sass-cache','**/.codekit-cache','**/.DS_Store','!node_modules/**'], cb) // much faster
 });
-gulp.task('cleanupFinal', function() {
-	return gulp.src(['**/build','./assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store'], { read: false }) // much faster
-		.pipe(ignore('node_modules/**')) //Example of a directory to ignore
-		.pipe(rimraf({ force: true }))
-		// .pipe(notify({ message: 'Clean task complete', onLast: true }));
+gulp.task('cleanupFinal', function(cb) {
+	return del(['**/build','./assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store','!node_modules/**'], cb) // much faster
 });
 
 /**
