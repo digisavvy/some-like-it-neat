@@ -1,7 +1,10 @@
 # Changelog
 ### 1.3.1
 -------------
+* Removed 'gulp-rimraf' and replaced with npm 'del'.
 
+**Bugfixes:**
+* Cleanup Gulpfile, removing references for tools we're not using and also file calls we're not using.
 
 ### 1.3.0
 -------------
