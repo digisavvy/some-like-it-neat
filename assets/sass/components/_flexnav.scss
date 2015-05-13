@@ -58,7 +58,7 @@ $fourth_level: #999;
 
 		&:hover {
 			background: #fff;
-			color: $primary-color !important;
+			color: $link-color !important;
 		}
 		 &:focus {
 		 	background: #fff;
@@ -115,7 +115,7 @@ $fourth_level: #999;
 			position: relative;
 			top: 1.4em;
 			font-size: 12px;
-			color: #666;
+			color: $third_level;
 		}
 	}
 }
@@ -151,17 +151,17 @@ $fourth_level: #999;
 			font-size: 16px;
 			position: relative;
 			top: 1em;
-			color: #666;
+			color: $third_level;
 		}
 	}
 }
 .menu-button {
 	&:hover {
-		color: #fff;
+		color: $base-body-color;
 		i.navicon {
-			color: #fff;
+			color: $base-body-color;
 				&:after {
-					color: #fff;
+					color: $base-body-color;
 					content:'Menu';
 			}
 		}

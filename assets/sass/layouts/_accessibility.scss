@@ -21,8 +21,8 @@
 		font-size: 14px;
 		text-decoration: none;
 		line-height: normal;
-		color: #21759b;
-		background-color: #f1f1f1;
+		color: $link-color;
+		background-color: darken($base-body-color, 20%);
 		border-radius: 3px;
 		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	}
