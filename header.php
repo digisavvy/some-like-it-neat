@@ -36,10 +36,10 @@
 		<?php tha_header_before(); ?>
 		<header id="masthead" class="site-header wrap" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 		<?php tha_header_top(); ?>
-			<div class="site-branding">
+			<section class="site-branding">
 				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 				<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-			</div>
+			</section>
 
 			<nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 				<button class="menu-button">
