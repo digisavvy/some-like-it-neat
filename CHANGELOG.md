@@ -2,6 +2,7 @@
 ### 1.3.1
 -------------
 * Removed 'gulp-rimraf' and replaced with npm 'del'.
+* Update font size and color using variables instead of hard-coded ones.
 
 **Bugfixes:**
 * Cleanup Gulpfile, removing references for tools we're not using and also file calls we're not using.
