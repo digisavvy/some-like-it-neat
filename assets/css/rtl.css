@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: Some Like it Neat
 Theme URI: https://github.com/digisavvy/some-like-it-neat
@@ -548,6 +549,16 @@ table {
 --------------------------------------------------------------*/
 /* =Typographical Mixins/Functions
 -------------------------------------------------------------- */
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * @include fontSize(20px);
+ *
+ * Ouputs —
+ * font-size: 20px;
+ * font-size: 1.25rem;
+ */
 /* =Genericons and Dashicons
 -------------------------------------------------------------- */
 /* =Typography
@@ -602,7 +613,7 @@ h6 {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif; }
 
 blockquote {
-  background-color: #b3b3b3;
+  background-color: #f7f7f7;
   border-right: solid 5px #ff0000;
   font-style: italic;
   padding: 20px; }

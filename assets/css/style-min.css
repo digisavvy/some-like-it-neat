@@ -45,7 +45,7 @@ h3{font-size:35px;font-size:2.1875rem;font-family:"Helvetica Neue","Helvetica","
 h4{font-size:24px;font-size:1.5rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
 h5{font-size:20px;font-size:1.25rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
 h6{font-size:18px;font-size:1.125rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
-blockquote{background-color:#b3b3b3;border-left:solid 5px red;font-style:italic;padding:20px}
+blockquote{background-color:#f7f7f7;border-left:solid 5px red;font-style:italic;padding:20px}
 cite{font-style:italic}strong,b{color:#000;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
 a,a:visited{-webkit-transition:all 200ms ease-in-out;transition:all 200ms ease-in-out;color:#000;text-decoration:none}
 a:hover,a:visited:hover{-webkit-transition:all 200ms ease-in-out;transition:all 200ms ease-in-out;color:red;text-decoration:underline}
