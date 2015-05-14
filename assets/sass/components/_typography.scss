@@ -1,6 +1,16 @@
 /* =Typographical Mixins/Functions
 -------------------------------------------------------------- */
 
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * @include fontSize(20px);
+ *
+ * Ouputs —
+ * font-size: 20px;
+ * font-size: 1.25rem;
+ */
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
@@ -36,7 +46,7 @@ html {
 }
 
 body {
-	@include fontSize(20px);
+	@include fontSize($base-font-size);
 }
 h1, h2, h3, h4, h5, h6 {
 	@include clearfix;
@@ -73,7 +83,7 @@ h6 {
 	font-family: $title;
 }
 blockquote {
-	background-color: darken($base-body-color, 30%);
+	background-color: darken($base-body-color, 3%);
 	@include border-left(solid 5px $link-color);
 	font-style: italic;
 	padding: 20px;
