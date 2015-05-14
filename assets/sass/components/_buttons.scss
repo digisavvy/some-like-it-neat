@@ -68,7 +68,7 @@
 }
 
 #submit {
-	@include neat-buttons($button-bg: #000, $border-radius: 0, $border-color: #555 );
+	@include neat-buttons($button-bg: $primary-font-color, $border-radius: 0, $border-color: #555 );
 		&:hover {
 			background-color: #555;
 		}
@@ -84,11 +84,11 @@
 }
 
 input[type="submit"] {
-	@include neat-buttons($button-bg: #000, $border-radius: 0, $border-color: #555 );
+	@include neat-buttons($button-bg: $primary-font-color, $border-radius: 0, $border-color: #555 );
 	margin: 0;
 	padding: 8px;
 		&:hover {
-			background-color: #555;
+			background-color: darken($base-body-color, 40%);
 			padding: 8px;
 		}
 }

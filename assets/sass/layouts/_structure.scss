@@ -5,16 +5,18 @@ html {
 }
 @include ltr {
 		body {
-		color: #000;
-		font-family: $content;
-		line-height: 1.5em;
-		word-break: break-word;
-	}
+			background-color: $base-body-color;
+			color: $primary-font-color;
+			font-family: $content;
+			line-height: 1.5em;
+			word-break: break-word;
+		}
 }
 
 @include rtl {
 	body {
-		color: #000;
+		background-color: $base-body-color;
+		color: $primary-font-color;
 		font-family: $content;
 		line-height: 1.5em;
 		word-break: break-word;

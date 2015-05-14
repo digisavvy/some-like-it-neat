@@ -1,6 +1,16 @@
 /* =Typographical Mixins/Functions
 -------------------------------------------------------------- */
 
+/**
+ * PX to Rem Sizing
+ *
+ * How to use
+ * @include fontSize(20px);
+ *
+ * Ouputs —
+ * font-size: 20px;
+ * font-size: 1.25rem;
+ */
 @function calculateRem($size) {
   $remSize: $size / 16px;
   @return #{$remSize}rem;
@@ -36,7 +46,7 @@ html {
 }
 
 body {
-	@include fontSize(20px);
+	@include fontSize($base-font-size);
 }
 h1, h2, h3, h4, h5, h6 {
 	@include clearfix;
@@ -49,7 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	@include fontSize(75px);
-	color: #000;
+	color: $primary-font-color;
 	font-family: $title;
 }
 h2 {
@@ -73,8 +83,8 @@ h6 {
 	font-family: $title;
 }
 blockquote {
-	background-color: #f9f9f9;
-	@include border-left(solid 5px $primary-color);
+	background-color: darken($base-body-color, 3%);
+	@include border-left(solid 5px $link-color);
 	font-style: italic;
 	padding: 20px;
 }
@@ -82,17 +92,18 @@ cite {
 	font-style: italic;
 }
 strong, b {
-	color: #000;
+	color: $primary-font-color;
 	font-family: $title;
 }
 a, a:visited {
 	@include transition (all 200ms ease-in-out);
-	color: #666;
+	color: $primary-font-color;
 	text-decoration: none;
 
 	&:hover {
 		@include transition (all 200ms ease-in-out);
-		color: $primary-color;
+		color: $link-color;
+    text-decoration: underline;
 	}
 }
 ul {
@@ -125,4 +136,3 @@ ol {
 #secondary {
 	font-family: $content;
 }
-
