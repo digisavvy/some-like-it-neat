@@ -31,7 +31,7 @@
 				</ul>
 			</aside>
 
-		<?php endif; // end sidebar widget area ?>
+		<?php endif; ?>
 		<?php tha_sidebar_bottom(); ?>
-	</div><!-- #secondary -->
+	</div>
 	<?php tha_sidebars_after(); ?>
