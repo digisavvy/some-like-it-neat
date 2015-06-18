@@ -16,5 +16,7 @@
   "strict": true,
   "trailing": true,
   "smarttabs": true,
-  "jquery": true
+  "jquery": true,
+  "maxdepth": 2,
+  "nonbsp": true
 }
