@@ -1,9 +1,6 @@
 # WordPress Coding Standards editor configuration normalization
 # http://make.wordpress.org/core/handbook/coding-standards/
 
-# This file is for unifying the coding style for different editors and IDEs
-# editorconfig.org
-
 # top-most EditorConfig file
 root=true
 
@@ -19,11 +16,10 @@ trim_trailing_whitespace=true
 # HTML http://make.wordpress.org/core/handbook/coding-standards/html/
 # CSS http://make.wordpress.org/core/handbook/coding-standards/css/
 # JavaScript http://make.wordpress.org/core/handbook/coding-standards/javascript/
-[{*.php, *.css,*.scss, *.html, *.js}]
+[*.php]
 indent_style=tab
 indent_size=4
 
-# package.json uses spaces instead of tabs
-[*.json]
+[{*.css, *.scss, *.js, *.html, package.json,.travis.yml}]
 indent_style=space
 indent_size=2
