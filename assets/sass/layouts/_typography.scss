@@ -109,22 +109,5 @@ ul {
 ol {
 	@extend %default-ol; // Adds browser default spacing back
 }
-.entry-title {
-	font-family: $title;
-	text-align: center;
 
-	@include media($sm) {
-		@include fontSize(40px);
-	}
-	@include media($smbg) {
-		@include fontSize(65px);
-	}
-	@include media($md) {
-		@include fontSize(100px);
-	}
-}
-#primary,
-#secondary {
-	font-family: $content;
-}
 

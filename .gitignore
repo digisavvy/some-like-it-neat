@@ -56,3 +56,14 @@ node_modules
 
 # PhpStrom Project Files #
 .idea/
+
+## Build files
+assets/css/rtl*.css
+assets/css/style*.css
+assets/js/production.js
+assets/js/production-min.js
+
+# Ruby Sass #
+##########
+.ruby-version
+.ruby-gemset
