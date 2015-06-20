@@ -1,0 +1,25 @@
+# WordPress Coding Standards editor configuration normalization
+# http://make.wordpress.org/core/handbook/coding-standards/
+
+# top-most EditorConfig file
+root=true
+
+# Global
+# UTF-8, Unix-style newlines, newline ending every file, trim trailing whitespace
+[*]
+charset=utf-8
+end_of_line=lf
+insert_final_newline=true
+trim_trailing_whitespace=true
+
+# PHP http://make.wordpress.org/core/handbook/coding-standards/php/
+# HTML http://make.wordpress.org/core/handbook/coding-standards/html/
+# CSS http://make.wordpress.org/core/handbook/coding-standards/css/
+# JavaScript http://make.wordpress.org/core/handbook/coding-standards/javascript/
+[*.php]
+indent_style=tab
+indent_size=4
+
+[{*.css, *.scss, *.js, *.html, package.json,.travis.yml}]
+indent_style=space
+indent_size=2

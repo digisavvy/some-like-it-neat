@@ -53,12 +53,6 @@ function digistarter_setup() {
 	// Enable support for Post Formats.
 	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
 
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'digistarter_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-
 	/**
 	 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
 	 */
@@ -70,11 +64,6 @@ function digistarter_setup() {
 	require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
 
 	/**
-	 * Implement the Custom Header feature.
-	 */
-	//require get_template_directory() . '/library/vendors/custom-header.php';
-
-	/**
 	 * Custom template tags for this theme.
 	 */
 	require get_template_directory() . '/library/vendors/template-tags.php';
@@ -83,7 +72,6 @@ function digistarter_setup() {
 	 * Custom functions that act independently of the theme templates.
 	 */
 	require get_template_directory() . '/library/vendors/extras.php';
-
 
 	/**
 	 * Load Jetpack compatibility file.
@@ -106,17 +94,13 @@ if ( !function_exists('digistarter_scripts') ) :
 	function digistarter_scripts() {
 
 		if ( SCRIPT_DEBUG || WP_DEBUG ) :
-
 			// Concatonated Scripts
 			wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production.js', array( 'jquery' ), '1.0.0', false );
-
 			// Main Style
 			wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style.css' );
-
 		else :
 			// Concatonated Scripts
 			wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
-
 			// Main Style
 			wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
 
@@ -148,113 +132,3 @@ if ( !function_exists('digistarter_widgets_init') ) :
 	}
 	add_action( 'widgets_init', 'digistarter_widgets_init' );
 endif;
-
-/**
- * Initializing Flexnav Menu System
- */
-if ( !function_exists('dg_add_flexnav') ) :
-	function dg_add_flexnav() { ?>
-		<script>
-			// Init Flexnav Menu
-			jQuery(document).ready(function($){
-				   $(".flexnav").flexNav({
-				   	'animationSpeed' : 250, // default drop animation speed
-					'transitionOpacity': true, // default opacity animation
-					'buttonSelector': '.menu-button', // default menu button class
-					'hoverIntent': true, // use with hoverIntent plugin
-					'hoverIntentTimeout': 350, // hoverIntent default timeout
-					'calcItemWidths': false // dynamically calcs top level nav item widths
-				});
-			});
-		</script>
-	<?php }
-	add_action( 'wp_head', 'dg_add_flexnav' );
-endif;
-
-/**
- * Custom Hooks and Filters
- */
-if ( !function_exists('digistarter_add_breadcrumbs') ) :
-	function digistarter_add_breadcrumbs() {
-		if ( !is_front_page() ) {
-			if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(array(
-			  'prefix'     => __('You are here: ', 'digistarter'),
-			  'last_link'  => true,
-			  'separator'  => '|',
-			  'excluded_taxonomies' => array(
-			    'post_format'
-			  ),
-			  'taxonomy_excluded_terms' => array(
-			    'category' => array('uncategorized')
-			  ),
-			  'post_types' => array(
-			    'gizmo' => array(
-			      'last_show'          => false,
-			      'taxonomy_preferred' => 'category'
-			    ),
-			    'whatzit' => array(
-			      'separator' => '&raquo;'
-			    )
-			  )
-			)); }
-		}
-	}
-	add_action( 'tha_content_top', 'digistarter_add_breadcrumbs' );
-endif;
-
-if ( !function_exists('digistarter_optional_scripts') ) :
-	function digistarter_optional_scripts() {
-
-		 // Link Color
-		 if( get_theme_mod( 'digistarter_add_link_color' ) == '') {
-
-		 } else { ?>
-			<style type="text/css">
-				a { color: <?php echo get_theme_mod( 'digistarter_add_link_color' ); ?>; }
-			</style>
-		<?php }
-
-
-	}
-	add_action( 'wp_head', 'digistarter_optional_scripts' );
-endif;
-
-if ( !function_exists('digistarter_mobile_styles') ) :
-	function digistarter_mobile_styles() {
-		$value = get_theme_mod( 'digistarter_mobile_hide_arrow' );
-
-		 if( get_theme_mod( 'digistarter_mobile_hide_arrow' ) == 0 ) { ?>
-			<style>
-				.menu-button i.navicon {
-					display: none;
-				}
-			</style>
-		<?php  } else {
-
-		 }
-	}
-	add_action('wp_head', 'digistarter_mobile_styles' );
-endif;
-
-if ( !function_exists('digistarter_add_footer_divs') ) :
-	function digistarter_add_footer_divs() { ?>
-
-		<div class="footer-left">
-			 <?php echo esc_attr( get_theme_mod( 'digistarter_footer_left', __( '&copy; All Rights Reserved', 'digistarter' ) ) ); ?>
-
-		</div>
-		<div class="footer-right">
-			<?php echo esc_attr( get_theme_mod( 'digistarter_footer_right', 'Footer Content Right' ) );  ?>
-		</div>
-<?php }
-add_action( 'tha_footer_bottom', 'digistarter_add_footer_divs' );
-endif;
-
-add_action( 'tha_head_bottom', 'digistarter_add_selectivizr' );
-function digistarter_add_selectivizr() { ?>
-	<!--[if (gte IE 6)&(lte IE 8)]>
-  		<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
-  		<noscript><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css" /></noscript>
-	<![endif]-->
-<?php }
-

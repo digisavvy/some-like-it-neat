@@ -45,10 +45,10 @@
 					    ));
 				?>
 
-			</nav><!-- #site-navigation -->
+			</nav>
 			<?php tha_header_bottom(); ?>
 
-		</header><!-- #masthead -->
+		</header>
 		<?php tha_header_after(); ?>
 
 		<?php tha_content_before(); ?>
