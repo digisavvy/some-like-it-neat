@@ -1,6 +1,3 @@
-/**
- * Project Setup
-*/
 'use strict';
 
 /**
@@ -12,7 +9,6 @@ var project = 'somelikeitneat';
 var build = './build/';
 // Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 var source = './assets/';
-// Not truly using this yet, more or less playing right now. TO-DO Place in Dev branch
 var bower = './assets/bower_components/';
 
 // Load plugins
@@ -23,8 +19,6 @@ var autoprefixer = require('gulp-autoprefixer'); // Autoprefixing magic
 var minifycss = require('gulp-minify-css');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
-var newer = require('gulp-newer');
 var rename = require('gulp-rename');
 var concat = require('gulp-concat');
 var notify = require('gulp-notify');
@@ -32,17 +26,9 @@ var cmq = require('gulp-combine-media-queries');
 var runSequence = require('gulp-run-sequence');
 // Our Sass compiler
 var sass = require('gulp-ruby-sass');
-var plugins = require('gulp-load-plugins')({ camelize: true });
-// Helps with ignoring files and directories in our run tasks
-var ignore = require('gulp-ignore');
-// Helps with removing files and directories in our run tasks
-var rimraf = require('gulp-rimraf');
-// Using to zip up our packaged theme into a tasty zip file that can be installed in WordPress!
-var zip = require('gulp-zip');
+var del = require('del');
 // Helps prevent stream crashing on errors
 var plumber = require('gulp-plumber');
-var pipe = require('gulp-coffee');
-var cache = require('gulp-cache');
 
 /**
  * Browser Sync
@@ -110,40 +96,19 @@ gulp.task( 'jsHint', function() {
 } );
 
 /**
- * Images
- *
- * Look at src/images, optimize the images and send them to the appropriate place
- */
-gulp.task('images', function() {
-
-    // Add the newer pipe to pass through newer images only
-    return gulp.src([source+'img**/*.{png,jpg,gif}'])
-    .pipe(newer(source+'img**/*.{png,jpg,gif}'))
-    .pipe(imagemin({ optimizationLevel: 7, progressive: true, interlaced: true }))
-    .pipe(gulp.dest(source));
-
-});
-
-/**
  * Clean
  *
  * Being a little overzealous, but we're cleaning out the build folder, codekit-cache directory and annoying DS_Store files and Also
  * clearing out unoptimized image files in zip as those will have been moved and optimized
  */
 
-gulp.task('cleanup', function() {
-    return gulp.src(['**/build','assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
-    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
-    .pipe(rimraf())
-    .pipe(notify({ message: 'Clean task complete', onLast: true }));
-});
-gulp.task('cleanupFinal', function() {
-    return gulp.src(['**/build','assets/bower_components','**/.sass-cache','**/.codekit-cache','**/.DS_Store', 'src/images/*'], { read: false }) // much faster
-    // .pipe(ignore('node_modules/**')) //Example of a directory to ignore
-    .pipe(rimraf())
-    .pipe(notify({ message: 'Build task complete', onLast: true }));
-});
 
+gulp.task('cleanup', function(cb) {
+	return del(['**/build', bower,'./library/vendors/composer','**/.sass-cache','**/.codekit-cache','**/.DS_Store','!node_modules/**'], cb);
+});
+gulp.task('cleanupFinal', function(cb) {
+	return del(['**/build', bower,'**/.sass-cache','**/.codekit-cache','**/.DS_Store','!node_modules/**'], cb);
+});
 
 /**
  * Build task that moves essential theme files for production-ready sites
@@ -166,25 +131,6 @@ gulp.task('buildAssets', function() {
     .pipe(notify({ message: 'Copy of Assets directory complete', onLast: true }));
 });
 
-// Copy Library to Build
-gulp.task('buildLibrary', function() {
-    return gulp.src(['./library/**'])
-    .pipe(gulp.dest(build+'library'))
-    .pipe(notify({ message: 'Copy of Library directory complete', onLast: true }));
-});
-
-/**
- * Images
- *
- * Look at src/images, optimize the images and send them to the appropriate place
- */
-gulp.task('buildImages', function() {
-    return gulp.src([source+'img/**/*', '!assets/images/originals/**'])
-    // .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 7, progressive: true, interlaced: true })))
-    .pipe(gulp.dest(build+'assets/img/'))
-    .pipe(plugins.notify({ message: 'Images task complete', onLast: true }));
-});
-
 // ==== TASKS ==== //
 /**
  * Gulp Default Task
@@ -192,12 +138,10 @@ gulp.task('buildImages', function() {
  * Compiles styles, fires-up browser sync, watches js and php files. Note browser sync task watches php files
  *
  */
-
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-    runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'cleanupFinal', cb);
+    runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildAssets', 'cleanupFinal', cb);
 });
-
 
 // Watch Task
 gulp.task('default', ['styles', 'js', 'jsHint', 'browser-sync'], function () {
