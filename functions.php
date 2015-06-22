@@ -67,22 +67,6 @@ function digistarter_setup() {
 	 * Custom template tags for this theme.
 	 */
 	require get_template_directory() . '/library/vendors/template-tags.php';
-
-	/**
-	 * Custom functions that act independently of the theme templates.
-	 */
-	require get_template_directory() . '/library/vendors/extras.php';
-
-	/**
-	 * Load Jetpack compatibility file.
-	 */
-	require get_template_directory() . '/library/vendors/jetpack.php';
-
-	/**
-	 * Including TGM Plugin Activation
-	 */
-	require_once( get_template_directory() . '/library/vendors/tgm-plugin-activation/required-plugins.php' );
-
 }
 endif; // digistarter_setup
 add_action( 'after_setup_theme', 'digistarter_setup' );
@@ -105,9 +89,6 @@ if ( !function_exists('digistarter_scripts') ) :
 			wp_enqueue_style( 'digistarter-style',  get_stylesheet_directory_uri() . '/assets/css/style-min.css' );
 
 		endif;
-
-		// Dashicons
-		 wp_enqueue_style( 'dashicons' );
 
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
