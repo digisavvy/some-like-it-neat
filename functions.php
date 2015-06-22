@@ -74,11 +74,6 @@ function digistarter_setup() {
 	require get_template_directory() . '/library/vendors/extras.php';
 
 	/**
-	 * Load Jetpack compatibility file.
-	 */
-	require get_template_directory() . '/library/vendors/jetpack.php';
-
-	/**
 	 * Including TGM Plugin Activation
 	 */
 	require_once( get_template_directory() . '/library/vendors/tgm-plugin-activation/required-plugins.php' );
