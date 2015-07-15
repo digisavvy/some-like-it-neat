@@ -1,15 +1,14 @@
 {
   "name": "some-like-it-neat",
   "version": "1.0.1",
-  "homepage": "http://alexhasnicehair.com",
+  "homepage": "http://getmoxied.net",
   "authors": [
-    "Alex Vasquez <alexjvas@gmail.com>"
+    "Alex Vasquez <alexjvas@gmail.com>",
+    "Crisoforo Gaspar <mitogh@gmail.com>"
   ],
   "dependencies": {
     "bourbon": "~4.1",
     "neat": "~1.7",
-    "jquery-hoverIntent": "~1.8.1",
-    "modernizr": "2.8.2",
     "essential.js": "~0.5.0"
   }
 }
