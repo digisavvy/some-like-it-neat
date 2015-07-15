@@ -8,13 +8,7 @@
 	<?php tha_entry_top(); ?>
 	<header class="entry-header">
 		<h1 class="entry-title" itemprop="name" ><?php the_title(); ?></h1>
-
-		<div class="entry-meta">
-
-			<span class="genericon genericon-time"></span> <?php digistarter_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
+	</header>
 
 	<div class="entry-content" itemprop="articleBody" >
 		<?php the_content(); ?>
@@ -35,7 +29,7 @@
 			/* translators: used between list items, there is a space after the comma */
 			$tag_list = get_the_tag_list( '', __( ', ', 'digistarter' ) );
 
-			if ( ! digistarter_categorized_blog() ) {
+			if ( false ) {
 				// This blog only has 1 category so we just need to worry about tags in the meta text
 				if ( '' != $tag_list ) {
 					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'digistarter' );
