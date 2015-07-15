@@ -1,15 +1,12 @@
 'use strict';
 
-/**
- * Project configuration
- */
 // Optional - Use your own project name here...
 var project = 'somelikeitneat';
 // Files that you want to package into a zip go here
 var build = './build/';
 // Your main project assets and naming 'source' instead of 'src' to avoid confusion with gulp.src
 var source = './assets/';
-var bower = './assets/bower_components/';
+var bower = source + '/bower_components/';
 
 // Load plugins
 var gulp = require('gulp');
@@ -101,11 +98,10 @@ gulp.task( 'jsHint', function() {
  * Being a little overzealous, but we're cleaning out the build folder, codekit-cache directory and annoying DS_Store files and Also
  * clearing out unoptimized image files in zip as those will have been moved and optimized
  */
-
-
 gulp.task('cleanup', function(cb) {
 	return del(['**/build', bower,'./library/vendors/composer','**/.sass-cache','**/.codekit-cache','**/.DS_Store','!node_modules/**'], cb);
 });
+
 gulp.task('cleanupFinal', function(cb) {
 	return del(['**/build', bower,'**/.sass-cache','**/.codekit-cache','**/.DS_Store','!node_modules/**'], cb);
 });
@@ -123,24 +119,11 @@ gulp.task('buildPhp', function() {
     .pipe(gulp.dest(build))
     .pipe(notify({ message: 'Moving files complete', onLast: true }));
 });
-
-// Copy Library to Build
-gulp.task('buildAssets', function() {
-    return gulp.src([source+'**', source+'js/production.js'])
-    .pipe(gulp.dest(build+'/assets'))
-    .pipe(notify({ message: 'Copy of Assets directory complete', onLast: true }));
-});
-
+//
 // ==== TASKS ==== //
-/**
- * Gulp Default Task
- *
- * Compiles styles, fires-up browser sync, watches js and php files. Note browser sync task watches php files
- *
- */
 // Package Distributable Theme
 gulp.task('build', function(cb) {
-    runSequence('cleanup', 'styles', 'js', 'buildPhp', 'buildAssets', 'cleanupFinal', cb);
+    runSequence('cleanup', 'styles', 'js', 'buildPhp', 'cleanupFinal', cb);
 });
 
 // Watch Task
