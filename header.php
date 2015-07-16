@@ -6,7 +6,8 @@
  *
  * @package digistarter
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
