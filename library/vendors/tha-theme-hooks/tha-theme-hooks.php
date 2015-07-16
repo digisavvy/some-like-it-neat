@@ -70,7 +70,6 @@ add_theme_support( 'tha_hooks', array(
 	 * will be able to check whether the version of THA supplied by the theme
 	 * supports Core hooks.
 	 */
-//	'core'
 ) );
 
 /**

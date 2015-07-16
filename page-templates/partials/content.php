@@ -13,7 +13,6 @@
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
-			<span class="genericon genericon-time"></span> <?php digistarter_posted_on(); ?>
 			<span itemprop="dateModified" style="display:none;">Last modified: <?php the_modified_date(); ?></span>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -42,28 +41,6 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta" itemprop="keywords">
-		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'digistarter' ) );
-				if ( $categories_list && digistarter_categorized_blog() ) :
-			?>
-			<span class="cat-links">
-				<?php printf( __( 'Posted in %1$s', 'digistarter' ), $categories_list ); ?>
-			</span>
-			<?php endif; // End if categories ?>
-
-			<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'digistarter' ) );
-				if ( $tags_list ) :
-			?>
-			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'digistarter' ), $tags_list ); ?>
-			</span>
-			<?php endif; // End if $tags_list ?>
-		<?php endif; // End if 'post' == get_post_type() ?>
-
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 		<span class="comments-link" itemprop="comment" ><?php comments_popup_link( __( 'Leave a comment', 'digistarter' ), __( '1 Comment', 'digistarter' ), __( '% Comments', 'digistarter' ) ); ?></span>
 		<?php endif; ?>

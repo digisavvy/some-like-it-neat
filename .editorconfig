@@ -13,13 +13,11 @@ insert_final_newline=true
 trim_trailing_whitespace=true
 
 # PHP http://make.wordpress.org/core/handbook/coding-standards/php/
-# HTML http://make.wordpress.org/core/handbook/coding-standards/html/
-# CSS http://make.wordpress.org/core/handbook/coding-standards/css/
-# JavaScript http://make.wordpress.org/core/handbook/coding-standards/javascript/
 [*.php]
 indent_style=tab
 indent_size=4
 
+# JavaScript, SCSS, HTML, CSS
 [{*.css, *.scss, *.js, *.html, package.json,.travis.yml}]
 indent_style=space
 indent_size=2

@@ -1,5 +1,11 @@
 /* =Structure/Scaffolding
 -------------------------------------------------------------- */
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
 html {
 
 }
@@ -9,47 +15,7 @@ body {
   line-height: 1.5em;
   word-break: break-word;
 }
-#page {
-	 @include outer-container;
 
-}
-.wrap {}
-
-#main {
-	padding: 0 50px;
-}
-
-#primary {
-	@include clearfix;
-
-	@include media($sm) {
-		@include span-columns( 4 );
-	}
-	@include media($md) {
-		@include span-columns( 4 );
-		@include omega( block );
-	}
-	margin: auto;
-	width: 100%;
-
-	ul {
-		list-style: none;
-
-		li {
-			list-style-type: square;
-		}
-	}
-}
-#secondary {
-	@include media($sm) {
-		@include span-columns( 4 );
-		padding: 30px;
-	}
-	@include media($md) {
-		@include span-columns( 2 );
-		@include omega( block );
-	}
-	margin: 20px auto;
-	padding: 0 30px 0 0;
-	width: 100%;
+.wrap {
+	@include outer-container;
 }

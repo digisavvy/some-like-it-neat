@@ -4,7 +4,6 @@
  *
  * @package digistarter
  */
-
 if ( ! function_exists( 'digistarter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -14,7 +13,6 @@ if ( ! function_exists( 'digistarter_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function digistarter_setup() {
-
 	/**
 	 * Set the content width based on the theme's design and stylesheet.
 	 */
@@ -29,9 +27,6 @@ function digistarter_setup() {
 	 * to change 'digistarter' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'digistarter', get_template_directory() . '/library/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
 
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
@@ -57,11 +52,6 @@ function digistarter_setup() {
 	 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
 	 */
 	include( 'library/vendors/tha-theme-hooks/tha-theme-hooks.php' );
-
-	/**
-	 * WP Customizer
-	 */
-	require get_template_directory() . '/library/vendors/wp-customizer/customizer.php';
 
 	/**
 	 * Custom template tags for this theme.
