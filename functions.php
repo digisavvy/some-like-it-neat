@@ -186,7 +186,7 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'some_like_it_neat_scripts' );
-endif; // Enqueue Scripts and Styles
+endif; // Enqueue scripts
 
 /**
  * Enqueue styles.
@@ -200,7 +200,7 @@ if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
     endif;
 	}
   add_action( 'wp_enqueue_styles', 'some_like_it_neat_styles' );
-endif;
+endif; // Enqueue styles
 
 /**
  * Register widgetized area and update sidebar with default widgets.
