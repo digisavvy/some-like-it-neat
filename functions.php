@@ -97,7 +97,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		/**
 	 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
 	 */
-		include 'library/vendors/theme-hook-alliance/tha-theme-hooks.php' ;
+		include get_template_directory() . '/library/vendors/theme-hook-alliance/tha-theme-hooks.php' ;
 
 		/**
 	 * WP Customizer

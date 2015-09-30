@@ -78,7 +78,12 @@ gulp.task( 'phpcs', function() {
 */
 gulp.task('styles', function () {
 	return gulp.src([source+'sass/**/*.scss'])
-		.pipe(plumber())
+		.pipe(plumber({
+			errorHandler: function (err) {
+				console.log(err);
+				this.emit('end');
+			}
+		}))
 		.pipe(sourcemaps.init())
 			.pipe(sass({
 				// outputStyle: 'compressed',
