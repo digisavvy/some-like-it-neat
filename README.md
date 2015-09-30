@@ -56,7 +56,7 @@ Bourbon and Neat are used for providing simple Sass mixins and leverages a simpl
 There are things you need to install before you hack away at things. There are three package managers to install: Node (which installs the NPM package manager), Bower and Composer. Each of these have dependencies that also need to be installed. Fortunately, this is all "fairly easy".
 
 * #### Prerequisites
-  * You'll need to download and install [Node](http://nodejs.com)
+  * You'll need to download and install [Node](https://nodejs.org/)
   * You will also need to download and install [Sass](http://sass-lang.com/install)
 
 * #### Getting and Installing the Theme
