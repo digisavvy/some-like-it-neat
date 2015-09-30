@@ -136,7 +136,7 @@ endif; // some_like_it_neat_setup
 add_action( 'after_setup_theme', 'some_like_it_neat_setup' );
 
 /**
- * Enqueue scripts and styles.
+ * Enqueue scripts.
  */
 if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 	function some_like_it_neat_scripts()
@@ -159,9 +159,6 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 			// Concatonated Scripts
 			// wp_enqueue_script( 'development-js', get_template_directory_uri() . '/assets/js/development.js', array( 'jquery' ), '1.0.0', false );
 
-			// Main Style
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style.css' );
-
 	 else :
 			// Vendor Scripts
 			wp_register_script( 'modernizr-js', get_template_directory_uri() . '/assets/js/vendor/modernizr/modernizr.js', array( 'jquery' ), '2.8.2', true );
@@ -179,9 +176,6 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 			// Concatonated Scripts
 			// wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
 
-			// Main Style
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style-min.css' );
-
 	 endif;
 
 		// Dashicons
@@ -192,7 +186,21 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 		}
 	}
 	add_action( 'wp_enqueue_scripts', 'some_like_it_neat_scripts' );
-endif; // Enqueue Scripts and Styles
+endif; // Enqueue scripts
+
+/**
+ * Enqueue styles.
+ */
+if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
+	function some_like_it_neat_styles() {
+		if ( SCRIPT_DEBUG || WP_DEBUG ) :
+			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style.css' );
+	  else :
+			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style-min.css' );
+    endif;
+	}
+  add_action( 'wp_enqueue_styles', 'some_like_it_neat_styles' );
+endif; // Enqueue styles
 
 /**
  * Register widgetized area and update sidebar with default widgets.
