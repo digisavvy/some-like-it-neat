@@ -24,35 +24,35 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		}
 
 		/*
-        * Make theme available for translation.
-        * Translations can be filed in the /languages/ directory.
-        * If you're building a theme based on some_like_it_neat, use a find and replace
-        * to change 'some-like-it-neat' to the name of your theme in all the template files
-        */
+		* Make theme available for translation.
+		* Translations can be filed in the /languages/ directory.
+		* If you're building a theme based on some_like_it_neat, use a find and replace
+		* to change 'some-like-it-neat' to the name of your theme in all the template files
+		*/
 		load_theme_textdomain( 'some-like-it-neat', get_template_directory() . '/library/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
 		/*
-        * Enable support for Post Thumbnails on posts and pages.
-        *
-        * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-        */
+		* Enable support for Post Thumbnails on posts and pages.
+		*
+		* @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		*/
 		add_theme_support( 'post-thumbnails' );
 
 		/*
-        * Enable title tag support for all posts.
-        *
-        * @link http://codex.wordpress.org/Title_Tag
-        */
+		* Enable title tag support for all posts.
+		*
+		* @link http://codex.wordpress.org/Title_Tag
+		*/
 		add_theme_support( 'title-tag' );
 
 		/*
-        * Add Editor Style for adequate styling in text editor.
-        *
-        * @link http://codex.wordpress.org/Function_Reference/add_editor_style
-        */
+		* Add Editor Style for adequate styling in text editor.
+		*
+		* @link http://codex.wordpress.org/Function_Reference/add_editor_style
+		*/
 		add_editor_style( '/assets/css/editor-style.css' );
 
 		// This theme uses wp_nav_menu() in one location.
@@ -244,11 +244,11 @@ if ( ! function_exists( 'dg_add_flexnav' ) ) :
 					$(".flexnav").flexNav({
 						'animationSpeed' : 250, // default drop animation speed
 						'transitionOpacity': true, // default opacity animation
-							'buttonSelector': '.menu-button', // default menu button class
-							'hoverIntent': true, // use with hoverIntent plugin
-							'hoverIntentTimeout': 350, // hoverIntent default timeout
-							'calcItemWidths': false // dynamically calcs top level nav item widths
-						});
+						'buttonSelector': '.menu-button', // default menu button class
+						'hoverIntent': true, // use with hoverIntent plugin
+						'hoverIntentTimeout': 350, // hoverIntent default timeout
+						'calcItemWidths': false // dynamically calcs top level nav item widths
+					});
 				});
 			</script>
 			<?php
@@ -356,7 +356,6 @@ if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
 
 			<div class="footer-left">
 				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_left', __( '&copy; All Rights Reserved', 'some-like-it-neat' ) ) ); ?>
-
 			</div>
 			<div class="footer-right">
 				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_right', 'Footer Content Right' ) );  ?>
@@ -376,4 +375,3 @@ function some_like_it_neat_add_selectivizr()
 	<![endif]-->
 <?php
 }
-
