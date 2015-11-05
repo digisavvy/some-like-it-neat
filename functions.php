@@ -191,15 +191,26 @@ endif; // Enqueue scripts
 /**
  * Enqueue styles.
  */
+
 if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
 	function some_like_it_neat_styles() {
 		if ( SCRIPT_DEBUG || WP_DEBUG ) :
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style.css' );
+			wp_register_style(
+			    'some_like_it_neat-style', // handle name
+			    get_template_directory_uri() . '/assets/css/style.css', '', '1.2', 'screen'
+			);
+
+			wp_enqueue_style( 'some_like_it_neat-style' );
 	  else :
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style-min.css' );
+	  	wp_register_style(
+	  	    'some_like_it_neat-style', // handle name
+	  	    get_template_directory_uri() . '/assets/css/style-min.css', '', '1.2', 'screen'
+	  	);
+
+	  	wp_enqueue_style( 'some_like_it_neat-style' );
     endif;
 	}
-  add_action( 'wp_enqueue_styles', 'some_like_it_neat_styles' );
+  add_action( 'wp_enqueue_scripts', 'some_like_it_neat_styles' );
 endif; // Enqueue styles
 
 /**
