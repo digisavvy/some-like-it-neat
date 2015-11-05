@@ -370,8 +370,8 @@ function some_like_it_neat_add_selectivizr()
 {
 	?>
 	<!--[if (gte IE 6)&(lte IE 8)]>
-  		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
-  		<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" /></noscript>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
+		<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" /></noscript>
 	<![endif]-->
 <?php
 }
