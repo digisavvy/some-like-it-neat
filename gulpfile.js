@@ -50,10 +50,10 @@ var sourcemaps   = require('gulp-sourcemaps');
 gulp.task('browser-sync', function() {
   var files = [
     '**/*.php',
-    '**/*.{png,jpg,gif}'
+    '**/*.{png,jpg,gif}',
   ];
   browserSync.init(files, {
-    proxy: url
+    proxy: url,
   });
 });
 
@@ -69,7 +69,7 @@ gulp.task('phpcs', function() {
   return gulp.src(phpSource)
     .pipe(phpcs({
       bin: vendors + 'composer/bin/phpcs',
-      standard: 'WordPress-Core'
+      standard: 'WordPress-Core',
     }))
     .pipe(phpcs.reporter('log'))
     .pipe(notify({message: 'phpcs task complete', onLast: true }));
@@ -84,14 +84,14 @@ gulp.task('styles', function() {
       errorHandler: function(err) {
         console.log(err);
         this.emit('end');
-      }
+      },
     }))
     .pipe(sourcemaps.init())
       .pipe(sass({
         // outputStyle: 'compressed',
         errLogToConsole: true,
         outputStyle: 'nested',
-        precision: 10
+        precision: 10,
       }))
     .pipe(sourcemaps.write({includeContent: false}))
     .pipe(sourcemaps.init({loadMaps: true}))
@@ -104,7 +104,7 @@ gulp.task('styles', function() {
     .pipe(reload({stream:true})) // Inject Styles when style file is created
     .pipe(rename({ suffix: '-min' }))
     .pipe(minifycss({
-      maxLineLen: 80
+      maxLineLen: 80,
     }))
     .pipe(gulp.dest(source + 'css'))
     .pipe(reload({stream:true})) // Inject Styles when min style file is created
@@ -121,7 +121,7 @@ gulp.task('js', function() {
     .pipe(gulp.dest(source + 'js'))
     .pipe(rename({
       basename: 'production',
-      suffix: '-min'
+      suffix: '-min',
     }))
     .pipe(uglify())
     .pipe(gulp.dest(source + 'js/'))
