@@ -29,22 +29,22 @@ get_header(); ?>
 				?>
 
 				<?php
-						// If comments are open or we have at least one comment, load up the comment template
-				if ( comments_open() || '0' != get_comments_number() ) :
-					comments_template();
-	endif;
+					// If comments are open or we have at least one comment, load up the comment template
+					if ( comments_open() || '0' != get_comments_number() ) :
+						comments_template();
+					endif;
 				?>
 
-	<?php
-endwhile; ?>
+	<?php endwhile; ?>
 
 	<?php else : ?>
 
 	<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-	<?php
-endif; ?>
+	<?php endif; ?>
 
 	</div><!-- #primary -->
+
 <?php get_sidebar(); ?>
+
 <?php get_footer(); ?>
