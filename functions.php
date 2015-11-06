@@ -160,7 +160,7 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 			// wp_enqueue_script( 'development-js', get_template_directory_uri() . '/assets/js/development.js', array( 'jquery' ), '1.0.0', false );
 			
 			// Main Styles
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style.css' );
+			wp_enqueue_style( 'some_like_it_neat-style',  get_stylesheet_directory_uri() . '/assets/css/style.css' );
 
 	 else :
 			// Vendor Scripts
