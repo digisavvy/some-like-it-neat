@@ -22,14 +22,14 @@ get_header(); ?>
 				<?php
 					// Show an optional term description.
 				if ( function_exists( 'get_the_archive_description' ) ) :
-					echo '<div class="taxonomy-description">'.get_the_archive_description().'</div>';
+					echo '<div class="taxonomy-description">' .get_the_archive_description(). '</div>';
 					/*
 					* TO-DO Might remove this code block at some point, since
 					*   get_the_archive_description() does the same thing
 					*   the below code does
 					*/
 					elseif ( $term_description = term_description() ) :
-						printf( '<div class="taxonomy-description">%s</div>',     $term_description );
+						printf( '<div class="taxonomy-description">%s</div>',	$term_description );
 					endif;
 				?>
 			</header><!-- .page-header -->
@@ -45,15 +45,13 @@ get_header(); ?>
 					get_template_part( 'page-templates/partials/content', get_post_format() );
 				?>
 
-		<?php
-endwhile; ?>
+		<?php endwhile; ?>
 
 			<?php else : ?>
 
-			<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
+				<?php get_template_part( 'page-templates/partials/content', 'none' ); ?>
 
-			<?php
-endif; ?>
+			<?php endif; ?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->

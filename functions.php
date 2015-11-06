@@ -95,38 +95,38 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		);
 
 		/**
-	 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
-	 */
+		* Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
+		*/
 		include get_template_directory() . '/library/vendors/theme-hook-alliance/tha-theme-hooks.php' ;
 
 		/**
-	 * WP Customizer
-	 */
+		* WP Customizer
+		*/
 		include get_template_directory() . '/library/vendors/customizer/customizer.php';
 
 		/**
-	 * Implement the Custom Header feature.
-	 */
+		* Implement the Custom Header feature.
+		*/
 		//require get_template_directory() . '/library/vendors/custom-header.php';
 
 		/**
-	 * Custom template tags for this theme.
-	 */
+		* Custom template tags for this theme.
+		*/
 		include get_template_directory() . '/library/vendors/template-tags.php';
 
 		/**
-	 * Custom functions that act independently of the theme templates.
-	 */
+		* Custom functions that act independently of the theme templates.
+		*/
 		include get_template_directory() . '/library/vendors/extras.php';
 
 		/**
-	 * Load Jetpack compatibility file.
-	 */
+		* Load Jetpack compatibility file.
+		*/
 		include get_template_directory() . '/library/vendors/jetpack.php';
 
 		/**
-	 * Including TGM Plugin Activation
-	 */
+		 * Including TGM Plugin Activation
+		 */
 		include_once get_template_directory() . '/library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php' ;
 
 		include_once get_template_directory() . '/library/vendors/tgm-plugin-activation/tgm-plugin-activation.php' ;
@@ -193,24 +193,25 @@ endif; // Enqueue scripts
  */
 
 if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
+
 	function some_like_it_neat_styles() {
 		if ( SCRIPT_DEBUG || WP_DEBUG ) :
 			wp_register_style(
-			    'some_like_it_neat-style', // handle name
-			    get_template_directory_uri() . '/assets/css/style.css', '', '1.2', 'screen'
+				'some_like_it_neat-style', // handle name
+				get_template_directory_uri() . '/assets/css/style.css', '', '1.2', 'screen'
 			);
-
 			wp_enqueue_style( 'some_like_it_neat-style' );
-	  else :
-	  	wp_register_style(
-	  	    'some_like_it_neat-style', // handle name
-	  	    get_template_directory_uri() . '/assets/css/style-min.css', '', '1.2', 'screen'
-	  	);
 
-	  	wp_enqueue_style( 'some_like_it_neat-style' );
-    endif;
+			else :
+			wp_register_style(
+				'some_like_it_neat-style', // handle name
+				get_template_directory_uri() . '/assets/css/style-min.css', '', '1.2', 'screen'
+			);
+			wp_enqueue_style( 'some_like_it_neat-style' );
+		endif;
 	}
   add_action( 'wp_enqueue_scripts', 'some_like_it_neat_styles' );
+
 endif; // Enqueue styles
 
 /**
@@ -238,20 +239,20 @@ if ( ! function_exists( 'dg_add_flexnav' ) ) :
 	function dg_add_flexnav()
 	{
 	?>
-			<script>
-				// Init Flexnav Menu
-				jQuery(document).ready(function($){
-					$(".flexnav").flexNav({
-						'animationSpeed' : 250, // default drop animation speed
-						'transitionOpacity': true, // default opacity animation
-						'buttonSelector': '.menu-button', // default menu button class
-						'hoverIntent': true, // use with hoverIntent plugin
-						'hoverIntentTimeout': 350, // hoverIntent default timeout
-						'calcItemWidths': false // dynamically calcs top level nav item widths
-					});
+		<script>
+			// Init Flexnav Menu
+			jQuery(document).ready(function($){
+				$(".flexnav").flexNav({
+					'animationSpeed' : 250, // default drop animation speed
+					'transitionOpacity': true, // default opacity animation
+					'buttonSelector': '.menu-button', // default menu button class
+					'hoverIntent': true, // use with hoverIntent plugin
+					'hoverIntentTimeout': 350, // hoverIntent default timeout
+					'calcItemWidths': false // dynamically calcs top level nav item widths
 				});
-			</script>
-			<?php
+			});
+		</script>
+	<?php
 	}
 	add_action( 'wp_footer', 'dg_add_flexnav' );
 endif;
@@ -284,37 +285,6 @@ add_action( 'tha_entry_after', 'some_like_it_neat_post_navigation' );
 /**
  * Custom Hooks and Filters
  */
-if ( ! function_exists( 'some_like_it_neat_add_breadcrumbs' ) ) :
-	function some_like_it_neat_add_breadcrumbs()
-	{
-		if ( ! is_front_page() ) {
-			if ( function_exists( 'HAG_Breadcrumbs' ) ) { HAG_Breadcrumbs(
-				array(
-				'prefix'     => __( 'You are here: ', 'some-like-it-neat' ),
-				'last_link'  => true,
-				'separator'  => '|',
-				'excluded_taxonomies' => array(
-				'post_format'
-				),
-				'taxonomy_excluded_terms' => array(
-				'category' => array( 'uncategorized' )
-				),
-				'post_types' => array(
-				'gizmo' => array(
-				'last_show'          => false,
-				'taxonomy_preferred' => 'category',
-				),
-				'whatzit' => array(
-				'separator' => '&raquo;',
-				)
-				)
-				)
-			);
-			}
-		}
-	}
-	add_action( 'tha_content_top', 'some_like_it_neat_add_breadcrumbs' );
-endif;
 
 if ( ! function_exists( 'some_like_it_neat_optional_scripts' ) ) :
 	function some_like_it_neat_optional_scripts()
@@ -336,13 +306,12 @@ if ( ! function_exists( 'some_like_it_neat_mobile_styles' ) ) :
 		$value = get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' );
 
 		if ( 0 == get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' ) ) { ?>
-								<style>
-								.menu-button i.navicon {
-									display: none;
-								}
-								</style>
-							<?php
-		} else {
+			<style>
+				.menu-button i.navicon {
+					display: none;
+			}
+			</style>
+		<?php } else {
 
 		}
 	}
