@@ -1,10 +1,10 @@
-@import "../../assets/bower_components/neat/app/assets/stylesheets/neat-helpers";
+@import '../../assets/bower_components/neat/app/assets/stylesheets/neat-helpers';
 
 // Adding a Visual Grid while you develop. Set to 'true.'
 $visual-grid: false;
 $visual-grid-color: #ccc;
 $visual-grid-index: front;
-$visual-grid-opacity: 0.2;
+$visual-grid-opacity: .2;
 
 // Change the grid settings
 $column: 90px;
@@ -54,7 +54,7 @@ $fg-gutter: $gutter;
 
 @mixin omega-reset($nth) {
   &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
-  &:nth-child(#{$nth}+1) { clear: none }
+  &:nth-child(#{$nth}+1) { clear: none; }
 }
 
 // ------------------------------------------------------------
