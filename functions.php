@@ -136,7 +136,7 @@ endif; // some_like_it_neat_setup
 add_action( 'after_setup_theme', 'some_like_it_neat_setup' );
 
 /**
- * Enqueue scripts.
+ * Enqueue scripts and styles.
  */
 if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 	function some_like_it_neat_scripts()
