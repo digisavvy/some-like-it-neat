@@ -3,6 +3,7 @@
  * The template for displaying all singular posts and pages.
  *
  * This is the template that gets used in absence of single.php or page.php
+ * Is also "true" for is_singular()
  *
  * @package some_like_it_neat
  */
@@ -22,7 +23,7 @@ get_header(); ?>
 						comments_template();
 					endif;
 				?>
-				
+
 			<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
