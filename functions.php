@@ -178,6 +178,9 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 
 			// Concatonated Scripts
 			// wp_enqueue_script( 'production-js', get_template_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
+			
+			// Main Styles
+			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style-min.css' );
 
 	 endif;
 
