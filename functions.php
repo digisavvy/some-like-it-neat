@@ -189,20 +189,6 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 endif; // Enqueue scripts
 
 /**
- * Enqueue styles.
- */
-if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
-	function some_like_it_neat_styles() {
-		if ( SCRIPT_DEBUG || WP_DEBUG ) :
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style.css' );
-	  else :
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style-min.css' );
-    endif;
-	}
-  add_action( 'wp_enqueue_styles', 'some_like_it_neat_styles' );
-endif; // Enqueue styles
-
-/**
  * Register widgetized area and update sidebar with default widgets.
  */
 function some_like_it_neat_widgets_init()
