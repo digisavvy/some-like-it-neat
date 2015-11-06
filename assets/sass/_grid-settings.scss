@@ -13,7 +13,7 @@ $grid-columns: 12;
 $max-width:em(1140);
 
 // Breakpoints
-$sm: new-breakpoint(min-width 200px 4);
+$sm: new-breakpoint(min-width 0 2);
 $smbg: new-breakpoint(min-width 480px 4);
 $md: new-breakpoint(min-width 768px 6);
 $mdbg: new-breakpoint(min-width 1024 8);
