@@ -16,7 +16,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 	function some_like_it_neat_setup()
 	{
 
-		/**
+	/**
 	 * Set the content width based on the theme's design and stylesheet.
 	 */
 		if ( ! isset( $content_width ) ) {
@@ -60,7 +60,18 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 
 		// Enable support for Post Formats.
 		if ( 'yes' === get_theme_mod( 'some-like-it-neat_post_format_support' ) ) {
-			add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
+			add_theme_support( 'post-formats',
+				array(
+					'aside',
+					'image', '
+					video',
+					'quote',
+					'link',
+					'status',
+					'gallery',
+					'chat',
+					'audio'
+				) );
 		}
 
 		// Enable Support for Jetpack Infinite Scroll
@@ -301,21 +312,22 @@ if ( ! function_exists( 'some_like_it_neat_optional_scripts' ) ) :
 endif;
 
 if ( ! function_exists( 'some_like_it_neat_mobile_styles' ) ) :
-	function some_like_it_neat_mobile_styles()
-	{
+	function some_like_it_neat_mobile_styles() {
+
 		$value = get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' );
 
 		if ( 0 == get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' ) ) { ?>
 			<style>
 				.menu-button i.navicon {
 					display: none;
-			}
+				}
 			</style>
 		<?php } else {
 
 		}
 	}
 	add_action( 'wp_head', 'some_like_it_neat_mobile_styles' );
+
 endif;
 
 if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
@@ -332,15 +344,14 @@ if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
 		<?php
 	}
 	add_action( 'tha_footer_bottom', 'some_like_it_neat_add_footer_divs' );
+
 endif;
 
-add_action( 'tha_head_bottom', 'some_like_it_neat_add_selectivizr' );
-function some_like_it_neat_add_selectivizr()
-{
-	?>
+function some_like_it_neat_add_selectivizr() { 	?>
+
 	<!--[if (gte IE 6)&(lte IE 8)]>
 		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
 		<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" /></noscript>
 	<![endif]-->
-<?php
-}
+<?php }
+add_action( 'tha_head_bottom', 'some_like_it_neat_add_selectivizr' );
