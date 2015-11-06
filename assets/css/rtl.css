@@ -604,7 +604,7 @@ ol:nth-child(n+2) {
 .entry-title {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   text-align: center; }
-  @media screen and (min-width: 200px)  {
+  @media screen and (min-width: 0)  {
     .entry-title {
       font-size: 40px;
       font-size: 2.5rem; } }
@@ -788,12 +788,12 @@ body {
     clear: both;
     content: "";
     display: table; }
-  @media screen and (min-width: 200px)  {
+  @media screen and (min-width: 0)  {
     #primary {
       float: left;
       display: block;
-      margin-right: 6.6666666667%;
-      width: 100%; }
+      margin-right: 14.2857142857%;
+      width: 214.2857142857%; }
       #primary:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 768px)  {
@@ -814,12 +814,12 @@ body {
   margin: 20px auto;
   padding: 0 30px 0 0;
   width: 100%; }
-  @media screen and (min-width: 200px)  {
+  @media screen and (min-width: 0)  {
     #secondary {
       float: left;
       display: block;
-      margin-right: 6.6666666667%;
-      width: 100%;
+      margin-right: 14.2857142857%;
+      width: 214.2857142857%;
       padding: 30px; }
       #secondary:last-child {
         margin-right: 0; } }
@@ -841,7 +841,7 @@ body {
   .site-branding .site-title {
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     padding: 40px; }
-    @media screen and (min-width: 200px)  {
+    @media screen and (min-width: 0)  {
       .site-branding .site-title {
         font-size: 35px;
         font-size: 2.1875rem; } }
@@ -861,7 +861,7 @@ body {
     font-size: 1.25rem;
     font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
     font-style: italic; }
-    @media screen and (min-width: 200px)  {
+    @media screen and (min-width: 0)  {
       .site-branding .site-description {
         font-size: 15px;
         font-size: 0.9375rem; } }
@@ -1151,7 +1151,7 @@ ul.nav-menu li {
   transition: background 200ms ease-in-out;
   background: #fff;
   padding: 10px; }
-  @media screen and (min-width: 200px)  {
+  @media screen and (min-width: 0)  {
     ul.nav-menu li {
       text-align: center;
       width: 100%; } }
@@ -1181,21 +1181,21 @@ nav.post-navigation {
 
 .nav-links {
   width: 100%; }
-  @media screen and (min-width: 200px)  {
+  @media screen and (min-width: 0)  {
     .nav-links .nav-previous {
       float: left;
       display: block;
-      margin-right: 6.6666666667%;
-      width: 46.6666666667%;
+      margin-right: 14.2857142857%;
+      width: 100%;
       margin-right: 0; }
       .nav-links .nav-previous:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 200px)  {
+  @media screen and (min-width: 0)  {
     .nav-links .nav-next {
       float: left;
       display: block;
-      margin-right: 6.6666666667%;
-      width: 46.6666666667%;
+      margin-right: 14.2857142857%;
+      width: 100%;
       margin-right: 0; }
       .nav-links .nav-next:last-child {
         margin-right: 0; } }
@@ -1338,12 +1338,12 @@ embed, iframe, object {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; } }
-@media screen and (min-width: 200px)  {
+@media screen and (min-width: 0)  {
   .page-template-page-templatestemplate-left-col-php #main #primary {
     float: left;
     display: block;
-    margin-right: 6.6666666667%;
-    width: 100%; }
+    margin-right: 14.2857142857%;
+    width: 214.2857142857%; }
     .page-template-page-templatestemplate-left-col-php #main #primary:last-child {
       margin-right: 0; } }
 @media screen and (min-width: 768px)  {
@@ -1360,12 +1360,12 @@ embed, iframe, object {
       margin-right: 0; } }
 .page-template-page-templatestemplate-left-col-php #main #secondary {
   margin-left: 1.5%; }
-  @media screen and (min-width: 200px)  {
+  @media screen and (min-width: 0)  {
     .page-template-page-templatestemplate-left-col-php #main #secondary {
       float: left;
       display: block;
-      margin-right: 6.6666666667%;
-      width: 100%; }
+      margin-right: 14.2857142857%;
+      width: 214.2857142857%; }
       .page-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 768px)  {
@@ -1387,15 +1387,15 @@ embed, iframe, object {
 .page-template-page-templatestemplate-right-col-php h1.entry-title {
   margin: 0;
   text-align: right; }
-@media screen and (min-width: 200px)  {
+@media screen and (min-width: 0)  {
   .page-template-page-templatestemplate-right-col-php #primary {
     float: right ; }
-    @media screen and (min-width: 200px)  {
+    @media screen and (min-width: 0)  {
       .page-template-page-templatestemplate-right-col-php #primary {
         float: left;
         display: block;
-        margin-right: 6.6666666667%;
-        width: 100%; }
+        margin-right: 14.2857142857%;
+        width: 214.2857142857%; }
         .page-template-page-templatestemplate-right-col-php #primary:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 768px)  {
@@ -1410,12 +1410,12 @@ embed, iframe, object {
   .page-template-page-templatestemplate-right-col-php #secondary {
     float: left ;
     margin-left: 1.5%; }
-    @media screen and (min-width: 200px)  {
+    @media screen and (min-width: 0)  {
       .page-template-page-templatestemplate-right-col-php #secondary {
         float: left;
         display: block;
-        margin-right: 6.6666666667%;
-        width: 100%; }
+        margin-right: 14.2857142857%;
+        width: 214.2857142857%; }
         .page-template-page-templatestemplate-right-col-php #secondary:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 768px)  {
