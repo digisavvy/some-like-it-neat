@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'page-templates/partials/content', 'attachment' ); ?>
+				<?php get_template_part( 'page-templates/template-parts/content', 'attachment' ); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
