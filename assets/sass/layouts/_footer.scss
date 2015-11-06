@@ -9,8 +9,8 @@ footer {
 	}
 	.footer-left {
 		@include span-columns(6);
-		margin-top: 30px;
 		margin-bottom: 40px;
+		margin-top: 30px;
 		padding: 10px;
 		@include text-align(left);
 	}

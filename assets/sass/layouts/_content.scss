@@ -1,28 +1,35 @@
 .sticky {
-	background: #f1f1f1;
+  background: $grey;
 }
+
 .gallery-caption {
 	list-style: none;
 }
+
 .bypostauthor {
 	list-style: none;
 }
+
 .hentry {
 	margin: 0 0 1.5em;
 }
+
 .byline,
 .updated {
 	display: none;
 }
+
 .single .byline,
 .group-blog .byline {
 	display: inline;
 }
+
 .page-content,
 .entry-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
+
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -36,11 +43,13 @@
 	margin-bottom: .5em;
 	@include margin-left(auto!important);
 }
+
 .alignleft {
 	display: inline;
 	@include float(left);
 	@include margin-right(1.5em);
 }
+
 .alignright {
 	display: inline;
 	@include float(right);
@@ -51,6 +60,7 @@
 	@include float(left);
 	padding: 20px;
 }
+
 .gallery-caption {}
 .bypostauthor {}
 
@@ -60,8 +70,8 @@
 	@include fontSize(14px);
 	font-family: $content;
 	padding: 20px 0 20px 50px;
-
 }
+
 /* =Media
 ----------------------------------------------- */
 
@@ -73,38 +83,48 @@
 	margin-top: 0;
 	padding: 0;
 }
+
 .wp-caption {
 	border: 1px solid #ccc;
 	clear: both;
 	margin-bottom: 1.5em;
 	max-width: 100%;
 }
+
 .wp-caption img[class*="wp-image-"] {
 	display: block;
 	margin: 1.2% auto 0;
 	max-width: 98%;
 }
+
 .wp-caption-text {
 	text-align: center;
 }
+
 .wp-caption .wp-caption-text {
 	margin: 0.8075em 0;
 }
+
 .site-main .gallery {
 	margin-bottom: 1.5em;
 }
+
 .gallery-caption {
 }
+
 .site-main .gallery a img {
 	border: none;
 	height: auto;
 	max-width: 90%;
 }
+
 .site-main .gallery dd {
 	margin: 0;
 }
+
 .site-main .gallery-columns-4 .gallery-item {
 }
+
 .site-main .gallery-columns-4 .gallery-item img {
 }
 
@@ -120,6 +140,7 @@ object {
 .comment-content a {
 	word-wrap: break-word;
 }
+
 .bypostauthor {
 }
 
@@ -158,10 +179,3 @@ object {
 		}
 	}
 }
-
-
-
-
-
-
-

@@ -189,7 +189,7 @@ a project.
     │   ├── jetpack.php
     │   └── template-tags.php
     ├── page-templates
-    │     └── partials
+    │     └── template-parts
     |     |   ├── content-aside.php
     |     |   ├── content-audio.php
     |     |   ├── content-chat.php

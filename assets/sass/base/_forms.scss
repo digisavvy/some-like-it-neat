@@ -18,7 +18,7 @@ label {
   margin-bottom: $small-spacing / 2;
 
   &.required::after {
-    content: "*";
+    content: '*';
   }
 
   abbr {
