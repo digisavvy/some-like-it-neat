@@ -31,8 +31,20 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		*/
 		load_theme_textdomain( 'some-like-it-neat', get_template_directory() . '/library/languages' );
 
-		// Add default posts and comments RSS feed links to head.
+		/**
+		* Add default posts and comments RSS feed links to head.
+		*/
 		add_theme_support( 'automatic-feed-links' );
+
+		/**
+		 * Enable HTML5 markup
+		 */
+		add_theme_support( 'html5', array(
+			'comment-list',
+			'search-form',
+			'comment-form',
+			'gallery',
+		) );
 
 		/*
 		* Enable support for Post Thumbnails on posts and pages.
