@@ -1,4 +1,14 @@
 # Changelog
+### 1.3.2
+-------------
+* Added html5 support for comments and forms
+* Cleanup syntax formatting, still a work-in-progress
+* Fix Webmaster User Role Plugin URL in TGM. Thanks Tyler Digital!
+
+**Bugfixes:**
+* Cleanup various php files that got botched in phcbf tasks
+* Resolve
+
 ### 1.3.1
 -------------
 * Removed 'gulp-rimraf' and replaced with npm 'del'.
