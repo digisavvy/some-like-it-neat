@@ -118,7 +118,7 @@ nav.post-navigation{width:100%}.nav-links{width:100%}.sticky{background:#ededed}
 .page-template-page-templatestemplate-left-col-php #main #secondary{margin-right:1.5%}
 .page-template-page-templatestemplate-left-col-php footer{clear:both;display:table}
 .page-template-page-templatestemplate-right-col-php h1.entry-title{margin:0;text-align:left}
-.page-template-page-templatestemplate-full-width-php #primary{width:100%}.page-template-page-templatestemplate-full-width-php #secondary{width:100%}
+.page-template-page-templatestemplate-full-width-php #main,.page-template-page-templatestemplate-full-width-php #primary,.page-template-page-templatestemplate-full-width-php #secondary{width:100%;padding:0}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .widget{margin:0 0 1.5em}.widget select{max-width:100%}.widget_search .search-submit{display:none}
 footer{float:left;margin:0 auto;padding:0 40px;width:100%}footer .site-info{margin:auto;width:100%}
