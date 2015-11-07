@@ -4,67 +4,67 @@ html {
 
 }
 @include ltr {
-		body {
-			background-color: $base-body-color;
-			color: $primary-font-color;
-			font-family: $content;
-			line-height: 1.5em;
-			word-break: break-word;
-		}
+        body {
+            background-color: $base-body-color;
+            color: $primary-font-color;
+            font-family: $content;
+            line-height: 1.5em;
+            word-break: break-word;
+        }
 }
 
 @include rtl {
-	body {
-		background-color: $base-body-color;
-		color: $primary-font-color;
-		font-family: $content;
-		line-height: 1.5em;
-		word-break: break-word;
-		direction: rtl;
-	  unicode-bidi: embed;
-	}
+    body {
+        background-color: $base-body-color;
+        color: $primary-font-color;
+        font-family: $content;
+        line-height: 1.5em;
+        word-break: break-word;
+        direction: rtl;
+      unicode-bidi: embed;
+    }
 }
 #page {
-	 @include outer-container;
+     @include outer-container;
 
 }
 .wrap {}
 
 #main {
-	padding: 0 50px;
+    padding: 0 50px;
 }
 
 #primary {
-	@include clearfix;
+    @include clearfix;
 
-	@include media($sm) {
-		@include span-columns( 4 );
-	}
-	@include media($md) {
-		@include span-columns( 4 );
-		@include omega( block );
-	}
-	margin: 0 auto;
-	width: 100%;
+    @include media($sm) {
+        @include span-columns( 4 );
+    }
+    @include media($md) {
+        @include span-columns( 4 );
+        @include omega( block );
+    }
+    margin: 0 auto;
+    width: 100%;
 
-	ul {
-		list-style: none;
+    ul {
+        list-style: none;
 
-		li {
-			list-style-type: square;
-		}
-	}
+        li {
+            list-style-type: square;
+        }
+    }
 }
 #secondary {
-	@include media($sm) {
-		@include span-columns( 4 );
-		padding: 30px;
-	}
-	@include media($md) {
-		@include span-columns( 2 );
-		@include omega( block );
-	}
-	margin: 20px auto;
-	padding: 0 30px 0 0;
-	width: 100%;
+    @include media($sm) {
+        @include span-columns( 4 );
+        padding: 30px;
+    }
+    @include media($md) {
+        @include span-columns( 2 );
+        @include omega( block );
+    }
+    margin: 20px auto;
+    padding: 0 30px 0 0;
+    width: 100%;
 }

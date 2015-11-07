@@ -1,39 +1,39 @@
 .site-branding {
-	text-align: center;
-	.site-title {
-		font-family: $title;
-		padding: 40px;
+    text-align: center;
+    .site-title {
+        font-family: $title;
+        padding: 40px;
 
-		@include media($sm) {
-			@include fontSize(35px);
-		}
-		@include media($smbg) {
-			@include fontSize(55px);
-		}
-		@include media($md) {
-			@include fontSize(75px);
-		}
+        @include media($sm) {
+            @include fontSize(35px);
+        }
+        @include media($smbg) {
+            @include fontSize(55px);
+        }
+        @include media($md) {
+            @include fontSize(75px);
+        }
 
-		a,a:visited {
-			line-height: 1;
-		}
+        a,a:visited {
+            line-height: 1;
+        }
 
-	}
+    }
 
-	.site-description {
-		padding: 25px 0;
-		@include fontSize(20px);
+    .site-description {
+        padding: 25px 0;
+        @include fontSize(20px);
 
-		@include media($sm) {
-			@include fontSize(15px);
-		}
-		@include media($smbg) {
-			@include fontSize(18px);
-		}
-		@include media($md) {
-			@include fontSize(25px);
-		}
-		font-family: $content;
-		font-style: italic;
-	}
+        @include media($sm) {
+            @include fontSize(15px);
+        }
+        @include media($smbg) {
+            @include fontSize(18px);
+        }
+        @include media($md) {
+            @include fontSize(25px);
+        }
+        font-family: $content;
+        font-style: italic;
+    }
 }
