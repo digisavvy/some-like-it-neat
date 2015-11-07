@@ -105,7 +105,8 @@ nav.post-navigation{width:100%}.nav-links{width:100%}.sticky{background:#ededed}
 .alignleft{display:inline;float:right;margin-left:1.5em}.alignright{display:inline;float:left;margin-right:1.5em}
 .sticky{float:right;padding:20px}#breadcrumbs{font-size:14px;font-size:.875rem;font-family:"Georgia","Cambria","Times New Roman","Times",serif;padding:20px 0 20px 50px}
 .page-content img.wp-smiley,.entry-content img.wp-smiley,.comment-content img.wp-smiley{border:0;margin-bottom:0;margin-top:0;padding:0}
-.wp-caption{border:1px solid #ccc;clear:both;margin-bottom:1.5em;max-width:100%}.wp-caption img[class*="wp-image-"]{display:block;margin:1.2% auto 0;max-width:98%}
+.wp-caption{border:1px solid #ededed;clear:both;margin-bottom:1.5em;max-width:100%}
+.wp-caption img[class*="wp-image-"]{display:block;margin:1.2% auto 0;max-width:98%}
 .wp-caption-text{text-align:center}.wp-caption .wp-caption-text{margin:.8075em 0}
 .site-main .gallery{margin-bottom:1.5em}.site-main .gallery a img{border:0;height:auto;max-width:90%}
 .site-main .gallery dd{margin:0}embed,iframe,object{max-width:100%}.comment-content a{word-wrap:break-word}
