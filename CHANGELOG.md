@@ -1,4 +1,12 @@
 # Changelog
+
+### 1.3.4
+-------------
+
+**Bugfixes:**
+* Resolve issue SLIN working with Node 4+
+* Replace gulp-combine-media-queries with gulp-group-css-media-queries
+
 ### 1.3.2
 -------------
 * Added html5 support for comments and forms
