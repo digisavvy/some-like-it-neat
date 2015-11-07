@@ -31,7 +31,6 @@ var imagemin     = require('gulp-imagemin');
 var rename       = require('gulp-rename');
 var concat       = require('gulp-concat');
 var notify       = require('gulp-notify');
-var gcmq         = require('gulp-group-css-media-queries');
 var runSequence  = require('gulp-run-sequence');
 var sass         = require('gulp-sass');
 var plugins      = require('gulp-load-plugins')({ camelize: true });
@@ -87,19 +86,19 @@ gulp.task('styles', function() {
       },
     }))
     .pipe(sourcemaps.init())
-      .pipe(sass({
-        errLogToConsole: true,
-        outputStyle: 'nested',
-        precision: 10,
-      }))
-    .pipe(sourcemaps.write({includeContent: false}))
-    .pipe(sourcemaps.init({loadMaps: true}))
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(sourcemaps.write('.'))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer(
+      'last 2 version',
+      'safari 5', 'ie 8',
+      'ie 9',
+      'opera 12.1',
+      'ios 6',
+      'android 4'
+    ))
+    .pipe(sourcemaps.write('../maps'))
     .pipe(plumber.stop())
     .pipe(gulp.dest(source + 'css'))
     .pipe(filter('**/*.css')) // Filtering stream to only css files
-    .pipe(gcmq())// Combines Media Queries
     .pipe(reload({stream:true})) // Inject Styles when style file is created
     .pipe(rename({ suffix: '-min' }))
     .pipe(minifycss({
