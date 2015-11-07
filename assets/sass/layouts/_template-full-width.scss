@@ -4,6 +4,7 @@
   #primary,
   #secondary {
     @include fill-parent;
+    margin: 0;
     padding: 0;
   }
 
