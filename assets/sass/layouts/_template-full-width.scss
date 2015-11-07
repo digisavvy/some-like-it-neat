@@ -1,11 +1,11 @@
 .page-template-page-templatestemplate-full-width-php {
 
-	#primary {
-		@include fill-parent;
-	}
-
-	#secondary {
-		@include fill-parent;
-	}
+  #main,
+  #primary,
+  #secondary {
+    @include fill-parent;
+    margin: 0;
+    padding: 0;
+  }
 
 }

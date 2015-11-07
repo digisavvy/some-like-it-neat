@@ -25,34 +25,33 @@ get_header(); ?>
 		 * If you want to override this in a child theme, then include a file
 		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 		 */
-		get_template_part( 'page-templates/partials/content', 'page' );
+		get_template_part( 'page-templates/template-parts/content', 'page' );
 	?>
 
 	<?php
 		// If comments are open or we have at least one comment, load up the comment template
-	if ( comments_open() || '0' != get_comments_number() ) :
-		comments_template();
+		if ( comments_open() || '0' != get_comments_number() ) :
+			comments_template();
 		endif;
 	?>
 
-		<?php
-endwhile; ?>
+		<?php endwhile; ?>
 
 		<?php else : ?>
 
-		<?php get_template_part( 'partials/content', 'none' ); ?>
+		<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php
 			// If comments are open or we have at least one comment, load up the comment template
-		if ( comments_open() || '0' != get_comments_number() ) :
-			comments_template();
+			if ( comments_open() || '0' != get_comments_number() ) :
+				comments_template();
 			endif;
-	?>
+		?>
 
-	<?php
-endif; ?>
+	<?php endif; ?>
 
 	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

@@ -16,7 +16,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 	function some_like_it_neat_setup()
 	{
 
-		/**
+	/**
 	 * Set the content width based on the theme's design and stylesheet.
 	 */
 		if ( ! isset( $content_width ) ) {
@@ -24,35 +24,47 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		}
 
 		/*
-        * Make theme available for translation.
-        * Translations can be filed in the /languages/ directory.
-        * If you're building a theme based on some_like_it_neat, use a find and replace
-        * to change 'some-like-it-neat' to the name of your theme in all the template files
-        */
+		* Make theme available for translation.
+		* Translations can be filed in the /languages/ directory.
+		* If you're building a theme based on some_like_it_neat, use a find and replace
+		* to change 'some-like-it-neat' to the name of your theme in all the template files
+		*/
 		load_theme_textdomain( 'some-like-it-neat', get_template_directory() . '/library/languages' );
 
-		// Add default posts and comments RSS feed links to head.
+		/**
+		* Add default posts and comments RSS feed links to head.
+		*/
 		add_theme_support( 'automatic-feed-links' );
 
+		/**
+		 * Enable HTML5 markup
+		 */
+		add_theme_support( 'html5', array(
+			'comment-list',
+			'search-form',
+			'comment-form',
+			'gallery',
+		) );
+
 		/*
-        * Enable support for Post Thumbnails on posts and pages.
-        *
-        * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
-        */
+		* Enable support for Post Thumbnails on posts and pages.
+		*
+		* @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		*/
 		add_theme_support( 'post-thumbnails' );
 
 		/*
-        * Enable title tag support for all posts.
-        *
-        * @link http://codex.wordpress.org/Title_Tag
-        */
+		* Enable title tag support for all posts.
+		*
+		* @link http://codex.wordpress.org/Title_Tag
+		*/
 		add_theme_support( 'title-tag' );
 
 		/*
-        * Add Editor Style for adequate styling in text editor.
-        *
-        * @link http://codex.wordpress.org/Function_Reference/add_editor_style
-        */
+		* Add Editor Style for adequate styling in text editor.
+		*
+		* @link http://codex.wordpress.org/Function_Reference/add_editor_style
+		*/
 		add_editor_style( '/assets/css/editor-style.css' );
 
 		// This theme uses wp_nav_menu() in one location.
@@ -60,7 +72,18 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 
 		// Enable support for Post Formats.
 		if ( 'yes' === get_theme_mod( 'some-like-it-neat_post_format_support' ) ) {
-			add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link', 'status', 'gallery', 'chat', 'audio' ) );
+			add_theme_support( 'post-formats',
+				array(
+					'aside',
+					'image', '
+					video',
+					'quote',
+					'link',
+					'status',
+					'gallery',
+					'chat',
+					'audio'
+				) );
 		}
 
 		// Enable Support for Jetpack Infinite Scroll
@@ -78,7 +101,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 
 			function some_like_it_neat_infinite_scroll_render() {
 				if ( have_posts() ) : while ( have_posts() ) : the_post();
-						get_template_part( 'page-templates/partials/content', get_post_format() );
+						get_template_part( 'page-templates/template-parts/content', get_post_format() );
 				endwhile;
 				endif;
 			}
@@ -95,38 +118,38 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		);
 
 		/**
-	 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
-	 */
-		include 'library/vendors/theme-hook-alliance/tha-theme-hooks.php' ;
+		* Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
+		*/
+		include get_template_directory() . '/library/vendors/theme-hook-alliance/tha-theme-hooks.php' ;
 
 		/**
-	 * WP Customizer
-	 */
+		* WP Customizer
+		*/
 		include get_template_directory() . '/library/vendors/customizer/customizer.php';
 
 		/**
-	 * Implement the Custom Header feature.
-	 */
+		* Implement the Custom Header feature.
+		*/
 		//require get_template_directory() . '/library/vendors/custom-header.php';
 
 		/**
-	 * Custom template tags for this theme.
-	 */
+		* Custom template tags for this theme.
+		*/
 		include get_template_directory() . '/library/vendors/template-tags.php';
 
 		/**
-	 * Custom functions that act independently of the theme templates.
-	 */
+		* Custom functions that act independently of the theme templates.
+		*/
 		include get_template_directory() . '/library/vendors/extras.php';
 
 		/**
-	 * Load Jetpack compatibility file.
-	 */
+		* Load Jetpack compatibility file.
+		*/
 		include get_template_directory() . '/library/vendors/jetpack.php';
 
 		/**
-	 * Including TGM Plugin Activation
-	 */
+		 * Including TGM Plugin Activation
+		 */
 		include_once get_template_directory() . '/library/vendors/tgm-plugin-activation/class-tgm-plugin-activation.php' ;
 
 		include_once get_template_directory() . '/library/vendors/tgm-plugin-activation/tgm-plugin-activation.php' ;
@@ -191,15 +214,27 @@ endif; // Enqueue scripts
 /**
  * Enqueue styles.
  */
+
 if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
+
 	function some_like_it_neat_styles() {
 		if ( SCRIPT_DEBUG || WP_DEBUG ) :
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style.css' );
-	  else :
-			wp_enqueue_style( 'some_like_it_neat-style',  get_template_directory_uri() . '/assets/css/style-min.css' );
-    endif;
+			wp_register_style(
+				'some_like_it_neat-style', // handle name
+				get_template_directory_uri() . '/assets/css/style.css', '', '1.2', 'screen'
+			);
+			wp_enqueue_style( 'some_like_it_neat-style' );
+
+			else :
+			wp_register_style(
+				'some_like_it_neat-style', // handle name
+				get_template_directory_uri() . '/assets/css/style-min.css', '', '1.2', 'screen'
+			);
+			wp_enqueue_style( 'some_like_it_neat-style' );
+		endif;
 	}
-  add_action( 'wp_enqueue_styles', 'some_like_it_neat_styles' );
+  add_action( 'wp_enqueue_scripts', 'some_like_it_neat_styles' );
+
 endif; // Enqueue styles
 
 /**
@@ -227,20 +262,20 @@ if ( ! function_exists( 'dg_add_flexnav' ) ) :
 	function dg_add_flexnav()
 	{
 	?>
-			<script>
-				// Init Flexnav Menu
-				jQuery(document).ready(function($){
-					$(".flexnav").flexNav({
-						'animationSpeed' : 250, // default drop animation speed
-						'transitionOpacity': true, // default opacity animation
-							'buttonSelector': '.menu-button', // default menu button class
-							'hoverIntent': true, // use with hoverIntent plugin
-							'hoverIntentTimeout': 350, // hoverIntent default timeout
-							'calcItemWidths': false // dynamically calcs top level nav item widths
-						});
+		<script>
+			// Init Flexnav Menu
+			jQuery(document).ready(function($){
+				$(".flexnav").flexNav({
+					'animationSpeed' : 250, // default drop animation speed
+					'transitionOpacity': true, // default opacity animation
+					'buttonSelector': '.menu-button', // default menu button class
+					'hoverIntent': true, // use with hoverIntent plugin
+					'hoverIntentTimeout': 350, // hoverIntent default timeout
+					'calcItemWidths': false // dynamically calcs top level nav item widths
 				});
-			</script>
-			<?php
+			});
+		</script>
+	<?php
 	}
 	add_action( 'wp_footer', 'dg_add_flexnav' );
 endif;
@@ -273,37 +308,6 @@ add_action( 'tha_entry_after', 'some_like_it_neat_post_navigation' );
 /**
  * Custom Hooks and Filters
  */
-if ( ! function_exists( 'some_like_it_neat_add_breadcrumbs' ) ) :
-	function some_like_it_neat_add_breadcrumbs()
-	{
-		if ( ! is_front_page() ) {
-			if ( function_exists( 'HAG_Breadcrumbs' ) ) { HAG_Breadcrumbs(
-				array(
-				'prefix'     => __( 'You are here: ', 'some-like-it-neat' ),
-				'last_link'  => true,
-				'separator'  => '|',
-				'excluded_taxonomies' => array(
-				'post_format'
-				),
-				'taxonomy_excluded_terms' => array(
-				'category' => array( 'uncategorized' )
-				),
-				'post_types' => array(
-				'gizmo' => array(
-				'last_show'          => false,
-				'taxonomy_preferred' => 'category',
-				),
-				'whatzit' => array(
-				'separator' => '&raquo;',
-				)
-				)
-				)
-			);
-			}
-		}
-	}
-	add_action( 'tha_content_top', 'some_like_it_neat_add_breadcrumbs' );
-endif;
 
 if ( ! function_exists( 'some_like_it_neat_optional_scripts' ) ) :
 	function some_like_it_neat_optional_scripts()
@@ -320,22 +324,22 @@ if ( ! function_exists( 'some_like_it_neat_optional_scripts' ) ) :
 endif;
 
 if ( ! function_exists( 'some_like_it_neat_mobile_styles' ) ) :
-	function some_like_it_neat_mobile_styles()
-	{
+	function some_like_it_neat_mobile_styles() {
+
 		$value = get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' );
 
 		if ( 0 == get_theme_mod( 'some_like_it_neat_mobile_hide_arrow' ) ) { ?>
-								<style>
-								.menu-button i.navicon {
-									display: none;
-								}
-								</style>
-							<?php
-		} else {
+			<style>
+				.menu-button i.navicon {
+					display: none;
+				}
+			</style>
+		<?php } else {
 
 		}
 	}
 	add_action( 'wp_head', 'some_like_it_neat_mobile_styles' );
+
 endif;
 
 if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
@@ -345,7 +349,6 @@ if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
 
 			<div class="footer-left">
 				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_left', __( '&copy; All Rights Reserved', 'some-like-it-neat' ) ) ); ?>
-
 			</div>
 			<div class="footer-right">
 				<?php echo esc_attr( get_theme_mod( 'some_like_it_neat_footer_right', 'Footer Content Right' ) );  ?>
@@ -353,16 +356,14 @@ if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
 		<?php
 	}
 	add_action( 'tha_footer_bottom', 'some_like_it_neat_add_footer_divs' );
+
 endif;
 
-add_action( 'tha_head_bottom', 'some_like_it_neat_add_selectivizr' );
-function some_like_it_neat_add_selectivizr()
-{
-	?>
-	<!--[if (gte IE 6)&(lte IE 8)]>
-  		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
-  		<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" /></noscript>
-	<![endif]-->
-<?php
-}
+function some_like_it_neat_add_selectivizr() { 	?>
 
+	<!--[if (gte IE 6)&(lte IE 8)]>
+		<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/selectivizr/selectivizr-min.js"></script>
+		<noscript><link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css" /></noscript>
+	<![endif]-->
+<?php }
+add_action( 'tha_head_bottom', 'some_like_it_neat_add_selectivizr' );

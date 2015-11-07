@@ -10,8 +10,11 @@
 <!DOCTYPE html>
 <?php tha_html_before(); ?>
 <html <?php language_attributes(); ?>>
+
 <head>
+
     <?php tha_head_top(); ?>
+
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
@@ -30,16 +33,19 @@
 
 <body <?php body_class(); ?>>
 <?php tha_body_top(); ?>
+
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'some-like-it-neat' ); ?></a>
 
 		<?php tha_header_before(); ?>
 		<header id="masthead" class="site-header wrap" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
 		<?php tha_header_top(); ?>
-			<div class="site-branding">
+
+			<section class="site-branding">
 				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 				<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-			</div>
+			</section>
 
 			<nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 				<button class="menu-button">
@@ -56,11 +62,13 @@
 				?>
 
 			</nav><!-- #site-navigation -->
+
 			<?php tha_header_bottom(); ?>
 
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
 
 		<?php tha_content_before(); ?>
+
 		<main id="main" class="site-main wrap" role="main">
 			<?php tha_content_top(); ?>
