@@ -79,7 +79,11 @@ body{background-color:#fff;color:#000;font-family:"Georgia","Cambria","Times New
 @media screen and (min-width:0){.site-branding .site-description{font-size:15px;font-size:.9375rem}
 }@media screen and (min-width:480px){.site-branding .site-description{font-size:18px;font-size:1.125rem}
 }@media screen and (min-width:768px){.site-branding .site-description{font-size:25px;font-size:1.5625rem}
+<<<<<<< HEAD
 }.flexnav{overflow:hidden;margin:0 auto;width:100%;max-height:0;-webkit-tranåsition:all .5s ease-in-out,width 0,height 0,top 0,left 0;transition:all .5s ease-in-out,width 0,height 0,top 0,left 0;-webkit-transform-style:preserve-3d}
+=======
+}.flexnav{overflow:hidden;margin:0 auto;width:100%;max-height:0;transition:all .5s ease-in-out,width 0,height 0,top 0,left 0;-webkit-transform-style:preserve-3d}
+>>>>>>> development
 .flexnav.opacity{padding-left:0}.flexnav ul{padding-left:0}.flexnav.flexnav-show{max-height:2000px;transition:all .5s ease-in-out}
 .flexnav.one-page{position:fixed;top:50px;right:5%;max-width:200px}.flexnav li{font-size:100%;position:relative;overflow:hidden}
 .flexnav li a{position:relative;display:block;padding:.80em;z-index:2;overflow:hidden;color:#fff;background:#000;border-bottom:1px solid rgba(0,0,0,0.15);white-space:nowrap}
@@ -166,4 +170,8 @@ footer{float:left;margin:0 auto;padding:0 40px;width:100%}footer .site-info{marg
 footer .footer-left{float:left;display:block;margin-right:2.12766%;width:48.93617%;margin-bottom:40px;margin-top:30px;padding:10px;text-align:left}
 footer .footer-left:last-child{margin-right:0}footer .footer-right{float:left;display:block;margin-right:2.12766%;width:48.93617%;margin-top:30px;margin-bottom:40px;padding:10px;text-align:right}
 footer .footer-right:last-child{margin-right:0}.screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px}
+<<<<<<< HEAD
 .screen-reader-text:hover,.screen-reader-text:active,.screen-reader-text:focus{background-color:#ccc;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto;color:red;display:block;font-size:14px;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
+=======
+.screen-reader-text:hover,.screen-reader-text:active,.screen-reader-text:focus{top:5px;left:5px;z-index:100000;clip:auto;display:block;width:auto;height:auto;padding:15px 23px 14px;font-weight:bold;font-size:14px;text-decoration:none;line-height:normal;color:red;background-color:#ccc;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6)}
+>>>>>>> development
