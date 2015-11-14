@@ -5,7 +5,7 @@ Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
 Author URI: http://alexhasnicehair.com
 Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
-Version: 1.3.3
+Version: 1.3.4
 License: GNU General Public License
 License URI: license.txt
 Text Domain: some_like_it_neat
@@ -834,7 +834,7 @@ body {
       float: left;
       display: block;
       margin-right: 14.28571%;
-      width: 214.28571%; }
+      width: 100%; }
       #primary:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 768px) {
@@ -860,7 +860,7 @@ body {
       float: left;
       display: block;
       margin-right: 14.28571%;
-      width: 214.28571%;
+      width: 100%;
       padding: 30px; }
       #secondary:last-child {
         margin-right: 0; } }
@@ -1564,16 +1564,8 @@ footer {
     line-height: normal;
     padding: 15px 23px 14px;
     text-decoration: none;
-<<<<<<< HEAD
     top: 5px;
     width: auto;
     z-index: 100000; }
-=======
-    line-height: normal;
-    color: #f00;
-    background-color: #cccccc;
-    border-radius: 3px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); }
->>>>>>> development
 
 /*# sourceMappingURL=../maps/style.css.map */
