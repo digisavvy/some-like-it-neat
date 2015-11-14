@@ -3,6 +3,13 @@
 ### 1.3.4
 -------------
 
+**Features:**
+* Updated deprecated gulp-run-sequence - https://www.npmjs.com/package/run-sequence
+* Uncommented production and development js files by default.
+
+### 1.3.3
+-------------
+
 **Bugfixes:**
 * Resolve issue SLIN working with Node 4+
 * Replace gulp-combine-media-queries with gulp-group-css-media-queries
