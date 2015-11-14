@@ -38,7 +38,7 @@ html {
 	@include clearfix;
 
 	@include media($sm) {
-		@include span-columns( 4 );
+		@include span-columns( 2 );
 	}
 	@include media($md) {
 		@include span-columns( 4 );
@@ -57,7 +57,7 @@ html {
 }
 #secondary {
 	@include media($sm) {
-		@include span-columns( 4 );
+		@include span-columns( 2 );
 		padding: 30px;
 	}
 	@include media($md) {
