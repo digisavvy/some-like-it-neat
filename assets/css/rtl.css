@@ -653,11 +653,11 @@ ol:nth-child(n+2) {
     .entry-title {
       font-size: 40px;
       font-size: 2.5rem; } }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 30em) {
     .entry-title {
       font-size: 65px;
       font-size: 4.0625rem; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48em) {
     .entry-title {
       font-size: 100px;
       font-size: 6.25rem; } }
@@ -839,7 +839,7 @@ body {
       width: 100%; }
       #primary:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48em) {
     #primary {
       float: left;
       display: block;
@@ -866,7 +866,7 @@ body {
       padding: 30px; }
       #secondary:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48em) {
     #secondary {
       float: left;
       display: block;
@@ -888,11 +888,11 @@ body {
       .site-branding .site-title {
         font-size: 35px;
         font-size: 2.1875rem; } }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 30em) {
       .site-branding .site-title {
         font-size: 55px;
         font-size: 3.4375rem; } }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48em) {
       .site-branding .site-title {
         font-size: 75px;
         font-size: 4.6875rem; } }
@@ -908,11 +908,11 @@ body {
       .site-branding .site-description {
         font-size: 15px;
         font-size: 0.9375rem; } }
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: 30em) {
       .site-branding .site-description {
         font-size: 18px;
         font-size: 1.125rem; } }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48em) {
       .site-branding .site-description {
         font-size: 25px;
         font-size: 1.5625rem; } }
@@ -1200,7 +1200,7 @@ ul.nav-menu li {
     ul.nav-menu li {
       text-align: center;
       width: 100%; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48em) {
     ul.nav-menu li {
       text-align: none;
       width: inherit; } }
@@ -1384,7 +1384,7 @@ object {
   margin: 0;
   text-align: right; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .page-template-page-templatestemplate-left-col-php #main {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1399,7 +1399,7 @@ object {
     .page-template-page-templatestemplate-left-col-php #main #primary:last-child {
       margin-right: 0; } }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .page-template-page-templatestemplate-left-col-php #main #primary {
     float: left;
     display: block;
@@ -1421,7 +1421,7 @@ object {
       width: 214.28571%; }
       .page-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 48em) {
     .page-template-page-templatestemplate-left-col-php #main #secondary {
       float: left;
       display: block;
@@ -1452,7 +1452,7 @@ object {
       width: 214.28571%; }
       .page-template-page-templatestemplate-right-col-php #primary:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 0) and (min-width: 768px) {
+  @media screen and (min-width: 0) and (min-width: 48em) {
     .page-template-page-templatestemplate-right-col-php #primary {
       float: left;
       display: block;
@@ -1461,11 +1461,11 @@ object {
       .page-template-page-templatestemplate-right-col-php #primary:last-child {
         margin-right: 0; } }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48em) {
   .page-template-page-templatestemplate-right-col-php #secondary {
     float: left ;
     margin-left: 1.5%; } }
-  @media screen and (min-width: 768px) and (min-width: 0) {
+  @media screen and (min-width: 48em) and (min-width: 0) {
     .page-template-page-templatestemplate-right-col-php #secondary {
       float: left;
       display: block;
@@ -1473,7 +1473,7 @@ object {
       width: 214.28571%; }
       .page-template-page-templatestemplate-right-col-php #secondary:last-child {
         margin-right: 0; } }
-  @media screen and (min-width: 768px) and (min-width: 768px) {
+  @media screen and (min-width: 48em) and (min-width: 48em) {
     .page-template-page-templatestemplate-right-col-php #secondary {
       float: left;
       display: block;
