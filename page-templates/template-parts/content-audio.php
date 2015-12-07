@@ -14,8 +14,7 @@
 		<div class="entry-meta">
 			<span class="genericon genericon-time"></span> <?php some_like_it_neat_posted_on(); ?>
 		</div><!-- .entry-meta -->
-	<?php
-endif; ?>
+	<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
