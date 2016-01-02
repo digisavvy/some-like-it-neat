@@ -7,7 +7,6 @@
  * @package some_like_it_neat
  */
 
-
 get_header(); ?>
 
 	<section id="primary" class="content-area">
