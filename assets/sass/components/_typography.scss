@@ -24,115 +24,115 @@
 /* =Genericons and Dashicons
 -------------------------------------------------------------- */
 @mixin dashicons {
-	color: $icon-color;
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px/1 'Dashicons';
-	vertical-align: middle;
+    color: $icon-color;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 16px/1 'Dashicons';
+    vertical-align: middle;
 }
 
 @mixin genericons {
-	color: $icon-color;
-	display: inline-block;
-	-webkit-font-smoothing: antialiased;
-	font: normal 16px/1 'Genericons';
-	vertical-align: middle;
+    color: $icon-color;
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 16px/1 'Genericons';
+    vertical-align: middle;
 }
 
 /* =Typography
 -------------------------------------------------------------- */
 html {
-	font-size: 100%;
+    font-size: 100%;
 }
 
 body {
-	@include fontSize($base-font-size);
+    @include fontSize($base-font-size);
 }
 h1, h2, h3, h4, h5, h6 {
-	@include clearfix;
-	clear: both;
-	float: none;
-	line-height: 1.25em;
-	margin-bottom: 20px;
-	text-transform: uppercase;
+    @include clearfix;
+    clear: both;
+    float: none;
+    line-height: 1.25em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
 
 }
 h1 {
-	@include fontSize(75px);
-	color: $primary-font-color;
-	font-family: $title;
+    @include fontSize(75px);
+    color: $primary-font-color;
+    font-family: $title;
 }
 h2 {
-	@include fontSize(50px);
-	font-family: $title;
+    @include fontSize(50px);
+    font-family: $title;
 }
 h3 {
-	@include fontSize(35px);
-	font-family: $title;
+    @include fontSize(35px);
+    font-family: $title;
 }
 h4 {
-	@include fontSize(24px);
-	font-family: $title;
+    @include fontSize(24px);
+    font-family: $title;
 }
 h5 {
-	@include fontSize(20px);
-	font-family: $title;
+    @include fontSize(20px);
+    font-family: $title;
 }
 h6 {
-	@include fontSize(18px);
-	font-family: $title;
+    @include fontSize(18px);
+    font-family: $title;
 }
 blockquote {
-	background-color: darken($base-body-color, 3%);
-	@include border-left(solid 5px $link-color);
-	font-style: italic;
-	padding: 20px;
+    background-color: darken($base-body-color, 3%);
+    @include border-left(solid 5px $link-color);
+    font-style: italic;
+    padding: 20px;
 }
 cite {
-	font-style: italic;
+    font-style: italic;
 }
 strong, b {
-	color: $primary-font-color;
-	font-family: $title;
+    color: $primary-font-color;
+    font-family: $title;
 }
 a, a:visited {
-	@include transition (all 200ms ease-in-out);
-	color: $primary-font-color;
-	text-decoration: none;
+    @include transition (all 200ms ease-in-out);
+    color: $primary-font-color;
+    text-decoration: none;
 
-	&:hover {
-		@include transition (all 200ms ease-in-out);
-		color: $link-color;
+    &:hover {
+        @include transition (all 200ms ease-in-out);
+        color: $link-color;
     text-decoration: underline;
-	}
+    }
 }
 ul {
-	@extend %default-ul; // Adds browser default spacing back
-	&:nth-child(n+2) {
-		margin-bottom: 0;
-	}
+    @extend %default-ul; // Adds browser default spacing back
+    &:nth-child(n+2) {
+        margin-bottom: 0;
+    }
 }
 ol {
-	@extend %default-ol; // Adds browser default spacing back
-	&:nth-child(n+2) {
-		margin-bottom: 0;
-	}
+    @extend %default-ol; // Adds browser default spacing back
+    &:nth-child(n+2) {
+        margin-bottom: 0;
+    }
 }
 .entry-title {
-	font-family: $title;
-	text-align: center;
+    font-family: $title;
+    text-align: center;
 
-	@include media($sm) {
-		@include fontSize(40px);
-	}
-	@include media($smbg) {
-		@include fontSize(65px);
-	}
-	@include media($md) {
-		@include fontSize(100px);
-	}
+    @include media($sm) {
+        @include fontSize(40px);
+    }
+    @include media($smbg) {
+        @include fontSize(65px);
+    }
+    @include media($md) {
+        @include fontSize(100px);
+    }
 }
 #primary,
 #secondary {
-	font-family: $content;
+    font-family: $content;
 }

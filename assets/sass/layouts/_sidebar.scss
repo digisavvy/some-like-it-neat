@@ -3,22 +3,22 @@
 
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
-	display: none;
+    display: none;
 }
 
 /* =Widgets
 ----------------------------------------------- */
 
 .widget {
-	margin: 0 0 1.5em;
+    margin: 0 0 1.5em;
 }
 
-/* Make sure select elements fit in widgets */
+// Make sure select elements fit in widgets
 .widget select {
-	max-width: 100%;
+    max-width: 100%;
 }
 
-/* Search widget */
+// Search widget
 .widget_search .search-submit {
-	display: none;
+    display: none;
 }

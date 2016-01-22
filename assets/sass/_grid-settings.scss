@@ -14,10 +14,10 @@ $max-width:em(1140);
 
 // Breakpoints
 $sm: new-breakpoint(min-width 0 2);
-$smbg: new-breakpoint(min-width 480px 4);
-$md: new-breakpoint(min-width 768px 6);
-$mdbg: new-breakpoint(min-width 1024 8);
-$hg: new-breakpoint(min-width 1140px 12);
+$smbg: new-breakpoint(min-width em(480) 4);
+$md: new-breakpoint(min-width em(768) 6);
+$mdbg: new-breakpoint(min-width em(1024) 8);
+$hg: new-breakpoint(min-width em(1140) 12);
 
 // Breakpoints that only come into play when using patterns from http://refills.bourbon.io
 $medium-screen: em(640);

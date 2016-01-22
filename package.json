@@ -7,7 +7,6 @@
     "gulp-concat": "^2.5.2",
     "gulp-consolidate": "^0.1.2",
     "gulp-filter": "^3.0.1",
-    "gulp-group-css-media-queries": "^1.1.0",
     "gulp-imagemin": "^2.4.0",
     "gulp-jshint": "^1.9.4",
     "gulp-livereload": "^3.8.1",
