@@ -21,7 +21,6 @@ var themeBuild = ['**/*.php', 'page-templates/**/*.php', './style.css', './gulpf
 ******************************************************************************/
 var gulp         = require('gulp');
 var browserSync  = require('browser-sync');
-var phpcs        = require('gulp-phpcs');
 var reload       = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss    = require('gulp-uglifycss');
@@ -55,24 +54,6 @@ gulp.task('browser-sync', function() {
   browserSync.init(files, {
     proxy: url,
   });
-});
-
-/**
- * PHP Code Sniffer
- *
- * PHP Tasks
- *
- * phpcs --ignore='node_modules/*,vendor/*,*-min.css,assets/js/vendor/*,assets/bower_components/*,assets/css/*,*-min.js,assets/js/production.js' --standard=WordPress-Core .
- *
- */
-gulp.task('phpcs', function() {
-  return gulp.src(phpSource)
-    .pipe(phpcs({
-      bin: vendors + 'composer/bin/phpcs',
-      standard: 'WordPress-Core',
-    }))
-    .pipe(phpcs.reporter('log'))
-    .pipe(notify({message: 'phpcs task complete', onLast: true }));
 });
 
 /******************************************************************************
@@ -229,10 +210,9 @@ gulp.task('build', function(cb) {
 ******************************************************************************/
 
 // Watch Task
-gulp.task('default', ['styles', 'js', 'jsHint', 'images', 'browser-sync', 'phpcs'], function() {
+gulp.task('default', ['styles', 'js', 'jsHint', 'images', 'browser-sync'], function() {
   gulp.watch(source + 'sass/**/*.scss', ['styles']);
   gulp.watch(source + 'js/app/**/*.js', ['js', browserSync.reload]);
   gulp.watch(source + 'js/app/**/*.js', ['jsHint']);
   gulp.watch(source + 'img/**/*.{png,jpg,gif}', ['images']);
-  gulp.watch(phpSource, ['phpcs']);
 });
