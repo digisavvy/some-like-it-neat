@@ -640,6 +640,23 @@ a, a:visited {
     color: #f00;
     text-decoration: underline; }
 
+.entry-meta a, .entry-meta a:visited,
+.entry-content a,
+.entry-content a:visited,
+#secondary a,
+#secondary a:visited {
+  transition: all 200ms ease-in-out;
+  color: #f00;
+  text-decoration: none; }
+  .entry-meta a:hover, .entry-meta a:visited:hover,
+  .entry-content a:hover,
+  .entry-content a:visited:hover,
+  #secondary a:hover,
+  #secondary a:visited:hover {
+    transition: all 200ms ease-in-out;
+    color: #f00;
+    text-decoration: underline; }
+
 ul:nth-child(n+2) {
   margin-bottom: 0; }
 
