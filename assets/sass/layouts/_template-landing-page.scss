@@ -1,0 +1,11 @@
+.page-template-page-templatestemplate-landing-page-php {
+
+  #main,
+  #primary,
+  #secondary {
+    @include fill-parent;
+    margin: 0;
+    padding: 0;
+  }
+
+}
