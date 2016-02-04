@@ -19,25 +19,29 @@ var themeBuild = ['**/*.php', 'page-templates/**/*.php', './style.css', './gulpf
 /******************************************************************************
 | >   PLUGINS
 ******************************************************************************/
-var gulp         = require('gulp');
-var browserSync  = require('browser-sync');
-var reload       = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
-var minifycss    = require('gulp-uglifycss');
-var jshint       = require('gulp-jshint');
-var uglify       = require('gulp-uglify');
-var imagemin     = require('gulp-imagemin');
-var rename       = require('gulp-rename');
+var browserSync  = require('browser-sync');
 var concat       = require('gulp-concat');
+var del          = require('del');
+var filter       = require('gulp-filter');
+var gulp         = require('gulp');
+var imagemin     = require('gulp-imagemin');
+var jshint       = require('gulp-jshint');
+var minifycss    = require('gulp-uglifycss');
 var notify       = require('gulp-notify');
+var plugins      = require('gulp-load-plugins')({ camelize: true });
+var plumber      = require('gulp-plumber');
+var reload       = browserSync.reload;
+var rename       = require('gulp-rename');
+var replace      = require('gulp-replace');
 var runSequence  = require('gulp-run-sequence');
 var sass         = require('gulp-sass');
-var plugins      = require('gulp-load-plugins')({ camelize: true });
-var del          = require('del');
-var zip          = require('gulp-zip');
-var plumber      = require('gulp-plumber');
-var filter       = require('gulp-filter');
 var sourcemaps   = require('gulp-sourcemaps');
+var uglify       = require('gulp-uglify');
+var zip          = require('gulp-zip');
+
+
+
 
 /**
  * Browser Sync
@@ -78,6 +82,7 @@ gulp.task('styles', function() {
     ))
     .pipe(sourcemaps.write('../maps'))
     .pipe(plumber.stop())
+    .pipe(replace('@charset "UTF-8";', '')) // Removes UTF-8 Encoding string atop CSS files
     .pipe(gulp.dest(source + 'css'))
     .pipe(filter('**/*.css')) // Filtering stream to only css files
     .pipe(reload({stream:true})) // Inject Styles when style file is created
