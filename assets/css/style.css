@@ -1,4 +1,4 @@
-@charset "UTF-8";
+
 /*
 Theme Name: Some Like it Neat
 Theme URI: https://github.com/digisavvy/some-like-it-neat
@@ -633,11 +633,11 @@ strong, b {
 
 a, a:visited {
   transition: all 200ms ease-in-out;
-  color: #000;
+  color: #f00;
   text-decoration: none; }
   a:hover, a:visited:hover {
     transition: all 200ms ease-in-out;
-    color: #f00;
+    color: #cc0000;
     text-decoration: underline; }
 
 ul:nth-child(n+2) {
