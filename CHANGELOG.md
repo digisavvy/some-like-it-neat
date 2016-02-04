@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.3.5
+-------------
+* Added Full width landing page template. No sidebars, header, or footer
+
+**Bugfixes:**
+* Resolve UTF-8 char encoding output issue.
+
 ### 1.3.4
 -------------
 
