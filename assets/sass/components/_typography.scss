@@ -106,6 +106,22 @@ a, a:visited {
     text-decoration: underline;
     }
 }
+
+.entry-meta,
+.entry-content,
+#secondary {
+    a, a:visited {
+        @include transition (all 200ms ease-in-out);
+        color: $link-color;
+        text-decoration: none;
+
+        &:hover {
+            @include transition (all 200ms ease-in-out);
+            color: $link-color;
+            text-decoration: underline;
+        }
+    }
+}
 ul {
     @extend %default-ul; // Adds browser default spacing back
     &:nth-child(n+2) {
