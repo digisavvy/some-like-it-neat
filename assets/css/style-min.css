@@ -160,6 +160,7 @@ nav.post-navigation{width:100%}.nav-links{width:100%}@media screen and (min-widt
 }@media screen and (min-width:48em) and (min-width:48em){.page-template-page-templatestemplate-right-col-php #secondary{float:left;display:block;margin-right:4.34783%;width:30.43478%}
 .page-template-page-templatestemplate-right-col-php #secondary:last-child{margin-right:0}
 }.page-template-page-templatestemplate-full-width-php #main,.page-template-page-templatestemplate-full-width-php #primary,.page-template-page-templatestemplate-full-width-php #secondary{width:100%;margin:0;padding:0}
+.page-template-page-templatestemplate-landing-page-php #main,.page-template-page-templatestemplate-landing-page-php #primary,.page-template-page-templatestemplate-landing-page-php #secondary{width:100%;margin:0;padding:0}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .widget{margin:0 0 1.5em}.widget select{max-width:100%}.widget_search .search-submit{display:none}
 footer{float:left;margin:0 auto;padding:0 40px;width:100%}footer .site-info{margin:auto;width:100%}

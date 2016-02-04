@@ -1487,6 +1487,13 @@ object {
   margin: 0;
   padding: 0; }
 
+.page-template-page-templatestemplate-landing-page-php #main,
+.page-template-page-templatestemplate-landing-page-php #primary,
+.page-template-page-templatestemplate-landing-page-php #secondary {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
 /*--------------------------------------------------------------
     6.5 Sidebar
     --------------------------------------------------------------*/
