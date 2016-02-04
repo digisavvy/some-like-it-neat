@@ -633,11 +633,11 @@ strong, b {
 
 a, a:visited {
   transition: all 200ms ease-in-out;
-  color: #f00;
+  color: #000;
   text-decoration: none; }
   a:hover, a:visited:hover {
     transition: all 200ms ease-in-out;
-    color: #cc0000;
+    color: #f00;
     text-decoration: underline; }
 
 ul:nth-child(n+2) {
