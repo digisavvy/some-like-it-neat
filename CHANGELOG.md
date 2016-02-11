@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.3.6
+-------------
+* Cleanup some redundancies in the scripts we include. Thanks @bryanwillis (https://github.com/bryanwillis)
+
 ### 1.3.5
 -------------
 * Added Full width landing page template. No sidebars, header, or footer
