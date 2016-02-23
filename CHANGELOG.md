@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.3.7
+-------------
+* Added  x-ua-compatible for improved legacy browser support. Thanks to @bryanwillis for that PR. =) 
+
 ### 1.3.6
 -------------
 * Cleanup some redundancies in the scripts we include. Thanks @bryanwillis (https://github.com/bryanwillis)
