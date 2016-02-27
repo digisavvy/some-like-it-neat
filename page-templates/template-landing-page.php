@@ -8,7 +8,7 @@
  * @package some_like_it_neat
  */
 
-get_header( 'page-templates/template-parts/landing' ); ?>
+get_template_part( 'page-templates/template-parts/header', 'landing' ); ?>
 
  <div id="primary" class="content-area">
 
@@ -20,4 +20,4 @@ get_header( 'page-templates/template-parts/landing' ); ?>
 
  </div><!-- #primary -->
 
- <?php get_footer( 'page-templates/template-parts/landing' ); ?>
+ <?php get_template_part( 'page-templates/template-parts/footer', 'landing' ); ?>
