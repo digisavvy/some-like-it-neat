@@ -169,8 +169,8 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 		wp_enqueue_script( 'modernizr-js' );
 
 		wp_register_script( 'selectivizr-js', get_template_directory_uri() . '/assets/js/vendor/selectivizr/selectivizr.js', array( 'jquery' ), '1.0.2b', false );
-		wp_enqueue_script( 'selectivizr' );
-  		wp_script_add_data( 'selectivizr', 'conditional', '(gte IE 6)&(lte IE 8)' );
+		wp_enqueue_script( 'selectivizr-js' );
+  		wp_script_add_data( 'selectivizr-js', 'conditional', '(gte IE 6)&(lte IE 8)' );
 
 		wp_register_script( 'flexnav-js', get_template_directory_uri() . '/assets/js/vendor/flexnav/jquery.flexnav.js', array( 'jquery' ), '1.3.3', true );
 		wp_enqueue_script( 'flexnav-js' );
