@@ -130,7 +130,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		/**
 		* Implement the Custom Header feature.
 		*/
-		//require get_template_directory() . '/library/vendors/custom-header.php';
+		//require get_template_directory() . '/library/vendors/custom-header.php'
 
 		/**
 		* Custom template tags for this theme.
@@ -343,3 +343,14 @@ if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
 	add_action( 'tha_footer_bottom', 'some_like_it_neat_add_footer_divs' );
 
 endif;
+
+// Prevent Auto br tags from being generated.
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
+function wpse_wpautop_nobr( $content ) {
+	return wpautop( $content, false );
+}
+
+add_filter( 'the_content', 'wpse_wpautop_nobr' );
+add_filter( 'the_excerpt', 'wpse_wpautop_nobr' );
