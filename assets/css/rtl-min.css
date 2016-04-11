@@ -121,7 +121,9 @@ body{background-color:#fff;color:#000;font-family:"Georgia","Cambria","Times New
 .menu-main-menu-container li.current-menu-item{background-color:#f3f3f3;display:block}
 ul.nav-menu li.current_page_item{background:#f3f3f3}#primary-nav{float:right;max-width:100%;width:100%}
 nav.post-navigation{width:100%}.nav-links{width:100%}@media screen and (min-width:0){.nav-links .nav-previous{float:left;display:block;margin-right:14.28571%;width:100%;margin-right:0}
+.nav-links .nav-previous:last-child{margin-right:0}}@media screen and (min-width:48em){.nav-links .nav-previous{float:left;display:block;margin-right:4.34783%;width:47.82609%}
 .nav-links .nav-previous:last-child{margin-right:0}}@media screen and (min-width:0){.nav-links .nav-next{float:left;display:block;margin-right:14.28571%;width:100%;margin-right:0}
+.nav-links .nav-next:last-child{margin-right:0}}@media screen and (min-width:48em){.nav-links .nav-next{float:left;display:block;margin-right:4.34783%;width:47.82609%}
 .nav-links .nav-next:last-child{margin-right:0}}.sticky{background:#ededed}.gallery-caption{list-style:none}
 .bypostauthor{list-style:none}.hentry{margin:0 0 1.5em}.byline,.updated{display:none}
 .single .byline,.group-blog .byline{display:inline}.page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
