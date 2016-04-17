@@ -32,24 +32,23 @@ button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],inpu
 input[type="search"]{-webkit-appearance:textfield;box-sizing:content-box}
 input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}
-table{border-collapse:collapse;border-spacing:0}html{font-size:100%}body{font-size:20px;font-size:1.25rem}
-h1,h2,h3,h4,h5,h6{clear:both;float:none;line-height:1.25em;margin-bottom:20px;text-transform:uppercase}
+table{border-collapse:collapse;border-spacing:0}#breadcrumbs{font-size:.875rem;font-family:"Georgia","Cambria","Times New Roman","Times",serif;padding:20px 0 20px 50px}
+html{font-size:62.5%}body{font-size:16px}h1,h2,h3,h4,h5,h6{clear:both;float:none;line-height:1.25em;margin-bottom:20px;text-transform:uppercase}
 h1::after,h2::after,h3::after,h4::after,h5::after,h6::after{clear:both;content:"";display:table}
-h1{font-size:75px;font-size:4.6875rem;color:#000;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
-h2{font-size:50px;font-size:3.125rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
-h3{font-size:35px;font-size:2.1875rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
-h4{font-size:24px;font-size:1.5rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
-h5{font-size:20px;font-size:1.25rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
-h6{font-size:18px;font-size:1.125rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
+h1{font-size:4.6875rem;color:#000;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
+h2{font-size:3.125rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
+h3{font-size:2.1875rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
+h4{font-size:1.5rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
+h5{font-size:1.25rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
+h6{font-size:1rem;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
 blockquote{background-color:#f7f7f7;border-left:solid 5px red;font-style:italic;padding:20px}
 cite{font-style:italic}strong,b{color:#000;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif}
 a,a:visited{transition:all 200ms ease-in-out;color:#000;text-decoration:none}a:hover,a:visited:hover{transition:all 200ms ease-in-out;color:red;text-decoration:underline}
 .entry-meta a,.entry-meta a:visited,.entry-content a,.entry-content a:visited,#secondary a,#secondary a:visited{transition:all 200ms ease-in-out;color:red;text-decoration:none}
 .entry-meta a:hover,.entry-meta a:visited:hover,.entry-content a:hover,.entry-content a:visited:hover,#secondary a:hover,#secondary a:visited:hover{transition:all 200ms ease-in-out;color:red;text-decoration:underline}
 ul:nth-child(n+2){margin-bottom:0}ol:nth-child(n+2){margin-bottom:0}.entry-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;text-align:center}
-@media screen and (min-width:0){.entry-title{font-size:40px;font-size:2.5rem}}@media screen and (min-width:30em){.entry-title{font-size:65px;font-size:4.0625rem}
-}@media screen and (min-width:48em){.entry-title{font-size:100px;font-size:6.25rem}
-}#primary,#secondary{font-family:"Georgia","Cambria","Times New Roman","Times",serif}
+@media screen and (min-width:0){.entry-title{font-size:2.5rem}}@media screen and (min-width:30em){.entry-title{font-size:4.0625rem}
+}@media screen and (min-width:48em){.entry-title{font-size:6.25rem}}#primary,#secondary{font-family:"Georgia","Cambria","Times New Roman","Times",serif}
 #submit{background:#000;border:solid 5px #555;border-radius:0;box-shadow:none;clear:both;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;margin:10px 0;padding:20px;transition:all 200ms ease-in-out}
 #submit:focus{background:black;border:solid 5px #222;border-radius:0;box-shadow:none;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;padding:20px}
 #submit:hover{background:black;border:solid 5px #222;border-radius:0;box-shadow:none;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;padding:20px}
@@ -73,14 +72,13 @@ body{background-color:#fff;color:#000;font-family:"Georgia","Cambria","Times New
 #secondary{margin:20px auto;padding:0 30px 0 0;width:100%}@media screen and (min-width:0){#secondary{float:left;display:block;margin-right:14.28571%;width:100%;padding:30px}
 #secondary:last-child{margin-right:0}}@media screen and (min-width:48em){#secondary{float:left;display:block;margin-right:4.34783%;width:30.43478%;margin-right:0}
 #secondary:last-child{margin-right:0}}.site-branding{text-align:center}.site-branding .site-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;padding:40px}
-@media screen and (min-width:0){.site-branding .site-title{font-size:35px;font-size:2.1875rem}
-}@media screen and (min-width:30em){.site-branding .site-title{font-size:55px;font-size:3.4375rem}
-}@media screen and (min-width:48em){.site-branding .site-title{font-size:75px;font-size:4.6875rem}
+@media screen and (min-width:0){.site-branding .site-title{font-size:2.1875rem}}@media screen and (min-width:30em){.site-branding .site-title{font-size:3.4375rem}
+}@media screen and (min-width:48em){.site-branding .site-title{font-size:4.6875rem}
 }.site-branding .site-title a,.site-branding .site-title a:visited{line-height:1}
-.site-branding .site-description{padding:25px 0;font-size:20px;font-size:1.25rem;font-family:"Georgia","Cambria","Times New Roman","Times",serif;font-style:italic}
-@media screen and (min-width:0){.site-branding .site-description{font-size:15px;font-size:.9375rem}
-}@media screen and (min-width:30em){.site-branding .site-description{font-size:18px;font-size:1.125rem}
-}@media screen and (min-width:48em){.site-branding .site-description{font-size:25px;font-size:1.5625rem}
+.site-branding .site-description{padding:25px 0;font-size:1.25rem;font-family:"Georgia","Cambria","Times New Roman","Times",serif;font-style:italic}
+@media screen and (min-width:0){.site-branding .site-description{font-size:.9375rem}
+}@media screen and (min-width:30em){.site-branding .site-description{font-size:1.125rem}
+}@media screen and (min-width:48em){.site-branding .site-description{font-size:1.5625rem}
 }.flexnav{overflow:hidden;margin:0 auto;width:100%;max-height:0;-webkit-tranåsition:all .5s ease-in-out,width 0,height 0,top 0,left 0;transition:all .5s ease-in-out,width 0,height 0,top 0,left 0;-webkit-transform-style:preserve-3d}
 .flexnav.opacity{padding-left:0}.flexnav ul{padding-left:0}.flexnav.flexnav-show{max-height:2000px;transition:all .5s ease-in-out}
 .flexnav.one-page{position:fixed;top:50px;right:5%;max-width:200px}.flexnav li{font-size:100%;position:relative;overflow:hidden}
@@ -129,8 +127,7 @@ nav.post-navigation{width:100%}.nav-links{width:100%}@media screen and (min-widt
 .page-links{clear:both;margin:0 0 1.5em}.aligncenter{float:none;margin-top:.5em;margin-right:auto !important;margin-bottom:.5em;margin-left:auto !important}
 .aligncenter::after{clear:both;content:"";display:table}
 .alignleft{display:inline;float:left;margin-right:1.5em}.alignright{display:inline;float:right;margin-left:1.5em}
-.sticky{float:left;padding:20px}#breadcrumbs{font-size:14px;font-size:.875rem;font-family:"Georgia","Cambria","Times New Roman","Times",serif;padding:20px 0 20px 50px}
-.page-content img.wp-smiley,.entry-content img.wp-smiley,.comment-content img.wp-smiley{border:0;margin-bottom:0;margin-top:0;padding:0}
+.sticky{float:left;padding:20px}.page-content img.wp-smiley,.entry-content img.wp-smiley,.comment-content img.wp-smiley{border:0;margin-bottom:0;margin-top:0;padding:0}
 .wp-caption{border:1px solid #ededed;clear:both;margin-bottom:1.5em;max-width:100%}
 .wp-caption img[class*="wp-image-"]{display:block;margin:1.2% auto 0;max-width:98%}
 .wp-caption-text{text-align:center}.wp-caption .wp-caption-text{margin:.8075em 0}
