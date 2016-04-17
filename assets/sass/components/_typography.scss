@@ -5,21 +5,14 @@
  * PX to Rem Sizing
  *
  * How to use
- * @include fontSize(20px);
+ * font-size: rem(20);
  *
  * Ouputs —
  * font-size: 20px;
  * font-size: 1.25rem;
  */
-@function calculateRem($size) {
-  $remSize: $size / 16px;
-  @return #{$remSize}rem;
-}
 
-@mixin fontSize($size) {
-  font-size: $size; //Fallback in px
-  font-size: calculateRem($size);
-}
+$em-base: 16px;
 
 /* =Genericons and Dashicons
 -------------------------------------------------------------- */
@@ -39,14 +32,22 @@
     vertical-align: middle;
 }
 
+/* =Breadcrumbs
+----------------------------------------------- */
+#breadcrumbs {
+  font-size: rem(14);
+  font-family: $content;
+  padding: 20px 0 20px 50px;
+}
+
 /* =Typography
 -------------------------------------------------------------- */
 html {
-    font-size: 100%;
+  font-size: 62.5%;
 }
 
 body {
-    @include fontSize($base-font-size);
+    font-size: $em-base;
 }
 h1, h2, h3, h4, h5, h6 {
     @include clearfix;
@@ -58,28 +59,28 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 h1 {
-    @include fontSize(75px);
+    font-size: rem(75);
     color: $primary-font-color;
     font-family: $title;
 }
 h2 {
-    @include fontSize(50px);
+    font-size: rem(50);
     font-family: $title;
 }
 h3 {
-    @include fontSize(35px);
+    font-size: rem(35);
     font-family: $title;
 }
 h4 {
-    @include fontSize(24px);
+    font-size: rem(24);
     font-family: $title;
 }
 h5 {
-    @include fontSize(20px);
+    font-size: rem(20);
     font-family: $title;
 }
 h6 {
-    @include fontSize(18px);
+    font-size: rem(16);
     font-family: $title;
 }
 blockquote {
@@ -139,13 +140,13 @@ ol {
     text-align: center;
 
     @include media($sm) {
-        @include fontSize(40px);
+        font-size: rem(40);
     }
     @include media($smbg) {
-        @include fontSize(65px);
+        font-size: rem(65);
     }
     @include media($md) {
-        @include fontSize(100px);
+        font-size: rem(100);
     }
 }
 #primary,

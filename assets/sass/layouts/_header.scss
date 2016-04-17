@@ -5,13 +5,13 @@
         padding: 40px;
 
         @include media($sm) {
-            @include fontSize(35px);
+            font-size: rem(35);
         }
         @include media($smbg) {
-            @include fontSize(55px);
+            font-size: rem(55);
         }
         @include media($md) {
-            @include fontSize(75px);
+            font-size: rem(75);
         }
 
         a,a:visited {
@@ -22,16 +22,16 @@
 
     .site-description {
         padding: 25px 0;
-        @include fontSize(20px);
+        font-size: rem(20);
 
         @include media($sm) {
-            @include fontSize(15px);
+            font-size: rem(15);
         }
         @include media($smbg) {
-            @include fontSize(18px);
+            font-size: rem(18);
         }
         @include media($md) {
-            @include fontSize(25px);
+            font-size: rem(25);
         }
         font-family: $content;
         font-style: italic;

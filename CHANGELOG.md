@@ -4,6 +4,7 @@
 -------------
 **Features**
 * Added  x-ua-compatible for improved legacy browser support. Thanks to @bryanwillis for that PR. =)
+* Change - Using Bourbon's px to rem function  instead of the custom function I had been using
 
 **Bugfixes**
 * Fixed issue with development.js script. The .min suffix was getting added after a recent update. I fixed that and re-enabled conditional loading of production-min.js and development.js

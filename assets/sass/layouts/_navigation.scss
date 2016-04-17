@@ -80,11 +80,17 @@ nav.post-navigation {
             @include span-columns( 2 );
             @include omega( block );
         }
+        @include media($md) {
+            @include span-columns(3);
+        }
     }
     .nav-next {
         @include media($sm) {
             @include span-columns( 2 );
             @include omega( block );
+        }
+        @include media($md) {
+            @include span-columns(3);
         }
     }
 }
