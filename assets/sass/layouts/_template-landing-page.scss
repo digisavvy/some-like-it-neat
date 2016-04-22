@@ -8,4 +8,8 @@
     padding: 0;
   }
 
+  #page {
+    @include outer-container(100%);
+  }
+
 }
