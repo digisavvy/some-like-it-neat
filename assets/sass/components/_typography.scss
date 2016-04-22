@@ -9,10 +9,9 @@
  *
  * Ouputs —
  * font-size: 20px;
- * font-size: 1.25rem;
  */
 
-$em-base: 16px;
+$em-base: $base-font-size;
 
 /* =Genericons and Dashicons
 -------------------------------------------------------------- */
