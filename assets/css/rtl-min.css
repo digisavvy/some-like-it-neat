@@ -163,6 +163,8 @@ nav.post-navigation{width:100%}.nav-links{width:100%}@media screen and (min-widt
 .page-template-page-templatestemplate-right-col-php #secondary:last-child{margin-right:0}
 }.page-template-page-templatestemplate-full-width-php #main,.page-template-page-templatestemplate-full-width-php #primary,.page-template-page-templatestemplate-full-width-php #secondary{width:100%;margin:0;padding:0}
 .page-template-page-templatestemplate-landing-page-php #main,.page-template-page-templatestemplate-landing-page-php #primary,.page-template-page-templatestemplate-landing-page-php #secondary{width:100%;margin:0;padding:0}
+.page-template-page-templatestemplate-landing-page-php #page{max-width:100%;margin-left:auto;margin-right:auto}
+.page-template-page-templatestemplate-landing-page-php #page::after{clear:both;content:"";display:table}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .widget{margin:0 0 1.5em}.widget select{max-width:100%}.widget_search .search-submit{display:none}
 footer{float:right;margin:0 auto;padding:0 40px;width:100%}footer .site-info{margin:auto;width:100%}
