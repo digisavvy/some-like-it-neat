@@ -11,5 +11,12 @@
   #page {
     @include outer-container(100%);
   }
-  
+  .site-main [class*="navigation"],
+  #comments,
+  footer,
+  #primary-nav {
+	  @include outer-container;
+	  float: none;
+  }
+
 }
