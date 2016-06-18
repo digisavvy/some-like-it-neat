@@ -118,6 +118,15 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		);
 
 		/**
+		* Including CMB2 (https://github.com/WebDevStudios/CMB2).
+		*/
+		if ( file_exists(  __DIR__ . '/library/vendors/cmb2/init.php' ) ) {
+		  require_once  __DIR__ . '/library/vendors/cmb2/init.php';
+		} elseif ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) {
+		  require_once  __DIR__ . '/CMB2/init.php';
+		}
+
+		/**
 		* Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
 		*/
 		include get_template_directory() . '/library/vendors/theme-hook-alliance/tha-theme-hooks.php' ;
