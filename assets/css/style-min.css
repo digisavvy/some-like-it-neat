@@ -137,6 +137,13 @@ nav.post-navigation{width:100%}.nav-links{width:100%}@media screen and (min-widt
 .infinity-end.neverending .site-footer{display:block}#content .entry-content a,#content .entry-content a:visited{text-decoration:underline}
 #content .entry-content a:hover,#content .entry-content a:visited:hover{text-decoration:none}
 #content .entry-meta a,#content .entry-meta a:visited{text-decoration:underline}#content .entry-meta a:hover,#content .entry-meta a:visited:hover{text-decoration:none}
+.gallery{margin-bottom:1.6em}.gallery-item{display:inline-block;padding:1.79104477%;text-align:center;vertical-align:top;width:100%}
+.gallery-columns-2 .gallery-item{max-width:50%}.gallery-columns-3 .gallery-item{max-width:33.33%}
+.gallery-columns-4 .gallery-item{max-width:25%}.gallery-columns-5 .gallery-item{max-width:20%}
+.gallery-columns-6 .gallery-item{max-width:16.66%}.gallery-columns-7 .gallery-item{max-width:14.28%}
+.gallery-columns-8 .gallery-item{max-width:12.5%}.gallery-columns-9 .gallery-item{max-width:11.11%}
+.gallery-icon img{margin:0 auto}.gallery-caption{color:#707070;color:rgba(51,51,51,0.7);display:block;font-family:"Noto Sans",sans-serif;font-size:12px;font-size:1.2rem;line-height:1.5;padding:.5em 0}
+.gallery-columns-6 .gallery-caption,.gallery-columns-7 .gallery-caption,.gallery-columns-8 .gallery-caption,.gallery-columns-9 .gallery-caption{display:none}
 .page-template-page-templatestemplate-left-col-php h1.entry-title{margin:0;text-align:left}
 @media screen and (min-width:48em){.page-template-page-templatestemplate-left-col-php #main{display:-webkit-flex;display:-ms-flexbox;display:flex}
 }@media screen and (min-width:0){.page-template-page-templatestemplate-left-col-php #main #primary{float:left;display:block;margin-right:14.28571%;width:214.28571%}
@@ -163,6 +170,8 @@ nav.post-navigation{width:100%}.nav-links{width:100%}@media screen and (min-widt
 }.page-template-page-templatestemplate-full-width-php #main,.page-template-page-templatestemplate-full-width-php #primary,.page-template-page-templatestemplate-full-width-php #secondary{width:100%;margin:0;padding:0}
 .page-template-page-templatestemplate-full-width-php #page{max-width:100%;margin-left:auto;margin-right:auto}
 .page-template-page-templatestemplate-full-width-php #page::after{clear:both;content:"";display:table}
+.page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"],.page-template-page-templatestemplate-full-width-php #comments,.page-template-page-templatestemplate-full-width-php footer,.page-template-page-templatestemplate-full-width-php #primary-nav{max-width:71.25em;margin-left:auto;margin-right:auto;float:none}
+.page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"]::after,.page-template-page-templatestemplate-full-width-php #comments::after,.page-template-page-templatestemplate-full-width-php footer::after,.page-template-page-templatestemplate-full-width-php #primary-nav::after{clear:both;content:"";display:table}
 .page-template-page-templatestemplate-landing-page-php #main,.page-template-page-templatestemplate-landing-page-php #primary,.page-template-page-templatestemplate-landing-page-php #secondary{width:100%;margin:0;padding:0}
 .page-template-page-templatestemplate-landing-page-php #page{max-width:100%;margin-left:auto;margin-right:auto}
 .page-template-page-templatestemplate-landing-page-php #page::after{clear:both;content:"";display:table}
