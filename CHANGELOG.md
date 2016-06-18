@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.3.8
+-------------
+**Bugfixes**
+* Change - Full width template changed so that nav, footer, comments sections were fixed-width. Only content area is full-width now. 
+
 ### 1.3.7
 -------------
 **Features**
