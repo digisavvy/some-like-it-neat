@@ -1588,6 +1588,9 @@ object {
     content: "";
     display: table; }
 
+.page-template-page-templatestemplate-landing-page-php .entry-content {
+  margin: 0 !important; }
+
 /*--------------------------------------------------------------
     6.5 Sidebar
     --------------------------------------------------------------*/
