@@ -70,46 +70,6 @@
 
  }
 
-add_action( 'wp_head', 'testing_this' );
-function testing_this() {
-	//retrieve metadata value if it exists
-	$key = 'some_like_it_neat_expire_post';
-	$expire_date = get_post_meta( get_the_id(), $key, true );
-	$today = current_time( 'timestamp', true );
-
-  var_dump($key);
-  var_dump($expire_date);
-  var_dump($today);
-
-
-
-}
-
-//add_action( 'pre_get_posts', 'some_like_it_neat_filter_expired_posts' );
-// add_filter( 'posts_clauses', 'some_like_it_neat_filter_expired_posts', 20, 1 );
-
-//function some_like_it_neat_filter_expired_posts( $query ) {
-//
-//	$key = 'some_like_it_neat_expire_post';
-//	$expire_date = get_post_meta( get_the_id(), $key, true );
-//	$today = current_time( 'timestamp', true );
-//
-//    if ( ! is_admin() && $query->is_main_query() && !isset( $expire_date ) ) {
-//
-//        //filter out expired posts
-//        $metaquery = array(
-//            array(
-//				'key' => $key,
-//				'value' => $today,
-//				'compare' => '>=',
-//                 'type' => 'NUMERIC',
-//            )
-//        );
-//        $query->set( 'meta_query', $metaquery );
-//    }
-//}
-
-
  /**
   * Enable/Disable Post Title on per-page basis
   */
