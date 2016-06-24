@@ -57,17 +57,6 @@
 		),
 	) );
 
-	$cmb->add_field( array(
-	    'name' => 'Post Expiration',
-		'desc' => 'You can expire a post by setting a date here.',
-		'before'       => '<p>Testing <b>"before"</b> parameter</p>',
-		'before_field' => '<p>Testing <b>"before_field"</b> parameter</p>',
-		'after_field'  => '<p>Testing <b>"after_field"</b> parameter</p>',
-		'after'        => '<p>Testing <b>"after"</b> parameter</p>',
-	    'id'   => 'some_like_it_neat_expire_post',
-	    'type' => 'text_date_timestamp',
-	) );
-
  }
 
  /**
