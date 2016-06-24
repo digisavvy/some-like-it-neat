@@ -12,4 +12,8 @@
     @include outer-container(100%);
   }
 
+  .entry-content  {
+    margin: 0 !important;
+  }
+
 }
