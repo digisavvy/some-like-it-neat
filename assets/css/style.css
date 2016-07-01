@@ -848,10 +848,17 @@ body {
       margin-right: 0; }
       #primary:last-child {
         margin-right: 0; } }
+  #primary ol li {
+    margin-left: 10px; }
   #primary ul {
-    list-style: none; }
+    list-style: none;
+    margin-left: 10px; }
     #primary ul li {
       list-style-type: square; }
+      #primary ul li ul li {
+        list-style-type: disc; }
+        #primary ul li ul li ul li {
+          list-style-type: circle; }
 
 #secondary {
   margin: 20px auto;

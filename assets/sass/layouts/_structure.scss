@@ -46,12 +46,27 @@ html {
 	}
 	margin: 0 auto;
 	width: 100%;
-
+	ol {
+		li {
+			@include margin-left(10px);
+		}
+	}
 	ul {
 		list-style: none;
-
+		@include margin-left(10px);
 		li {
 			list-style-type: square;
+			ul {
+				li {
+					list-style-type: disc;
+					ul {
+						li {
+							list-style-type: circle;
+						}
+					}
+				}
+			}
+
 		}
 	}
 }

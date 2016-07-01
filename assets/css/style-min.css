@@ -69,7 +69,8 @@ body{background-color:#fff;color:#000;font-family:"Georgia","Cambria","Times New
 #main{padding:0 50px}#primary{margin:0 auto;width:100%}#primary::after{clear:both;content:"";display:table}
 @media screen and (min-width:0){#primary{float:left;display:block;margin-right:14.28571%;width:100%}
 #primary:last-child{margin-right:0}}@media screen and (min-width:48em){#primary{float:left;display:block;margin-right:4.34783%;width:65.21739%;margin-right:0}
-#primary:last-child{margin-right:0}}#primary ul{list-style:none}#primary ul li{list-style-type:square}
+#primary:last-child{margin-right:0}}#primary ol li{margin-left:10px}#primary ul{list-style:none;margin-left:10px}
+#primary ul li{list-style-type:square}#primary ul li ul li{list-style-type:disc}#primary ul li ul li ul li{list-style-type:circle}
 #secondary{margin:20px auto;padding:0 30px 0 0;width:100%}@media screen and (min-width:0){#secondary{float:left;display:block;margin-right:14.28571%;width:100%;padding:30px}
 #secondary:last-child{margin-right:0}}@media screen and (min-width:48em){#secondary{float:left;display:block;margin-right:4.34783%;width:30.43478%;margin-right:0}
 #secondary:last-child{margin-right:0}}.site-branding{text-align:center}.site-branding .site-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;padding:40px}
