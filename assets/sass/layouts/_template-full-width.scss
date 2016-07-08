@@ -17,8 +17,6 @@
   #primary-nav {
 	  @include outer-container;
 	  float: none;
-      position: relative;
-      z-index: 1;
   }
 
 }

@@ -824,7 +824,9 @@ body {
     display: table; }
 
 #main {
-  padding: 0 50px; }
+  padding: 0 50px;
+  position: relative;
+  z-index: 0; }
 
 #primary {
   margin: 0 auto;
@@ -888,6 +890,10 @@ body {
 /*--------------------------------------------------------------
     6.1 Header
     --------------------------------------------------------------*/
+header {
+  position: relative;
+  z-index: 1; }
+
 .site-branding {
   text-align: center; }
   .site-branding .site-title {
@@ -1572,9 +1578,7 @@ object {
   max-width: 71.25em;
   margin-left: auto;
   margin-right: auto;
-  float: none;
-  position: relative;
-  z-index: 1; }
+  float: none; }
   .page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"]::after,
   .page-template-page-templatestemplate-full-width-php #comments::after,
   .page-template-page-templatestemplate-full-width-php footer::after,

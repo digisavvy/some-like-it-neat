@@ -66,14 +66,15 @@ input[type="submit"]:hover{background-color:#999;padding:8px}input#s{float:right
 .infinite-scroll #navigation,.infinite-scroll.neverending #footer{display:none}.infinity-end.neverending #footer{display:block}
 body{background-color:#fff;color:#000;font-family:"Georgia","Cambria","Times New Roman","Times",serif;line-height:1.5em;word-break:break-word;direction:rtl;unicode-bidi:embed}
 #page{max-width:71.25em;margin-left:auto;margin-right:auto}#page::after{clear:both;content:"";display:table}
-#main{padding:0 50px}#primary{margin:0 auto;width:100%}#primary::after{clear:both;content:"";display:table}
-@media screen and (min-width:0){#primary{float:left;display:block;margin-right:14.28571%;width:100%}
+#main{padding:0 50px;position:relative;z-index:0}#primary{margin:0 auto;width:100%}
+#primary::after{clear:both;content:"";display:table}@media screen and (min-width:0){#primary{float:left;display:block;margin-right:14.28571%;width:100%}
 #primary:last-child{margin-right:0}}@media screen and (min-width:48em){#primary{float:left;display:block;margin-right:4.34783%;width:65.21739%;margin-right:0}
 #primary:last-child{margin-right:0}}#primary ol li{margin-right:10px}#primary ul{list-style:none;margin-right:10px}
 #primary ul li{list-style-type:square}#primary ul li ul li{list-style-type:disc}#primary ul li ul li ul li{list-style-type:circle}
 #secondary{margin:20px auto;padding:0 30px 0 0;width:100%}@media screen and (min-width:0){#secondary{float:left;display:block;margin-right:14.28571%;width:100%;padding:30px}
 #secondary:last-child{margin-right:0}}@media screen and (min-width:48em){#secondary{float:left;display:block;margin-right:4.34783%;width:30.43478%;margin-right:0}
-#secondary:last-child{margin-right:0}}.site-branding{text-align:center}.site-branding .site-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;padding:40px}
+#secondary:last-child{margin-right:0}}header{position:relative;z-index:1}.site-branding{text-align:center}
+.site-branding .site-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;padding:40px}
 @media screen and (min-width:0){.site-branding .site-title{font-size:2.1875rem}}@media screen and (min-width:30em){.site-branding .site-title{font-size:3.4375rem}
 }@media screen and (min-width:48em){.site-branding .site-title{font-size:4.6875rem}
 }.site-branding .site-title a,.site-branding .site-title a:visited{line-height:1}
@@ -174,7 +175,7 @@ nav.post-navigation{width:100%;position:relative;z-index:1}.nav-links{width:100%
 }.page-template-page-templatestemplate-full-width-php #main,.page-template-page-templatestemplate-full-width-php #primary,.page-template-page-templatestemplate-full-width-php #secondary{width:100%;margin:0;padding:0}
 .page-template-page-templatestemplate-full-width-php #page{max-width:100%;margin-left:auto;margin-right:auto}
 .page-template-page-templatestemplate-full-width-php #page::after{clear:both;content:"";display:table}
-.page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"],.page-template-page-templatestemplate-full-width-php #comments,.page-template-page-templatestemplate-full-width-php footer,.page-template-page-templatestemplate-full-width-php #primary-nav{max-width:71.25em;margin-left:auto;margin-right:auto;float:none;position:relative;z-index:1}
+.page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"],.page-template-page-templatestemplate-full-width-php #comments,.page-template-page-templatestemplate-full-width-php footer,.page-template-page-templatestemplate-full-width-php #primary-nav{max-width:71.25em;margin-left:auto;margin-right:auto;float:none}
 .page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"]::after,.page-template-page-templatestemplate-full-width-php #comments::after,.page-template-page-templatestemplate-full-width-php footer::after,.page-template-page-templatestemplate-full-width-php #primary-nav::after{clear:both;content:"";display:table}
 .page-template-page-templatestemplate-landing-page-php #main,.page-template-page-templatestemplate-landing-page-php #primary,.page-template-page-templatestemplate-landing-page-php #secondary{width:100%;margin:0;padding:0}
 .page-template-page-templatestemplate-landing-page-php #page{max-width:100%;margin-left:auto;margin-right:auto}
