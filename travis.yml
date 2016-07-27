@@ -1,0 +1,15 @@
+# Travis CI (MIT License) config file
+# @link https://travis-ci.org/
+
+# Declare project language.
+# @link http://about.travis-ci.org/docs/user/languages/php/
+language: php
+
+# Declare versions of PHP to use. Use one decimal max.
+php:
+  - "7.0"
+  - "5.6"
+  - "5.5"
+  - "5.4"
+  - "5.3"
+  - "5.2"
