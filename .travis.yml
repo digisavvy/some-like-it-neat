@@ -13,3 +13,27 @@ php:
   - "5.4"
   - "5.3"
   - "5.2"
+
+# Declare which versions of WordPress to test against.
+# Also declare whether or not to test in Multisite.
+env:
+  # Trunk
+  # @link https://github.com/WordPress/WordPress
+  - WP_VERSION=master WP_MULTISITE=0
+  # WordPress 4.5
+  # @link https://github.com/WordPress/WordPress/tree/4.5-branch
+  - WP_VERSION=4.5 WP_MULTISITE=0
+  # WordPress 4.4
+  # @link https://github.com/WordPress/WordPress/tree/4.4-branch
+  - WP_VERSION=4.4 WP_MULTISITE=0
+
+# Declare 5.6 beta in test matrix.
+# @link https://buddypress.trac.wordpress.org/ticket/5620
+# @link http://docs.travis-ci.com/user/build-configuration/
+matrix:
+  include:
+    - php: 5.6
+      env: WP_VERSION=master
+  allow_failures:
+    - php: 5.6
+  fast_finish: true
