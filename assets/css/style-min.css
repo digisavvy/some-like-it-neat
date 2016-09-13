@@ -47,7 +47,7 @@ cite{font-style:italic}strong,b{color:#000;font-family:"Helvetica Neue","Helveti
 a,a:visited{transition:all 200ms ease-in-out;color:#000;text-decoration:none}a:hover,a:visited:hover{transition:all 200ms ease-in-out;color:red;text-decoration:underline}
 .entry-meta a,.entry-meta a:visited,.entry-content a,.entry-content a:visited,#secondary a,#secondary a:visited{transition:all 200ms ease-in-out;color:red;text-decoration:none}
 .entry-meta a:hover,.entry-meta a:visited:hover,.entry-content a:hover,.entry-content a:visited:hover,#secondary a:hover,#secondary a:visited:hover{transition:all 200ms ease-in-out;color:red;text-decoration:underline}
-ul:nth-child(n+2){margin-bottom:0}ol:nth-child(n+2){margin-bottom:0}.entry-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;text-align:center}
+.entry-title{font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;text-align:center}
 @media screen and (min-width:0){.entry-title{font-size:2.5rem}}@media screen and (min-width:30em){.entry-title{font-size:4.0625rem}
 }@media screen and (min-width:48em){.entry-title{font-size:6.25rem}}#primary,#secondary{font-family:"Georgia","Cambria","Times New Roman","Times",serif}
 #submit{background:#000;border:solid 5px #555;border-radius:0;box-shadow:none;clear:both;font-family:"Helvetica Neue","Helvetica","Roboto","Arial",sans-serif;margin:10px 0;padding:20px;transition:all 200ms ease-in-out}

@@ -645,12 +645,6 @@ a, a:visited {
     color: #f00;
     text-decoration: underline; }
 
-ul:nth-child(n+2) {
-  margin-bottom: 0; }
-
-ol:nth-child(n+2) {
-  margin-bottom: 0; }
-
 .entry-title {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   text-align: center; }
