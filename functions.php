@@ -289,13 +289,6 @@ if ( ! function_exists( 'some_like_it_neat_post_navigation' ) ) :
 				'screen_reader_text' => __( 'Page navigation', 'some-like-it-neat' )
 				)
 			);
-		} else {
-			wp_link_pages(
-				array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'some-like-it-neat' ),
-				'after'  => '</div>',
-				)
-			);
 		}
 	}
 endif;
