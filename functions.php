@@ -281,7 +281,7 @@ endif;
  */
 if ( ! function_exists( 'some_like_it_neat_post_navigation' ) ) :
 	function some_like_it_neat_post_navigation() {
-		if ( function_exists( 'get_the_post_navigation' ) && is_singular() && !is_page_template( 'page-templates/template-landing-page.php' )  ) {
+		if ( is_singular() && !is_page_template( 'page-templates/template-landing-page.php' )  ) {
 			echo get_the_post_navigation(
 				array(
 				'prev_text'    => __( '&larr; %title', 'some-like-it-neat' ),
