@@ -883,6 +883,7 @@ body {
     6.1 Header
     --------------------------------------------------------------*/
 header {
+  background: #000;
   position: relative;
   z-index: 1; }
 
