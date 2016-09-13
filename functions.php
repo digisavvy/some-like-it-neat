@@ -118,6 +118,17 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 		);
 
 		/**
+		* Including CMB2 (https://github.com/WebDevStudios/CMB2).
+		*/
+		if ( file_exists(  __DIR__ . '/library/vendors/cmb2/init.php' ) ) {
+		  require_once  __DIR__ . '/library/vendors/cmb2/init.php';
+		  include get_template_directory() . '/library/vendors/meta.php';
+		} elseif ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) {
+		  require_once  __DIR__ . '/CMB2/init.php';
+		  include get_template_directory() . '/library/vendors/meta.php';
+		}
+
+		/**
 		* Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
 		*/
 		include get_template_directory() . '/library/vendors/theme-hook-alliance/tha-theme-hooks.php' ;
@@ -270,19 +281,12 @@ endif;
  */
 if ( ! function_exists( 'some_like_it_neat_post_navigation' ) ) :
 	function some_like_it_neat_post_navigation() {
-		if ( function_exists( 'get_the_post_navigation' ) && is_singular() && !is_page_template( 'page-templates/template-landing-page.php' )  ) {
+		if ( is_singular() && !is_page_template( 'page-templates/template-landing-page.php' )  ) {
 			echo get_the_post_navigation(
 				array(
 				'prev_text'    => __( '&larr; %title', 'some-like-it-neat' ),
 				'next_text'    => __( '%title &rarr;', 'some-like-it-neat' ),
 				'screen_reader_text' => __( 'Page navigation', 'some-like-it-neat' )
-				)
-			);
-		} else {
-			wp_link_pages(
-				array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'some-like-it-neat' ),
-				'after'  => '</div>',
 				)
 			);
 		}
@@ -343,14 +347,3 @@ if ( ! function_exists( 'some_like_it_neat_add_footer_divs' ) ) :
 	add_action( 'tha_footer_bottom', 'some_like_it_neat_add_footer_divs' );
 
 endif;
-
-// Prevent Auto br tags from being generated.
-remove_filter( 'the_content', 'wpautop' );
-remove_filter( 'the_excerpt', 'wpautop' );
-
-function wpse_wpautop_nobr( $content ) {
-	return wpautop( $content, false );
-}
-
-add_filter( 'the_content', 'wpse_wpautop_nobr' );
-add_filter( 'the_excerpt', 'wpse_wpautop_nobr' );

@@ -44,10 +44,10 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 1.0 Bourbon, Bitters, Neat
 --------------------------------------------------------------*/
-@import '../../assets/bower_components/bourbon/app/assets/stylesheets/bourbon';
+@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import 'base/base'; // Bitters
 @import 'grid-settings';
-@import '../../assets/bower_components/neat/app/assets/stylesheets/neat';
+@import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
 
 /*--------------------------------------------------------------
 2.0 Variables
@@ -67,7 +67,7 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 5.0 Components/Add-ons
 --------------------------------------------------------------*/
-@import '../../assets/bower_components/bourbon/app/assets/stylesheets/addons/clearfix';
+@import '../../node_modules/bourbon/app/assets/stylesheets/addons/clearfix';
 @import 'components/buttons';
 @import 'components/infinite-scroll';
 
