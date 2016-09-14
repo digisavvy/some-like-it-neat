@@ -25,6 +25,7 @@
     "gulp-util": "^3.0.4",
     "gulp-wp-rev": "0.0.1",
     "gulp-zip": "^3.0.2",
+    "node-bourbon": "^4.2.8",
     "node-neat": "^1.7.2",
     "run-sequence": "^1.1.4",
     "swig": "^1.4.2"
