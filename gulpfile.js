@@ -12,7 +12,7 @@ var project    = 'slin';
 var url        = 'slin.dev';
 var build      = './build/';
 var vendors    = './library/vendors/';
-var source     = './assets/';
+var source     = 'assets/';
 var phpSource  = ['**/*.php', 'page-templates/**/*.php', '!library/**/*', '!wpcs/**/*', '!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js'];
 var themeBuild = ['**/*.php', 'page-templates/**/*.php', './style.css', './gulpfile.js', './.jshintrc', './.bowerrc', './.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png', '!library/**/*', '!wpcs/**/*', '!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js'];
 
