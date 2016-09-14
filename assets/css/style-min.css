@@ -149,15 +149,15 @@ nav.post-navigation{width:100%;position:relative;z-index:1}.nav-links{width:100%
 .gallery-icon img{margin:0 auto}.gallery-caption{color:#707070;color:rgba(51,51,51,0.7);display:block;font-family:"Noto Sans",sans-serif;font-size:12px;font-size:1.2rem;line-height:1.5;padding:.5em 0}
 .gallery-columns-6 .gallery-caption,.gallery-columns-7 .gallery-caption,.gallery-columns-8 .gallery-caption,.gallery-columns-9 .gallery-caption{display:none}
 .page-template-page-templatestemplate-left-col-php h1.entry-title{margin:0;text-align:left}
-@media screen and (min-width:48em){.page-template-page-templatestemplate-left-col-php #main{display:-ms-flexbox;display:flex}
+@media screen and (min-width:48em){.page-template-page-templatestemplate-left-col-php #main{display:-webkit-flex;display:-ms-flexbox;display:flex}
 }@media screen and (min-width:0){.page-template-page-templatestemplate-left-col-php #main #primary{float:left;display:block;margin-right:14.28571%;width:214.28571%}
 .page-template-page-templatestemplate-left-col-php #main #primary:last-child{margin-right:0}
-}@media screen and (min-width:48em){.page-template-page-templatestemplate-left-col-php #main #primary{float:left;display:block;margin-right:4.34783%;width:65.21739%;-ms-flex-order:2;order:2}
+}@media screen and (min-width:48em){.page-template-page-templatestemplate-left-col-php #main #primary{float:left;display:block;margin-right:4.34783%;width:65.21739%;-webkit-order:2;-ms-flex-order:2;order:2}
 .page-template-page-templatestemplate-left-col-php #main #primary:last-child{margin-right:0}
 }.page-template-page-templatestemplate-left-col-php #main #secondary{margin-right:1.5%}
 @media screen and (min-width:0){.page-template-page-templatestemplate-left-col-php #main #secondary{float:left;display:block;margin-right:14.28571%;width:214.28571%}
 .page-template-page-templatestemplate-left-col-php #main #secondary:last-child{margin-right:0}
-}@media screen and (min-width:48em){.page-template-page-templatestemplate-left-col-php #main #secondary{float:left;display:block;margin-right:4.34783%;width:30.43478%;-ms-flex-order:1;order:1}
+}@media screen and (min-width:48em){.page-template-page-templatestemplate-left-col-php #main #secondary{float:left;display:block;margin-right:4.34783%;width:30.43478%;-webkit-order:1;-ms-flex-order:1;order:1}
 .page-template-page-templatestemplate-left-col-php #main #secondary:last-child{margin-right:0}
 }.page-template-page-templatestemplate-left-col-php footer{clear:both;display:table}
 .page-template-page-templatestemplate-right-col-php h1.entry-title{margin:0;text-align:left}
