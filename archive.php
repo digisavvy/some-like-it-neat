@@ -15,22 +15,16 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title">
-					<?php echo get_the_archive_title(); ?>
-				</h1>
 				<?php
-					// Show an optional term description.
-				if ( function_exists( 'get_the_archive_description' ) ) :
-					echo '<div class="taxonomy-description">' .get_the_archive_description(). '</div>';
-					/*
-					* TO-DO Might remove this code block at some point, since
-					*   get_the_archive_description() does the same thing
-					*   the below code does
-					*/
-					elseif ( $term_description = term_description() ) :
-						printf( '<div class="taxonomy-description">%s</div>',	$term_description );
-					endif;
-				?>
+				printf( '<h1 class="page-title">%s</h1>',
+					esc_html( get_the_archive_title() );
+				);
+				
+				$description = get_the_archive_description();
+				if ( ! empty( $description ) ) {
+	                printf( '<div class="taxonomy-description">%s</div>',
+						esc_html( $description );
+	        	} ?>
 			</header><!-- .page-header -->
 
 		<?php /* Start the Loop */ ?>
