@@ -1451,7 +1451,6 @@ object {
 
 @media screen and (min-width: 48em) {
   .page-template-page-templatestemplate-left-col-php #main {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; } }
 
@@ -1470,9 +1469,8 @@ object {
     display: block;
     margin-right: 4.34783%;
     width: 65.21739%;
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2; }
+    -ms-flex-order: 2;
+        order: 2; }
     .page-template-page-templatestemplate-left-col-php #main #primary:last-child {
       margin-right: 0; } }
 
@@ -1492,9 +1490,8 @@ object {
       display: block;
       margin-right: 4.34783%;
       width: 30.43478%;
-      -webkit-order: 1;
-          -ms-flex-order: 1;
-              order: 1; }
+      -ms-flex-order: 1;
+          order: 1; }
       .page-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
 
