@@ -1,5 +1,15 @@
 # Changelog
 
+### 1.3.9
+-------------
+**Bugfixes**
+* Add - CMB2 Support to add custom metaboxes on singular post types. Allows for hiding titles and removing featured images. Useful for landing page templates.
+* Remove - Removed fallback for get_post_navigation(). Get current folks!
+* Remove - Removed comments from page post type. Personal feeling they aren't needed.
+* Fix - Invalid JSON in bower.json
+* Fix - Bourbon removed an extend rule for OL and UL that was breaking Sass compilation. See related: https://github.com/thoughtbot/bitters/pull/199
+
+
 ### 1.3.8
 -------------
 **Bugfixes**
