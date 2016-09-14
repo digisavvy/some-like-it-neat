@@ -3,6 +3,12 @@
 ### 1.3.9
 -------------
 **Bugfixes**
+* Fix - Issue with gulp not recognizing new scss files, which required a restart of gulp. Thanks @jacobarriola.
+* Update - Node Bourbon package to 4.2.8
+
+### 1.3.9
+-------------
+**Bugfixes**
 * Add - CMB2 Support to add custom metaboxes on singular post types. Allows for hiding titles and removing featured images. Useful for landing page templates.
 * Remove - Removed fallback for get_post_navigation(). Get current folks!
 * Remove - Removed comments from page post type. Personal feeling they aren't needed.
@@ -13,7 +19,7 @@
 ### 1.3.8
 -------------
 **Bugfixes**
-* Change - Full width template changed so that nav, footer, comments sections were fixed-width. Only content area is full-width now. 
+* Change - Full width template changed so that nav, footer, comments sections were fixed-width. Only content area is full-width now.
 
 ### 1.3.7
 -------------
