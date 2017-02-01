@@ -176,17 +176,17 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 	function some_like_it_neat_scripts() {
 
 		// Vendor Scripts
-		wp_register_script( 'modernizr-js', get_template_directory_uri() . '/assets/js/vendor/modernizr/modernizr.js', array( 'jquery' ), '2.8.2', false );
+		wp_register_script( 'modernizr-js', get_theme_file_uri( '/assets/js/vendor/modernizr/modernizr.js' ), array( 'jquery' ), '2.8.2', false );
 		wp_enqueue_script( 'modernizr-js' );
 
-		wp_register_script( 'selectivizr-js', get_template_directory_uri() . '/assets/js/vendor/selectivizr/selectivizr.js', array( 'jquery' ), '1.0.2b', false );
+		wp_register_script( 'selectivizr-js', get_theme_file_uri( '/assets/js/vendor/selectivizr/selectivizr.js' ), array( 'jquery' ), '1.0.2b', false );
 		wp_enqueue_script( 'selectivizr-js' );
   		wp_script_add_data( 'selectivizr-js', 'conditional', '(gte IE 6)&(lte IE 8)' );
 
-		wp_register_script( 'flexnav-js', get_template_directory_uri() . '/assets/js/vendor/flexnav/jquery.flexnav.js', array( 'jquery' ), '1.3.3', true );
+		wp_register_script( 'flexnav-js', get_theme_file_uri( '/assets/js/vendor/flexnav/jquery.flexnav.js' ), array( 'jquery' ), '1.3.3', true );
 		wp_enqueue_script( 'flexnav-js' );
 
-		wp_register_script( 'hoverintent-js', get_template_directory_uri() . '/assets/js/vendor/hoverintent/jquery.hoverIntent.js', array( 'jquery' ), '1.0.0', true );
+		wp_register_script( 'hoverintent-js', get_theme_file_uri( '/assets/js/vendor/hoverintent/jquery.hoverIntent.js' ), array( 'jquery' ), '1.0.0', true );
 		wp_enqueue_script( 'hoverintent-js' );
 
 		// Dashicons
@@ -198,10 +198,10 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 
 		if ( SCRIPT_DEBUG || WP_DEBUG ) :
 			// Concatonated Scripts
-			wp_enqueue_script( 'some_like_it_neat-js', get_stylesheet_directory_uri() . '/assets/js/development.js', array( 'jquery' ), '1.0.0', false );
+//			wp_enqueue_script( 'some_like_it_neat-js', get_theme_file_uri( '/assets/js/development.js' ), array( 'jquery' ), '1.0.0', false );
 		else :
 			// Concatonated Scripts
-			wp_enqueue_script( 'some_like_it_neat-js', get_stylesheet_directory_uri() . '/assets/js/production-min.js', array( 'jquery' ), '1.0.0', false );
+//			wp_enqueue_script( 'some_like_it_neat-js', get_theme_file_uri( '/assets/js/production-min.js' ), array( 'jquery' ), '1.0.0', false );
 		endif;
 	}
 	add_action( 'wp_enqueue_scripts', 'some_like_it_neat_scripts' );
