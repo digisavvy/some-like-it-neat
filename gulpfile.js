@@ -9,7 +9,7 @@
 | >   PROJECT VARIABLES
 ******************************************************************************/
 var project    = 'slin';
-var url        = 'slin.dev';
+var url        = 'slin.test';
 var build      = './build/';
 var vendors    = './library/vendors/';
 var source     = 'assets/';
