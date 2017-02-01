@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Landing Page, no header, footer, or sidebars
- *
+ * Template Post Type: post, page
  * This template display content at full with, with no sidebars, header, or footer.
  * Please note that this is the WordPress construct of pages and that other 'pages' on your WordPress site will use a different template.
  *

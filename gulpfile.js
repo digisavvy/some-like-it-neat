@@ -9,7 +9,7 @@
 | >   PROJECT VARIABLES
 ******************************************************************************/
 var project    = 'slin';
-var url        = 'slin.dev';
+var url        = 'slin.test';
 var build      = './build/';
 var vendors    = './library/vendors/';
 var source     = 'assets/';
@@ -20,7 +20,7 @@ var themeBuild = ['**/*.php', 'page-templates/**/*.php', './style.css', './gulpf
 | >   PLUGINS
 ******************************************************************************/
 var autoprefixer = require('gulp-autoprefixer');
-var browserSync  = require('browser-sync');
+var browserSync  = require('browser-sync').create();
 var concat       = require('gulp-concat');
 var del          = require('del');
 var filter       = require('gulp-filter');
