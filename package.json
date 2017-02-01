@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "bi-app-sass": "^1.1.0",
     "browser-sync": "^2.18.7",
     "del": "^2.0.2",
     "gulp": "^3.9.1",
