@@ -32,8 +32,6 @@ Bitters is baked-in, too! You get some basic nifty styles out of the gate.
 tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
 your theme! Cool. Right?
 
-* Bower — We're using bower to manage certain theme dependencies, specifically Bourbon, Neat and Bi-App-Sass. Cool, right? That's what I said when I learned the awesomeness that is Bower. Ya hurd?!
-
 * RTL Support via the most excellent bi-app-sass project
 * Built for Accessibility
 * Flexnav Menu System and Hover Intent
@@ -68,9 +66,7 @@ There are things you need to install before you hack away at things. There are t
    **_(note - you may have to run the following commands as admin or sudo)_**
 
   * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: `npm install` - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync! You'll need to run this step on each of your projects, going forward.
-  * **Install Bower** - In the command prompt/terminal run this command: `npm install -g bower`. This installs Bower (the -g flag installs globally, not just in the current directory, super friends). Your only need to do this step once.
-  * **Install Bower Dependencies** - There are Sass and Js packages that are required by Some Like it Neat. To get them run this command: `bower install` - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
-
+ 
  * #### Set your project configuration in Gulpfile.js!!
 _Be sure to go into gulpfile.js and setup the project configuration variables._
 
@@ -123,10 +119,6 @@ a project.
 
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
-    │    │   ├── bower_components
-    │    │   |   ├── bi-app-sass
-    │    │   |   ├── bourbon
-    │    │   |   └── neat
     │    │   ├── css
     |    |   |    ├── rtl-min.css
     |    |   |    ├── rtl.css
@@ -194,7 +186,6 @@ a project.
     |     ├── template-left-col.php
     |     └── template-right-col.php
 	|     └── template-landing-page.php
-    ├── .bowerrc
     ├── 404.php
     ├── archive.php
     ├── comments.php
