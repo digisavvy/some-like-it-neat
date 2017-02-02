@@ -197,7 +197,8 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 		}
 
 		if ( SCRIPT_DEBUG || WP_DEBUG ) :
-			// Concatonated Scripts
+
+            // Concatonated Scripts
 			wp_enqueue_script( 'some_like_it_neat-js', get_theme_file_uri( '/assets/js/development.js' ), array( 'jquery' ), '1.0.0', false );
 		else :
 			// Concatonated Scripts
