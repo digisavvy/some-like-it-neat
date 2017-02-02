@@ -1,6 +1,11 @@
 # Changelog
 
-### 1.3.9
+### 1.4.1
+-------------
+* Change - Moved Bi-app-sass to NPM from Bower.
+* Change - Remove Bower; we're using NPM for package mgmt completely.
+
+### 1.4.0
 -------------
 **Bugfixes**
 * Fix - Issue with gulp not recognizing new scss files, which required a restart of gulp. Thanks @jacobarriola.
