@@ -4,7 +4,9 @@
 -------------
 * Change - Moved Bi-app-sass to NPM from Bower.
 * Change - Remove Bower; we're using NPM for package mgmt completely.
-
+* Update - TGMP to 2.6.1
+* Update - Various NPM Packages. Commit: 5a8d5ab0bee0b19cb78ceb8b8a4ad5c273928a7e
+        
 ### 1.4.0
 -------------
 **Bugfixes**
