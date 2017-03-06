@@ -1,4 +1,27 @@
-@import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat-helpers';
+// Setting Up the Neat Grid
+$neat-grid: (columns: 12, gutter: 20px,);
+
+// Breakpoints, Updated for Neat 2.x
+
+
+$sm: (columns: 2, gutter: 40px, media: 0,);
+$smbg: (columns: 4, gutter: 30px, media: em(480),);
+$md: (columns: 6, gutter: 20px, media: em(768),);
+$mdbg: (columns: 0, gutter: 20px, media: em(1024),);
+$hg: (columns: 10, gutter: 50px, media: em(1140),);
+$hgbg: (columns: 12, gutter: 20px, media: em(1200),);
+
+//@mixin media($point) {
+//  @if $point == papa-bear {
+//    @media (max-width: 1600px) { @content; }
+//  }
+//  @else if $point == mama-bear {
+//    @media (max-width: 1250px) { @content; }
+//  }
+//  @else if $point == baby-bear {
+//    @media (max-width: 600px)  { @content; }
+//  }
+//}
 
 // Adding a Visual Grid while you develop. Set to 'true.'
 $visual-grid: false;
@@ -6,18 +29,6 @@ $visual-grid-color: #ccc;
 $visual-grid-index: front;
 $visual-grid-opacity: .2;
 
-// Change the grid settings
-$column: 90px;
-$gutter: 30px;
-$grid-columns: 12;
-$max-width:em(1140);
-
-// Breakpoints
-$sm: new-breakpoint(min-width 0 2);
-$smbg: new-breakpoint(min-width em(480) 4);
-$md: new-breakpoint(min-width em(768) 6);
-$mdbg: new-breakpoint(min-width em(1024) 8);
-$hg: new-breakpoint(min-width em(1140) 12);
 
 // Breakpoints that only come into play when using patterns from http://refills.bourbon.io
 $medium-screen: em(640);
