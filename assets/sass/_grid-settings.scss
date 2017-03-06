@@ -3,7 +3,6 @@ $neat-grid: (columns: 12, gutter: 20px,);
 
 // Breakpoints, Updated for Neat 2.x
 
-
 $sm: (columns: 2, gutter: 40px, media: 0,);
 $smbg: (columns: 4, gutter: 30px, media: em(480),);
 $md: (columns: 6, gutter: 20px, media: em(768),);
@@ -11,17 +10,6 @@ $mdbg: (columns: 0, gutter: 20px, media: em(1024),);
 $hg: (columns: 10, gutter: 50px, media: em(1140),);
 $hgbg: (columns: 12, gutter: 20px, media: em(1200),);
 
-//@mixin media($point) {
-//  @if $point == papa-bear {
-//    @media (max-width: 1600px) { @content; }
-//  }
-//  @else if $point == mama-bear {
-//    @media (max-width: 1250px) { @content; }
-//  }
-//  @else if $point == baby-bear {
-//    @media (max-width: 600px)  { @content; }
-//  }
-//}
 
 // Adding a Visual Grid while you develop. Set to 'true.'
 $visual-grid: false;
@@ -58,38 +46,3 @@ $gutter: golden-ratio(1em, 3) !default; // Gutter between each two columns
 
 $fg-column: $column;
 $fg-gutter: $gutter;
-
-// ------------------------------------------------------------
-// Omega Reset
-// ------------------------------------------------------------
-
-@mixin omega-reset($nth) {
-  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
-  &:nth-child(#{$nth}+1) { clear: none; }
-}
-
-// ------------------------------------------------------------
-// How to use your Neat grid using Omega Reset
-// ------------------------------------------------------------
-
-// .some-selector {
-// 	@include media($sm) {
-// 		@include span-columns(2);
-// 		@include omega(2n);
-// 	}
-// 	@include media($md) {
-// 		@include omega-reset(2n); // Reset the previous omega declaration set by the preceding rule
-// 		@include span-columns(3); // Set your columns etc.
-// 		@include omega(2n); // Set omega for your tastes here, this now correctly overrides the previous omega rule.
-// 	}
-// 	@include media($mdbg) { // Wash. Rinse. Repeat
-// 		@include omega-reset(2n);
-// 		@include span-columns(2);
-// 		@include omega(4n);
-// 	}
-// 	@include media($hg) {
-// 		@include omega-reset(4n);
-// 		@include span-columns(2);
-// 		@include omega(2n);
-// 	}
-// }
