@@ -42,6 +42,6 @@
   "dependencies": {
     "bourbon": "^4.2.7",
     "gulp-install": "^0.6.0",
-    "neat": "1.2.2"
+    "neat": "~1.2.2"
   }
 }
