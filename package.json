@@ -26,8 +26,6 @@
     "gulp-util": "^3.0.4",
     "gulp-wp-rev": "0.3.0",
     "gulp-zip": "^4.0.0",
-    "node-bourbon": "^4.2.8",
-    "node-neat": "^1.7.2",
     "run-sequence": "^1.1.4",
     "swig": "^1.4.2"
   },
@@ -42,6 +40,5 @@
     "bourbon": "^4.2.7",
     "bourbon-neat": "^2.0.0",
     "gulp-install": "^0.6.0",
-    "neat": "^1.2.2"
   }
 }
