@@ -127,13 +127,13 @@ a, a:visited {
     font-family: $title;
     text-align: center;
 
-    @include media($sm) {
+    @include grid-media($sm) {
         font-size: rem(40);
     }
-    @include media($smbg) {
+    @include grid-media($smbg) {
         font-size: rem(65);
     }
-    @include media($md) {
+    @include grid-media($md) {
         font-size: rem(100);
     }
 }

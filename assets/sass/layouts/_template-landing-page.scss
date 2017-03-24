@@ -3,13 +3,13 @@
   #main,
   #primary,
   #secondary {
-    @include fill-parent;
+    @include grid-container;
     margin: 0;
     padding: 0;
   }
 
   #page {
-    @include outer-container(100%);
+    @include grid-container;
   }
 
   .entry-content  {

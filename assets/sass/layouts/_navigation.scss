@@ -2,7 +2,7 @@
 ----------------------------------------------- */
 
 .site-main [class*="navigation"] {
-    @include fill-parent;
+    @include grid-container;
     @include float(left);
     margin: 25px 0 1.5em;
     overflow: hidden;
@@ -36,11 +36,11 @@
 }
 ul.nav-menu li {
     @include transition (background 200ms ease-in-out);
-    @include media($sm) {
+    @include grid-media($sm) {
         text-align: center;
         width: 100%;
     }
-    @include media($md) {
+    @include grid-media($md) {
         text-align: none;
         width: inherit;
     }
@@ -71,28 +71,28 @@ ul.nav-menu li.current_page_item {
 }
 
 nav.post-navigation {
-    @include fill-parent;
+    @include grid-media($sm) {
+        @include grid-column(2);
+    }
     position: relative;
     z-index: 1;
 }
 .nav-links {
-    @include fill-parent;
+    @include grid-container;
     .nav-previous {
-        @include media($sm) {
-            @include span-columns( 2 );
-            @include omega( block );
+        @include grid-media($sm) {
+            @include grid-column( 1 );
         }
-        @include media($md) {
-            @include span-columns(3);
+        @include grid-media($md) {
+            @include grid-column(3);
         }
     }
     .nav-next {
-        @include media($sm) {
-            @include span-columns( 2 );
-            @include omega( block );
+        @include grid-media($sm) {
+            @include grid-column( 1 );
         }
-        @include media($md) {
-            @include span-columns(3);
+        @include grid-media($md) {
+            @include grid-column(3);
         }
     }
 }
