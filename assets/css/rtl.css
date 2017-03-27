@@ -844,7 +844,7 @@ main#main {
     margin-right: 10px; }
   #primary ul {
     list-style: none;
-    margin-right: 10px; }
+    margin-right: 40px; }
     #primary ul li {
       list-style-type: square; }
       #primary ul li ul li {
@@ -1524,25 +1524,18 @@ object {
 .page-template-page-templatestemplate-full-width-php #primary {
   max-width: 100%;
   width: 100%;
-  margin: auto;
-  padding: 0; }
+  margin: inherit;
+  padding: inherit; }
 
-.page-template-page-templatestemplate-landing-page-php #main,
-.page-template-page-templatestemplate-landing-page-php #primary,
-.page-template-page-templatestemplate-landing-page-php #secondary {
-  margin: 0;
-  padding: 0; }
-  .page-template-page-templatestemplate-landing-page-php #main::after,
-  .page-template-page-templatestemplate-landing-page-php #primary::after,
-  .page-template-page-templatestemplate-landing-page-php #secondary::after {
-    clear: both;
-    content: "";
-    display: block; }
-
-.page-template-page-templatestemplate-landing-page-php #page::after {
-  clear: both;
-  content: "";
-  display: block; }
+.page-template-page-templatestemplate-landing-page-php main#main,
+.page-template-page-templatestemplate-landing-page-php .site-footer,
+.page-template-page-templatestemplate-landing-page-php .site-header,
+.page-template-page-templatestemplate-landing-page-php .site-main,
+.page-template-page-templatestemplate-landing-page-php #primary {
+  max-width: 100%;
+  width: 100%;
+  margin: inherit;
+  padding: inherit; }
 
 .page-template-page-templatestemplate-landing-page-php .entry-content {
   margin: 0 !important; }

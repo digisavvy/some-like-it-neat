@@ -1,16 +1,15 @@
 .page-template-page-templatestemplate-full-width-php {
+
   main#main,
   .site-footer,
   .site-header,
   .site-main,
   #primary {
     @include section-container('full');
-    margin: auto;
-    padding: 0;
+    margin: inherit;
+    padding: inherit;
   }
-  #primary {
 
-   }
 
   .site-main [class*="navigation"],
   #comments,

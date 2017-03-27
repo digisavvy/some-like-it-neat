@@ -69,7 +69,7 @@ main#main{position:relative;z-index:0}#primary{margin:0 auto;width:100%}@media o
 }@media only screen and (min-width:30em){#primary{width:calc(75% - 35px);float:left;margin-left:20px}
 }@media only screen and (min-width:48em){#primary{width:calc(100% - 40px);float:left;margin-left:20px}
 }@media only screen and (min-width:64em){#primary{width:calc(62.5% - 16.25px);float:left;margin-left:10px}
-}#primary ol li{margin-left:10px}#primary ul{list-style:none;margin-left:10px}#primary ul li{list-style-type:square}
+}#primary ol li{margin-left:10px}#primary ul{list-style:none;margin-left:40px}#primary ul li{list-style-type:square}
 #primary ul li ul li{list-style-type:disc}#primary ul li ul li ul li{list-style-type:circle}
 @media only screen and (min-width:0){#secondary{width:calc(100% - 40px);float:left;margin-left:20px}
 }@media only screen and (min-width:30em){#secondary{width:calc(25% - 25px);float:left;margin-left:20px}
@@ -167,10 +167,8 @@ nav.post-navigation{position:relative;z-index:1}@media only screen and (min-widt
 }@media only screen and (min-width:48em){.page-template-page-templatestemplate-right-col-php #secondary{float:right;margin-right:1.5%}
 }@media only screen and (min-width:48em) and (min-width:0){.page-template-page-templatestemplate-right-col-php #secondary{width:calc(200% - 60px);float:left;margin-left:20px}
 }@media only screen and (min-width:48em) and (min-width:48em){.page-template-page-templatestemplate-right-col-php #secondary{width:calc(33.33333% - 26.66667px);float:left;margin-left:20px}
-}.page-template-page-templatestemplate-full-width-php main#main,.page-template-page-templatestemplate-full-width-php .site-footer,.page-template-page-templatestemplate-full-width-php .site-header,.page-template-page-templatestemplate-full-width-php .site-main,.page-template-page-templatestemplate-full-width-php #primary{max-width:100%;width:100%;margin:auto;padding:0}
-.page-template-page-templatestemplate-landing-page-php #main,.page-template-page-templatestemplate-landing-page-php #primary,.page-template-page-templatestemplate-landing-page-php #secondary{margin:0;padding:0}
-.page-template-page-templatestemplate-landing-page-php #main::after,.page-template-page-templatestemplate-landing-page-php #primary::after,.page-template-page-templatestemplate-landing-page-php #secondary::after{clear:both;content:"";display:block}
-.page-template-page-templatestemplate-landing-page-php #page::after{clear:both;content:"";display:block}
+}.page-template-page-templatestemplate-full-width-php main#main,.page-template-page-templatestemplate-full-width-php .site-footer,.page-template-page-templatestemplate-full-width-php .site-header,.page-template-page-templatestemplate-full-width-php .site-main,.page-template-page-templatestemplate-full-width-php #primary{max-width:100%;width:100%;margin:inherit;padding:inherit}
+.page-template-page-templatestemplate-landing-page-php main#main,.page-template-page-templatestemplate-landing-page-php .site-footer,.page-template-page-templatestemplate-landing-page-php .site-header,.page-template-page-templatestemplate-landing-page-php .site-main,.page-template-page-templatestemplate-landing-page-php #primary{max-width:100%;width:100%;margin:inherit;padding:inherit}
 .page-template-page-templatestemplate-landing-page-php .entry-content{margin:0 !important}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .widget{margin:0 0 1.5em}.widget select{max-width:100%}.widget_search .search-submit{display:none}
