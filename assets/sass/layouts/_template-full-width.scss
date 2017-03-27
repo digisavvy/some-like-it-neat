@@ -1,22 +1,21 @@
 .page-template-page-templatestemplate-full-width-php {
-
-  #main,
-  #primary,
-  #secondary {
-    @include grid-container;
-    margin: 0;
+  main#main,
+  .site-footer,
+  .site-header,
+  .site-main,
+  #primary {
+    @include section-container('full');
+    margin: auto;
     padding: 0;
   }
+  #primary {
 
-  #page {
-    @include grid-container;
-  }
+   }
+
   .site-main [class*="navigation"],
   #comments,
-  footer,
   #primary-nav {
-    @include grid-container;
-	  float: none;
-  }
 
+  }
 }
+

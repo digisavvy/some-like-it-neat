@@ -1,24 +1,30 @@
 footer {
-    @include float(left);
-    margin: 0 auto;
-    padding: 0 40px;
-    width: 100%;
+    @include grid-container();
+
     .site-info {
-        margin: auto;
-        width: 100%;
+        @include grid-media($sm) {
+            @include grid-column(2);
+        }
+        text-align: center;
     }
     .footer-left {
-        @include grid-column(6);
-        margin-bottom: 40px;
-        margin-top: 30px;
-        padding: 10px;
-        @include text-align(left);
+        @include grid-media($sm) {
+            @include grid-column(2);
+            text-align: center;
+        }
+        @include grid-media($smbg) {
+            @include grid-column(2);
+            @include text-align(left);
+        }
     }
     .footer-right {
-        @include grid-column(6);
-        margin-top: 30px;
-        margin-bottom: 40px;
-        padding: 10px;
-        @include text-align(right);
+        @include grid-media($sm) {
+            @include grid-column(2);
+            text-align: center;
+        }
+        @include grid-media($smbg) {
+            @include grid-column(2);
+            @include text-align(right);
+        }
     }
 }
