@@ -60,7 +60,7 @@ main#main {
 	}
 	ul {
 		list-style: none;
-		@include margin-left(10px);
+		@include margin-left(40px);
 		li {
 			list-style-type: square;
 			ul {
