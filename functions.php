@@ -203,8 +203,7 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
          */
         $directory = get_template_directory() . '/assets/js/app/';
         $files = glob($directory . '*.js');
-        if ( $files !== false )
-        {
+        if ( $files !== false ) {
             $filecount = count( $files );
 
             if ( ! $filecount == 0 ) {
