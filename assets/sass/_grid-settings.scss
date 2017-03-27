@@ -1,12 +1,12 @@
 // Setting Up the Neat Grid
-$neat-grid: (columns: 12, gutter: 20px,);
 
 // Breakpoints, Updated for Neat 2.x
+// @include grid-media($sm) { ... }
 
 $sm: (columns: 2, gutter: 20px, media: 0,);
 $smbg: (columns: 4, gutter: 20px, media: em(480),);
 $md: (columns: 6, gutter: 20px, media: em(768),);
-$mdbg: (columns: 0, gutter: 10px, media: em(1024),);
+$mdbg: (columns: 8, gutter: 10px, media: em(1024),);
 $hg: (columns: 10, gutter: 20px, media: em(1140),);
 $hgbg: (columns: 12, gutter: 20px, media: em(1400),);
 
