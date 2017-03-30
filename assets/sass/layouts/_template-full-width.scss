@@ -1,8 +1,6 @@
 .page-template-page-templatestemplate-full-width-php {
 
   main#main,
-  .site-footer,
-  .site-header,
   .site-main,
   #primary {
     @include section-container('full');
