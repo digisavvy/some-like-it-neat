@@ -239,6 +239,11 @@ This theme is based on Underscores, (C) 2012-2013 Automattic, Inc.
  - License: GNU GPL, Version 2 (or later)
  - License URI: license.txt
 
+CMB2
+    - Source: https://github.com/WebDevStudios/cmb2-attached-posts/blob/master/LICENSE
+    - License: GNU GPL, Version 2 (or later)
+    - License URI: license.txt
+
 Flexnav, Copyright 2014 Jason Weaver.
  - Source: http://jasonweaver.name/lab/flexiblenavigation/
  - License: GNU GPL, Version 2 (or later)
