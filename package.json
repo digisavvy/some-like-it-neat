@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "bourbon": "^4.2.7",
-    "bourbon-neat": "^1.7.4",
+    "bourbon-neat": "~1.7.4",
     "gulp-install": "^0.6.0"
   }
 }
