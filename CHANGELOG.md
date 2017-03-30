@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.4.2
+-------------
+* Fix - Prevent Neat 2.0 from downloading (it's coming, so keep awares).
+
 ### 1.4.1
 -------------
 * Change - Moved Bi-app-sass to NPM from Bower.
