@@ -1,7 +1,7 @@
 // Setting Up the Neat Grid
 
 // Breakpoints, Updated for Neat 2.x
-// @include grid-media($sm) { ... }
+// @include grid-media($sm) { your styles here }
 
 $sm: (columns: 2, gutter: 20px, media: 0,);
 $smbg: (columns: 4, gutter: 20px, media: em(480),);
