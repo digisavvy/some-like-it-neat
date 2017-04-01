@@ -41,3 +41,15 @@ header {
         font-style: italic;
     }
 }
+
+/* =Off-Canvas Header Styling
+----------------------------------------------- */
+.site-header-inside-wrapper {
+    display: flex;
+    align-items: baseline;
+
+    .site-branding {
+        display: flex;
+        align-items: baseline;
+    }
+}
