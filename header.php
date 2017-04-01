@@ -41,18 +41,21 @@
 		<?php tha_header_before(); ?>
 		<header id="masthead" class="site-header wrap" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 
-		<?php tha_header_top(); ?>
+		    <?php tha_header_top(); ?>
 
-			<section class="site-branding">
-				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-				<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-			</section>
+            <?php if ( 'yes' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) { ?>
 
-            <?php
-            if ( 'yes' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
-                get_template_part( 'page-templates/template-parts/navigation', 'flexnav' );
-            } else {
-                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas' );
+                <section class="site-branding">
+                    <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+                    <div class="site-description"><?php bloginfo( 'description' ); ?></div>
+                </section>
+
+               <?php get_template_part( 'page-templates/template-parts/navigation', 'flexnav' ); ?>
+
+            <?php } else {
+
+                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-wrap' );
+
             }
             ?>
 
@@ -60,6 +63,12 @@
 
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
+
+        <?php if ( 'no' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
+
+            get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-menu' );
+
+        } ?> <!-- #site-navigation -->
 
 		<?php tha_content_before(); ?>
 
