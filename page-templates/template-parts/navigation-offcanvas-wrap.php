@@ -9,7 +9,7 @@
         <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'perennial-pro' ); ?></a>
         <a href="#header-menu-responsive" title="<?php esc_attr_e( 'Menu', 'perennial-pro' ); ?>" class="hamburger">
             <span class="hamburger-icon"></span>
-            <span class="hamburger-label"><?php esc_html_e( 'Menu', 'perennial-pro' ); ?></span>
+            <span class="hamburger-label"><?php echo esc_html( get_theme_mod( 'some_like_it_neat_mobile_nav_label', 'Menu' ) ); ?></span>
         </a>
     </div><!-- .hamburger-wrapper -->
 
@@ -37,12 +37,6 @@
         </div>
     </div><!-- .site-branding-wrapper -->
 
-    <?php // if (  perennial_has_sidebar() ) : ?>
-        <div class="sidebar-control-wrapper">
-            <span class="screen-reader-text"><?php echo esc_html_e( 'Sidebar', 'perennial-pro' ); ?></span>
-            <span class="sidebar-control-icon"></span>
-        </div><!-- .sidebar-control-wrapper -->
-    <?php // endif; ?>
 </div><!-- .site-header-inside-wrapper -->
 
 
