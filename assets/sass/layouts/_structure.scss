@@ -24,11 +24,11 @@ html {
 	  unicode-bidi: embed;
 	}
 }
-#page {
-	 @include outer-container;
 
+.site-main.wrap,
+.site-footer.wrap {
+	@include outer-container;
 }
-.wrap {}
 
 #main {
 	padding: 0 50px;
