@@ -24,6 +24,10 @@
   color: #000;
 }
 
+.has-overlay-open .hamburger-wrapper .hamburger {
+  color: #fff;
+}
+
 .hamburger-wrapper .hamburger:hover .hamburger-icon, .hamburger-wrapper .hamburger:hover .hamburger-icon:before, .hamburger-wrapper .hamburger:hover .hamburger-icon:after {
   width: 35px;
 }
