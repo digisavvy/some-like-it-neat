@@ -19,3 +19,5 @@
         ?>
     </div> <!-- .main-navigation-inside -->
 </nav>
+
+<div class="overlay"></div> <!-- .overlay -->
