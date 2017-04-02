@@ -808,11 +808,13 @@ body {
   direction: rtl;
   unicode-bidi: embed; }
 
-#page {
+.site-main.wrap,
+.site-footer.wrap {
   max-width: 71.25em;
   margin-left: auto;
   margin-right: auto; }
-  #page::after {
+  .site-main.wrap::after,
+  .site-footer.wrap::after {
     clear: both;
     content: "";
     display: table; }
@@ -922,15 +924,18 @@ header {
 /* =Off-Canvas Header Styling
 ----------------------------------------------- */
 .site-header-inside-wrapper {
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-align: baseline;
-      align-items: baseline; }
+      align-items: baseline;
+  display: -ms-flexbox;
+  display: flex; }
   .site-header-inside-wrapper .site-branding {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: baseline;
         align-items: baseline; }
+  .site-header-inside-wrapper .hamburger-wrapper {
+    position: relative;
+    z-index: 100; }
 
 /*--------------------------------------------------------------
     6.2 Navigation
@@ -1297,6 +1302,10 @@ nav.post-navigation {
   width: 38px;
   height: 38px; }
 
+#site-navigation.main-navigation {
+  border-top: solid 0px #f3f3f3;
+  border-bottom: solid 0px #f3f3f3; }
+
 .hamburger-wrapper .hamburger, .hamburger-wrapper .hamburger:visited {
   color: #000; }
 
@@ -1323,9 +1332,8 @@ nav.post-navigation {
   width: 26px; }
 
 .hamburger-wrapper .hamburger .hamburger-label {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 1rem;
   line-height: 1;
   position: absolute;
   text-transform: uppercase;
@@ -1349,21 +1357,27 @@ nav.post-navigation {
   opacity: 0; }
 
 /* Site Menu */
-.main-navigation {
-  background: #141414;
-  background: rgba(20, 20, 20, 0.9);
-  color: #fff;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 100%;
-  z-index: 80;
-  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+@media screen and (min-width: 0) {
+  .main-navigation {
+    background: #141414;
+    background: rgba(20, 20, 20, 0.9);
+    color: #fff;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 80;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); } }
+
+@media screen and (min-width: 48em) {
+  .main-navigation {
+    margin-right: 50%;
+    width: calc(100% - 50%); } }
 
 .has-menu-open .main-navigation {
   right: 0; }
@@ -1426,9 +1440,8 @@ nav.post-navigation {
 .header-menu a, .header-menu a:visited {
   color: #fff;
   display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 2rem;
   padding: 0 0 8px;
   padding: 0 0 0.5rem;
   text-transform: uppercase; }
@@ -1439,9 +1452,7 @@ nav.post-navigation {
 .header-menu ul a, .header-menu ul a:visited {
   color: #fff;
   display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-size: 1.875rem;
   padding: 0 0 8px;
   padding: 0 0 0.5rem;
   text-transform: uppercase; }
@@ -1459,19 +1470,47 @@ nav.post-navigation {
   height: 40px; }
 
 .header-menu .dropdown-toggle:after {
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-family: Dashicons;
+  font-size: 1.875rem;
   color: #fff;
-  content: "\f078"; }
+  content: "\f347"; }
 
 .header-menu .dropdown-toggle.toggle-on:after {
-  content: "\f077";
-  color: #aaa; }
+  content: "\f343";
+  color: #aaa;
+  font-family: Dashicons;
+  font-size: 1.875rem; }
 
 .header-menu .page_item_has_children > a,
 .header-menu .menu-item-has-children > a {
   padding-right: 40px;
   padding-right: 2.5rem; }
+
+.has-overlay-open .overlay {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.8s; }
+
+.has-overlay-open .hamburger-wrapper .hamburger.active .hamburger-icon:before {
+  background-color: #fff; }
+
+.has-overlay-open .hamburger-wrapper .hamburger.active .hamburger-icon:after {
+  background-color: #fff; }
+
+.has-overlay-open .hamburger-wrapper .hamburger .hamburger-label {
+  color: #fff; }
+
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(100%, 0, 0);
+  transition: opacity 0.4s, transform 0s 0.4s;
+  z-index: 50; }
 
 /*--------------------------------------------------------------
     6.3 Content
