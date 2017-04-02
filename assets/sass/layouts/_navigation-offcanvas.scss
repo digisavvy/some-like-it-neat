@@ -45,6 +45,13 @@
   width: 35px;
 }
 
+.has-overlay-open .hamburger-wrapper .hamburger .hamburger-icon {
+  &:before,
+  &:after {
+    background-color: #fff;
+  }
+
+}
 .hamburger-wrapper .hamburger .hamburger-icon:before {
   top: 8px;
   width: 22px;
@@ -56,9 +63,8 @@
 }
 
 .hamburger-wrapper .hamburger .hamburger-label {
-  font-family: "Roboto Condensed", sans-serif;
-  font-size: 14px;
-  font-size: 0.875rem;
+  font-family: $title;
+  font-size: rem(16);
   line-height: 1;
   position: absolute;
   text-transform: uppercase;
