@@ -189,9 +189,8 @@
 .header-menu a, .header-menu a:visited {
   color: #fff;
   display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 26px;
-  font-size: 1.625rem;
+  font-family: $title;
+  font-size: rem(30);
   padding: 0 0 8px;
   padding: 0 0 0.5rem;
   text-transform: uppercase;
@@ -204,9 +203,8 @@
 .header-menu ul a, .header-menu ul a:visited {
   color: #fff;
   display: block;
-  font-family: "Montserrat", sans-serif;
-  font-size: 20px;
-  font-size: 1.25rem;
+  font-family: $title;
+  font-size: rem(26);
   padding: 0 0 8px;
   padding: 0 0 0.5rem;
   text-transform: uppercase;
