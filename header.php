@@ -58,17 +58,17 @@
 
             }
             ?>
+            <?php if ( 'no' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
 
+                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-menu' );
+
+            } ?> <!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>
 
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
 
-        <?php if ( 'no' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
 
-            get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-menu' );
-
-        } ?> <!-- #site-navigation -->
 
 		<?php tha_content_before(); ?>
 
