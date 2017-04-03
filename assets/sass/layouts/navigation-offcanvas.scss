@@ -196,7 +196,7 @@
   color: #fff;
   display: block;
   font-family: $title;
-  font-size: rem(30);
+  font-size: rem(36);
   padding: 0 0 8px;
   padding: 0 0 0.5rem;
   text-transform: uppercase;
@@ -270,6 +270,9 @@
 }
 
 .has-overlay-open {
+  height: 100%;
+  overflow: hidden;
+
   .overlay {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
@@ -281,4 +284,5 @@
     border-top: 0;
     border-bottom: 0;
   }
+
 }
