@@ -46,7 +46,7 @@ Getting Started
 ---------------
 There's a lot to this theme, but don't be intimidated, even if you're not an "advanced-level" developer, you got this! I'll be honest with you, I don't know how half the stuff here works, it just sorta does. =)
 
-Bourbon and Neat are used for providing simple Sass mixins and leverages a simple grid system that let's you markup your theme how you want, while you use their math, unlike Bootstrap and Foundation, presently.
+Currently, unlike Bootstrap and Foundation, while you use Bourbon and Neat’s math, they provide simple Sass mixins and leverage a simple grid system that markup your theme the way you want.
 
 There are things you need to install before you hack away at things. There are three package managers to install: Node (which installs the NPM package manager). Each of these have dependencies that also need to be installed. Fortunately, this is all "fairly easy".
 
