@@ -1,9 +1,20 @@
 /*--------------------------------------------------------------
 8.0 Navigation Menus
 --------------------------------------------------------------*/
+@import '../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import '../base/base'; // Bitters
+@import '../grid-settings';
+@import '../../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+@import '../components/variables';
+@import '../../../node_modules/bi-app-sass/bi-app/bi-app-ltr';
+@import '../../../node_modules/bi-app-sass/bi-app/bi-app-rtl';
+@import '../components/typography';
+@import '../components/buttons';
+
 /*--------------------------------------------------------------
 8.1 Header Menu
 --------------------------------------------------------------*/
+
 /* Hamburger Menu */
 .hamburger-wrapper {
   position: relative;
