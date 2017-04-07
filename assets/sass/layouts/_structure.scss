@@ -4,24 +4,26 @@ html {
 
 }
 @include ltr {
-		body {
-			background-color: $base-body-color;
-			color: $primary-font-color;
-			font-family: $content;
-			line-height: 1.5em;
-			word-break: break-word;
-		}
+	body {
+		background-color: $base-body-color;
+		color: $primary-font-color;
+		font-family: $content;
+		line-height: 1.5em;
+		margin: 0;
+		word-break: break-word;
+	}
 }
 
 @include rtl {
 	body {
 		background-color: $base-body-color;
 		color: $primary-font-color;
+		direction: rtl;
 		font-family: $content;
 		line-height: 1.5em;
+		margin: 0;
 		word-break: break-word;
-		direction: rtl;
-	  unicode-bidi: embed;
+		unicode-bidi: embed;
 	}
 }
 
