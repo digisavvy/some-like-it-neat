@@ -5,7 +5,7 @@ Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
 Author URI: http://alexhasnicehair.com
 Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
-Version: 1.4.2
+Version: 1.4.3
 License: GNU General Public License
 License URI: license.txt
 Text Domain: some_like_it_neat
@@ -166,26 +166,6 @@ select {
   max-width: 100%;
   width: auto; }
 
-/* line 1, assets/sass/base/_lists.scss */
-ul,
-ol {
-  list-style-type: none;
-  margin: 0;
-  padding: 0; }
-
-/* line 8, assets/sass/base/_lists.scss */
-dl {
-  margin: 0; }
-
-/* line 12, assets/sass/base/_lists.scss */
-dt {
-  font-weight: 600;
-  margin: 0; }
-
-/* line 17, assets/sass/base/_lists.scss */
-dd {
-  margin: 0; }
-
 /* line 1, assets/sass/base/_tables.scss */
 table {
   border-collapse: collapse;
@@ -227,172 +207,190 @@ html {
 /*--------------------------------------------------------------
 3.0 Normalize/Reset
 --------------------------------------------------------------*/
-/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
-/* Document
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
    ========================================================================== */
 /**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
+ * Correct `block` display not defined in IE 8/9.
  */
-/* line 12, assets/sass/layouts/_normalize.scss */
+/* line 11, assets/sass/layouts/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 30, assets/sass/layouts/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, assets/sass/layouts/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+/* line 51, assets/sass/layouts/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 66, assets/sass/layouts/_normalize.scss */
 html {
-  line-height: 1.15;
+  font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
 
-/* Sections
+/**
+ * Remove default margin.
+ */
+/* line 76, assets/sass/layouts/_normalize.scss */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
    ========================================================================== */
 /**
- * Add the correct display in IE 9-.
+ * Remove the gray background color from active links in IE 10.
  */
-/* line 25, assets/sass/layouts/_normalize.scss */
-article,
-aside,
-footer,
-header,
-nav,
-section {
-  display: block; }
+/* line 88, assets/sass/layouts/_normalize.scss */
+a {
+  background: transparent; }
 
 /**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
+ * Address `outline` inconsistency between Chrome and other browsers.
  */
-/* line 39, assets/sass/layouts/_normalize.scss */
+/* line 96, assets/sass/layouts/_normalize.scss */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 104, assets/sass/layouts/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 118, assets/sass/layouts/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
-/* Grouping content
-   ========================================================================== */
 /**
- * Add the correct display in IE 9-.
- * 1. Add the correct display in IE.
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
-/* line 52, assets/sass/layouts/_normalize.scss */
-figcaption,
-figure,
-main {
-  /* 1 */
-  display: block; }
-
-/**
- * Add the correct margin in IE 8.
- */
-/* line 62, assets/sass/layouts/_normalize.scss */
-figure {
-  margin: 1em 40px; }
-
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
-/* line 71, assets/sass/layouts/_normalize.scss */
-hr {
-  box-sizing: content-box;
-  /* 1 */
-  height: 0;
-  /* 1 */
-  overflow: visible;
-  /* 2 */ }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-/* line 82, assets/sass/layouts/_normalize.scss */
-pre {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-/* Text-level semantics
-   ========================================================================== */
-/**
- * 1. Remove the gray background on active links in IE 10.
- * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
- */
-/* line 95, assets/sass/layouts/_normalize.scss */
-a {
-  background-color: transparent;
-  /* 1 */
-  -webkit-text-decoration-skip: objects;
-  /* 2 */ }
-
-/**
- * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-/* line 105, assets/sass/layouts/_normalize.scss */
+/* line 127, assets/sass/layouts/_normalize.scss */
 abbr[title] {
-  border-bottom: none;
-  /* 1 */
-  text-decoration: underline;
-  /* 2 */
-  text-decoration: underline dotted;
-  /* 2 */ }
+  border-bottom: 1px dotted; }
 
 /**
- * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 115, assets/sass/layouts/_normalize.scss */
+/* line 135, assets/sass/layouts/_normalize.scss */
 b,
 strong {
-  font-weight: inherit; }
+  font-weight: bold; }
 
 /**
- * Add the correct font weight in Chrome, Edge, and Safari.
+ * Address styling not present in Safari 5 and Chrome.
  */
-/* line 124, assets/sass/layouts/_normalize.scss */
-b,
-strong {
-  font-weight: bolder; }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-/* line 134, assets/sass/layouts/_normalize.scss */
-code,
-kbd,
-samp {
-  font-family: monospace, monospace;
-  /* 1 */
-  font-size: 1em;
-  /* 2 */ }
-
-/**
- * Add the correct font style in Android 4.3-.
- */
-/* line 145, assets/sass/layouts/_normalize.scss */
+/* line 144, assets/sass/layouts/_normalize.scss */
 dfn {
   font-style: italic; }
 
 /**
- * Add the correct background and color in IE 9-.
+ * Address differences between Firefox and other browsers.
  */
-/* line 153, assets/sass/layouts/_normalize.scss */
+/* line 152, assets/sass/layouts/_normalize.scss */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 162, assets/sass/layouts/_normalize.scss */
 mark {
-  background-color: #ff0;
+  background: #ff0;
   color: #000; }
 
 /**
- * Add the correct font size in all browsers.
+ * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 162, assets/sass/layouts/_normalize.scss */
+/* line 171, assets/sass/layouts/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 183, assets/sass/layouts/_normalize.scss */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+/* line 191, assets/sass/layouts/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 199, assets/sass/layouts/_normalize.scss */
 small {
   font-size: 80%; }
 
 /**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 171, assets/sass/layouts/_normalize.scss */
+/* line 207, assets/sass/layouts/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -400,244 +398,192 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 179, assets/sass/layouts/_normalize.scss */
-sub {
-  bottom: -0.25em; }
-
-/* line 183, assets/sass/layouts/_normalize.scss */
+/* line 215, assets/sass/layouts/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* Embedded content
+/* line 219, assets/sass/layouts/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
    ========================================================================== */
 /**
- * Add the correct display in IE 9-.
+ * Remove border when inside `a` element in IE 8/9.
  */
-/* line 194, assets/sass/layouts/_normalize.scss */
-audio,
-video {
-  display: inline-block; }
-
-/**
- * Add the correct display in iOS 4-7.
- */
-/* line 203, assets/sass/layouts/_normalize.scss */
-audio:not([controls]) {
-  display: none;
-  height: 0; }
-
-/**
- * Remove the border on images inside links in IE 10-.
- */
-/* line 212, assets/sass/layouts/_normalize.scss */
+/* line 231, assets/sass/layouts/_normalize.scss */
 img {
-  border-style: none; }
+  border: 0;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%; }
 
 /**
- * Hide the overflow in IE.
+ * Correct overflow displayed oddly in IE 9.
  */
-/* line 220, assets/sass/layouts/_normalize.scss */
+/* line 242, assets/sass/layouts/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
-/* Forms
+/* ==========================================================================
+   Figures
    ========================================================================== */
 /**
- * Remove the margin in Firefox and Safari.
- */
-/* line 231, assets/sass/layouts/_normalize.scss */
-button,
-input,
-optgroup,
-select,
-textarea {
-  margin: 0; }
-
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-/* line 244, assets/sass/layouts/_normalize.scss */
-button,
-input {
-  /* 1 */
-  overflow: visible; }
-
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
+ * Address margin not present in IE 8/9 and Safari 5.
  */
 /* line 254, assets/sass/layouts/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 266, assets/sass/layouts/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 277, assets/sass/layouts/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 288, assets/sass/layouts/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 302, assets/sass/layouts/_normalize.scss */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 314, assets/sass/layouts/_normalize.scss */
 button,
 select {
-  /* 1 */
   text-transform: none; }
 
 /**
- * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
- *    controls in Android 4.
- * 2. Correct the inability to style clickable types in iOS and Safari.
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
  */
-/* line 265, assets/sass/layouts/_normalize.scss */
+/* line 327, assets/sass/layouts/_normalize.scss */
 button,
-html [type="button"],
-[type="reset"],
-[type="submit"] {
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
-  /* 2 */ }
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-/* line 276, assets/sass/layouts/_normalize.scss */
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
-  padding: 0; }
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-/* line 288, assets/sass/layouts/_normalize.scss */
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText; }
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-/* line 302, assets/sass/layouts/_normalize.scss */
-legend {
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
   /* 2 */
-  display: table;
-  /* 1 */
-  max-width: 100%;
-  /* 1 */
-  padding: 0;
-  /* 3 */
-  white-space: normal;
-  /* 1 */ }
+  cursor: pointer;
+  /* 3 */ }
 
 /**
- * 1. Add the correct display in IE 9-.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ * Re-set default cursor for disabled elements.
  */
-/* line 316, assets/sass/layouts/_normalize.scss */
-progress {
-  display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */ }
+/* line 339, assets/sass/layouts/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
 
 /**
- * Remove the default vertical scrollbar in IE.
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 325, assets/sass/layouts/_normalize.scss */
-textarea {
-  overflow: auto; }
-
-/**
- * 1. Add the correct box sizing in IE 10-.
- * 2. Remove the padding in IE 10-.
- */
-/* line 334, assets/sass/layouts/_normalize.scss */
-[type="checkbox"],
-[type="radio"] {
+/* line 349, assets/sass/layouts/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
 
 /**
- * Correct the cursor style of increment and decrement buttons in Chrome.
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
  */
-/* line 344, assets/sass/layouts/_normalize.scss */
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; }
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-/* line 354, assets/sass/layouts/_normalize.scss */
-[type="search"] {
+/* line 361, assets/sass/layouts/_normalize.scss */
+input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  outline-offset: -2px;
-  /* 2 */ }
+  /* 2 */
+  box-sizing: content-box; }
 
 /**
- * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
  */
-/* line 363, assets/sass/layouts/_normalize.scss */
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+/* line 373, assets/sass/layouts/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
+ * Remove inner padding and border in Firefox 4+.
  */
-/* line 373, assets/sass/layouts/_normalize.scss */
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
+/* line 382, assets/sass/layouts/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 393, assets/sass/layouts/_normalize.scss */
+textarea {
+  overflow: auto;
   /* 1 */
-  font: inherit;
+  vertical-align: top;
   /* 2 */ }
 
-/* Interactive
-   ========================================================================== */
-/*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- */
-/* line 386, assets/sass/layouts/_normalize.scss */
-details,
-menu {
-  display: block; }
-
-/*
- * Add the correct display in all browsers.
- */
-/* line 395, assets/sass/layouts/_normalize.scss */
-summary {
-  display: list-item; }
-
-/* Scripting
+/* ==========================================================================
+   Tables
    ========================================================================== */
 /**
- * Add the correct display in IE 9-.
+ * Remove most spacing between table cells.
  */
 /* line 406, assets/sass/layouts/_normalize.scss */
-canvas {
-  display: inline-block; }
-
-/**
- * Add the correct display in IE.
- */
-/* line 414, assets/sass/layouts/_normalize.scss */
-template {
-  display: none; }
-
-/* Hidden
-   ========================================================================== */
-/**
- * Add the correct display in IE 10-.
- */
-/* line 425, assets/sass/layouts/_normalize.scss */
-[hidden] {
-  display: none; }
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 /*--------------------------------------------------------------
 4.0 Typography
@@ -1627,32 +1573,33 @@ nav.post-navigation {
 /* line 86, assets/sass/layouts/_content.scss */
 .wp-caption img[class*="wp-image-"] {
   display: block;
+  height: auto;
   margin: 1.2% auto 0;
   max-width: 98%; }
 
-/* line 92, assets/sass/layouts/_content.scss */
+/* line 93, assets/sass/layouts/_content.scss */
 .wp-caption-text {
   text-align: center; }
 
-/* line 96, assets/sass/layouts/_content.scss */
+/* line 97, assets/sass/layouts/_content.scss */
 .wp-caption .wp-caption-text {
   margin: .8075em 0; }
 
-/* line 100, assets/sass/layouts/_content.scss */
+/* line 101, assets/sass/layouts/_content.scss */
 .site-main .gallery {
   margin-bottom: 1.5em; }
 
-/* line 107, assets/sass/layouts/_content.scss */
+/* line 108, assets/sass/layouts/_content.scss */
 .site-main .gallery a img {
   border: 0;
   height: auto;
   max-width: 90%; }
 
-/* line 113, assets/sass/layouts/_content.scss */
+/* line 114, assets/sass/layouts/_content.scss */
 .site-main .gallery dd {
   margin: 0; }
 
-/* line 118, assets/sass/layouts/_content.scss */
+/* line 119, assets/sass/layouts/_content.scss */
 embed,
 iframe,
 object {
@@ -1660,43 +1607,43 @@ object {
 
 /* =Comments
 ----------------------------------------------- */
-/* line 126, assets/sass/layouts/_content.scss */
+/* line 127, assets/sass/layouts/_content.scss */
 .comment-content a {
   word-wrap: break-word; }
 
 /* =Infinite Scroll
 ----------------------------------------------- */
-/* line 137, assets/sass/layouts/_content.scss */
+/* line 138, assets/sass/layouts/_content.scss */
 .infinite-scroll .paging-navigation,
 .infinite-scroll.neverending .site-footer {
   display: none; }
 
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
-/* line 143, assets/sass/layouts/_content.scss */
+/* line 144, assets/sass/layouts/_content.scss */
 .infinity-end.neverending .site-footer {
   display: block; }
 
-/* line 150, assets/sass/layouts/_content.scss */
+/* line 151, assets/sass/layouts/_content.scss */
 #content .entry-content a, #content .entry-content a:visited {
   text-decoration: underline; }
-  /* line 153, assets/sass/layouts/_content.scss */
+  /* line 154, assets/sass/layouts/_content.scss */
   #content .entry-content a:hover, #content .entry-content a:visited:hover {
     text-decoration: none; }
 
-/* line 159, assets/sass/layouts/_content.scss */
+/* line 160, assets/sass/layouts/_content.scss */
 #content .entry-meta a, #content .entry-meta a:visited {
   text-decoration: underline; }
-  /* line 162, assets/sass/layouts/_content.scss */
+  /* line 163, assets/sass/layouts/_content.scss */
   #content .entry-meta a:hover, #content .entry-meta a:visited:hover {
     text-decoration: none; }
 
 /* =Galleries
 ----------------------------------------------- */
-/* line 171, assets/sass/layouts/_content.scss */
+/* line 172, assets/sass/layouts/_content.scss */
 .gallery {
   margin-bottom: 1.6em; }
 
-/* line 175, assets/sass/layouts/_content.scss */
+/* line 176, assets/sass/layouts/_content.scss */
 .gallery-item {
   display: inline-block;
   padding: 1.79104477%;
@@ -1704,43 +1651,43 @@ object {
   vertical-align: top;
   width: 100%; }
 
-/* line 183, assets/sass/layouts/_content.scss */
+/* line 184, assets/sass/layouts/_content.scss */
 .gallery-columns-2 .gallery-item {
   max-width: 50%; }
 
-/* line 187, assets/sass/layouts/_content.scss */
+/* line 188, assets/sass/layouts/_content.scss */
 .gallery-columns-3 .gallery-item {
   max-width: 33.33%; }
 
-/* line 191, assets/sass/layouts/_content.scss */
+/* line 192, assets/sass/layouts/_content.scss */
 .gallery-columns-4 .gallery-item {
   max-width: 25%; }
 
-/* line 195, assets/sass/layouts/_content.scss */
+/* line 196, assets/sass/layouts/_content.scss */
 .gallery-columns-5 .gallery-item {
   max-width: 20%; }
 
-/* line 199, assets/sass/layouts/_content.scss */
+/* line 200, assets/sass/layouts/_content.scss */
 .gallery-columns-6 .gallery-item {
   max-width: 16.66%; }
 
-/* line 203, assets/sass/layouts/_content.scss */
+/* line 204, assets/sass/layouts/_content.scss */
 .gallery-columns-7 .gallery-item {
   max-width: 14.28%; }
 
-/* line 207, assets/sass/layouts/_content.scss */
+/* line 208, assets/sass/layouts/_content.scss */
 .gallery-columns-8 .gallery-item {
   max-width: 12.5%; }
 
-/* line 211, assets/sass/layouts/_content.scss */
+/* line 212, assets/sass/layouts/_content.scss */
 .gallery-columns-9 .gallery-item {
   max-width: 11.11%; }
 
-/* line 215, assets/sass/layouts/_content.scss */
+/* line 216, assets/sass/layouts/_content.scss */
 .gallery-icon img {
   margin: 0 auto; }
 
-/* line 219, assets/sass/layouts/_content.scss */
+/* line 220, assets/sass/layouts/_content.scss */
 .gallery-caption {
   color: #707070;
   color: rgba(51, 51, 51, 0.7);
@@ -1751,7 +1698,7 @@ object {
   line-height: 1.5;
   padding: 0.5em 0; }
 
-/* line 230, assets/sass/layouts/_content.scss */
+/* line 231, assets/sass/layouts/_content.scss */
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
@@ -1921,26 +1868,38 @@ object {
     display: table; }
 
 /* line 3, assets/sass/layouts/_template-landing-page.scss */
-.page-template-page-templatestemplate-landing-page-php #main,
-.page-template-page-templatestemplate-landing-page-php #primary,
-.page-template-page-templatestemplate-landing-page-php #secondary {
+.page-template-page-templatestemplate-landing-page-php #main, .post-template-template-landing-page #main,
+.page-template-page-templatestemplate-landing-page-php #primary, .post-template-template-landing-page #primary,
+.page-template-page-templatestemplate-landing-page-php #secondary, .post-template-template-landing-page #secondary,
+.page-template-page-templatestemplate-landing-page-php .site-main.wrap, .post-template-template-landing-page .site-main.wrap {
   width: 100%;
-  margin: 0;
-  padding: 0; }
-
-/* line 11, assets/sass/layouts/_template-landing-page.scss */
-.page-template-page-templatestemplate-landing-page-php #page {
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  margin: 0;
+  padding: 0; }
   /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
-  .page-template-page-templatestemplate-landing-page-php #page::after {
+  .page-template-page-templatestemplate-landing-page-php #main::after, .post-template-template-landing-page #main::after,
+  .page-template-page-templatestemplate-landing-page-php #primary::after, .post-template-template-landing-page #primary::after,
+  .page-template-page-templatestemplate-landing-page-php #secondary::after, .post-template-template-landing-page #secondary::after,
+  .page-template-page-templatestemplate-landing-page-php .site-main.wrap::after, .post-template-template-landing-page .site-main.wrap::after {
     clear: both;
     content: "";
     display: table; }
 
-/* line 15, assets/sass/layouts/_template-landing-page.scss */
-.page-template-page-templatestemplate-landing-page-php .entry-content {
+/* line 13, assets/sass/layouts/_template-landing-page.scss */
+.page-template-page-templatestemplate-landing-page-php #page, .post-template-template-landing-page #page {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+  .page-template-page-templatestemplate-landing-page-php #page::after, .post-template-template-landing-page #page::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+/* line 17, assets/sass/layouts/_template-landing-page.scss */
+.page-template-page-templatestemplate-landing-page-php .entry-content, .post-template-template-landing-page .entry-content {
   margin: 0 !important; }
 
 /*--------------------------------------------------------------

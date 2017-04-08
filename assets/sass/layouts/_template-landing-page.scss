@@ -2,8 +2,10 @@
 
   #main,
   #primary,
-  #secondary {
+  #secondary,
+  .site-main.wrap {
     @include fill-parent;
+    @include outer-container(100%);
     margin: 0;
     padding: 0;
   }
@@ -16,4 +18,8 @@
     margin: 0 !important;
   }
 
+}
+
+.post-template-template-landing-page {
+  @extend .page-template-page-templatestemplate-landing-page-php;
 }
