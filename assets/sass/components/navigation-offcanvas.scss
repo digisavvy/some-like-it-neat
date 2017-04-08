@@ -19,6 +19,7 @@
 .hamburger-wrapper {
   position: relative;
   height: 38px;
+  margin-left: 13px;
 }
 
 .hamburger-wrapper .hamburger {
@@ -138,8 +139,8 @@
   overflow: hidden;
   overflow-y: auto;
   height: calc(100% - 70px);
-  margin: 70px 4% 0;
-  margin: 4.375rem 4% 0;
+  //margin: 70px 20px 0;
+  margin: 4.375rem 20px 0;
   padding: 30px 0 0;
   padding: 1.875rem 0 0;
 }
