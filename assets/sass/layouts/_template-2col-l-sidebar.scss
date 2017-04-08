@@ -14,7 +14,7 @@
 
         #primary {
             @include media($sm) {
-                @include span-columns(4);
+                @include span-columns(2);
             }
 
             @include media($md) {
@@ -30,7 +30,7 @@
         #secondary {
             @include margin-right(1.5%);
             @include media($sm) {
-                @include span-columns(4);
+                @include span-columns(2);
             }
             @include media($md) {
                 @include span-columns(2);
@@ -48,4 +48,8 @@
         clear: both;
         display: table;
     }
+}
+
+.post-template-page-templatestemplate-left-col-php {
+    @extend .page-template-page-templatestemplate-left-col-php;
 }

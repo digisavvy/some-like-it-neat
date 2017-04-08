@@ -10,7 +10,7 @@
         @include media($sm) {
             @include float(left);
             @include media($sm) {
-                @include span-columns(4);
+                @include span-columns(2);
             }
             @include media($md) {
                 @include span-columns(4);
@@ -28,7 +28,7 @@
             @include float(right);
             @include margin-right(1.5%);
             @include media($sm) {
-                @include span-columns(4);
+                @include span-columns(2);
             }
             @include media($md) {
                 @include span-columns(2);

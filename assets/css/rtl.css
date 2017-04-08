@@ -1709,30 +1709,30 @@ object {
     6.4 Page Templates
     --------------------------------------------------------------*/
 /* line 4, assets/sass/layouts/_template-2col-l-sidebar.scss */
-.page-template-page-templatestemplate-left-col-php h1.entry-title {
+.page-template-page-templatestemplate-left-col-php h1.entry-title, .post-template-page-templatestemplate-left-col-php h1.entry-title {
   margin: 0;
   text-align: right; }
 
 @media screen and (min-width: 48em) {
   /* line 8, assets/sass/layouts/_template-2col-l-sidebar.scss */
-  .page-template-page-templatestemplate-left-col-php #main {
+  .page-template-page-templatestemplate-left-col-php #main, .post-template-page-templatestemplate-left-col-php #main {
     display: -ms-flexbox;
     display: flex; } }
 
 @media screen and (min-width: 0) {
   /* line 15, assets/sass/layouts/_template-2col-l-sidebar.scss */
-  .page-template-page-templatestemplate-left-col-php #main #primary {
+  .page-template-page-templatestemplate-left-col-php #main #primary, .post-template-page-templatestemplate-left-col-php #main #primary {
     float: left;
     display: block;
     margin-right: 14.28571%;
-    width: 214.28571%; }
+    width: 100%; }
     /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-    .page-template-page-templatestemplate-left-col-php #main #primary:last-child {
+    .page-template-page-templatestemplate-left-col-php #main #primary:last-child, .post-template-page-templatestemplate-left-col-php #main #primary:last-child {
       margin-right: 0; } }
 
 @media screen and (min-width: 48em) {
   /* line 15, assets/sass/layouts/_template-2col-l-sidebar.scss */
-  .page-template-page-templatestemplate-left-col-php #main #primary {
+  .page-template-page-templatestemplate-left-col-php #main #primary, .post-template-page-templatestemplate-left-col-php #main #primary {
     float: left;
     display: block;
     margin-right: 4.34783%;
@@ -1740,25 +1740,25 @@ object {
     -ms-flex-order: 1;
         order: 1; }
     /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-    .page-template-page-templatestemplate-left-col-php #main #primary:last-child {
+    .page-template-page-templatestemplate-left-col-php #main #primary:last-child, .post-template-page-templatestemplate-left-col-php #main #primary:last-child {
       margin-right: 0; } }
 
 /* line 30, assets/sass/layouts/_template-2col-l-sidebar.scss */
-.page-template-page-templatestemplate-left-col-php #main #secondary {
+.page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
   margin-left: 1.5%; }
   @media screen and (min-width: 0) {
     /* line 30, assets/sass/layouts/_template-2col-l-sidebar.scss */
-    .page-template-page-templatestemplate-left-col-php #main #secondary {
+    .page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
       float: left;
       display: block;
       margin-right: 14.28571%;
-      width: 214.28571%; }
+      width: 100%; }
       /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-      .page-template-page-templatestemplate-left-col-php #main #secondary:last-child {
+      .page-template-page-templatestemplate-left-col-php #main #secondary:last-child, .post-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 48em) {
     /* line 30, assets/sass/layouts/_template-2col-l-sidebar.scss */
-    .page-template-page-templatestemplate-left-col-php #main #secondary {
+    .page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
       float: left;
       display: block;
       margin-right: 4.34783%;
@@ -1766,11 +1766,11 @@ object {
       -ms-flex-order: 2;
           order: 2; }
       /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-      .page-template-page-templatestemplate-left-col-php #main #secondary:last-child {
+      .page-template-page-templatestemplate-left-col-php #main #secondary:last-child, .post-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
 
 /* line 47, assets/sass/layouts/_template-2col-l-sidebar.scss */
-.page-template-page-templatestemplate-left-col-php footer {
+.page-template-page-templatestemplate-left-col-php footer, .post-template-page-templatestemplate-left-col-php footer {
   clear: both;
   display: table; }
 
@@ -1789,7 +1789,7 @@ object {
       float: left;
       display: block;
       margin-right: 14.28571%;
-      width: 214.28571%; }
+      width: 100%; }
       /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
       .page-template-page-templatestemplate-right-col-php #primary:last-child {
         margin-right: 0; } }
@@ -1815,7 +1815,7 @@ object {
       float: left;
       display: block;
       margin-right: 14.28571%;
-      width: 214.28571%; }
+      width: 100%; }
       /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
       .page-template-page-templatestemplate-right-col-php #secondary:last-child {
         margin-right: 0; } }
@@ -1831,38 +1831,38 @@ object {
         margin-right: 0; } }
 
 /* line 3, assets/sass/layouts/_template-full-width.scss */
-.page-template-page-templatestemplate-full-width-php #main,
-.page-template-page-templatestemplate-full-width-php #primary,
-.page-template-page-templatestemplate-full-width-php #secondary {
+.page-template-page-templatestemplate-full-width-php #main, .post-template-page-templatestemplate-full-width-php #main,
+.page-template-page-templatestemplate-full-width-php #primary, .post-template-page-templatestemplate-full-width-php #primary,
+.page-template-page-templatestemplate-full-width-php #secondary, .post-template-page-templatestemplate-full-width-php #secondary {
   width: 100%;
   margin: 0 auto;
   padding: 0; }
 
 /* line 11, assets/sass/layouts/_template-full-width.scss */
-.page-template-page-templatestemplate-full-width-php #page {
+.page-template-page-templatestemplate-full-width-php #page, .post-template-page-templatestemplate-full-width-php #page {
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
   /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
-  .page-template-page-templatestemplate-full-width-php #page::after {
+  .page-template-page-templatestemplate-full-width-php #page::after, .post-template-page-templatestemplate-full-width-php #page::after {
     clear: both;
     content: "";
     display: table; }
 
 /* line 14, assets/sass/layouts/_template-full-width.scss */
-.page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"],
-.page-template-page-templatestemplate-full-width-php #comments,
-.page-template-page-templatestemplate-full-width-php footer,
-.page-template-page-templatestemplate-full-width-php #primary-nav {
+.page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"], .post-template-page-templatestemplate-full-width-php .site-main [class*="navigation"],
+.page-template-page-templatestemplate-full-width-php #comments, .post-template-page-templatestemplate-full-width-php #comments,
+.page-template-page-templatestemplate-full-width-php footer, .post-template-page-templatestemplate-full-width-php footer,
+.page-template-page-templatestemplate-full-width-php #primary-nav, .post-template-page-templatestemplate-full-width-php #primary-nav {
   max-width: 71.25em;
   margin-left: auto;
   margin-right: auto;
   float: none; }
   /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
-  .page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"]::after,
-  .page-template-page-templatestemplate-full-width-php #comments::after,
-  .page-template-page-templatestemplate-full-width-php footer::after,
-  .page-template-page-templatestemplate-full-width-php #primary-nav::after {
+  .page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"]::after, .post-template-page-templatestemplate-full-width-php .site-main [class*="navigation"]::after,
+  .page-template-page-templatestemplate-full-width-php #comments::after, .post-template-page-templatestemplate-full-width-php #comments::after,
+  .page-template-page-templatestemplate-full-width-php footer::after, .post-template-page-templatestemplate-full-width-php footer::after,
+  .page-template-page-templatestemplate-full-width-php #primary-nav::after, .post-template-page-templatestemplate-full-width-php #primary-nav::after {
     clear: both;
     content: "";
     display: table; }
