@@ -123,15 +123,14 @@ body{background-color:#fff;color:#000;font-family:"Georgia","Cambria","Times New
 }.flexnav ul.nav-menu li:hover{transition:background 200ms ease-in-out;background:#f3f3f3}
 .flexnav .menu-main-menu-container li.current-menu-item{background-color:#f3f3f3;display:block}
 .flexnav ul.nav-menu li.current_page_item{background:#f3f3f3}#primary-nav{float:left;max-width:100%;width:100%}
-nav.post-navigation{width:100%;position:relative;z-index:1}.nav-links{width:100%}
-@media screen and (min-width:0){.nav-links .nav-previous{float:left;display:block;margin-right:14.28571%;width:100%;margin-right:0}
-.nav-links .nav-previous:last-child{margin-right:0}}@media screen and (min-width:48em){.nav-links .nav-previous{float:left;display:block;margin-right:4.34783%;width:47.82609%}
-.nav-links .nav-previous:last-child{margin-right:0}}@media screen and (min-width:0){.nav-links .nav-next{float:left;display:block;margin-right:14.28571%;width:100%;margin-right:0}
-.nav-links .nav-next:last-child{margin-right:0}}@media screen and (min-width:48em){.nav-links .nav-next{float:left;display:block;margin-right:4.34783%;width:47.82609%}
-.nav-links .nav-next:last-child{margin-right:0}}.sticky{background:#ededed}.gallery-caption{list-style:none}
-.bypostauthor{list-style:none}.hentry{margin:0 0 1.5em}.byline,.updated{display:none}
-.single .byline,.group-blog .byline{display:inline}.page-content,.entry-content,.entry-summary{margin:1.5em 0 0}
-.page-links{clear:both;margin:0 0 1.5em}.aligncenter{float:none;margin-top:.5em;margin-right:auto !important;margin-bottom:.5em;margin-left:auto !important}
+nav.post-navigation{width:100%;position:relative;z-index:1}@media screen and (min-width:0){.nav-links{width:100%;display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column}
+}@media screen and (min-width:30em){.nav-links{-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}
+}@media screen and (min-width:0){.nav-links .nav-previous{text-align:center}}@media screen and (min-width:48em){.nav-links .nav-previous{text-align:inherit}
+}@media screen and (min-width:0){.nav-links .nav-next{text-align:center}}@media screen and (min-width:48em){.nav-links .nav-next{text-align:inherit}
+}.sticky{background:#ededed}.gallery-caption{list-style:none}.bypostauthor{list-style:none}
+.hentry{margin:0 0 1.5em}.byline,.updated{display:none}.single .byline,.group-blog .byline{display:inline}
+.page-content,.entry-content,.entry-summary{margin:1.5em 0 0}.page-links{clear:both;margin:0 0 1.5em}
+.aligncenter{float:none;margin-top:.5em;margin-right:auto !important;margin-bottom:.5em;margin-left:auto !important}
 .aligncenter::after{clear:both;content:"";display:table}
 .alignleft{display:inline;float:left;margin-right:1.5em}.alignright{display:inline;float:right;margin-left:1.5em}
 .sticky{float:left;padding:20px}.page-content img.wp-smiley,.entry-content img.wp-smiley,.comment-content img.wp-smiley{border:0;margin-bottom:0;margin-top:0;padding:0}
@@ -174,7 +173,8 @@ nav.post-navigation{width:100%;position:relative;z-index:1}.nav-links{width:100%
 .page-template-page-templatestemplate-right-col-php #secondary:last-child{margin-right:0}
 }@media screen and (min-width:48em) and (min-width:48em){.page-template-page-templatestemplate-right-col-php #secondary{float:left;display:block;margin-right:4.34783%;width:30.43478%}
 .page-template-page-templatestemplate-right-col-php #secondary:last-child{margin-right:0}
-}.page-template-page-templatestemplate-full-width-php #main,.post-template-page-templatestemplate-full-width-php #main,.page-template-page-templatestemplate-full-width-php #primary,.post-template-page-templatestemplate-full-width-php #primary,.page-template-page-templatestemplate-full-width-php #secondary,.post-template-page-templatestemplate-full-width-php #secondary{width:100%;margin:0 auto;padding:0}
+}.page-template-page-templatestemplate-full-width-php #main,.post-template-page-templatestemplate-full-width-php #main,.page-template-page-templatestemplate-full-width-php #primary,.post-template-page-templatestemplate-full-width-php #primary,.page-template-page-templatestemplate-full-width-php #secondary,.post-template-page-templatestemplate-full-width-php #secondary{width:100%;max-width:100%;margin-left:auto;margin-right:auto;margin:0 auto;padding:0}
+.page-template-page-templatestemplate-full-width-php #main::after,.post-template-page-templatestemplate-full-width-php #main::after,.page-template-page-templatestemplate-full-width-php #primary::after,.post-template-page-templatestemplate-full-width-php #primary::after,.page-template-page-templatestemplate-full-width-php #secondary::after,.post-template-page-templatestemplate-full-width-php #secondary::after{clear:both;content:"";display:table}
 .page-template-page-templatestemplate-full-width-php #page,.post-template-page-templatestemplate-full-width-php #page{max-width:100%;margin-left:auto;margin-right:auto}
 .page-template-page-templatestemplate-full-width-php #page::after,.post-template-page-templatestemplate-full-width-php #page::after{clear:both;content:"";display:table}
 .page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"],.post-template-page-templatestemplate-full-width-php .site-main [class*="navigation"],.page-template-page-templatestemplate-full-width-php #comments,.post-template-page-templatestemplate-full-width-php #comments,.page-template-page-templatestemplate-full-width-php footer,.post-template-page-templatestemplate-full-width-php footer,.page-template-page-templatestemplate-full-width-php #primary-nav,.post-template-page-templatestemplate-full-width-php #primary-nav{max-width:71.25em;margin-left:auto;margin-right:auto;float:none}
@@ -186,7 +186,7 @@ nav.post-navigation{width:100%;position:relative;z-index:1}.nav-links{width:100%
 .page-template-page-templatestemplate-landing-page-php .entry-content,.post-template-template-landing-page .entry-content{margin:0 !important}
 .blog .format-aside .entry-title,.archive .format-aside .entry-title{display:none}
 .widget{margin:0 0 1.5em}.widget select{max-width:100%}.widget_search .search-submit{display:none}
-footer{float:left;margin:0 auto;padding:0 40px;width:100%}footer .site-info{margin:auto;width:100%}
+footer{margin:0 auto;padding:0 40px;width:100%}footer .site-info{margin:auto;width:100%}
 footer .footer-left{float:left;display:block;margin-right:2.12766%;width:48.93617%;margin-bottom:40px;margin-top:30px;padding:10px;text-align:left}
 footer .footer-left:last-child{margin-right:0}footer .footer-right{float:left;display:block;margin-right:2.12766%;width:48.93617%;margin-top:30px;margin-bottom:40px;padding:10px;text-align:right}
 footer .footer-right:last-child{margin-right:0}.screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px}

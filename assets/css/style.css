@@ -1434,51 +1434,42 @@ nav.post-navigation {
   position: relative;
   z-index: 1; }
 
-/* line 80, assets/sass/layouts/_navigation.scss */
-.nav-links {
-  width: 100%; }
-  @media screen and (min-width: 0) {
-    /* line 82, assets/sass/layouts/_navigation.scss */
-    .nav-links .nav-previous {
-      float: left;
-      display: block;
-      margin-right: 14.28571%;
-      width: 100%;
-      margin-right: 0; }
-      /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-      .nav-links .nav-previous:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 48em) {
-    /* line 82, assets/sass/layouts/_navigation.scss */
-    .nav-links .nav-previous {
-      float: left;
-      display: block;
-      margin-right: 4.34783%;
-      width: 47.82609%; }
-      /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-      .nav-links .nav-previous:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 0) {
-    /* line 91, assets/sass/layouts/_navigation.scss */
-    .nav-links .nav-next {
-      float: left;
-      display: block;
-      margin-right: 14.28571%;
-      width: 100%;
-      margin-right: 0; }
-      /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-      .nav-links .nav-next:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 48em) {
-    /* line 91, assets/sass/layouts/_navigation.scss */
-    .nav-links .nav-next {
-      float: left;
-      display: block;
-      margin-right: 4.34783%;
-      width: 47.82609%; }
-      /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
-      .nav-links .nav-next:last-child {
-        margin-right: 0; } }
+@media screen and (min-width: 0) {
+  /* line 80, assets/sass/layouts/_navigation.scss */
+  .nav-links {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; } }
+
+@media screen and (min-width: 30em) {
+  /* line 80, assets/sass/layouts/_navigation.scss */
+  .nav-links {
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-pack: justify;
+        justify-content: space-between; } }
+
+@media screen and (min-width: 0) {
+  /* line 91, assets/sass/layouts/_navigation.scss */
+  .nav-links .nav-previous {
+    text-align: center; } }
+
+@media screen and (min-width: 48em) {
+  /* line 91, assets/sass/layouts/_navigation.scss */
+  .nav-links .nav-previous {
+    text-align: inherit; } }
+
+@media screen and (min-width: 0) {
+  /* line 99, assets/sass/layouts/_navigation.scss */
+  .nav-links .nav-next {
+    text-align: center; } }
+
+@media screen and (min-width: 48em) {
+  /* line 99, assets/sass/layouts/_navigation.scss */
+  .nav-links .nav-next {
+    text-align: inherit; } }
 
 /*--------------------------------------------------------------
     6.3 Content
@@ -1833,10 +1824,20 @@ object {
 .page-template-page-templatestemplate-full-width-php #primary, .post-template-page-templatestemplate-full-width-php #primary,
 .page-template-page-templatestemplate-full-width-php #secondary, .post-template-page-templatestemplate-full-width-php #secondary {
   width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   margin: 0 auto;
   padding: 0; }
+  /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
+  .page-template-page-templatestemplate-full-width-php #main::after, .post-template-page-templatestemplate-full-width-php #main::after,
+  .page-template-page-templatestemplate-full-width-php #primary::after, .post-template-page-templatestemplate-full-width-php #primary::after,
+  .page-template-page-templatestemplate-full-width-php #secondary::after, .post-template-page-templatestemplate-full-width-php #secondary::after {
+    clear: both;
+    content: "";
+    display: table; }
 
-/* line 11, assets/sass/layouts/_template-full-width.scss */
+/* line 12, assets/sass/layouts/_template-full-width.scss */
 .page-template-page-templatestemplate-full-width-php #page, .post-template-page-templatestemplate-full-width-php #page {
   max-width: 100%;
   margin-left: auto;
@@ -1847,7 +1848,7 @@ object {
     content: "";
     display: table; }
 
-/* line 14, assets/sass/layouts/_template-full-width.scss */
+/* line 15, assets/sass/layouts/_template-full-width.scss */
 .page-template-page-templatestemplate-full-width-php .site-main [class*="navigation"], .post-template-page-templatestemplate-full-width-php .site-main [class*="navigation"],
 .page-template-page-templatestemplate-full-width-php #comments, .post-template-page-templatestemplate-full-width-php #comments,
 .page-template-page-templatestemplate-full-width-php footer, .post-template-page-templatestemplate-full-width-php footer,
@@ -1929,15 +1930,14 @@ object {
     --------------------------------------------------------------*/
 /* line 1, assets/sass/layouts/_footer.scss */
 footer {
-  float: left ;
   margin: 0 auto;
   padding: 0 40px;
   width: 100%; }
-  /* line 6, assets/sass/layouts/_footer.scss */
+  /* line 5, assets/sass/layouts/_footer.scss */
   footer .site-info {
     margin: auto;
     width: 100%; }
-  /* line 10, assets/sass/layouts/_footer.scss */
+  /* line 9, assets/sass/layouts/_footer.scss */
   footer .footer-left {
     float: left;
     display: block;
@@ -1950,7 +1950,7 @@ footer {
     /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
     footer .footer-left:last-child {
       margin-right: 0; }
-  /* line 17, assets/sass/layouts/_footer.scss */
+  /* line 16, assets/sass/layouts/_footer.scss */
   footer .footer-right {
     float: left;
     display: block;
