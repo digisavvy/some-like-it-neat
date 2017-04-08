@@ -102,9 +102,9 @@ gulp.task('styles', function() {
     .pipe(notify({ message: 'Styles task complete', onLast: true }));
 });
 
-gulp.task('addonStyles', function() {
+gulp.task('styles', function() {
     return gulp.src([
-        source + 'sass/**/navigation-offcanvas.scss'
+        source + 'sass/components/navigation-offcanvas.scss'
     ])
         .pipe(plumber({
             errorHandler: function(err) {
