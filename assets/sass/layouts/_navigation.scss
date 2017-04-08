@@ -78,23 +78,30 @@ nav.post-navigation {
     z-index: 1;
 }
 .nav-links {
-    @include fill-parent;
+    @include media($sm) {
+        @include fill-parent;
+        display: flex;
+        flex-direction: column;
+    }
+    @include media($smbg) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     .nav-previous {
         @include media($sm) {
-            @include span-columns( 2 );
-            @include omega( block );
+            text-align: center;
         }
         @include media($md) {
-            @include span-columns(3);
+            text-align: inherit;
         }
     }
     .nav-next {
         @include media($sm) {
-            @include span-columns( 2 );
-            @include omega( block );
+            text-align: center;
         }
         @include media($md) {
-            @include span-columns(3);
+            text-align: inherit;
         }
     }
 }
