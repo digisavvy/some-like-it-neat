@@ -472,6 +472,11 @@ input#s {
     margin-right: 50%;
     width: calc(100% - 50%); } }
 
+@media screen and (min-width: 71.25em) {
+  .main-navigation {
+    margin-right: 65%;
+    width: calc(100% - 65%); } }
+
 .has-menu-open .main-navigation {
   right: 0; }
 
