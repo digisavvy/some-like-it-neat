@@ -102,7 +102,7 @@ gulp.task('styles', function() {
     .pipe(notify({ message: 'Styles task complete', onLast: true }));
 });
 
-gulp.task('styles', function() {
+gulp.task('stylesAddons', function() {
     return gulp.src([
         source + 'sass/components/navigation-offcanvas.scss'
     ])
@@ -257,6 +257,7 @@ gulp.task('build', function(cb) {
 // Watch Task
 gulp.task('default', ['styles', 'js', 'jsHint', 'images', 'browser-sync'], function() {
   gulp.watch(source + 'sass/**/*.scss', ['styles']);
+  gulp.watch(source + 'sass/**/*.scss', ['stylesAddons']);
   gulp.watch(source + 'js/app/**/*.js', ['js', browserSync.reload]);
   gulp.watch(source + 'js/app/**/*.js', ['jsHint']);
   gulp.watch(source + 'img/**/*.{png,jpg,gif}', ['images']);
