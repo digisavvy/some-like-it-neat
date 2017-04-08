@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.4.3
+-------------
+* Add - Offcanvas navigation menu. Configurable from the Customizer. Conditionally loads styles/scripts if selected.
+* Update - Various NPM packages. Notable: Neat 1.7.4
+* Update - Added second 'styles' task to run offcanvas styles, looking for better method to include them
+
 ### 1.4.2
 -------------
 * Fix - Prevent Neat 2.0 from downloading (it's coming, so keep awares).
