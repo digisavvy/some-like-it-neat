@@ -189,6 +189,15 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 		wp_register_script( 'hoverintent-js', get_theme_file_uri( '/assets/js/vendor/hoverintent/jquery.hoverIntent.js' ), array( 'jquery' ), '1.0.0', true );
 		wp_enqueue_script( 'hoverintent-js' );
 
+        if ( 'no' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
+            // Offcanvas Style
+            wp_enqueue_style( 'offcanvas', get_theme_file_uri( '/assets/css/navigation-offcanvas.css' ) );
+
+            // Offcanvas Nav Script
+            wp_enqueue_script('some-like-it-neat_custom', get_template_directory_uri() . '/assets/js/vendor/custom-offcanvas.js', array('jquery'), '1.0', true);
+            wp_enqueue_script('some-like-it-neat_custom');
+        }
+
 		// Dashicons
 		wp_enqueue_style( 'dashicons' );
 

@@ -41,33 +41,34 @@
 		<?php tha_header_before(); ?>
 		<header id="masthead" class="site-header wrap" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 
-		<?php tha_header_top(); ?>
+		    <?php tha_header_top(); ?>
 
-			<section class="site-branding">
-				<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-				<div class="site-description"><?php bloginfo( 'description' ); ?></div>
-			</section>
+            <?php if ( 'yes' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) { ?>
 
-			<nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-				<button class="menu-button">
-					<span class="dashicons <?php echo get_theme_mod( 'some_like_it_neat_mobile_nav_icon', 'dashicons-menu' ); ?>"></span><?php echo get_theme_mod( 'some_like_it_neat_mobile_nav_label', 'Menu' ); ?>
-				</button>
-		        <?php
-					wp_nav_menu(
-						array(
-							'theme_location' => 'primary-navigation',
-							'menu_class' => 'flexnav', //Adding the class for FlexNav
-							'items_wrap' => '<ul data-breakpoint=" '. esc_attr( get_theme_mod( 'some_like_it_neat_mobile_min_width', '768' ) ) .' " id="%1$s" class="%2$s">%3$s</ul>', // Adding data-breakpoint for FlexNav
-						)
-					);
-				?>
+                <section class="site-branding">
+                    <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+                    <div class="site-description"><?php bloginfo( 'description' ); ?></div>
+                </section>
 
-			</nav><!-- #site-navigation -->
+               <?php get_template_part( 'page-templates/template-parts/navigation', 'flexnav' ); ?>
 
+            <?php } else {
+
+                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-wrap' );
+
+            }
+            ?>
+            <?php if ( 'no' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
+
+                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-menu' );
+
+            } ?> <!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>
 
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
+
+
 
 		<?php tha_content_before(); ?>
 

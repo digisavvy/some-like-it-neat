@@ -84,7 +84,7 @@ h6 {
 }
 blockquote {
     background-color: darken($base-body-color, 3%);
-    @include border-left(solid 5px $link-color);
+    //@include border-left(solid 5px $link-color);
     font-style: italic;
     padding: 20px;
 }
@@ -137,6 +137,7 @@ a, a:visited {
         font-size: rem(100);
     }
 }
+
 #primary,
 #secondary {
     font-family: $content;
