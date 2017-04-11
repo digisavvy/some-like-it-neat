@@ -16,14 +16,11 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php
-				printf( '<h1 class="page-title">%s</h1>',
-					esc_html( get_the_archive_title() );
-				);
+				printf( '<h1 class="page-title">%s</h1>', esc_html( get_the_archive_title() ) );
 				
 				$description = get_the_archive_description();
 				if ( ! empty( $description ) ) {
-	                printf( '<div class="taxonomy-description">%s</div>',
-						esc_html( $description );
+	                printf( '<div class="taxonomy-description">%s</div>', esc_html( $description ) );
 	        	} ?>
 			</header><!-- .page-header -->
 
