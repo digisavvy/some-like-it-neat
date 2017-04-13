@@ -40,7 +40,6 @@
   "dependencies": {
     "bourbon": "^4.2.7",
     "bourbon-neat": "^2.0.0",
-    "gulp-install": "^0.6.0",
-    "jshint": "^2.9.4"
+    "gulp-install": "^0.6.0"
   }
 }
