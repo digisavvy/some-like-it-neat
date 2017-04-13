@@ -44,10 +44,10 @@ main#main {
 		@include grid-column(2);
 	}
 	@include grid-media($smbg) {
-		@include grid-column(3);
+		@include grid-column(4);
 	}
 	@include grid-media($md) {
-		@include grid-column(6);
+		@include grid-column(4);
 	}
 	@include grid-media($mdbg) {
 		@include grid-column(5);
@@ -85,10 +85,10 @@ main#main {
 		@include grid-column(2);
 	}
 	@include grid-media($smbg) {
-		@include grid-column(1);
+		@include grid-column(4);
 	}
 	@include grid-media($md) {
-		@include grid-column(6);
+		@include grid-column(2);
 	}
 	@include grid-media($mdbg) {
 		@include grid-column(2.5);
