@@ -1029,18 +1029,22 @@ header {
 /* =Off-Canvas Header Styling
 ----------------------------------------------- */
 /* line 47, assets/sass/layouts/_header.scss */
+.site-header.offcanvas-no {
+  padding: 0; }
+
+/* line 51, assets/sass/layouts/_header.scss */
 .site-header-inside-wrapper {
   -ms-flex-align: baseline;
       align-items: baseline;
   display: -ms-flexbox;
   display: flex; }
-  /* line 51, assets/sass/layouts/_header.scss */
+  /* line 55, assets/sass/layouts/_header.scss */
   .site-header-inside-wrapper .site-branding {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: baseline;
         align-items: baseline; }
-  /* line 55, assets/sass/layouts/_header.scss */
+  /* line 59, assets/sass/layouts/_header.scss */
   .site-header-inside-wrapper .hamburger-wrapper {
     position: relative;
     z-index: 100; }
