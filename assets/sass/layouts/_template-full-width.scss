@@ -4,7 +4,6 @@
   .site-main,
   #primary {
     @include section-container('full');
-    @include outer-container(100%);
     margin: inherit;
     padding: inherit;
   }

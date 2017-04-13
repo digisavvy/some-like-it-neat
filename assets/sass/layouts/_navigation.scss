@@ -14,7 +14,6 @@
 }
     .site-main [class*="navigation"] {
     @include float(right);
-        @include fill-parent;
     margin-top: 25px;
     width: 50%;
 }
@@ -22,13 +21,13 @@
 .main-navigation ul ul {
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     display: none;
-        @include float(left);
+    @include float(left);
     @include left(0);
     position: absolute;
-        margin: 25px 0 1.5em;
+    margin: 25px 0 1.5em;
     z-index: 99999;
     background: #fff;
-        overflow: hidden;
+    overflow: hidden;
 }
 #site-navigation {
     border-top: solid 5px #f3f3f3;
@@ -69,11 +68,11 @@ ul.nav-menu li {
     }
     ul.nav-menu li {
         @include transition (background 200ms ease-in-out);
-        @include media($sm) {
+        @include grid-media($sm) {
             text-align: center;
             width: 100%;
         }
-        @include media($md) {
+        @include grid-media($md) {
             text-align: none;
             width: inherit;
         }
@@ -113,11 +112,10 @@ nav.post-navigation {
 }
 .nav-links {
     @include grid-container;
-        @include fill-parent;
-        display: flex;
-        flex-direction: column;
-    }
-    @include media($smbg) {
+    display: flex;
+    flex-direction: column;
+}
+    @include grid-media($smbg) {
         flex-direction: row;
         justify-content: space-between;
     }
