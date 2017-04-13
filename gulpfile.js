@@ -40,9 +40,6 @@ var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
 var zip          = require('gulp-zip');
 
-
-
-
 /**
  * Browser Sync
  *
@@ -51,7 +48,7 @@ var zip          = require('gulp-zip');
 */
 gulp.task('browser-sync', function() {
   var files = [
-    '**/*.php',
+    '**/*.php', '**/*.js',
     '**/*.{png,jpg,gif}',
   ];
   browserSync.init(files, {

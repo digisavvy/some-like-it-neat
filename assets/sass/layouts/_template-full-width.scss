@@ -1,25 +1,20 @@
 .page-template-page-templatestemplate-full-width-php {
 
-  #main,
-  #primary,
-  #secondary {
-    @include fill-parent;
+  main#main,
+  .site-main,
+  #primary {
+    @include section-container('full');
     @include outer-container(100%);
-    margin: 0 auto;
-    padding: 0;
+    margin: inherit;
+    padding: inherit;
   }
 
-  #page {
-    @include outer-container(100%);
-  }
+
   .site-main [class*="navigation"],
   #comments,
-  footer,
   #primary-nav {
-	  @include outer-container;
-	  float: none;
-  }
 
+  }
 }
 
 .post-template-page-templatestemplate-full-width-php {

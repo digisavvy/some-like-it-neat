@@ -191,6 +191,7 @@ td,
 th {
   vertical-align: middle; }
 
+<<<<<<< HEAD
 /* line 4, node_modules/bourbon-neat/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
@@ -199,6 +200,8 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
+=======
+>>>>>>> neat-2.0
 /*--------------------------------------------------------------
 2.0 Variables
 --------------------------------------------------------------*/
@@ -712,6 +715,7 @@ a, a:visited {
 .entry-title {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   text-align: center; }
+<<<<<<< HEAD
   @media screen and (min-width: 0) {
     /* line 126, assets/sass/components/_typography.scss */
     .entry-title {
@@ -722,6 +726,15 @@ a, a:visited {
       font-size: 4.0625rem; } }
   @media screen and (min-width: 48em) {
     /* line 126, assets/sass/components/_typography.scss */
+=======
+  @media only screen and (min-width: 0) {
+    .entry-title {
+      font-size: 2.5rem; } }
+  @media only screen and (min-width: 30em) {
+    .entry-title {
+      font-size: 4.0625rem; } }
+  @media only screen and (min-width: 48em) {
+>>>>>>> neat-2.0
     .entry-title {
       font-size: 6.25rem; } }
 
@@ -893,6 +906,7 @@ body {
   margin: 0;
   word-break: break-word; }
 
+<<<<<<< HEAD
 /* line 30, assets/sass/layouts/_structure.scss */
 .site-main.wrap,
 .site-footer.wrap {
@@ -902,13 +916,26 @@ body {
   /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
   .site-main.wrap::after,
   .site-footer.wrap::after {
+=======
+.site-header,
+.site-footer,
+.site-main {
+  padding: 0 calc((100% - 1200px) / 2); }
+  .site-header::after,
+  .site-footer::after,
+  .site-main::after {
+>>>>>>> neat-2.0
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
 
+<<<<<<< HEAD
 /* line 35, assets/sass/layouts/_structure.scss */
 #main {
   padding: 0 50px;
+=======
+main#main {
+>>>>>>> neat-2.0
   position: relative;
   z-index: 0; }
 
@@ -916,6 +943,7 @@ body {
 #primary {
   margin: 0 auto;
   width: 100%; }
+<<<<<<< HEAD
   /* line 20, node_modules/bourbon/app/assets/stylesheets/addons/_clearfix.scss */
   #primary::after {
     clear: both;
@@ -923,8 +951,13 @@ body {
     display: table; }
   @media screen and (min-width: 0) {
     /* line 41, assets/sass/layouts/_structure.scss */
+=======
+  @media only screen and (min-width: 0) {
+>>>>>>> neat-2.0
     #primary {
+      width: calc(100% - 40px);
       float: left;
+<<<<<<< HEAD
       display: block;
       margin-right: 14.28571%;
       width: 100%; }
@@ -933,8 +966,14 @@ body {
         margin-right: 0; } }
   @media screen and (min-width: 48em) {
     /* line 41, assets/sass/layouts/_structure.scss */
+=======
+      margin-left: 20px; } }
+  @media only screen and (min-width: 30em) {
+>>>>>>> neat-2.0
     #primary {
+      width: calc(75% - 35px);
       float: left;
+<<<<<<< HEAD
       display: block;
       margin-right: 4.34783%;
       width: 65.21739%;
@@ -943,13 +982,30 @@ body {
       #primary:last-child {
         margin-right: 0; } }
   /* line 54, assets/sass/layouts/_structure.scss */
+=======
+      margin-left: 20px; } }
+  @media only screen and (min-width: 48em) {
+    #primary {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+  @media only screen and (min-width: 64em) {
+    #primary {
+      width: calc(62.5% - 16.25px);
+      float: left;
+      margin-left: 10px; } }
+>>>>>>> neat-2.0
   #primary ol li {
     margin-left: 10px; }
   /* line 58, assets/sass/layouts/_structure.scss */
   #primary ul {
     list-style: none;
+<<<<<<< HEAD
     margin-left: 10px; }
     /* line 61, assets/sass/layouts/_structure.scss */
+=======
+    margin-left: 40px; }
+>>>>>>> neat-2.0
     #primary ul li {
       list-style-type: square; }
       /* line 64, assets/sass/layouts/_structure.scss */
@@ -959,6 +1015,7 @@ body {
         #primary ul li ul li ul li {
           list-style-type: circle; }
 
+<<<<<<< HEAD
 /* line 77, assets/sass/layouts/_structure.scss */
 #secondary {
   margin: 20px auto;
@@ -986,6 +1043,32 @@ body {
       /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
       #secondary:last-child {
         margin-right: 0; } }
+=======
+@media only screen and (min-width: 0) {
+  #secondary {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; } }
+
+@media only screen and (min-width: 30em) {
+  #secondary {
+    width: calc(25% - 25px);
+    float: left;
+    margin-left: 20px; } }
+
+@media only screen and (min-width: 48em) {
+  #secondary {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; } }
+
+@media only screen and (min-width: 64em) {
+  #secondary {
+    width: calc(31.25% - 13.125px);
+    float: left;
+    margin-left: 10px;
+    margin-left: calc(6.25% - 10.625px + 20px); } }
+>>>>>>> neat-2.0
 
 /*--------------------------------------------------------------
     6.1 Header
@@ -1002,6 +1085,7 @@ header {
   .site-branding .site-title {
     font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
     padding: 40px; }
+<<<<<<< HEAD
     @media screen and (min-width: 0) {
       /* line 7, assets/sass/layouts/_header.scss */
       .site-branding .site-title {
@@ -1012,6 +1096,15 @@ header {
         font-size: 3.4375rem; } }
     @media screen and (min-width: 48em) {
       /* line 7, assets/sass/layouts/_header.scss */
+=======
+    @media only screen and (min-width: 0) {
+      .site-branding .site-title {
+        font-size: 2.1875rem; } }
+    @media only screen and (min-width: 30em) {
+      .site-branding .site-title {
+        font-size: 3.4375rem; } }
+    @media only screen and (min-width: 48em) {
+>>>>>>> neat-2.0
       .site-branding .site-title {
         font-size: 4.6875rem; } }
     /* line 21, assets/sass/layouts/_header.scss */
@@ -1023,6 +1116,7 @@ header {
     font-size: 1.25rem;
     font-family: "Georgia", "Cambria", "Times New Roman", "Times", serif;
     font-style: italic; }
+<<<<<<< HEAD
     @media screen and (min-width: 0) {
       /* line 27, assets/sass/layouts/_header.scss */
       .site-branding .site-description {
@@ -1033,6 +1127,15 @@ header {
         font-size: 1.125rem; } }
     @media screen and (min-width: 48em) {
       /* line 27, assets/sass/layouts/_header.scss */
+=======
+    @media only screen and (min-width: 0) {
+      .site-branding .site-description {
+        font-size: 0.9375rem; } }
+    @media only screen and (min-width: 30em) {
+      .site-branding .site-description {
+        font-size: 1.125rem; } }
+    @media only screen and (min-width: 48em) {
+>>>>>>> neat-2.0
       .site-branding .site-description {
         font-size: 1.5625rem; } }
 
@@ -1356,12 +1459,20 @@ header {
 
 /* =Menu
 ----------------------------------------------- */
+<<<<<<< HEAD
 /* line 4, assets/sass/layouts/_navigation.scss */
 .flexnav .site-main [class*="navigation"] {
   width: 100%;
+=======
+.site-main [class*="navigation"] {
+>>>>>>> neat-2.0
   float: left ;
   margin: 25px 0 1.5em;
   overflow: hidden; }
+  .site-main [class*="navigation"]::after {
+    clear: both;
+    content: "";
+    display: block; }
 
 /* line 10, assets/sass/layouts/_navigation.scss */
 .flexnav [class*="navigation"] .nav-previous {
@@ -1398,6 +1509,7 @@ header {
   transition: background 200ms ease-in-out;
   background: #fff;
   padding: 10px; }
+<<<<<<< HEAD
   @media screen and (min-width: 0) {
     /* line 37, assets/sass/layouts/_navigation.scss */
     .flexnav ul.nav-menu li {
@@ -1406,6 +1518,14 @@ header {
   @media screen and (min-width: 48em) {
     /* line 37, assets/sass/layouts/_navigation.scss */
     .flexnav ul.nav-menu li {
+=======
+  @media only screen and (min-width: 0) {
+    ul.nav-menu li {
+      text-align: center;
+      width: 100%; } }
+  @media only screen and (min-width: 48em) {
+    ul.nav-menu li {
+>>>>>>> neat-2.0
       text-align: none;
       width: inherit; } }
   /* line 50, assets/sass/layouts/_navigation.scss */
@@ -1430,9 +1550,9 @@ header {
 
 /* line 75, assets/sass/layouts/_navigation.scss */
 nav.post-navigation {
-  width: 100%;
   position: relative;
   z-index: 1; }
+<<<<<<< HEAD
 
 @media screen and (min-width: 0) {
   /* line 80, assets/sass/layouts/_navigation.scss */
@@ -1470,6 +1590,42 @@ nav.post-navigation {
   /* line 99, assets/sass/layouts/_navigation.scss */
   .nav-links .nav-next {
     text-align: inherit; } }
+=======
+  @media only screen and (min-width: 0) {
+    nav.post-navigation {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+
+.nav-links::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+@media only screen and (min-width: 0) {
+  .nav-links .nav-previous {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px; } }
+
+@media only screen and (min-width: 48em) {
+  .nav-links .nav-previous {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px; } }
+
+@media only screen and (min-width: 0) {
+  .nav-links .nav-next {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px; } }
+
+@media only screen and (min-width: 48em) {
+  .nav-links .nav-next {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px; } }
+>>>>>>> neat-2.0
 
 /*--------------------------------------------------------------
     6.3 Content
@@ -1702,6 +1858,7 @@ object {
   margin: 0;
   text-align: left; }
 
+<<<<<<< HEAD
 @media screen and (min-width: 48em) {
   /* line 8, assets/sass/layouts/_template-2col-l-sidebar.scss */
   .page-template-page-templatestemplate-left-col-php #main, .post-template-page-templatestemplate-left-col-php #main {
@@ -1722,19 +1879,38 @@ object {
 @media screen and (min-width: 48em) {
   /* line 15, assets/sass/layouts/_template-2col-l-sidebar.scss */
   .page-template-page-templatestemplate-left-col-php #main #primary, .post-template-page-templatestemplate-left-col-php #main #primary {
+=======
+@media only screen and (min-width: 48em) {
+  .page-template-page-templatestemplate-left-col-php #main {
+    display: -ms-flexbox;
+    display: flex; } }
+
+@media only screen and (min-width: 0) {
+  .page-template-page-templatestemplate-left-col-php #main #primary {
+    width: calc(200% - 60px);
     float: left;
-    display: block;
-    margin-right: 4.34783%;
-    width: 65.21739%;
+    margin-left: 20px; } }
+
+@media only screen and (min-width: 48em) {
+  .page-template-page-templatestemplate-left-col-php #main #primary {
+    width: calc(66.66667% - 33.33333px);
+>>>>>>> neat-2.0
+    float: left;
+    margin-left: 20px;
     -ms-flex-order: 2;
+<<<<<<< HEAD
         order: 2; }
     /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
     .page-template-page-templatestemplate-left-col-php #main #primary:last-child, .post-template-page-templatestemplate-left-col-php #main #primary:last-child {
       margin-right: 0; } }
+=======
+        order: 2; } }
+>>>>>>> neat-2.0
 
 /* line 30, assets/sass/layouts/_template-2col-l-sidebar.scss */
 .page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
   margin-right: 1.5%; }
+<<<<<<< HEAD
   @media screen and (min-width: 0) {
     /* line 30, assets/sass/layouts/_template-2col-l-sidebar.scss */
     .page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
@@ -1748,15 +1924,27 @@ object {
   @media screen and (min-width: 48em) {
     /* line 30, assets/sass/layouts/_template-2col-l-sidebar.scss */
     .page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
+=======
+  @media only screen and (min-width: 0) {
+    .page-template-page-templatestemplate-left-col-php #main #secondary {
+      width: calc(200% - 60px);
       float: left;
-      display: block;
-      margin-right: 4.34783%;
-      width: 30.43478%;
+      margin-left: 20px; } }
+  @media only screen and (min-width: 48em) {
+    .page-template-page-templatestemplate-left-col-php #main #secondary {
+      width: calc(33.33333% - 26.66667px);
+>>>>>>> neat-2.0
+      float: left;
+      margin-left: 20px;
       -ms-flex-order: 1;
+<<<<<<< HEAD
           order: 1; }
       /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
       .page-template-page-templatestemplate-left-col-php #main #secondary:last-child, .post-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
+=======
+          order: 1; } }
+>>>>>>> neat-2.0
 
 /* line 47, assets/sass/layouts/_template-2col-l-sidebar.scss */
 .page-template-page-templatestemplate-left-col-php footer, .post-template-page-templatestemplate-left-col-php footer {
@@ -1768,14 +1956,23 @@ object {
   margin: 0;
   text-align: left; }
 
+<<<<<<< HEAD
 @media screen and (min-width: 0) {
   /* line 9, assets/sass/layouts/_template-2col-r-sidebar.scss */
   .page-template-page-templatestemplate-right-col-php #primary {
     float: left ; } }
   @media screen and (min-width: 0) and (min-width: 0) {
     /* line 9, assets/sass/layouts/_template-2col-r-sidebar.scss */
+=======
+@media only screen and (min-width: 0) {
+  .page-template-page-templatestemplate-right-col-php #primary {
+    float: left ; } }
+  @media only screen and (min-width: 0) and (min-width: 0) {
+>>>>>>> neat-2.0
     .page-template-page-templatestemplate-right-col-php #primary {
+      width: calc(200% - 60px);
       float: left;
+<<<<<<< HEAD
       display: block;
       margin-right: 14.28571%;
       width: 100%; }
@@ -1784,8 +1981,14 @@ object {
         margin-right: 0; } }
   @media screen and (min-width: 0) and (min-width: 48em) {
     /* line 9, assets/sass/layouts/_template-2col-r-sidebar.scss */
+=======
+      margin-left: 20px; } }
+  @media only screen and (min-width: 0) and (min-width: 48em) {
+>>>>>>> neat-2.0
     .page-template-page-templatestemplate-right-col-php #primary {
+      width: calc(66.66667% - 33.33333px);
       float: left;
+<<<<<<< HEAD
       display: block;
       margin-right: 4.34783%;
       width: 65.21739%; }
@@ -1800,8 +2003,19 @@ object {
     margin-right: 1.5%; } }
   @media screen and (min-width: 48em) and (min-width: 0) {
     /* line 23, assets/sass/layouts/_template-2col-r-sidebar.scss */
+=======
+      margin-left: 20px; } }
+
+@media only screen and (min-width: 48em) {
+  .page-template-page-templatestemplate-right-col-php #secondary {
+    float: right ;
+    margin-right: 1.5%; } }
+  @media only screen and (min-width: 48em) and (min-width: 0) {
+>>>>>>> neat-2.0
     .page-template-page-templatestemplate-right-col-php #secondary {
+      width: calc(200% - 60px);
       float: left;
+<<<<<<< HEAD
       display: block;
       margin-right: 14.28571%;
       width: 100%; }
@@ -1810,8 +2024,14 @@ object {
         margin-right: 0; } }
   @media screen and (min-width: 48em) and (min-width: 48em) {
     /* line 23, assets/sass/layouts/_template-2col-r-sidebar.scss */
+=======
+      margin-left: 20px; } }
+  @media only screen and (min-width: 48em) and (min-width: 48em) {
+>>>>>>> neat-2.0
     .page-template-page-templatestemplate-right-col-php #secondary {
+      width: calc(33.33333% - 26.66667px);
       float: left;
+<<<<<<< HEAD
       display: block;
       margin-right: 4.34783%;
       width: 30.43478%; }
@@ -1896,6 +2116,27 @@ object {
     clear: both;
     content: "";
     display: table; }
+=======
+      margin-left: 20px; } }
+
+.page-template-page-templatestemplate-full-width-php main#main,
+.page-template-page-templatestemplate-full-width-php .site-main,
+.page-template-page-templatestemplate-full-width-php #primary {
+  max-width: 100%;
+  width: 100%;
+  margin: inherit;
+  padding: inherit; }
+
+.page-template-page-templatestemplate-landing-page-php main#main,
+.page-template-page-templatestemplate-landing-page-php .site-footer,
+.page-template-page-templatestemplate-landing-page-php .site-header,
+.page-template-page-templatestemplate-landing-page-php .site-main,
+.page-template-page-templatestemplate-landing-page-php #primary {
+  max-width: 100%;
+  width: 100%;
+  margin: inherit;
+  padding: inherit; }
+>>>>>>> neat-2.0
 
 /* line 17, assets/sass/layouts/_template-landing-page.scss */
 .page-template-page-templatestemplate-landing-page-php .entry-content, .post-template-template-landing-page .entry-content {
@@ -1928,6 +2169,7 @@ object {
 /*--------------------------------------------------------------
     6.6 Footer
     --------------------------------------------------------------*/
+<<<<<<< HEAD
 /* line 1, assets/sass/layouts/_footer.scss */
 footer {
   margin: 0 auto;
@@ -1938,8 +2180,26 @@ footer {
     margin: auto;
     width: 100%; }
   /* line 9, assets/sass/layouts/_footer.scss */
+=======
+footer::after {
+  clear: both;
+  content: "";
+  display: block; }
+
+footer .site-info {
+  text-align: center; }
+  @media only screen and (min-width: 0) {
+    footer .site-info {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+
+@media only screen and (min-width: 0) {
+>>>>>>> neat-2.0
   footer .footer-left {
+    width: calc(100% - 40px);
     float: left;
+<<<<<<< HEAD
     display: block;
     margin-right: 2.12766%;
     width: 48.93617%;
@@ -1951,8 +2211,23 @@ footer {
     footer .footer-left:last-child {
       margin-right: 0; }
   /* line 16, assets/sass/layouts/_footer.scss */
-  footer .footer-right {
+=======
+    margin-left: 20px;
+    text-align: center; } }
+
+@media only screen and (min-width: 30em) {
+  footer .footer-left {
+    width: calc(50% - 30px);
     float: left;
+    margin-left: 20px;
+    text-align: left; } }
+
+@media only screen and (min-width: 0) {
+>>>>>>> neat-2.0
+  footer .footer-right {
+    width: calc(100% - 40px);
+    float: left;
+<<<<<<< HEAD
     display: block;
     margin-right: 2.12766%;
     width: 48.93617%;
@@ -1963,6 +2238,17 @@ footer {
     /* line 89, node_modules/bourbon-neat/app/assets/stylesheets/grid/_span-columns.scss */
     footer .footer-right:last-child {
       margin-right: 0; }
+=======
+    margin-left: 20px;
+    text-align: center; } }
+
+@media only screen and (min-width: 30em) {
+  footer .footer-right {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px;
+    text-align: right; } }
+>>>>>>> neat-2.0
 
 /*--------------------------------------------------------------
     6.7 Accessibility

@@ -1,16 +1,49 @@
 /* =Menu
 ----------------------------------------------- */
+
 .flexnav {
+    @include grid-container;
+    @include float(left);
+    margin: 25px 0 1.5em;
+    overflow: hidden;
+}
+[class*="navigation"] .nav-previous {
+    @include float(left);
+    margin-top: 25px;
+    width: 50%;
+}
     .site-main [class*="navigation"] {
+    @include float(right);
         @include fill-parent;
+    margin-top: 25px;
+    width: 50%;
+}
+
+.main-navigation ul ul {
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    display: none;
         @include float(left);
+    @include left(0);
+    position: absolute;
         margin: 25px 0 1.5em;
+    z-index: 99999;
+    background: #fff;
         overflow: hidden;
+}
+#site-navigation {
+    border-top: solid 5px #f3f3f3;
+    border-bottom: solid 5px #f3f3f3;
+}
+ul.nav-menu li {
+    @include transition (background 200ms ease-in-out);
+    @include grid-media($sm) {
+        text-align: center;
+        width: 100%;
     }
     [class*="navigation"] .nav-previous {
-        @include float(left);
-        margin-top: 25px;
-        width: 50%;
+    @include grid-media($md) {
+        text-align: none;
+        width: inherit;
     }
     [class*="navigation"] .nav-next {
         @include float(right);
@@ -52,6 +85,7 @@
             background: #f3f3f3;
         }
     }
+}
     .menu-main-menu-container {
 
         li.current-menu-item {
@@ -62,9 +96,7 @@
 
     ul.nav-menu li.current_page_item {
         background: #f3f3f3;
-    }
 }
-
 
 #primary-nav {
     @include float(left);
@@ -73,12 +105,14 @@
 }
 
 nav.post-navigation {
-    @include fill-parent;
+    @include grid-media($sm) {
+        @include grid-column(2);
+    }
     position: relative;
     z-index: 1;
 }
 .nav-links {
-    @include media($sm) {
+    @include grid-container;
         @include fill-parent;
         display: flex;
         flex-direction: column;
@@ -89,19 +123,19 @@ nav.post-navigation {
     }
 
     .nav-previous {
-        @include media($sm) {
-            text-align: center;
+        @include grid-media($sm) {
+            @include grid-column( 1 );
         }
-        @include media($md) {
-            text-align: inherit;
+        @include grid-media($md) {
+            @include grid-column(3);
         }
     }
     .nav-next {
-        @include media($sm) {
-            text-align: center;
+        @include grid-media($sm) {
+            @include grid-column( 1 );
         }
-        @include media($md) {
-            text-align: inherit;
+        @include grid-media($md) {
+            @include grid-column(3);
         }
     }
 }
