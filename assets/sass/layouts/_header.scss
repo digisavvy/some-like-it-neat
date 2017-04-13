@@ -44,6 +44,10 @@ header {
 
 /* =Off-Canvas Header Styling
 ----------------------------------------------- */
+.site-header.offcanvas-no {
+    padding: 0;
+}
+
 .site-header-inside-wrapper {
     align-items: baseline;
     display: flex;
