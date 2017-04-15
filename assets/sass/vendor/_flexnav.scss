@@ -17,7 +17,7 @@ $fourth_level: #999;
     transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     &.opacity {
-        // opacity: 0;
+        transition: all .5s ease-in-out;
         @include padding-left(0);
     }
 

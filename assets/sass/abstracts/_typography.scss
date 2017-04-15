@@ -123,21 +123,6 @@ a, a:visited {
     }
 }
 
-.entry-title {
-    font-family: $title;
-    text-align: center;
-
-    @include grid-media($sm) {
-        font-size: rem(40);
-    }
-    @include grid-media($smbg) {
-        font-size: rem(65);
-    }
-    @include grid-media($md) {
-        font-size: rem(100);
-    }
-}
-
 #primary,
 #secondary {
     font-family: $content;
