@@ -1031,7 +1031,7 @@ header {
 /* =Off-Canvas Header Styling
 ----------------------------------------------- */
 /* line 47, assets/sass/layouts/_header.scss */
-.site-header.offcanvas-no {
+.site-header.offcanvas-nav {
   padding: 0; }
 
 /* line 51, assets/sass/layouts/_header.scss */
