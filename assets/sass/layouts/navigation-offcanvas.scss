@@ -2,13 +2,13 @@
 8.0 Call Sass Files
 --------------------------------------------------------------*/
 @import '../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
-@import '../base/base'; // Bitters
-@import '../grid-settings';
-@import '../../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
-@import '../components/variables';
+@import '../vendor/base'; // Bitters
+@import '../vendor/grid-settings';
+@import '../../../node_modules/bourbon-neat/core/neat';
+@import '../abstracts/variables';
 @import '../../../node_modules/bi-app-sass/bi-app/bi-app-ltr';
 @import '../../../node_modules/bi-app-sass/bi-app/bi-app-rtl';
-@import '../components/typography';
+@import '../abstracts/typography';
 @import '../components/buttons';
 
 /*--------------------------------------------------------------
@@ -17,6 +17,7 @@
 
 /* Hamburger Menu */
 .hamburger-wrapper {
+  box-shadow: #ccc;
   position: relative;
   height: 38px;
   margin-left: 13px;
@@ -108,7 +109,7 @@
 
 /* Site Menu */
 .main-navigation {
-  @include media($sm) {
+  @include grid-media($sm) {
     background: #141414;
     background: rgba(20, 20, 20, 0.9);
     color: #fff;
@@ -124,11 +125,11 @@
     z-index: 80;
     transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  @include media($md) {
+  @include grid-media($md) {
     margin-right: 50%;
     width: calc(100% - 50%);
   }
-  @include media($hg) {
+  @include grid-media($hg) {
     margin-right:65%;
     width: calc(100% - 65%);
   }
@@ -301,4 +302,22 @@
     border-bottom: 0;
   }
 
+}
+
+.site-header.offcanvas-nav {
+  padding: 0;
+}
+
+.site-header-inside-wrapper {
+  align-items: baseline;
+  display: flex;
+
+  .site-branding {
+    display: flex;
+    align-items: baseline;
+  }
+  .hamburger-wrapper {
+    position: relative;
+    z-index: 100;
+  }
 }
