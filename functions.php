@@ -183,13 +183,13 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 		wp_enqueue_script( 'selectivizr-js' );
   		wp_script_add_data( 'selectivizr-js', 'conditional', '(gte IE 6)&(lte IE 8)' );
 
-		wp_register_script( 'flexnav-js', get_theme_file_uri( '/assets/js/vendor/flexnav/jquery.flexnav.js' ), array( 'jquery' ), '1.3.3', true );
-		wp_enqueue_script( 'flexnav-js' );
+        if ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
+            wp_register_script( 'flexnav-js', get_theme_file_uri( '/assets/js/vendor/flexnav/jquery.flexnav.js' ), array( 'jquery' ), '1.3.3', true );
+            wp_enqueue_script( 'flexnav-js' );
 
-		wp_register_script( 'hoverintent-js', get_theme_file_uri( '/assets/js/vendor/hoverintent/jquery.hoverIntent.js' ), array( 'jquery' ), '1.0.0', true );
-		wp_enqueue_script( 'hoverintent-js' );
-
-        if ( 'offcanvas' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
+            wp_register_script( 'hoverintent-js', get_theme_file_uri( '/assets/js/vendor/hoverintent/jquery.hoverIntent.js' ), array( 'jquery' ), '1.0.0', true );
+            wp_enqueue_script( 'hoverintent-js' );
+        } else {
             // Offcanvas Style
             wp_enqueue_style( 'offcanvas', get_theme_file_uri( '/assets/css/navigation-offcanvas.css' ) );
 
