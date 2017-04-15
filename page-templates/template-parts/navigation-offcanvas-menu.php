@@ -18,6 +18,6 @@
         ) ) );
         ?>
     </div> <!-- .main-navigation-inside -->
-</nav>
+</nav> <!-- #site-navigation -->
 
 <div class="overlay"></div> <!-- .overlay -->

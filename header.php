@@ -57,7 +57,7 @@
 
                 get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-menu' );
 
-            } ?> <!-- #site-navigation -->
+            } ?>
 
 			<?php tha_header_bottom(); ?>
 
