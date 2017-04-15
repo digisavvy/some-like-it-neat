@@ -101,7 +101,7 @@ gulp.task('styles', function() {
 
 gulp.task('stylesAddons', function() {
     return gulp.src([
-        source + 'sass/components/navigation-offcanvas.scss'
+        source + 'sass/layouts/navigation-offcanvas.scss'
     ])
         .pipe(plumber({
             errorHandler: function(err) {
