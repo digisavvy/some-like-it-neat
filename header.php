@@ -45,11 +45,6 @@
 
             <?php if ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) { ?>
 
-                <section class="site-branding">
-                    <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-                    <div class="site-description"><?php bloginfo( 'description' ); ?></div>
-                </section>
-
                <?php get_template_part( 'page-templates/template-parts/navigation', 'flexnav' ); ?>
 
             <?php } else {
@@ -68,8 +63,6 @@
 
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
-
-
 
 		<?php tha_content_before(); ?>
 
