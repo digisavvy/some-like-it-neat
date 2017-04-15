@@ -189,7 +189,7 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 		wp_register_script( 'hoverintent-js', get_theme_file_uri( '/assets/js/vendor/hoverintent/jquery.hoverIntent.js' ), array( 'jquery' ), '1.0.0', true );
 		wp_enqueue_script( 'hoverintent-js' );
 
-        if ( 'no' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
+        if ( 'offcanvas' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
             // Offcanvas Style
             wp_enqueue_style( 'offcanvas', get_theme_file_uri( '/assets/css/navigation-offcanvas.css' ) );
 

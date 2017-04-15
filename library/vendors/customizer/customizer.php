@@ -125,7 +125,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->add_setting(
         'some-like-it-neat_nav_style',
         array(
-            'default'   => 'yes'
+            'default'   => 'flexnav'
         )
     );
 
@@ -136,8 +136,8 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
             'label'     => __('Navigation Style', 'some-like-it-neat'),
             'type'      => 'radio',
             'choices'   => array(
-                'yes'   => 'Flexnav',
-                'no'    => 'Off-Canvas'
+                'flexnav'   => 'Flexnav',
+                'offcanvas'    => 'Off-Canvas'
             ),
             'description'   => __('Default menu is the horizontal flexnav menu. Offcanvas slides in from the left', 'some-like-it-neat'),
         )
