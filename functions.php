@@ -276,7 +276,7 @@ add_action( 'widgets_init', 'some_like_it_neat_widgets_init' );
 /**
  * Initializing Flexnav Menu System
  */
-if ( ! function_exists( 'dg_add_flexnav' ) ) :
+if ( ! function_exists( 'dg_add_flexnav' ) && ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) ) :
 	function dg_add_flexnav()
 	{
 	?>
