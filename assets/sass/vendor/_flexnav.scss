@@ -11,13 +11,16 @@ $fourth_level: #999;
     margin: 0 auto;
     width: 100%;
     max-height: 0;
-    -webkit-tranåsition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
-    -moz-transition: all .5s ease-in-out;
-    -ms-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
     &.opacity {
-        transition: all .5s ease-in-out;
+        @include grid-media($sm) {
+            transition: all .5s ease-in-out;
+            -webkit-transform-style: preserve-3d; // stop webkit flicker
+        }
+        @include grid-media($md) {
+            transition: none;
+        }
         @include padding-left(0);
     }
 
@@ -27,11 +30,8 @@ $fourth_level: #999;
 
     &.flexnav-show {
         max-height: 2000px;
-        // opacity: 1;
-        -webkit-transition: all .5s ease-in-out;
-        -moz-transition: all .5s ease-in-out;
-        -ms-transition: all .5s ease-in-out;
         transition: all .5s ease-in-out;
+        -webkit-transform-style: preserve-3d; // stop webkit flicker
     }
     &.one-page {
         position: fixed;
