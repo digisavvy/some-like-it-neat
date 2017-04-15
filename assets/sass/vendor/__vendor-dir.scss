@@ -1,3 +1,6 @@
+// Files in this directory are third party sass styles from projects like Bourbon/Neat, Flexnav, Dashicons
+// more. Forms, Lists, layout, media, tables, typography, and variables all belong to 'Bitters.'
+
 @import '../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
 @import 'base'; // Bitters; Imports forms, tables by default
 @import 'grid-settings';
