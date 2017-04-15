@@ -1390,84 +1390,13 @@ header {
 --------------------------------------------------------------*/
 /* =Menu
 ----------------------------------------------- */
-/* line 4, assets/sass/layouts/_navigation.scss */
-.flexnav .site-main [class*="navigation"] {
-  float: left ;
-  margin: 25px 0 1.5em;
-  overflow: hidden; }
-
-/* line 9, assets/sass/layouts/_navigation.scss */
-.flexnav [class*="navigation"] .nav-previous {
-  float: left ;
-  margin-top: 25px;
-  width: 50%; }
-
-/* line 14, assets/sass/layouts/_navigation.scss */
-.flexnav [class*="navigation"] .nav-next {
-  float: right ;
-  text-align: right;
-  margin-top: 25px;
-  width: 50%; }
-
-/* line 21, assets/sass/layouts/_navigation.scss */
-.flexnav .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  display: none;
-  float: left ;
-  left: 0;
-  position: absolute;
-  top: 1.5em;
-  z-index: 99999;
-  background: #fff;
-  padding: 30px; }
-
-/* line 32, assets/sass/layouts/_navigation.scss */
-.flexnav #site-navigation {
-  border-top: solid 5px #f3f3f3;
-  border-bottom: solid 5px #f3f3f3; }
-
-/* line 36, assets/sass/layouts/_navigation.scss */
-.flexnav ul.nav-menu li {
-  transition: background 200ms ease-in-out;
-  background: #fff;
-  padding: 10px; }
-  @media only screen and (min-width: 0) {
-    /* line 36, assets/sass/layouts/_navigation.scss */
-    .flexnav ul.nav-menu li {
-      text-align: center;
-      width: 100%; } }
-  @media only screen and (min-width: 48em) {
-    /* line 36, assets/sass/layouts/_navigation.scss */
-    .flexnav ul.nav-menu li {
-      text-align: none;
-      width: inherit; } }
-  /* line 49, assets/sass/layouts/_navigation.scss */
-  .flexnav ul.nav-menu li:hover {
-    transition: background 200ms ease-in-out;
-    background: #f3f3f3; }
-
-/* line 56, assets/sass/layouts/_navigation.scss */
-.flexnav .menu-main-menu-container li.current-menu-item {
-  background-color: #f3f3f3;
-  display: block; }
-
-/* line 62, assets/sass/layouts/_navigation.scss */
-.flexnav ul.nav-menu li.current_page_item {
-  background: #f3f3f3; }
-
-/* line 68, assets/sass/layouts/_navigation.scss */
-#primary-nav {
-  float: left ;
-  max-width: 100%;
-  width: 100%; }
-
-/* line 74, assets/sass/layouts/_navigation.scss */
+/* line 3, assets/sass/layouts/_navigation.scss */
 nav.post-navigation {
   position: relative;
   z-index: 1; }
 
 @media only screen and (min-width: 0) {
-  /* line 78, assets/sass/layouts/_navigation.scss */
+  /* line 8, assets/sass/layouts/_navigation.scss */
   .nav-links {
     display: -ms-flexbox;
     display: flex;
@@ -1476,13 +1405,19 @@ nav.post-navigation {
     text-align: center; } }
 
 @media only screen and (min-width: 30em) {
-  /* line 78, assets/sass/layouts/_navigation.scss */
+  /* line 8, assets/sass/layouts/_navigation.scss */
   .nav-links {
     -ms-flex-direction: row;
         flex-direction: row;
     -ms-flex-pack: justify;
         justify-content: space-between;
     text-align: inherit; } }
+
+/* line 25, node_modules/bourbon-neat/core/neat/mixins/_grid-container.scss */
+nav::after {
+  clear: both;
+  content: "";
+  display: block; }
 
 /*--------------------------------------------------------------
 6.4 Content
