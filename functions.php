@@ -184,6 +184,10 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
   		wp_script_add_data( 'selectivizr-js', 'conditional', '(gte IE 6)&(lte IE 8)' );
 
         if ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
+            // Flexnav Style
+            wp_enqueue_style( 'offcanvas', get_theme_file_uri( '/assets/css/vendor/flexnav.css' ) );
+
+            // Flexnav Scripts
             wp_register_script( 'flexnav-js', get_theme_file_uri( '/assets/js/vendor/flexnav/jquery.flexnav.js' ), array( 'jquery' ), '1.3.3', true );
             wp_enqueue_script( 'flexnav-js' );
 
@@ -191,7 +195,7 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
             wp_enqueue_script( 'hoverintent-js' );
         } else {
             // Offcanvas Style
-            wp_enqueue_style( 'offcanvas', get_theme_file_uri( '/assets/css/navigation-offcanvas.css' ) );
+            wp_enqueue_style( 'offcanvas', get_theme_file_uri( '/assets/css/layouts/navigation-offcanvas.css' ) );
 
             // Offcanvas Nav Script
             wp_enqueue_script('some-like-it-neat_custom', get_template_directory_uri() . '/assets/js/vendor/custom-offcanvas.js', array('jquery'), '1.0', true);
@@ -258,8 +262,7 @@ endif; // Enqueue styles
 /**
  * Register widgetized area and update sidebar with default widgets.
  */
-function some_like_it_neat_widgets_init()
-{
+function some_like_it_neat_widgets_init() {
 	register_sidebar(
 		array(
 		'name'          => __( 'Sidebar', 'some-like-it-neat' ),
