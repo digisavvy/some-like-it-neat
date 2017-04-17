@@ -1,7 +1,5 @@
-/*--------------------------------------------------------------
-8.0 Call Sass Files
---------------------------------------------------------------*/
-@import '../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+// Call necessary Sass files
+@import '../../../node_modules/bourbon/core/bourbon';
 @import '../vendor/base'; // Bitters
 @import '../vendor/grid-settings';
 @import '../../../node_modules/bourbon-neat/core/neat';
@@ -11,9 +9,7 @@
 @import '../abstracts/typography';
 @import '../components/buttons';
 
-/*--------------------------------------------------------------
-8.1 Header Menu
---------------------------------------------------------------*/
+// Offcanvas menu styling
 
 /* Hamburger Menu */
 .hamburger-wrapper {
@@ -33,7 +29,8 @@
   height: 38px;
 }
 
-.hamburger-wrapper .hamburger, .hamburger-wrapper .hamburger:visited {
+.hamburger-wrapper .hamburger,
+.hamburger-wrapper .hamburger:visited {
   color: #000;
 }
 
@@ -41,11 +38,15 @@
   color: #fff;
 }
 
-.hamburger-wrapper .hamburger:hover .hamburger-icon, .hamburger-wrapper .hamburger:hover .hamburger-icon:before, .hamburger-wrapper .hamburger:hover .hamburger-icon:after {
+.hamburger-wrapper .hamburger:hover .hamburger-icon,
+.hamburger-wrapper .hamburger:hover .hamburger-icon:before,
+.hamburger-wrapper .hamburger:hover .hamburger-icon:after {
   width: 35px;
 }
 
-.hamburger-wrapper .hamburger .hamburger-icon, .hamburger-wrapper .hamburger .hamburger-icon:before, .hamburger-wrapper .hamburger .hamburger-icon:after {
+.hamburger-wrapper .hamburger .hamburger-icon,
+.hamburger-wrapper .hamburger .hamburger-icon:before,
+.hamburger-wrapper .hamburger .hamburger-icon:after {
   background-color: #000;
   content: "";
   display: block;
@@ -65,6 +66,8 @@
   }
 
 }
+
+
 .hamburger-wrapper .hamburger .hamburger-icon:before {
   top: 8px;
   width: 22px;
@@ -77,7 +80,7 @@
 
 .hamburger-wrapper .hamburger .hamburger-label {
   font-family: $title;
-  font-size: rem(16);
+  font-size: 16px;
   line-height: 1;
   position: absolute;
   text-transform: uppercase;
@@ -130,8 +133,8 @@
     width: calc(100% - 50%);
   }
   @include grid-media($hg) {
-    margin-right:65%;
-    width: calc(100% - 65%);
+    margin-right:55%;
+    width: calc(100% - 55%);
   }
 
 }
@@ -148,6 +151,11 @@
   margin: 4.375rem 20px 0;
   padding: 30px 0 0;
   padding: 1.875rem 0 0;
+}
+
+.main-navigation-inside {
+  margin-top: 205px !important;
+  height: calc(100% - 205px) !important;
 }
 
 /* Site Header Menu */
@@ -213,7 +221,7 @@
   color: #fff;
   display: block;
   font-family: $title;
-  font-size: rem(36);
+  font-size: 22px;
   padding: 0 0 8px;
   padding: 0 0 0.5rem;
   text-transform: uppercase;
@@ -227,7 +235,7 @@
   color: #fff;
   display: block;
   font-family: $title;
-  font-size: rem(26);
+  font-size: 22px;
   padding: 0 0 8px;
   padding: 0 0 0.5rem;
   text-transform: uppercase;
@@ -252,7 +260,7 @@
     color: #fff;
     content: "\f347";
     font-family: Dashicons;
-    font-size: rem(32);
+    font-size: 32px;
   }
   &.toggle-on:after {
     content: "\f343";
