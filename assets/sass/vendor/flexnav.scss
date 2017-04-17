@@ -11,21 +11,15 @@ $fourth_level: #999;
     margin: 0 auto;
     width: 100%;
     max-height: 0;
-    transition: all .5s ease-in-out, width 0, height 0, top 0, left 0;
+    padding: 0;
+    transition: all .5s ease-in-out;
     -webkit-transform-style: preserve-3d; // stop webkit flicker
+
     &.opacity {
         @include grid-media($sm) {
             transition: all .5s ease-in-out;
             -webkit-transform-style: preserve-3d; // stop webkit flicker
         }
-        @include grid-media($md) {
-            transition: none;
-        }
-        @include padding-left(0);
-    }
-
-    ul {
-        @include padding-left(0);
     }
 
     &.flexnav-show {
@@ -182,6 +176,7 @@ $fourth_level: #999;
     }
     .flexnav {
         overflow: visible;
+
         &.opacity {
           opacity: 1;
         }
