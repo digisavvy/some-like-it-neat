@@ -9,13 +9,13 @@ header {
         padding: 40px;
 
         @include grid-media($sm) {
-            font-size: rem(35);
+            font-size: 35px;
         }
         @include grid-media($smbg) {
-            font-size: rem(55);
+            font-size: 55px;
         }
         @include grid-media($md) {
-            font-size: rem(75);
+            font-size: 75px;
         }
 
         a,a:visited {
@@ -26,16 +26,16 @@ header {
 
     .site-description {
         padding: 25px 0;
-        font-size: rem(20);
+        font-size: 20px;
 
         @include grid-media($sm) {
-            font-size: rem(15);
+            font-size: 14px;
         }
         @include grid-media($smbg) {
-            font-size: rem(18);
+            font-size: 18px;
         }
         @include grid-media($md) {
-            font-size: rem(25);
+            font-size: 25px;
         }
         font-family: $content;
         font-style: italic;
