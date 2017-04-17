@@ -18,7 +18,3 @@ nav.post-navigation {
         text-align: inherit;
     }
 }
-
-nav {
-    @include grid-container;
-}
