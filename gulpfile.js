@@ -1,4 +1,5 @@
 'use strict';
+
 /**
  * Project Setup
  *
@@ -29,6 +30,7 @@ var imagemin     = require('gulp-imagemin');
 var jshint       = require('gulp-jshint');
 var minifycss    = require('gulp-uglifycss');
 var notify       = require('gulp-notify');
+var pixrem       = require('gulp-pixrem');
 var plugins      = require('gulp-load-plugins')({ camelize: true });
 var plumber      = require('gulp-plumber');
 var reload       = browserSync.reload;
@@ -49,10 +51,10 @@ var zip          = require('gulp-zip');
 gulp.task('browser-sync', function() {
   var files = [
     '**/*.php', '**/*.js',
-    '**/*.{png,jpg,gif}',
+    '**/*.{png,jpg,gif}'
   ];
   browserSync.init(files, {
-    proxy: url,
+    proxy: url
   });
 });
 
@@ -62,13 +64,14 @@ gulp.task('browser-sync', function() {
 gulp.task('styles', function() {
   return gulp.src([
       source + 'sass/**/*.scss',
-      '!' + source + 'sass/**/navigation-offcanvas.scss'
+      '!' + source + 'sass/**/navigation-offcanvas.scss',
+      '!' + source + 'sass/**/flexnav.scss'
   ])
     .pipe(plumber({
       errorHandler: function(err) {
         console.log(err);
         this.emit('end');
-      },
+      }
     }))
     .pipe(sourcemaps.init())
     .pipe(sass({
@@ -92,7 +95,7 @@ gulp.task('styles', function() {
     .pipe(reload({stream:true})) // Inject Styles when style file is created
     .pipe(rename({ suffix: '-min' }))
     .pipe(minifycss({
-      maxLineLen: 80,
+      maxLineLen: 80
     }))
     .pipe(gulp.dest(source + 'css'))
     .pipe(reload({stream:true})) // Inject Styles when min style file is created
@@ -101,16 +104,21 @@ gulp.task('styles', function() {
 
 gulp.task('stylesAddons', function() {
     return gulp.src([
-        source + 'sass/layouts/navigation-offcanvas.scss'
+        source + 'sass/**/navigation-offcanvas.scss',
+        source + 'sass/**/flexnav.scss'
     ])
         .pipe(plumber({
             errorHandler: function(err) {
                 console.log(err);
                 this.emit('end');
-            },
+            }
         }))
         .pipe(sourcemaps.init())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({
+            sourceComments: 'map',
+            sourceMap: 'sass',
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
         .pipe(autoprefixer(
             'last 2 version',
             'safari 5', 'ie 8',
@@ -127,7 +135,7 @@ gulp.task('stylesAddons', function() {
         .pipe(reload({stream:true})) // Inject Styles when style file is created
         .pipe(rename({ suffix: '-min' }))
         .pipe(minifycss({
-            maxLineLen: 80,
+            maxLineLen: 80
         }))
         .pipe(gulp.dest('../css'))
         .pipe(reload({stream:true})) // Inject Styles when min style file is created
@@ -143,7 +151,7 @@ gulp.task('js', function() {
     .pipe(gulp.dest(source + 'js'))
     .pipe(rename({
       basename: 'production',
-      suffix: '-min',
+      suffix: '-min'
     }))
     .pipe(uglify())
     .pipe(gulp.dest(source + 'js/'))
