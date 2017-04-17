@@ -55,6 +55,7 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->get_section('title_tagline')->panel = 'site_content';
     $wp_customize->get_section('background_image')->panel = 'site_content';
 
+
     /**
     * Adding Panels for Home Page and Colors
     */
@@ -100,24 +101,15 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     /**
     * Mobile Navigation Settings and Options
     */
-    $wp_customize->add_panel(
-        'navigation_panel', array(
-            'priority'          => 15,
-            'capability'        => 'edit_theme_options',
-            'theme_supports'    => '',
-            'title'             => __('Navigation Settings', 'some-like-it-neat'),
-            'description'       => __('Navigation related settings and config.', 'some-like-it-neat'),
-        ) 
-    );
 
     $wp_customize->add_section(
         'navigation_section', array(
-            'priority'          => 10,
+            'priority'          => 20,
             'capability'        => 'edit_theme_options',
             'theme_supports'    => '',
             'title'             => __('Navigation Setup', 'some-like-it-neat'),
             'description'       => '',
-            'panel'             => 'navigation_panel',
+            'panel'             => 'nav_menus',
         ) 
     );
 
