@@ -43,21 +43,16 @@
 
 		    <?php tha_header_top(); ?>
 
-            <?php if ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) { ?>
+            <?php if ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
 
-               <?php get_template_part( 'page-templates/template-parts/navigation', 'flexnav' ); ?>
+                get_template_part( 'page-templates/template-parts/navigation', 'flexnav' );
 
-            <?php } else {
+            } else {
 
-                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-wrap' );
+                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas' );
 
             }
             ?>
-            <?php if ( 'offcanvas' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
-
-                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-menu' );
-
-            } ?>
 
 			<?php tha_header_bottom(); ?>
 
