@@ -4,12 +4,11 @@
 // @include grid-media($sm) { your styles here }
 
 $sm: (columns: 2, gutter: 20px, media: 0,);
-$smbg: (columns: 4, gutter: 20px, media: em(480),);
-$md: (columns: 6, gutter: 20px, media: em(768),);
-$mdbg: (columns: 8, gutter: 10px, media: em(1024),);
-$hg: (columns: 10, gutter: 20px, media: em(1140),);
-$hgbg: (columns: 12, gutter: 20px, media: em(1400),);
-
+$smbg: (columns: 4, gutter: 20px, media: 480px);
+$md: (columns: 6, gutter: 20px, media: 768px);
+$mdbg: (columns: 8, gutter: 10px, media: 1024px);
+$hg: (columns: 10, gutter: 20px, media: 1140px);
+$hgbg: (columns: 12, gutter: 20px, media: 1400px);
 
 // Adding a Visual Grid while you develop. Set to 'true.'
 $visual-grid: false;
@@ -17,10 +16,9 @@ $visual-grid-color: #ccc;
 $visual-grid-index: front;
 $visual-grid-opacity: .2;
 
-
 // Breakpoints that only come into play when using patterns from http://refills.bourbon.io
-$medium-screen: em(640);
-$large-screen: em(860);
+$medium-screen: 640px;
+$large-screen: 860px;
 $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
 $large-screen-up: new-breakpoint(min-width $large-screen 8);
 
