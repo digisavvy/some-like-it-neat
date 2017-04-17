@@ -1,6 +1,16 @@
+@import '../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+@import '../vendor/base'; // Bitters
+@import '../vendor/grid-settings';
+@import '../../../node_modules/bourbon-neat/core/neat';
+@import '../abstracts/variables';
+@import '../../../node_modules/bi-app-sass/bi-app/bi-app-ltr';
+@import '../../../node_modules/bi-app-sass/bi-app/bi-app-rtl';
+@import '../abstracts/typography';
+@import '../components/buttons';
+
 /* Flexnav Base Styles */
 
-$nav_text: #fff;
+$nav_text: #ccc;
 $top_level: #000;
 $second_level: #333;
 $third_level: #666;
