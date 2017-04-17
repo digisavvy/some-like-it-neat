@@ -26,18 +26,17 @@ and Blueprint http://www.blueprintcss.org/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 1.0 - Base Elements
-2.0 - Bourbon, Bitters, Neat
+2.0 - Vendor Add-on2
 3.0 - Variables, Typography, Accessibility
-4.0 - Vendor Add-ons
-5.0 - Components
-6.0 - Layout and Structure
-    6.1 - Header
-    6.2 - Navigation
-    6.3 - Content
-    6.4 - Page Templates
-    6.5 - Sidebar
-    6.6 - Footer
-    6.7 - Accessibility
+4.0 - Components
+5.0 - Layout and Structure
+    5.1 - Header
+    5.2 - Navigation
+    5.3 - Content
+    5.4 - Page Templates
+    5.5 - Sidebar
+    5.6 - Footer
+    5.7 - Accessibility
 
 --------------------------------------------------------------*/
 
@@ -47,14 +46,14 @@ and Blueprint http://www.blueprintcss.org/
 @import "base/__base-dir";
 
 /*--------------------------------------------------------------
-2.0 Variables, Typography, Accessibility
---------------------------------------------------------------*/
-@import "abstracts/__abstracts-dir";
-
-/*--------------------------------------------------------------
-3.0 Vendor Add-ons (Bourbon, Neat, Flexnav etc.)
+2.0 Vendor Add-ons (Bourbon, Neat, Flexnav etc.)
 --------------------------------------------------------------*/
 @import "vendor/__vendor-dir";
+
+/*--------------------------------------------------------------
+3.0 Variables, Typography, Accessibility
+--------------------------------------------------------------*/
+@import "abstracts/__abstracts-dir";
 
 /*--------------------------------------------------------------
 4.0 Components/
@@ -62,7 +61,7 @@ and Blueprint http://www.blueprintcss.org/
 @import "components/__components-dir";
 
 /*--------------------------------------------------------------
-6.0 Layout and Structure
+5.0 Layout and Structure
 --------------------------------------------------------------*/
 @import "layouts/__layouts-dir";
 
