@@ -5,16 +5,15 @@
         margin: 0;
         @include text-align(left);
     }
+    
     #main {
-        @include grid-media($sm) {
-        }
         @include grid-media($md) {
             display: flex;
         }
 
         #primary {
             @include grid-media($sm) {
-                @include grid-column(4);
+                @include grid-column(2);
             }
 
             @include grid-media($md) {
@@ -27,10 +26,11 @@
                 }
             }
         }
+
         #secondary {
             @include margin-right(1.5%);
             @include grid-media($sm) {
-                @include grid-column(4);
+                @include grid-column(2);
             }
             @include grid-media($md) {
                 @include grid-column(2);
@@ -42,10 +42,6 @@
                 }
             }
         }
-    }
-
-    footer {
-
     }
 }
 

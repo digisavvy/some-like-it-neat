@@ -127,10 +127,10 @@ main#main{position:relative;z-index:0}#primary{margin:0 auto;width:100%}@media o
 .gallery-columns-6 .gallery-caption,.gallery-columns-7 .gallery-caption,.gallery-columns-8 .gallery-caption,.gallery-columns-9 .gallery-caption{display:none}
 .page-template-page-templatestemplate-left-col-php h1.entry-title,.post-template-page-templatestemplate-left-col-php h1.entry-title{margin:0;text-align:left}
 @media only screen and (min-width:768px){.page-template-page-templatestemplate-left-col-php #main,.post-template-page-templatestemplate-left-col-php #main{display:-ms-flexbox;display:flex}
-}@media only screen and (min-width:0){.page-template-page-templatestemplate-left-col-php #main #primary,.post-template-page-templatestemplate-left-col-php #main #primary{width:calc(200% - 60px);float:left;margin-left:20px}
+}@media only screen and (min-width:0){.page-template-page-templatestemplate-left-col-php #main #primary,.post-template-page-templatestemplate-left-col-php #main #primary{width:calc(100% - 40px);float:left;margin-left:20px}
 }@media only screen and (min-width:768px){.page-template-page-templatestemplate-left-col-php #main #primary,.post-template-page-templatestemplate-left-col-php #main #primary{width:calc(66.66667% - 33.33333px);float:left;margin-left:20px;-ms-flex-order:2;order:2}
 }.page-template-page-templatestemplate-left-col-php #main #secondary,.post-template-page-templatestemplate-left-col-php #main #secondary{margin-right:1.5%}
-@media only screen and (min-width:0){.page-template-page-templatestemplate-left-col-php #main #secondary,.post-template-page-templatestemplate-left-col-php #main #secondary{width:calc(200% - 60px);float:left;margin-left:20px}
+@media only screen and (min-width:0){.page-template-page-templatestemplate-left-col-php #main #secondary,.post-template-page-templatestemplate-left-col-php #main #secondary{width:calc(100% - 40px);float:left;margin-left:20px}
 }@media only screen and (min-width:768px){.page-template-page-templatestemplate-left-col-php #main #secondary,.post-template-page-templatestemplate-left-col-php #main #secondary{width:calc(33.33333% - 26.66667px);float:left;margin-left:20px;-ms-flex-order:1;order:1}
 }.page-template-page-templatestemplate-right-col-php h1.entry-title{margin:0;text-align:left}
 @media only screen and (min-width:0){.page-template-page-templatestemplate-right-col-php #primary{float:left}

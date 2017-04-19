@@ -1457,20 +1457,20 @@ object {
   text-align: left; }
 
 @media only screen and (min-width: 768px) {
-  /* line 8, assets/sass/templates/_template-2col-l-sidebar.scss */
+  /* line 9, assets/sass/templates/_template-2col-l-sidebar.scss */
   .page-template-page-templatestemplate-left-col-php #main, .post-template-page-templatestemplate-left-col-php #main {
     display: -ms-flexbox;
     display: flex; } }
 
 @media only screen and (min-width: 0) {
-  /* line 15, assets/sass/templates/_template-2col-l-sidebar.scss */
+  /* line 14, assets/sass/templates/_template-2col-l-sidebar.scss */
   .page-template-page-templatestemplate-left-col-php #main #primary, .post-template-page-templatestemplate-left-col-php #main #primary {
-    width: calc(200% - 60px);
+    width: calc(100% - 40px);
     float: left;
     margin-left: 20px; } }
 
 @media only screen and (min-width: 768px) {
-  /* line 15, assets/sass/templates/_template-2col-l-sidebar.scss */
+  /* line 14, assets/sass/templates/_template-2col-l-sidebar.scss */
   .page-template-page-templatestemplate-left-col-php #main #primary, .post-template-page-templatestemplate-left-col-php #main #primary {
     width: calc(66.66667% - 33.33333px);
     float: left;
@@ -1484,7 +1484,7 @@ object {
   @media only screen and (min-width: 0) {
     /* line 30, assets/sass/templates/_template-2col-l-sidebar.scss */
     .page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
-      width: calc(200% - 60px);
+      width: calc(100% - 40px);
       float: left;
       margin-left: 20px; } }
   @media only screen and (min-width: 768px) {
