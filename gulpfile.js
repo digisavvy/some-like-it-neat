@@ -29,6 +29,7 @@ var imagemin     = require('gulp-imagemin');
 var jshint       = require('gulp-jshint');
 var minifycss    = require('gulp-uglifycss');
 var notify       = require('gulp-notify');
+var phpcs        = require('gulp-phpcs');
 var plugins      = require('gulp-load-plugins')({ camelize: true });
 var plumber      = require('gulp-plumber');
 var reload       = browserSync.reload;
@@ -209,14 +210,36 @@ gulp.task('build', function(cb) {
   runSequence('styles', 'cleanup', 'js', 'buildPhp', 'buildLibrary', 'buildAssets', 'buildImages', 'buildZip', 'cleanupFinal', cb);
 });
 
+/**
+ * "Sniff" the PHP to check
+ * against WordPress coding standards.
+ */
+var php_files = ['**/*.php','!library/**','!vendor/**','!node_modules/**'];
+gulp.task('php', function () {
+  return gulp.src(php_files)
+    // Validate files using PHP Code Sniffer
+    .pipe(phpcs({
+      bin: './vendor/bin/phpcs',
+      standard: 'WordPress-Core'
+    }))
+    // Log all problems that was found
+    .pipe(phpcs.reporter('log'));
+});
+
+/**
+ * Holds all the test tasks.
+ */
+gulp.task('test',['php','jsHint']);
+
 /******************************************************************************
 | >   WATCH TASKS
 ******************************************************************************/
 
 // Watch Task
-gulp.task('default', ['styles', 'js', 'jsHint', 'images', 'browser-sync'], function() {
+gulp.task('default', ['styles', 'js', 'images', 'browser-sync', 'test'], function() {
   gulp.watch(source + 'sass/**/*.scss', ['styles']);
   gulp.watch(source + 'js/app/**/*.js', ['js', browserSync.reload]);
   gulp.watch(source + 'js/app/**/*.js', ['jsHint']);
   gulp.watch(source + 'img/**/*.{png,jpg,gif}', ['images']);
+  gulp.watch(php_files, ['php']);
 });
