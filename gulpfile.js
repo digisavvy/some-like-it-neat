@@ -214,7 +214,7 @@ gulp.task('build', function(cb) {
  * "Sniff" the PHP to check
  * against WordPress coding standards.
  */
-var php_files = ['**/*.php','!vendor/**','!node_modules/**'];
+var php_files = ['**/*.php','!library/**','!vendor/**','!node_modules/**'];
 gulp.task('php', function () {
   return gulp.src(php_files)
     // Validate files using PHP Code Sniffer
