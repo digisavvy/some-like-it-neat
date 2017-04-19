@@ -5,7 +5,7 @@ Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
 Author URI: http://alexhasnicehair.com
 Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
-Version: 1.3.8
+Version: 1.4.2
 License: GNU General Public License
 License URI: license.txt
 Text Domain: some_like_it_neat
@@ -43,14 +43,11 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 1.0 Bourbon, Bitters, Neat
 --------------------------------------------------------------*/
-button, input[type="button"], input[type="reset"], input[type="submit"],
-button {
+button, input[type="button"], input[type="reset"], input[type="submit"] {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  background-color: #477dca;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #1565c0;
   border: 0;
   border-radius: 3px;
   color: #fff;
@@ -58,94 +55,96 @@ button {
   display: inline-block;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em;
-  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
-  padding: .75em 1em;
+  padding: 0.75em 1.5em;
   text-decoration: none;
+  transition: background-color 150ms ease;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
-  button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
-  button:hover,
-  button:focus {
-    background-color: #2c5999;
+  button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
+    background-color: #11519a;
     color: #fff; }
-  button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
-  button:disabled {
+  button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
     cursor: not-allowed;
-    opacity: .5; }
+    opacity: 0.5; }
+    button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
+      background-color: #1565c0; }
 
 fieldset {
-  background-color: #f7f7f7;
-  border: 1px solid #ddd;
-  margin: 0 0 0.75em;
-  padding: 1.5em; }
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+legend {
+  font-weight: 600;
+  margin-bottom: 0.375em;
+  padding: 0; }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.375em; }
 
 input,
-label,
-select {
+select,
+textarea {
   display: block;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   font-size: 1em; }
 
-label {
-  font-weight: 600;
-  margin-bottom: 0.375em; }
-  label.required::after {
-    content: '*'; }
-  label abbr {
-    display: none; }
-
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
-select[multiple=multiple],
-textarea {
+select[multiple] {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
-  font-size: 1em;
   margin-bottom: 0.75em;
   padding: 0.5em;
-  transition: border-color;
+  transition: border-color 150ms ease;
   width: 100%; }
   input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover,
-  select[multiple=multiple]:hover,
-  textarea:hover {
-    border-color: #c4c4c4; }
+  select[multiple]:hover {
+    border-color: #b1b1b1; }
   input[type="color"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="email"]:focus, input[type="month"]:focus, input[type="number"]:focus, input[type="password"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="text"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="week"]:focus, input:not([type]):focus, textarea:focus,
-  select[multiple=multiple]:focus,
-  textarea:focus {
-    border-color: #477dca;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(55, 112, 192, 0.7);
+  select[multiple]:focus {
+    border-color: #1565c0;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06), 0 0 5px rgba(18, 89, 169, 0.7);
     outline: none; }
+  input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
+  select[multiple]:disabled {
+    background-color: #f2f2f2;
+    cursor: not-allowed; }
+    input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
+    select[multiple]:disabled:hover {
+      border: 1px solid #ddd; }
 
 textarea {
   resize: vertical; }
 
-input[type="search"] {
+[type="search"] {
   -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none; }
+     -moz-appearance: none;
+          appearance: none; }
 
-input[type="checkbox"],
-input[type="radio"] {
+[type="checkbox"],
+[type="radio"] {
   display: inline;
   margin-right: 0.375em; }
 
-input[type="file"] {
-  padding-bottom: 0.75em;
+[type="file"] {
+  margin-bottom: 0.75em;
   width: 100%; }
 
 select {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.75em;
   max-width: 100%;
   width: auto; }
 
@@ -154,35 +153,25 @@ ol {
   list-style-type: none;
   margin: 0;
   padding: 0; }
-  ul {
-    list-style-type: disc;
-    margin-bottom: 0.75em;
-    padding-left: 1.5em; }
-  
-  ol {
-    list-style-type: decimal;
-    margin-bottom: 0.75em;
-    padding-left: 1.5em; }
 
 dl {
-  margin-bottom: 0.75em; }
-  dl dt {
-    font-weight: bold;
-    margin-top: 0.75em; }
-  dl dd {
-    margin: 0; }
+  margin: 0; }
+
+dt {
+  font-weight: 600;
+  margin: 0; }
+
+dd {
+  margin: 0; }
 
 table {
-  -webkit-font-feature-settings: "kern", "liga", "tnum";
-  -ms-font-feature-settings: "kern", "liga", "tnum";
-  font-feature-settings: "kern", "liga", "tnum";
   border-collapse: collapse;
   margin: 0.75em 0;
   table-layout: fixed;
   width: 100%; }
 
 th {
-  border-bottom: 1px solid #b7b7b7;
+  border-bottom: 1px solid #a6a6a6;
   font-weight: 600;
   padding: 0.75em 0;
   text-align: left; }
@@ -656,12 +645,6 @@ a, a:visited {
     color: #f00;
     text-decoration: underline; }
 
-ul:nth-child(n+2) {
-  margin-bottom: 0; }
-
-ol:nth-child(n+2) {
-  margin-bottom: 0; }
-
 .entry-title {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   text-align: center; }
@@ -833,7 +816,9 @@ body {
     display: table; }
 
 #main {
-  padding: 0 50px; }
+  padding: 0 50px;
+  position: relative;
+  z-index: 0; }
 
 #primary {
   margin: 0 auto;
@@ -859,10 +844,17 @@ body {
       margin-right: 0; }
       #primary:last-child {
         margin-right: 0; } }
+  #primary ol li {
+    margin-left: 10px; }
   #primary ul {
-    list-style: none; }
+    list-style: none;
+    margin-left: 10px; }
     #primary ul li {
       list-style-type: square; }
+      #primary ul li ul li {
+        list-style-type: disc; }
+        #primary ul li ul li ul li {
+          list-style-type: circle; }
 
 #secondary {
   margin: 20px auto;
@@ -890,6 +882,10 @@ body {
 /*--------------------------------------------------------------
     6.1 Header
     --------------------------------------------------------------*/
+header {
+  position: relative;
+  z-index: 1; }
+
 .site-branding {
   text-align: center; }
   .site-branding .site-title {
@@ -1225,7 +1221,9 @@ ul.nav-menu li.current_page_item {
   width: 100%; }
 
 nav.post-navigation {
-  width: 100%; }
+  width: 100%;
+  position: relative;
+  z-index: 1; }
 
 .nav-links {
   width: 100%; }
@@ -1453,7 +1451,6 @@ object {
 
 @media screen and (min-width: 48em) {
   .page-template-page-templatestemplate-left-col-php #main {
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex; } }
 
@@ -1472,9 +1469,8 @@ object {
     display: block;
     margin-right: 4.34783%;
     width: 65.21739%;
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2; }
+    -ms-flex-order: 2;
+        order: 2; }
     .page-template-page-templatestemplate-left-col-php #main #primary:last-child {
       margin-right: 0; } }
 
@@ -1494,9 +1490,8 @@ object {
       display: block;
       margin-right: 4.34783%;
       width: 30.43478%;
-      -webkit-order: 1;
-          -ms-flex-order: 1;
-              order: 1; }
+      -ms-flex-order: 1;
+          order: 1; }
       .page-template-page-templatestemplate-left-col-php #main #secondary:last-child {
         margin-right: 0; } }
 
@@ -1596,6 +1591,9 @@ object {
     clear: both;
     content: "";
     display: table; }
+
+.page-template-page-templatestemplate-landing-page-php .entry-content {
+  margin: 0 !important; }
 
 /*--------------------------------------------------------------
     6.5 Sidebar

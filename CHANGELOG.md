@@ -1,9 +1,36 @@
 # Changelog
 
+### 1.4.2
+-------------
+* Fix - Prevent Neat 2.0 from downloading (it's coming, so keep awares).
+
+### 1.4.1
+-------------
+* Change - Moved Bi-app-sass to NPM from Bower.
+* Change - Remove Bower; we're using NPM for package mgmt completely.
+* Update - TGMP to 2.6.1
+* Update - Various NPM Packages. Commit: 5a8d5ab0bee0b19cb78ceb8b8a4ad5c273928a7e
+        
+### 1.4.0
+-------------
+**Bugfixes**
+* Fix - Issue with gulp not recognizing new scss files, which required a restart of gulp. Thanks @jacobarriola.
+* Update - Node Bourbon package to 4.2.8
+
+### 1.3.9
+-------------
+**Bugfixes**
+* Add - CMB2 Support to add custom metaboxes on singular post types. Allows for hiding titles and removing featured images. Useful for landing page templates.
+* Remove - Removed fallback for get_post_navigation(). Get current folks!
+* Remove - Removed comments from page post type. Personal feeling they aren't needed.
+* Fix - Invalid JSON in bower.json
+* Fix - Bourbon removed an extend rule for OL and UL that was breaking Sass compilation. See related: https://github.com/thoughtbot/bitters/pull/199
+
+
 ### 1.3.8
 -------------
 **Bugfixes**
-* Change - Full width template changed so that nav, footer, comments sections were fixed-width. Only content area is full-width now. 
+* Change - Full width template changed so that nav, footer, comments sections were fixed-width. Only content area is full-width now.
 
 ### 1.3.7
 -------------

@@ -32,13 +32,11 @@ Bitters is baked-in, too! You get some basic nifty styles out of the gate.
 tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
 your theme! Cool. Right?
 
-* Bower — We're using bower to manage certain theme dependencies, specifically Bourbon, Neat and Bi-App-Sass. Cool, right? That's what I said when I learned the awesomeness that is Bower. Ya hurd?!
-
 * RTL Support via the most excellent bi-app-sass project
 * Built for Accessibility
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
-* Bower for managing packages and dependencies
+* NPM for managing packages and dependencies
 * Infinite Scroll Support for Jetpack
 
 * Pull requests welcome...
@@ -50,7 +48,7 @@ There's a lot to this theme, but don't be intimidated, even if you're not an "ad
 
 Bourbon and Neat are used for providing simple Sass mixins and leverages a simple grid system that let's you markup your theme how you want, while you use their math, unlike Bootstrap and Foundation, presently.
 
-There are things you need to install before you hack away at things. There are three package managers to install: Node (which installs the NPM package manager), Bower. Each of these have dependencies that also need to be installed. Fortunately, this is all "fairly easy".
+There are things you need to install before you hack away at things. There are three package managers to install: Node (which installs the NPM package manager). Each of these have dependencies that also need to be installed. Fortunately, this is all "fairly easy".
 
 * #### Prerequisites
   * You'll need to download and install [Node](https://nodejs.org/)
@@ -61,16 +59,14 @@ There are things you need to install before you hack away at things. There are t
 **git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
 
 
-* #### Install Gulpjs, and Bower + Dependencies
+* #### Install Gulpjs, and NPM Dependencies
 
   Once you have Node, Sass and the theme installed, the next step is simple enough.
 
    **_(note - you may have to run the following commands as admin or sudo)_**
 
   * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: `npm install` - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync! You'll need to run this step on each of your projects, going forward.
-  * **Install Bower** - In the command prompt/terminal run this command: `npm install -g bower`. This installs Bower (the -g flag installs globally, not just in the current directory, super friends). Your only need to do this step once.
-  * **Install Bower Dependencies** - There are Sass and Js packages that are required by Some Like it Neat. To get them run this command: `bower install` - This will install the theme's dependencies such as bourbon, neat, flexnav etc.
-
+ 
  * #### Set your project configuration in Gulpfile.js!!
 _Be sure to go into gulpfile.js and setup the project configuration variables._
 
@@ -90,7 +86,7 @@ Each task such as 'js', 'images' or 'browser-sync' may be started individually. 
 * #### Theme Development, Minification and You
 When developing your theme note that the output style.css file and production.js file are in expanded (readable) format if WP_DEBUG is set to true in wp-config.php. If WP_DEBUG is NOT set to true, then style.css and production.js are minified for you. While developing your theme, I recommend that WP_DEBUG is set to true. Just a good practice anyway.
 
-* **A Note About Javascript Files** - If you have JS files that are not managed by Bower, you should place those files inside the assets/js/app folder. Why? Gulp runs a task that concatenates js files in that directory and checks them for errors, which is pretty nifty. You can modify Gulp task behavior to suit your tastes, of course.
+* **A Note About Javascript Files** - If you have JS files that are not managed by NPM, you can place those files inside the assets/js/app folder. Why? Gulp runs a task that concatenates js files in that directory and checks them for errors, which is pretty nifty. You can modify Gulp task behavior to suit your tastes, of course. However, note that those scripts will load on all pages.
 
 * **Extra Note!** If you've set WP Debug true, the concatenated file is unminified and if set to false, then the concatenated file is minified. If you don't intend to use this functionality, you should comment-out or remove the lines referring to development.js and production-min.js.
 
@@ -123,10 +119,6 @@ a project.
 
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
-    │    │   ├── bower_components
-    │    │   |   ├── bi-app-sass
-    │    │   |   ├── bourbon
-    │    │   |   └── neat
     │    │   ├── css
     |    |   |    ├── rtl-min.css
     |    |   |    ├── rtl.css
@@ -194,7 +186,6 @@ a project.
     |     ├── template-left-col.php
     |     └── template-right-col.php
 	|     └── template-landing-page.php
-    ├── .bowerrc
     ├── 404.php
     ├── archive.php
     ├── comments.php
@@ -218,8 +209,6 @@ Road Map
 ---------------
 * Firm up i18n for RTL and language support. Looking for contributors here
 * Ensure Accessibility has been properly and thoroughly addressed
-* <s>Get Bower properly setup and configured</s>
-
 
 ### General Credits and Thanks
 ---------------
@@ -249,6 +238,11 @@ This theme is based on Underscores, (C) 2012-2013 Automattic, Inc.
  - Source: http://underscores.me/
  - License: GNU GPL, Version 2 (or later)
  - License URI: license.txt
+
+CMB2
+    - Source: https://github.com/WebDevStudios/cmb2-attached-posts/blob/master/LICENSE
+    - License: GNU GPL, Version 2 (or later)
+    - License URI: license.txt
 
 Flexnav, Copyright 2014 Jason Weaver.
  - Source: http://jasonweaver.name/lab/flexiblenavigation/
