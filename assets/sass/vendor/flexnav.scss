@@ -68,22 +68,25 @@ $fourth_level: #999;
         }
          &:focus {
          	background: #fff;
+            color: $link-color !important;
          }
     }
     li ul {
         display: none;
         margin-bottom: 0;
-        @include padding-left(0);
+        padding: 0;
         width: 100%;
         z-index: 5;
 
         li {
+            display: block;
             font-size: 100%;
             position: relative;
             overflow: hidden;
             &:last-child {
                 border-bottom: 1px solid $third_level;
             }
+            z-index: 5;
         }
     }
     li ul.flexnav-show {
