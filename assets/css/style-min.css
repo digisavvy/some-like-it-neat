@@ -1,5 +1,5 @@
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}
+article,aside,footer,header,nav,section{display:block}h1,h2,h3,h4,h5,h6{font-size:2em;font-weight:normal;margin:.67em 0;text-transform:none}
 figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}
 pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
 abbr[title]{border-bottom:0;text-decoration:underline;text-decoration:underline dotted}
@@ -33,7 +33,7 @@ textarea{resize:vertical}[type="search"]{-webkit-appearance:none;-moz-appearance
 [type="file"]{margin-bottom:.75em;width:100%}select{margin-bottom:.75em;max-width:100%;width:auto}
 table{border-collapse:collapse;margin:.75em 0;table-layout:fixed;width:100%}th{border-bottom:1px solid #a6a6a6;font-weight:600;padding:.75em 0;text-align:left}
 td{border-bottom:1px solid #ddd;padding:.75em 0}tr,td,th{vertical-align:middle}#breadcrumbs{font-size:14px;font-family:"Georgia","Times","Times New Roman",serif;padding:20px 0 20px 50px}
-html{font-size:62.5%}body{font-size:16px}h1,h2,h3,h4,h5,h6{clear:both;float:none;line-height:1.25em;margin-bottom:20px;text-transform:uppercase}
+html{font-size:62.5%}body{font-size:16px}h1,h2,h3,h4,h5,h6{clear:both;float:none;line-height:1.25em;margin-bottom:20px}
 h1::after,h2::after,h3::after,h4::after,h5::after,h6::after{clear:both;content:"";display:block}
 h1{font-size:75px;color:#000;font-family:"Helvetica Neue","Helvetica","Arial",sans-serif}
 h2{font-size:50px;font-family:"Helvetica Neue","Helvetica","Arial",sans-serif}
@@ -50,7 +50,7 @@ a,a:visited{color:#000;text-decoration:none}a:hover,a:visited:hover{color:red;te
 .screen-reader-text{clip:rect(1px,1px,1px,1px);height:1px;overflow:hidden;position:absolute;width:1px}
 .screen-reader-text:hover,.screen-reader-text:active,.screen-reader-text:focus{background-color:#ccc;border-radius:3px;box-shadow:0 0 2px 2px rgba(0,0,0,0.6);clip:auto;color:red;display:block;font-size:14px;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 #breadcrumbs{font-size:14px;font-family:"Georgia","Times","Times New Roman",serif;padding:20px 0 20px 50px}
-html{font-size:62.5%}body{font-size:16px}h1,h2,h3,h4,h5,h6{clear:both;float:none;line-height:1.25em;margin-bottom:20px;text-transform:uppercase}
+html{font-size:62.5%}body{font-size:16px}h1,h2,h3,h4,h5,h6{clear:both;float:none;line-height:1.25em;margin-bottom:20px}
 h1::after,h2::after,h3::after,h4::after,h5::after,h6::after{clear:both;content:"";display:block}
 h1{font-size:75px;color:#000;font-family:"Helvetica Neue","Helvetica","Arial",sans-serif}
 h2{font-size:50px;font-family:"Helvetica Neue","Helvetica","Arial",sans-serif}

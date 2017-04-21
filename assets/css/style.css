@@ -77,9 +77,16 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 /* line 39, assets/sass/base/_normalize.scss */
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-size: 2em;
-  margin: 0.67em 0; }
+  font-weight: normal;
+  margin: 0.67em 0;
+  text-transform: none; }
 
 /* Grouping content
    ========================================================================== */
@@ -87,7 +94,7 @@ h1 {
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
  */
-/* line 52, assets/sass/base/_normalize.scss */
+/* line 59, assets/sass/base/_normalize.scss */
 figcaption,
 figure,
 main {
@@ -97,7 +104,7 @@ main {
 /**
  * Add the correct margin in IE 8.
  */
-/* line 62, assets/sass/base/_normalize.scss */
+/* line 69, assets/sass/base/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
@@ -105,7 +112,7 @@ figure {
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-/* line 71, assets/sass/base/_normalize.scss */
+/* line 78, assets/sass/base/_normalize.scss */
 hr {
   box-sizing: content-box;
   /* 1 */
@@ -118,7 +125,7 @@ hr {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-/* line 82, assets/sass/base/_normalize.scss */
+/* line 89, assets/sass/base/_normalize.scss */
 pre {
   font-family: monospace, monospace;
   /* 1 */
@@ -131,7 +138,7 @@ pre {
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
-/* line 95, assets/sass/base/_normalize.scss */
+/* line 102, assets/sass/base/_normalize.scss */
 a {
   background-color: transparent;
   /* 1 */
@@ -142,7 +149,7 @@ a {
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-/* line 105, assets/sass/base/_normalize.scss */
+/* line 112, assets/sass/base/_normalize.scss */
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -154,7 +161,7 @@ abbr[title] {
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
-/* line 115, assets/sass/base/_normalize.scss */
+/* line 122, assets/sass/base/_normalize.scss */
 b,
 strong {
   font-weight: inherit; }
@@ -162,7 +169,7 @@ strong {
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-/* line 124, assets/sass/base/_normalize.scss */
+/* line 131, assets/sass/base/_normalize.scss */
 b,
 strong {
   font-weight: bolder; }
@@ -171,7 +178,7 @@ strong {
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-/* line 134, assets/sass/base/_normalize.scss */
+/* line 141, assets/sass/base/_normalize.scss */
 code,
 kbd,
 samp {
@@ -183,14 +190,14 @@ samp {
 /**
  * Add the correct font style in Android 4.3-.
  */
-/* line 145, assets/sass/base/_normalize.scss */
+/* line 152, assets/sass/base/_normalize.scss */
 dfn {
   font-style: italic; }
 
 /**
  * Add the correct background and color in IE 9-.
  */
-/* line 153, assets/sass/base/_normalize.scss */
+/* line 160, assets/sass/base/_normalize.scss */
 mark {
   background-color: #ff0;
   color: #000; }
@@ -198,7 +205,7 @@ mark {
 /**
  * Add the correct font size in all browsers.
  */
-/* line 162, assets/sass/base/_normalize.scss */
+/* line 169, assets/sass/base/_normalize.scss */
 small {
   font-size: 80%; }
 
@@ -206,7 +213,7 @@ small {
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-/* line 171, assets/sass/base/_normalize.scss */
+/* line 178, assets/sass/base/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -214,11 +221,11 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 179, assets/sass/base/_normalize.scss */
+/* line 186, assets/sass/base/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
-/* line 183, assets/sass/base/_normalize.scss */
+/* line 190, assets/sass/base/_normalize.scss */
 sup {
   top: -0.5em; }
 
@@ -227,7 +234,7 @@ sup {
 /**
  * Add the correct display in IE 9-.
  */
-/* line 194, assets/sass/base/_normalize.scss */
+/* line 201, assets/sass/base/_normalize.scss */
 audio,
 video {
   display: inline-block; }
@@ -235,7 +242,7 @@ video {
 /**
  * Add the correct display in iOS 4-7.
  */
-/* line 203, assets/sass/base/_normalize.scss */
+/* line 210, assets/sass/base/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
@@ -243,14 +250,14 @@ audio:not([controls]) {
 /**
  * Remove the border on images inside links in IE 10-.
  */
-/* line 212, assets/sass/base/_normalize.scss */
+/* line 219, assets/sass/base/_normalize.scss */
 img {
   border-style: none; }
 
 /**
  * Hide the overflow in IE.
  */
-/* line 220, assets/sass/base/_normalize.scss */
+/* line 227, assets/sass/base/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
@@ -259,7 +266,7 @@ svg:not(:root) {
 /**
  * Remove the margin in Firefox and Safari.
  */
-/* line 231, assets/sass/base/_normalize.scss */
+/* line 238, assets/sass/base/_normalize.scss */
 button,
 input,
 optgroup,
@@ -271,7 +278,7 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-/* line 244, assets/sass/base/_normalize.scss */
+/* line 251, assets/sass/base/_normalize.scss */
 button,
 input {
   /* 1 */
@@ -281,7 +288,7 @@ input {
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-/* line 254, assets/sass/base/_normalize.scss */
+/* line 261, assets/sass/base/_normalize.scss */
 button,
 select {
   /* 1 */
@@ -292,7 +299,7 @@ select {
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
-/* line 265, assets/sass/base/_normalize.scss */
+/* line 272, assets/sass/base/_normalize.scss */
 button,
 html [type="button"],
 [type="reset"],
@@ -303,7 +310,7 @@ html [type="button"],
 /**
  * Remove the inner border and padding in Firefox.
  */
-/* line 276, assets/sass/base/_normalize.scss */
+/* line 283, assets/sass/base/_normalize.scss */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -314,7 +321,7 @@ button::-moz-focus-inner,
 /**
  * Restore the focus styles unset by the previous rule.
  */
-/* line 288, assets/sass/base/_normalize.scss */
+/* line 295, assets/sass/base/_normalize.scss */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -327,7 +334,7 @@ button:-moz-focusring,
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
-/* line 302, assets/sass/base/_normalize.scss */
+/* line 309, assets/sass/base/_normalize.scss */
 legend {
   box-sizing: border-box;
   /* 1 */
@@ -346,7 +353,7 @@ legend {
  * 1. Add the correct display in IE 9-.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
-/* line 316, assets/sass/base/_normalize.scss */
+/* line 323, assets/sass/base/_normalize.scss */
 progress {
   display: inline-block;
   /* 1 */
@@ -356,7 +363,7 @@ progress {
 /**
  * Remove the default vertical scrollbar in IE.
  */
-/* line 325, assets/sass/base/_normalize.scss */
+/* line 332, assets/sass/base/_normalize.scss */
 textarea {
   overflow: auto; }
 
@@ -364,7 +371,7 @@ textarea {
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-/* line 334, assets/sass/base/_normalize.scss */
+/* line 341, assets/sass/base/_normalize.scss */
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
@@ -375,7 +382,7 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-/* line 344, assets/sass/base/_normalize.scss */
+/* line 351, assets/sass/base/_normalize.scss */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto; }
@@ -384,7 +391,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-/* line 354, assets/sass/base/_normalize.scss */
+/* line 361, assets/sass/base/_normalize.scss */
 [type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -394,7 +401,7 @@ textarea {
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-/* line 363, assets/sass/base/_normalize.scss */
+/* line 370, assets/sass/base/_normalize.scss */
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
@@ -403,7 +410,7 @@ textarea {
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-/* line 373, assets/sass/base/_normalize.scss */
+/* line 380, assets/sass/base/_normalize.scss */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
@@ -416,7 +423,7 @@ textarea {
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
-/* line 386, assets/sass/base/_normalize.scss */
+/* line 393, assets/sass/base/_normalize.scss */
 details,
 menu {
   display: block; }
@@ -424,7 +431,7 @@ menu {
 /*
  * Add the correct display in all browsers.
  */
-/* line 395, assets/sass/base/_normalize.scss */
+/* line 402, assets/sass/base/_normalize.scss */
 summary {
   display: list-item; }
 
@@ -433,14 +440,14 @@ summary {
 /**
  * Add the correct display in IE 9-.
  */
-/* line 406, assets/sass/base/_normalize.scss */
+/* line 413, assets/sass/base/_normalize.scss */
 canvas {
   display: inline-block; }
 
 /**
  * Add the correct display in IE.
  */
-/* line 414, assets/sass/base/_normalize.scss */
+/* line 421, assets/sass/base/_normalize.scss */
 template {
   display: none; }
 
@@ -449,7 +456,7 @@ template {
 /**
  * Add the correct display in IE 10-.
  */
-/* line 425, assets/sass/base/_normalize.scss */
+/* line 432, assets/sass/base/_normalize.scss */
 [hidden] {
   display: none; }
 
@@ -629,70 +636,69 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   float: none;
   line-height: 1.25em;
-  margin-bottom: 20px;
-  text-transform: uppercase; }
+  margin-bottom: 20px; }
   /* line 20, node_modules/bourbon/core/bourbon/library/_clearfix.scss */
   h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
     clear: both;
     content: "";
     display: block; }
 
-/* line 46, assets/sass/abstracts/_typography.scss */
+/* line 45, assets/sass/abstracts/_typography.scss */
 h1 {
   font-size: 75px;
   color: #000;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 51, assets/sass/abstracts/_typography.scss */
+/* line 50, assets/sass/abstracts/_typography.scss */
 h2 {
   font-size: 50px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 55, assets/sass/abstracts/_typography.scss */
+/* line 54, assets/sass/abstracts/_typography.scss */
 h3 {
   font-size: 35px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 59, assets/sass/abstracts/_typography.scss */
+/* line 58, assets/sass/abstracts/_typography.scss */
 h4 {
   font-size: 24px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 63, assets/sass/abstracts/_typography.scss */
+/* line 62, assets/sass/abstracts/_typography.scss */
 h5 {
   font-size: 20px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 67, assets/sass/abstracts/_typography.scss */
+/* line 66, assets/sass/abstracts/_typography.scss */
 h6 {
   font-size: 16px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 71, assets/sass/abstracts/_typography.scss */
+/* line 70, assets/sass/abstracts/_typography.scss */
 blockquote {
   background-color: #f7f7f7;
   font-style: italic;
   padding: 20px; }
 
-/* line 76, assets/sass/abstracts/_typography.scss */
+/* line 75, assets/sass/abstracts/_typography.scss */
 cite {
   font-style: italic; }
 
-/* line 79, assets/sass/abstracts/_typography.scss */
+/* line 78, assets/sass/abstracts/_typography.scss */
 strong, b {
   color: #000;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 83, assets/sass/abstracts/_typography.scss */
+/* line 82, assets/sass/abstracts/_typography.scss */
 a, a:visited {
   color: #000;
   text-decoration: none; }
-  /* line 87, assets/sass/abstracts/_typography.scss */
+  /* line 86, assets/sass/abstracts/_typography.scss */
   a:hover, a:visited:hover {
     color: #f00;
     text-decoration: underline; }
 
-/* line 96, assets/sass/abstracts/_typography.scss */
+/* line 95, assets/sass/abstracts/_typography.scss */
 .entry-meta a, .entry-meta a:visited,
 .entry-content a,
 .entry-content a:visited,
@@ -700,7 +706,7 @@ a, a:visited {
 #secondary a:visited {
   color: #f00;
   text-decoration: none; }
-  /* line 100, assets/sass/abstracts/_typography.scss */
+  /* line 99, assets/sass/abstracts/_typography.scss */
   .entry-meta a:hover, .entry-meta a:visited:hover,
   .entry-content a:hover,
   .entry-content a:visited:hover,
@@ -709,7 +715,7 @@ a, a:visited {
     color: #f00;
     text-decoration: underline; }
 
-/* line 107, assets/sass/abstracts/_typography.scss */
+/* line 106, assets/sass/abstracts/_typography.scss */
 #primary,
 #secondary {
   font-family: "Georgia", "Times", "Times New Roman", serif; }
@@ -768,70 +774,69 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   float: none;
   line-height: 1.25em;
-  margin-bottom: 20px;
-  text-transform: uppercase; }
+  margin-bottom: 20px; }
   /* line 20, node_modules/bourbon/core/bourbon/library/_clearfix.scss */
   h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
     clear: both;
     content: "";
     display: block; }
 
-/* line 46, assets/sass/abstracts/_typography.scss */
+/* line 45, assets/sass/abstracts/_typography.scss */
 h1 {
   font-size: 75px;
   color: #000;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 51, assets/sass/abstracts/_typography.scss */
+/* line 50, assets/sass/abstracts/_typography.scss */
 h2 {
   font-size: 50px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 55, assets/sass/abstracts/_typography.scss */
+/* line 54, assets/sass/abstracts/_typography.scss */
 h3 {
   font-size: 35px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 59, assets/sass/abstracts/_typography.scss */
+/* line 58, assets/sass/abstracts/_typography.scss */
 h4 {
   font-size: 24px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 63, assets/sass/abstracts/_typography.scss */
+/* line 62, assets/sass/abstracts/_typography.scss */
 h5 {
   font-size: 20px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 67, assets/sass/abstracts/_typography.scss */
+/* line 66, assets/sass/abstracts/_typography.scss */
 h6 {
   font-size: 16px;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 71, assets/sass/abstracts/_typography.scss */
+/* line 70, assets/sass/abstracts/_typography.scss */
 blockquote {
   background-color: #f7f7f7;
   font-style: italic;
   padding: 20px; }
 
-/* line 76, assets/sass/abstracts/_typography.scss */
+/* line 75, assets/sass/abstracts/_typography.scss */
 cite {
   font-style: italic; }
 
-/* line 79, assets/sass/abstracts/_typography.scss */
+/* line 78, assets/sass/abstracts/_typography.scss */
 strong, b {
   color: #000;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
-/* line 83, assets/sass/abstracts/_typography.scss */
+/* line 82, assets/sass/abstracts/_typography.scss */
 a, a:visited {
   color: #000;
   text-decoration: none; }
-  /* line 87, assets/sass/abstracts/_typography.scss */
+  /* line 86, assets/sass/abstracts/_typography.scss */
   a:hover, a:visited:hover {
     color: #f00;
     text-decoration: underline; }
 
-/* line 96, assets/sass/abstracts/_typography.scss */
+/* line 95, assets/sass/abstracts/_typography.scss */
 .entry-meta a, .entry-meta a:visited,
 .entry-content a,
 .entry-content a:visited,
@@ -839,7 +844,7 @@ a, a:visited {
 #secondary a:visited {
   color: #f00;
   text-decoration: none; }
-  /* line 100, assets/sass/abstracts/_typography.scss */
+  /* line 99, assets/sass/abstracts/_typography.scss */
   .entry-meta a:hover, .entry-meta a:visited:hover,
   .entry-content a:hover,
   .entry-content a:visited:hover,
@@ -848,7 +853,7 @@ a, a:visited {
     color: #f00;
     text-decoration: underline; }
 
-/* line 107, assets/sass/abstracts/_typography.scss */
+/* line 106, assets/sass/abstracts/_typography.scss */
 #primary,
 #secondary {
   font-family: "Georgia", "Times", "Times New Roman", serif; }
