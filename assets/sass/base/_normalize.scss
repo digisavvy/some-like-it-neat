@@ -36,9 +36,16 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: 2em;
+    font-weight: normal;
     margin: 0.67em 0;
+    text-transform: none;
 }
 
 /* Grouping content
