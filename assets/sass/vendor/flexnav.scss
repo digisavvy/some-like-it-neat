@@ -1,4 +1,5 @@
-@import '../../../node_modules/bourbon/app/assets/stylesheets/bourbon';
+// Call necessary Sass files
+@import '../../../node_modules/bourbon/core/bourbon';
 @import '../vendor/base'; // Bitters
 @import '../vendor/grid-settings';
 @import '../../../node_modules/bourbon-neat/core/neat';
@@ -10,7 +11,7 @@
 
 /* Flexnav Base Styles */
 
-$nav_text: #ccc;
+$nav_text: #fff;
 $top_level: #000;
 $second_level: #333;
 $third_level: #666;
