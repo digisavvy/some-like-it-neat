@@ -108,14 +108,13 @@ $fourth_level: #999;
     }
     .touch-button {
         position: absolute;
-        z-index: 999;
+        z-index: 4;
         top: 0;
-        @include right(0);
+        @include left(0);
         width: 50px;
         height: 100%;
         display: inline-block;
-        background: #acaca1;
-        background: rgba(0,0,0,.075);
+        background: $top_level;
         text-align: center;
         &:hover {
             cursor: pointer;
@@ -124,18 +123,19 @@ $fourth_level: #999;
             position: relative;
             top: 1.4em;
             font-size: 12px;
-            color: $third_level;
+            color: $nav_text;
         }
     }
 }
 .menu-button {
-    position: relative;
     display: block;
-    padding: 1em;
     background: $top_level;
+    border-radius: 0;
     color: $nav_text;
     cursor: pointer;
     border-bottom: 1px solid rgba(0,0,0,.2);
+    padding: 1em;
+    position: relative;
     width: 100%;
 
     &.one-page {
@@ -160,7 +160,7 @@ $fourth_level: #999;
             font-size: 16px;
             position: relative;
             top: 1em;
-            color: $third_level;
+            color: $nav_text;
         }
     }
 }
@@ -203,7 +203,7 @@ $fourth_level: #999;
         li {
             position: relative;
             list-style: none;
-            @include float(left);
+            @include float(right);
             display: block;
             background-color: $top_level;
             overflow: visible;
