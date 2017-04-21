@@ -466,11 +466,11 @@ template {
 /* line 1, assets/sass/vendor/_buttons.scss */
 button, [type='button'], [type='reset'], [type='submit'] {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background-color: #1565c0;
   border: 0;
-  border-radius: 3px;
+  border-radius: 0;
   color: #fff;
   cursor: pointer;
   display: inline-block;
@@ -483,11 +483,12 @@ button, [type='button'], [type='reset'], [type='submit'] {
   text-decoration: none;
   transition: background-color 150ms ease;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   vertical-align: middle;
-  white-space: nowrap; }
+  white-space: nowrap;
+  }
   /* line 21, assets/sass/vendor/_buttons.scss */
   button:hover, button:focus, [type='button']:hover, [type='button']:focus, [type='reset']:hover, [type='reset']:focus, [type='submit']:hover, [type='submit']:focus {
     background-color: #11519a;
