@@ -1167,7 +1167,8 @@ header {
   /* line 7, assets/sass/layouts/_header.scss */
   .site-branding .site-title {
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    padding: 40px; }
+    padding: 0 40px;
+    }
     @media only screen and (min-width: 0) {
       /* line 7, assets/sass/layouts/_header.scss */
       .site-branding .site-title {
