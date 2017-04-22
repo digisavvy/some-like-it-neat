@@ -6,7 +6,7 @@ header {
     text-align: center;
     .site-title {
         font-family: $title;
-        padding: 40px;
+        padding: 0 40px;
 
         @include grid-media($sm) {
             font-size: 35px;
