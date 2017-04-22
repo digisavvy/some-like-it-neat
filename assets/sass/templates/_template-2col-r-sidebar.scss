@@ -10,7 +10,7 @@
         @include grid-media($sm) {
             @include float(left);
             @include grid-media($sm) {
-                @include grid-column(4);
+                @include grid-column(2);
             }
             @include grid-media($md) {
                 @include grid-column(4);
@@ -22,7 +22,7 @@
     }
     #secondary {
         @include grid-media($sm) {
-
+            @include grid-column(2);
         }
         @include grid-media($md) {
             @include float(right);
