@@ -17,7 +17,7 @@
  *
  * You don't have to include your code in these include files. You can insert your own code below as well.
  *
- * @link https://github.com/roots/sage/pull/1042
+ * @link https://github.com/digisavvy/some-like-it-neat/commit/636baf7e8b2fefdcf79fd518622f35fa933c7e2f
  */
 
 $some_like_it_neat_includes = [
