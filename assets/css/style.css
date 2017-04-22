@@ -85,8 +85,9 @@ h5,
 h6 {
   font-size: 2em;
   font-weight: normal;
-  margin: 0.67em 0;
-  text-transform: none; }
+  margin: 0;
+  text-transform: none;
+  }
 
 /* Grouping content
    ========================================================================== */
@@ -1167,8 +1168,7 @@ header {
   /* line 7, assets/sass/layouts/_header.scss */
   .site-branding .site-title {
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    padding: 0 40px;
-    }
+    padding: 0 40px; }
     @media only screen and (min-width: 0) {
       /* line 7, assets/sass/layouts/_header.scss */
       .site-branding .site-title {
@@ -1514,7 +1514,7 @@ object {
   @media only screen and (min-width: 0) and (min-width: 0) {
     /* line 9, assets/sass/templates/_template-2col-r-sidebar.scss */
     .page-template-page-templatestemplate-right-col-php #primary {
-      width: calc(200% - 60px);
+      width: calc(100% - 40px);
       float: left;
       margin-left: 20px; } }
   @media only screen and (min-width: 0) and (min-width: 768px) {
@@ -1523,6 +1523,13 @@ object {
       width: calc(66.66667% - 33.33333px);
       float: left;
       margin-left: 20px; } }
+
+@media only screen and (min-width: 0) {
+  /* line 23, assets/sass/templates/_template-2col-r-sidebar.scss */
+  .page-template-page-templatestemplate-right-col-php #secondary {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px; } }
 
 @media only screen and (min-width: 768px) {
   /* line 23, assets/sass/templates/_template-2col-r-sidebar.scss */
@@ -1545,11 +1552,12 @@ object {
 /* line 3, assets/sass/templates/_template-full-width.scss */
 .page-template-page-templatestemplate-full-width-php main#main, .post-template-page-templatestemplate-full-width-php main#main,
 .page-template-page-templatestemplate-full-width-php .site-main, .post-template-page-templatestemplate-full-width-php .site-main,
-.page-template-page-templatestemplate-full-width-php #primary, .post-template-page-templatestemplate-full-width-php #primary {
+.page-template-page-templatestemplate-full-width-php #primary, .post-template-page-templatestemplate-full-width-php #primary,
+.page-template-page-templatestemplate-full-width-php footer, .post-template-page-templatestemplate-full-width-php footer {
   max-width: 100%;
   width: 100%;
-  margin: inherit;
-  padding: inherit; }
+  margin: 0;
+  padding: 0 10px; }
 
 /* line 3, assets/sass/templates/_template-landing-page.scss */
 .page-template-page-templatestemplate-landing-page-php main#main, .post-template-template-landing-page main#main,
