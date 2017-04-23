@@ -1552,13 +1552,18 @@ object {
 
 /* line 3, assets/sass/templates/_template-full-width.scss */
 .page-template-page-templatestemplate-full-width-php main#main, .post-template-page-templatestemplate-full-width-php main#main,
-.page-template-page-templatestemplate-full-width-php .site-main, .post-template-page-templatestemplate-full-width-php .site-main,
-.page-template-page-templatestemplate-full-width-php #primary, .post-template-page-templatestemplate-full-width-php #primary,
-.page-template-page-templatestemplate-full-width-php footer, .post-template-page-templatestemplate-full-width-php footer {
+.page-template-page-templatestemplate-full-width-php .site-main footer, .post-template-page-templatestemplate-full-width-php .site-main footer {
   max-width: 100%;
   width: 100%;
-  margin: 0;
-  padding: 0 10px; }
+  margin: inherit;
+  padding: inherit; }
+
+/* line 11, assets/sass/templates/_template-full-width.scss */
+.page-template-page-templatestemplate-full-width-php #primary, .post-template-page-templatestemplate-full-width-php #primary {
+  max-width: 100%;
+  width: 100%;
+  margin: inherit;
+  padding: inherit; }
 
 /* line 3, assets/sass/templates/_template-landing-page.scss */
 .page-template-page-templatestemplate-landing-page-php main#main, .post-template-template-landing-page main#main,
