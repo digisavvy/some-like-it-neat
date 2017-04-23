@@ -9,6 +9,7 @@
 * Updated Merge pull request #104 from jacobarriola/patch-1
 * Updated Functions.php, split into smaller more specific files for better organization and lighter functions file.
 * Add Gulp Task for processing offcanvas and other addon sass styling processes.
+* Fix issue with prod.css and dev.css files getting created even when no files exist in js folder.
 
 ### 1.4.3
 -------------
