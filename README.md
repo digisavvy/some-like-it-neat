@@ -120,6 +120,10 @@ a project.
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
     │    │   ├── css
+    │    │   |    ├── layouts
+    |    |   |    |   ├── navigation-offcanvas.css
+    │    │   |    └── vendor
+    |    |   |    |   ├── flexnav.css
     |    |   |    ├── rtl-min.css
     |    |   |    ├── rtl.css
     |    |   |    ├── style-min.css
@@ -131,42 +135,79 @@ a project.
     │    |   |    |   ├── hoverintent
     │    |   |    |   ├── modernizr
     │    |   |    |   └── selectivizr
+    │    │   |    ├── custom-offcanvas.js
     │    │   |    ├── production-min.js
     │    │   |    └── development.js
-    │    ├── sass
-    │    |   └── base (Bitters)
-    │    |   └── components
-    |    |    |   ├── _buttons.scss
-    |    |    |   ├── _dashicons.scss
-    |    |    |   ├── _flexnav.scss
-    |    |    |   ├── _navigation.scss
-    |    |    |   ├── _ui-bourbon.scss
-    |    |    |   └── _variables.scss
-    │    |    └── layouts
-    |    |    |   ├── _content.scss
-    |    |    |   ├── _footer.scss
-    |    |    |   ├── _header.scss
-    |    |    |   ├── _navigation.scss
-    |    |    |   ├── _normalize.scss
-    |    |    |   ├── _sidebar.scss
-    |    |    |   ├── _structure.scss
-    |    |    |   └── _typography.scss
-    |    ├── _app.scss
-    |    ├── _grid-settings.scss
-    |    ├── _rtl.scss
-    |    └── style.scss
+    │    |   └── maps
+    │    │   ├── sass
+    │    │   |   └── abstracts
+    │    |   |    |   ├── __abstracts.scss
+    │    |   |    |   ├── _accessibility.scss
+    │    |   |    |   ├── _typography.scss
+    │    |   |    |   ├── _variables.scss
+    │    │   |    └── base
+    │    |   |    |   ├── __base_dir.scss
+    │    |   |    |   ├── _normalize.scss
+    │    │   |    └── components
+    │    |   |    |   ├── __components-dir.scss
+    │    |   |    |   ├── _buttons.scss
+    │    |   |    |   ├── _infinite-scroll.scss
+    │    |   |    |   ├── _media.scss
+    │    │   |    └── layouts
+    │    |   |    |   ├── __layouts-dir.scss
+    │    |   |    |   ├── _content.scss
+    │    |   |    |   ├── _footer.scss
+    │    |   |    |   ├── _header.scss
+    │    |   |    |   ├── _navigation.scss
+    │    |   |    |   ├── _sidebar.scss
+    │    |   |    |   ├── _structure.scss
+    │    |   |    |   └── navigation-offcanvas.scss
+    │    │   |    └── templates
+    │    |   |    |   ├── __vendor-dir.scss
+    │    |   |    |   ├── _base.scss (Bitters)
+    │    |   |    |   ├── _buttons.scss
+    │    |   |    |   ├── _dashicons.scss
+    │    |   |    |   ├── _forms.scss
+    │    |   |    |   ├── _grid-settings.scss
+    │    |   |    |   ├── _layout.scss
+    │    |   |    |   ├── _lists.scss
+    │    |   |    |   ├── _media.scss
+    │    |   |    |   ├── _tables.scss
+    │    |   |    |   ├── _typography.scss
+    │    |   |    |   ├── _variables.scss
+    │    |   |    |   ├── flexnav.scss
+    │    │   |    └── vendor
+    │    |   |    |   ├── __layouts-dir.scss
+    │    |   |    |   ├── _content.scss
+    │    |   |    |   ├── _footer.scss
+    │    |   |    |   ├── _header.scss
+    │    |   |    |   ├── _navigation.scss
+    │    |   |    |   ├── _sidebar.scss
+    │    |   |    |   ├── _structure.scss
+    │    |   |    |   └── navigation-offcanvas.scss
+    │    |   ├── _app.scss
+    │    |   ├── _grid-settings.scss
+    │    |   ├── _rtl.scss
+    │    |   └── style.scss
     ├── library
     │   └── languages
     │   │   ├── some_like_it_neat.pot
     │   └── vendors
-    │   │   ├── js
+    │   │   ├── cmb2
+    │   │   ├── customizer
     │   │   ├── tgm-plugin-activation
-    │   │   ├── tha-theme-hooks
-    │   │   └── customizer
-    │   ├── custom-header.php
+    │   │   ├── theme-hook-alliance
+    │   │   └── custom-header.php
+    │   │   └── extras.php
+    │   │   └── jetpack.php
+    │   │   └── meta.php
+    │   │   └── template-tags.php
+    │   ├── assets.php
+    │   ├── customizer-frontend-settings.php
     │   ├── extras.php
-    │   ├── jetpack.php
-    │   └── template-tags.php
+    │   ├── theme-setup.php
+    │   ├── vendor.php
+    │   ├── widgets.php
     ├── page-templates
     │     └── template-parts
     |     |   ├── content-aside.php
@@ -203,7 +244,8 @@ a project.
     ├── searchform.php
     ├── sidebar.php
     ├── single.php
-    └── style.css</code></pre>
+    └── style.css
+</code></pre>
 
 Road Map
 ---------------
