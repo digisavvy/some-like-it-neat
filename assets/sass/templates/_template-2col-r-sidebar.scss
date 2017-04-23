@@ -1,0 +1,38 @@
+// 2col Right Sidebar
+.page-template-page-templatestemplate-right-col-php {
+
+    h1.entry-title {
+        margin: 0;
+        @include text-align(left);
+    }
+
+    #primary {
+        @include grid-media($sm) {
+            @include float(left);
+            @include grid-media($sm) {
+                @include grid-column(2);
+            }
+            @include grid-media($md) {
+                @include grid-column(4);
+            }
+        }
+        @include grid-media($md) {
+
+        }
+    }
+    #secondary {
+        @include grid-media($sm) {
+            @include grid-column(2);
+        }
+        @include grid-media($md) {
+            @include float(right);
+            @include margin-right(1.5%);
+            @include grid-media($sm) {
+                @include grid-column(4);
+            }
+            @include grid-media($md) {
+                @include grid-column(2);
+            }
+        }
+    }
+}

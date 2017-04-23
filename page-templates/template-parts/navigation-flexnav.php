@@ -4,6 +4,11 @@
  */
 ?>
 
+<section class="site-branding">
+    <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+    <div class="site-description"><?php bloginfo( 'description' ); ?></div>
+</section>
+
 <nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
     <button class="menu-button">
         <span class="dashicons <?php echo get_theme_mod( 'some_like_it_neat_mobile_nav_icon', 'dashicons-menu' ); ?>"></span><?php echo get_theme_mod( 'some_like_it_neat_mobile_nav_label', 'Menu' ); ?>

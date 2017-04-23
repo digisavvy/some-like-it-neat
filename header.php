@@ -39,36 +39,25 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'some-like-it-neat' ); ?></a>
 
 		<?php tha_header_before(); ?>
-		<header id="masthead" class="site-header wrap" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+		<header id="masthead" class="site-header wrap <?php echo get_theme_mod( 'some-like-it-neat_nav_style' ); ?>-nav" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 
 		    <?php tha_header_top(); ?>
 
-            <?php if ( 'yes' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) { ?>
+            <?php if ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
 
-                <section class="site-branding">
-                    <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-                    <div class="site-description"><?php bloginfo( 'description' ); ?></div>
-                </section>
+                get_template_part( 'page-templates/template-parts/navigation', 'flexnav' );
 
-               <?php get_template_part( 'page-templates/template-parts/navigation', 'flexnav' ); ?>
+            } else {
 
-            <?php } else {
-
-                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-wrap' );
+                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas' );
 
             }
             ?>
-            <?php if ( 'no' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
 
-                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas-menu' );
-
-            } ?> <!-- #site-navigation -->
 			<?php tha_header_bottom(); ?>
 
 		</header><!-- #masthead -->
 		<?php tha_header_after(); ?>
-
-
 
 		<?php tha_content_before(); ?>
 
