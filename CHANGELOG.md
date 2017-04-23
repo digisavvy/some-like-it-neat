@@ -1,5 +1,15 @@
 # Changelog
 
+### 1.5.0
+-------------
+* Updated to Neat 2.0
+* Updated Bourbon to stable beta 5.0
+* Add Offcanvas Menu. Selectable within the Customizer. Now you can choose between offcanvas or flexnav.
+* Updated sass file organization
+* Updated Merge pull request #104 from jacobarriola/patch-1
+* Updated Functions.php, split into smaller more specific files for better organization and lighter functions file.
+* Add Gulp Task for processing offcanvas and other addon sass styling processes.
+
 ### 1.4.3
 -------------
 * Add - Offcanvas navigation menu. Configurable from the Customizer. Conditionally loads styles/scripts if selected.
