@@ -163,28 +163,24 @@ a project.
     │    |   |    |   ├── _structure.scss
     │    |   |    |   └── navigation-offcanvas.scss
     │    │   |    └── templates
+    │    |   |    |   ├── __templates-dir.scss
+    │    |   |    |   ├── _template-2col-l-sidebar.scss
+    │    |   |    |   ├── _template-2col-r-sidebar.scss
+    │    |   |    |   ├── _template-full-width.scss
+    │    |   |    |   ├── _template-landing-page.scss
+    │    │   |    └── vendor
     │    |   |    |   ├── __vendor-dir.scss
-    │    |   |    |   ├── _base.scss (Bitters)
+    │    |   |    |   ├── _base.scss
     │    |   |    |   ├── _buttons.scss
     │    |   |    |   ├── _dashicons.scss
-    │    |   |    |   ├── _forms.scss
     │    |   |    |   ├── _grid-settings.scss
     │    |   |    |   ├── _layout.scss
     │    |   |    |   ├── _lists.scss
-    │    |   |    |   ├── _media.scss
-    │    |   |    |   ├── _tables.scss
-    │    |   |    |   ├── _typography.scss
-    │    |   |    |   ├── _variables.scss
-    │    |   |    |   ├── flexnav.scss
-    │    │   |    └── vendor
-    │    |   |    |   ├── __layouts-dir.scss
-    │    |   |    |   ├── _content.scss
-    │    |   |    |   ├── _footer.scss
-    │    |   |    |   ├── _header.scss
-    │    |   |    |   ├── _navigation.scss
-    │    |   |    |   ├── _sidebar.scss
-    │    |   |    |   ├── _structure.scss
-    │    |   |    |   └── navigation-offcanvas.scss
+    │    |   |    |   └── _media.scss
+    │    |   |    |   └── _tables.scss
+    │    |   |    |   └── _typography.scss
+    │    |   |    |   └── _variables.scss
+    │    |   |    |   └── flexnav.scss
     │    |   ├── _app.scss
     │    |   ├── _grid-settings.scss
     │    |   ├── _rtl.scss
