@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Full-Width, No Sidebars
- *
+ * Template Post Type: post, page
  * This template display content at full with, with no sidebars.
  * Please note that this is the WordPress construct of pages and that other 'pages' on your WordPress site will use a different template.
  *

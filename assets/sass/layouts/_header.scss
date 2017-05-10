@@ -1,17 +1,21 @@
+header {
+    position: relative;
+    z-index: 1;
+}
 .site-branding {
     text-align: center;
     .site-title {
         font-family: $title;
-        padding: 40px;
+        padding: 0 40px;
 
-        @include media($sm) {
-            font-size: rem(35);
+        @include grid-media($sm) {
+            font-size: 35px;
         }
-        @include media($smbg) {
-            font-size: rem(55);
+        @include grid-media($smbg) {
+            font-size: 55px;
         }
-        @include media($md) {
-            font-size: rem(75);
+        @include grid-media($md) {
+            font-size: 75px;
         }
 
         a,a:visited {
@@ -22,16 +26,16 @@
 
     .site-description {
         padding: 25px 0;
-        font-size: rem(20);
+        font-size: 20px;
 
-        @include media($sm) {
-            font-size: rem(15);
+        @include grid-media($sm) {
+            font-size: 14px;
         }
-        @include media($smbg) {
-            font-size: rem(18);
+        @include grid-media($smbg) {
+            font-size: 18px;
         }
-        @include media($md) {
-            font-size: rem(25);
+        @include grid-media($md) {
+            font-size: 25px;
         }
         font-family: $content;
         font-style: italic;

@@ -1,9 +1,53 @@
 # Changelog
 
+### 1.5.0
+-------------
+* Updated to Neat 2.0
+* Updated Bourbon to stable beta 5.0
+* Add Offcanvas Menu. Selectable within the Customizer. Now you can choose between offcanvas or flexnav.
+* Updated sass file organization
+* Updated Merge pull request #104 from jacobarriola/patch-1
+* Updated Functions.php, split into smaller more specific files for better organization and lighter functions file.
+* Add Gulp Task for processing offcanvas and other addon sass styling processes.
+* Fix issue with prod.css and dev.css files getting created even when no files exist in js folder.
+
+### 1.4.3
+-------------
+* Add - Offcanvas navigation menu. Configurable from the Customizer. Conditionally loads styles/scripts if selected.
+* Update - Various NPM packages. Notable: Neat 1.7.4
+* Update - Added second 'styles' task to run offcanvas styles, looking for better method to include them
+
+### 1.4.2
+-------------
+* Fix - Prevent Neat 2.0 from downloading (it's coming, so keep awares).
+
+### 1.4.1
+-------------
+* Change - Moved Bi-app-sass to NPM from Bower.
+* Change - Remove Bower; we're using NPM for package mgmt completely.
+* Update - TGMP to 2.6.1
+* Update - Various NPM Packages. Commit: 5a8d5ab0bee0b19cb78ceb8b8a4ad5c273928a7e
+        
+### 1.4.0
+-------------
+**Bugfixes**
+* Fix - Issue with gulp not recognizing new scss files, which required a restart of gulp. Thanks @jacobarriola.
+* Update - Node Bourbon package to 4.2.8
+
+### 1.3.9
+-------------
+**Bugfixes**
+* Add - CMB2 Support to add custom metaboxes on singular post types. Allows for hiding titles and removing featured images. Useful for landing page templates.
+* Remove - Removed fallback for get_post_navigation(). Get current folks!
+* Remove - Removed comments from page post type. Personal feeling they aren't needed.
+* Fix - Invalid JSON in bower.json
+* Fix - Bourbon removed an extend rule for OL and UL that was breaking Sass compilation. See related: https://github.com/thoughtbot/bitters/pull/199
+
+
 ### 1.3.8
 -------------
 **Bugfixes**
-* Change - Full width template changed so that nav, footer, comments sections were fixed-width. Only content area is full-width now. 
+* Change - Full width template changed so that nav, footer, comments sections were fixed-width. Only content area is full-width now.
 
 ### 1.3.7
 -------------

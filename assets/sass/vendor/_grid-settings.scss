@@ -1,0 +1,43 @@
+// Setting Up the Neat Grid
+
+// Breakpoints, Updated for Neat 2.x
+// @include grid-media($sm) { your styles here }
+
+$sm: (columns: 2, gutter: 20px, media: 0,);
+$smbg: (columns: 4, gutter: 20px, media: 480px);
+$md: (columns: 6, gutter: 20px, media: 768px);
+$mdbg: (columns: 8, gutter: 10px, media: 1024px);
+$hg: (columns: 10, gutter: 20px, media: 1140px);
+$hgbg: (columns: 12, gutter: 20px, media: 1400px);
+
+// Adding a Visual Grid while you develop. Set to 'true.'
+$visual-grid: false;
+$visual-grid-color: #ccc;
+$visual-grid-index: front;
+$visual-grid-opacity: .2;
+
+// Breakpoints that only come into play when using patterns from http://refills.bourbon.io
+$medium-screen: 640px;
+$large-screen: 860px;
+$medium-screen-up: new-breakpoint(min-width $medium-screen 4);
+$large-screen-up: new-breakpoint(min-width $large-screen 8);
+
+// Max-width Mixins - Neat no longer allows for setting a max-width for your grids. This choice was made by the project
+// maintainers. I'm opting to use a nifty mixin to handle these instead.
+//
+// Based on this discussion: https://github.com/thoughtbot/neat/issues/498
+// And this Codepen: http://codepen.io/kgcreative/pen/ozPLLb?editors=1100
+// Why this method? I think it allows more flexibility with things like bg images that can span full width since we're
+// not using a wrap to contain things, plus our text remains constrained. It's nifty.
+// --------------------------------------
+
+
+@mixin section-container($context: wide, $width: 1200px) {
+  @if $context == wide {
+    padding: 0 calc((100% - #{$width}) / 2);
+  }
+  @else if $context == full {
+    max-width: 100%;
+    width: 100%;
+  }
+}
