@@ -1,0 +1,21 @@
+.page-template-page-templatestemplate-landing-page-php {
+
+  main#main,
+  .site-footer,
+  .site-header,
+  .site-main,
+  #primary {
+    @include section-container('full');
+    margin: inherit;
+    padding: inherit;
+  }
+
+  .entry-content  {
+    margin: 0 !important;
+  }
+
+}
+
+.post-template-template-landing-page {
+  @extend .page-template-page-templatestemplate-landing-page-php;
+}

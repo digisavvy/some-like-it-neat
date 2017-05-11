@@ -1,0 +1,26 @@
+.page-template-page-templatestemplate-full-width-php {
+
+  main#main,
+  .site-main
+  footer {
+    @include section-container('full');
+    margin: inherit;
+    padding: inherit;
+  }
+
+  #primary {
+    @include section-container('full');
+    margin: inherit;
+    padding: inherit;
+  }
+
+  .site-main [class*="navigation"],
+  #comments,
+  #primary-nav {
+
+  }
+}
+
+.post-template-page-templatestemplate-full-width-php {
+  @extend .page-template-page-templatestemplate-full-width-php;
+}

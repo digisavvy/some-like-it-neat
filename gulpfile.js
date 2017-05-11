@@ -1,4 +1,5 @@
 'use strict';
+
 /**
  * Project Setup
  *
@@ -30,6 +31,7 @@ var jshint       = require('gulp-jshint');
 var minifycss    = require('gulp-uglifycss');
 var notify       = require('gulp-notify');
 var phpcs        = require('gulp-phpcs');
+var pixrem       = require('gulp-pixrem');
 var plugins      = require('gulp-load-plugins')({ camelize: true });
 var plumber      = require('gulp-plumber');
 var reload       = browserSync.reload;
@@ -41,9 +43,6 @@ var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
 var zip          = require('gulp-zip');
 
-
-
-
 /**
  * Browser Sync
  *
@@ -52,11 +51,11 @@ var zip          = require('gulp-zip');
 */
 gulp.task('browser-sync', function() {
   var files = [
-    '**/*.php',
-    '**/*.{png,jpg,gif}',
+    '**/*.php', '**/*.js',
+    '**/*.{png,jpg,gif}'
   ];
   browserSync.init(files, {
-    proxy: url,
+    proxy: url
   });
 });
 
@@ -64,15 +63,23 @@ gulp.task('browser-sync', function() {
 | >   CSS TASKS
 ******************************************************************************/
 gulp.task('styles', function() {
-  return gulp.src([source + 'sass/**/*.scss'])
+  return gulp.src([
+      source + 'sass/**/*.scss',
+      '!' + source + 'sass/**/navigation-offcanvas.scss',
+      '!' + source + 'sass/**/flexnav.scss'
+  ])
     .pipe(plumber({
       errorHandler: function(err) {
         console.log(err);
         this.emit('end');
-      },
+      }
     }))
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({
+        sourceComments: 'map',
+        sourceMap: 'sass',
+        outputStyle: 'nested'
+    }).on('error', sass.logError))
     .pipe(autoprefixer(
       'last 2 version',
       'safari 5', 'ie 8',
@@ -89,13 +96,52 @@ gulp.task('styles', function() {
     .pipe(reload({stream:true})) // Inject Styles when style file is created
     .pipe(rename({ suffix: '-min' }))
     .pipe(minifycss({
-      maxLineLen: 80,
+      maxLineLen: 80
     }))
     .pipe(gulp.dest(source + 'css'))
     .pipe(reload({stream:true})) // Inject Styles when min style file is created
     .pipe(notify({ message: 'Styles task complete', onLast: true }));
 });
 
+gulp.task('stylesAddons', function() {
+    return gulp.src([
+        source + 'sass/**/navigation-offcanvas.scss',
+        source + 'sass/**/flexnav.scss'
+    ])
+        .pipe(plumber({
+            errorHandler: function(err) {
+                console.log(err);
+                this.emit('end');
+            }
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(sass({
+            sourceComments: 'map',
+            sourceMap: 'sass',
+            outputStyle: 'compressed'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer(
+            'last 2 version',
+            'safari 5', 'ie 8',
+            'ie 9',
+            'opera 12.1',
+            'ios 6',
+            'android 4'
+        ))
+        .pipe(sourcemaps.write('../maps'))
+        .pipe(plumber.stop())
+        .pipe(replace('@charset "UTF-8";', '')) // Removes UTF-8 Encoding string atop CSS files
+        .pipe(gulp.dest(source + 'css'))
+        .pipe(filter('**/*.css')) // Filtering stream to only css files
+        .pipe(reload({stream:true})) // Inject Styles when style file is created
+        .pipe(rename({ suffix: '-min' }))
+        .pipe(minifycss({
+            maxLineLen: 80
+        }))
+        .pipe(gulp.dest('../css'))
+        .pipe(reload({stream:true})) // Inject Styles when min style file is created
+        .pipe(notify({ message: 'Styles task complete', onLast: true }));
+});
 /******************************************************************************
 | >   JS TASKS
 ******************************************************************************/
@@ -106,7 +152,7 @@ gulp.task('js', function() {
     .pipe(gulp.dest(source + 'js'))
     .pipe(rename({
       basename: 'production',
-      suffix: '-min',
+      suffix: '-min'
     }))
     .pipe(uglify())
     .pipe(gulp.dest(source + 'js/'))
@@ -238,6 +284,7 @@ gulp.task('test',['php','jsHint']);
 // Watch Task
 gulp.task('default', ['styles', 'js', 'images', 'browser-sync', 'test'], function() {
   gulp.watch(source + 'sass/**/*.scss', ['styles']);
+  gulp.watch(source + 'sass/**/*.scss', ['stylesAddons']);
   gulp.watch(source + 'js/app/**/*.js', ['js', browserSync.reload]);
   gulp.watch(source + 'js/app/**/*.js', ['jsHint']);
   gulp.watch(source + 'img/**/*.{png,jpg,gif}', ['images']);
