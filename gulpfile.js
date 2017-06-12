@@ -14,8 +14,43 @@ var url        = 'slin.dev';
 var build      = './build/';
 var vendors    = './library/vendors/';
 var source     = 'assets/';
-var phpSource  = ['**/*.php', 'page-templates/**/*.php', '!library/**/*', '!wpcs/**/*', '!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js'];
-var themeBuild = ['**/*.php', 'page-templates/**/*.php', './style.css', './gulpfile.js', './.jshintrc', './.bowerrc', './.gitignore', 'composer.phar', './*.json', './*.md', './screenshot.png', '!library/**/*', '!wpcs/**/*', '!node_modules/**/*', '!vendor/**/*', '!assets/bower_components/**/*', '!**/*-min.css', '!assets/js/vendor/*', '!assets/css/*', '!**/*-min.js', '!assets/js/production.js'];
+var phpSource  = [
+        '**/*.php',
+        'page-templates/**/*.php',
+        '!library/**/*',
+        '!wpcs/**/*',
+        '!node_modules/**/*',
+        '!vendor/**/*',
+        '!assets/bower_components/**/*',
+        '!**/*-min.css',
+        '!assets/js/vendor/*',
+        '!assets/css/*',
+        '!**/*-min.js',
+        '!assets/js/production.js'
+    ];
+var themeBuild = [
+        '**/*.php',
+        'page-templates/**/*.php',
+        './style.css',
+        './gulpfile.js',
+        './.jshintrc',
+        './.bowerrc',
+        './.gitignore',
+        'composer.phar',
+        './*.json',
+        './*.md',
+        './screenshot.png',
+        '!library/**/*',
+        '!wpcs/**/*',
+        '!node_modules/**/*',
+        '!vendor/**/*',
+        '!assets/bower_components/**/*',
+        '!**/*-min.css',
+        '!assets/js/vendor/*',
+        '!assets/css/*',
+        '!**/*-min.js',
+        '!assets/js/production.js'
+    ];
 
 /******************************************************************************
 | >   PLUGINS
@@ -268,7 +303,7 @@ gulp.task('php', function () {
       bin: './vendor/bin/phpcs',
       standard: 'WordPress-Core'
     }))
-    // Log all problems that was found
+    // Log all problems that were found
     .pipe(phpcs.reporter('log'));
 });
 
