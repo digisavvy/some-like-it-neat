@@ -309,5 +309,4 @@ gulp.task('default', ['styles', 'js', 'images', 'browser-sync', 'test'], functio
   gulp.watch(source + 'js/app/**/*.js', ['js', browserSync.reload]);
   gulp.watch(source + 'js/app/**/*.js', ['jsHint']);
   gulp.watch(source + 'img/**/*.{png,jpg,gif}', ['images']);
-  gulp.watch(php_files, ['php']);
 });
