@@ -7,11 +7,7 @@
  * @package some_like_it_neat
  */
 ?>
-		<?php tha_content_bottom(); ?>
-
-		</main><!-- #main -->
-
-		<?php tha_content_after(); ?>
+        <?php do_action( 'some_like_it_neat_after_content' ); ?>
 
         <?php do_action( 'some_like_it_neat_footer' ); ?>
 

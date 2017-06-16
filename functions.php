@@ -28,7 +28,8 @@ $some_like_it_neat_includes = [
     'library/vendor.php',   // 3rd party scripts/code etc.
     'library/customizer-frontend-settings.php', // Theme customizer related
     'library/structure/header.php', // Include header markup, supports beaver themer
-    'library/structure/footer.php' // Include footer markup, supports beaver themer
+    'library/structure/footer.php', // Include footer markup, supports beaver themer
+    'library/structure/content.php'
 ];
 
 foreach ($some_like_it_neat_includes as $file) {

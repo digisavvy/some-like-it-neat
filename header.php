@@ -40,7 +40,4 @@
 
         <?php do_action( 'some_like_it_neat_header' ); ?>
 
-		<?php tha_content_before(); ?>
-
-		<main id="main" class="site-main wrap" role="main">
-			<?php tha_content_top(); ?>
+        <?php do_action( 'some_like_it_neat_before_content' ); ?>
