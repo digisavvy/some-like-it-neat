@@ -170,6 +170,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
          */
         add_theme_support( 'fl-theme-builder-headers' );
         add_theme_support( 'fl-theme-builder-footers' );
+        add_theme_support( 'fl-theme-builder-parts' );
 
     }
 endif; // some_like_it_neat_setup
@@ -196,3 +197,32 @@ function some_like_it_neat_header_footer_render() {
     }
 }
 add_action( 'wp', 'some_like_it_neat_header_footer_render' );
+
+
+function some_like_it_neat_register_part_hooks() {
+
+    return array(
+        array(
+            'label' => 'Header',
+            'hooks' => array(
+                'tha_header_before' => 'Before Header',
+                'tha_header_after'  => 'After Header',
+            )
+        ),
+        array(
+            'label' => 'Content',
+            'hooks' => array(
+                'tha_content_before' => 'Before Content',
+                'tha_content_after'  => 'After Content',
+            )
+        ),
+        array(
+            'label' => 'Footer',
+            'hooks' => array(
+                'tha_footer_before' => 'Before Footer',
+                'tha_footer_after'  => 'After Footer',
+            )
+        )
+    );
+}
+add_filter( 'fl_theme_builder_part_hooks', 'some_like_it_neat_register_part_hooks' );

@@ -29,7 +29,7 @@ $some_like_it_neat_includes = [
     'library/customizer-frontend-settings.php', // Theme customizer related
     'library/structure/header.php', // Include header markup, supports beaver themer
     'library/structure/footer.php', // Include footer markup, supports beaver themer
-    'library/structure/content.php'
+    'library/structure/content.php' // Include content area markup, supports beaver themer
 ];
 
 foreach ($some_like_it_neat_includes as $file) {
