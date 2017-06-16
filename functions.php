@@ -26,7 +26,9 @@ $some_like_it_neat_includes = [
     'library/theme-setup.php',  // Theme setup
     'library/extras.php',    // Extra and nifty things
     'library/vendor.php',   // 3rd party scripts/code etc.
-    'library/customizer-frontend-settings.php' // Theme customizer related
+    'library/customizer-frontend-settings.php', // Theme customizer related
+    'library/structure/header.php', // Include header markup, supports beaver themer
+    'library/structure/footer.php' // Include footer markup, supports beaver themer
 ];
 
 foreach ($some_like_it_neat_includes as $file) {
@@ -37,9 +39,3 @@ foreach ($some_like_it_neat_includes as $file) {
     require_once $filepath;
 }
 unset($file, $filepath);
-
-
-
-
-
-

@@ -165,6 +165,34 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 
         include_once get_template_directory() . '/library/vendors/tgm-plugin-activation/tgm-plugin-activation.php' ;
 
+        /**
+         * Adding Beaver Themer Support
+         */
+        add_theme_support( 'fl-theme-builder-headers' );
+        add_theme_support( 'fl-theme-builder-footers' );
+
     }
 endif; // some_like_it_neat_setup
 add_action( 'after_setup_theme', 'some_like_it_neat_setup' );
+
+function some_like_it_neat_header_footer_render() {
+
+    // Get the header ID.
+    $header_ids = FLThemeBuilderLayoutData::get_current_page_header_ids();
+
+    // If we have a header, remove the theme header and hook in Theme Builder's.
+    if ( ! empty( $header_ids ) ) {
+        remove_action( 'some_like_it_neat_header', 'some_like_it_neat_do_header' );
+        add_action( 'some_like_it_neat_header', 'FLThemeBuilderLayoutRenderer::render_header' );
+    }
+
+    // Get the footer ID.
+    $footer_ids = FLThemeBuilderLayoutData::get_current_page_footer_ids();
+
+    // If we have a footer, remove the theme footer and hook in Theme Builder's.
+    if ( ! empty( $footer_ids ) ) {
+        remove_action( 'some_like_it_neat_footer', 'some_like_it_neat_do_footer' );
+        add_action( 'some_like_it_neat_footer', 'FLThemeBuilderLayoutRenderer::render_footer' );
+    }
+}
+add_action( 'wp', 'some_like_it_neat_header_footer_render' );

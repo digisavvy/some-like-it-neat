@@ -38,26 +38,7 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'some-like-it-neat' ); ?></a>
 
-		<?php tha_header_before(); ?>
-		<header id="masthead" class="site-header wrap <?php echo get_theme_mod( 'some-like-it-neat_nav_style' ); ?>-nav" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-
-		    <?php tha_header_top(); ?>
-
-            <?php if ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
-
-                get_template_part( 'page-templates/template-parts/navigation', 'flexnav' );
-
-            } else {
-
-                get_template_part( 'page-templates/template-parts/navigation', 'offcanvas' );
-
-            }
-            ?>
-
-			<?php tha_header_bottom(); ?>
-
-		</header><!-- #masthead -->
-		<?php tha_header_after(); ?>
+        <?php do_action( 'some_like_it_neat_header' ); ?>
 
 		<?php tha_content_before(); ?>
 
