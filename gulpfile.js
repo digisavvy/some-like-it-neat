@@ -303,7 +303,7 @@ gulp.task('test',['php','jsHint']);
 ******************************************************************************/
 
 // Watch Task
-gulp.task('default', ['styles', 'js', 'images', 'browser-sync', 'test'], function() {
+gulp.task('default', ['styles', 'js', 'images', 'browser-sync'], function() {
   gulp.watch(source + 'sass/**/*.scss', ['styles']);
   gulp.watch(source + 'sass/**/*.scss', ['stylesAddons']);
   gulp.watch(source + 'js/app/**/*.js', ['js', browserSync.reload]);
