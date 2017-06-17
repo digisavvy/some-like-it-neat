@@ -2,51 +2,54 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package some_like_it_neat
+ * @package Some_Like_It-Neat
+ * @author  Alex Vasquez <alex@digisavvy.com>
+ * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+ * @link    https://github.com/digisavvy/some-like-it-neat
  */
 ?>
-	<?php tha_sidebars_before(); ?>
+    <?php tha_sidebars_before(); ?>
 
-	<div id="secondary" class="widget-area" role="complementary">
+    <div id="secondary" class="widget-area" role="complementary">
 
-		<?php tha_sidebar_top(); ?>
+    <?php tha_sidebar_top(); ?>
 
-		<?php do_action( 'before_sidebar' ); ?>
+    <?php do_action('before_sidebar'); ?>
 
-		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
+    <?php if (! dynamic_sidebar('sidebar-1') ) : ?>
 
-			<aside id="search" class="widget widget_search">
+            <aside id="search" class="widget widget_search">
 
-				<?php get_search_form(); ?>
+                <?php get_search_form(); ?>
 
-			</aside>
+            </aside>
 
-			<aside id="archives" class="widget">
+            <aside id="archives" class="widget">
 
-				<h4 class="widget-title"><?php _e( 'Archives', 'some-like-it-neat' ); ?></h4>
+                <h4 class="widget-title"><?php _e('Archives', 'some-like-it-neat'); ?></h4>
 
-				<ul>
-					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
-				</ul>
+                <ul>
+        <?php wp_get_archives(array( 'type' => 'monthly' )); ?>
+                </ul>
 
-			</aside>
+            </aside>
 
-			<aside id="meta" class="widget">
+            <aside id="meta" class="widget">
 
-				<h4 class="widget-title"><?php _e( 'Meta', 'some-like-it-neat' ); ?></h4>
+                <h4 class="widget-title"><?php _e('Meta', 'some-like-it-neat'); ?></h4>
 
-				<ul>
-					<?php wp_register(); ?>
-					<li><?php wp_loginout(); ?></li>
-					<?php wp_meta(); ?>
-				</ul>
+                <ul>
+        <?php wp_register(); ?>
+                    <li><?php wp_loginout(); ?></li>
+        <?php wp_meta(); ?>
+                </ul>
 
-			</aside>
+            </aside>
 
     <?php endif; // end sidebar widget area ?>
 
     <?php tha_sidebar_bottom(); ?>
 
-	</div><!-- #secondary -->
+    </div><!-- #secondary -->
 
     <?php tha_sidebars_after(); ?>
