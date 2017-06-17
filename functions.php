@@ -1,12 +1,11 @@
 <?php
 /**
- * some_like_it_neat functions and definitions
+ * Some Like it Neat functions and definitions
  *
- * @package some_like_it_neat
- */
-
-/**
- * Some Like it Neat includes
+ * @package Some_Like_It_Neat
+ * @author  Alex Vasquez <alex@digisavvy.com>
+ * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+ * @link    https://github.com/digisavvy/some-like-it-neat
  *
  * The $some_like_it_neat_includes array includes a variety of scripts, styles, and functions among other
  * useful utilities for your theme.
@@ -37,6 +36,6 @@ foreach ($some_like_it_neat_includes as $file) {
         trigger_error(sprintf(__('Error locating %s for inclusion', 'some_like_it_neat'), $file), E_USER_ERROR);
     }
 
-    require_once $filepath;
+    include_once $filepath;
 }
 unset($file, $filepath);

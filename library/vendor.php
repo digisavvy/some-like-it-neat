@@ -2,13 +2,16 @@
 /**
  * some_like_it_neat functions and definitions
  *
- * @package some_like_it_neat
+ * @package Some_Like_It_Neat
+ * @author  Alex Vasquez <alex@digisavvy.com>
+ * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+ * @link    https://github.com/digisavvy/some-like-it-neat
  */
 
 /**
  * Initializing Flexnav Menu System
  */
-if ( ! function_exists( 'dg_add_flexnav' ) && ( 'flexnav' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) ) :
+if (! function_exists('dg_add_flexnav') && ( 'flexnav' === get_theme_mod('some-like-it-neat_nav_style') ) ) :
     function dg_add_flexnav()
     {
         ?>
@@ -27,5 +30,5 @@ if ( ! function_exists( 'dg_add_flexnav' ) && ( 'flexnav' === get_theme_mod( 'so
         </script>
         <?php
     }
-    add_action( 'wp_footer', 'dg_add_flexnav' );
+    add_action('wp_footer', 'dg_add_flexnav');
 endif;

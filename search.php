@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search Results pages.
  *
- * @package Some_Like_It-Neat
+ * @package Some_Like_It_Neat
  * @author  Alex Vasquez <alex@digisavvy.com>
  * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
  * @link    https://github.com/digisavvy/some-like-it-neat
@@ -18,12 +18,12 @@ get_header(); ?>
             <h1 class="page-title"><?php printf(__('Search Results for: %s', 'some-like-it-neat'), '<span>' . get_search_query() . '</span>'); ?></h1>
         </header><!-- .page-header -->
 
-    <?php /* Start the Loop */ ?>
+    <?php // Start of the loop. ?>
     <?php while ( have_posts() ) : the_post(); ?>
 
     <?php get_template_part('page-templates/template-parts/content', 'search'); ?>
 
-    <?php endwhile; ?>
+    <?php endwhile; // end of the loop. ?>
 
     <?php else : ?>
 

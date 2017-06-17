@@ -2,7 +2,7 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package Some_Like_It-Neat
+ * @package Some_Like_It_Neat
  * @author  Alex Vasquez <alex@digisavvy.com>
  * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
  * @link    https://github.com/digisavvy/some-like-it-neat

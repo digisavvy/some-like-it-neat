@@ -2,10 +2,13 @@
 /**
  * some_like_it_neat functions and definitions
  *
- * @package some_like_it_neat
+ * @package Some_Like_It_Neat
+ * @author  Alex Vasquez <alex@digisavvy.com>
+ * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+ * @link    https://github.com/digisavvy/some-like-it-neat
  */
 
-if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
+if (! function_exists('some_like_it_neat_setup') ) :
     /**
      * Sets up theme defaults and registers support for various WordPress features.
      *
@@ -19,7 +22,7 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
         /**
          * Set the content width based on the theme's design and stylesheet.
          */
-        if ( ! isset( $content_width ) ) {
+        if (! isset($content_width) ) {
             $content_width = 640; /* pixels */
         }
 
@@ -29,50 +32,53 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
         * If you're building a theme based on some_like_it_neat, use a find and replace
         * to change 'some-like-it-neat' to the name of your theme in all the template files
         */
-        load_theme_textdomain( 'some-like-it-neat', get_template_directory() . '/library/languages' );
+        load_theme_textdomain('some-like-it-neat', get_template_directory() . '/library/languages');
 
         /**
          * Add default posts and comments RSS feed links to head.
          */
-        add_theme_support( 'automatic-feed-links' );
+        add_theme_support('automatic-feed-links');
 
         /**
          * Enable HTML5 markup
          */
-        add_theme_support( 'html5', array(
+        add_theme_support(
+            'html5', array(
             'comment-list',
             'search-form',
             'comment-form',
             'gallery',
-        ) );
+            ) 
+        );
 
         /*
         * Enable support for Post Thumbnails on posts and pages.
         *
         * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
         */
-        add_theme_support( 'post-thumbnails' );
+        add_theme_support('post-thumbnails');
 
         /*
         * Enable title tag support for all posts.
         *
         * @link http://codex.wordpress.org/Title_Tag
         */
-        add_theme_support( 'title-tag' );
+        add_theme_support('title-tag');
 
         /*
         * Add Editor Style for adequate styling in text editor.
         *
         * @link http://codex.wordpress.org/Function_Reference/add_editor_style
         */
-        add_editor_style( '/assets/css/editor-style.css' );
+        add_editor_style('/assets/css/editor-style.css');
 
         // This theme uses wp_nav_menu() in one location.
-        register_nav_menu( 'primary-navigation', __( 'Primary Menu', 'some-like-it-neat' ) );
+        register_nav_menu('primary-navigation', __('Primary Menu', 'some-like-it-neat'));
 
         // Enable support for Post Formats.
-        if ( 'yes' === get_theme_mod( 'some-like-it-neat_post_format_support' ) ) {
-            add_theme_support( 'post-formats',
+        if ('yes' === get_theme_mod('some-like-it-neat_post_format_support') ) {
+            add_theme_support(
+                'post-formats',
                 array(
                     'aside',
                     'image', '
@@ -83,25 +89,29 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
                     'gallery',
                     'chat',
                     'audio'
-                ) );
+                ) 
+            );
         }
 
         // Enable Support for Jetpack Infinite Scroll
-        if ( 'yes' === get_theme_mod( 'some-like-it-neat_infinite_scroll_support' ) ) {
-            $scroll_type = get_theme_mod( 'some-like-it-neat_infinite_scroll_type' );
-            add_theme_support( 'infinite-scroll', array(
-                'type'				=> $scroll_type,
-                'footer_widgets'	=> false,
-                'container'			=> 'content',
-                'wrapper'			=> true,
-                'render'			=> false,
-                'posts_per_page' 	=> false,
-                'render'			=> 'some_like_it_neat_infinite_scroll_render',
-            ) );
+        if ('yes' === get_theme_mod('some-like-it-neat_infinite_scroll_support') ) {
+            $scroll_type = get_theme_mod('some-like-it-neat_infinite_scroll_type');
+            add_theme_support(
+                'infinite-scroll', array(
+                'type'                => $scroll_type,
+                'footer_widgets'    => false,
+                'container'            => 'content',
+                'wrapper'            => true,
+                'render'            => false,
+                'posts_per_page'     => false,
+                'render'            => 'some_like_it_neat_infinite_scroll_render',
+                ) 
+            );
 
-            function some_like_it_neat_infinite_scroll_render() {
-                if ( have_posts() ) : while ( have_posts() ) : the_post();
-                    get_template_part( 'page-templates/template-parts/content', get_post_format() );
+            function some_like_it_neat_infinite_scroll_render() 
+            {
+                if (have_posts() ) : while ( have_posts() ) : the_post();
+                        get_template_part('page-templates/template-parts/content', get_post_format());
                 endwhile;
                 endif;
             }
@@ -120,11 +130,11 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
         /**
          * Including CMB2 (https://github.com/WebDevStudios/CMB2).
          */
-        if ( file_exists(  __DIR__ . '/vendors/cmb2/init.php' ) ) {
-            require_once  __DIR__ . '/vendors/cmb2/init.php';
+        if (file_exists(__DIR__ . '/vendors/cmb2/init.php') ) {
+            include_once  __DIR__ . '/vendors/cmb2/init.php';
             include get_template_directory() . '/library/vendors/meta.php';
-        } elseif ( file_exists(  __DIR__ . '/CMB2/init.php' ) ) {
-            require_once  __DIR__ . '/CMB2/init.php';
+        } elseif (file_exists(__DIR__ . '/CMB2/init.php') ) {
+            include_once  __DIR__ . '/CMB2/init.php';
             include get_template_directory() . '/library/vendors/meta.php';
         }
 
@@ -168,43 +178,45 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
         /**
          * Adding Beaver Themer Support
          */
-        add_theme_support( 'fl-theme-builder-headers' );
-        add_theme_support( 'fl-theme-builder-footers' );
-        add_theme_support( 'fl-theme-builder-parts' );
+        add_theme_support('fl-theme-builder-headers');
+        add_theme_support('fl-theme-builder-footers');
+        add_theme_support('fl-theme-builder-parts');
 
     }
 endif; // some_like_it_neat_setup
-add_action( 'after_setup_theme', 'some_like_it_neat_setup' );
+add_action('after_setup_theme', 'some_like_it_neat_setup');
 
 /**
  * Adding compatibility for Beaver Themer
  */
-function some_like_it_neat_header_footer_render() {
+function some_like_it_neat_header_footer_render() 
+{
 
     // Get the header ID.
     $header_ids = FLThemeBuilderLayoutData::get_current_page_header_ids();
 
     // If we have a header, remove the theme header and hook in Theme Builder's.
-    if ( ! empty( $header_ids ) ) {
-        remove_action( 'some_like_it_neat_header', 'some_like_it_neat_do_header' );
-        add_action( 'some_like_it_neat_header', 'FLThemeBuilderLayoutRenderer::render_header' );
+    if (! empty($header_ids) ) {
+        remove_action('some_like_it_neat_header', 'some_like_it_neat_do_header');
+        add_action('some_like_it_neat_header', 'FLThemeBuilderLayoutRenderer::render_header');
     }
 
     // Get the footer ID.
     $footer_ids = FLThemeBuilderLayoutData::get_current_page_footer_ids();
 
     // If we have a footer, remove the theme footer and hook in Theme Builder's.
-    if ( ! empty( $footer_ids ) ) {
-        remove_action( 'some_like_it_neat_footer', 'some_like_it_neat_do_footer' );
-        add_action( 'some_like_it_neat_footer', 'FLThemeBuilderLayoutRenderer::render_footer' );
+    if (! empty($footer_ids) ) {
+        remove_action('some_like_it_neat_footer', 'some_like_it_neat_do_footer');
+        add_action('some_like_it_neat_footer', 'FLThemeBuilderLayoutRenderer::render_footer');
     }
 }
-add_action( 'wp', 'some_like_it_neat_header_footer_render' );
+add_action('wp', 'some_like_it_neat_header_footer_render');
 
 /**
  * Adding compatibility for Beaver Themer
  */
-function some_like_it_neat_register_part_hooks() {
+function some_like_it_neat_register_part_hooks() 
+{
 
     return array(
         array(
@@ -231,4 +243,4 @@ function some_like_it_neat_register_part_hooks() {
     );
 
 }
-add_filter( 'fl_theme_builder_part_hooks', 'some_like_it_neat_register_part_hooks' );
+add_filter('fl_theme_builder_part_hooks', 'some_like_it_neat_register_part_hooks');

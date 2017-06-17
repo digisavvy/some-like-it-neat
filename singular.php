@@ -5,7 +5,7 @@
  * This is the template that gets used in absence of single.php, page.php, or a
  * singular post type template. Is also "true" for is_singular().
  *
- * @package Some_Like_It-Neat
+ * @package Some_Like_It_Neat
  * @author  Alex Vasquez <alex@digisavvy.com>
  * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
  * @link    https://github.com/digisavvy/some-like-it-neat
