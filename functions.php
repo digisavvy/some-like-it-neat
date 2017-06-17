@@ -32,10 +32,12 @@ $some_like_it_neat_includes = [
 ];
 
 foreach ($some_like_it_neat_includes as $file) {
+
     if (!$filepath = locate_template($file)) {
         trigger_error(sprintf(__('Error locating %s for inclusion', 'some_like_it_neat'), $file), E_USER_ERROR);
     }
 
     include_once $filepath;
+
 }
 unset($file, $filepath);

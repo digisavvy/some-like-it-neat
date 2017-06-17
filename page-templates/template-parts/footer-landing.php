@@ -10,6 +10,7 @@
  * @link    https://github.com/digisavvy/some-like-it-neat
  */
 ?>
+
     <?php tha_content_bottom(); ?>
 
         </main><!-- #main -->
@@ -29,4 +30,5 @@
 <?php wp_footer(); ?>
 
 </body>
+
 </html>
