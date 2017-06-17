@@ -176,6 +176,9 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 endif; // some_like_it_neat_setup
 add_action( 'after_setup_theme', 'some_like_it_neat_setup' );
 
+/**
+ * Adding compatibility for Beaver Themer
+ */
 function some_like_it_neat_header_footer_render() {
 
     // Get the header ID.
@@ -198,7 +201,9 @@ function some_like_it_neat_header_footer_render() {
 }
 add_action( 'wp', 'some_like_it_neat_header_footer_render' );
 
-
+/**
+ * Adding compatibility for Beaver Themer
+ */
 function some_like_it_neat_register_part_hooks() {
 
     return array(
@@ -224,5 +229,6 @@ function some_like_it_neat_register_part_hooks() {
             )
         )
     );
+
 }
 add_filter( 'fl_theme_builder_part_hooks', 'some_like_it_neat_register_part_hooks' );
