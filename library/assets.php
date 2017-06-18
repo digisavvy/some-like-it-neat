@@ -12,6 +12,7 @@
  * Enqueue scripts.
  */
 if (! function_exists('some_like_it_neat_scripts') ) :
+
     function some_like_it_neat_scripts() 
     {
 
@@ -71,12 +72,12 @@ if (! function_exists('some_like_it_neat_scripts') ) :
         }
     }
     add_action('wp_enqueue_scripts', 'some_like_it_neat_scripts');
+
 endif; // Enqueue scripts
 
 /**
  * Enqueue styles.
  */
-
 if (! function_exists('some_like_it_neat_styles') ) :
 
     function some_like_it_neat_styles() 
