@@ -11,16 +11,16 @@
  * @link    https://github.com/digisavvy/some-like-it-neat
  */
 
-get_template_part('page-templates/template-parts/header', 'landing'); ?>
+get_template_part( 'page-templates/template-parts/header', 'landing' ); ?>
 
  <div id="primary" class="content-area">
 
-    <?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-    <?php get_template_part('page-templates/template-parts/content', 'page'); ?>
+	<?php get_template_part( 'page-templates/template-parts/content', 'page' ); ?>
 
-    <?php endwhile; // end of the loop. ?>
+	<?php endwhile; // End of the loop. ?>
 
  </div><!-- #primary -->
 
-    <?php get_template_part('page-templates/template-parts/footer', 'landing'); ?>
+	<?php get_template_part( 'page-templates/template-parts/footer', 'landing' ); ?>

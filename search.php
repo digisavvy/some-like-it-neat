@@ -10,28 +10,33 @@
 
 get_header(); ?>
 
-    <section id="primary" class="content-area">
+<section id="primary" class="content-area">
 
-    <?php if (have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-        <header class="page-header">
-            <h1 class="page-title"><?php printf(__('Search Results for: %s', 'some-like-it-neat'), '<span>' . get_search_query() . '</span>'); ?></h1>
-        </header><!-- .page-header -->
+		<header class="page-header">
+			<h1 class="page-title">
+				<?php
+				/* translators: %s: search query. */
+				printf( esc_html__( 'Search Results for: %s', '_s' ), '<span>' . get_search_query() . '</span>' );
+				?>
+			</h1>
+		</header><!-- .page-header -->
 
-    <?php // Start of the loop. ?>
-    <?php while ( have_posts() ) : the_post(); ?>
+		<?php // Start of the loop. ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-    <?php get_template_part('page-templates/template-parts/content', 'search'); ?>
+			<?php get_template_part( 'page-templates/template-parts/content', 'search' ); ?>
 
-    <?php endwhile; // end of the loop. ?>
+		<?php endwhile; // end of the loop. ?>
 
-    <?php else : ?>
+	<?php else : ?>
 
-    <?php get_template_part('page-templates/template-parts/content', 'none'); ?>
+		<?php get_template_part( 'page-templates/template-parts/content', 'none' ); ?>
 
-    <?php endif; ?>
+	<?php endif; ?>
 
-    </section><!-- #primary -->
+</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
 

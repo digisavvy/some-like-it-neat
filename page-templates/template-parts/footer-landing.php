@@ -9,19 +9,20 @@
  * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
  * @link    https://github.com/digisavvy/some-like-it-neat
  */
+
 ?>
 
-    <?php tha_content_bottom(); ?>
+	<?php tha_content_bottom(); ?>
 
-        </main><!-- #main -->
+		</main><!-- #main -->
 
-    <?php tha_content_after(); ?>
+	<?php tha_content_after(); ?>
 
-    <?php tha_footer_before(); ?>
+	<?php tha_footer_before(); ?>
 
-    <?php tha_footer_after(); ?>
+	<?php tha_footer_after(); ?>
 
-    </div><!-- .wrap -->
+	</div><!-- .wrap -->
 
 </div><!-- #page -->
 

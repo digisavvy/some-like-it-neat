@@ -16,36 +16,37 @@
 
 get_header(); ?>
 
-    <div id="primary" class="content-area">
+	<div id="primary" class="content-area">
 
-    <?php if (have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-    <?php // Start the loop ?>
-    <?php while ( have_posts() ) : the_post(); ?>
+	<?php // Start the loop. ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-        <?php
-        /* Include the Post-Format-specific template for the content.
-        * If you want to override this in a child theme, then include a file
-        * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-        */
-            get_template_part('page-templates/template-parts/content', 'page');
-        ?>
+		<?php
+		/**
+		 * Include the Post-Format-specific template for the content.
+		 * If you want to override this in a child theme, then include a file
+		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+		 */
+			get_template_part( 'page-templates/template-parts/content', 'page' );
+		?>
 
-        <?php
-            // If comments are open or we have at least one comment, load up the comment template
-        if (comments_open() || '0' != get_comments_number() ) :
-            comments_template();
-        endif; ?>
+		<?php
+			// If comments are open or we have at least one comment, load up the comment template.
+		if ( comments_open() || '0' !== get_comments_number() ) :
+			comments_template();
+		endif; ?>
 
-    <?php endwhile; // End the loop ?>
+	<?php endwhile; // End the loop. ?>
 
-    <?php else : ?>
+	<?php else : ?>
 
-    <?php get_template_part('template-parts/content', 'none'); ?>
+	<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-    <?php endif; ?>
+	<?php endif; ?>
 
-    </div><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 

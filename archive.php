@@ -12,47 +12,48 @@
 
 get_header(); ?>
 
-    <section id="primary" class="content-area">
+	<section id="primary" class="content-area">
 
-        <div id="content" class="site-content">
+		<div id="content" class="site-content">
 
-    <?php if (have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-            <header class="page-header">
+			<header class="page-header">
 
-                <?php
-                printf('<h1 class="page-title">%s</h1>', esc_html(get_the_archive_title()));
-                
-                $description = get_the_archive_description();
-                if (! empty($description) ) {
-                    printf('<div class="taxonomy-description">%s</div>', esc_html($description));
-                } ?>
+				<?php
+				printf( '<h1 class="page-title">%s</h1>', esc_html( get_the_archive_title() ) );
 
-            </header><!-- .page-header -->
+				$description = get_the_archive_description();
+				if ( ! empty( $description ) ) {
+					printf( '<div class="taxonomy-description">%s</div>', esc_html( $description ) );
+				} ?>
 
-    <?php // Start the loop. ?>
+			</header><!-- .page-header -->
 
-    <?php while ( have_posts() ) : the_post(); ?>
+	<?php // Start the loop. ?>
 
-        <?php
-        /* Include the Post-Format-specific template for the content.
-        * If you want to override this in a child theme, then include a file
-        * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-        */
-            get_template_part('page-templates/template-parts/content', get_post_format());
-        ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-    <?php endwhile; // end the loop. ?>
+		<?php
+		/**
+		 * Include the Post-Format-specific template for the content.
+		 * If you want to override this in a child theme, then include a file
+		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+		 */
+			get_template_part( 'page-templates/template-parts/content', get_post_format() );
+		?>
 
-    <?php else : ?>
+	<?php endwhile; // end the loop. ?>
 
-                <?php get_template_part('page-templates/template-parts/content', 'none'); ?>
+	<?php else : ?>
 
-    <?php endif; ?>
+				<?php get_template_part( 'page-templates/template-parts/content', 'none' ); ?>
 
-        </div><!-- #content -->
+	<?php endif; ?>
 
-    </section><!-- #primary -->
+		</div><!-- #content -->
+
+	</section><!-- #primary -->
 
 <?php get_sidebar(); ?>
 

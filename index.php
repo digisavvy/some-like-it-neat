@@ -16,37 +16,38 @@
 
 get_header(); ?>
 
-    <div id="primary" class="content-area">
+	<div id="primary" class="content-area">
 
-        <div id="content" class="site-content">
+		<div id="content" class="site-content">
 
-    <?php if (have_posts() ) : ?>
+	<?php if ( have_posts() ) : ?>
 
-    <?php // start of the loop. ?>
+	<?php // start of the loop. ?>
 
-    <?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
-        <?php
-        /* Include the Post-Format-specific template for the content.
-        * If you want to override this in a child theme, then include a file
-        * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-        */
-            get_template_part('page-templates/template-parts/content', get_post_format());
-        ?>
+		<?php
+		/**
+		 * Include the Post-Format-specific template for the content.
+		 * If you want to override this in a child theme, then include a file
+		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+		 */
 
-    <?php endwhile; // end of the loop. ?>
+			get_template_part( 'page-templates/template-parts/content', get_post_format() );
+		?>
 
-    <?php else : ?>
+	<?php endwhile; // end of the loop. ?>
 
-    <?php get_template_part('page-templates/template-parts/content', 'none'); ?>
+	<?php else : ?>
 
-    <?php endif; ?>
+	<?php get_template_part( 'page-templates/template-parts/content', 'none' ); ?>
 
-        </div><!-- #content -->
+	<?php endif; ?>
 
-    </div><!-- #primary -->
+		</div><!-- #content -->
+
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
-
