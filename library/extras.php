@@ -1,6 +1,6 @@
 <?php
 /**
- * some_like_it_neat functions and definitions
+ * Functions for single post/page navigation
  *
  * @package Some_Like_It_Neat
  * @author  Alex Vasquez <alex@digisavvy.com>
@@ -12,6 +12,7 @@
  * Add Singular Post Template Navigation
  */
 if (! function_exists('some_like_it_neat_post_navigation') ) :
+
     function some_like_it_neat_post_navigation() 
     {
         if (is_singular() && !is_page_template('page-templates/template-landing-page.php')  ) {
@@ -24,5 +25,6 @@ if (! function_exists('some_like_it_neat_post_navigation') ) :
             );
         }
     }
+
 endif;
 add_action('tha_entry_after', 'some_like_it_neat_post_navigation');
