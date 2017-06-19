@@ -81,8 +81,8 @@ if (! function_exists('some_like_it_neat_setup') ) :
                 'post-formats',
                 array(
                     'aside',
-                    'image', '
-					video',
+                    'image',
+					'video',
                     'quote',
                     'link',
                     'status',
