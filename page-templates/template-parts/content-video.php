@@ -44,15 +44,15 @@
 
 	<div class="entry-content">
 
-	<?php
-	the_content(
-		sprintf(
-			/* translators: instructs visitor to continue reading content */
-			esc_html( 'Continue reading%s &rarr;', 'some-like-it-neat' ),
-			'<span class="screen-reader-text">  ' . get_the_title() . '</span>'
-		)
-	);
-	?>
+		<?php
+		the_content(
+			sprintf(
+				/* translators: instructs visitor to continue reading content */
+				esc_html( 'Continue reading%s &rarr;', 'some-like-it-neat' ),
+				'<span class="screen-reader-text">  ' . get_the_title() . '</span>'
+			)
+		);
+		?>
 
 	<?php
 	wp_link_pages(

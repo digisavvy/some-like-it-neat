@@ -1,15 +1,18 @@
 <?php
 /**
+ * Template part for the aside post format.
+ *
  * @package Some_Like_It_Neat
  * @author  Alex Vasquez <alex@digisavvy.com>
  * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
  * @link    https://github.com/digisavvy/some-like-it-neat
  */
+
 ?>
 
 <?php tha_entry_before(); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> itemscope itemprop="video" itemtype="http://schema.org/VideoObject">
 
 	<?php tha_entry_top(); ?>
 
@@ -17,59 +20,69 @@
 
 		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
+		<?php if ( 'post' === get_post_type() ) : ?>
+
+			<div class="entry-meta">
+
+				<span class="genericon genericon-time"></span> <?php some_like_it_neat_posted_on(); ?>
+
+			</div><!-- .entry-meta -->
+
+		<?php endif; ?>
+
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<?php if ( is_search() ) : // Only display Excerpts for Search. ?>
 
-	<?php
-	the_content(
-		sprintf(
-			__( 'Continue reading%s &rarr;', 'some-like-it-neat' ),
-			'<span class="screen-reader-text">  ' . get_the_title() . '</span>'
-		)
-	);
-	?>
+		<div class="entry-summary">
 
-	<?php wp_link_pages( array(
-		'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'some-like-it-neat' ) . '</span>',
-		'after' => '</div>',
-		'link_before' => '<span>',
-		'link_after' => '</span>',
-	) ); ?>
+			<?php the_excerpt(); ?>
 
-	</div><!-- .entry-content -->
+		</div><!-- .entry-summary -->
 
-	<footer class="entry-meta">
+	<?php else : ?>
 
-	<?php if ( is_single() ) : ?>
+		<div class="entry-content">
 
-	<?php some_like_it_neat_entry_meta(); ?>
+			<?php
+			the_content(
+				sprintf(
+					/* translators: instructs visitor to continue reading content */
+					esc_html( 'Continue reading%s &rarr;', 'some-like-it-neat' ),
+					'<span class="screen-reader-text">  ' . get_the_title() . '</span>'
+				)
+			);
+			?>
 
-	<?php edit_post_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_attr( 'Pages:', 'some-like-it-neat' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
 
-
-	<?php if ( get_the_author_meta( 'description' ) && is_multi_author() ) : ?>
-
-	<?php get_template_part( 'author-bio' ); ?>
-
+		</div><!-- .entry-content -->
 
 	<?php endif; ?>
 
-	<?php else : ?>
-		<div class="entry-meta">
+	<footer class="entry-meta">
 
-			<span class="genericon genericon-time"></span> <?php some_like_it_neat_posted_on(); ?>
+		<?php some_like_it_neat_post_format_footer(); ?>
 
-		</div><!-- .entry-meta -->
+		<?php if ( ! post_password_required() && ( comments_open() || '0' !== get_comments_number() ) ) : ?>
 
-	<?php edit_post_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'some-like-it-neat' ), esc_html( '1 Comment', 'some-like-it-neat' ), __( '% Comments', 'some-like-it-neat' ) ); ?></span>
 
-	<?php endif; // is_single() ?>
+		<?php endif; ?>
+
+		<?php edit_post_link( esc_html( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
 
 	</footer><!-- .entry-meta -->
 
 	<?php tha_entry_bottom(); ?>
 
-</article><!-- #post -->
+</article><!-- #post-## -->
 
 <?php tha_entry_after(); ?>
