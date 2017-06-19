@@ -41,6 +41,13 @@ if (! function_exists('some_like_it_neat_scripts') ) :
             // Offcanvas Nav Script
             wp_enqueue_script('some-like-it-neat_custom', get_template_directory_uri() . '/assets/js/vendor/custom-offcanvas.js', array('jquery'), '1.0', true);
             wp_enqueue_script('some-like-it-neat_custom');
+
+            // Headroom Style
+            wp_enqueue_style('headroom', get_theme_file_uri('/assets/css/vendor/headroom-min.css'));
+
+            // Headroom Script
+            wp_enqueue_script('some-like-it-neat_headroom', get_template_directory_uri() . '/assets/js/vendor/headroom/headroom.js', array('jquery'), '0.9.3', false);
+            wp_enqueue_script('some-like-it-neat_headroom');
         }
 
         // Dashicons
