@@ -320,6 +320,30 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
         )
     );
 
+	/**
+	 * Hide or Show Post Navigation
+	 */
+	$wp_customize->add_setting(
+		'some-like-it-neat_hide_post_navigation',
+		array(
+			'default'   => 'no'
+		)
+	);
+
+	$wp_customize->add_control(
+		'some-like-it-neat_hide_post_navigation',
+		array(
+			'section'       => 'content_extras',
+			'label'         => __('Hide WordPress Post Navigation Globally?', 'some-like-it-neat'),
+			'description'   => __('Hides the post navigation links at the bottom of a page or post. You can also do this on a per page basis.', 'some-like-it-neat'),
+			'type'          => 'radio',
+			'choices'       => array(
+				'yes'           => 'Yes',
+				'no'            => 'No'
+			)
+		)
+	);
+
     /**
         * Enable/Disable Post Format support
         * @link http://codex.wordpress.org/Post_Formats
