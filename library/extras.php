@@ -95,7 +95,7 @@ if ( ! function_exists( 'some_like_it_neat_post_format_footer' ) ) :
         if ( 'post' === get_post_type() ) {
             /* translators: used between list items, there is a space after the comma */
             $categories_list = get_the_category_list( esc_html__( ', ', 'some-like-it-neat' ) );
-            if ( $categories_list && _s_categorized_blog() ) {
+            if ( $categories_list && some_like_it_neat_categorized_blog() ) {
                 /* translators: 1: list of categories. */
                 printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'some-like-it-neat' ) . '</span>', $categories_list ); // WPCS: XSS OK.
             }
