@@ -82,7 +82,7 @@ input[type="submit"]:hover{background-color:#999;padding:8px}input#s{float:left;
 .infinite-scroll #navigation,.infinite-scroll.neverending #footer{display:none}.infinity-end.neverending #footer{display:block}
 figure{margin:0}img,picture{height:auto;margin:0;max-width:100%}body{background-color:#fff;color:#000;font-family:"Georgia","Times","Times New Roman",serif;line-height:1.5em;margin:0;word-break:break-word}
 .site-header,.site-footer,.site-main{padding:0 calc((100% - 1200px) / 2)}.site-header::after,.site-footer::after,.site-main::after{clear:both;content:"";display:block}
-main#main{position:relative;z-index:0}#primary{margin:0 auto;width:100%}@media only screen and (min-width:0){#primary{width:calc(100% - 40px);float:left;margin-left:20px}
+#primary{margin:0 auto;width:100%}@media only screen and (min-width:0){#primary{width:calc(100% - 40px);float:left;margin-left:20px}
 }@media only screen and (min-width:480px){#primary{width:calc(100% - 40px);float:left;margin-left:20px}
 }@media only screen and (min-width:768px){#primary{width:calc(66.66667% - 33.33333px);float:left;margin-left:20px}
 }@media only screen and (min-width:1024px){#primary{width:calc(62.5% - 16.25px);float:left;margin-left:10px}
@@ -92,7 +92,7 @@ main#main{position:relative;z-index:0}#primary{margin:0 auto;width:100%}@media o
 }@media only screen and (min-width:480px){#secondary{width:calc(100% - 40px);float:left;margin-left:20px}
 }@media only screen and (min-width:768px){#secondary{width:calc(33.33333% - 26.66667px);float:left;margin-left:20px}
 }@media only screen and (min-width:1024px){#secondary{width:calc(31.25% - 13.125px);float:left;margin-left:10px;margin-left:calc(6.25% - 10.625px + 20px)}
-}header{position:relative;z-index:1}.site-branding{text-align:center}.site-branding .site-title{font-family:"Helvetica Neue","Helvetica","Arial",sans-serif;padding:0 40px}
+}.site-branding{text-align:center}.site-branding .site-title{font-family:"Helvetica Neue","Helvetica","Arial",sans-serif;padding:0 40px}
 @media only screen and (min-width:0){.site-branding .site-title{font-size:35px}}@media only screen and (min-width:480px){.site-branding .site-title{font-size:55px}
 }@media only screen and (min-width:768px){.site-branding .site-title{font-size:75px}
 }.site-branding .site-title a,.site-branding .site-title a:visited{line-height:1}
@@ -100,11 +100,12 @@ main#main{position:relative;z-index:0}#primary{margin:0 auto;width:100%}@media o
 @media only screen and (min-width:0){.site-branding .site-description{font-size:14px}
 }@media only screen and (min-width:480px){.site-branding .site-description{font-size:18px}
 }@media only screen and (min-width:768px){.site-branding .site-description{font-size:25px}
-}nav.post-navigation{position:relative;z-index:1}@media only screen and (min-width:0){.nav-links{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;text-align:center}
+}nav#primary-nav{position:relative;z-index:2}nav.post-navigation{position:relative;z-index:1}
+@media only screen and (min-width:0){.nav-links{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;text-align:center}
 }@media only screen and (min-width:480px){.nav-links{-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between;text-align:inherit}
 }.sticky{background:#ededed}.gallery-caption{list-style:none}.bypostauthor{list-style:none}
-.hentry{margin:0 0 1.5em}.byline,.updated{display:none}.single .byline,.group-blog .byline{display:inline}
-.page-content,.entry-content,.entry-summary{margin:1.5em 0 0}.page-links{clear:both;margin:0 0 1.5em}
+.hentry{margin:0}.byline,.updated{display:none}.single .byline,.group-blog .byline{display:inline}
+.page-content,.entry-content,.entry-summary{margin:0}.page-links{clear:both;margin:0 0 1.5em}
 .aligncenter{float:none;margin-top:.5em;margin-right:auto !important;margin-bottom:.5em;margin-left:auto !important}
 .aligncenter::after{clear:both;content:"";display:block}
 .alignleft{display:inline;float:left;margin-right:1.5em}.alignright{display:inline;float:right;margin-left:1.5em}

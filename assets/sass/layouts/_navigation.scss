@@ -1,5 +1,10 @@
 /* =Menu
 ----------------------------------------------- */
+nav#primary-nav {
+    position: relative;
+    z-index: 2;
+}
+
 nav.post-navigation {
     position: relative;
     z-index: 1;

@@ -1074,11 +1074,6 @@ body {
     content: "";
     display: block; }
 
-/* line 37, assets/sass/layouts/_structure.scss */
-main#main {
-  position: relative;
-  z-index: 0; }
-
 /* line 42, assets/sass/layouts/_structure.scss */
 #primary {
   margin: 0 auto;
@@ -1156,11 +1151,6 @@ main#main {
 /*--------------------------------------------------------------
 5.2 Header
 --------------------------------------------------------------*/
-/* line 1, assets/sass/layouts/_header.scss */
-header {
-  position: relative;
-  z-index: 1; }
-
 /* line 5, assets/sass/layouts/_header.scss */
 .site-branding {
   text-align: center; }
@@ -1208,12 +1198,17 @@ header {
 /* =Menu
 ----------------------------------------------- */
 /* line 3, assets/sass/layouts/_navigation.scss */
+nav#primary-nav {
+  position: relative;
+  z-index: 2; }
+
+/* line 8, assets/sass/layouts/_navigation.scss */
 nav.post-navigation {
   position: relative;
   z-index: 1; }
 
 @media only screen and (min-width: 0) {
-  /* line 8, assets/sass/layouts/_navigation.scss */
+  /* line 13, assets/sass/layouts/_navigation.scss */
   .nav-links {
     display: -ms-flexbox;
     display: flex;
@@ -1222,7 +1217,7 @@ nav.post-navigation {
     text-align: center; } }
 
 @media only screen and (min-width: 480px) {
-  /* line 8, assets/sass/layouts/_navigation.scss */
+  /* line 13, assets/sass/layouts/_navigation.scss */
   .nav-links {
     -ms-flex-direction: row;
         flex-direction: row;
@@ -1247,7 +1242,7 @@ nav.post-navigation {
 
 /* line 13, assets/sass/layouts/_content.scss */
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 0; }
 
 /* line 17, assets/sass/layouts/_content.scss */
 .byline,
@@ -1263,7 +1258,7 @@ nav.post-navigation {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 0 0 0; }
 
 /* line 33, assets/sass/layouts/_content.scss */
 .page-links {
