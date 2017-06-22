@@ -44,20 +44,6 @@
 		),
 	) );
 
-	 // Add other metaboxes as needed
-	 $cmb->add_field( array(
-		 // Hide Post Navigation on Per Post Basis
-		 'desc'	=> 'Hides the post navigation links at the bottom of a page or post.',
-		 'name'    => 'Hide Post Navigation',
-		 'id'      => 'some_like_it_neat_hide_post_navigation',
-		 'type'    => 'radio_inline',
-		 'default'    => 'no',
-		 'options' => array(
-			 'yes' => __( 'Yes', 'cmb2' ),
-			 'no'   => __( 'No', 'cmb2' ),
-		 ),
-	 ) );
-
 	$cmb->add_field( array(
 		// Hide Page Title on Per Post Basis
 		'name'    => 'Hide Featured Image',
