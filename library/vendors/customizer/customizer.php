@@ -326,7 +326,8 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
 	$wp_customize->add_setting(
 		'some-like-it-neat_hide_post_navigation',
 		array(
-			'default'   => 'no'
+			'default'   => 'no',
+			'transport' => 'postMessage'
 		)
 	);
 
