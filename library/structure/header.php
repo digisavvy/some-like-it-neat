@@ -15,10 +15,6 @@ function some_like_it_neat_do_header()
 
     tha_header_before(); ?>
 
-    <header id="masthead" class="site-header wrap <?php echo get_theme_mod('some-like-it-neat_nav_style'); ?>-nav" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-
-<?php tha_header_top(); ?>
-
 <?php if ('flexnav' === get_theme_mod('some-like-it-neat_nav_style') ) {
 
         get_template_part('page-templates/template-parts/navigation', 'flexnav');
@@ -29,10 +25,6 @@ function some_like_it_neat_do_header()
 
 }
 ?>
-
-<?php tha_header_bottom(); ?>
-
-    </header><!-- #masthead -->
 
 <?php tha_header_after();
 
