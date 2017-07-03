@@ -10,31 +10,38 @@
 
 ?>
 
-<section class="site-branding">
+<header id="masthead" class="site-header wrap <?php echo get_theme_mod('some-like-it-neat_nav_style'); ?>-nav" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
 
-	<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+    <?php tha_header_top(); ?>
 
-	<div class="site-description"><?php bloginfo( 'description' ); ?></div>
+    <section class="site-branding">
 
-</section>
+        <div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 
-<nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+        <div class="site-description"><?php bloginfo( 'description' ); ?></div>
 
-	<button class="menu-button">
+    </section>
 
-		<span class="dashicons <?php echo esc_attr( get_theme_mod( 'some_like_it_neat_mobile_nav_icon', 'dashicons-menu' ) ); ?>"></span><?php echo esc_attr( get_theme_mod( 'some_like_it_neat_mobile_nav_label', 'Menu' ) ); ?>
+    <nav id="primary-nav" role="navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
 
-	</button>
+        <button class="menu-button">
 
-	<?php
-	wp_nav_menu(
-		array(
-			'theme_location' => 'primary-navigation',
-			'menu_class' => 'flexnav',
-			'items_wrap' => '<ul data-breakpoint=" ' . esc_attr( get_theme_mod( 'some_like_it_neat_mobile_min_width', '768' ) ) . ' " id="%1$s" class="%2$s">%3$s</ul>',
-		)
-	);
-	?>
+            <span class="dashicons <?php echo esc_attr( get_theme_mod( 'some_like_it_neat_mobile_nav_icon', 'dashicons-menu' ) ); ?>"></span><?php echo esc_attr( get_theme_mod( 'some_like_it_neat_mobile_nav_label', 'Menu' ) ); ?>
 
-</nav><!-- #site-navigation -->
+        </button>
 
+        <?php
+        wp_nav_menu(
+            array(
+                'theme_location' => 'primary-navigation',
+                'menu_class' => 'flexnav',
+                'items_wrap' => '<ul data-breakpoint=" ' . esc_attr( get_theme_mod( 'some_like_it_neat_mobile_min_width', '768' ) ) . ' " id="%1$s" class="%2$s">%3$s</ul>',
+            )
+        );
+        ?>
+
+    </nav><!-- #site-navigation -->
+
+    <?php tha_header_bottom(); ?>
+
+</header><!-- #masthead -->

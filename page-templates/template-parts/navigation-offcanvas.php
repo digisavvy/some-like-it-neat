@@ -14,38 +14,37 @@
 
 	<?php tha_header_top(); ?>
 
-<div class="site-header-inside-wrapper">
+    <div class="site-header-inside-wrapper">
 
-	<div class="hamburger-wrapper">
+        <div class="hamburger-wrapper">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'perennial-pro' ); ?></a>
+            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'perennial-pro' ); ?></a>
 
-		<a href="#header-menu-responsive" title="<?php esc_attr_e( 'Menu', 'perennial-pro' ); ?>" class="hamburger">
+            <a href="#header-menu-responsive" title="<?php esc_attr_e( 'Menu', 'perennial-pro' ); ?>" class="hamburger">
 
-			<span class="hamburger-icon"></span>
+                <span class="hamburger-icon"></span>
 
-			<span class="hamburger-label"><?php echo esc_html( get_theme_mod( 'some_like_it_neat_mobile_nav_label', 'Menu' ) ); ?></span>
+                <span class="hamburger-label"><?php echo esc_html( get_theme_mod( 'some_like_it_neat_mobile_nav_label', 'Menu' ) ); ?></span>
 
-		</a>
+            </a>
 
-	</div><!-- .hamburger-wrapper -->
+        </div><!-- .hamburger-wrapper -->
 
-    <div class="site-branding-wrapper hamburger">
+        <div class="site-branding-wrapper hamburger">
 
-        <div class="site-branding">
+            <div class="site-branding">
 
-			<?php if ( is_front_page() && is_home() ) : ?>
-                <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php endif; ?>
+                <?php if ( is_front_page() && is_home() ) : ?>
+                    <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                <?php else : ?>
+                    <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                <?php endif; ?>
 
-        </div>
+            </div>
 
-    </div><!-- .site-branding-wrapper -->
+        </div><!-- .site-branding-wrapper -->
 
-</div><!-- .site-header-inside-wrapper -->
-
+    </div><!-- .site-header-inside-wrapper -->
 
 	<?php tha_header_bottom(); ?>
 
