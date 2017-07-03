@@ -46,7 +46,7 @@ if (! function_exists('some_like_it_neat_scripts') ) :
             wp_enqueue_style('headroom', get_theme_file_uri('/assets/css/vendor/headroom-min.css'));
 
             // Headroom Script
-            wp_enqueue_script('some-like-it-neat_headroom', get_template_directory_uri() . '/assets/js/vendor/headroom/headroom.js', array('jquery'), '0.9.3', false);
+            wp_enqueue_script('some-like-it-neat_headroom', get_template_directory_uri() . '/assets/js/vendor/headroom/headroom-min.js', array('jquery'), '0.9.3', false);
             wp_enqueue_script('some-like-it-neat_headroom');
         }
 
@@ -89,20 +89,42 @@ if (! function_exists('some_like_it_neat_styles') ) :
 
     function some_like_it_neat_styles() 
     {
-        if (SCRIPT_DEBUG || WP_DEBUG ) :
-            wp_register_style(
-                'some_like_it_neat-style', // handle name
-                get_parent_theme_file_uri('/assets/css/style.css'), '', '1.2', 'screen'
-            );
-            wp_enqueue_style('some_like_it_neat-style');
+    	if ( !is_rtl() ) {
 
-        else :
-            wp_register_style(
-                'some_like_it_neat-style', // handle name
-                get_parent_theme_file_uri('/assets/css/style-min.css'), '', '1.2', 'screen'
-            );
-            wp_enqueue_style('some_like_it_neat-style');
-        endif;
+			if (SCRIPT_DEBUG || WP_DEBUG ) :
+			    wp_register_style(
+			        'some_like_it_neat-style', // handle name
+			        get_parent_theme_file_uri('/assets/css/style.css'), '', '1.2', 'screen'
+			    );
+			    wp_enqueue_style('some_like_it_neat-style');
+
+			else :
+			    wp_register_style(
+			        'some_like_it_neat-style', // handle name
+			        get_parent_theme_file_uri('/assets/css/style-min.css'), '', '1.2', 'screen'
+			    );
+			    wp_enqueue_style('some_like_it_neat-style');
+			endif;
+
+	    } else {
+
+		    if (SCRIPT_DEBUG || WP_DEBUG ) :
+			    wp_register_style(
+				    'some_like_it_neat-style', // handle name
+				    get_parent_theme_file_uri('/assets/css/rtl.css'), '', '1.2', 'screen'
+			    );
+			    wp_enqueue_style('some_like_it_neat-style');
+
+		    else :
+			    wp_register_style(
+				    'some_like_it_neat-style', // handle name
+				    get_parent_theme_file_uri('/assets/css/rtl-min.css'), '', '1.2', 'screen'
+			    );
+			    wp_enqueue_style('some_like_it_neat-style');
+		    endif;
+
+	    }
+
     }
     add_action('wp_enqueue_scripts', 'some_like_it_neat_styles');
 
