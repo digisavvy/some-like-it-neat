@@ -1,7 +1,7 @@
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
 article,aside,footer,header,nav,section{display:block}h1,h2,h3,h4,h5,h6{font-size:2em;font-weight:normal;margin:.67em 0;text-transform:none}
 figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}
-pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}
+pre{font-family:monospace,monospace;font-size:1em;white-space:pre-wrap}a{background-color:transparent;-webkit-text-decoration-skip:objects}
 abbr[title]{border-bottom:0;text-decoration:underline;text-decoration:underline dotted}
 b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}
 dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
@@ -105,7 +105,9 @@ input[type="submit"]:hover{background-color:#999;padding:8px}input#s{float:right
 .oldie .flexnav li ul li ul{top:0}.oldie .flexnav li ul li a{border-bottom:0}.oldie .flexnav li ul.open{display:block;width:100%;overflow:visible}
 .oldie .flexnav li ul.open li{width:100%}.oldie .flexnav li ul.open ul.open{margin-right:100%;top:0;display:block;width:100%;overflow:visible}
 .oldie .flexnav ul li:hover ul{margin-right:100%;top:0}.oldie .menu-button{display:none}
-.oldie.ie7 .flexnav li{width:19.9%}#breadcrumbs{font-size:14px;font-family:"Georgia","Times","Times New Roman",serif;padding:20px 0 20px 50px}
+.oldie.ie7 .flexnav li{width:19.9%}@media screen and (min-width:58.25em){.headroom{will-change:transform;transition:transform .075s linear}
+.headroom--pinned{transform:translateY(0)}.headroom--unpinned{transform:translateY(-100px)}
+.header--fixed{position:fixed !important;z-index:10;right:0;left:0;top:0}}#breadcrumbs{font-size:14px;font-family:"Georgia","Times","Times New Roman",serif;padding:20px 0 20px 50px}
 html{font-size:62.5%}body{font-size:16px}h1,h2,h3,h4,h5,h6{clear:both;float:none;line-height:1.25em;margin-bottom:20px}
 h1::after,h2::after,h3::after,h4::after,h5::after,h6::after{clear:both;content:"";display:block}
 h1{font-size:75px;color:#000;font-family:"Helvetica Neue","Helvetica","Arial",sans-serif}
@@ -153,7 +155,7 @@ input[type="submit"]:focus{background:black;border:solid 5px #222;border-radius:
 input[type="submit"]:hover{background:black;border:solid 5px #222;border-radius:0;box-shadow:none;font-family:"Helvetica Neue","Helvetica","Arial",sans-serif;padding:20px}
 input[type="submit"]:hover{background-color:#999;padding:8px}input#s{float:right;width:70%}
 .infinite-scroll #navigation,.infinite-scroll.neverending #footer{display:none}.infinity-end.neverending #footer{display:block}
-figure{margin:0}img,picture{height:auto;margin:0;max-width:100%}body{background-color:#fff;color:#000;direction:rtl;font-family:"Georgia","Times","Times New Roman",serif;line-height:1.5em;word-break:normal;direction:rtl;unicode-bidi:embed}
+figure{margin:0}img,picture{height:auto;margin:0;max-width:100%}body{background-color:#fff;color:#000;font-family:"Georgia","Times","Times New Roman",serif;line-height:1.5em;margin:0;word-break:break-word}
 .site-header,.site-footer,.site-main{padding:0 calc((100% - 1200px) / 2)}.site-header::after,.site-footer::after,.site-main::after{clear:both;content:"";display:block}
 #primary{margin:0 auto;width:100%}@media only screen and (min-width:0){#primary{width:calc(100% - 40px);float:left;margin-left:20px}
 }@media only screen and (min-width:480px){#primary{width:calc(100% - 40px);float:left;margin-left:20px}
