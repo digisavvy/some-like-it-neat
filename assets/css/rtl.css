@@ -1304,24 +1304,18 @@ input#s {
 .oldie.ie7 .flexnav li {
   width: 19.9%; }
 
-@media screen and (min-width: 58.25em) {
-  /* line 2, assets/sass/vendor/headroom.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 2, assets/sass/vendor/_headroom.scss */
   .headroom {
     will-change: transform;
-    transition: transform .075s linear; }
-  /* line 7, assets/sass/vendor/headroom.scss */
+    transition: transform 300ms linear; }
+  /* line 7, assets/sass/vendor/_headroom.scss */
   .headroom--pinned {
     transform: translateY(0); }
-  /* line 11, assets/sass/vendor/headroom.scss */
+  /* line 11, assets/sass/vendor/_headroom.scss */
   .headroom--unpinned {
-    transform: translateY(-100px); }
-  /* line 15, assets/sass/vendor/headroom.scss */
-  .header--fixed {
-    position: fixed !important;
-    z-index: 10;
-    right: 0;
-    left: 0;
-    top: 0; } }
+    transform: translateY(-200px);
+    box-shadow: 0 0 30px #999; } }
 
 /* =Genericons and Dashicons
 -------------------------------------------------------------- */
