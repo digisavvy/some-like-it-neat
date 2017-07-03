@@ -310,6 +310,22 @@
     border-bottom: 0;
   }
 
+  .hamburger-wrapper .hamburger {
+    color: #fff !important;
+  }
+
+  .hamburger-wrapper .hamburger .hamburger-icon:before,
+  .hamburger-wrapper .hamburger .hamburger-icon:after {
+    background-color: #fff !important;
+  }
+
+  p.site-title a {
+    color: #fff !important;
+    &:hover {
+      color: $link-color;
+    }
+  }
+
 }
 
 .site-header.offcanvas-nav {
@@ -340,12 +356,6 @@
   .site-header-menu {
     margin: 0;
   }
-  p.site-title a {
-    color: #fff;
-    &:hover {
-      color: $link-color;
-    }
-  }
 }
 
 header.offcanvas-nav {
@@ -365,5 +375,20 @@ header.offcanvas-nav {
   .site-branding .site-title {
     font-size: 35px;
   }
+
+  p.site-title a {
+    color: #fff;
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  &.headroom--not-top {
+
+  }
+  &.headroom--top {
+
+  }
 }
+
 
