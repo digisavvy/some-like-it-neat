@@ -183,6 +183,14 @@ if (! function_exists('some_like_it_neat_setup') ) :
         add_theme_support('fl-theme-builder-parts');
 
     }
+
+	if ('offcanvas' === get_theme_mod('some-like-it-neat_nav_style') ) {
+		// Add offcanvas-nav to body classes
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'offcanvas-nav' ) );
+		} );
+	}
+
 endif; // some_like_it_neat_setup
 add_action('after_setup_theme', 'some_like_it_neat_setup');
 
