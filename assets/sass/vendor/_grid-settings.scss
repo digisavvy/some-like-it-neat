@@ -3,12 +3,12 @@
 // Breakpoints, Updated for Neat 2.x
 // @include grid-media($sm) { your styles here }
 
-$sm: (columns: 2, gutter: 20px, media: 0,);
-$smbg: (columns: 4, gutter: 20px, media: 480px);
-$md: (columns: 6, gutter: 20px, media: 768px);
+$sm: (columns: 2, gutter: 10px, media: 0,);
+$smbg: (columns: 4, gutter: 10px, media: 480px);
+$md: (columns: 6, gutter: 10px, media: 768px);
 $mdbg: (columns: 8, gutter: 10px, media: 1024px);
-$hg: (columns: 10, gutter: 20px, media: 1140px);
-$hgbg: (columns: 12, gutter: 20px, media: 1400px);
+$hg: (columns: 10, gutter: 10px, media: 1140px);
+$hgbg: (columns: 12, gutter: 10px, media: 1400px);
 
 // Adding a Visual Grid while you develop. Set to 'true.'
 $visual-grid: false;
