@@ -1308,14 +1308,20 @@ input#s {
   /* line 2, assets/sass/vendor/_headroom.scss */
   .headroom {
     will-change: transform;
-    transition: transform 300ms linear; }
+    transform: .25s ease-in-out; }
   /* line 7, assets/sass/vendor/_headroom.scss */
   .headroom--pinned {
     transform: translateY(0); }
   /* line 11, assets/sass/vendor/_headroom.scss */
   .headroom--unpinned {
-    transform: translateY(-200px);
-    box-shadow: 0 0 30px #999; } }
+    transform: translateY(-100%); }
+  /* line 15, assets/sass/vendor/_headroom.scss */
+  .header--fixed {
+    position: fixed !important;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0; } }
 
 /* =Genericons and Dashicons
 -------------------------------------------------------------- */
