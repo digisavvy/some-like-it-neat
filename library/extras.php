@@ -131,8 +131,8 @@ if ('offcanvas' === get_theme_mod('some-like-it-neat_nav_style') ) {
 
                 var headroom = new Headroom(header, {
                     tolerance: {
-                        down : 50,
-                        up : 50
+                        down : 10,
+                        up : 20
                     },
                     offset : 0
                 });
