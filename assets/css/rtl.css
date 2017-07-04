@@ -1793,21 +1793,21 @@ body {
   @media only screen and (min-width: 0) {
     /* line 29, assets/sass/layouts/_structure.scss */
     #primary {
-      width: calc(100% - 40px);
+      width: calc(100% - 20px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
   @media only screen and (min-width: 480px) {
     /* line 29, assets/sass/layouts/_structure.scss */
     #primary {
-      width: calc(100% - 40px);
+      width: calc(100% - 20px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
   @media only screen and (min-width: 768px) {
     /* line 29, assets/sass/layouts/_structure.scss */
     #primary {
-      width: calc(66.66667% - 33.33333px);
+      width: calc(66.66667% - 16.66667px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
   @media only screen and (min-width: 1024px) {
     /* line 29, assets/sass/layouts/_structure.scss */
     #primary {
@@ -1834,23 +1834,23 @@ body {
 @media only screen and (min-width: 0) {
   /* line 70, assets/sass/layouts/_structure.scss */
   #secondary {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     float: left;
-    margin-left: 20px; } }
+    margin-left: 10px; } }
 
 @media only screen and (min-width: 480px) {
   /* line 70, assets/sass/layouts/_structure.scss */
   #secondary {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     float: left;
-    margin-left: 20px; } }
+    margin-left: 10px; } }
 
 @media only screen and (min-width: 768px) {
   /* line 70, assets/sass/layouts/_structure.scss */
   #secondary {
-    width: calc(33.33333% - 26.66667px);
+    width: calc(33.33333% - 13.33333px);
     float: left;
-    margin-left: 20px; } }
+    margin-left: 10px; } }
 
 @media only screen and (min-width: 1024px) {
   /* line 70, assets/sass/layouts/_structure.scss */
@@ -2177,16 +2177,16 @@ object {
 @media only screen and (min-width: 0) {
   /* line 14, assets/sass/templates/_template-2col-l-sidebar.scss */
   .page-template-page-templatestemplate-left-col-php #main #primary, .post-template-page-templatestemplate-left-col-php #main #primary {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     float: left;
-    margin-left: 20px; } }
+    margin-left: 10px; } }
 
 @media only screen and (min-width: 768px) {
   /* line 14, assets/sass/templates/_template-2col-l-sidebar.scss */
   .page-template-page-templatestemplate-left-col-php #main #primary, .post-template-page-templatestemplate-left-col-php #main #primary {
-    width: calc(66.66667% - 33.33333px);
+    width: calc(66.66667% - 16.66667px);
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     -ms-flex-order: 1;
         order: 1; } }
 
@@ -2196,15 +2196,15 @@ object {
   @media only screen and (min-width: 0) {
     /* line 30, assets/sass/templates/_template-2col-l-sidebar.scss */
     .page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
-      width: calc(100% - 40px);
+      width: calc(100% - 20px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
   @media only screen and (min-width: 768px) {
     /* line 30, assets/sass/templates/_template-2col-l-sidebar.scss */
     .page-template-page-templatestemplate-left-col-php #main #secondary, .post-template-page-templatestemplate-left-col-php #main #secondary {
-      width: calc(33.33333% - 26.66667px);
+      width: calc(33.33333% - 13.33333px);
       float: left;
-      margin-left: 20px;
+      margin-left: 10px;
       -ms-flex-order: 2;
           order: 2; } }
 
@@ -2220,22 +2220,22 @@ object {
   @media only screen and (min-width: 0) and (min-width: 0) {
     /* line 9, assets/sass/templates/_template-2col-r-sidebar.scss */
     .page-template-page-templatestemplate-right-col-php #primary {
-      width: calc(100% - 40px);
+      width: calc(100% - 20px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
   @media only screen and (min-width: 0) and (min-width: 768px) {
     /* line 9, assets/sass/templates/_template-2col-r-sidebar.scss */
     .page-template-page-templatestemplate-right-col-php #primary {
-      width: calc(66.66667% - 33.33333px);
+      width: calc(66.66667% - 16.66667px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
 
 @media only screen and (min-width: 0) {
   /* line 23, assets/sass/templates/_template-2col-r-sidebar.scss */
   .page-template-page-templatestemplate-right-col-php #secondary {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     float: left;
-    margin-left: 20px; } }
+    margin-left: 10px; } }
 
 @media only screen and (min-width: 768px) {
   /* line 23, assets/sass/templates/_template-2col-r-sidebar.scss */
@@ -2245,15 +2245,15 @@ object {
   @media only screen and (min-width: 768px) and (min-width: 0) {
     /* line 23, assets/sass/templates/_template-2col-r-sidebar.scss */
     .page-template-page-templatestemplate-right-col-php #secondary {
-      width: calc(200% - 60px);
+      width: calc(200% - 30px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
   @media only screen and (min-width: 768px) and (min-width: 768px) {
     /* line 23, assets/sass/templates/_template-2col-r-sidebar.scss */
     .page-template-page-templatestemplate-right-col-php #secondary {
-      width: calc(33.33333% - 26.66667px);
+      width: calc(33.33333% - 13.33333px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
 
 /* line 3, assets/sass/templates/_template-full-width.scss */
 .page-template-page-templatestemplate-full-width-php main#main, .post-template-page-templatestemplate-full-width-php main#main,
@@ -2324,40 +2324,40 @@ footer .site-info {
   @media only screen and (min-width: 0) {
     /* line 4, assets/sass/layouts/_footer.scss */
     footer .site-info {
-      width: calc(100% - 40px);
+      width: calc(100% - 20px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 10px; } }
 
 @media only screen and (min-width: 0) {
   /* line 10, assets/sass/layouts/_footer.scss */
   footer .footer-left {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     text-align: center; } }
 
 @media only screen and (min-width: 480px) {
   /* line 10, assets/sass/layouts/_footer.scss */
   footer .footer-left {
-    width: calc(50% - 30px);
+    width: calc(50% - 15px);
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     text-align: right; } }
 
 @media only screen and (min-width: 0) {
   /* line 20, assets/sass/layouts/_footer.scss */
   footer .footer-right {
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     text-align: center; } }
 
 @media only screen and (min-width: 480px) {
   /* line 20, assets/sass/layouts/_footer.scss */
   footer .footer-right {
-    width: calc(50% - 30px);
+    width: calc(50% - 15px);
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
     text-align: left; } }
 
 /*# sourceMappingURL=../maps/rtl.css.map */
