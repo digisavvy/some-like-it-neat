@@ -36,6 +36,7 @@
 
 .has-overlay-open .hamburger-wrapper .hamburger {
   color: #fff;
+
 }
 
 .hamburger-wrapper .hamburger:hover .hamburger-icon,
@@ -114,7 +115,7 @@
 .main-navigation {
   @include grid-media($sm) {
     background: #141414;
-    background: rgba(20, 20, 20, 0.9);
+    background: rgba(20, 20, 20, 1);
     color: #fff;
     margin: 0;
     overflow: hidden;
@@ -326,6 +327,10 @@
     }
   }
 
+  header.offcanvas-nav.headroom--top .site-branding .site-title a {
+    color: #fff;
+  }
+
 }
 
 .site-header.offcanvas-nav {
@@ -351,7 +356,7 @@
     margin: 0;
   }
   .site-main {
-    margin-top: 100px;
+    margin-top: 140px;
   }
   .site-header-menu {
     margin: 0;
@@ -359,14 +364,13 @@
 }
 
 header.offcanvas-nav {
-  background: rgba(20,20,20,0.9);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
 
   .site-header-inside-wrapper {
-    padding: 15px;
+    padding: 0 15px;
     p.site-title {
       margin: 0;
     }
@@ -384,10 +388,41 @@ header.offcanvas-nav {
   }
 
   &.headroom--not-top {
+    background-color: rgba(20,20,20,1);
+    padding: 0;
+    transition: all .25s linear;
 
+    .site-branding .site-title a {
+      color: #fff;
+    }
   }
   &.headroom--top {
+    background-color: rgba(20,20,20,0);
+    padding: 15px 0;
+    transition: all .25s linear;
 
+    p.site-title a {
+      color: #000;
+      transition: none;
+      &:hover {
+        color: $link-color;
+      }
+    }
+    .site-branding .site-title a {
+      color: #000;
+    }
+    .hamburger-wrapper .hamburger .hamburger-icon {
+      background-color: #000;
+      &:before {
+        background-color: #000;
+      }
+      &:after {
+        background-color: #000;
+      }
+    }
+    .hamburger-wrapper .hamburger, .hamburger-wrapper .hamburger:visited {
+      color: #000;
+    }
   }
 }
 
