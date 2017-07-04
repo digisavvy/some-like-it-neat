@@ -355,6 +355,9 @@
   h1.entry-title {
     margin: 0;
   }
+  h1.page-title {
+    margin-top: 0;
+  }
   .site-main {
     margin-top: 140px;
   }
@@ -398,7 +401,7 @@ header.offcanvas-nav {
   }
   &.headroom--top {
     background-color: rgba(20,20,20,0);
-    padding: 15px 0;
+    //padding: 15px 0;
     transition: all .25s linear;
 
     p.site-title a {
