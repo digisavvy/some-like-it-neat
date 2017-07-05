@@ -40,29 +40,6 @@ function some_like_it_neat_sanitize_checkbox( $input )
 }
 
 /**
- * HEX Color sanitization callback example.
- *
- * - Sanitization: hex_color
- * - Control: text, WP_Customize_Color_Control
- *
- * Note: sanitize_hex_color_no_hash() can also be used here, depending on whether
- * or not the hash prefix should be stored/retrieved with the hex color value.
- *
- * @see sanitize_hex_color() https://developer.wordpress.org/reference/functions/sanitize_hex_color/
- * @link sanitize_hex_color_no_hash() https://developer.wordpress.org/reference/functions/sanitize_hex_color_no_hash/
- *
- * @param string               $hex_color HEX color to sanitize.
- * @param WP_Customize_Setting $setting   Setting instance.
- * @return string The sanitized hex color if not null; otherwise, the setting default.
- */
-function some_like_it_neat_sanitize_hex_color( $hex_color, $setting ) {
-	// Sanitize $input as a hex value without the hash prefix.
-	$hex_color = sanitize_hex_color( $hex_color );
-	// If $input is a valid hex value, return it; otherwise, return the default.
-	return ( ! null( $hex_color ) ? $hex_color : $setting->default );
-}
-
-/**
  * Customizer Some Like it Neat Additions
  */
 
@@ -94,19 +71,19 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
 
     // General Link Colors
     $wp_customize->add_panel(
-        'color_panel', array(
-            'priority'          => 10,
-            'capability'        => 'edit_theme_options',
-            'theme_supports'    => '',
-            'title'             => __('Color Palette Settings', 'some-like-it-neat'),
-            'description'       => __('Color palette related settings and config.', 'some-like-it-neat'),
-        ) 
+			'color_panel', array(
+			'priority'          => 10,
+			'capability'        => 'edit_theme_options',
+			'theme_supports'    => '',
+			'title'             => __('Color Palette Settings', 'some-like-it-neat'),
+			'description'       => __('Color palette related settings and config.', 'some-like-it-neat'),
+		)
     );
 
     $wp_customize->add_setting(
         'some_like_it_neat_add_link_color', array(
             'default'               => '#000000',
-            'sanitize_callback'     => 'maybe_hash_hex_color',
+            'sanitize_callback'     => 'sanitize_hex_color',
         ) 
     );
 
