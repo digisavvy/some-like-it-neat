@@ -30,7 +30,7 @@
 
         </div><!-- .hamburger-wrapper -->
 
-        <div class="site-branding-wrapper hamburger">
+        <div class="site-branding-wrapper">
 
             <div class="site-branding">
 
