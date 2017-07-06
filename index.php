@@ -20,29 +20,29 @@ get_header(); ?>
 
 		<div id="content" class="site-content">
 
-	<?php if ( have_posts() ) : ?>
+		<?php if ( have_posts() ) : ?>
 
-	<?php // start of the loop. ?>
+		<?php // start of the loop. ?>
 
-	<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php
-		/**
-		 * Include the Post-Format-specific template for the content.
-		 * If you want to override this in a child theme, then include a file
-		 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-		 */
+			<?php
+			/**
+			 * Include the Post-Format-specific template for the content.
+			 * If you want to override this in a child theme, then include a file
+			 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+			 */
 
-			get_template_part( 'page-templates/template-parts/content', get_post_format() );
-		?>
+				get_template_part( 'page-templates/template-parts/content', get_post_format() );
+			?>
 
-	<?php endwhile; // end of the loop. ?>
+		<?php endwhile; // end of the loop. ?>
 
-	<?php else : ?>
+		<?php else : ?>
 
-	<?php get_template_part( 'page-templates/template-parts/content', 'none' ); ?>
+		<?php get_template_part( 'page-templates/template-parts/content', 'none' ); ?>
 
-	<?php endif; ?>
+		<?php endif; ?>
 
 		</div><!-- #content -->
 
