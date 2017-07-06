@@ -195,23 +195,28 @@ add_action( 'after_setup_theme', 'some_like_it_neat_setup' );
  */
 function some_like_it_neat_header_footer_render() {
 
-	// Get the header ID.
-	$header_ids = FLThemeBuilderLayoutData::get_current_page_header_ids();
+	if ( class_exists( 'FLBuilder' ) ) {
 
-	// If we have a header, remove the theme header and hook in Theme Builder's.
-	if ( ! empty( $header_ids ) ) {
-		remove_action( 'some_like_it_neat_header', 'some_like_it_neat_do_header' );
-		add_action( 'some_like_it_neat_header', 'FLThemeBuilderLayoutRenderer::render_header' );
+		// Get the header ID.
+		$header_ids = FLThemeBuilderLayoutData::get_current_page_header_ids();
+
+		// If we have a header, remove the theme header and hook in Theme Builder's.
+		if ( ! empty( $header_ids ) ) {
+			remove_action( 'some_like_it_neat_header', 'some_like_it_neat_do_header' );
+			add_action( 'some_like_it_neat_header', 'FLThemeBuilderLayoutRenderer::render_header' );
+		}
+
+		// Get the footer ID.
+		$footer_ids = FLThemeBuilderLayoutData::get_current_page_footer_ids();
+
+		// If we have a footer, remove the theme footer and hook in Theme Builder's.
+		if ( ! empty( $footer_ids ) ) {
+			remove_action( 'some_like_it_neat_footer', 'some_like_it_neat_do_footer' );
+			add_action( 'some_like_it_neat_footer', 'FLThemeBuilderLayoutRenderer::render_footer' );
+
+		}
 	}
 
-	// Get the footer ID.
-	$footer_ids = FLThemeBuilderLayoutData::get_current_page_footer_ids();
-
-	// If we have a footer, remove the theme footer and hook in Theme Builder's.
-	if ( ! empty( $footer_ids ) ) {
-		remove_action( 'some_like_it_neat_footer', 'some_like_it_neat_do_footer' );
-		add_action( 'some_like_it_neat_footer', 'FLThemeBuilderLayoutRenderer::render_footer' );
-	}
 }
 add_action( 'wp', 'some_like_it_neat_header_footer_render' );
 
@@ -220,29 +225,33 @@ add_action( 'wp', 'some_like_it_neat_header_footer_render' );
  */
 function some_like_it_neat_register_part_hooks() {
 
-	return array(
-		array(
-			'label' => 'Header',
-			'hooks' => array(
-				'tha_header_before' => 'Before Header',
-				'tha_header_after'  => 'After Header',
+	if ( class_exists( 'FLBuilder' ) ) {
+
+		return array(
+			array(
+				'label' => 'Header',
+				'hooks' => array(
+					'tha_header_before' => 'Before Header',
+					'tha_header_after'  => 'After Header',
+				),
 			),
-		),
-		array(
-			'label' => 'Content',
-			'hooks' => array(
-				'tha_content_before' => 'Before Content',
-				'tha_content_after'  => 'After Content',
+			array(
+				'label' => 'Content',
+				'hooks' => array(
+					'tha_content_before' => 'Before Content',
+					'tha_content_after'  => 'After Content',
+				),
 			),
-		),
-		array(
-			'label' => 'Footer',
-			'hooks' => array(
-				'tha_footer_before' => 'Before Footer',
-				'tha_footer_after'  => 'After Footer',
+			array(
+				'label' => 'Footer',
+				'hooks' => array(
+					'tha_footer_before' => 'Before Footer',
+					'tha_footer_after'  => 'After Footer',
+				),
 			),
-		),
-	);
+		);
+
+	}
 
 }
 add_filter( 'fl_theme_builder_part_hooks', 'some_like_it_neat_register_part_hooks' );
