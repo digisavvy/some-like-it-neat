@@ -14,13 +14,15 @@
         menuInit: function() {
 
             // Add dropdown toggle that display child menu items.
-            $( '.site-header-menu .page_item_has_children > a, .site-header-menu .menu-item-has-children > a' ).append( '<button class="dropdown-toggle" aria-expanded="false"/>' );
-            $( '.site-header-menu .dropdown-toggle' ).off( 'click' ).on( 'click', function( e ) {
-                e.preventDefault();
-                $( this ).toggleClass( 'toggle-on' );
-                $( this ).parent().next( '.children, .sub-menu' ).toggleClass( 'toggle-on' );
-                $( this ).attr( 'aria-expanded', $( this ).attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
-            } );
+            $('.site-header-menu .page_item_has_children > a, .site-header-menu .menu-item-has-children > a').append('<button class="dropdown-toggle" aria-expanded="false"/>');
+            $('.site-header-menu .dropdown-toggle').off('click').on(
+                'click', function( e ) {
+                    e.preventDefault();
+                    $(this).toggleClass('toggle-on');
+                    $(this).parent().next('.children, .sub-menu').toggleClass('toggle-on');
+                    $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'false' ? 'true' : 'false');
+                } 
+            );
 
         },
 
@@ -28,19 +30,23 @@
         offCanvasMenuInit: function() {
 
             // Elements
-            var siteHeader = $( '.site-header' );
-            var mainNav    = $( '.main-navigation-inside' );
+            var siteHeader = $('.site-header');
+            var mainNav    = $('.main-navigation-inside');
 
             // Off-Canvas Menu Logic
-            setTimeout( function() {
+            setTimeout(
+                function() {
 
-                var siteHeaderHeight = siteHeader.outerHeight();
-                mainNav.css({
-                    'margin-top' : siteHeaderHeight,
-                    'height'     : 'calc(100% - ' + siteHeaderHeight+ 'px)'
-                });
+                        var siteHeaderHeight = siteHeader.outerHeight();
+                        mainNav.css(
+                            {
+                                'margin-top' : siteHeaderHeight,
+                                'height'     : 'calc(100% - ' + siteHeaderHeight+ 'px)'
+                            }
+                        );
 
-            }, 500 );
+                }, 500 
+            );
 
         },
 
@@ -48,44 +54,52 @@
         overlayInit: function() {
 
             // Elements
-            var overlay      = $( '.overlay' );
-            var hamburger    = $( '.hamburger' );
-            var sidebarOpen  = $( '.sidebar-control-wrapper' );
-            var sidebarClose = $( '.sidebar-close-control' );
+            var overlay      = $('.overlay');
+            var hamburger    = $('.hamburger');
+            var sidebarOpen  = $('.sidebar-control-wrapper');
+            var sidebarClose = $('.sidebar-close-control');
 
             // Hamburger Event
-            hamburger.off( 'click' ).on( 'click', function( e ) {
+            hamburger.off('click').on(
+                'click', function( e ) {
 
-                // Prevent Default
-                e.preventDefault();
-                e.stopPropagation();
+                    // Prevent Default
+                    e.preventDefault();
+                    e.stopPropagation();
 
-                // Overlay Action
-                slin.overlayActionInit( 'menu' );
+                    // Overlay Action
+                    slin.overlayActionInit('menu');
 
-            } );
+                } 
+            );
 
             // Sidebar Open Event
-            sidebarOpen.off( 'click' ).on( 'click', function( e ) {
+            sidebarOpen.off('click').on(
+                'click', function( e ) {
 
-                // Prevent Default
-                e.preventDefault();
-                e.stopPropagation();
+                    // Prevent Default
+                    e.preventDefault();
+                    e.stopPropagation();
 
-                // Overlay Action
-                slin.overlayActionInit( 'sidebar' );
+                    // Overlay Action
+                    slin.overlayActionInit('sidebar');
 
-            } );
+                } 
+            );
 
             // Sidebar CLose Event
-            sidebarClose.off( 'click' ).on( 'click', function() {
-                slin.overlayActionInit( 'close' );
-            } );
+            sidebarClose.off('click').on(
+                'click', function() {
+                    slin.overlayActionInit('close');
+                } 
+            );
 
             // Overlay Event
-            overlay.off( 'click' ).on( 'click', function() {
-                slin.overlayActionInit( 'close' );
-            } );
+            overlay.off('click').on(
+                'click', function() {
+                    slin.overlayActionInit('close');
+                } 
+            );
 
         },
 
@@ -93,90 +107,98 @@
         overlayActionInit: function( overlayAction ) {
 
             // Elements
-            var body         = $( 'body' );
-            var hamburger    = $( '.hamburger' );
-            var sidebarClose = $( '.sidebar-close-control' );
+            var body         = $('body');
+            var hamburger    = $('.hamburger');
+            var sidebarClose = $('.sidebar-close-control');
 
             // If the overlay already opened.
-            if ( body.hasClass( 'has-overlay-open' ) ) {
+            if (body.hasClass('has-overlay-open') ) {
 
                 // Reset Menu Classes
-                hamburger.removeClass( 'active' );
-                body.removeClass( 'has-menu-open' );
+                hamburger.removeClass('active');
+                body.removeClass('has-menu-open');
 
                 // Reset Sidebar Classes
-                body.removeClass( 'has-sidebar-open' );
-                sidebarClose.removeClass( 'active' );
+                body.removeClass('has-sidebar-open');
+                sidebarClose.removeClass('active');
 
                 // Reset Overlay
-                body.removeClass( 'has-overlay-open' );
+                body.removeClass('has-overlay-open');
 
             } else {
 
-                if ( 'menu' === overlayAction ) {
+                if ('menu' === overlayAction ) {
 
                     // Set Menu Classes
-                    hamburger.addClass( 'active' );
-                    body.addClass( 'has-menu-open' );
+                    hamburger.addClass('active');
+                    body.addClass('has-menu-open');
 
                     // Set Overlay Class
-                    body.addClass( 'has-overlay-open' );
+                    body.addClass('has-overlay-open');
 
-                } else if ( 'sidebar' === overlayAction ) {
+                } else if ('sidebar' === overlayAction ) {
 
                     // Set Sidebar Classes
-                    body.addClass( 'has-sidebar-open' );
-                    setTimeout( function() {
-                        sidebarClose.addClass( 'active' );
-                    }, 1000 );
+                    body.addClass('has-sidebar-open');
+                    setTimeout(
+                        function() {
+                                sidebarClose.addClass('active');
+                        }, 1000 
+                    );
 
                     // Set Overlay Class
-                    body.addClass( 'has-overlay-open' );
+                    body.addClass('has-overlay-open');
 
                 }
 
             }
 
-        },
+        }
 
     };
 
     // Document Ready
-    $( document ).ready( function() {
+    $(document).ready(
+        function() {
 
-        // Menu
-        slin.menuInit();
+                // Menu
+                slin.menuInit();
 
-        // Off-Canvas Menu
-        slin.offCanvasMenuInit();
-
-
-        // Overlay
-        slin.overlayInit();
+                // Off-Canvas Menu
+                slin.offCanvasMenuInit();
 
 
-    } );
+                // Overlay
+                slin.overlayInit();
+
+
+        } 
+    );
 
     // Window Resize
-    $( window ).on( 'debouncedresize', function() {
+    $(window).on(
+        'debouncedresize', function() {
 
-        // Off-Canvas Menu
-        slin.offCanvasMenuInit();
+            // Off-Canvas Menu
+            slin.offCanvasMenuInit();
 
-    });
+        }
+    );
     
 
     // Document Keyup
-    $( document ).keyup( function( e ) {
+    $(document).keyup(
+        function( e ) {
 
-        // Escape Key
-        if ( e.keyCode === 27 ) {
+                // Escape Key
+            if (e.keyCode === 27 ) {
 
-            // Make the escape key to close the menu
-            slin.overlayActionInit( 'esc' );
+                // Make the escape key to close the menu
+                slin.overlayActionInit('esc');
 
-        }
+            }
 
-    } );
+        } 
+    );
 
 } )( jQuery );
