@@ -92,32 +92,6 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 			);
 		}
 
-		// Enable Support for Jetpack Infinite Scroll.
-		if ( 'yes' === get_theme_mod( 'some-like-it-neat_infinite_scroll_support' ) ) {
-			$scroll_type = get_theme_mod( 'some-like-it-neat_infinite_scroll_type' );
-			add_theme_support(
-				'infinite-scroll', array(
-				'type'                => $scroll_type,
-				'footer_widgets'    => false,
-				'container'            => 'content',
-				'wrapper'            => true,
-				'render'            => false,
-				'posts_per_page'     => false,
-				'render'            => 'some_like_it_neat_infinite_scroll_render',
-				)
-			);
-
-			/**
-			 * Grabs posts while posts exists for infinite loop.
-			 */
-			function some_like_it_neat_infinite_scroll_render() {
-				if ( have_posts() ) : while ( have_posts() ) : the_post();
-						get_template_part( 'page-templates/template-parts/content', get_post_format() );
-				endwhile;
-				endif;
-			}
-		}
-
 		// Setup the WordPress core custom background feature.
 		add_theme_support(
 			'custom-background', apply_filters(
