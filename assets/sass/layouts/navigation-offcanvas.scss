@@ -55,14 +55,17 @@
         top: 16px;
         width: 26px;
       }
+
     }
 
     &:hover {
+
       .hamburger-icon,
       .hamburger-icon:before,
       .hamburger-icon:after {
         width: 35px;
       }
+
     }
 
     &:visited {
@@ -108,7 +111,6 @@
 
 }
 
-
 /* Site Menu */
 .main-navigation {
   @include grid-media($sm) {
@@ -127,10 +129,12 @@
     z-index: 80;
     transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
+
   @include grid-media($md) {
     margin-right: 50%;
     width: calc(100% - 50%);
   }
+
   @include grid-media($hg) {
     margin-right:55%;
     width: calc(100% - 55%);
@@ -147,7 +151,6 @@
   }
 
 }
-
 
 .main-navigation-inside {
   margin-top: 100px !important;
@@ -167,26 +170,35 @@
   transition: transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 200;
 }
-.has-menu-open .main-navigation {
-  right: 0;
+
+.has-menu-open {
+
+  .main-navigation {
+    right: 0;
+  }
+
+  .site-header-menu {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
 }
-.has-menu-open .site-header-menu {
-  -webkit-transform: translateX(0px);
-  transform: translateX(0px);
-}
+
 
 /* Site Header Menu List */
 .header-menu {
   list-style: none;
   margin: 0 auto;
   padding: 0;
+
+  * {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
 }
 
-.header-menu * {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
 
 .header-menu ul {
   display: none;
@@ -194,85 +206,104 @@
   margin-left: 1.5rem;
   padding: 20px 0;
   padding: 1.25rem 0;
-}
 
-.header-menu ul.toggle-on {
-  display: block;
+  &.toggle-on {
+    display: block;
+  }
 }
 
 .header-menu li {
   position: relative;
   word-wrap: break-word;
   white-space: normal;
-}
 
-.header-menu li.current_page_item a,
-.header-menu li.current-menu-item a,
-.header-menu li.current_page_ancestor > a,
-.header-menu li.current-menu-ancestor > a,
-.header-menu li.current_page_parent > a,
-.header-menu li.current-menu-parent > a {
-  color: #aaa;
-}
-
-.header-menu a, .header-menu a:visited {
-  color: #fff;
-  display: block;
-  font-family: $title;
-  font-size: 22px;
-  padding: 0 0 8px;
-  padding: 0 0 0.5rem;
-  text-transform: uppercase;
-}
-
-.header-menu a:hover, .header-menu a:focus, .header-menu a:active {
-  color: #aaa;
-}
-
-.header-menu ul a, .header-menu ul a:visited {
-  color: #fff;
-  display: block;
-  font-family: $title;
-  font-size: 22px;
-  padding: 0 0 8px;
-  padding: 0 0 0.5rem;
-  text-transform: uppercase;
-}
-
-.header-menu ul a:hover, .header-menu ul a:focus, .header-menu ul a:active {
-  color: #aaa;
-}
-
-.header-menu .dropdown-toggle {
-  background: transparent;
-  border: none;
-  position: absolute;
-  top: -5px;
-  right: initial;
-  width: 40px;
-  height: 40px;
-}
-
-.header-menu .dropdown-toggle {
-  &:after {
-    color: #fff;
-    content: "\f347";
-    font-family: Dashicons;
-    font-size: 32px;
-  }
-  &.toggle-on:after {
-    content: "\f343";
+  &.current_page_item a,
+  &.current-menu-item a,
+  &.current_page_ancestor > a,
+  &.current-menu-ancestor > a,
+  &.current_page_parent > a,
+  &.current-menu-parent > a {
     color: #aaa;
-    font-family: Dashicons;
   }
+
 }
 
+.header-menu {
 
+  a {
+    color: #fff;
+    display: block;
+    font-family: $title;
+    font-size: 22px;
+    padding: 0 0 8px;
+    padding: 0 0 0.5rem;
+    text-transform: uppercase;
 
-.header-menu .page_item_has_children > a,
-.header-menu .menu-item-has-children > a {
-  padding-right: 40px;
-  padding-right: 2.5rem;
+    &:visited {
+      @extend a;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #aaa;
+    }
+
+  }
+
+  ul {
+
+    a {
+      color: #fff;
+      display: block;
+      font-family: $title;
+      font-size: 22px;
+      padding: 0 0 8px;
+      padding: 0 0 0.5rem;
+      text-transform: uppercase;
+
+      &:visited {
+        @extend a;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #aaa;
+      }
+
+    }
+  }
+
+  .dropdown-toggle {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: -5px;
+    right: initial;
+    width: 40px;
+    height: 40px;
+
+    &:after {
+      color: #fff;
+      content: "\f347";
+      font-family: Dashicons;
+      font-size: 32px;
+    }
+    &.toggle-on:after {
+      content: "\f343";
+      color: #aaa;
+      font-family: Dashicons;
+    }
+
+  }
+
+  .page_item_has_children > a,
+  .menu-item-has-children > a {
+    padding-right: 40px;
+    padding-right: 2.5rem;
+  }
+
 }
 
 .overlay {
@@ -291,6 +322,7 @@
   transition: opacity 0.4s, transform 0s 0.4s, -webkit-transform 0s 0.4s;
   z-index: 50;
 }
+
 // When Overlay is open, change link colors to white
 .has-overlay-open {
 
@@ -298,15 +330,19 @@
 
     .hamburger {
       color: #fff;
-    }
-  }
-}
 
-.has-overlay-open .hamburger-wrapper .hamburger .hamburger-icon {
-  &:before,
-  &:after {
-    background-color: #fff;
+      .hamburger-icon {
+        &:before,
+        &:after {
+          background-color: #fff;
+        }
+
+      }
+
+    }
+
   }
+
 }
 
 .has-overlay-open {
@@ -325,20 +361,30 @@
     border-bottom: 0;
   }
 
-  .hamburger-wrapper .hamburger {
-    color: #fff !important;
-  }
+  .hamburger-wrapper {
 
-  .hamburger-wrapper .hamburger .hamburger-icon:before,
-  .hamburger-wrapper .hamburger .hamburger-icon:after {
-    background-color: #fff !important;
+    .hamburger {
+      color: #fff !important;
+
+      .hamburger-icon {
+        &:before,
+        &:after {
+          background-color: #fff !important;
+        }
+
+      }
+
+    }
+
   }
 
   p.site-title a {
     color: #fff !important;
+
     &:hover {
       color: $link-color;
     }
+
   }
 
   header.offcanvas-nav.headroom--top .site-branding .site-title a {
@@ -366,22 +412,29 @@
 }
 
 .offcanvas-nav {
+
   h1.entry-title {
     margin: 0;
   }
+
   h1.page-title {
     margin-top: 0;
   }
+
   .site-main {
     margin-top: 140px;
   }
+
   .site-header-menu {
     margin: 0;
   }
+
 }
+
 .admin-bar header#masthead {
   top: 30px;
 }
+
 header.offcanvas-nav {
   position: fixed;
   top: 0;
@@ -414,7 +467,9 @@ header.offcanvas-nav {
     .site-branding .site-title a {
       color: #fff;
     }
+
   }
+
   &.headroom--top {
     background-color: rgba(20,20,20,0);
     //padding: 15px 0;
@@ -423,26 +478,34 @@ header.offcanvas-nav {
     p.site-title a {
       color: #000;
       transition: none;
+
       &:hover {
         color: $link-color;
       }
+
     }
+
     .site-branding .site-title a {
       color: #000;
     }
+
     .hamburger-wrapper .hamburger .hamburger-icon {
       background-color: #000;
+
       &:before {
         background-color: #000;
       }
+
       &:after {
         background-color: #000;
       }
+
     }
+
     .hamburger-wrapper .hamburger, .hamburger-wrapper .hamburger:visited {
       color: #000;
     }
+
   }
+
 }
-
-
