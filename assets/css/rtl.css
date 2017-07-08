@@ -1863,44 +1863,44 @@ body {
 /*--------------------------------------------------------------
 5.2 Header
 --------------------------------------------------------------*/
-/* line 5, assets/sass/layouts/_header.scss */
+/* line 3, assets/sass/layouts/_header.scss */
 .site-branding {
   text-align: center; }
-  /* line 7, assets/sass/layouts/_header.scss */
+  /* line 5, assets/sass/layouts/_header.scss */
   .site-branding .site-title {
     font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding: 0 40px; }
     @media only screen and (min-width: 0) {
-      /* line 7, assets/sass/layouts/_header.scss */
+      /* line 5, assets/sass/layouts/_header.scss */
       .site-branding .site-title {
         font-size: 35px; } }
     @media only screen and (min-width: 480px) {
-      /* line 7, assets/sass/layouts/_header.scss */
+      /* line 5, assets/sass/layouts/_header.scss */
       .site-branding .site-title {
         font-size: 55px; } }
     @media only screen and (min-width: 768px) {
-      /* line 7, assets/sass/layouts/_header.scss */
+      /* line 5, assets/sass/layouts/_header.scss */
       .site-branding .site-title {
         font-size: 75px; } }
-    /* line 21, assets/sass/layouts/_header.scss */
+    /* line 19, assets/sass/layouts/_header.scss */
     .site-branding .site-title a, .site-branding .site-title a:visited {
       line-height: 1; }
-  /* line 27, assets/sass/layouts/_header.scss */
+  /* line 25, assets/sass/layouts/_header.scss */
   .site-branding .site-description {
     padding: 25px 0;
     font-size: 20px;
     font-family: "Georgia", "Times", "Times New Roman", serif;
     font-style: italic; }
     @media only screen and (min-width: 0) {
-      /* line 27, assets/sass/layouts/_header.scss */
+      /* line 25, assets/sass/layouts/_header.scss */
       .site-branding .site-description {
         font-size: 14px; } }
     @media only screen and (min-width: 480px) {
-      /* line 27, assets/sass/layouts/_header.scss */
+      /* line 25, assets/sass/layouts/_header.scss */
       .site-branding .site-description {
         font-size: 18px; } }
     @media only screen and (min-width: 768px) {
-      /* line 27, assets/sass/layouts/_header.scss */
+      /* line 25, assets/sass/layouts/_header.scss */
       .site-branding .site-description {
         font-size: 25px; } }
 
