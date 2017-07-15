@@ -127,3 +127,4 @@ wp-content/mu-plugins/wpengine-comm
 *.asf
 *.wmv
 *.avi
+/assets/css
