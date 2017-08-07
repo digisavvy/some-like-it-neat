@@ -10,6 +10,11 @@ nav.post-navigation {
     z-index: 1;
 }
 
+.main-navigation-inside {
+    @include grid-container();
+    @include section-container('wide');
+}
+
 .nav-links {
     @include grid-media($sm) {
         display: flex;

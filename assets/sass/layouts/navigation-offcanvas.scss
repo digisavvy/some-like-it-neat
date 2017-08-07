@@ -16,7 +16,7 @@
   box-shadow: #ccc;
   position: relative;
   height: 38px;
-  margin-left: 13px;
+  margin-left: 30px;
 
   .hamburger {
     color: #fff;
@@ -448,10 +448,16 @@ header.offcanvas-nav {
   z-index: 100;
 
   .site-header-inside-wrapper {
-    padding: 15px;
+    @include grid-container();
+    @include section-container('wide');
+
+    padding-bottom: 15px;
+    padding-top: 15px;
+
     p.site-title {
       margin: 0;
     }
+
   }
 
   .site-branding .site-title {
@@ -508,7 +514,8 @@ header.offcanvas-nav {
 
     }
 
-    .hamburger-wrapper .hamburger, .hamburger-wrapper .hamburger:visited {
+    .hamburger-wrapper .hamburger,
+    .hamburger-wrapper .hamburger:visited {
       color: #000;
     }
 
