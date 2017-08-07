@@ -22,7 +22,7 @@
      $cmb = new_cmb2_box( array(
          'id'            => 'post_options',
          'title'         => __( 'Post Options', 'cmb2' ),
-         'object_types'  => array( 'page', ), // Post type
+         'object_types'  => array( 'page', 'post' ), // Post type
          'context'       => 'side',
          'priority'      => 'low',
          'show_names'    => true, // Show field names on the left
