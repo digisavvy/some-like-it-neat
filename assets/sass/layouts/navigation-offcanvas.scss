@@ -448,8 +448,8 @@ header.offcanvas-nav {
   z-index: 100;
 
   .site-header-inside-wrapper {
-    @include grid-container();
-    @include section-container('wide');
+    //@include grid-container();
+    //@include section-container('wide');
 
     padding-bottom: 15px;
     padding-top: 15px;
