@@ -243,6 +243,11 @@ a project.
     └── style.css
 </code></pre>
 
+How to Contribute to This Project
+---------------
+Your generous pull requests are welcome! Have a look at our contribution guide for details:
+[Contribution Guide](https://github.com/digisavvy/some-like-it-neat/blob/master/CONTRIBUTE.md)
+
 Road Map
 ---------------
 * Firm up i18n for RTL and language support. Looking for contributors here
@@ -267,6 +272,7 @@ A special thanks to all the folks who inspire me on a daily basis to "do more" w
 * Devin Walker
 * Blair Williams
 * Robert Neu
+* Rachel Cherry (Roll tide, roll)
 * And a <del>fuckload</del> lot more that I'm missing here.
 
 License
