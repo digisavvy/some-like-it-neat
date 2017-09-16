@@ -44,12 +44,12 @@ main#main {
 
 	ol {
 		li {
-			@include margin-left(10px);
+			margin-left: 10px;
 		}
 	}
 	ul {
 		list-style: none;
-		@include margin-left(40px);
+		margin-left: 40px;
 		li {
 			list-style-type: square;
 			ul {

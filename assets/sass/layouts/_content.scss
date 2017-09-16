@@ -39,25 +39,25 @@
     @include clearfix;
     float: none;
     margin-top: .5em;
-    @include margin-right(auto!important);
+    margin-right: auto !important;
     margin-bottom: .5em;
-    @include margin-left(auto!important);
+    margin-left: auto !important;
 }
 
 .alignleft {
     display: inline;
-    @include float(left);
-    @include margin-right(1.5em);
+    float: left;
+    margin-right: 1.5em;
 }
 
 .alignright {
     display: inline;
-    @include float(right);
-    @include margin-left(1.5em);
+    float: right;
+    margin-left: 1.5em;
 }
 
 .sticky{
-    @include float(left);
+    float: left;
     padding: 20px;
 }
 

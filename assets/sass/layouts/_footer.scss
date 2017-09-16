@@ -14,7 +14,7 @@ footer {
         }
         @include grid-media($smbg) {
             @include grid-column(2);
-            @include text-align(left);
+            text-align: left;
         }
     }
     .footer-right {
@@ -24,7 +24,7 @@ footer {
         }
         @include grid-media($smbg) {
             @include grid-column(2);
-            @include text-align(right);
+            text-align: right;
         }
     }
 }

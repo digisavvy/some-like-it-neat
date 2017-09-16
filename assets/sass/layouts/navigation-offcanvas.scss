@@ -30,7 +30,6 @@
 
     .hamburger-icon {
       background-color: #fff;
-      background-color: #fff;
       content: "";
       display: block;
       height: 2px;
@@ -120,7 +119,6 @@
     margin: 0;
     overflow: hidden;
     padding: 0;
-    padding: 0;
     position: fixed;
     top: 0;
     right: 100%;
@@ -146,7 +144,6 @@
     height: calc(100% - 70px);
     //margin: 70px 20px 0;
     margin: 4.375rem 20px 0;
-    padding: 30px 0 0;
     padding: 1.875rem 0 0;
   }
 
@@ -166,7 +163,6 @@
   transform: translateX(-200%);
   -webkit-transition: -webkit-transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: -webkit-transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition: transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 200;
 }
@@ -202,9 +198,7 @@
 
 .header-menu ul {
   display: none;
-  margin-left: 24px;
   margin-left: 1.5rem;
-  padding: 20px 0;
   padding: 1.25rem 0;
 
   &.toggle-on {
@@ -235,7 +229,6 @@
     display: block;
     font-family: $title;
     font-size: 22px;
-    padding: 0 0 8px;
     padding: 0 0 0.5rem;
     text-transform: uppercase;
 
@@ -258,7 +251,6 @@
       display: block;
       font-family: $title;
       font-size: 22px;
-      padding: 0 0 8px;
       padding: 0 0 0.5rem;
       text-transform: uppercase;
 
@@ -300,7 +292,6 @@
 
   .page_item_has_children > a,
   .menu-item-has-children > a {
-    padding-right: 40px;
     padding-right: 2.5rem;
   }
 
