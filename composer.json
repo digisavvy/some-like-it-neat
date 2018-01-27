@@ -5,7 +5,8 @@
 	"license": "GPL",
 	"require-dev": {
 		"squizlabs/php_codesniffer": "2.*",
-		"wp-coding-standards/wpcs": "*"
+		"wp-coding-standards/wpcs": "*",
+		"htmlburger/carbon-fields": "*"
 	},
 	"scripts": {
 		"post-install-cmd": [
