@@ -8,6 +8,27 @@
  * @link    https://github.com/digisavvy/some-like-it-neat
  */
 
+/**
+ * Including Carbon Fields (https://github.com/htmlburger/carbon-fields).
+ */
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
+add_action( 'carbon_fields_register_fields', 'crb_attach_theme_options' );
+function crb_attach_theme_options() {
+	Container::make( 'theme_options', __( 'Theme Options', 'crb' ) )
+		->add_fields( array(
+			Field::make( 'text', 'crb_text', 'Text Field' ),
+		) );
+}
+
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+	require_once( get_template_directory() . '/vendor/autoload.php' );
+	\Carbon_Fields\Carbon_Fields::boot();
+	include get_template_directory() . '/library/vendors/meta.php';
+}
+
 if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -101,17 +122,6 @@ if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
 				)
 			)
 		);
-
-		/**
-		 * Including CMB2 (https://github.com/WebDevStudios/CMB2).
-		 */
-		if ( file_exists( __DIR__ . '/vendors/cmb2/init.php' ) ) {
-			include_once  __DIR__ . '/vendors/cmb2/init.php';
-			include get_template_directory() . '/library/vendors/meta.php';
-		} elseif ( file_exists( __DIR__ . '/CMB2/init.php' ) ) {
-			include_once  __DIR__ . '/CMB2/init.php';
-			include get_template_directory() . '/library/vendors/meta.php';
-		}
 
 		/**
 		 * Including Theme Hook Alliance (https://github.com/zamoose/themehookalliance).
