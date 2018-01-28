@@ -1,6 +1,7 @@
 <?php
 /**
  * The Template for displaying all single posts.
+ * Template Post Type: post
  *
  * @package Some_Like_It_Neat
  * @author  Alex Vasquez <alex@digisavvy.com>
