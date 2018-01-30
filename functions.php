@@ -23,6 +23,7 @@ $some_like_it_neat_includes = [
 	'library/assets.php',    // Scripts and stylesheets.
 	'library/widgets.php',    // Widgets.
 	'library/theme-setup.php',  // Theme setup.
+	'library/vendors/meta.php', // Theme Meta.
 	'library/extras.php',    // Extra and nifty things.
 	'library/vendor.php',   // 3rd party scripts/code etc.
 	'library/customizer-frontend-settings.php', // Theme customizer related.
