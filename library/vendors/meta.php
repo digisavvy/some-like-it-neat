@@ -8,29 +8,22 @@ use Carbon_Fields\Container;
 add_action( 'carbon_fields_register_fields', 'crb_attach_post_meta' );
 function crb_attach_post_meta() {
 
- 	foreach ( get_post_types( ) as $post_type ) {
-		Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
-			->where( 'post_type', '=', $post_type )
-            ->set_context( 'side' )
-			->set_priority( 'low' )
-			->add_fields( array(
-				Field::make( 'radio', 'some_like_it_neat_hide_title', 'Hide Page Title' )
-                    ->set_help_text( 'Useful for Landing Pages' )
-                    ->set_default_value( 'no' )
-                    ->add_options( array(
-                        'no' => 'No',
-                        'yes' => 'Yes',
-                    ) ),
-                Field::make( 'radio', 'some_like_it_neat_hide_featured_image', 'Hide Featured Image' )
-                    ->set_help_text( 'Hide featured image on singular post, while still using it throughout the rest of your site' )
-                    ->set_default_value( 'no' )
-                    ->add_options( array(
-                        'no' => 'No',
-                        'yes' => 'Yes',
-                    ) )
-			) );
-
-    }
+ 	Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
+	    ->where( 'post_type', 'CUSTOM', function( $post_type ) {
+		    $args = array( 'public' => true );
+		    $post_types = get_post_types( $args );
+		    return in_array( $post_type, $post_types );
+	    } )
+		->set_context( 'side' )
+		->set_priority( 'low' )
+		->add_fields( array(
+			Field::make( 'checkbox', 'some_like_it_neat_hide_title', 'Hide Page Title' )
+				->set_help_text( 'Useful for Landing Pages' )
+				->set_option_value( 'yes' ),
+			Field::make( 'checkbox', 'some_like_it_neat_hide_featured_image', 'Hide Featured Image' )
+				->set_help_text( 'Hide featured image on singular post, while still using it throughout the rest of your site' )
+				->set_option_value( 'yes' ),
+		) );
 
 }
 
