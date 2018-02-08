@@ -42,14 +42,9 @@ main#main {
 	margin: 0 auto;
 	width: 100%;
 
-	ol {
-		li {
-			margin-left: 10px;
-		}
-	}
-	ul {
+	ul, ol {
 		list-style: none;
-		margin-left: 40px;
+		margin-left: 20px;
 		li {
 			list-style-type: square;
 			ul {
