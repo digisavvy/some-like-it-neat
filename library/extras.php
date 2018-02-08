@@ -11,6 +11,7 @@
 /**
  * Add Singular Post Template Navigation
  */
+
 if ( 'no' === get_theme_mod( 'some-like-it-neat_hide_post_navigation' ) ) {
 	if ( ! function_exists( 'some_like_it_neat_post_navigation' ) ) :
 		/**
