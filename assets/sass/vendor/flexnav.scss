@@ -4,8 +4,6 @@
 @import '../vendor/grid-settings';
 @import '../../../node_modules/bourbon-neat/core/neat';
 @import '../abstracts/variables';
-@import '../../../node_modules/bi-app-sass/bi-app/bi-app-ltr';
-@import '../../../node_modules/bi-app-sass/bi-app/bi-app-rtl';
 @import '../abstracts/typography';
 @import '../components/buttons';
 
@@ -40,8 +38,8 @@ $fourth_level: #999;
     }
     &.one-page {
         position: fixed;
+        right: 5%;
         top: 50px;
-        @include right(5%);
         max-width: 200px;
     }
 
@@ -110,7 +108,7 @@ $fourth_level: #999;
         position: absolute;
         z-index: 4;
         top: 0;
-        @include left(0);
+        left: 0;
         width: 50px;
         height: 100%;
         display: inline-block;
@@ -141,8 +139,8 @@ $fourth_level: #999;
     &.one-page {
         position: fixed;
         top: 0;
-        @include right(5%);
-        @include padding-right(45px);
+        right: 5%;
+        padding-right: 45px;
     }
 
     .touch-button {
@@ -150,7 +148,7 @@ $fourth_level: #999;
         position: absolute;
         z-index: 999;
         top: 0;
-        @include right(0);
+        right: 0;
         width: 50px;
         height: 50px;
         display: none;
@@ -178,7 +176,7 @@ $fourth_level: #999;
     i.navicon {
         display: block !important;
         position: relative;
-        @include right(30px);
+        right: 30px;
         &:after {
             color: #555;
             content:'Menu';
@@ -197,7 +195,7 @@ $fourth_level: #999;
         }
         &.one-page {
             top: 0;
-            @include right(auto);
+            right: auto;
             max-width: 1080px;
         }
         li {
@@ -218,7 +216,7 @@ $fourth_level: #999;
         li > ul {
             position: absolute;
             top: auto;
-            @include left(0);
+            left: 0;
 
             li {
                 width: 100%;
