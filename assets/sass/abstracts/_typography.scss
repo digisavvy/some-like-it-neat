@@ -68,8 +68,9 @@ h6 {
     font-family: $title;
 }
 blockquote {
-    background-color: darken($base-body-color, 3%);
+    font-size: 26px;
     font-style: italic;
+    line-height: 1.2;
     padding: 20px;
 }
 cite {
