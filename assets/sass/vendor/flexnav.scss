@@ -108,7 +108,7 @@ $fourth_level: #999;
         position: absolute;
         z-index: 4;
         top: 0;
-        left: 0;
+        right: 0;
         width: 50px;
         height: 100%;
         display: inline-block;
@@ -337,5 +337,14 @@ $fourth_level: #999;
     }
     &.ie7 .flexnav li {
         width: 19.9%;
+    }
+}
+#menu-all-pages {
+    @include grid-media($sm) {
+        display: flex;
+        flex-direction: column;
+    }
+    @include grid-media($md) {
+        flex-direction: row;
     }
 }
