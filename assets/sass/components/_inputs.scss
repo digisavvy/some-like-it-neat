@@ -1,15 +1,15 @@
 @mixin neat-input($border-color: $primary-font-color, $border-radius: 0, $box-shadow: none, $color: $primary-font-color) {
-  border: 1px solid $base-border-color;
-  border-radius: $base-border-radius;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
   box-shadow: $box-shadow;
-  color: $color;
+  color: $border-color;
 }
 
 #{$all-text-inputs} {
   @include neat-input;
 }
 #{$all-text-inputs-focus} {
-  @include neat-input($base-border-color: #ccc);
+  @include neat-input;
 }
 #{$all-text-inputs-hover} {
   @include neat-input;
