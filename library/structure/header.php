@@ -10,8 +10,7 @@
 
 add_action('some_like_it_neat_header', 'some_like_it_neat_do_header');
 
-function some_like_it_neat_do_header() 
-{
+function some_like_it_neat_do_header() {
 
     tha_header_before(); ?>
 
