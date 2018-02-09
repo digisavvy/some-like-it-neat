@@ -183,7 +183,17 @@ $fourth_level: #999;
         }
     }
 }
+@media all and (min-width: 0) {
+    ul#menu-all-pages {
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media all and (min-width: 800px) {
+    ul#menu-all-pages {
+        display: flex;
+        flex-direction: row;
+    }
     body.one-page {
         padding-top: 70px;
     }
