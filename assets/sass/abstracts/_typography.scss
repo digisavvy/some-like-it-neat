@@ -1,17 +1,3 @@
-/* =Typographical Mixins/Functions
--------------------------------------------------------------- */
-
-/**
- * PX to Rem Sizing
- *
- * How to use
- * font-size: rem(20);
- *
- * Ouputs —
- * font-size: 20px;
- */
-
-$em-base: $base-font-size;
 
 /* =Genericons and Dashicons
 -------------------------------------------------------------- */
@@ -34,7 +20,7 @@ $em-base: $base-font-size;
 /* =Breadcrumbs
 ----------------------------------------------- */
 #breadcrumbs {
-  font-size: rem(14);
+  font-size: 14px;
   font-family: $content;
   padding: 20px 0 20px 50px;
 }
@@ -46,7 +32,7 @@ html {
 }
 
 body {
-    font-size: $em-base;
+    font-size: $base-font-size;
 }
 h1, h2, h3, h4, h5, h6 {
     @include clearfix;
@@ -54,38 +40,37 @@ h1, h2, h3, h4, h5, h6 {
     float: none;
     line-height: 1.25em;
     margin-bottom: 20px;
-    text-transform: uppercase;
 
 }
 h1 {
-    font-size: rem(75);
+    font-size: 75px;
     color: $primary-font-color;
     font-family: $title;
 }
 h2 {
-    font-size: rem(50);
+    font-size: 50px;
     font-family: $title;
 }
 h3 {
-    font-size: rem(35);
+    font-size: 35px;
     font-family: $title;
 }
 h4 {
-    font-size: rem(24);
+    font-size: 24px;
     font-family: $title;
 }
 h5 {
-    font-size: rem(20);
+    font-size: 20px;
     font-family: $title;
 }
 h6 {
-    font-size: rem(16);
+    font-size: 16px;
     font-family: $title;
 }
 blockquote {
-    background-color: darken($base-body-color, 3%);
-    @include border-left(solid 5px $link-color);
+    font-size: 26px;
     font-style: italic;
+    line-height: 1.2;
     padding: 20px;
 }
 cite {
@@ -96,12 +81,10 @@ strong, b {
     font-family: $title;
 }
 a, a:visited {
-    @include transition (all 200ms ease-in-out);
     color: $primary-font-color;
     text-decoration: none;
 
     &:hover {
-        @include transition (all 200ms ease-in-out);
         color: $link-color;
     text-decoration: underline;
     }
@@ -111,32 +94,16 @@ a, a:visited {
 .entry-content,
 #secondary {
     a, a:visited {
-        @include transition (all 200ms ease-in-out);
         color: $link-color;
         text-decoration: none;
 
         &:hover {
-            @include transition (all 200ms ease-in-out);
             color: $link-color;
             text-decoration: underline;
         }
     }
 }
 
-.entry-title {
-    font-family: $title;
-    text-align: center;
-
-    @include media($sm) {
-        font-size: rem(40);
-    }
-    @include media($smbg) {
-        font-size: rem(65);
-    }
-    @include media($md) {
-        font-size: rem(100);
-    }
-}
 #primary,
 #secondary {
     font-family: $content;

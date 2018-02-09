@@ -52,7 +52,8 @@ There are things you need to install before you hack away at things. There are t
 
 * #### Prerequisites
   * You'll need to download and install [Node](https://nodejs.org/)
-  * You will also need to download and install [Sass](http://sass-lang.com/install)
+  * You will need to download and install [Sass](http://sass-lang.com/install)
+  * You will need also need to download, install, and configure [Composer](https://getcomposer.org/doc/00-intro.md)
 
 * #### Getting and Installing the Theme
   * The first thing you’ll want to do is grab a copy of the theme —
@@ -120,8 +121,10 @@ a project.
 <pre style="max-height: 300px;"><code>Theme Root
     │    ├── assets
     │    │   ├── css
-    |    |   |    ├── rtl-min.css
-    |    |   |    ├── rtl.css
+    │    │   |    ├── layouts
+    |    |   |    |   ├── navigation-offcanvas.css
+    │    │   |    └── vendor
+    |    |   |    |   ├── flexnav.css
     |    |   |    ├── style-min.css
     |    |   |    └── style.css
     │    |   └──  js
@@ -131,42 +134,74 @@ a project.
     │    |   |    |   ├── hoverintent
     │    |   |    |   ├── modernizr
     │    |   |    |   └── selectivizr
+    │    │   |    ├── custom-offcanvas.js
     │    │   |    ├── production-min.js
     │    │   |    └── development.js
-    │    ├── sass
-    │    |   └── base (Bitters)
-    │    |   └── components
-    |    |    |   ├── _buttons.scss
-    |    |    |   ├── _dashicons.scss
-    |    |    |   ├── _flexnav.scss
-    |    |    |   ├── _navigation.scss
-    |    |    |   ├── _ui-bourbon.scss
-    |    |    |   └── _variables.scss
-    │    |    └── layouts
-    |    |    |   ├── _content.scss
-    |    |    |   ├── _footer.scss
-    |    |    |   ├── _header.scss
-    |    |    |   ├── _navigation.scss
-    |    |    |   ├── _normalize.scss
-    |    |    |   ├── _sidebar.scss
-    |    |    |   ├── _structure.scss
-    |    |    |   └── _typography.scss
-    |    ├── _app.scss
-    |    ├── _grid-settings.scss
-    |    ├── _rtl.scss
-    |    └── style.scss
+    │    |   └── maps
+    │    │   ├── sass
+    │    │   |   └── abstracts
+    │    |   |    |   ├── __abstracts.scss
+    │    |   |    |   ├── _accessibility.scss
+    │    |   |    |   ├── _typography.scss
+    │    |   |    |   ├── _variables.scss
+    │    │   |    └── base
+    │    |   |    |   ├── __base_dir.scss
+    │    |   |    |   ├── _normalize.scss
+    │    │   |    └── components
+    │    |   |    |   ├── __components-dir.scss
+    │    |   |    |   ├── _buttons.scss
+    │    |   |    |   ├── _infinite-scroll.scss
+    │    |   |    |   ├── _media.scss
+    │    │   |    └── layouts
+    │    |   |    |   ├── __layouts-dir.scss
+    │    |   |    |   ├── _content.scss
+    │    |   |    |   ├── _footer.scss
+    │    |   |    |   ├── _header.scss
+    │    |   |    |   ├── _navigation.scss
+    │    |   |    |   ├── _sidebar.scss
+    │    |   |    |   ├── _structure.scss
+    │    |   |    |   └── navigation-offcanvas.scss
+    │    │   |    └── templates
+    │    |   |    |   ├── __templates-dir.scss
+    │    |   |    |   ├── _template-2col-l-sidebar.scss
+    │    |   |    |   ├── _template-2col-r-sidebar.scss
+    │    |   |    |   ├── _template-full-width.scss
+    │    |   |    |   ├── _template-landing-page.scss
+    │    │   |    └── vendor
+    │    |   |    |   ├── __vendor-dir.scss
+    │    |   |    |   ├── _base.scss
+    │    |   |    |   ├── _buttons.scss
+    │    |   |    |   ├── _dashicons.scss
+    │    |   |    |   ├── _grid-settings.scss
+    │    |   |    |   ├── _layout.scss
+    │    |   |    |   ├── _lists.scss
+    │    |   |    |   └── _media.scss
+    │    |   |    |   └── _tables.scss
+    │    |   |    |   └── _typography.scss
+    │    |   |    |   └── _variables.scss
+    │    |   |    |   └── flexnav.scss
+    │    |   ├── _app.scss
+    │    |   ├── _grid-settings.scss
+    │    |   └── style.scss
     ├── library
     │   └── languages
     │   │   ├── some_like_it_neat.pot
     │   └── vendors
-    │   │   ├── js
+    │   │   ├── cmb2
+    │   │   ├── customizer
     │   │   ├── tgm-plugin-activation
-    │   │   ├── tha-theme-hooks
-    │   │   └── customizer
-    │   ├── custom-header.php
+    │   │   ├── theme-hook-alliance
+    │   │   └── custom-header.php
+    │   │   └── extras.php
+    │   │   └── jetpack.php
+    │   │   └── meta.php
+    │   │   └── template-tags.php
+    │   ├── assets.php
+    │   ├── customizer-frontend-settings.php
     │   ├── extras.php
-    │   ├── jetpack.php
-    │   └── template-tags.php
+    │   ├── theme-setup.php
+    │   ├── vendor.php
+    │   ├── widgets.php
     ├── page-templates
     │     └── template-parts
     |     |   ├── content-aside.php
@@ -203,7 +238,13 @@ a project.
     ├── searchform.php
     ├── sidebar.php
     ├── single.php
-    └── style.css</code></pre>
+    └── style.css
+</code></pre>
+
+How to Contribute to This Project
+---------------
+Your generous pull requests are welcome! Have a look at our contribution guide for details:
+[Contribution Guide](https://github.com/digisavvy/some-like-it-neat/blob/master/CONTRIBUTE.md)
 
 Road Map
 ---------------
@@ -229,6 +270,7 @@ A special thanks to all the folks who inspire me on a daily basis to "do more" w
 * Devin Walker
 * Blair Williams
 * Robert Neu
+* Rachel Cherry (Roll tide, roll)
 * And a <del>fuckload</del> lot more that I'm missing here.
 
 License

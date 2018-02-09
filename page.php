@@ -7,7 +7,10 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package some_like_it_neat
+ * @package Some_Like_It_Neat
+ * @author  Alex Vasquez <alex@digisavvy.com>
+ * @license GPL-2.0+ https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html
+ * @link    https://github.com/digisavvy/some-like-it-neat
  */
 
 get_header(); ?>
@@ -15,11 +18,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'page-templates/template-parts/content', 'page' ); ?>
+			<?php get_template_part( 'page-templates/template-parts/content', 'page' ); ?>
 
-			<?php endwhile; // end of the loop. ?>
+		<?php endwhile; // end of the loop. ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->

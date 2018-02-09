@@ -1,0 +1,40 @@
+// 2col Left Sidebar
+.page-template-page-templatestemplate-left-col-php {
+
+    h1.entry-title {
+        margin: 0;
+        text-align: left;
+    }
+    
+    #main {
+        @include grid-media($md) {
+            display: flex;
+        }
+
+        #primary {
+            @include grid-media($sm) {
+                @include grid-column(2);
+            }
+
+            @include grid-media($md) {
+                @include grid-column(4);
+                order: 2;
+            }
+        }
+
+        #secondary {
+            margin-right:1.5%;
+            @include grid-media($sm) {
+                @include grid-column(2);
+            }
+            @include grid-media($md) {
+                @include grid-column(2);
+                order: 1;
+            }
+        }
+    }
+}
+
+.post-template-page-templatestemplate-left-col-php {
+    @extend .page-template-page-templatestemplate-left-col-php;
+}

@@ -55,44 +55,45 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->get_section('title_tagline')->panel = 'site_content';
     $wp_customize->get_section('background_image')->panel = 'site_content';
 
+
     /**
     * Adding Panels for Home Page and Colors
     */
     $wp_customize->add_panel(
         'site_content', array(
-        'priority' => 5,
-        'capability' => 'edit_theme_options',
-        'theme_supports' => '',
-        'title' => __('General Site Content Settings', 'some-like-it-neat'),
-        'description' => __('Various site settings and config.', 'some-like-it-neat'),
+            'priority'          => 5,
+            'capability'        => 'edit_theme_options',
+            'theme_supports'    => '',
+            'title'             => __('General Site Content Settings', 'some-like-it-neat'),
+            'description'       => __('Various site settings and config.', 'some-like-it-neat'),
         ) 
     );
 
     // General Link Colors
     $wp_customize->add_panel(
-        'color_panel', array(
-        'priority' => 10,
-        'capability' => 'edit_theme_options',
-        'theme_supports' => '',
-        'title' => __('Color Palette Settings', 'some-like-it-neat'),
-        'description' => __('Color palette related settings and config.', 'some-like-it-neat'),
-        ) 
+			'color_panel', array(
+			'priority'          => 10,
+			'capability'        => 'edit_theme_options',
+			'theme_supports'    => '',
+			'title'             => __('Color Palette Settings', 'some-like-it-neat'),
+			'description'       => __('Color palette related settings and config.', 'some-like-it-neat'),
+		)
     );
 
     $wp_customize->add_setting(
         'some_like_it_neat_add_link_color', array(
-        'default'            => '#000000',
-        'sanitize_callback'     => 'maybe_hash_hex_color',
+            'default'               => '#000000',
+            'sanitize_callback'     => 'sanitize_hex_color',
         ) 
     );
 
     $wp_customize->add_control(
         new WP_Customize_Color_Control(
             $wp_customize, 'some_like_it_neat_add_link_color', array(
-            'label'            => __('Body Link Color', 'some-like-it-neat'),
-            'section'        => 'colors',
-            'settings'        => 'some_like_it_neat_add_link_color',
-            'priority'        => 6,
+                'label'     => __('Body Link Color', 'some-like-it-neat'),
+                'section'   => 'colors',
+                'settings'  => 'some_like_it_neat_add_link_color',
+                'priority'  => 6,
             )
         ) 
     );
@@ -100,41 +101,54 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     /**
     * Mobile Navigation Settings and Options
     */
-    $wp_customize->add_panel(
-        'navigation_panel', array(
-        'priority' => 15,
-        'capability' => 'edit_theme_options',
-        'theme_supports' => '',
-        'title' => __('Navigation Settings', 'some-like-it-neat'),
-        'description' => __('Navigation related settings and config.', 'some-like-it-neat'),
-        ) 
-    );
 
     $wp_customize->add_section(
         'navigation_section', array(
-            'priority' => 10,
-            'capability' => 'edit_theme_options',
-            'theme_supports' => '',
-            'title' => __('Navigation Setup', 'some-like-it-neat'),
-            'description' => '',
-            'panel' => 'navigation_panel',
+            'priority'          => 20,
+            'capability'        => 'edit_theme_options',
+            'theme_supports'    => '',
+            'title'             => __('Navigation Setup', 'some-like-it-neat'),
+            'description'       => '',
+            'panel'             => 'nav_menus',
         ) 
+    );
+
+    // Offcanvas or Flexnav Setting
+    $wp_customize->add_setting(
+        'some-like-it-neat_nav_style',
+        array(
+            'default'   => 'flexnav'
+        )
+    );
+
+    $wp_customize->add_control(
+        'some-like-it-neat_nav_style',
+        array(
+            'section'   => 'navigation_section',
+            'label'     => __('Navigation Style', 'some-like-it-neat'),
+            'type'      => 'radio',
+            'choices'   => array(
+                'flexnav'   => 'Flexnav',
+                'offcanvas'    => 'Off-Canvas'
+            ),
+            'description'   => __('Default menu is the horizontal flexnav menu. Offcanvas slides in from the left', 'some-like-it-neat'),
+        )
     );
 
     // Mobile nav label
     $wp_customize->add_setting(
         'some_like_it_neat_mobile_nav_label',
         array(
-        'default'            => 'Menu',
-        'sanitize_callback' => 'some_like_it_neat_sanitize_text',
+            'default'           => 'Menu',
+            'sanitize_callback' => 'some_like_it_neat_sanitize_text',
         )
     );
     $wp_customize->add_control(
         'some_like_it_neat_mobile_nav_label',
         array(
-        'section'            => 'navigation_section',
-        'label'                => __('Mobile Navigation Label', 'some-like-it-neat'),
-        'type'                => 'text',
+            'section'   => 'navigation_section',
+            'label'     => __('Mobile Navigation Label', 'some-like-it-neat'),
+            'type'      => 'text',
         )
     );
 
@@ -142,16 +156,16 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->add_setting(
         'some_like_it_neat_mobile_min_width',
         array(
-        'default'            => '768',
-        'sanitize_callback'    => 'absint',
+            'default'               => '768',
+            'sanitize_callback'     => 'absint',
         )
     );
     $wp_customize->add_control(
         'some_like_it_neat_mobile_min_width',
         array(
-        'section'    => 'navigation_section',
-        'label'        => __('Mobile Navigation Min-Width (numeric value)', 'some-like-it-neat'),
-        'type'        => 'text',
+            'section'   => 'navigation_section',
+            'label'     => __('Mobile Navigation Min-Width (numeric value)', 'some-like-it-neat'),
+            'type'      => 'text',
         )
     );
 
@@ -159,8 +173,8 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->add_setting(
         'some_like_it_neat_mobile_nav_icon',
         array(
-        'default'            => 'dashicons-menu',
-        'sanitize_callback' => 'some_like_it_neat_sanitize_text',
+            'default'           => 'dashicons-menu',
+            'sanitize_callback' => 'some_like_it_neat_sanitize_text',
         )
     );
 
@@ -168,10 +182,10 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->add_control(
         'some_like_it_neat_mobile_nav_icon',
         array(
-        'section'            => 'navigation_section',
-        'label'                => __('Mobile Navigation Icon', 'some-like-it-neat'),
-        'type'                => 'text',
-        'description'       => __('Dashicons are enabled and you can use them here! ' . $dashicons . '', 'some-like-it-neat'),
+            'section'       => 'navigation_section',
+            'label'         => __('Mobile Navigation Icon', 'some-like-it-neat'),
+            'type'          => 'text',
+            'description'   => __('Dashicons are enabled and you can use them here! ' . $dashicons . '', 'some-like-it-neat'),
         )
     );
 
@@ -179,18 +193,18 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->add_setting(
         'some_like_it_neat_mobile_hide_arrow',
         array(
-        'default'        => 'No',
-        'sanitize_callback'    => 'some_like_it_neat_sanitize_checkbox',
+            'default'           => 'No',
+            'sanitize_callback' => 'some_like_it_neat_sanitize_checkbox',
         )
     );
 
     $wp_customize->add_control(
         'some_like_it_neat_mobile_hide_arrow',
         array(
-        'section'            => 'nav',
-        'label'                => __('Mobile Navigation Hide Right Arrow', 'some-like-it-neat'),
-        'type'                => 'radio',
-        'choices'            => array( 'Yes', 'No' ),
+            'section'   => 'nav',
+            'label'     => __('Mobile Navigation Hide Right Arrow', 'some-like-it-neat'),
+            'type'      => 'radio',
+            'choices'   => array( 'Yes', 'No' ),
         )
     );
 
@@ -199,71 +213,71 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
         */
     $wp_customize->add_panel(
         'footer_settings_panel', array(
-        'priority' => 25,
-        'capability' => 'edit_theme_options',
-        'theme_supports' => '',
-        'title' => __('Footer Settings', 'some-like-it-neat'),
-        'description' => __('Settings related to the Footer Section.', 'some-like-it-neat'),
+            'priority'          => 25,
+            'capability'        => 'edit_theme_options',
+            'theme_supports'    => '',
+            'title'             => __('Footer Settings', 'some-like-it-neat'),
+            'description'       => __('Settings related to the Footer Section.', 'some-like-it-neat'),
         ) 
     );
 
     $wp_customize->add_section(
         'some_like_it_neat_footer_section_settings', array(
-        'priority' => 10,
-        'capability' => 'edit_theme_options',
-        'theme_supports' => '',
-        'title' => __('Footer Area Settings', 'some-like-it-neat'),
-        'description' => 'Enter copy for right, left and colophon footer areas',
-        'panel' => 'footer_settings_panel',
+            'priority'          => 10,
+            'capability'        => 'edit_theme_options',
+            'theme_supports'    => '',
+            'title'             => __('Footer Area Settings', 'some-like-it-neat'),
+            'description'       => 'Enter copy for right, left and colophon footer areas',
+            'panel'             => 'footer_settings_panel',
         ) 
     );
 
     $wp_customize->add_setting(
         'some_like_it_neat_footer_left',
         array(
-        'sanitize_callback'    => 'some_like_it_neat_sanitize_text',
-        'default'            => '&copy; All Rights Reserved',
+            'sanitize_callback' => 'some_like_it_neat_sanitize_text',
+            'default'           => '&copy; All Rights Reserved',
         )
     );
     $wp_customize->add_control(
         'some_like_it_neat_footer_left',
         array(
-        'section'    => 'some_like_it_neat_footer_section_settings',
-        'label'        => __('Left Footer', 'some-like-it-neat'),
-        'type'        => 'text',
+            'section'   => 'some_like_it_neat_footer_section_settings',
+            'label'     => __('Left Footer', 'some-like-it-neat'),
+            'type'      => 'text',
         )
     );
 
     $wp_customize->add_setting(
         'some_like_it_neat_footer_right',
         array(
-        'default'            => 'Footer Content Right',
-        'sanitize_callback'    => 'some_like_it_neat_sanitize_text',
+            'default'           => 'Footer Content Right',
+            'sanitize_callback' => 'some_like_it_neat_sanitize_text',
         )
     );
     $wp_customize->add_control(
         'some_like_it_neat_footer_right',
         array(
-        'section'    => 'some_like_it_neat_footer_section_settings',
-        'label'        => __('Right Footer', 'some-like-it-neat'),
-        'type'        => 'text',
+            'section'    => 'some_like_it_neat_footer_section_settings',
+            'label'        => __('Right Footer', 'some-like-it-neat'),
+            'type'        => 'text',
         )
     );
 
     $wp_customize->add_setting(
         'some_like_it_neat_footer_colophon',
         array(
-        'default'            => 'Some Like it Neat, by Alex Vasquez',
-        'sanitize_callback'    => 'some_like_it_neat_sanitize_text',
+            'default'            => 'Some Like it Neat, by Alex Vasquez',
+            'sanitize_callback'    => 'some_like_it_neat_sanitize_text',
         )
     );
     $wp_customize->add_control(
         'some_like_it_neat_footer_colophon',
         array(
-        'section'        => 'some_like_it_neat_footer_section_settings',
-        'label'            => __('Footer Colophon', 'some-like-it-neat'),
-        'type'            => 'text',
-        'transport'    => 'postMessage',
+            'section'   => 'some_like_it_neat_footer_section_settings',
+            'label'     => __('Footer Colophon', 'some-like-it-neat'),
+            'type'      => 'text',
+            'transport' => 'postMessage',
         )
     );
 
@@ -274,12 +288,12 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     // Add Content Extras Panel
     $wp_customize->add_section(
         'content_extras', array(
-        'priority' => 0,
-        'capability' => 'edit_theme_options',
-        'theme_supports' => '',
-        'title' => __('Content Extras', 'some-like-it-neat'),
-        'description' => '',
-        'panel' => 'site_content',
+        'priority'      => 0,
+        'capability'    => 'edit_theme_options',
+        'theme_supports'=> '',
+        'title'         => __('Content Extras', 'some-like-it-neat'),
+        'description'   => '',
+        'panel'         => 'site_content',
         ) 
     );
 
@@ -289,22 +303,47 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->add_setting(
         'some-like-it-neat_hide_WordPress_credits',
         array(
-                    'default'   => 'no'
-                )
+            'default'   => 'no'
+        )
     );
 
     $wp_customize->add_control(
         'some-like-it-neat_hide_WordPress_credits',
         array(
-                'section'    => 'content_extras',
-                'label'        => __('Hide WordPress Credits in Footer?', 'some-like-it-neat'),
-                'type'        => 'radio',
-                'choices'    => array(
-                    'yes'    => 'Yes',
-                    'no'        => 'No'
-                )
+            'section'   => 'content_extras',
+            'label'     => __('Hide WordPress Credits in Footer?', 'some-like-it-neat'),
+            'type'      => 'radio',
+            'choices'   => array(
+                'yes'   => 'Yes',
+                'no'    => 'No'
+            )
         )
     );
+
+	/**
+	 * Hide or Show Post Navigation
+	 */
+	$wp_customize->add_setting(
+		'some-like-it-neat_hide_post_navigation',
+		array(
+			'default'   => 'no',
+			'transport' => 'postMessage'
+		)
+	);
+
+	$wp_customize->add_control(
+		'some-like-it-neat_hide_post_navigation',
+		array(
+			'section'       => 'content_extras',
+			'label'         => __('Hide WordPress Post Navigation Globally?', 'some-like-it-neat'),
+			'description'   => __('Hides the post navigation links at the bottom of a page or post. You can also do this on a per page basis.', 'some-like-it-neat'),
+			'type'          => 'radio',
+			'choices'       => array(
+				'yes'           => 'Yes',
+				'no'            => 'No'
+			)
+		)
+	);
 
     /**
         * Enable/Disable Post Format support
@@ -313,22 +352,22 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->add_setting(
         'some-like-it-neat_post_format_support',
         array(
-                    'default'   => 'yes',
-                    'transport' => 'postMessage'
-                )
+            'default'   => 'yes',
+            'transport' => 'postMessage'
+        )
     );
 
     $wp_customize->add_control(
         'some-like-it-neat_post_format_support',
         array(
-                    'section'    => 'content_extras',
-                    'label'        => __('Enable Post Format support', 'some-like-it-neat'),
-                    'type'        => 'radio',
-                    'choices'    => array(
-                        'yes'    => 'Yes',
-                        'no'        => 'No'
-                    )
-                )
+            'section'   => 'content_extras',
+            'label'     => __('Enable Post Format support', 'some-like-it-neat'),
+            'type'      => 'radio',
+            'choices'   => array(
+                'yes'   => 'Yes',
+                'no'    => 'No'
+            )
+        )
     );
 
     /**
@@ -339,23 +378,23 @@ function some_like_it_neat_add_customizer_theme_options($wp_customize)
     $wp_customize->add_setting(
         'some-like-it-neat_infinite_scroll_support',
         array(
-                    'default'   => 'no',
-                    'transport' => 'postMessage'
-                )
+            'default'   => 'no',
+            'transport' => 'postMessage'
+        )
     );
 
     $wp_customize->add_control(
         'some-like-it-neat_infinite_scroll_support',
         array(
-                    'section'  => 'content_extras',
-                    'label'        => __('Enable Infinite Scroll Theme Support', 'some-like-it-neat'),
-                    'type'     => 'radio',
-                    'description' => __('If enabled, you must install the Jetpack Plugin and Activate it.', 'some-like-it-neat'),
-                        'choices'  => array(
-                        'no'    => 'No',
-                        'yes'   => 'Yes'
-                        )
-                )
+        'section'       => 'content_extras',
+        'label'         => __('Enable Infinite Scroll Theme Support', 'some-like-it-neat'),
+        'type'          => 'radio',
+        'description'   => __('If enabled, you must install the Jetpack Plugin and Activate it.', 'some-like-it-neat'),
+            'choices'   => array(
+                'no'        => 'No',
+                'yes'       => 'Yes'
+            )
+        )
     );
 
     // Set the type of Infinite Scroll
