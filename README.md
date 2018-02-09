@@ -244,7 +244,7 @@ a project.
 How to Contribute to This Project
 ---------------
 Your generous pull requests are welcome! Have a look at our contribution guide for details:
-[Contribution Guide](https://github.com/digisavvy/some-like-it-neat/blob/master/CONTRIBUTE.md)
+[Contribution Guide](https://github.com/digisavvy/some-like-it-neat/blob/master/CONTRIBUTING.md)
 
 Road Map
 ---------------
@@ -320,8 +320,3 @@ Hover Intent
  - Source: https://github.com/tristen/hoverintent
  - License: the MIT
  - License URI: license.txt
-
-Bi-App-Sass
-- Source: http://anasnakawa.github.io/bi-app-sass/
-- License: the MIT License
-- License URI: https://github.com/anasnakawa/bi-app-sass/blob/master/LICENSE
