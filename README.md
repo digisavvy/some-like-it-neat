@@ -52,7 +52,8 @@ There are things you need to install before you hack away at things. There are t
 
 * #### Prerequisites
   * You'll need to download and install [Node](https://nodejs.org/)
-  * You will also need to download and install [Sass](http://sass-lang.com/install)
+  * You will need to download and install [Sass](http://sass-lang.com/install)
+  * You will need also need to download, install, and configure [Composer](https://getcomposer.org/doc/00-intro.md)
 
 * #### Getting and Installing the Theme
   * The first thing you’ll want to do is grab a copy of the theme —
@@ -124,8 +125,6 @@ a project.
     |    |   |    |   ├── navigation-offcanvas.css
     │    │   |    └── vendor
     |    |   |    |   ├── flexnav.css
-    |    |   |    ├── rtl-min.css
-    |    |   |    ├── rtl.css
     |    |   |    ├── style-min.css
     |    |   |    └── style.css
     │    |   └──  js
@@ -183,7 +182,6 @@ a project.
     │    |   |    |   └── flexnav.scss
     │    |   ├── _app.scss
     │    |   ├── _grid-settings.scss
-    │    |   ├── _rtl.scss
     │    |   └── style.scss
     ├── library
     │   └── languages
