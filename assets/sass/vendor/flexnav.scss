@@ -329,3 +329,12 @@ $fourth_level: #999;
         width: 19.9%;
     }
 }
+#menu-all-pages {
+    @include grid-media($sm) {
+        display: flex;
+        flex-direction: column;
+    }
+    @include grid-media($md) {
+        flex-direction: row;
+    }
+}
