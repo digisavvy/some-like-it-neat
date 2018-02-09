@@ -8,7 +8,9 @@
 @import '../components/buttons';
 
 // Offcanvas menu styling
-
+.dropdown-toggle:hover {
+  padding: 0;
+}
 // Hamburger Menu
 .hamburger-wrapper {
   box-shadow: #ccc;
