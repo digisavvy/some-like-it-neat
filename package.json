@@ -2,7 +2,7 @@
   "devDependencies": {
     "browser-sync": "*",
     "del": "*",
-    "gulp": "*",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "*",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
@@ -38,6 +38,6 @@
   "dependencies": {
     "bourbon": "^5.0.0",
     "bourbon-neat": "^2.0.0",
-    "uglify-js": "^3.3.10"
+    "uglify-js": "^3.3.12"
   }
 }
