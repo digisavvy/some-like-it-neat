@@ -2,7 +2,7 @@
   "devDependencies": {
     "browser-sync": "*",
     "del": "*",
-    "gulp": "^4.0.0",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "*",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
