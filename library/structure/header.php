@@ -16,7 +16,7 @@ function some_like_it_neat_do_header() {
 
 <?php if ('flexnav' === get_theme_mod('some-like-it-neat_nav_style') ) {
 
-        get_template_part('page-templates/template-parts/navigation', 'flexnav');
+    get_template_part('page-templates/template-parts/navigation', 'flexnav');
 
 } else {
 
