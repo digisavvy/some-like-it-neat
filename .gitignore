@@ -37,9 +37,7 @@ Thumbs.db
 
 # Composer #
 ##########
-library/vendors/composer/
 vendor
-!assets/js/vendor/
 wpcs/
 composer.lock
 
@@ -70,7 +68,9 @@ assets/sass/HTML
 assets/sass/Rails
 HTML
 Rails
-vendor
+
+# Theme Specific #
+!assets/js/vendor/
 
 # WordPress #
 ##########
