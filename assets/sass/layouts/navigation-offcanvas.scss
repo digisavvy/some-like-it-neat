@@ -72,8 +72,16 @@
     }
 
     .hamburger-label {
+      @include grid-media($sm) {
+        font-size: 12px;
+      }
+      @include grid-media($md) {
+        font-size: 14px;
+      }
+      @include grid-media($mdbg) {
+        font-size: 16px;
+      }
       font-family: $title;
-      font-size: 16px;
       line-height: 1;
       position: absolute;
       text-transform: uppercase;
@@ -452,7 +460,15 @@ header.offcanvas-nav {
   }
 
   .site-branding .site-title {
-    font-size: 35px;
+    @include grid-media($sm) {
+      font-size: 4vh;
+    }
+    @include grid-media($md) {
+      font-size: 25px;
+    }
+    @include grid-media($mdbg) {
+      font-size: 35px;
+    }
   }
 
   p.site-title a {
@@ -468,6 +484,15 @@ header.offcanvas-nav {
     transition: all .25s linear;
 
     .site-branding .site-title a {
+      @include grid-media($sm) {
+        font-size: 4vh;
+      }
+      @include grid-media($md) {
+        font-size: 25px;
+      }
+      @include grid-media($mdbg) {
+        font-size: 35px;
+      }
       color: #fff;
     }
 

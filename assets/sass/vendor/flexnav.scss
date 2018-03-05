@@ -163,8 +163,10 @@ $fourth_level: #999;
     }
 }
 .menu-button {
+    margin-bottom: 0;
     &:hover {
-        color: $base-body-color;
+        color: $primary-font-color;
+        padding: 1em;
         i.navicon {
             color: $base-body-color;
                 &:after {

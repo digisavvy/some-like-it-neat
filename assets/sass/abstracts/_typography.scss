@@ -43,28 +43,88 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 h1 {
-    font-size: 75px;
+    @include grid-media($sm) {
+        font-size: 8vh;
+    }
+    @include grid-media($smbg) {
+        font-size: 55px;
+    }
+    @include grid-media($md) {
+        font-size: 65px;
+    }
+    @include grid-media($mdbg) {
+        font-size: 75px;
+    }
     color: $primary-font-color;
     font-family: $title;
 }
 h2 {
-    font-size: 50px;
+    @include grid-media($sm) {
+        font-size: 6vh;
+    }
+    @include grid-media($smbg) {
+        font-size: 30px;
+    }
+    @include grid-media($md) {
+        font-size: 40px;
+    }
+    @include grid-media($mdbg) {
+        font-size: 50px;
+    }
     font-family: $title;
 }
 h3 {
-    font-size: 35px;
+    @include grid-media($sm) {
+        font-size: 5vh;
+    }
+    @include grid-media($smbg) {
+        font-size: 25px;
+    }
+    @include grid-media($md) {
+        font-size: 30px;
+    }
+    @include grid-media($mdbg) {
+        font-size: 35px;
+    }
     font-family: $title;
 }
 h4 {
-    font-size: 24px;
+    @include grid-media($sm) {
+        font-size: 18px;
+    }
+    @include grid-media($smbg) {
+        font-size: 20px;
+    }
+    @include grid-media($md) {
+        font-size: 22px;
+    }
+    @include grid-media($mdbg) {
+        font-size: 24px;
+    }
     font-family: $title;
 }
 h5 {
-    font-size: 20px;
+    @include grid-media($sm) {
+        font-size: 14px;
+    }
+    @include grid-media($smbg) {
+        font-size: 16px;
+    }
+    @include grid-media($md) {
+        font-size: 18px;
+    }
+    @include grid-media($mdbg) {
+        font-size: 20px;
+    }
     font-family: $title;
 }
 h6 {
-    font-size: 16px;
+    @include grid-media($sm) {
+        font-size: 14px;
+    }
+    @include grid-media($md) {
+        font-size: 16px;
+    }
     font-family: $title;
 }
 blockquote {
