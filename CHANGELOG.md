@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.5.1
+-------------
+* Updated to Neat 2.0
+
 ### 1.5.0
 -------------
 * Updated to Neat 2.0
