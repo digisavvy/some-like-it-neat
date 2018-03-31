@@ -2,7 +2,11 @@
 
 ### 1.5.1
 -------------
-* Updated to Neat 2.0
+* Re-added PHPCS support, hat tip Rachel Cherry @bamadesigner
+* Added support for Beaver Themer (ab4095567e71db3cbeb6aee02bb0bc4eac8bd1d4)
+* General styling/formatting and bug fixes and updates
+* Removed bi-app-sass, we're looking for alternate RTL support, may be better supported in Bourbon
+* Replaced CMB2 with Carbon Fields and added as Composer Dependency.
 
 ### 1.5.0
 -------------
