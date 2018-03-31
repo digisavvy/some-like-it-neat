@@ -9,8 +9,8 @@
 /******************************************************************************
 | >   PROJECT VARIABLES
  ******************************************************************************/
-var project    = 'slin';
-var url        = 'slin.dev';
+var project    = 'slintheme';
+var url        = 'slintheme.site';
 var build      = './build/';
 var vendors    = './library/vendors/';
 var source     = 'assets/';
@@ -77,7 +77,9 @@ gulp.task(
 		];
 		browserSync.init(
 			files, {
-				proxy: url
+				proxy: url, // The hostname we are proxying. 
+				host: url, // The hostname we want to use in the browser.
+				open: 'external' // Load either the 'local' hostname or the 'external' hostname.
 			}
 		);
 	}
