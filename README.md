@@ -60,13 +60,17 @@ There are things you need to install before you hack away at things. There are t
 **git clone git://github.com/digisavvy/some-like-it-neat.git** – or [download](http://github.com/digisavvy/some-like-it-neat) it and then rename the directory to the name of your theme or website.
 
 
-* #### Install Gulpjs, and NPM Dependencies
+* #### Install Composer and NPM Dependencies
 
   Once you have Node, Sass and the theme installed, the next step is simple enough.
 
-   **_(note - you may have to run the following commands as admin or sudo)_**
+  **_(note - you may have to run the following commands as admin or sudo)_**
 
-  * **Install Gulp** — Open a command prompt/terminal and navigate to your theme's root directory and run this command: `npm install` - This installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync! You'll need to run this step on each of your projects, going forward.
+  Open a command prompt/terminal and navigate to your theme's root directory. Run the following two commands:
+  
+  * **`composer install`** - Installs Composer and the dependencies needed for custom post meta management.
+
+  * **`npm install`** - Installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync! You'll need to run this step on each of your projects, going forward.
  
  * #### Set your project configuration in Gulpfile.js!!
 _Be sure to go into gulpfile.js and setup the project configuration variables._
