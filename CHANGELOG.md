@@ -7,6 +7,7 @@
 * General styling/formatting and bug fixes and updates
 * Removed bi-app-sass, we're looking for alternate RTL support, may be better supported in Bourbon
 * Replaced CMB2 with Carbon Fields and added as Composer Dependency.
+* Fix - Theme activation would crash site if you didn't run `composer install` first. Thanks @bamadesigner
 
 ### 1.5.0
 -------------
