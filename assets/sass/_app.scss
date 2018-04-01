@@ -4,7 +4,7 @@ Theme URI: https://github.com/digisavvy/some-like-it-neat
 Author: Alex Vasquez
 Author URI: http://alexhasnicehair.com
 Description: A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat
-Version: 1.4.2
+Version: 1.5.1
 License: GNU General Public License
 License URI: license.txt
 Text Domain: some_like_it_neat
@@ -25,92 +25,44 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 - Bourbon, Bitters, Neat
-2.0 - Normalize
-3.0 - Elements
-4.0 - Forms
-5.0 - Components/ Add-ons
-6.0 - Layout and Structure
-    6.1 - Header
-    6.2 - Navigation
-    6.3 - Content
-    6.4 - Page Templates
-    6.5 - Sidebar
-    6.6 - Footer
-    6.7 - Accessibility
+1.0 - Base Elements
+2.0 - Vendor Add-on2
+3.0 - Variables, Typography, Accessibility
+4.0 - Components
+5.0 - Layout and Structure
+    5.1 - Header
+    5.2 - Navigation
+    5.3 - Content
+    5.4 - Page Templates
+    5.5 - Sidebar
+    5.6 - Footer
+    5.7 - Accessibility
 
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-1.0 Bourbon, Bitters, Neat
+1.0 Base Elements: Normalize
 --------------------------------------------------------------*/
-@import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
-@import 'base/base'; // Bitters
-@import 'grid-settings';
-@import '../../node_modules/bourbon-neat/app/assets/stylesheets/neat';
+@import "base/__base-dir";
 
 /*--------------------------------------------------------------
-2.0 Variables
+2.0 Vendor Add-ons (Bourbon, Neat, Flexnav etc.)
 --------------------------------------------------------------*/
-@import 'components/variables';
+@import "vendor/__vendor-dir";
 
 /*--------------------------------------------------------------
-3.0 Normalize/Reset
+3.0 Variables, Typography, Accessibility
 --------------------------------------------------------------*/
-@import 'layouts/normalize';
+@import "abstracts/__abstracts-dir";
 
 /*--------------------------------------------------------------
-4.0 Typography
+4.0 Components/
 --------------------------------------------------------------*/
-@import 'components/typography';
+@import "components/__components-dir";
 
 /*--------------------------------------------------------------
-5.0 Components/Add-ons
+5.0 Layout, Page Templates, and Structures
 --------------------------------------------------------------*/
-@import '../../node_modules/bourbon/app/assets/stylesheets/addons/clearfix';
-@import 'components/buttons';
-@import 'components/infinite-scroll';
+@import "layouts/__layouts-dir";
 
-/*--------------------------------------------------------------
-6.0 Layout and Structure
---------------------------------------------------------------*/
-@import 'layouts/structure';
 
-    /*--------------------------------------------------------------
-    6.1 Header
-    --------------------------------------------------------------*/
-    @import 'layouts/header';
-
-    /*--------------------------------------------------------------
-    6.2 Navigation
-    --------------------------------------------------------------*/
-    @import 'components/flexnav';
-    @import 'layouts/navigation';
-
-    /*--------------------------------------------------------------
-    6.3 Content
-    --------------------------------------------------------------*/
-    @import 'layouts/content';
-
-    /*--------------------------------------------------------------
-    6.4 Page Templates
-    --------------------------------------------------------------*/
-    @import 'layouts/template-2col-l-sidebar';
-    @import 'layouts/template-2col-r-sidebar';
-    @import 'layouts/template-full-width';
-    @import 'layouts/template-landing-page';
-
-    /*--------------------------------------------------------------
-    6.5 Sidebar
-    --------------------------------------------------------------*/
-    @import 'layouts/sidebar';
-
-    /*--------------------------------------------------------------
-    6.6 Footer
-    --------------------------------------------------------------*/
-    @import 'layouts/footer';
-
-    /*--------------------------------------------------------------
-    6.7 Accessibility
-    --------------------------------------------------------------*/
-    @import 'layouts/accessibility';
