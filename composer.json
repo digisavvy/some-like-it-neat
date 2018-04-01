@@ -3,10 +3,12 @@
 	"description": "A simple yet advanced WordPress Starter Theme built using _S, Bourbon and Neat.",
 	"type": "wordpress-theme",
 	"license": "GPL",
+	"require": {
+		"htmlburger/carbon-fields": "*"
+	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "2.*",
-		"wp-coding-standards/wpcs": "*",
-		"htmlburger/carbon-fields": "*"
+		"wp-coding-standards/wpcs": "*"
 	},
 	"scripts": {
 		"post-install-cmd": [

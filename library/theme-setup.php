@@ -11,10 +11,39 @@
 /**
  * Including Carbon Fields (https://github.com/htmlburger/carbon-fields).
  */
-add_action( 'after_setup_theme', 'crb_load' );
-function crb_load() {
-	require_once( get_template_directory() . '/vendor/autoload.php' );
-	\Carbon_Fields\Carbon_Fields::boot();
+function some_like_it_neat_crb_load() {
+
+	$autoload = TEMPLATEPATH . '/vendor/autoload.php';
+	if ( file_exists( $autoload ) ) :
+
+		require_once( $autoload );
+		\Carbon_Fields\Carbon_Fields::boot();
+
+	else :
+		add_action( 'admin_notices', 'some_like_it_neat_crb_admin_notice' );
+	endif;
+}
+add_action( 'after_setup_theme', 'some_like_it_neat_crb_load' );
+
+function some_like_it_neat_crb_admin_notice() {
+
+	// Only need on post edit screens.
+	$current_screen = get_current_screen();
+	if ( empty( $current_screen->base ) || 'post' != $current_screen->base ) {
+		return;
+	}
+
+	// Only need for our Carbon post types.
+	$post_types = some_like_it_neat_get_crb_post_types();
+	if ( empty( $current_screen->post_type ) || ! in_array( $current_screen->post_type, $post_types ) ) {
+		return;
+	}
+
+	?>
+	<div class="notice-error error">
+		<p><?php printf( __( 'Your theme requires that you run \'%1$s\' in order to manage your content. Refer to the \'%2$s\' in the theme\'s README.md file.', 'some_like_it_neat' ), 'composer install', 'Install Composer and NPM Dependencies' ); ?></p>
+	</div>
+	<?php
 }
 
 if ( ! function_exists( 'some_like_it_neat_setup' ) ) :
