@@ -71,6 +71,7 @@ Rails
 
 # Theme Specific #
 !assets/js/vendor/
+!assets/assets/vendor
 
 # WordPress #
 ##########
