@@ -20,7 +20,7 @@ What's Inside?
 
 Bourbon provides a lightweight Sass library (similar to Compass).
 
-Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. **However, given the recent addition of [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) it is recommended that you use CSS Grid to build out your layouts going forward.** Support is pretty darn good. Neat has been left here and it's used primarily for breakpoint variables.
+Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. **However, given the recent addition of [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid), it is recommended that you use CSS Grid to build your layouts going forward.** Support is pretty darn good. Neat has been left here and it's used primarily for breakpoint variables.
 
 Bitters is baked-in, too! You get some basic nifty styles out of the gate.
 
