@@ -30,8 +30,6 @@ $large-screen-up: new-breakpoint(min-width $large-screen 8);
 // Why this method? I think it allows more flexibility with things like bg images that can span full width since we're
 // not using a wrap to contain things, plus our text remains constrained. It's nifty.
 // --------------------------------------
-
-
 @mixin section-container($context: wide, $width: 1200px) {
   @if $context == wide {
     padding: 0 calc((100% - #{$width}) / 2);
