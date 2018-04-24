@@ -1,4 +1,5 @@
 footer {
+    grid-column: 1 / -1;
     @include grid-container();
 
     .site-info {

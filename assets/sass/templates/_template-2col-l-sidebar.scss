@@ -7,29 +7,56 @@
     }
     
     #main {
+        display: grid;
+        grid-column-gap: 20px;
+        
+        @include grid-media($sm) {
+            grid-template-columns: repeat(2, [col-start] 1fr);
+        }
+        @include grid-media($smbg) {
+            grid-template-columns: repeat(4, [col-start] 1fr);
+        }
         @include grid-media($md) {
-            display: flex;
+            grid-template-columns: repeat(6, [col-start] 1fr);
+        }
+        @include grid-media($mdbg) {
+            grid-template-columns: repeat(8, [col-start] 1fr);
         }
 
         #primary {
             @include grid-media($sm) {
-                @include grid-column(2);
+                grid-column: 1 / -1;
+                padding: 0 20px;
             }
-
+            @include grid-media($smbg) {
+            }
             @include grid-media($md) {
-                @include grid-column(4);
+                
+            }
+            @include grid-media($mdbg) {
+                grid-column: col-start 3 / span 6;
+                margin-right: 20px;
                 order: 2;
+                padding: 0;
             }
         }
 
         #secondary {
-            margin-right:1.5%;
+            // margin-right:1.5%;
             @include grid-media($sm) {
-                @include grid-column(2);
+                grid-column: 1 / -1;
+                padding: 0 20px;
+            }
+            @include grid-media($smbg) {
             }
             @include grid-media($md) {
-                @include grid-column(2);
+                
+            }
+            @include grid-media($mdbg) {
+                grid-column: col-start / span 2;
+                margin-left: 20px;
                 order: 1;
+                padding: 0;
             }
         }
     }

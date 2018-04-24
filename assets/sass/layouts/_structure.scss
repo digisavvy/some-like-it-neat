@@ -18,36 +18,53 @@ body {
 .site-header,
 .site-footer,
 .site-main {
-	@include grid-container();
-	@include section-container('wide');
+	@include grid-media($sm) {
+		grid-column: 1 / -1;
+	}
+	@include grid-media($smbg) {
+
+	}
+	@include grid-media($md) {
+
+	}
+	@include grid-media($mdbg) {
+		@include grid-container();
+		@include section-container('wide');
+	}
 }
 
 main#main {
 	display: grid;
 	grid-column-gap: 20px;
-	// grid-template-areas: 
-	// 	"content sidebar";
-	// grid-template-columns: 2fr 1fr;
-	grid-template-columns: repeat(12, [col-start] 1fr);
+	
+	@include grid-media($sm) {
+		grid-template-columns: repeat(2, [col-start] 1fr);
+	}
+	@include grid-media($smbg) {
+		grid-template-columns: repeat(4, [col-start] 1fr);
+	}
+	@include grid-media($md) {
+		grid-template-columns: repeat(6, [col-start] 1fr);
+	}
+	@include grid-media($mdbg) {
+		grid-template-columns: repeat(8, [col-start] 1fr);
+	}
 }
 
 #primary {
-	grid-column: col-start / span 9;
-	// grid-area: content;
 	@include grid-media($sm) {
-		// @include grid-column(2);
+		grid-column: 1 / -1;
+		padding: 0 20px;
 	}
 	@include grid-media($smbg) {
-		// @include grid-column(4);
 	}
 	@include grid-media($md) {
-		// @include grid-column(4);
 	}
 	@include grid-media($mdbg) {
-		// @include grid-column(5);
+		grid-column: col-start / span 6;
+		padding: 0;
 	}
-	margin: 0 auto;
-	width: 100%;
+	// margin: 0 auto;
 
 	ul, ol {
 		list-style: none;
@@ -70,20 +87,17 @@ main#main {
 }
 
 #secondary {
-	// grid-area: sidebar;
-	grid-column: col-start 10 / span 4;
 	@include grid-media($sm) {
-		// @include grid-column(2);
+		grid-column: 1 / -1;
+		padding: 0 20px;
 	}
 	@include grid-media($smbg) {
-		// @include grid-column(4);
 	}
 	@include grid-media($md) {
-		// @include grid-column(2);
 	}
 	@include grid-media($mdbg) {
-		// @include grid-column(2.5);
-		// @include grid-push(.5);
+		grid-column: col-start 7 / span 3;
+		padding: 0;
 	}
 }
 
