@@ -29,6 +29,9 @@ main#main {
 		grid-column-gap: 20px;
 		grid-template-columns: repeat(8, [col-start] 1fr);
 	}
+	@include grid-media($hg) {
+		grid-template-columns: repeat(12, [col-start] 1fr);
+	}
 }
 
 #primary {
@@ -37,9 +40,13 @@ main#main {
 		padding: 0 20px;
 	}
 	@include grid-media($mdbg) {
-		grid-column: col-start / span 6;
+		grid-column: 1 / 7;
 		margin-left: 20px;
 		padding: 0;
+	}
+	@include grid-media($hg) {
+		grid-column: 1 / 9;
+		margin: 0;
 	}
 	// margin: 0 auto;
 
@@ -69,9 +76,13 @@ main#main {
 		padding: 0 20px;
 	}
 	@include grid-media($mdbg) {
-		grid-column: col-start 7 / span 3;
+		grid-column: 7 / 9;
 		margin-right: 20px;
 		padding: 0;
+	}
+	@include grid-media($hg) {
+		grid-column: 9 / -1;
+		margin: 0;
 	}
 }
 
