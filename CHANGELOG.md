@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.6
+-------------
+* **Big change** Removed Neat grid-column() functions in favor of [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid). Neat Still works, but is no longer used to define layouts. It is now primarily used for its `grid-media` function for setting up variable breakpoints. If you want to continue using Neat to define layouts it’s still there and you can do that. I recommend pushing ahead with CSS Grid, it’s great and the FireFox Developer docs are fantastic (linked above). Also check out [Wes Bos’s free course](https://wesbos.io)
+* Fix issue with `_headroom.scss` not getting included in project files.
+
 ### 1.5.1
 -------------
 * Re-added PHPCS support, hat tip Rachel Cherry @bamadesigner
@@ -36,7 +41,7 @@
 * Change - Remove Bower; we're using NPM for package mgmt completely.
 * Update - TGMP to 2.6.1
 * Update - Various NPM Packages. Commit: 5a8d5ab0bee0b19cb78ceb8b8a4ad5c273928a7e
-        
+		
 ### 1.4.0
 -------------
 **Bugfixes**
@@ -345,3 +350,4 @@
 **Bugfixes:**
 
 * Placing sanitize_callback functions in their proper place in the customizer
+
