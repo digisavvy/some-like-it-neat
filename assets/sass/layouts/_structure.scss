@@ -20,6 +20,8 @@ body {
 .site-main {
 	@include grid-media($mdbg) {
 		@include section-container('wide');
+		width: 100%;
+		max-width: $maxwidth;
 	}
 }
 
