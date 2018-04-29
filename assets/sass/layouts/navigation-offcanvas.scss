@@ -120,6 +120,7 @@
 
 /* Site Menu */
 .main-navigation {
+  grid-area: nav;
   @include grid-media($sm) {
     background: #141414;
     background: rgba(20, 20, 20, 1);
@@ -439,6 +440,7 @@ h1.site-title {
 }
 
 header.offcanvas-nav {
+  grid-area: header;
   position: fixed;
   //left: 0;
   //right: 0;

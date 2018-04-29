@@ -1,9 +1,9 @@
 {
   "devDependencies": {
-    "browser-sync": "*",
+    "browser-sync": "^2.23.7",
     "del": "*",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "*",
+    "gulp-autoprefixer": "^5.0.0",
     "gulp-concat": "*",
     "gulp-consolidate": "*",
     "gulp-filter": "*",
@@ -17,7 +17,7 @@
     "gulp-plumber": "*",
     "gulp-rename": "*",
     "gulp-replace": "*",
-    "gulp-sass": "*",
+    "gulp-sass": "^4.0.1",
     "gulp-sourcemaps": "*",
     "gulp-swig": "*",
     "gulp-uglify": "*",
@@ -38,6 +38,6 @@
   "dependencies": {
     "bourbon": "^5.0.0",
     "bourbon-neat": "^2.0.0",
-    "uglify-js": "^3.3.12"
+    "uglify-js": "^3.3.23"
   }
 }
