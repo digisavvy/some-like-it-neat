@@ -1,31 +1,41 @@
-footer {
-    grid-column: 1 / -1;
-    @include grid-container();
+footer#colophon {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 
     .site-info {
-        @include grid-media($sm) {
-            @include grid-column(2);
-        }
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(12, 1fr);
         text-align: center;
-    }
-    .footer-left {
-        @include grid-media($sm) {
-            @include grid-column(2);
-            text-align: center;
+
+        .footer-masthead {
+            grid-column: 1 / -1;
         }
-        @include grid-media($smbg) {
-            @include grid-column(2);
-            text-align: left;
+
+        .footer-left {
+            @include grid-media($sm) {
+                grid-column: 1 / -1;
+                text-align: center;
+            }
+            @include grid-media($smbg) {
+                grid-column: 1 / 7;
+            }
+            @include grid-media($mdbg) {
+                text-align: left;
+            }
         }
-    }
-    .footer-right {
-        @include grid-media($sm) {
-            @include grid-column(2);
-            text-align: center;
-        }
-        @include grid-media($smbg) {
-            @include grid-column(2);
-            text-align: right;
+
+        .footer-right {
+            @include grid-media($sm) {
+                grid-column: 1 / -1;
+                text-align: center;
+            }
+            @include grid-media($smbg) {
+                grid-column: 7 / 13;
+            }
+            @include grid-media($mdbg) {
+                text-align: right;
+            }
         }
     }
 }
