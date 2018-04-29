@@ -31,7 +31,9 @@ function some_like_it_neat_do_footer()
 
             <?php endif; ?>
 
-            <?php echo esc_attr(get_theme_mod('some_like_it_neat_footer_colophon', __('Some Like it Neat, by Alex Vasquez', 'some-like-it-neat')));  ?><br />
+            <div class="footer-masthead">
+                <?php echo esc_attr(get_theme_mod('some_like_it_neat_footer_colophon', __('Some Like it Neat, by Alex Vasquez', 'some-like-it-neat')));  ?><br />
+            </div>
 
             <?php tha_footer_bottom(); ?>
 
