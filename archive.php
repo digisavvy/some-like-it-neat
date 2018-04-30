@@ -12,7 +12,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<div id="primary" class="content-area">
 
 		<div id="content" class="site-content">
 
@@ -21,7 +21,7 @@ get_header(); ?>
 			<header class="page-header">
 
 				<?php
-				printf( '<h1 class="page-title">%s</h1>', esc_html( get_the_archive_title() ) );
+				printf( '<h1 class="page-title">%s</h1>', get_the_archive_title() );
 
 				$description = get_the_archive_description();
 				if ( ! empty( $description ) ) {
@@ -53,7 +53,7 @@ get_header(); ?>
 
 		</div><!-- #content -->
 
-	</section><!-- #primary -->
+	</div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 
