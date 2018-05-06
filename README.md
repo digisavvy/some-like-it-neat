@@ -16,9 +16,11 @@ Donate (or submit a pull request)
 What's Inside?
 ---------------
 
-* Bourbon (http://bourbon.io), Neat (http://neat.bourbon.io), Bitters (http://bitters.bourbon.io) and Refills (http://refills.bourbon.io) — Bourbon provides a lightweight Sass library (similar to Compass).
+* [Bourbon](http://bourbon.io), [Neat](http://neat.bourbon.io), [Bitters](http://bitters.bourbon.io).
 
-Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. Refills and Bitters provide additional styling and UI elements. I suggest you visit each of these projects to learn more and how to use them.
+Bourbon provides a lightweight Sass library (similar to Compass).
+
+Neat extends bourbon and provides a nice and lightweight grid framework as a base for this project. **This theme now uses [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid) to manage layouts. I recommend that you use CSS Grid to build your layouts going forward.** Support is pretty darn good for CSS Grid. Neat has been left here and it's used primarily for breakpoint variables. If you still wish to use Neat (and it is a great framework) you may do so. But we'll be looking to remove Neat here eventually (now I have to come up with a new name for this theme).
 
 Bitters is baked-in, too! You get some basic nifty styles out of the gate.
 
@@ -32,13 +34,11 @@ Bitters is baked-in, too! You get some basic nifty styles out of the gate.
 tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
 your theme! Cool. Right?
 
-* RTL Support via the most excellent bi-app-sass project
 * Built for Accessibility
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
 * NPM for managing packages and dependencies
 * Infinite Scroll Support for Jetpack
-
 * Pull requests welcome...
 
 
