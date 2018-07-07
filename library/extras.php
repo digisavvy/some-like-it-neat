@@ -9,6 +9,23 @@
  */
 
 /**
+ * Wrap images in figure tag
+ * @link https://wordpress.stackexchange.com/questions/174582/always-use-figure-for-post-images
+ */
+ 
+function some_like_it_neat_figure_wrap( $content ) { 
+	$media_id = get_attached_media( 'image' );
+
+    $content = preg_replace( 
+        '/<p>\\s*?(<a rel=\"attachment.*?><img.*?><\\/a>|<img.*?>)?\\s*<\\/p>/s', 
+        '<figure>$1</figure>', 
+        $content 
+    ); 
+    return $content; 
+} 
+add_filter( 'the_content', 'some_like_it_neat_figure_wrap', 99 );
+
+/**
  * Add Singular Post Template Navigation
  */
 
