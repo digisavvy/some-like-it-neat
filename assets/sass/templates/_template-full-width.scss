@@ -10,15 +10,11 @@
 
   #primary {
     @include section-container('full');
+    grid-column: 1 / -1;
     margin: inherit;
     padding: inherit;
   }
 
-  .site-main [class*="navigation"],
-  #comments,
-  #primary-nav {
-
-  }
 }
 
 .post-template-page-templatestemplate-full-width-php {
