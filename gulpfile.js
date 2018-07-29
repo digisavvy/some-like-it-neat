@@ -94,7 +94,8 @@ gulp.task(
 			[
 			source + 'sass/**/*.scss',
 			'!' + source + 'sass/**/navigation-offcanvas.scss',
-			'!' + source + 'sass/**/flexnav.scss'
+			'!' + source + 'sass/**/flexnav.scss',
+			'!' + source + 'sass/**/editor.scss'
 			]
 		)
 		.pipe(
@@ -152,7 +153,8 @@ gulp.task(
 		return gulp.src(
 			[
 			source + 'sass/**/navigation-offcanvas.scss',
-			source + 'sass/**/flexnav.scss'
+			source + 'sass/**/flexnav.scss',
+			source + 'sass/**/editor.scss'
 			]
 		)
 		.pipe(
