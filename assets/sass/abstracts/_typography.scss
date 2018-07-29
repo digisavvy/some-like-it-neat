@@ -39,7 +39,6 @@ h1, h2, h3, h4, h5, h6 {
     clear: both;
     float: none;
     line-height: 1.25em;
-    // padding: 20px 0;
     a, a:visited {
         color: $primary-font-color;
     }
@@ -212,5 +211,19 @@ body.gutenberg-editor-page {
         @extend h2;
         font-weight: normal;
         padding: 0;
+    }
+    span.editor-block-types-list__item-title {
+        font-family: sans-serif;
+    }
+    .document-outline ul {
+        font-family: sans-serif !important;
+    }
+    // Tweaks for Carbon Fields Metabox
+    #poststuff .carbon-box .inside, 
+    body.comment-php #poststuff .postbox-container .inside {
+        top: 50px;
+    }
+    .edit-post-meta-boxes-area #poststuff h2.hndle {
+        position: absolute;
     }
 }
