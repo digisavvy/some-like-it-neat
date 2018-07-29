@@ -20,11 +20,7 @@
 
 		<h1 class="entry-title" itemprop="name" ><?php the_title(); ?></h1>
 
-		<div class="entry-meta">
-
-			<span class="genericon genericon-time"></span> <?php some_like_it_neat_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
+		<?php get_template_part( 'page-templates/template-parts/content', 'meta' ); ?>
 
 	</header><!-- .entry-header -->
 

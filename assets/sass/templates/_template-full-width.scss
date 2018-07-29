@@ -15,11 +15,20 @@
     padding: inherit;
 
     blockquote,
+    .entry-meta,
     p,
     ul,
     h1,h2,h3,h4,h5,h6 {
       margin: 0 auto 15px auto;
       max-width: $maxwidth / 1.5;
+    }
+
+    .entry-meta {
+      text-align: center;
+    }
+    
+    .wp-block-gallery {
+      max-width: 100%;
     }
   }
 
