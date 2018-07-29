@@ -256,3 +256,21 @@ function some_like_it_neat_register_part_hooks() {
 
 }
 add_filter( 'fl_theme_builder_part_hooks', 'some_like_it_neat_register_part_hooks' );
+
+/**
+ * Add align wide support for Gutenberg
+ */
+add_theme_support( 'align-wide' );
+
+/**
+ * Add default block styles support for Gutenberg
+ */
+add_theme_support( 'wp-block-styles' );
+
+/**
+ * Enqueue block editor style
+ */
+function some_like_it_neat_block_editor_styles() {
+    wp_enqueue_style( 'some_like_it_neat_block-editor-styles', get_theme_file_uri( 'assets/css/editor.css' ), false, '1.0', 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'some_like_it_neat_block_editor_styles' );
