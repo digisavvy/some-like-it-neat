@@ -1,0 +1,23 @@
+@import '../../node_modules/bourbon/core/bourbon';
+@import 'vendor/_grid-settings';
+@import '../../node_modules/bourbon-neat/core/neat';
+@import '../../node_modules/bourbon/core/bourbon/library/clearfix';
+@import "abstracts/_variables";
+@import "abstracts/_typography";
+
+/* Main column width */
+body.gutenberg-editor-page .editor-post-title__block,
+body.gutenberg-editor-page .editor-default-block-appender,
+body.gutenberg-editor-page .editor-block-list__block {
+    max-width: 960px;
+}
+
+/* Width of "wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
+    max-width: 1200px;
+}
+
+/* Width of "full-wide" blocks */
+body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+    max-width: none;
+}
