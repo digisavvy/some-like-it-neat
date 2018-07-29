@@ -39,8 +39,10 @@ h1, h2, h3, h4, h5, h6 {
     clear: both;
     float: none;
     line-height: 1.25em;
-    margin-bottom: 20px;
-
+    padding: 20px 0;
+    a, a:visited {
+        color: $primary-font-color;
+    }
 }
 h1 {
     @include grid-media($sm) {
