@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
     clear: both;
     float: none;
     line-height: 1.25em;
-    padding: 20px 0;
+    // padding: 20px 0;
     a, a:visited {
         color: $primary-font-color;
     }
@@ -165,15 +165,24 @@ a, a:visited {
         }
     }
 }
+
 p {
     font-family: $content;
 }
+
 #primary,
 #secondary {
     font-family: $content;
     ul {
         padding-bottom: 20px;
         padding-top: 20px;
+    }
+}
+
+#secondary {
+    ul {
+        padding: inherit;
+        padding-left: 20px;
     }
 }
 
@@ -200,7 +209,8 @@ body.gutenberg-editor-page {
         }
     }
     .editor-post-title__input {
-        @extend h1;
+        @extend h2;
         font-weight: normal;
+        padding: 0;
     }
 }
