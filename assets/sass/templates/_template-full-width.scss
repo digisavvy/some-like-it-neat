@@ -13,6 +13,13 @@
     grid-column: 1 / -1;
     margin: inherit;
     padding: inherit;
+
+    p,
+    ul,
+    h1,h2,h3,h4,h5,h6 {
+      margin: auto;
+      max-width: $maxwidth / 1.5;
+    }
   }
 
 }
