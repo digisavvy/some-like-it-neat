@@ -26,13 +26,15 @@ get_header(); ?>
 				$description = get_the_archive_description();
 				if ( ! empty( $description ) ) {
 					printf( '<div class="taxonomy-description">%s</div>', esc_html( $description ) );
-				} ?>
+				}
+				?>
 
 			</header><!-- .page-header -->
 
-	<?php // Start the loop. ?>
-
-	<?php while ( have_posts() ) : the_post(); ?>
+	<?php
+	while ( have_posts() ) :
+		the_post();
+?>
 
 		<?php
 		/**
@@ -43,7 +45,7 @@ get_header(); ?>
 			get_template_part( 'page-templates/template-parts/content', get_post_format() );
 		?>
 
-	<?php endwhile; // end the loop. ?>
+	<?php endwhile; ?>
 
 	<?php else : ?>
 

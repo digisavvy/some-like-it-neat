@@ -28,22 +28,23 @@ get_header(); ?>
 
 				<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-				<?php if ( some_like_it_neat_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
+				<?php if ( some_like_it_neat_categorized_blog() ) : ?>
 
 			<div class="widget widget_categories">
 				<h2 class="widgettitle">
 		<?php esc_html_e( 'Most Used Categories', 'some-like-it-neat' ); ?>
 				</h2>
 				<ul>
-		<?php wp_list_categories(
-			array(
-				'orderby'    => 'count',
-				'order'      => 'DESC',
-				'show_count' => 1,
-				'title_li'   => '',
-				'number'     => 10,
-			)
-		);
+		<?php
+			wp_list_categories(
+				array(
+					'orderby'    => 'count',
+					'order'      => 'DESC',
+					'show_count' => 1,
+					'title_li'   => '',
+					'number'     => 10,
+				)
+			);
 		?>
 				</ul>
 			</div><!-- .widget -->

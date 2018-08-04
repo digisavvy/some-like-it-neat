@@ -27,8 +27,6 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
-	<?php // You can start editing here -- including this comment! ?>
-
 	<?php if ( have_comments() ) : ?>
 
 		<h2 class="comments-title">
@@ -53,7 +51,7 @@ if ( post_password_required() ) {
 
 		</h2>
 
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
 
@@ -65,7 +63,7 @@ if ( post_password_required() ) {
 
 		</nav><!-- #comment-nav-above -->
 
-	<?php endif; // Check for comment navigation. ?>
+	<?php endif; ?>
 
 		<ol class="comment-list">
 
@@ -77,14 +75,16 @@ if ( post_password_required() ) {
 	 * define some_like_it_neat_comment() and that will be used instead.
 	 * See some_like_it_neat_comment() in inc/template-tags.php for more.
 	 */
-	wp_list_comments( array(
-		'callback' => 'some_like_it_neat_comment',
-	) );
+	wp_list_comments(
+		array(
+			'callback' => 'some_like_it_neat_comment',
+		)
+	);
 	?>
 
 		</ol><!-- .comment-list -->
 
-	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
+	<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
 
@@ -96,14 +96,16 @@ if ( post_password_required() ) {
 
 
 		</nav><!-- #comment-nav-below -->
-	<?php endif; // check for comment navigation. ?>
+	<?php endif; ?>
 
-	<?php endif; // have_comments(). ?>
+	<?php endif; ?>
 
-	<?php // If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && '0' !== get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+	<?php
+	// If comments are closed and there are comments, let's leave a little note, shall we?
+	if ( ! comments_open() && '0' !== get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	?>
 
-	  <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'some-like-it-neat' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'some-like-it-neat' ); ?></p>
 
 	<?php endif; ?>
 
