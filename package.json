@@ -39,6 +39,7 @@
     "bourbon": "^5.1.0",
     "bourbon-neat": "^2.0.0",
     "hoek": "^5.0.3",
+    "lodash": "^4.17.10",
     "uglify-js": "^3.4.6"
   }
 }
