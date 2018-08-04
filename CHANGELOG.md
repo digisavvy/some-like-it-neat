@@ -4,6 +4,7 @@
 -------------
 * Added basic support for Gutenberg blocks.
 * Add editor styles for Gutenberg edit screen.
+* Update hoek npm package.
 
 ### 1.6
 -------------
