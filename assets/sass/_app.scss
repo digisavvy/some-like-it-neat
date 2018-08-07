@@ -25,25 +25,24 @@ and Blueprint http://www.blueprintcss.org/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-1.0 - Base Elements
-2.0 - Vendor Add-on2
-3.0 - Variables, Typography, Accessibility
-4.0 - Components
-5.0 - Layout and Structure
-    5.1 - Header
-    5.2 - Navigation
-    5.3 - Content
-    5.4 - Page Templates
-    5.5 - Sidebar
-    5.6 - Footer
-    5.7 - Accessibility
+1.0 - Common Elements
+2.0 - Vendor Add-ons
+3.0 - Components
+4.0 - Layout and Structure
+    4.1 - Scaffolding
+    4.2 - Header
+    4.3 - Navigation
+    4.4 - Content
+    4.5 - Page Templates
+    4.6 - Sidebar
+    4.7 - Footer
 
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-1.0 Base Elements: Normalize
+1.0 Common Elements: Normalize, Variables, Typography, Accessibility
 --------------------------------------------------------------*/
-@import "base/__base-dir";
+@import "common/__common-dir";
 
 /*--------------------------------------------------------------
 2.0 Vendor Add-ons (Bourbon, Neat, Flexnav etc.)
@@ -51,17 +50,12 @@ and Blueprint http://www.blueprintcss.org/
 @import "vendor/__vendor-dir";
 
 /*--------------------------------------------------------------
-3.0 Variables, Typography, Accessibility
---------------------------------------------------------------*/
-@import "abstracts/__abstracts-dir";
-
-/*--------------------------------------------------------------
-4.0 Components/
+3.0 Components Buttons, Gutenberg, infy scroll, media, inputs
 --------------------------------------------------------------*/
 @import "components/__components-dir";
 
 /*--------------------------------------------------------------
-5.0 Layout, Page Templates, and Structures
+4.0 Layout, Page Templates, and Global Structures
 --------------------------------------------------------------*/
 @import "layouts/__layouts-dir";
 
