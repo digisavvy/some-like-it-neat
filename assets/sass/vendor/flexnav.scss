@@ -1,11 +1,5 @@
 // Call necessary Sass files
-@import '../../../node_modules/bourbon/core/bourbon';
-@import '../vendor/base'; // Bitters
-@import '../vendor/grid-settings';
-@import '../../../node_modules/bourbon-neat/core/neat';
-@import '../abstracts/variables';
-@import '../abstracts/typography';
-@import '../components/buttons';
+@import '../common/__common-dir';
 
 /* Flexnav Base Styles */
 
@@ -168,9 +162,9 @@ $fourth_level: #999;
         color: $primary-font-color;
         padding: 1em;
         i.navicon {
-            color: $base-body-color;
+            color: $base-background-color;
                 &:after {
-                    color: $base-body-color;
+                    color: $base-background-color;
                     content:'Menu';
             }
         }
