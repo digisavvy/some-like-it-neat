@@ -1,0 +1,27 @@
+.page-template-page-templatestemplate-full-width-php {
+
+  main#main,
+  .site-main
+  footer {
+    @include section-container('full');
+    margin: inherit;
+    padding: inherit;
+  }
+
+  #primary {
+    @include section-container('full');
+    grid-column: 1 / -1;
+    margin: inherit;
+    padding: inherit;
+  }
+
+  h1.entry-title {
+    margin: 0 auto;
+    padding-top: 100px;
+  }
+
+}
+
+.post-template-page-templatestemplate-full-width-php {
+  @extend .page-template-page-templatestemplate-full-width-php;
+}

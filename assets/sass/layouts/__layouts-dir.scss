@@ -21,7 +21,10 @@
 /*--------------------------------------------------------------
 5.5 Page Templates
 --------------------------------------------------------------*/
-@import '../templates/_templates-dir';
+@import 'template-2col-l-sidebar';
+@import 'template-2col-r-sidebar';
+@import 'template-full-width';
+@import 'template-landing-page';
 
 /*--------------------------------------------------------------
 5.6 Sidebar
