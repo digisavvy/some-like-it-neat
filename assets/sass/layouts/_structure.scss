@@ -1,11 +1,17 @@
 /* =Structure/Scaffolding
 -------------------------------------------------------------- */
 html {
-
+	box-sizing: border-box;
+  }
+  
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
 }
 
 body {
-	background-color: $base-body-color;
+	background-color: $base-background-color;
 	color: $primary-font-color;
 	font-family: $content;
 	line-height: 1.5em;
@@ -20,7 +26,6 @@ body {
 	@include grid-media($mdbg) {
 		@include section-container('wide');
 		width: 100%;
-		max-width: $maxwidth;
 	}
 }
 
