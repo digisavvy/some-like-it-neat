@@ -116,7 +116,7 @@
 .main-navigation {
   grid-area: nav;
   @include grid-media($sm) {
-    background: #141414;
+    background: $black;
     color: $base-background-color;
     margin: 0;
     overflow: hidden;
@@ -489,6 +489,7 @@ header.offcanvas-nav {
         font-size: 35px;
       }
       color: $base-background-color;
+      font-weight: bold;
     }
 
   }
@@ -514,14 +515,14 @@ header.offcanvas-nav {
     }
 
     .hamburger-wrapper .hamburger .hamburger-icon {
-      background-color: $dark-gray;
+      background-color: $black;
 
       &:before {
-        background-color: $dark-gray;
+        background-color: $black;
       }
 
       &:after {
-        background-color: $dark-gray;
+        background-color: $black;
       }
 
     }
