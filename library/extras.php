@@ -50,8 +50,6 @@ if ( 'no' === get_theme_mod( 'some-like-it-neat_hide_post_navigation' ) ) {
 	add_action( 'tha_entry_after', 'some_like_it_neat_post_navigation' );
 }
 
-
-
 if ( ! function_exists( 'some_like_it_neat_entry_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
