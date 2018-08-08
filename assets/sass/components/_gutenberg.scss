@@ -5,19 +5,28 @@
     margin-right: auto !important;
   }
 
-  .wp-block-image img {
-    @include grid-media($sm) {
-      padding: 0;
-      width: 100%;
-    }
+  ul.wp-block-gallery li {
+    margin-left: inherit;
+  }
 
-    @include grid-media($md) {
-      margin: 40px 0;
-      padding: 0;
-      // width: auto;
+  .wp-block-image {
+    img {
+      @include grid-media($sm) {
+        padding: 0;
+        width: 100%;
+      }
+  
+      @include grid-media($md) {
+        padding: 0;
+      }
+      max-width: none;
     }
-
-    max-width: none;
+    &.alignright {
+      margin-right: 20%;
+    }
+    &.alignleft {
+      margin-left: 20%;
+    }
   }
 
   blockquote,
@@ -34,27 +43,27 @@
     max-width: $maxwidth / 1.5;
   }
 
-    .entry-meta {
-        text-align: center;
-    }
+  .entry-meta {
+      text-align: center;
+  }
 
-    .wp-block-gallery {
-        margin-left: 0 !important;
-        max-width: 100%;
-    }
+  .wp-block-gallery {
+      margin-left: 0 !important;
+      max-width: 100%;
+  }
 
-    .wp-block-pullquote {
-        padding: 20px 0;
-    }
+  .wp-block-pullquote {
+      padding: 20px 0;
+  }
 
-    .wp-block-quote {
-        margin: 40px auto;
-        padding: 20px;
+  .wp-block-quote {
+      margin: 40px auto;
+      padding: 20px;
 
-        p {
-            padding: 0;
-        }
+      p {
+          padding: 0;
+      }
 
-    }
+  }
 
 }
