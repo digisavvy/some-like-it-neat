@@ -7,6 +7,8 @@
 * Update hoek npm package.
 * Update lodash npm package.
 * Summer cleaning of Sass files (reorganizing).
+* Updated Normalize with https://github.com/JohnAlbin/normalize-scss
+* Fix - Post Date link was going to permalink instead of archive link.
 
 ### 1.6
 -------------
