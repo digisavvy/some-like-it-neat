@@ -134,8 +134,8 @@ object {
 .comment-content a {
     word-wrap: break-word;
 }
-
-.bypostauthor {
+ol.comment-list li {
+    display: block;
 }
 
 /* =Infinite Scroll
