@@ -6,6 +6,7 @@
 * Add editor styles for Gutenberg edit screen.
 * Update hoek npm package.
 * Update lodash npm package.
+* Summer cleaning of Sass files (reorganizing).
 
 ### 1.6
 -------------
