@@ -38,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
     @include clearfix;
     clear: both;
     float: none;
+    font-weight: bold;
     line-height: 1.25em;
     a, a:visited {
         color: $primary-font-color;
@@ -149,7 +150,6 @@ hr {
 
 strong, b {
     color: $primary-font-color;
-    font-family: $title;
 }
 
 a, a:visited {
