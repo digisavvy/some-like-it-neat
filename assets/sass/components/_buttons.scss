@@ -1,4 +1,4 @@
-@mixin neat-buttons($border-color: #000, $color: #fff, $border-radius: 0, $button-padding: 20px, $button-bg: #000000 ) {
+@mixin neat-buttons($border-color: #000, $color: $base-background-color, $border-radius: 0, $button-padding: 20px, $button-bg: #000000 ) {
     background: $button-bg;
     border: solid 1px $border-color;
     border-radius: $border-radius;
