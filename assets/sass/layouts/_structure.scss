@@ -58,15 +58,17 @@ main#main {
 
 	ul, ol {
 		list-style: none;
-		margin-left: 20px;
 		li {
 			list-style-type: square;
+			margin-left: 20px;
 			ul {
 				li {
 					list-style-type: disc;
+					margin-left: 20px;
 					ul {
 						li {
 							list-style-type: circle;
+							margin-left: 20px;
 						}
 					}
 				}
