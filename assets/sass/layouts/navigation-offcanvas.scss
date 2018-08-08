@@ -13,7 +13,7 @@
   margin-left: 30px;
 
   .hamburger {
-    color: #fff;
+    color: $base-background-color;
     cursor: pointer;
     display: inline-block;
     outline: none;
@@ -23,7 +23,7 @@
     height: 38px;
 
     .hamburger-icon {
-      background-color: #fff;
+      background-color: $base-background-color;
       content: "";
       display: block;
       height: 2px;
@@ -62,7 +62,7 @@
     }
 
     &:visited {
-      color: #fff;
+      color: $base-background-color;
     }
 
     .hamburger-label {
@@ -117,8 +117,7 @@
   grid-area: nav;
   @include grid-media($sm) {
     background: #141414;
-    background: rgba(20, 20, 20, 1);
-    color: #fff;
+    color: $base-background-color;
     margin: 0;
     overflow: hidden;
     padding: 0;
@@ -228,7 +227,7 @@
 .header-menu {
 
   a {
-    color: #fff;
+    color: $base-background-color;
     display: block;
     font-family: $title;
     font-size: 22px;
@@ -250,7 +249,7 @@
   ul {
 
     a {
-      color: #fff;
+      color: $base-background-color;
       display: block;
       font-family: $title;
       font-size: 22px;
@@ -280,7 +279,7 @@
     height: 40px;
 
     &:after {
-      color: #fff;
+      color: $base-background-color;
       content: "\f347";
       font-family: Dashicons;
       font-size: 32px;
@@ -323,12 +322,12 @@
   .hamburger-wrapper {
 
     .hamburger {
-      color: #fff;
+      color: $base-background-color;
 
       .hamburger-icon {
         &:before,
         &:after {
-          background-color: #fff;
+          background-color: $base-background-color;
         }
 
       }
@@ -358,12 +357,12 @@
   .hamburger-wrapper {
 
     .hamburger {
-      color: #fff !important;
+      color: $base-background-color !important;
 
       .hamburger-icon {
         &:before,
         &:after {
-          background-color: #fff !important;
+          background-color: $base-background-color !important;
         }
 
       }
@@ -373,7 +372,7 @@
   }
 
   p.site-title a {
-    color: #fff !important;
+    color: $base-background-color !important;
 
     &:hover {
       color: $link-color;
@@ -382,7 +381,7 @@
   }
 
   header.offcanvas-nav.headroom--top .site-branding .site-title a {
-    color: #fff;
+    color: $base-background-color;
   }
 
 }
@@ -468,7 +467,7 @@ header.offcanvas-nav {
   }
 
   p.site-title a {
-    color: #fff;
+    color: $base-background-color;
     &:hover {
       color: $link-color;
     }
@@ -489,7 +488,7 @@ header.offcanvas-nav {
       @include grid-media($mdbg) {
         font-size: 35px;
       }
-      color: #fff;
+      color: $base-background-color;
     }
 
   }
@@ -500,7 +499,7 @@ header.offcanvas-nav {
     transition: all .25s linear;
 
     p.site-title a {
-      color: #000;
+      color: $dark-gray;
       transition: none;
 
       &:hover {
@@ -510,25 +509,26 @@ header.offcanvas-nav {
     }
 
     .site-branding .site-title a {
-      color: #000;
+      color: $dark-gray;
+      font-weight: bold;
     }
 
     .hamburger-wrapper .hamburger .hamburger-icon {
-      background-color: #000;
+      background-color: $dark-gray;
 
       &:before {
-        background-color: #000;
+        background-color: $dark-gray;
       }
 
       &:after {
-        background-color: #000;
+        background-color: $dark-gray;
       }
 
     }
 
     .hamburger-wrapper .hamburger,
     .hamburger-wrapper .hamburger:visited {
-      color: #000;
+      color: $dark-gray;
     }
 
   }
