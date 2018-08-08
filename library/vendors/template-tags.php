@@ -35,7 +35,7 @@ if ( ! function_exists( 'some_like_it_neat_comment' ) ) :
 					<?php if ( 0 !== $args['avatar_size'] ) { echo get_avatar( $comment, $args['avatar_size'] ); } ?>
 					<?php printf(
 						/* translators: %s: post author. */
-						esc_html( '%s <span class="says">says:</span>', 'some-like-it-neat' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() )
+						sprintf( '%s <span class="says">says:</span>', 'some-like-it-neat' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() )
 					);
 					?>
 				</div><!-- .comment-author -->
@@ -96,11 +96,14 @@ if ( ! function_exists( 'some_like_it_neat_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
+		$archive_year  = get_the_time('Y');
+		$archive_month = get_the_time('m');
+
 		printf(
 			/* translators: %s: post comments. */
 			__( '<span class="posted-on" itemprop="datePublished" >Posted on %1$s</span><span class="byline" itemscope itemtype="http://schema.org/Person"> <span itemprop="author" > by %2$s</span></span>', 'some-like-it-neat' ),
 			sprintf( '<a href="%1$s" rel="bookmark" >%2$s</a>',
-				esc_url( get_permalink() ),
+				esc_url( get_month_link( $archive_year, $archive_month ) ),
 				$time_string
 			),
 			sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s">%2$s</a></span>',
