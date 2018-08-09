@@ -319,7 +319,7 @@ gulp.task(
 	'buildZip', function() {
 		return gulp.src( [build + '/**/', './.jshintrc', './.bowerrc', './.gitignore'] )
 		.pipe( zip( project + '.zip' ) )
-		.pipe( gulp.dest( './' ) )
+		.pipe( gulp.dest( './releases' ) )
 		.pipe( notify( { message: 'Zip task complete', onLast: true } ) );
 	}
 );
