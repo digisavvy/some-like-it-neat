@@ -30,12 +30,16 @@
   }
 
   blockquote,
+  .comment-respond,
   .entry-meta,
+  .jp-relatedposts,
   .post-navigation,
   p,
   ul,
   ol,
-  h1,h2,h3,h4,h5,h6 {
+  h1,h2,h3,h4,h5,h6,
+  .shared-counts-wrap,
+  .sharedaddy {
     @include grid-media($sm) {
       padding: 0 20px;
     }
