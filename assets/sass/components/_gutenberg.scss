@@ -39,7 +39,8 @@
   ol,
   h1,h2,h3,h4,h5,h6,
   .shared-counts-wrap,
-  .sharedaddy {
+  .sharedaddy,
+  .wp-block-embed {
     @include grid-media($sm) {
       padding: 0 20px;
     }
