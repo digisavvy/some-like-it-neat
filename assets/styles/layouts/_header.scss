@@ -1,0 +1,40 @@
+.site-branding {
+    text-align: center;
+    
+    .site-title {
+        font-family: $title;
+        padding: 0 40px;
+
+        @include grid-media($sm) {
+            font-size: 35px;
+        }
+        @include grid-media($smbg) {
+            font-size: 55px;
+        }
+        @include grid-media($md) {
+            font-size: 75px;
+        }
+
+        a,a:visited {
+            line-height: 1;
+        }
+
+    }
+
+    .site-description {
+        padding: 25px 0;
+        font-size: 20px;
+
+        @include grid-media($sm) {
+            font-size: 14px;
+        }
+        @include grid-media($smbg) {
+            font-size: 18px;
+        }
+        @include grid-media($md) {
+            font-size: 25px;
+        }
+        font-family: $content;
+        font-style: italic;
+    }
+}

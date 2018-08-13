@@ -1,0 +1,30 @@
+/* =Menu
+----------------------------------------------- */
+nav#primary-nav {
+    position: relative;
+    z-index: 2;
+}
+
+nav.post-navigation {
+    position: relative;
+    z-index: 1;
+}
+
+.main-navigation-inside {
+    @include grid-container();
+    @include section-container('wide');
+}
+
+.nav-links {
+    @include grid-media($sm) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    @include grid-media($smbg) {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: inherit;
+    }
+}

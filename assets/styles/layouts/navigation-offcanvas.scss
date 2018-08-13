@@ -1,0 +1,537 @@
+// Call necessary Sass files
+@import '../common/__common-dir';
+
+// Offcanvas menu styling
+.dropdown-toggle:hover {
+  padding: 0;
+}
+// Hamburger Menu
+.hamburger-wrapper {
+  box-shadow: #ccc;
+  position: relative;
+  height: 38px;
+  margin-left: 30px;
+
+  .hamburger {
+    color: $base-background-color;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    pointer-events: auto;
+    position: relative;
+    width: 38px;
+    height: 38px;
+
+    .hamburger-icon {
+      background-color: $base-background-color;
+      content: "";
+      display: block;
+      height: 2px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      width: 35px;
+
+      &:before,
+      &:after {
+        @extend .hamburger-icon;
+      }
+
+      &:before {
+        top: 8px;
+        width: 22px;
+      }
+
+      &:after {
+        top: 16px;
+        width: 26px;
+      }
+
+    }
+
+    &:hover {
+
+      .hamburger-icon,
+      .hamburger-icon:before,
+      .hamburger-icon:after {
+        width: 35px;
+      }
+
+    }
+
+    &:visited {
+      color: $base-background-color;
+    }
+
+    .hamburger-label {
+      @include grid-media($sm) {
+        font-size: 12px;
+      }
+      @include grid-media($md) {
+        font-size: 14px;
+      }
+      @include grid-media($mdbg) {
+        font-size: 16px;
+      }
+      font-family: $title;
+      line-height: 1;
+      position: absolute;
+      text-transform: uppercase;
+      top: 28px;
+      right: 0;
+      white-space: nowrap;
+    }
+
+  }
+
+  .hamburger.active {
+
+    .hamburger-icon {
+      background-color: transparent;
+
+      &:after {
+        transform: rotate(45deg);
+        top: 10px;
+        width: 30px;
+      }
+      &:before {
+        transform: rotate(-45deg);
+        top: 10px;
+        width: 30px;
+      }
+
+    }
+
+    &:after {
+      opacity: 0;
+    }
+
+  }
+
+}
+
+/* Site Menu */
+.main-navigation {
+  grid-area: nav;
+  @include grid-media($sm) {
+    background: $black;
+    color: $base-background-color;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 80;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  @include grid-media($md) {
+    margin-right: 50%;
+    width: calc(100% - 50%);
+  }
+
+  @include grid-media($hg) {
+    margin-right:55%;
+    width: calc(100% - 55%);
+  }
+
+  .main-navigation-inside {
+    overflow: hidden;
+    overflow-y: auto;
+    height: calc(100% - 70px);
+    //margin: 70px 20px 0;
+    margin: 4.375rem 20px 0;
+    padding: 1.875rem 0 0;
+  }
+
+}
+
+.main-navigation-inside {
+  margin-top: 100px !important;
+  height: calc(100% - 205px) !important;
+}
+
+/* Site Header Menu */
+.site-header-menu {
+  margin: 0 auto;
+  position: relative;
+  width: calc(100% - 12px);
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
+  -webkit-transition: -webkit-transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.4s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 200;
+}
+
+.has-menu-open {
+
+  .main-navigation {
+    right: 0;
+  }
+
+  .site-header-menu {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+}
+
+
+/* Site Header Menu List */
+.header-menu {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+
+  * {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+
+.header-menu ul {
+  display: none;
+  margin-left: 1.5rem;
+  padding: 1.25rem 0;
+
+  &.toggle-on {
+    display: block;
+  }
+}
+
+.header-menu li {
+  position: relative;
+  word-wrap: break-word;
+  white-space: normal;
+
+  &.current_page_item a,
+  &.current-menu-item a,
+  &.current_page_ancestor > a,
+  &.current-menu-ancestor > a,
+  &.current_page_parent > a,
+  &.current-menu-parent > a {
+    color: #aaa;
+  }
+
+}
+
+.header-menu {
+
+  a {
+    color: $base-background-color;
+    display: block;
+    font-family: $title;
+    font-size: 22px;
+    padding: 0 0 0.5rem;
+    text-transform: uppercase;
+
+    &:visited {
+      @extend a;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #aaa;
+    }
+
+  }
+
+  ul {
+
+    a {
+      color: $base-background-color;
+      display: block;
+      font-family: $title;
+      font-size: 22px;
+      padding: 0 0 0.5rem;
+      text-transform: uppercase;
+
+      &:visited {
+        @extend a;
+      }
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #aaa;
+      }
+
+    }
+  }
+
+  .dropdown-toggle {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: -5px;
+    right: initial;
+    width: 40px;
+    height: 40px;
+
+    &:after {
+      color: $base-background-color;
+      content: "\f347";
+      font-family: Dashicons;
+      font-size: 32px;
+    }
+    &.toggle-on:after {
+      content: "\f343";
+      color: #aaa;
+      font-family: Dashicons;
+    }
+
+  }
+
+  .page_item_has_children > a,
+  .menu-item-has-children > a {
+    padding-right: 2.5rem;
+  }
+
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  -webkit-transition: opacity 0.4s, -webkit-transform 0s 0.4s;
+  transition: opacity 0.4s, -webkit-transform 0s 0.4s;
+  transition: opacity 0.4s, transform 0s 0.4s;
+  transition: opacity 0.4s, transform 0s 0.4s, -webkit-transform 0s 0.4s;
+  z-index: 50;
+}
+
+// When Overlay is open, change link colors to white
+.has-overlay-open {
+
+  .hamburger-wrapper {
+
+    .hamburger {
+      color: $base-background-color;
+
+      .hamburger-icon {
+        &:before,
+        &:after {
+          background-color: $base-background-color;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.has-overlay-open {
+  height: 100%;
+  overflow: hidden;
+
+  .overlay {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+  }
+  #site-navigation {
+    border-top: 0;
+    border-bottom: 0;
+  }
+
+  .hamburger-wrapper {
+
+    .hamburger {
+      color: $base-background-color !important;
+
+      .hamburger-icon {
+        &:before,
+        &:after {
+          background-color: $base-background-color !important;
+        }
+
+      }
+
+    }
+
+  }
+
+  p.site-title a {
+    color: $base-background-color !important;
+
+    &:hover {
+      color: $link-color;
+    }
+
+  }
+
+  header.offcanvas-nav.headroom--top .site-branding .site-title a {
+    color: $base-background-color;
+  }
+
+}
+
+.site-header.offcanvas-nav {
+  padding: 0;
+}
+
+.site-header-inside-wrapper {
+  align-items: baseline;
+  display: flex;
+
+  .site-branding {
+    display: flex;
+    align-items: baseline;
+  }
+  .hamburger-wrapper {
+    position: relative;
+    z-index: 100;
+  }
+}
+
+.offcanvas-nav {
+
+  h1.entry-title {
+    margin: 0;
+  }
+
+  h1.page-title {
+    margin-top: 0;
+  }
+
+  .site-main {
+    margin-top: 140px;
+  }
+
+  .site-header-menu {
+    margin: 0;
+  }
+
+}
+
+.admin-bar header#masthead {
+  top: 30px;
+}
+
+h1.site-title {
+  margin: 0;
+}
+
+header.offcanvas-nav {
+  position: fixed;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  .site-header-inside-wrapper {
+    //@include grid-container();
+    //@include section-container('wide');
+
+    padding-bottom: 15px;
+    padding-top: 15px;
+
+    p.site-title {
+      margin: 0;
+    }
+
+  }
+
+  .site-branding .site-title {
+    @include grid-media($sm) {
+      font-size: 4vh;
+    }
+    @include grid-media($md) {
+      font-size: 25px;
+    }
+    @include grid-media($mdbg) {
+      font-size: 35px;
+    }
+  }
+
+  p.site-title a {
+    color: $base-background-color;
+    &:hover {
+      color: $link-color;
+    }
+  }
+
+  &.headroom--not-top {
+    background-color: rgba(20,20,20,1);
+    padding: 0;
+    transition: all .25s linear;
+
+    .site-branding .site-title a {
+      @include grid-media($sm) {
+        font-size: 4vh;
+      }
+      @include grid-media($md) {
+        font-size: 25px;
+      }
+      @include grid-media($mdbg) {
+        font-size: 35px;
+      }
+      color: $base-background-color;
+      font-weight: bold;
+    }
+
+  }
+
+  &.headroom--top {
+    background-color: rgba(20,20,20,0);
+    //padding: 15px 0;
+    transition: all .25s linear;
+
+    p.site-title a {
+      color: $dark-gray;
+      transition: none;
+
+      &:hover {
+        color: $link-color;
+      }
+
+    }
+
+    .site-branding .site-title a {
+      color: $dark-gray;
+      font-weight: bold;
+    }
+
+    .hamburger-wrapper .hamburger .hamburger-icon {
+      background-color: $black;
+
+      &:before {
+        background-color: $black;
+      }
+
+      &:after {
+        background-color: $black;
+      }
+
+    }
+
+    .hamburger-wrapper .hamburger,
+    .hamburger-wrapper .hamburger:visited {
+      color: $dark-gray;
+    }
+
+  }
+
+}
