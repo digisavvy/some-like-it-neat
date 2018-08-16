@@ -52,6 +52,9 @@
     "node": ">=6.0.0"
   },
   "dependencies": {
+    "archiver": "^2.1.1",
+    "folder-zip-sync": "^1.0.5",
+    "fs": "0.0.1-security",
     "zip-folder": "^1.0.0"
   }
 }
