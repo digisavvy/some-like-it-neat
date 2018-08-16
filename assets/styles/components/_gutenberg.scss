@@ -6,7 +6,7 @@
   }
 
   ul.wp-block-gallery li {
-    margin-left: inherit;
+    margin: 8px;
   }
 
   .wp-block-image {
@@ -43,6 +43,9 @@
   .wp-block-embed {
     @include grid-media($sm) {
       padding: 0 20px;
+    }
+    @include grid-media($md) {
+      padding: 0;
     }
     margin: 0 auto 15px auto;
     max-width: $maxwidth / 1.5;
