@@ -4,16 +4,18 @@ const ImageminPlugin    = require( 'imagemin-webpack-plugin' ).default;
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const imageminMozjpeg   = require( 'imagemin-mozjpeg' );
 const rimraf            = require( 'rimraf' );
-const zipFolder         = require('zip-folder');
+const zipFolder 		= require('folder-zip-sync');
 
 
 // Project specific naming. Change extension to suit your local setup
 let project = 'slintheme';
 let url = project+'.site';
+let themeBundle = 'release/'+project+'.zip';
 
 // Define assets directory for source and theme bundle distribution
 const assets = 'assets/';
 const dist = 'dist/';
+const bundlePath = dist;
 
 /*
  * -----------------------------------------------------------------------------
@@ -27,11 +29,7 @@ const dist = 'dist/';
 
 if ( process.env.bundle ) {
 
-	// Folder name to bundle the files in.
-	let bundlePath = dist+'/'+project;
-
     // Theme root-level files to include.
-
 	let files = [
         '.gitignore',
         'CHANGELOG.md',
@@ -51,13 +49,13 @@ if ( process.env.bundle ) {
 		'library',
         'page-templates',
         'page-templates/template-parts'
-    ];
+	];
 
     // Delete the previous bundle to start clean.
     rimraf.sync( bundlePath );
 
     // Copy theme-root-level php files
-    mix.copy('*.php', bundlePath);
+	mix.copy('*.php', bundlePath);
 
 	// Loop through the root files and copy them over.
 	files.forEach( file => {
@@ -68,14 +66,6 @@ if ( process.env.bundle ) {
 	folders.forEach( folder => {
 		mix.copyDirectory( folder, `${bundlePath}/${folder}` );
 	} );
-
-    zipFolder(bundlePath, project+'.zip', function(err) {
-        if(err) {
-            console.log('oh no!', err);
-        } else {
-            console.log('EXCELLENT');
-        }
-    });
 
 	// Bail early because we don't need to do anything else after this point.
 	// Everything else following below is for the build process.
@@ -99,7 +89,8 @@ mix.setPublicPath('./')
     // Compile Sass
     .sass(assets+'/styles/style.scss', assets+'/css/', sassConfig)
     .sass(assets+'/styles/editor.scss', assets+'/css/', sassConfig)
-    .sass(assets+'/styles/vendor/flexnav.scss', assets+'/css/vendor', sassConfig)
+	.sass(assets+'/styles/vendor/flexnav.scss', assets+'/css/vendor', sassConfig)
+	.sass(assets+'/styles/vendor/headroom.scss', assets+'/css/vendor', sassConfig)
     .sass(assets+'/styles/layouts/navigation-offcanvas.scss', assets+'/css/layouts', sassConfig)
 
     // Compile js
@@ -194,3 +185,11 @@ mix.webpackConfig( {
 		} )
 	]
 } );
+
+// While in production
+if (mix.inProduction()) {
+	zipFolder( bundlePath, project+'.zip' );
+	mix.copy(project+'.zip', themeBundle);
+	// Delete the previous bundle to start clean.
+    // rimraf.sync( bundlePath );
+}
