@@ -130,11 +130,16 @@ h6 {
     font-family: $title;
 }
 
-blockquote {
+blockquote,
+.wp-block-quote {
     font-size: 26px;
     font-style: italic;
     line-height: 1.2;
     padding: 20px;
+    p {
+        font-size: 26px;
+        line-height: 1.2;
+    }
 }
 
 cite {
