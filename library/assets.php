@@ -61,26 +61,6 @@ if ( ! function_exists( 'some_like_it_neat_scripts' ) ) :
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		/**
-		 * Concatenate Scripts. Checks the directory below for js files. If there are js files they will be concatenated and minified in either
-		 * development.js or production.js. NOTE - You will have to stop and restart gulp. Also, these scripts run on all pages. Make sure
-		 * your scripts actually need to run on all pages before concatenating.
-		 */
-		$directory = get_template_directory() . '/assets/js/app/';
-		$files = glob( $directory . '*.js' );
-		if ( false !== $files ) {
-			$filecount = count( $files );
-
-			if ( $filecount > 0 ) {
-				if ( SCRIPT_DEBUG || WP_DEBUG ) :
-					// Concatonated Scripts.
-					wp_enqueue_script( 'some_like_it_neat-js', get_theme_file_uri( '/assets/js/development.js' ), array( 'jquery' ), '1.0.0', false );
-				else :
-					// Concatonated Scripts.
-					wp_enqueue_script( 'some_like_it_neat-js', get_theme_file_uri( '/assets/js/production-min.js' ), array( 'jquery' ), '1.0.0', false );
-				endif;
-			}
-		}
 	}
 	add_action( 'wp_enqueue_scripts', 'some_like_it_neat_scripts' );
 
