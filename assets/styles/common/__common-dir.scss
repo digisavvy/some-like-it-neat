@@ -1,10 +1,23 @@
-// @import 'normalize';
+// Importing Bourbon, Neat, Bitters and other common elements.
+// Bitters (http://bitters.bourbon.io/) provides basic styling for buttons, forms, 
+// and tables etc.
+
 @import '../../../node_modules/normalize-scss/sass/normalize';
 @import '../../../node_modules/bourbon/core/bourbon';
-@import 'base'; // Bitters; Imports forms, tables by default
+
+// From Bitters
+@import 'variables';
+@import 'buttons';
+@import 'forms';
+@import 'tables';
+
+// Neat grid settings
 @import 'grid-settings';
+
+// Bourbon addons
 @import '../../../node_modules/bourbon-neat/core/neat';
 @import '../../../node_modules/bourbon/core/bourbon/library/clearfix';
-@import 'variables';
+
+// Common/Global theme elements
 @import 'typography';
 @import 'accessibility';
