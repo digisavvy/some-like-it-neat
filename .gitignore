@@ -129,3 +129,4 @@ wp-content/mu-plugins/wpengine-comm
 *.wmv
 *.avi
 /assets/css
+/dist
