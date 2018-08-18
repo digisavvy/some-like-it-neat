@@ -9,7 +9,11 @@ body.gutenberg-editor-page {
         line-height: 50px;
         margin: 0;
     }
-
+    
+    .editor-post-title__input {
+        font-weight: bold !important;
+    }
+    
     .attachment-details h2 {
         position: relative;
         font-weight: 600;
