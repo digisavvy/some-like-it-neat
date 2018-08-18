@@ -13,21 +13,7 @@
 
 	<?php tha_entry_top(); ?>
 
-	<header class="entry-header">
-
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
-	<?php if ( 'post' == get_post_type() ) : ?>
-
-		<div class="entry-meta">
-
-			<span class="genericon genericon-time"></span> <?php some_like_it_neat_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
-
-	<?php endif; ?>
-
-	</header><!-- .entry-header -->
+	<?php get_template_part( 'page-templates/template-parts/meta-entry', 'header' ); ?>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 

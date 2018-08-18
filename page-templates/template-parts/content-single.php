@@ -16,13 +16,7 @@
 
 	<?php tha_entry_top(); ?>
 
-	<header class="entry-header">
-
-		<h1 class="entry-title" itemprop="name" ><?php the_title(); ?></h1>
-
-		<?php get_template_part( 'page-templates/template-parts/content', 'meta' ); ?>
-
-	</header><!-- .entry-header -->
+	<?php get_template_part( 'page-templates/template-parts/meta-entry', 'header' ); ?>
 
 	<div class="entry-content" itemprop="articleBody" >
 
@@ -30,13 +24,7 @@
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-meta" itemprop="keywords" >
-
-		<?php some_like_it_neat_entry_footer(); ?>
-
-		<?php edit_post_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
-
-	</footer><!-- .entry-meta -->
+	<?php get_template_part( 'page-templates/template-parts/meta-entry', 'footer' ); ?>
 
 	<?php tha_entry_bottom(); ?>
 

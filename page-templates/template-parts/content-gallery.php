@@ -16,21 +16,7 @@
 
 	<?php tha_entry_top(); ?>
 
-	<header class="entry-header">
-
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-
-	<?php if ( 'post' === get_post_type() ) : ?>
-
-		<div class="entry-meta">
-
-			<span class="genericon genericon-time"></span> <?php some_like_it_neat_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
-
-	<?php endif; ?>
-
-	</header><!-- .entry-header -->
+	<?php get_template_part( 'page-templates/template-parts/meta-entry', 'header' ); ?>
 
 	<?php if ( is_search() ) : // Only display Excerpts for Search. ?>
 
@@ -67,20 +53,7 @@
 
 	<?php endif; ?>
 
-	<footer class="entry-meta">
-
-		<?php some_like_it_neat_post_format_footer(); ?>
-
-
-		<?php if ( ! post_password_required() && ( comments_open() || '0' !== get_comments_number() ) ) : ?>
-
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'some-like-it-neat' ), __( '1 Comment', 'some-like-it-neat' ), __( '% Comments', 'some-like-it-neat' ) ); ?></span>
-
-		<?php endif; ?>
-
-	<?php edit_post_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
-
-	</footer><!-- .entry-meta -->
+	<?php get_template_part( 'page-templates/template-parts/meta-entry', 'footer' ); ?>
 
 	<?php tha_entry_bottom(); ?>
 
