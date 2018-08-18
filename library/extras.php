@@ -50,24 +50,24 @@ if ( 'no' === get_theme_mod( 'some-like-it-neat_hide_post_navigation' ) ) {
 	add_action( 'tha_entry_after', 'some_like_it_neat_post_navigation' );
 }
 
-if ( ! function_exists( 'some_like_it_neat_entry_footer' ) ) :
+if ( ! function_exists( 'some_like_it_neat_footer' ) ) :
 	/**
 	 * Prints HTML with meta information for the categories, tags and comments.
 	 */
-	function some_like_it_neat_entry_footer() {
+	function some_like_it_neat_footer() {
 		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', '_s' ) );
-			if ( $categories_list && some_like_it_neat_categorized_blog() ) {
+			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'some-like-it-neat' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', '_s' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'some-like-it-neat' ) );
+			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', '_s' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'some-like-it-neat' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', '_s' ) . '</span>', $tags_list ); // WPCS: XSS OK.
 			}
 		}
 		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
@@ -92,7 +92,7 @@ if ( ! function_exists( 'some_like_it_neat_entry_footer' ) ) :
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'some-like-it-neat' ),
+					__( 'Edit <span class="screen-reader-text">%s</span>', '_s' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -164,3 +164,17 @@ if ( 'offcanvas' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
 	add_action( 'wp_footer', 'some_like_it_neat_add_headroomjs' );
 
 }
+
+/**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function some_like_it_neat_excerpt_more( $more ) {
+    return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( ' Read More', 'some-like-it-neat' )
+    );
+}
+add_filter( 'excerpt_more', 'some_like_it_neat_excerpt_more' );
