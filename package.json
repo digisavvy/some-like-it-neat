@@ -29,7 +29,7 @@
   "devDependencies": {
     "bourbon": "^5.1.0",
     "bourbon-neat": "^2.0.0",
-    "browser-sync": "^2.24.6",
+    "browser-sync": "^2.23.7",
     "browser-sync-webpack-plugin": "^2.0.1",
     "copy-webpack-plugin": "^4.5.2",
     "cross-env": "^5.2.0",
