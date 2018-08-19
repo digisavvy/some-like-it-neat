@@ -22,10 +22,46 @@
       max-width: none;
     }
     &.alignright {
-      margin-right: 20%;
+      @include grid-media($sm) {
+        margin: auto;
+        padding: 20px;
+      }
+      @include grid-media($smbg) {
+        float: right;
+        margin-right: 5%;
+        padding: inherit;
+      }
+      @include grid-media($md) {
+        margin-left: 10px;
+        margin-right: 5%;
+      }
+      @include grid-media($mdbg) {
+        margin-right: 10%;
+      }
+      @include grid-media($hg) {
+        margin-right: 20%;
+      }
     }
     &.alignleft {
-      margin-left: 20%;
+      @include grid-media($sm) {
+        margin: auto;
+        padding: 20px;
+      }
+      @include grid-media($smbg) {
+        float: left;
+        margin-left: 5%;
+        padding: inherit;
+      }
+      @include grid-media($md) {
+        margin-left: 5%;
+        margin-right: 20px;
+      }
+      @include grid-media($mdbg) {
+        margin-left: 10%;
+      }
+      @include grid-media($hg) {
+        margin-left: 20%;
+      }
     }
   }
 
