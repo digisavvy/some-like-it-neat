@@ -34,7 +34,7 @@ get_header(); ?>
 			 */
 				
 			get_template_part( 'page-templates/template-parts/content', get_post_format() );
-			
+			 
 			?>
 
 		<?php endwhile; // end of the loop. ?>
