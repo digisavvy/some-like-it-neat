@@ -10,6 +10,17 @@
   }
 
   .wp-block-image {
+
+    figcaption {
+      border-bottom: solid 1px #ccc;
+      padding-bottom: 5px;
+      display: flex;
+      justify-content: center;
+      text-decoration: underline;
+      max-width: 800px;
+      margin: 0 auto 20px auto;
+    }
+    
     img {
       @include grid-media($sm) {
         padding: 0;
