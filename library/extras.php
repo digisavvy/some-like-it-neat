@@ -164,17 +164,3 @@ if ( 'offcanvas' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
 	add_action( 'wp_footer', 'some_like_it_neat_add_headroomjs' );
 
 }
-
-/**
- * Filter the "read more" excerpt string link to the post.
- *
- * @param string $more "Read more" excerpt string.
- * @return string (Maybe) modified "read more" excerpt string.
- */
-function some_like_it_neat_excerpt_more( $more ) {
-    return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
-        get_permalink( get_the_ID() ),
-        __( ' Read More', 'some-like-it-neat' )
-    );
-}
-add_filter( 'excerpt_more', 'some_like_it_neat_excerpt_more' );
