@@ -130,3 +130,4 @@ wp-content/mu-plugins/wpengine-comm
 *.avi
 /assets/css
 /dist
+/mix-manifest.json
