@@ -16,6 +16,9 @@
   .wp-block-image {
 
     figcaption {
+      @include grid-media($sm) {
+        display: block;
+      }
       border-bottom: solid 1px #ccc;
       padding-bottom: 5px;
       display: flex;
