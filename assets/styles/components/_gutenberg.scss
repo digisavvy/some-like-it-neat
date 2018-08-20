@@ -9,6 +9,10 @@
     margin: 8px;
   }
 
+  p.wp-block-subhead {
+    font-size: 24px;
+  }
+
   .wp-block-image {
 
     figcaption {
@@ -21,26 +25,33 @@
       margin: 0 auto 20px auto;
     }
     
-    img {
+    img {  
       @include grid-media($sm) {
-        padding: 0;
-        width: 100%;
+        
       }
-  
       @include grid-media($md) {
         padding: 0;
       }
-      max-width: none;
+
     }
+
+    &.alignfull {
+      img {
+        width: 100%;
+      }
+    }
+
     &.alignright {
       @include grid-media($sm) {
         margin: auto;
-        padding: 20px;
+        padding: 0;
+        width: 100%;
       }
       @include grid-media($smbg) {
         float: right;
         margin-right: 5%;
-        padding: inherit;
+        padding: 20px;
+        width: inherit;
       }
       @include grid-media($md) {
         margin-left: 10px;
@@ -50,18 +61,24 @@
         margin-right: 10%;
       }
       @include grid-media($hg) {
+        margin-right: 15%;
+      }
+      @include grid-media($hgbg) {
         margin-right: 20%;
       }
     }
+
     &.alignleft {
       @include grid-media($sm) {
         margin: auto;
         padding: 20px;
+        width: 100%;
       }
       @include grid-media($smbg) {
         float: left;
         margin-left: 5%;
         padding: inherit;
+        width: inherit;
       }
       @include grid-media($md) {
         margin-left: 5%;
@@ -71,13 +88,30 @@
         margin-left: 10%;
       }
       @include grid-media($hg) {
+        margin-left: 15%;
+      }
+      @include grid-media($hgbg) {
         margin-left: 20%;
+      }
+
+    }
+    &.is-resized img {
+      @include grid-media($sm) {
+        float: none;
+        width: 100%;
+        margin: 20px auto;
+      }
+      @include grid-media($md) {
+        float: inherit;
+        // margin: inherit;
+        width: inherit;
       }
     }
   }
 
   blockquote,
   .comment-respond,
+  a.post-edit-link,
   .entry-meta,
   .jp-relatedposts,
   .post-navigation,
