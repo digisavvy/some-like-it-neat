@@ -15,10 +15,7 @@
 
         <?php some_like_it_neat_footer(); ?>
 
-        <?php edit_post_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
+        <?php edit_post_link( __( 'Edit Post', 'some-like-it-neat' ), '<div class="edit-link">', '</div>' ); ?>
 
     </footer><!-- .entry-meta -->
 <?php endif; ?>
-
-<?php edit_post_link( __( 'Edit', 'some-like-it-neat' ), '<span class="edit-link">', '</span>' ); ?>
-
