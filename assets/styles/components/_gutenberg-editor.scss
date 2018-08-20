@@ -31,6 +31,10 @@ body.gutenberg-editor-page {
         @extend #primary;
     }
 
+    p.wp-block-subhead {
+        font-size: 24px;
+    }
+    
     .mce-btn.mce-active button, 
     .mce-btn.mce-active:hover button, 
     .mce-btn.mce-active i, 
