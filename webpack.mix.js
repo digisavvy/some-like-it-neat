@@ -73,25 +73,10 @@ if ( process.env.bundle ) {
 	zipFolder( bundlePath, project+'.zip' );
 	mix.copy(project+'.zip', themeBundle);
 
-	// if (fs.existsSync(project+'.zip')){
-	// 	del([project+'.zip']);
-	// }
-
 	// Bail early because we don't need to do anything else after this point.
 	// Everything else following below is for the build process.
 	return;
 	
-}
-
-// While in production
-if (mix.inProduction()) {
-	
-	// rimraf.sync( bundlePath+'/**/*.map');
-	// zipFolder( bundlePath, project+'.zip' );
-	// mix.copy(project+'.zip', themeBundle);
-	// // Delete the previous bundle to start clean.
-	// rimraf.sync( bundlePath );
-	// // rimraf.sync( project+'.zip' );
 }
 
 // Sass configuration.
