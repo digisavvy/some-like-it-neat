@@ -33,14 +33,11 @@ if ( process.env.bundle ) {
 	let files = [
         '.gitignore',
         'CHANGELOG.md',
-        'composer.json',
-        'composer.phar',
         'CONTRIBUTING.md',
         'license.txt',
-        'package.json',
         'README.md',
         'screenshot.png',
-        'style.css'
+		'style.css'
 	];
 
 	// Folders to include.
@@ -51,8 +48,13 @@ if ( process.env.bundle ) {
         'page-templates/template-parts'
 	];
 
-    // Delete the previous bundle to start clean.
-    rimraf.sync( bundlePath );
+	// Create bundle dir. 
+	if (!fs.existsSync(bundlePath)){
+		fs.mkdirSync(bundlePath);
+	} else {
+		rimraf.sync( bundlePath );
+		fs.mkdirSync(bundlePath);
+	}
 
     // Copy theme-root-level php files
 	mix.copy('*.php', bundlePath);
@@ -67,9 +69,29 @@ if ( process.env.bundle ) {
 		mix.copyDirectory( folder, `${bundlePath}/${folder}` );
 	} );
 
+	// Zip up bundle and move to releases folder
+	zipFolder( bundlePath, project+'.zip' );
+	mix.copy(project+'.zip', themeBundle);
+
+	// if (fs.existsSync(project+'.zip')){
+	// 	del([project+'.zip']);
+	// }
+
 	// Bail early because we don't need to do anything else after this point.
 	// Everything else following below is for the build process.
 	return;
+	
+}
+
+// While in production
+if (mix.inProduction()) {
+	
+	// rimraf.sync( bundlePath+'/**/*.map');
+	// zipFolder( bundlePath, project+'.zip' );
+	// mix.copy(project+'.zip', themeBundle);
+	// // Delete the previous bundle to start clean.
+	// rimraf.sync( bundlePath );
+	// // rimraf.sync( project+'.zip' );
 }
 
 // Sass configuration.
