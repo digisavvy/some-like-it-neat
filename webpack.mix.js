@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 const imageminMozjpeg   = require( 'imagemin-mozjpeg' );
 const rimraf            = require( 'rimraf' );
 const zipFolder 		= require('folder-zip-sync');
+const fs 				= require('fs');
 
 
 // Project specific naming. Change extension to suit your local setup
@@ -48,6 +49,9 @@ if ( process.env.bundle ) {
         'page-templates/template-parts'
 	];
 
+	// Removes previous bundle
+	rimraf.sync( bundlePath );
+	
 	// Create bundle dir. 
 	if (!fs.existsSync(bundlePath)){
 		fs.mkdirSync(bundlePath);
@@ -196,7 +200,8 @@ mix.webpackConfig( {
 // While in production
 if (mix.inProduction()) {
 	zipFolder( bundlePath, project+'.zip' );
-	mix.copy(project+'.zip', themeBundle);
-	// Delete the previous bundle to start clean.
-    // rimraf.sync( bundlePath );
+	// move theme zip to release folder
+	fs.rename(project+'.zip', themeBundle);
+	// Removes previous bundle
+	rimraf.sync( bundlePath );
 }
