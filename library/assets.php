@@ -70,6 +70,9 @@ endif; // Enqueue scripts.
  * Enqueue styles.
  */
 if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
+	// Get last modified timestamp of CSS file in /css/style.css
+	$ctime = filemtime( get_template_directory() . '/assets/css/style.css' );
+
 	/**
 	 * Calls theme styles.
 	 *
@@ -85,14 +88,14 @@ if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
 			if ( SCRIPT_DEBUG || WP_DEBUG ) :
 				wp_register_style(
 					'some_like_it_neat-style', // handle name.
-					get_parent_theme_file_uri( '/assets/css/style.css' ), '', '1.2', 'screen'
+					get_theme_file_uri( '/assets/css/style.css' ), array(), "$ctime", 'screen'
 				);
 				wp_enqueue_style( 'some_like_it_neat-style' );
 
 			else :
 				wp_register_style(
 					'some_like_it_neat-style', // handle name.
-					get_parent_theme_file_uri( '/assets/css/style-min.css' ), '', '1.2', 'screen'
+					get_theme_file_uri( '/assets/css/style-min.css' ), array(), "$ctime", 'screen'
 				);
 				wp_enqueue_style( 'some_like_it_neat-style' );
 			endif;
@@ -102,14 +105,14 @@ if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
 			if ( SCRIPT_DEBUG || WP_DEBUG ) :
 				wp_register_style(
 					'some_like_it_neat-style', // handle name.
-					get_parent_theme_file_uri( '/assets/css/rtl.css' ), '', '1.2', 'screen'
+					get_theme_file_uri( '/assets/css/rtl.css' ), array(), "$ctime", 'screen'
 				);
 				wp_enqueue_style( 'some_like_it_neat-style' );
 
 			else :
 				wp_register_style(
 					'some_like_it_neat-style', // handle name.
-					get_parent_theme_file_uri( '/assets/css/rtl-min.css' ), '', '1.2', 'screen'
+					get_theme_file_uri( '/assets/css/rtl-min.css' ), array(), "$ctime", 'screen'
 				);
 				wp_enqueue_style( 'some_like_it_neat-style' );
 			endif;
