@@ -9,7 +9,14 @@
     margin: 8px;
   }
 
-  p.wp-block-subhead {
+  p.wp-block-subhead,
+  blockquote, {
+    @include grid-media($md) {
+      max-width: 720px;
+    }
+    @include grid-media($mdbg) {
+      max-width: 840px;
+    }
     font-size: 24px;
   }
 
@@ -112,12 +119,12 @@
     }
   }
 
-  blockquote,
   .comment-respond,
   a.post-edit-link,
   .entry-meta,
   .jp-relatedposts,
   .post-navigation,
+  cite,
   p,
   ul,
   ol,
