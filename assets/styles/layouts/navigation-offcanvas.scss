@@ -1,5 +1,10 @@
 // Call necessary Sass files
-@import '../common/__common-dir';
+// @import '../common/__common-dir';
+@import '../../../node_modules/bourbon/core/bourbon';
+@import '../common/grid-settings';
+@import '../../../node_modules/bourbon-neat/core/neat';
+@import '../common/variables';
+
 
 // Offcanvas menu styling
 .dropdown-toggle:hover {
