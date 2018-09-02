@@ -157,16 +157,17 @@
   }
 
   .wp-block-pullquote {
-      padding: 20px 0;
+    border: double $black; 
+    padding: 20px 0;
   }
 
   .wp-block-quote {
-      margin: 40px auto;
-      padding: 20px;
+    margin: 40px auto;
+    padding: 20px;
 
-      p {
-          padding: 0;
-      }
+    p {
+        padding: 0;
+    }
 
   }
 

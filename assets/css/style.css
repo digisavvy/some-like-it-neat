@@ -878,6 +878,7 @@ picture {
 }
 
 #primary .wp-block-pullquote {
+	border: double #141414;
 	padding: 20px 0;
 }
 
