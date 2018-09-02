@@ -16,8 +16,14 @@ header {
     text-align: center;
   }
 }
+
 .hentry {
     margin: 0 0 0;
+}
+
+.more-link {
+    padding-bottom: modular-scale(1);
+    display: block;
 }
 
 .byline,
