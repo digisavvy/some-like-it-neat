@@ -70,9 +70,7 @@ endif; // Enqueue scripts.
  * Enqueue styles.
  */
 if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
-	// Get last modified timestamp of CSS file in /css/style.css
-	$ctime = filemtime( get_template_directory() . '/assets/css/style.css' );
-
+	
 	/**
 	 * Calls theme styles.
 	 *
@@ -82,7 +80,10 @@ if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
 	 * @link https://codex.wordpress.org/Function_Reference/is_rtl
 	 */
 	function some_like_it_neat_styles() {
-
+		
+		// Get last modified timestamp of CSS file in /css/style.css
+		$ctime = filemtime( get_template_directory() . '/assets/css/style.css' );
+		
 		if ( ! is_rtl() ) {
 
 			if ( SCRIPT_DEBUG || WP_DEBUG ) :
