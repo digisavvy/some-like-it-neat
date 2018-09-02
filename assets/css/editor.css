@@ -238,11 +238,41 @@ dl dd {
 	padding: 0 0 0.5em 0;
 }
 
+abbr:before {
+	content: '(';
+}
+
+abbr:after {
+	content: ')';
+}
+
+code {
+	background: #141414;
+	color: #f5f5f5;
+	padding: 2px 10px;
+}
+
+del {
+	color: #949393;
+}
+
 hr {
 	border-bottom: 1px solid #ddd;
 	border-left: 0;
 	border-right: 0;
 	border-top: 0;
+}
+
+pre {
+	background: #141414;
+	color: #f5f5f5;
+	padding: 20px;
+	display: block;
+}
+
+q {
+	font-family: "Georgia", "Times", "Times New Roman", serif;
+	font-style: italic;
 }
 
 strong, b {
@@ -550,11 +580,41 @@ body.gutenberg-editor-page dl dd {
 	padding: 0 0 0.5em 0;
 }
 
+body.gutenberg-editor-page abbr:before {
+	content: '(';
+}
+
+body.gutenberg-editor-page abbr:after {
+	content: ')';
+}
+
+body.gutenberg-editor-page code {
+	background: #141414;
+	color: #f5f5f5;
+	padding: 2px 10px;
+}
+
+body.gutenberg-editor-page del {
+	color: #949393;
+}
+
 body.gutenberg-editor-page hr {
 	border-bottom: 1px solid #ddd;
 	border-left: 0;
 	border-right: 0;
 	border-top: 0;
+}
+
+body.gutenberg-editor-page pre {
+	background: #141414;
+	color: #f5f5f5;
+	padding: 20px;
+	display: block;
+}
+
+body.gutenberg-editor-page q {
+	font-family: "Georgia", "Times", "Times New Roman", serif;
+	font-style: italic;
 }
 
 body.gutenberg-editor-page strong, body.gutenberg-editor-page b {

@@ -396,11 +396,41 @@ dl dd {
 	padding: 0 0 0.5em 0;
 }
 
+abbr:before {
+	content: '(';
+}
+
+abbr:after {
+	content: ')';
+}
+
+code {
+	background: #141414;
+	color: #f5f5f5;
+	padding: 2px 10px;
+}
+
+del {
+	color: #949393;
+}
+
 hr {
 	border-bottom: 1px solid #ddd;
 	border-left: 0;
 	border-right: 0;
 	border-top: 0;
+}
+
+pre {
+	background: #141414;
+	color: #f5f5f5;
+	padding: 20px;
+	display: block;
+}
+
+q {
+	font-family: "Georgia", "Times", "Times New Roman", serif;
+	font-style: italic;
 }
 
 strong, b {

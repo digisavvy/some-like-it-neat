@@ -168,11 +168,42 @@ dl {
       }
 }
 
+abbr {
+    &:before {
+        content: '(';
+    }
+    &:after {
+        content: ')';
+    }
+}
+
+code {
+    background: $black;
+    color: $white;
+    padding: 2px 10px;
+}
+
+del {
+    color: lighten($black, 50%);
+}
+
 hr {
     border-bottom: $base-border;
     border-left: 0;
     border-right: 0;
     border-top: 0;
+}
+
+pre {
+    background: $black;
+    color: $white;
+    padding: 20px;
+    display: block;
+}
+
+q {
+    font-family: $content;
+    font-style: italic;
 }
 
 strong, b {
