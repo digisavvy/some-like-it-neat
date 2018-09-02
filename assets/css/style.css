@@ -397,9 +397,11 @@ h6 {
 
 blockquote,
 .wp-block-quote {
+	border-left: solid 3px #141414;
 	font-size: 26px;
 	font-style: italic;
 	line-height: 1.2;
+	margin: 40px auto;
 	padding: 20px;
 }
 
@@ -411,6 +413,29 @@ blockquote p,
 
 cite {
 	font-style: italic;
+}
+
+dl {
+	border: 3px double #ccc;
+	padding: 0.5em;
+}
+
+dl dt {
+	float: left;
+	clear: left;
+	width: 100px;
+	text-align: right;
+	font-weight: bold;
+	color: #141414;
+}
+
+dl dt::after {
+	content: ":";
+}
+
+dl dd {
+	margin: 0 0 0 110px;
+	padding: 0 0 0.5em 0;
 }
 
 hr {
@@ -609,7 +634,12 @@ picture {
 
 #primary p.wp-block-subhead,
 #primary blockquote {
-	font-size: 24px;
+	border-left: solid 3px #141414;
+	font-size: 26px;
+	font-style: italic;
+	line-height: 1.2;
+	margin: 40px auto;
+	padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
