@@ -30,7 +30,68 @@
   }
   
   .wp-block-image {
+    figure {
+      
+      &.alignleft {
+        @include grid-media($sm) {
+          margin: auto;
+          padding: 20px;
+          width: 100%;
+        }
+        @include grid-media($smbg) {
+          float: left;
+          margin-left: 5%;
+          padding: inherit;
+          width: inherit;
+        }
+        @include grid-media($md) {
+          margin-left: 5%;
+          margin-right: 20px;
+        }
+        @include grid-media($mdbg) {
+          margin-left: 10%;
+        }
+        @include grid-media($hg) {
+          margin-left: 15%;
+        }
+        @include grid-media($hgbg) {
+          margin-left: 20%;
+        }
+      }
 
+      &.alignfull {
+        img {
+          width: 100%;
+        }
+      }
+  
+      &.alignright {
+        @include grid-media($sm) {
+          margin: auto;
+          padding: 0;
+          width: 100%;
+        }
+        @include grid-media($smbg) {
+          float: right;
+          margin-right: 5%;
+          padding: 20px;
+          width: inherit;
+        }
+        @include grid-media($md) {
+          margin-left: 10px;
+          margin-right: 5%;
+        }
+        @include grid-media($mdbg) {
+          margin-right: 10%;
+        }
+        @include grid-media($hg) {
+          margin-right: 15%;
+        }
+        @include grid-media($hgbg) {
+          margin-right: 20%;
+        }
+      }
+    }
     figcaption {
       @include grid-media($sm) {
         display: block;
@@ -42,6 +103,7 @@
       text-decoration: underline;
       max-width: 800px;
       margin: 0 auto 20px auto;
+      
     }
     
     img {  
@@ -54,66 +116,6 @@
 
     }
 
-    &.alignfull {
-      img {
-        width: 100%;
-      }
-    }
-
-    &.alignright {
-      @include grid-media($sm) {
-        margin: auto;
-        padding: 0;
-        width: 100%;
-      }
-      @include grid-media($smbg) {
-        float: right;
-        margin-right: 5%;
-        padding: 20px;
-        width: inherit;
-      }
-      @include grid-media($md) {
-        margin-left: 10px;
-        margin-right: 5%;
-      }
-      @include grid-media($mdbg) {
-        margin-right: 10%;
-      }
-      @include grid-media($hg) {
-        margin-right: 15%;
-      }
-      @include grid-media($hgbg) {
-        margin-right: 20%;
-      }
-    }
-
-    &.alignleft {
-      @include grid-media($sm) {
-        margin: auto;
-        padding: 20px;
-        width: 100%;
-      }
-      @include grid-media($smbg) {
-        float: left;
-        margin-left: 5%;
-        padding: inherit;
-        width: inherit;
-      }
-      @include grid-media($md) {
-        margin-left: 5%;
-        margin-right: 20px;
-      }
-      @include grid-media($mdbg) {
-        margin-left: 10%;
-      }
-      @include grid-media($hg) {
-        margin-left: 15%;
-      }
-      @include grid-media($hgbg) {
-        margin-left: 20%;
-      }
-
-    }
     &.is-resized img {
       @include grid-media($sm) {
         float: none;
