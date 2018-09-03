@@ -116,6 +116,21 @@ if ( ! function_exists( 'some_like_it_neat_post_format_footer' ) ) :
 endif;
 
 /**
+ * Filter the "read more" excerpt string link to the post.
+ *
+ * @param string $more "Read more" excerpt string.
+ * @return string (Maybe) modified "read more" excerpt string.
+ */
+function some_like_it_neat_excerpt_more( $more ) {
+	$title = get_the_title( get_the_ID() );
+    return sprintf( '<a class="read-more" href="%1$s" title="'.$title.'">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( '<span class="meta-nav"> Continue reading &rarr;</span>', 'some-like-it-neat' )
+    );
+}
+add_filter( 'excerpt_more', 'some_like_it_neat_excerpt_more' );
+
+/**
  * Add Headroom Script if Offcanvas option is selected
  */
 if ( 'offcanvas' === get_theme_mod( 'some-like-it-neat_nav_style' ) ) {
