@@ -44,6 +44,7 @@ Bourbon and Neat are used for providing simple Sass mixins and leverages a simpl
 
 There are things you need to install before you hack away at things. There are three package managers to install: Node (which installs the NPM package manager). Each of these have dependencies that also need to be installed. Fortunately, this is all "fairly easy".
 
+
 * #### Prerequisites
   * You'll need to download and install [Node](https://nodejs.org/)
   * You will need to download and install [Sass](http://sass-lang.com/install)
@@ -67,15 +68,18 @@ There are things you need to install before you hack away at things. There are t
   * **`npm install`** - Installs all the necessary Gulp plugins to help with task automation such as Sass compiling and browser-sync! You'll need to run this step on each of your projects, going forward.
  
  * #### Set your project configuration in Gulpfile.js!!
-_Be sure to go into gulpfile.js and setup the project configuration variables._
 
- 	* This is important for using Browser-Sync with your project. Make sure in gulpfile.js that you set the `project` variable to the appropriate name for your project URL. Default is "yourlocal.dev"
+_Be sure to go into webpack.mix.js and setup the project configuration variables._
+
+  * If you plan to rename your theme files be sure to update the contents of the theme-claim.json file.
+
 
 * #### Laravel Mix Tasks
 Webpack or Laravel Mix, rather, 
   * `npm run watch` This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
   * `npm run bundle` This command bundles your files up into a new folder called _dist_.
   * `npm run prod` This command minifies your theme assets like your css and js files. Currently takes your _dist_ folder, zips it up, and zips it to _releases/themename.zip_.
+  * `npm run rename` This is a helper that does a search replace on your theme files and replaces the name, link, author. Make sure to update theme-claim.json before running this.
 
 
 Each task such as 'js', 'images' or 'browser-sync' may be started individually. Although, the only one of them you'd do that with is the 'images' task since that's not auto-optimizing at the moment.
