@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.6.2
+-------------
+* **Big change** — Removed Gulp and replaced with [Laravel Mix](https://laravel.com/docs/5.6/mix#introduction). This was done to simplify
+things from a build standpoint. Also, I found webpack, itself, to be very
+intimidating and difficult to begin with. Mix is soooo much easier to set up. Good by Jason Beastly gulpfile config. Be sure to checkout updated readme.md docs to get started.
+
 ### 1.6.1
 -------------
 * Added basic support for Gutenberg blocks.
@@ -12,7 +18,7 @@
 
 ### 1.6
 -------------
-* **Big change** Removed Neat grid-column() functions in favor of [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid). Neat Still works, but is no longer used to define layouts. It is now primarily used for its `grid-media` function for setting up variable breakpoints. If you want to continue using Neat to define layouts it’s still there and you can do that. I recommend pushing ahead with CSS Grid, it’s great and the Mozilla Developer Network docs are fantastic (linked above). Also check out [Wes Bos’s free course](https://wesbos.io)
+* **Big change** — Removed Neat grid-column() functions in favor of [CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/grid). Neat Still works, but is no longer used to define layouts. It is now primarily used for its `grid-media` function for setting up variable breakpoints. If you want to continue using Neat to define layouts it’s still there and you can do that. I recommend pushing ahead with CSS Grid, it’s great and the Mozilla Developer Network docs are fantastic (linked above). Also check out [Wes Bos’s free course](https://wesbos.io)
 * Fix issue with `_headroom.scss` not getting included in project files.
 
 ### 1.5.1
