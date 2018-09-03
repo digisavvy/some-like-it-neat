@@ -283,6 +283,8 @@ Road Map
 A special thanks to all the folks who inspire me on a daily basis to "do more" with what I know and what I can contribute.
 
 * Brandon Dove
+* Justin Tadlock
+* Emil Uzelac
 * Nikhil @techvoltz
 * Jon Brown
 * Udit Desai
