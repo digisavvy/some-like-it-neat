@@ -395,7 +395,7 @@ h6 {
 	}
 }
 
-blockquote,
+blockquote, #primary p.wp-block-subhead,
 .wp-block-quote {
 	border-left: solid 3px #141414;
 	font-size: 26px;
@@ -405,7 +405,7 @@ blockquote,
 	padding: 20px;
 }
 
-blockquote p,
+blockquote p, #primary p.wp-block-subhead p,
 .wp-block-quote p {
 	font-size: 26px;
 	line-height: 1.2;
@@ -661,8 +661,7 @@ picture {
 	margin: 8px;
 }
 
-#primary p.wp-block-subhead,
-#primary blockquote {
+#primary blockquote, #primary p.wp-block-subhead {
 	border-left: solid 3px #141414;
 	font-size: 26px;
 	font-style: italic;
@@ -672,17 +671,19 @@ picture {
 }
 
 @media only screen and (min-width: 768px) {
-	#primary p.wp-block-subhead,
-	#primary blockquote {
+	#primary blockquote, #primary p.wp-block-subhead {
 		max-width: 720px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	#primary p.wp-block-subhead,
-	#primary blockquote {
+	#primary blockquote, #primary p.wp-block-subhead {
 		max-width: 840px;
 	}
+}
+
+#primary p.wp-block-subhead {
+	border-left: none;
 }
 
 #primary .wp-block-image figcaption {
