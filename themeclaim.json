@@ -1,0 +1,10 @@
+{
+  "from": {
+    "Name": "Some Like it Neat",
+    "Description": "A simple yet advanced Starter Theme built using _S, Bourbon and Neat (http://underscores.me, http://bourbon.io, http://neat.bourbon.io). Please refer to the README.md file for basic usage instructions and prerequisites. You can always grab the latest version over at http://github.com/digisavvy.some-like-it-neat",
+    "Uri": "https://github.com/digisavvy/some-like-it-neat",
+    "Author": "Alex Vasquez",
+    "AuthorEmail": "alexjvas@gmail.com",
+    "AuthorUri": "https://digisavvy.com"
+  }
+}
