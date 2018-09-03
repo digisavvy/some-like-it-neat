@@ -449,7 +449,8 @@ abbr:after {
 code {
 	background: #141414;
 	color: #f5f5f5;
-	padding: 2px 10px;
+	display: inline-block;
+	padding: 5px 10px;
 }
 
 del {
@@ -464,9 +465,7 @@ hr {
 }
 
 pre {
-	background: #141414;
-	color: #f5f5f5;
-	padding: 20px;
+	padding: 20px 20px 20px 40px;
 	display: block;
 }
 
