@@ -7,3 +7,19 @@
 .infinity-end.neverending #footer {
     display: block;
 }
+
+.infinite-wrap {
+	@include grid-media($sm) {
+		grid-column: 1 / -1;
+		padding: 0 20px;
+	}
+	@include grid-media($mdbg) {
+		grid-column: 1 / 7;
+		margin-left: 20px;
+		padding: 0;
+	}
+	@include grid-media($hg) {
+		grid-column: 1 / 9;
+		margin: 0;
+	}
+}
