@@ -467,6 +467,7 @@ hr {
 pre {
 	padding: 20px 20px 20px 40px;
 	display: block;
+	white-space: pre-line;
 }
 
 q {
@@ -708,6 +709,94 @@ picture {
 	border-left: none;
 }
 
+@media only screen and (min-width: 0) {
+	#primary .wp-block-image figure.alignleft {
+		margin: auto;
+		padding: 20px;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	#primary .wp-block-image figure.alignleft {
+		float: left;
+		margin-left: 5%;
+		padding: inherit;
+		width: inherit;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#primary .wp-block-image figure.alignleft {
+		margin-left: 5%;
+		margin-right: 20px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	#primary .wp-block-image figure.alignleft {
+		margin-left: 10%;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	#primary .wp-block-image figure.alignleft {
+		margin-left: 15%;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	#primary .wp-block-image figure.alignleft {
+		margin-left: 20%;
+	}
+}
+
+#primary .wp-block-image figure.alignfull img {
+	width: 100%;
+}
+
+@media only screen and (min-width: 0) {
+	#primary .wp-block-image figure.alignright {
+		margin: auto;
+		padding: 0;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 480px) {
+	#primary .wp-block-image figure.alignright {
+		float: right;
+		margin-right: 5%;
+		padding: 20px;
+		width: inherit;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	#primary .wp-block-image figure.alignright {
+		margin-left: 10px;
+		margin-right: 5%;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	#primary .wp-block-image figure.alignright {
+		margin-right: 10%;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	#primary .wp-block-image figure.alignright {
+		margin-right: 15%;
+	}
+}
+
+@media only screen and (min-width: 1400px) {
+	#primary .wp-block-image figure.alignright {
+		margin-right: 20%;
+	}
+}
+
 #primary .wp-block-image figcaption {
 	border-bottom: solid 1px #ccc;
 	padding-bottom: 5px;
@@ -731,94 +820,6 @@ picture {
 @media only screen and (min-width: 768px) {
 	#primary .wp-block-image img {
 		padding: 0;
-	}
-}
-
-#primary .wp-block-image.alignfull img {
-	width: 100%;
-}
-
-@media only screen and (min-width: 0) {
-	#primary .wp-block-image.alignright {
-		margin: auto;
-		padding: 0;
-		width: 100%;
-	}
-}
-
-@media only screen and (min-width: 480px) {
-	#primary .wp-block-image.alignright {
-		float: right;
-		margin-right: 5%;
-		padding: 20px;
-		width: inherit;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	#primary .wp-block-image.alignright {
-		margin-left: 10px;
-		margin-right: 5%;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	#primary .wp-block-image.alignright {
-		margin-right: 10%;
-	}
-}
-
-@media only screen and (min-width: 1140px) {
-	#primary .wp-block-image.alignright {
-		margin-right: 15%;
-	}
-}
-
-@media only screen and (min-width: 1400px) {
-	#primary .wp-block-image.alignright {
-		margin-right: 20%;
-	}
-}
-
-@media only screen and (min-width: 0) {
-	#primary .wp-block-image.alignleft {
-		margin: auto;
-		padding: 20px;
-		width: 100%;
-	}
-}
-
-@media only screen and (min-width: 480px) {
-	#primary .wp-block-image.alignleft {
-		float: left;
-		margin-left: 5%;
-		padding: inherit;
-		width: inherit;
-	}
-}
-
-@media only screen and (min-width: 768px) {
-	#primary .wp-block-image.alignleft {
-		margin-left: 5%;
-		margin-right: 20px;
-	}
-}
-
-@media only screen and (min-width: 1024px) {
-	#primary .wp-block-image.alignleft {
-		margin-left: 10%;
-	}
-}
-
-@media only screen and (min-width: 1140px) {
-	#primary .wp-block-image.alignleft {
-		margin-left: 15%;
-	}
-}
-
-@media only screen and (min-width: 1400px) {
-	#primary .wp-block-image.alignleft {
-		margin-left: 20%;
 	}
 }
 

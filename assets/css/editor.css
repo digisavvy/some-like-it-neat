@@ -267,6 +267,7 @@ hr {
 pre {
 	padding: 20px 20px 20px 40px;
 	display: block;
+	white-space: pre-line;
 }
 
 q {
@@ -608,6 +609,7 @@ body.gutenberg-editor-page .edit-post-layout__content hr {
 body.gutenberg-editor-page .edit-post-layout__content pre {
 	padding: 20px 20px 20px 40px;
 	display: block;
+	white-space: pre-line;
 }
 
 body.gutenberg-editor-page .edit-post-layout__content q {
