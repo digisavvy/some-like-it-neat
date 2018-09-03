@@ -1,6 +1,7 @@
 
 # Some Like it Neat
 
+
 ### A WordPress Theme Using _s, Bourbon + Neat and Theme Hook Alliance
 
 Description
@@ -8,10 +9,6 @@ Description
 
 Some Like it Neat is a Minimal Starter theme that is Responsive out of the box. It uses Sass along with Bourbon Neat for help with Responsive grids. It's based on _s and is pretty rad.
 
-
-Donate (or submit a pull request)
----------------
-<a href='https://pledgie.com/campaigns/27978'><img alt='Click here to lend your support to: Some Like it Neat, a WordPress Starter Theme and make a donation at pledgie.com !' src='https://pledgie.com/campaigns/27978.png?skin_name=chrome' border='0' ></a>
 
 What's Inside?
 ---------------
@@ -30,10 +27,7 @@ Bitters is baked-in, too! You get some basic nifty styles out of the gate.
 
 * Theme Hook Alliance — One of the things I learned to love about working with Frameworks were their hooks. Thematic and Genesis introduced me to the notion. Since them I've been using them like they're going out of style. When I set out to make my own starter theme I wanted to make something that had "just the right amount" of features for me. I knew I needed hooks. The THA project was intro'd to me by Brandon Dove, at the OCWP (http://ocwp.org) developer's day meetup. Thought it was super neat. So I bundled that hot mess right into this thing.
 
-* Gulpjs Task Automation — This has been a biggy! Lots of work done and yet to-do. Your gulpjs file will help automate nifty
-tasks such as autoprefixing, compiling and minifying Sass files; cleaning up your theme directory and even packaging/zipping
-your theme! Cool. Right?
-
+* Laravel Mix — Scripts that compile your sass files, minify, inject changes into a live browser session via browser-sync.  
 * Built for Accessibility
 * Flexnav Menu System and Hover Intent
 * TGM PLugin Activation
@@ -44,7 +38,7 @@ your theme! Cool. Right?
 
 Getting Started
 ---------------
-There's a lot to this theme, but don't be intimidated, even if you're not an "advanced-level" developer, you got this! I'll be honest with you, I don't know how half the stuff here works, it just sorta does. =)
+There's a lot to this theme; don't be intimidated, even if you're not an _advanced-level_ developer, you got this! I'll be honest with you, I don't know how half the stuff here works, it just sorta does. =)
 
 Bourbon and Neat are used for providing simple Sass mixins and leverages a simple grid system that let's you markup your theme how you want, while you use their math, unlike Bootstrap and Foundation, presently.
 
@@ -77,14 +71,12 @@ _Be sure to go into gulpfile.js and setup the project configuration variables._
 
  	* This is important for using Browser-Sync with your project. Make sure in gulpfile.js that you set the `project` variable to the appropriate name for your project URL. Default is "yourlocal.dev"
 
- * #### Generating your styles
-   * In pre 1.1.11 builds of Some Like it Neat, Style.scss would process/compile all of your changes to the various Sass files. This has changed in 1.1.11. We have added rtl
-   support using a set of mixins from the Bi-App-Sass [view](http://anasnakawa.github.io/bi-app-sass/) project which helps us generate styles for RTL configurations. All LTR styles are output to style.css and RTL styles are output to rtl.css.
+* #### Laravel Mix Tasks
+Webpack or Laravel Mix, rather, 
+  * `npm run watch` This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
+  * `npm run bundle` This command bundles your files up into a new folder called _dist_.
+  * `npm run prod` This command minifies your theme assets like your css and js files. Currently takes your _dist_ folder, zips it up, and zips it to _releases/themename.zip_.
 
-* #### Gulp Tasks
-There are a couple of tasks built into Some Like it Neat to help get you going.
-  * `gulp` This command simply starts up Gulp and watches your scss, js and php filder for changes, writes them out and refreshes the browser for you.
-  * `gulp build` This command removes unneccessary files and packs up the required files into a nice and neat, installable, zip package. Honestly, this is here because I was uploading my theme to the WP.org uploader so many times... Epitome of the laze.
 
 Each task such as 'js', 'images' or 'browser-sync' may be started individually. Although, the only one of them you'd do that with is the 'images' task since that's not auto-optimizing at the moment.
 
