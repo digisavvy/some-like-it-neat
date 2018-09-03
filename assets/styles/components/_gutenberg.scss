@@ -9,8 +9,7 @@
     margin: 8px;
   }
 
-  p.wp-block-subhead,
-  blockquote, {
+  blockquote {
     @include grid-media($md) {
       max-width: 720px;
     }
@@ -25,6 +24,11 @@
     padding: 20px;
   }
 
+  p.wp-block-subhead {
+    @extend blockquote;
+    border-left: none;
+  }
+  
   .wp-block-image {
 
     figcaption {
