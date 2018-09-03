@@ -119,126 +119,153 @@ I haven't listed out every single file here; but I have listed out the files tha
 a project.
 
 <pre style="max-height: 300px;"><code>Theme Root
-    │    ├── assets
-    │    │   ├── css
-    │    │   |    ├── layouts
-    |    |   |    |   ├── navigation-offcanvas.css
-    │    │   |    └── vendor
-    |    |   |    |   ├── flexnav.css
-    |    |   |    ├── style-min.css
-    |    |   |    └── style.css
-    │    |   └──  js
-    │    │   |    ├── app
-    │    │   |    └── vendor
-    │    |   |    |   ├── flexnav
-    │    |   |    |   ├── hoverintent
-    │    |   |    |   ├── modernizr
-    │    |   |    |   └── selectivizr
-    │    │   |    ├── custom-offcanvas.js
-    │    │   |    ├── production-min.js
-    │    │   |    └── development.js
-    │    |   └── maps
-    │    │   ├── sass
-    │    │   |   └── abstracts
-    │    |   |    |   ├── __abstracts.scss
-    │    |   |    |   ├── _accessibility.scss
-    │    |   |    |   ├── _typography.scss
-    │    |   |    |   ├── _variables.scss
-    │    │   |    └── base
-    │    |   |    |   ├── __base_dir.scss
-    │    |   |    |   ├── _normalize.scss
-    │    │   |    └── components
-    │    |   |    |   ├── __components-dir.scss
-    │    |   |    |   ├── _buttons.scss
-    │    |   |    |   ├── _infinite-scroll.scss
-    │    |   |    |   ├── _media.scss
-    │    │   |    └── layouts
-    │    |   |    |   ├── __layouts-dir.scss
-    │    |   |    |   ├── _content.scss
-    │    |   |    |   ├── _footer.scss
-    │    |   |    |   ├── _header.scss
-    │    |   |    |   ├── _navigation.scss
-    │    |   |    |   ├── _sidebar.scss
-    │    |   |    |   ├── _structure.scss
-    │    |   |    |   └── navigation-offcanvas.scss
-    │    │   |    └── templates
-    │    |   |    |   ├── __templates-dir.scss
-    │    |   |    |   ├── _template-2col-l-sidebar.scss
-    │    |   |    |   ├── _template-2col-r-sidebar.scss
-    │    |   |    |   ├── _template-full-width.scss
-    │    |   |    |   ├── _template-landing-page.scss
-    │    │   |    └── vendor
-    │    |   |    |   ├── __vendor-dir.scss
-    │    |   |    |   ├── _base.scss
-    │    |   |    |   ├── _buttons.scss
-    │    |   |    |   ├── _dashicons.scss
-    │    |   |    |   ├── _grid-settings.scss
-    │    |   |    |   ├── _layout.scss
-    │    |   |    |   ├── _lists.scss
-    │    |   |    |   └── _media.scss
-    │    |   |    |   └── _tables.scss
-    │    |   |    |   └── _typography.scss
-    │    |   |    |   └── _variables.scss
-    │    |   |    |   └── flexnav.scss
-    │    |   ├── _app.scss
-    │    |   ├── _grid-settings.scss
-    │    |   └── style.scss
-    ├── library
-    │   └── languages
-    │   │   ├── some_like_it_neat.pot
-    │   └── vendors
-    │   │   ├── cmb2
-    │   │   ├── customizer
-    │   │   ├── tgm-plugin-activation
-    │   │   ├── theme-hook-alliance
-    │   │   └── custom-header.php
-    │   │   └── extras.php
-    │   │   └── jetpack.php
-    │   │   └── meta.php
-    │   │   └── template-tags.php
-    │   ├── assets.php
-    │   ├── customizer-frontend-settings.php
-    │   ├── extras.php
-    │   ├── theme-setup.php
-    │   ├── vendor.php
-    │   ├── widgets.php
-    ├── page-templates
-    │     └── template-parts
-    |     |   ├── content-aside.php
-    |     |   ├── content-audio.php
-    |     |   ├── content-chat.php
-    |     |   ├── content-gallery.php
-    |     |   ├── content-image.php
-    |     |   ├── content-link.php
-    |     |   ├── content-none.php
-    |     |   ├── content-page.php
-    |     |   ├── content-quote.php
-    |     |   ├── content-single.php
-    |     |   ├── content-status.php
-    |     |   ├── content-video.php
-    |     |   └── content.php
-    |     ├── template-full-width.php
-    |     ├── template-left-col.php
-    |     └── template-right-col.php
-	|     └── template-landing-page.php
-    ├── 404.php
-    ├── archive.php
-    ├── comments.php
-    ├── footer.php
-    ├── functions.php
-    ├── gulpfile.js
-    ├── header.php
-    ├── index.php
-    ├── license.txt
-    ├── package.json
-    ├── page.php
-    ├── README.md
-    ├── rtl.css
-    ├── search.png
-    ├── searchform.php
-    ├── sidebar.php
-    ├── single.php
-    └── style.css
+├── 404.php
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── README.md
+├── archive.php
+├── assets
+│   ├── css
+│   │   ├── editor.css
+│   │   ├── layouts
+│   │   ├── style.css
+│   │   └── vendor
+│   ├── fonts
+│   ├── img
+│   ├── js
+│   │   ├── app
+│   │   └── vendor
+│   │       ├── custom-offcanvas.js
+│   │       ├── flexnav
+│   │       ├── headroom
+│   │       ├── hoverintent
+│   │       ├── modernizr
+│   │       ├── navigation.js
+│   │       ├── selectivizr
+│   │       └── skip-link-focus-fix.js
+│   ├── maps
+│   ├── styles
+│   │   ├── _app.scss
+│   │   ├── common
+│   │   │   ├── __common-dir.scss
+│   │   │   ├── _accessibility.scss
+│   │   │   ├── _buttons.scss
+│   │   │   ├── _forms.scss
+│   │   │   ├── _grid-settings.scss
+│   │   │   ├── _lists.scss
+│   │   │   ├── _media.scss
+│   │   │   ├── _tables.scss
+│   │   │   ├── _typography.scss
+│   │   │   └── _variables.scss
+│   │   ├── components
+│   │   │   ├── __components-dir.scss
+│   │   │   ├── _buttons.scss
+│   │   │   ├── _gutenberg-editor.scss
+│   │   │   ├── _gutenberg.scss
+│   │   │   ├── _infinite-scroll.scss
+│   │   │   ├── _inputs.scss
+│   │   │   └── _media.scss
+│   │   ├── editor.scss
+│   │   ├── layouts
+│   │   │   ├── __layouts-dir.scss
+│   │   │   ├── _content.scss
+│   │   │   ├── _footer.scss
+│   │   │   ├── _header.scss
+│   │   │   ├── _navigation.scss
+│   │   │   ├── _sidebar.scss
+│   │   │   ├── _structure.scss
+│   │   │   ├── _template-2col-l-sidebar.scss
+│   │   │   ├── _template-2col-r-sidebar.scss
+│   │   │   ├── _template-full-width.scss
+│   │   │   ├── _template-landing-page.scss
+│   │   │   └── navigation-offcanvas.scss
+│   │   ├── style.scss
+│   │   └── vendor
+│   │       ├── __vendor-dir.scss
+│   │       ├── flexnav.scss
+│   │       └── headroom.scss
+│   └── svg
+├── attachment.php
+├── comments.php
+├── composer.json
+├── composer.lock
+├── composer.phar
+├── footer.php
+├── functions.php
+├── gulpfile.js
+├── header.php
+├── index.php
+├── library
+│   ├── assets.php
+│   ├── customizer-frontend-settings.php
+│   ├── extras.php
+│   ├── languages
+│   ├── structure
+│   │   ├── content.php
+│   │   ├── footer.php
+│   │   └── header.php
+│   ├── theme-setup.php
+│   ├── vendor.php
+│   ├── vendors
+│   │   ├── custom-header.php
+│   │   ├── customizer
+│   │   ├── extras.php
+│   │   ├── jetpack.php
+│   │   ├── meta.php
+│   │   ├── template-tags.php
+│   │   ├── tgm-plugin-activation
+│   │   └── theme-hook-alliance
+│   └── widgets.php
+├── license.txt
+├── mix-manifest.json
+├── mix.js.map
+├── package-lock.json
+├── package.json
+├── page-templates
+│   ├── template-full-width.php
+│   ├── template-landing-page.php
+│   ├── template-left-col.php
+│   ├── template-parts
+│   │   ├── content-aside.php
+│   │   ├── content-attachment.php
+│   │   ├── content-audio.php
+│   │   ├── content-chat.php
+│   │   ├── content-gallery.php
+│   │   ├── content-image.php
+│   │   ├── content-link.php
+│   │   ├── content-meta.php
+│   │   ├── content-none.php
+│   │   ├── content-page.php
+│   │   ├── content-quote.php
+│   │   ├── content-single.php
+│   │   ├── content-status.php
+│   │   ├── content-video.php
+│   │   ├── content.php
+│   │   ├── footer-landing.php
+│   │   ├── header-landing.php
+│   │   ├── meta-entry-footer.php
+│   │   ├── meta-entry-header.php
+│   │   ├── navigation-flexnav.php
+│   │   └── navigation-offcanvas.php
+│   └── template-right-col.php
+├── page.php
+├── screenshot.png
+├── search.php
+├── sidebar.php
+├── single.php
+├── singular.php
+├── style.css
+├── themeclaim.json
+├── vendor
+│   ├── autoload.php
+│   ├── bin
+│   ├── composer
+│   ├── htmlburger
+│   │   └── carbon-fields
+│   ├── squizlabs
+│   └── wp-coding-standards
+└── webpack.mix.js
+
 </code></pre>
 
 How to Contribute to This Project
