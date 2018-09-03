@@ -19,20 +19,20 @@ body {
 	line-height: 1.5;
 }
 
-h1, h2, body.gutenberg-editor-page .editor-post-title__input, h3, h4, h5, h6 {
+h1, h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input, h3, h4, h5, h6 {
 	clear: both;
 	float: none;
 	font-weight: bold;
 	line-height: 1.25em;
 }
 
-h1::after, h2::after, body.gutenberg-editor-page .editor-post-title__input::after, h3::after, h4::after, h5::after, h6::after {
+h1::after, h2::after, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input::after, h3::after, h4::after, h5::after, h6::after {
 	clear: both;
 	content: "";
 	display: block;
 }
 
-h1 a, h1 a:visited, h2 a, body.gutenberg-editor-page .editor-post-title__input a, h2 a:visited, body.gutenberg-editor-page .editor-post-title__input a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
+h1 a, h1 a:visited, h2 a, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input a, h2 a:visited, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input a:visited, h3 a, h3 a:visited, h4 a, h4 a:visited, h5 a, h5 a:visited, h6 a, h6 a:visited {
 	color: #333;
 }
 
@@ -65,30 +65,30 @@ h1 {
 	}
 }
 
-h2, body.gutenberg-editor-page .editor-post-title__input {
+h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (min-width: 0) {
-	h2, body.gutenberg-editor-page .editor-post-title__input {
+	h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 		font-size: 6vh;
 	}
 }
 
 @media only screen and (min-width: 480px) {
-	h2, body.gutenberg-editor-page .editor-post-title__input {
+	h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 		font-size: 30px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	h2, body.gutenberg-editor-page .editor-post-title__input {
+	h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 		font-size: 40px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	h2, body.gutenberg-editor-page .editor-post-title__input {
+	h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 		font-size: 50px;
 	}
 }
@@ -203,10 +203,10 @@ blockquote,
 	padding: 20px;
 }
 
-blockquote p, blockquote body.gutenberg-editor-page p, body.gutenberg-editor-page blockquote p,
+blockquote p, blockquote body.gutenberg-editor-page .edit-post-layout__content p, body.gutenberg-editor-page .edit-post-layout__content blockquote p,
 .wp-block-quote p,
-.wp-block-quote body.gutenberg-editor-page p,
-body.gutenberg-editor-page .wp-block-quote p {
+.wp-block-quote body.gutenberg-editor-page .edit-post-layout__content p,
+body.gutenberg-editor-page .edit-post-layout__content .wp-block-quote p {
 	font-size: 26px;
 	line-height: 1.2;
 }
@@ -315,16 +315,16 @@ a:hover, a:visited:hover {
 	color: #104c90;
 }
 
-p, body.gutenberg-editor-page p {
+p, body.gutenberg-editor-page .edit-post-layout__content p {
 	font-family: "Georgia", "Times", "Times New Roman", serif;
 }
 
-#primary, body.gutenberg-editor-page ul,
+#primary, body.gutenberg-editor-page .edit-post-layout__content ul,
 #secondary {
 	font-family: "Georgia", "Times", "Times New Roman", serif;
 }
 
-#primary ul, body.gutenberg-editor-page ul ul,
+#primary ul, body.gutenberg-editor-page .edit-post-layout__content ul ul,
 #secondary ul {
 	padding-bottom: 20px;
 	padding-top: 20px;
@@ -335,7 +335,7 @@ p, body.gutenberg-editor-page p {
 	padding-left: 20px;
 }
 
-body.gutenberg-editor-page {
+body.gutenberg-editor-page .edit-post-layout__content {
 	/* =Genericons and Dashicons
 -------------------------------------------------------------- */
 	/* =Breadcrumbs
@@ -347,197 +347,197 @@ body.gutenberg-editor-page {
 	/* Width of "full-wide" blocks */
 }
 
-body.gutenberg-editor-page #breadcrumbs {
+body.gutenberg-editor-page .edit-post-layout__content #breadcrumbs {
 	font-size: 14px;
 	font-family: "Georgia", "Times", "Times New Roman", serif;
 	padding: 20px 0 20px 50px;
 }
 
-body.gutenberg-editor-page html {
+body.gutenberg-editor-page .edit-post-layout__content html {
 	font-size: 62.5%;
 }
 
-body.gutenberg-editor-page body {
+body.gutenberg-editor-page .edit-post-layout__content body {
 	font-size: 16px;
 	line-height: 1.5;
 }
 
-body.gutenberg-editor-page h1, body.gutenberg-editor-page h2, body.gutenberg-editor-page .editor-post-title__input, body.gutenberg-editor-page h3, body.gutenberg-editor-page h4, body.gutenberg-editor-page h5, body.gutenberg-editor-page h6 {
+body.gutenberg-editor-page .edit-post-layout__content h1, body.gutenberg-editor-page .edit-post-layout__content h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input, body.gutenberg-editor-page .edit-post-layout__content h3, body.gutenberg-editor-page .edit-post-layout__content h4, body.gutenberg-editor-page .edit-post-layout__content h5, body.gutenberg-editor-page .edit-post-layout__content h6 {
 	clear: both;
 	float: none;
 	font-weight: bold;
 	line-height: 1.25em;
 }
 
-body.gutenberg-editor-page h1::after, body.gutenberg-editor-page h2::after, body.gutenberg-editor-page .editor-post-title__input::after, body.gutenberg-editor-page h3::after, body.gutenberg-editor-page h4::after, body.gutenberg-editor-page h5::after, body.gutenberg-editor-page h6::after {
+body.gutenberg-editor-page .edit-post-layout__content h1::after, body.gutenberg-editor-page .edit-post-layout__content h2::after, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input::after, body.gutenberg-editor-page .edit-post-layout__content h3::after, body.gutenberg-editor-page .edit-post-layout__content h4::after, body.gutenberg-editor-page .edit-post-layout__content h5::after, body.gutenberg-editor-page .edit-post-layout__content h6::after {
 	clear: both;
 	content: "";
 	display: block;
 }
 
-body.gutenberg-editor-page h1 a, body.gutenberg-editor-page h1 a:visited, body.gutenberg-editor-page h2 a, body.gutenberg-editor-page .editor-post-title__input a, body.gutenberg-editor-page h2 a:visited, body.gutenberg-editor-page .editor-post-title__input a:visited, body.gutenberg-editor-page h3 a, body.gutenberg-editor-page h3 a:visited, body.gutenberg-editor-page h4 a, body.gutenberg-editor-page h4 a:visited, body.gutenberg-editor-page h5 a, body.gutenberg-editor-page h5 a:visited, body.gutenberg-editor-page h6 a, body.gutenberg-editor-page h6 a:visited {
+body.gutenberg-editor-page .edit-post-layout__content h1 a, body.gutenberg-editor-page .edit-post-layout__content h1 a:visited, body.gutenberg-editor-page .edit-post-layout__content h2 a, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input a, body.gutenberg-editor-page .edit-post-layout__content h2 a:visited, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input a:visited, body.gutenberg-editor-page .edit-post-layout__content h3 a, body.gutenberg-editor-page .edit-post-layout__content h3 a:visited, body.gutenberg-editor-page .edit-post-layout__content h4 a, body.gutenberg-editor-page .edit-post-layout__content h4 a:visited, body.gutenberg-editor-page .edit-post-layout__content h5 a, body.gutenberg-editor-page .edit-post-layout__content h5 a:visited, body.gutenberg-editor-page .edit-post-layout__content h6 a, body.gutenberg-editor-page .edit-post-layout__content h6 a:visited {
 	color: #333;
 }
 
-body.gutenberg-editor-page h1 {
+body.gutenberg-editor-page .edit-post-layout__content h1 {
 	color: #333;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (min-width: 0) {
-	body.gutenberg-editor-page h1 {
+	body.gutenberg-editor-page .edit-post-layout__content h1 {
 		font-size: 8vh;
 	}
 }
 
 @media only screen and (min-width: 480px) {
-	body.gutenberg-editor-page h1 {
+	body.gutenberg-editor-page .edit-post-layout__content h1 {
 		font-size: 55px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	body.gutenberg-editor-page h1 {
+	body.gutenberg-editor-page .edit-post-layout__content h1 {
 		font-size: 65px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	body.gutenberg-editor-page h1 {
+	body.gutenberg-editor-page .edit-post-layout__content h1 {
 		font-size: 75px;
 	}
 }
 
-body.gutenberg-editor-page h2, body.gutenberg-editor-page .editor-post-title__input {
+body.gutenberg-editor-page .edit-post-layout__content h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (min-width: 0) {
-	body.gutenberg-editor-page h2, body.gutenberg-editor-page .editor-post-title__input {
+	body.gutenberg-editor-page .edit-post-layout__content h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 		font-size: 6vh;
 	}
 }
 
 @media only screen and (min-width: 480px) {
-	body.gutenberg-editor-page h2, body.gutenberg-editor-page .editor-post-title__input {
+	body.gutenberg-editor-page .edit-post-layout__content h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 		font-size: 30px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	body.gutenberg-editor-page h2, body.gutenberg-editor-page .editor-post-title__input {
+	body.gutenberg-editor-page .edit-post-layout__content h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 		font-size: 40px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	body.gutenberg-editor-page h2, body.gutenberg-editor-page .editor-post-title__input {
+	body.gutenberg-editor-page .edit-post-layout__content h2, body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 		font-size: 50px;
 	}
 }
 
-body.gutenberg-editor-page h3 {
+body.gutenberg-editor-page .edit-post-layout__content h3 {
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (min-width: 0) {
-	body.gutenberg-editor-page h3 {
+	body.gutenberg-editor-page .edit-post-layout__content h3 {
 		font-size: 5vh;
 	}
 }
 
 @media only screen and (min-width: 480px) {
-	body.gutenberg-editor-page h3 {
+	body.gutenberg-editor-page .edit-post-layout__content h3 {
 		font-size: 25px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	body.gutenberg-editor-page h3 {
+	body.gutenberg-editor-page .edit-post-layout__content h3 {
 		font-size: 30px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	body.gutenberg-editor-page h3 {
+	body.gutenberg-editor-page .edit-post-layout__content h3 {
 		font-size: 35px;
 	}
 }
 
-body.gutenberg-editor-page h4 {
+body.gutenberg-editor-page .edit-post-layout__content h4 {
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (min-width: 0) {
-	body.gutenberg-editor-page h4 {
+	body.gutenberg-editor-page .edit-post-layout__content h4 {
 		font-size: 18px;
 	}
 }
 
 @media only screen and (min-width: 480px) {
-	body.gutenberg-editor-page h4 {
+	body.gutenberg-editor-page .edit-post-layout__content h4 {
 		font-size: 20px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	body.gutenberg-editor-page h4 {
+	body.gutenberg-editor-page .edit-post-layout__content h4 {
 		font-size: 22px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	body.gutenberg-editor-page h4 {
+	body.gutenberg-editor-page .edit-post-layout__content h4 {
 		font-size: 24px;
 	}
 }
 
-body.gutenberg-editor-page h5 {
+body.gutenberg-editor-page .edit-post-layout__content h5 {
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (min-width: 0) {
-	body.gutenberg-editor-page h5 {
+	body.gutenberg-editor-page .edit-post-layout__content h5 {
 		font-size: 14px;
 	}
 }
 
 @media only screen and (min-width: 480px) {
-	body.gutenberg-editor-page h5 {
+	body.gutenberg-editor-page .edit-post-layout__content h5 {
 		font-size: 16px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	body.gutenberg-editor-page h5 {
+	body.gutenberg-editor-page .edit-post-layout__content h5 {
 		font-size: 18px;
 	}
 }
 
 @media only screen and (min-width: 1024px) {
-	body.gutenberg-editor-page h5 {
+	body.gutenberg-editor-page .edit-post-layout__content h5 {
 		font-size: 20px;
 	}
 }
 
-body.gutenberg-editor-page h6 {
+body.gutenberg-editor-page .edit-post-layout__content h6 {
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (min-width: 0) {
-	body.gutenberg-editor-page h6 {
+	body.gutenberg-editor-page .edit-post-layout__content h6 {
 		font-size: 14px;
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	body.gutenberg-editor-page h6 {
+	body.gutenberg-editor-page .edit-post-layout__content h6 {
 		font-size: 16px;
 	}
 }
 
-body.gutenberg-editor-page blockquote,
-body.gutenberg-editor-page .wp-block-quote {
+body.gutenberg-editor-page .edit-post-layout__content blockquote,
+body.gutenberg-editor-page .edit-post-layout__content .wp-block-quote {
 	border-left: solid 3px #141414;
 	font-size: 26px;
 	font-style: italic;
@@ -546,22 +546,22 @@ body.gutenberg-editor-page .wp-block-quote {
 	padding: 20px;
 }
 
-body.gutenberg-editor-page blockquote p,
-body.gutenberg-editor-page .wp-block-quote p {
+body.gutenberg-editor-page .edit-post-layout__content blockquote p,
+body.gutenberg-editor-page .edit-post-layout__content .wp-block-quote p {
 	font-size: 26px;
 	line-height: 1.2;
 }
 
-body.gutenberg-editor-page cite {
+body.gutenberg-editor-page .edit-post-layout__content cite {
 	font-style: italic;
 }
 
-body.gutenberg-editor-page dl {
+body.gutenberg-editor-page .edit-post-layout__content dl {
 	border: 3px double #ccc;
 	padding: 0.5em;
 }
 
-body.gutenberg-editor-page dl dt {
+body.gutenberg-editor-page .edit-post-layout__content dl dt {
 	float: left;
 	clear: left;
 	width: 100px;
@@ -570,125 +570,125 @@ body.gutenberg-editor-page dl dt {
 	color: #141414;
 }
 
-body.gutenberg-editor-page dl dt::after {
+body.gutenberg-editor-page .edit-post-layout__content dl dt::after {
 	content: ":";
 }
 
-body.gutenberg-editor-page dl dd {
+body.gutenberg-editor-page .edit-post-layout__content dl dd {
 	margin: 0 0 0 110px;
 	padding: 0 0 0.5em 0;
 }
 
-body.gutenberg-editor-page abbr:before {
+body.gutenberg-editor-page .edit-post-layout__content abbr:before {
 	content: '(';
 }
 
-body.gutenberg-editor-page abbr:after {
+body.gutenberg-editor-page .edit-post-layout__content abbr:after {
 	content: ')';
 }
 
-body.gutenberg-editor-page code {
+body.gutenberg-editor-page .edit-post-layout__content code {
 	background: #141414;
 	color: #f5f5f5;
 	display: inline-block;
 	padding: 5px 10px;
 }
 
-body.gutenberg-editor-page del {
+body.gutenberg-editor-page .edit-post-layout__content del {
 	color: #949393;
 }
 
-body.gutenberg-editor-page hr {
+body.gutenberg-editor-page .edit-post-layout__content hr {
 	border-bottom: 1px solid #ddd;
 	border-left: 0;
 	border-right: 0;
 	border-top: 0;
 }
 
-body.gutenberg-editor-page pre {
+body.gutenberg-editor-page .edit-post-layout__content pre {
 	padding: 20px 20px 20px 40px;
 	display: block;
 }
 
-body.gutenberg-editor-page q {
+body.gutenberg-editor-page .edit-post-layout__content q {
 	font-family: "Georgia", "Times", "Times New Roman", serif;
 	font-style: italic;
 }
 
-body.gutenberg-editor-page strong, body.gutenberg-editor-page b {
+body.gutenberg-editor-page .edit-post-layout__content strong, body.gutenberg-editor-page .edit-post-layout__content b {
 	color: #333;
 }
 
-body.gutenberg-editor-page a, body.gutenberg-editor-page a:visited {
+body.gutenberg-editor-page .edit-post-layout__content a, body.gutenberg-editor-page .edit-post-layout__content a:visited {
 	color: #1565c0;
 	text-decoration: none;
 }
 
-body.gutenberg-editor-page a:hover, body.gutenberg-editor-page a:visited:hover {
+body.gutenberg-editor-page .edit-post-layout__content a:hover, body.gutenberg-editor-page .edit-post-layout__content a:visited:hover {
 	color: #1565c0;
 	text-decoration: underline;
 }
 
-body.gutenberg-editor-page .entry-meta a, body.gutenberg-editor-page .entry-meta a:visited,
-body.gutenberg-editor-page .entry-content a,
-body.gutenberg-editor-page .entry-content a:visited,
-body.gutenberg-editor-page #secondary a,
-body.gutenberg-editor-page #secondary a:visited {
+body.gutenberg-editor-page .edit-post-layout__content .entry-meta a, body.gutenberg-editor-page .edit-post-layout__content .entry-meta a:visited,
+body.gutenberg-editor-page .edit-post-layout__content .entry-content a,
+body.gutenberg-editor-page .edit-post-layout__content .entry-content a:visited,
+body.gutenberg-editor-page .edit-post-layout__content #secondary a,
+body.gutenberg-editor-page .edit-post-layout__content #secondary a:visited {
 	color: #1565c0;
 	text-decoration: none;
 	-webkit-transition: color color all ease-in-out 500ms;
 	transition: color color all ease-in-out 500ms;
 }
 
-body.gutenberg-editor-page .entry-meta a:active, body.gutenberg-editor-page .entry-meta a:focus, body.gutenberg-editor-page .entry-meta a:hover, body.gutenberg-editor-page .entry-meta a:visited:active, body.gutenberg-editor-page .entry-meta a:visited:focus, body.gutenberg-editor-page .entry-meta a:visited:hover,
-body.gutenberg-editor-page .entry-content a:active,
-body.gutenberg-editor-page .entry-content a:focus,
-body.gutenberg-editor-page .entry-content a:hover,
-body.gutenberg-editor-page .entry-content a:visited:active,
-body.gutenberg-editor-page .entry-content a:visited:focus,
-body.gutenberg-editor-page .entry-content a:visited:hover,
-body.gutenberg-editor-page #secondary a:active,
-body.gutenberg-editor-page #secondary a:focus,
-body.gutenberg-editor-page #secondary a:hover,
-body.gutenberg-editor-page #secondary a:visited:active,
-body.gutenberg-editor-page #secondary a:visited:focus,
-body.gutenberg-editor-page #secondary a:visited:hover {
+body.gutenberg-editor-page .edit-post-layout__content .entry-meta a:active, body.gutenberg-editor-page .edit-post-layout__content .entry-meta a:focus, body.gutenberg-editor-page .edit-post-layout__content .entry-meta a:hover, body.gutenberg-editor-page .edit-post-layout__content .entry-meta a:visited:active, body.gutenberg-editor-page .edit-post-layout__content .entry-meta a:visited:focus, body.gutenberg-editor-page .edit-post-layout__content .entry-meta a:visited:hover,
+body.gutenberg-editor-page .edit-post-layout__content .entry-content a:active,
+body.gutenberg-editor-page .edit-post-layout__content .entry-content a:focus,
+body.gutenberg-editor-page .edit-post-layout__content .entry-content a:hover,
+body.gutenberg-editor-page .edit-post-layout__content .entry-content a:visited:active,
+body.gutenberg-editor-page .edit-post-layout__content .entry-content a:visited:focus,
+body.gutenberg-editor-page .edit-post-layout__content .entry-content a:visited:hover,
+body.gutenberg-editor-page .edit-post-layout__content #secondary a:active,
+body.gutenberg-editor-page .edit-post-layout__content #secondary a:focus,
+body.gutenberg-editor-page .edit-post-layout__content #secondary a:hover,
+body.gutenberg-editor-page .edit-post-layout__content #secondary a:visited:active,
+body.gutenberg-editor-page .edit-post-layout__content #secondary a:visited:focus,
+body.gutenberg-editor-page .edit-post-layout__content #secondary a:visited:hover {
 	color: #104c90;
 }
 
-body.gutenberg-editor-page p {
+body.gutenberg-editor-page .edit-post-layout__content p {
 	font-family: "Georgia", "Times", "Times New Roman", serif;
 }
 
-body.gutenberg-editor-page #primary, body.gutenberg-editor-page ul,
-body.gutenberg-editor-page #secondary {
+body.gutenberg-editor-page .edit-post-layout__content #primary, body.gutenberg-editor-page .edit-post-layout__content ul,
+body.gutenberg-editor-page .edit-post-layout__content #secondary {
 	font-family: "Georgia", "Times", "Times New Roman", serif;
 }
 
-body.gutenberg-editor-page #primary ul, body.gutenberg-editor-page ul ul,
-body.gutenberg-editor-page #secondary ul {
+body.gutenberg-editor-page .edit-post-layout__content #primary ul, body.gutenberg-editor-page .edit-post-layout__content ul ul,
+body.gutenberg-editor-page .edit-post-layout__content #secondary ul {
 	padding-bottom: 20px;
 	padding-top: 20px;
 }
 
-body.gutenberg-editor-page #secondary ul {
+body.gutenberg-editor-page .edit-post-layout__content #secondary ul {
 	padding: inherit;
 	padding-left: 20px;
 }
 
-body.gutenberg-editor-page .media-frame-title h1 {
+body.gutenberg-editor-page .edit-post-layout__content .media-frame-title h1 {
 	padding: 0 16px;
 	font-size: 22px;
 	line-height: 50px;
 	margin: 0;
 }
 
-body.gutenberg-editor-page .editor-post-title__input {
+body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 	font-weight: bold !important;
 	text-align: center;
 }
 
-body.gutenberg-editor-page .attachment-details h2, body.gutenberg-editor-page .attachment-details .editor-post-title__input {
+body.gutenberg-editor-page .edit-post-layout__content .attachment-details h2, body.gutenberg-editor-page .edit-post-layout__content .attachment-details .editor-post-title__input {
 	position: relative;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -697,63 +697,63 @@ body.gutenberg-editor-page .attachment-details h2, body.gutenberg-editor-page .a
 	margin: 24px 0 8px;
 }
 
-body.gutenberg-editor-page p.wp-block-subhead {
+body.gutenberg-editor-page .edit-post-layout__content p.wp-block-subhead {
 	font-size: 24px;
 }
 
-body.gutenberg-editor-page .mce-btn.mce-active button,
-body.gutenberg-editor-page .mce-btn.mce-active:hover button,
-body.gutenberg-editor-page .mce-btn.mce-active i,
-body.gutenberg-editor-page .mce-btn.mce-active:hover i {
+body.gutenberg-editor-page .edit-post-layout__content .mce-btn.mce-active button,
+body.gutenberg-editor-page .edit-post-layout__content .mce-btn.mce-active:hover button,
+body.gutenberg-editor-page .edit-post-layout__content .mce-btn.mce-active i,
+body.gutenberg-editor-page .edit-post-layout__content .mce-btn.mce-active:hover i {
 	color: #333;
 }
 
-body.gutenberg-editor-page #adminmenu,
-body.gutenberg-editor-page ul.wp-submenu.wp-submenu-wrap {
+body.gutenberg-editor-page .edit-post-layout__content #adminmenu,
+body.gutenberg-editor-page .edit-post-layout__content ul.wp-submenu.wp-submenu-wrap {
 	font-family: inherit;
 }
 
-body.gutenberg-editor-page .notice.notice-alt p {
+body.gutenberg-editor-page .edit-post-layout__content .notice.notice-alt p {
 	font-family: sans-serif;
 }
 
-body.gutenberg-editor-page .editor-post-title__input {
+body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input {
 	font-weight: normal;
 	padding: 0;
 }
 
-body.gutenberg-editor-page span.editor-block-types-list__item-title {
+body.gutenberg-editor-page .edit-post-layout__content span.editor-block-types-list__item-title {
 	font-family: sans-serif;
 }
 
-body.gutenberg-editor-page .components-notice-list p {
+body.gutenberg-editor-page .edit-post-layout__content .components-notice-list p {
 	font-family: sans-serif;
 }
 
-body.gutenberg-editor-page .document-outline ul {
+body.gutenberg-editor-page .edit-post-layout__content .document-outline ul {
 	font-family: sans-serif !important;
 }
 
-body.gutenberg-editor-page #poststuff .carbon-box .inside,
-body.gutenberg-editor-page body.comment-php #poststuff .postbox-container .inside {
+body.gutenberg-editor-page .edit-post-layout__content #poststuff .carbon-box .inside,
+body.gutenberg-editor-page .edit-post-layout__content body.comment-php #poststuff .postbox-container .inside {
 	top: 50px;
 }
 
-body.gutenberg-editor-page .edit-post-meta-boxes-area #poststuff h2.hndle, body.gutenberg-editor-page .edit-post-meta-boxes-area #poststuff .hndle.editor-post-title__input {
+body.gutenberg-editor-page .edit-post-layout__content .edit-post-meta-boxes-area #poststuff h2.hndle, body.gutenberg-editor-page .edit-post-layout__content .edit-post-meta-boxes-area #poststuff .hndle.editor-post-title__input {
 	position: absolute;
 }
 
-body.gutenberg-editor-page .editor-post-title__block,
-body.gutenberg-editor-page .editor-default-block-appender,
-body.gutenberg-editor-page .editor-block-list__block {
+body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__block,
+body.gutenberg-editor-page .edit-post-layout__content .editor-default-block-appender,
+body.gutenberg-editor-page .edit-post-layout__content .editor-block-list__block {
 	max-width: 960px;
 }
 
-body.gutenberg-editor-page .editor-block-list__block[data-align="wide"] {
+body.gutenberg-editor-page .edit-post-layout__content .editor-block-list__block[data-align="wide"] {
 	max-width: 1200px;
 }
 
-body.gutenberg-editor-page .editor-block-list__block[data-align="full"] {
+body.gutenberg-editor-page .edit-post-layout__content .editor-block-list__block[data-align="full"] {
 	max-width: none;
 }
 

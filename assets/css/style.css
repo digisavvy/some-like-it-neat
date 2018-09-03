@@ -616,6 +616,28 @@ button:hover, [type='button']:hover, [type='reset']:hover, [type='submit']:hover
 	display: block;
 }
 
+@media only screen and (min-width: 0) {
+	.infinite-wrap {
+		grid-column: 1 / -1;
+		padding: 0 20px;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.infinite-wrap {
+		grid-column: 1 / 7;
+		margin-left: 20px;
+		padding: 0;
+	}
+}
+
+@media only screen and (min-width: 1140px) {
+	.infinite-wrap {
+		grid-column: 1 / 9;
+		margin: 0;
+	}
+}
+
 figure {
 	margin: 0 auto;
 }
@@ -1358,6 +1380,12 @@ ol.comment-list li {
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
 	display: none;
+}
+
+/* =Archives
+----------------------------------------------- */
+footer.entry-meta span {
+	padding: 5px;
 }
 
 /*--------------------------------------------------------------
