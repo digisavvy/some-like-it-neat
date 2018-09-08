@@ -340,10 +340,10 @@ Neat
  - License: The MIT License
  - License URI: https://github.com/thoughtbot/neat/blob/master/LICENSE
 
-Gulpjs
- - Source: http://gulpjs.com, Copyright (c) 2014 Fractal <contact@wearefractal.com>
+Laravel Mix
+ - Source: https://laravel.com/docs/5.6/mix, Copyright (c) 2014 Fractal <contact@wearefractal.com>
  - License: The MIT License
- - License URI: https://github.com/gulpjs/gulp/blob/master/LICENSE
+ - License URI: https://github.com/JeffreyWay/laravel-mix/blob/master/LICENSE
 
 Hover Intent
  - Source: https://github.com/tristen/hoverintent
