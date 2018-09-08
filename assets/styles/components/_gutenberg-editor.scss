@@ -78,10 +78,6 @@ body.gutenberg-editor-page .edit-post-layout__content {
         top: 50px;
     }
 
-    .edit-post-meta-boxes-area #poststuff h2.hndle {
-        position: absolute;
-    }
-
     /* Main column width */
     .editor-post-title__block,
     .editor-default-block-appender,
@@ -98,4 +94,34 @@ body.gutenberg-editor-page .edit-post-layout__content {
     .editor-block-list__block[data-align="full"] {
         max-width: none;
     }
+
 }
+
+    // Metaboxes Side Panel
+    .edit-post-meta-boxes-area .postbox {
+        .handlediv {
+            position: absolute;
+            right: 0;
+        }
+        h2 {
+            color: #000 !important;
+            font-size: 13px !important;
+        }
+        span.toggle-indicator {
+            &::before {
+                content: "\f343" !important;
+                color: #000;
+                font-size: 18px !important;
+            }
+        }
+        &.closed {
+            span.toggle-indicator {
+                &::before {
+                    content: "\f347" !important;
+                    color: #000;
+                    font-size: 18px !important;
+                }
+            }
+        }
+
+    }

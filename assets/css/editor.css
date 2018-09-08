@@ -741,10 +741,6 @@ body.gutenberg-editor-page .edit-post-layout__content body.comment-php #poststuf
 	top: 50px;
 }
 
-body.gutenberg-editor-page .edit-post-layout__content .edit-post-meta-boxes-area #poststuff h2.hndle, body.gutenberg-editor-page .edit-post-layout__content .edit-post-meta-boxes-area #poststuff .hndle.editor-post-title__input {
-	position: absolute;
-}
-
 body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__block,
 body.gutenberg-editor-page .edit-post-layout__content .editor-default-block-appender,
 body.gutenberg-editor-page .edit-post-layout__content .editor-block-list__block {
@@ -757,6 +753,28 @@ body.gutenberg-editor-page .edit-post-layout__content .editor-block-list__block[
 
 body.gutenberg-editor-page .edit-post-layout__content .editor-block-list__block[data-align="full"] {
 	max-width: none;
+}
+
+.edit-post-meta-boxes-area .postbox .handlediv {
+	position: absolute;
+	right: 0;
+}
+
+.edit-post-meta-boxes-area .postbox h2, .edit-post-meta-boxes-area .postbox body.gutenberg-editor-page .edit-post-layout__content .editor-post-title__input, body.gutenberg-editor-page .edit-post-layout__content .edit-post-meta-boxes-area .postbox .editor-post-title__input {
+	color: #000 !important;
+	font-size: 13px !important;
+}
+
+.edit-post-meta-boxes-area .postbox span.toggle-indicator::before {
+	content: "\F343" !important;
+	color: #000;
+	font-size: 18px !important;
+}
+
+.edit-post-meta-boxes-area .postbox.closed span.toggle-indicator::before {
+	content: "\F347" !important;
+	color: #000;
+	font-size: 18px !important;
 }
 
 /*# sourceMappingURL=editor.css.map*/
