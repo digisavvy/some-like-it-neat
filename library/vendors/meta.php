@@ -1,32 +1,49 @@
 <?php
 /**
- * Carbon Fields Meta
+ * Metaboxes.io Field Meta
  */
-use Carbon_Fields\Field;
-use Carbon_Fields\Container;
 
-function some_like_it_neat_get_crb_post_types() {
+function some_like_it_neat_get_post_types() {
 	return get_post_types( array( 'public' => true ) );
 }
 
-add_action( 'carbon_fields_register_fields', 'some_like_it_neat_attach_crb_post_meta' );
-function some_like_it_neat_attach_crb_post_meta() {
+// Add Metabox.io Meta Boxes
+add_filter( 'rwmb_meta_boxes', 'mb_composer_example_register_meta_boxes' );
+function mb_composer_example_register_meta_boxes( $meta_boxes ) {
+	$post_types = some_like_it_neat_get_post_types();
 
- 	Container::make( 'post_meta', __( 'Post Options', 'crb' ) )
-	    ->where( 'post_type', 'CUSTOM', function( $post_type ) {
-		    $post_types = some_like_it_neat_get_crb_post_types();
-		    return in_array( $post_type, $post_types );
-	    })
-		->set_context( 'side' )
-		->set_priority( 'low' )
-		->add_fields( array(
-			Field::make( 'checkbox', 'some_like_it_neat_hide_title', 'Hide Page Title' )
-				->set_help_text( 'Useful for Landing Pages' )
-				->set_option_value( 'yes' ),
-			Field::make( 'checkbox', 'some_like_it_neat_hide_featured_image', 'Hide Featured Image' )
-				->set_help_text( 'Hide featured image on singular post, while still using it throughout the rest of your site' )
-				->set_option_value( 'yes' ),
-		));
+    $meta_boxes[] = array(
+		'context'    => 'side',
+		'post_types' => $post_types,
+        'priority'   => 'low',
+        'title'  => 'Post Options',
+        'fields' => array(
+            array(
+                'name' => 'Hide Title',
+				'id'   => 'some_like_it_neat_hide_title',
+				'std'  => 'no',
+				'type' => 'radio',
+				    'options' => array(
+						'no' => 'Show Title',
+						'yes' => 'Hide Title',
+					),
+				'inline' => false,
+            ),
+            array(
+                'name' => 'Hide Featured Image',
+				'id'   => 'some_like_it_neat_hide_featured_image',
+				'std'  => 'no',
+				'type' => 'radio',
+				    'options' => array(
+						'no' => 'Show Featured Image',
+						'yes' => 'Hide Featured Image',
+					),
+				'inline' => false,
+            ),
+		),
+    );
+
+    return $meta_boxes;
 }
 
 /**
@@ -35,11 +52,7 @@ function some_like_it_neat_attach_crb_post_meta() {
 add_action( 'wp_head', 'some_like_it_neat_remove_title'  );
 function some_like_it_neat_remove_title() {
 
-	if ( ! function_exists( 'carbon_get_the_post_meta' ) ) {
-		return;
-	}
-
-	$title_option = carbon_get_the_post_meta( 'some_like_it_neat_hide_title' );
+	$title_option = rwmb_meta( 'some_like_it_neat_hide_title' );
 	if ( 'yes' == $title_option ) :
 		?>
         <style type="text/css">
@@ -57,11 +70,8 @@ function some_like_it_neat_remove_title() {
 add_action( 'wp_head', 'some_like_it_neat_remove_featured_image'  );
 function some_like_it_neat_remove_featured_image() {
 
-	if ( ! function_exists( 'carbon_get_the_post_meta' ) ) {
-		return;
-	}
+	$image_option = rwmb_meta( 'some_like_it_neat_hide_featured_image' );
 
-	$image_option = carbon_get_the_post_meta( 'some_like_it_neat_hide_featured_image' );
 	if ( 'yes' === $image_option ) :
 		?>
         <style type="text/css">
