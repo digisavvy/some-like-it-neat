@@ -21,7 +21,7 @@ function mb_composer_example_register_meta_boxes( $meta_boxes ) {
             array(
                 'name' => 'Hide Title',
 				'id'   => 'some_like_it_neat_hide_title',
-				'std'  => 'no',
+				'std'  => 'no', // setting default option
 				'type' => 'radio',
 				    'options' => array(
 						'no' => 'Show Title',
@@ -32,7 +32,7 @@ function mb_composer_example_register_meta_boxes( $meta_boxes ) {
             array(
                 'name' => 'Hide Featured Image',
 				'id'   => 'some_like_it_neat_hide_featured_image',
-				'std'  => 'no',
+				'std'  => 'no', // setting default option
 				'type' => 'radio',
 				    'options' => array(
 						'no' => 'Show Featured Image',
