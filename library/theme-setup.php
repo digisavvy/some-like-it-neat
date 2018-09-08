@@ -9,7 +9,7 @@
  */
 
 /**
- * Including Carbon Fields (https://github.com/htmlburger/carbon-fields).
+ * Including Metabox.io (https://github.com/wpmetabox/meta-box).
  */
 function some_like_it_neat_crb_load() {
 
@@ -17,10 +17,7 @@ function some_like_it_neat_crb_load() {
 	if ( file_exists( $autoload ) ) :
 
 		require_once( $autoload );
-		\Carbon_Fields\Carbon_Fields::boot();
 
-	else :
-		add_action( 'admin_notices', 'some_like_it_neat_crb_admin_notice' );
 	endif;
 }
 add_action( 'after_setup_theme', 'some_like_it_neat_crb_load' );

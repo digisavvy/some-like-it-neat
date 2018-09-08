@@ -4,7 +4,7 @@
 	"type": "wordpress-theme",
 	"license": "GPL",
 	"require": {
-		"htmlburger/carbon-fields": "*"
+		"wpmetabox/meta-box": "4.*"
 	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "2.*",
