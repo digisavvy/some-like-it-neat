@@ -29,6 +29,13 @@
     border-left: none;
   }
   
+  a.wp-block-button__link {
+    color: $white;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   .wp-block-image {
     figure {
       
