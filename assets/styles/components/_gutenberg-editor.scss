@@ -97,31 +97,50 @@ body.gutenberg-editor-page .edit-post-visual-editor {
 
 }
 
-    // Metaboxes Side Panel
-    .edit-post-meta-boxes-area .postbox {
-        .handlediv {
-            position: absolute;
-            right: 0;
+// Gutenberg Notices
+.components-notice {
+    &.is-warning {
+        p {
+            font-family: sans-serif;
         }
-        h2 {
-            color: #000 !important;
-            font-size: 13px !important;
+    }
+    &.is-success {
+        @extend .is-warning;
+    }
+    &.is-error {
+        @extend .is-warning;
+    }
+}
+
+.components-popover__content p {
+    font-family: sans-serif;
+}
+
+// Metaboxes Side Panel
+.edit-post-meta-boxes-area .postbox {
+    .handlediv {
+        position: absolute;
+        right: 0;
+    }
+    h2 {
+        color: #000 !important;
+        font-size: 13px !important;
+    }
+    span.toggle-indicator {
+        &::before {
+            content: "\f343" !important;
+            color: #000;
+            font-size: 18px !important;
         }
+    }
+    &.closed {
         span.toggle-indicator {
             &::before {
-                content: "\f343" !important;
+                content: "\f347" !important;
                 color: #000;
                 font-size: 18px !important;
             }
         }
-        &.closed {
-            span.toggle-indicator {
-                &::before {
-                    content: "\f347" !important;
-                    color: #000;
-                    font-size: 18px !important;
-                }
-            }
-        }
-
     }
+
+}
