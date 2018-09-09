@@ -10,13 +10,14 @@ function some_like_it_neat_get_post_types() {
 // Add Metabox.io Meta Boxes
 add_filter( 'rwmb_meta_boxes', 'mb_composer_example_register_meta_boxes' );
 function mb_composer_example_register_meta_boxes( $meta_boxes ) {
+	
 	$post_types = some_like_it_neat_get_post_types();
 
     $meta_boxes[] = array(
 		'context'    => 'side',
 		'post_types' => $post_types,
         'priority'   => 'low',
-        'title'  => 'Post Options',
+        'title'  => 'Extended Post Options',
         'fields' => array(
             array(
                 'name' => 'Hide Title',
