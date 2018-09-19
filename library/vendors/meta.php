@@ -20,6 +20,7 @@ function mb_composer_example_register_meta_boxes( $meta_boxes ) {
         'title'  => 'Extended Post Options',
         'fields' => array(
             array(
+				'label_description' => 'Useful when using page builders.',
                 'name' => 'Hide Title',
 				'id'   => 'some_like_it_neat_hide_title',
 				'std'  => 'no', // setting default option
@@ -31,6 +32,7 @@ function mb_composer_example_register_meta_boxes( $meta_boxes ) {
 				'inline' => false,
             ),
             array(
+				'label_description' => 'When you want to hide feature dimage on post but use elsewhere. ',
                 'name' => 'Hide Featured Image',
 				'id'   => 'some_like_it_neat_hide_featured_image',
 				'std'  => 'no', // setting default option
