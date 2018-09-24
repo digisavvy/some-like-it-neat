@@ -21,12 +21,8 @@ get_header(); ?>
 			<header class="page-header">
 
 				<?php
-				printf( '<h1 class="page-title">%s</h1>', get_the_archive_title() );
-
-				$description = get_the_archive_description();
-				if ( ! empty( $description ) ) {
-					printf( '<div class="taxonomy-description">%s</div>', esc_html( $description ) );
-				}
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 
 			</header><!-- .page-header -->
