@@ -18,9 +18,9 @@
 
         <div class="hamburger-wrapper">
 
-            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'perennial-pro' ); ?></a>
+            <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'some-like-it-neat' ); ?></a>
 
-            <a href="#header-menu-responsive" title="<?php esc_attr_e( 'Menu', 'perennial-pro' ); ?>" class="hamburger">
+            <a href="#header-menu-responsive" title="<?php esc_attr_e( 'Menu', 'some-like-it-neat' ); ?>" class="hamburger">
 
                 <span class="hamburger-icon"></span>
 
