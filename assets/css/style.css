@@ -570,32 +570,29 @@ p {
 /*--------------------------------------------------------------
 3.0 Components Buttons, Gutenberg, infy scroll, media, inputs
 --------------------------------------------------------------*/
-button, [type='button'], [type='reset'], [type='submit'] {
+[type='button'], [type='reset'], [type='submit'] {
 	background: #000000;
 	border: solid 1px #000;
 	border-radius: 0;
 	-webkit-box-shadow: none;
 	        box-shadow: none;
-	clear: both;
 	color: #f5f5f5;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	margin: 10px 0;
-	padding: 20px;
 	-webkit-transition: all 200ms ease-in-out;
 	transition: all 200ms ease-in-out;
 }
 
-button:focus, [type='button']:focus, [type='reset']:focus, [type='submit']:focus {
+[type='button']:focus, [type='reset']:focus, [type='submit']:focus {
 	background: #f5f5f5;
 	border-radius: 0;
 	color: #000000;
 	-webkit-box-shadow: none;
 	        box-shadow: none;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	padding: 20px;
 }
 
-button:hover, [type='button']:hover, [type='reset']:hover, [type='submit']:hover {
+[type='button']:hover, [type='reset']:hover, [type='submit']:hover {
 	background: #f5f5f5;
 	border: solid 1px #000;
 	border-radius: 0;
@@ -603,7 +600,6 @@ button:hover, [type='button']:hover, [type='reset']:hover, [type='submit']:hover
 	-webkit-box-shadow: none;
 	        box-shadow: none;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	padding: 20px;
 }
 
 /* Hides navigation links and site footer when infinite scroll is active */
@@ -648,6 +644,10 @@ picture {
 	height: auto;
 	margin: 0;
 	max-width: 100%;
+}
+
+.wp-post-image {
+	display: block;
 }
 
 [type='color'], [type='date'], [type='datetime'], [type='datetime-local'], [type='email'], [type='month'], [type='number'], [type='password'], [type='search'], [type='tel'], [type='text'], [type='time'], [type='url'], [type='week'], input:not([type]), textarea {
@@ -707,6 +707,14 @@ picture {
 
 #primary p.wp-block-subhead {
 	border-left: none;
+}
+
+#primary a.wp-block-button__link {
+	color: #f5f5f5;
+}
+
+#primary a.wp-block-button__link:hover {
+	text-decoration: underline;
 }
 
 @media only screen and (min-width: 0) {
@@ -851,7 +859,7 @@ picture {
 #primary .shared-counts-wrap,
 #primary .sharedaddy,
 #primary .wp-block-embed {
-	margin: 0 auto 15px auto;
+	margin: 0 auto 15px auto !important;
 	max-width: 800px;
 }
 
