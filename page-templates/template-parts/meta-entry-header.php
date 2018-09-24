@@ -11,8 +11,15 @@
 ?>
 
 <header class="entry-header">
+    <?php if ( has_post_thumbnail() ) { ?>
+    
+        <figure>
+            <?php echo get_the_post_thumbnail( get_the_ID(), 'full', array( 'class' => 'aligncenter' ) ); ?>
+        </figure>
+    
+    <?php } ?>
 
-    <?php if( is_single() ) { ?>	
+     <?php if( is_singular() ) { ?>	
         <h1 class="entry-title" itemprop="name" >
             <?php the_title(); ?>
         </h1>
