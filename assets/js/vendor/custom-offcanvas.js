@@ -6,7 +6,9 @@
  * Code generously borrowed with modification from https://designorbital.com
  */
 
-( function( $ ) {
+ ( function( $ ) {
+
+    'use strict';
 
     var slin = {
 
