@@ -10,8 +10,7 @@
 
 add_action('some_like_it_neat_footer', 'some_like_it_neat_do_footer');
 
-function some_like_it_neat_do_footer() 
-{
+function some_like_it_neat_do_footer() {
 
     tha_footer_before(); ?>
 
