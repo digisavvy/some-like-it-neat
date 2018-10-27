@@ -29,24 +29,24 @@
   "devDependencies": {
     "bourbon": "^5.1.0",
     "bourbon-neat": "^2.0.0",
-    "browser-sync": "^2.23.7",
-    "browser-sync-webpack-plugin": "^2.0.1",
-    "copy-webpack-plugin": "^4.5.2",
+    "browser-sync": "^2.26.3",
+    "browser-sync-webpack-plugin": "^2.2.2",
+    "copy-webpack-plugin": "^4.5.4",
     "cross-env": "^5.2.0",
-    "eslint": "^5.3.0",
+    "eslint": "^5.8.0",
     "eslint-config-wordpress": "^2.0.0",
     "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-webpack-plugin": "^2.2.0",
-    "laravel-mix": "^2.1.0",
-    "node-wp-i18n": "^1.2.0",
+    "imagemin-webpack-plugin": "^2.3.0",
+    "laravel-mix": "^2.1.14",
+    "node-wp-i18n": "^1.2.1",
     "normalize-scss": "^7.0.1",
     "postcss-custom-properties": "^6.3.1",
     "postcss-preset-env": "^5.3.0",
     "purify-css": "^1.2.6",
     "purifycss-webpack": "^0.7.0",
     "rimraf": "^2.6.2",
-    "stylelint": "^9.4.0",
-    "stylelint-config-wordpress": "^13.0.0"
+    "stylelint": "^9.6.0",
+    "stylelint-config-wordpress": "^13.1.0"
   },
   "engines": {
     "node": ">=6.0.0"
