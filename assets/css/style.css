@@ -680,8 +680,12 @@ picture {
 	margin-right: auto !important;
 }
 
-#primary ul.wp-block-gallery li {
-	margin: 8px;
+#primary ul.wp-block-gallery,
+#primary ol.wp-block-gallery {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 10px !important;
 }
 
 #primary blockquote, #primary p.wp-block-subhead {
@@ -909,6 +913,10 @@ picture {
 }
 
 #primary .wp-block-pullquote {
+	border: none;
+}
+
+#primary .wp-block-pullquote blockquote, #primary .wp-block-pullquote p.wp-block-subhead {
 	border: double #141414;
 	padding: 20px 0;
 }
@@ -975,6 +983,10 @@ body {
 	}
 }
 
+.entry-content ul li {
+	margin-left: 20px;
+}
+
 @media only screen and (min-width: 0) {
 	#primary {
 		grid-column: 1 / -1;
@@ -1004,17 +1016,14 @@ body {
 
 #primary ul li, #primary ol li {
 	list-style-type: square;
-	margin-left: 20px;
 }
 
 #primary ul li ul li, #primary ol li ul li {
 	list-style-type: disc;
-	margin-left: 20px;
 }
 
 #primary ul li ul li ul li, #primary ol li ul li ul li {
 	list-style-type: circle;
-	margin-left: 20px;
 }
 
 @media only screen and (min-width: 0) {
