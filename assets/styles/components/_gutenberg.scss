@@ -5,8 +5,10 @@
     margin-right: auto !important;
   }
 
-  ul.wp-block-gallery li {
-    margin: 8px;
+  ul.wp-block-gallery,
+  ol.wp-block-gallery {
+    display: flex;
+    padding: 10px !important;
   }
 
   blockquote {
