@@ -40,6 +40,10 @@ main#main {
 	}
 }
 
+.entry-content ul li {
+    margin-left: 20px;
+}
+
 #primary {
 	@include grid-media($sm) {
 		grid-column: 1 / -1;
@@ -54,21 +58,17 @@ main#main {
 		grid-column: 1 / 9;
 		margin: 0;
 	}
-	// margin: 0 auto;
 
 	ul, ol {
 		list-style: none;
 		li {
 			list-style-type: square;
-			margin-left: 20px;
 			ul {
 				li {
 					list-style-type: disc;
-					margin-left: 20px;
 					ul {
 						li {
 							list-style-type: circle;
-							margin-left: 20px;
 						}
 					}
 				}
