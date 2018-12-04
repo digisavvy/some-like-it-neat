@@ -172,8 +172,11 @@
   }
 
   .wp-block-pullquote {
-    border: double $black; 
-    padding: 20px 0;
+    blockquote {
+      border: double $black; 
+      padding: 20px 0;
+    }
+    border: none;
   }
 
   .wp-block-quote {
