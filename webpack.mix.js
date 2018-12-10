@@ -15,7 +15,7 @@ let themeBundle = 'release/'+project+'.zip';
 
 // Define assets directory for source and theme bundle distribution
 const assets = 'assets/';
-const dist = 'dist/';
+const dist = '../'+project+'-prod';
 const bundlePath = dist;
 
 /*
