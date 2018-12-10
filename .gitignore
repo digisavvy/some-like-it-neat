@@ -131,3 +131,4 @@ wp-content/mu-plugins/wpengine-comm
 /dist
 /mix-manifest.json
 /assets/css
+/assets/js/app.js
