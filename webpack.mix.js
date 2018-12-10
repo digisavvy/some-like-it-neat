@@ -113,7 +113,7 @@ mix.setPublicPath('./')
         host: url,
         open: 'external',
         files : [
-            '**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
+            assets+'img/**/*.{jpg,jpeg,png,gif,svg,eot,ttf,woff,woff2}',
             'library/**/*.php',
             '**/*.php',
             assets+'css/**/*.css'
