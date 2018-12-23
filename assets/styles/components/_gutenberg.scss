@@ -140,18 +140,22 @@
   }
 
   .comment-respond,
+  address,
   a.post-edit-link,
   .entry-meta,
   .jp-relatedposts,
   .post-navigation,
   cite,
   p,
+  pre,
   ul,
   ol,
   h1,h2,h3,h4,h5,h6,
   .shared-counts-wrap,
   .sharedaddy,
-  .wp-block-embed {
+  table,
+  .wp-block-embed,
+  .wp-block-media-text.alignwide {
     @include grid-media($sm) {
       padding: 0 20px;
     }
