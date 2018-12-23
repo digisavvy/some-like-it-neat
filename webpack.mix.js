@@ -43,7 +43,7 @@ if ( process.env.bundle ) {
 
 	// Folders to include.
 	let folders = [
-		assets,
+		'assets',
 		'library',
         'page-templates',
 		'page-templates/template-parts',
