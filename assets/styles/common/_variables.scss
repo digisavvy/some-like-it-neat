@@ -4,17 +4,21 @@ $content: $font-stack-georgia;
 $heading-font-family: $base-font-family;
 $title: $font-stack-helvetica;
 
+$bourbon: (
+  "modular-scale-ratio": 1.333 //Perfect Fourth
+);
+
 // Font Sizes
-$base-font-size: 16px;
+$base-font-size: modular-scale(0);
 
 // Line height
-$base-line-height: 1.5;
-$heading-line-height: 1.2;
+$base-line-height: 1.267; // modular-scale(2)
+$heading-line-height: 1.333; // modulsar-scale(3)
 
 // Other Sizes
 $base-border-radius: 3px;
-$base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$base-spacing: modular-scale(-1);
+$small-spacing: $base-spacing;
 $base-z-index: 0;
 
 // Colors
