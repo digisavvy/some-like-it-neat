@@ -1,9 +1,14 @@
 figure {
-  margin: 0;
+  margin: 0 auto;
 }
 
 img,
 picture {
+  height: auto;
   margin: 0;
   max-width: 100%;
+}
+
+.wp-post-image {
+  display: block;
 }

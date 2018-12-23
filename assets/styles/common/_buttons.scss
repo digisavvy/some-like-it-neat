@@ -33,3 +33,35 @@
     }
   }
 }
+
+@mixin neat-buttons($border-color: #000, $color: $base-background-color, $border-radius: 0, $button-bg: #000000 ) {
+  background: $button-bg;
+  border: solid 1px $border-color;
+  border-radius: $border-radius;
+  box-shadow: none;
+  color: contrast-switch($button-bg, $color, $button-bg);
+  font-family: $title;
+  margin: 10px 0;
+  transition: all 200ms ease-in-out;
+
+  &:focus {
+      background: $color;
+      border-radius: $border-radius;
+      color: $button-bg;
+      box-shadow: none;
+      font-family: $title;
+  }
+
+  &:hover {
+      background: $color;
+      border: solid 1px $border-color;
+      border-radius: $border-radius;
+      color: #000;
+      box-shadow: none;
+      font-family: $title;
+  }
+}
+
+[type='button'], [type='reset'], [type='submit']{
+  @include neat-buttons;
+}
