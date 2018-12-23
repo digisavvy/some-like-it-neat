@@ -6,6 +6,7 @@
   .site-main,
   #primary {
     @include section-container('full');
+    grid-column: 1 / -1;
     margin: inherit;
     padding: inherit;
   }
