@@ -26,11 +26,6 @@
 
 /* =Typography
 -------------------------------------------------------------- */
-// This theme uses modular scale to help with sensible sizing ratios.
-// We're overriding what's set in Bourbon.
-// 
-// Resources: https://www.modularscale.com/?1,3&em&1.333
-
 html {
     color: $primary-font-color;
     font-feature-settings: "kern", "liga", "clig", "calt";
@@ -57,10 +52,10 @@ h1 {
         font-size: 55px;
     }
     @include grid-media($md) {
-        font-size: 65px;
+        font-size: modular-scale(4);
     }
     @include grid-media($mdbg) {
-        font-size: 75px;
+        font-size: modular-scale(6);
     }
     color: $primary-font-color;
     font-family: $title;
@@ -70,13 +65,13 @@ h2 {
         font-size: 6vh;
     }
     @include grid-media($smbg) {
-        font-size: 30px;
+        font-size: modular-scale(2);
     }
     @include grid-media($md) {
-        font-size: 40px;
+        font-size: modular-scale(3);
     }
     @include grid-media($mdbg) {
-        font-size: 50px;
+        font-size: modular-scale(4);
     }
     font-family: $title;
 }
@@ -85,13 +80,13 @@ h3 {
         font-size: 5vh;
     }
     @include grid-media($smbg) {
-        font-size: 25px;
+        font-size: modular-scale(1);
     }
     @include grid-media($md) {
-        font-size: 30px;
+        font-size: modular-scale(1);
     }
     @include grid-media($mdbg) {
-        font-size: 35px;
+        font-size: modular-scale(2);
     }
     font-family: $title;
 }
