@@ -46,11 +46,12 @@ if ( process.env.bundle ) {
 		assets,
 		'library',
         'page-templates',
-        'page-templates/template-parts'
+		'page-templates/template-parts',
+		'vendor'
 	];
 
 	// Removes previous bundle
-	rimraf.sync( bundlePath );
+	// rimraf.sync( bundlePath );
 	
 	// Create bundle dir. 
 	if (!fs.existsSync(bundlePath)){
