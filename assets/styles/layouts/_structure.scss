@@ -12,9 +12,7 @@ html {
 
 body {
 	background-color: $base-background-color;
-	color: $primary-font-color;
 	font-family: $content;
-	line-height: 1.5em;
 	margin: 0;
 	overflow-x: hidden;
 	word-break: break-word;
@@ -61,13 +59,18 @@ main#main {
 
 	ul, ol {
 		list-style: none;
+		padding-bottom: 20px;
+        padding-top: 20px;
 		li {
+			margin-bottom: $small-spacing / 2;
 			list-style-type: square;
 			ul {
 				li {
+					margin-bottom: $small-spacing / 2;
 					list-style-type: disc;
 					ul {
 						li {
+							margin-bottom: $small-spacing / 2;
 							list-style-type: circle;
 						}
 					}
@@ -91,6 +94,11 @@ main#main {
 	@include grid-media($hg) {
 		grid-column: 9 / -1;
 		margin: 0;
+	}
+
+	ul {
+        padding: inherit;
+        padding-left: 20px;
 	}
 }
 
