@@ -1,0 +1,27 @@
+@import '../../../node_modules/bourbon/core/bourbon';
+@import '../../../node_modules/bourbon-neat/core/neat';
+@import '../common/grid-settings';
+@import '../common/variables';
+
+@include grid-media($mdbg) {
+  .headroom {
+    will-change:transform;
+    transform: .25s ease-in-out;
+  }
+
+  .headroom--pinned {
+    transform: translateY(0)
+  }
+
+  .headroom--unpinned {
+    transform: translateY(-100%);
+  }
+
+  .header--fixed {
+    position: fixed !important;
+    z-index: 10;
+    right: 0;
+    left: 0;
+    top: 0
+  }
+}
