@@ -7,14 +7,14 @@ fieldset {
 
 legend {
   font-weight: 600;
-  margin-bottom: $small-spacing / 2;
+  margin-bottom: $small-spacing;
   padding: 0;
 }
 
 label {
   display: block;
   font-weight: 600;
-  margin-bottom: $small-spacing / 2;
+  margin-bottom: $small-spacing;
 }
 
 input,
@@ -68,7 +68,7 @@ textarea {
 [type="checkbox"],
 [type="radio"] {
   display: inline;
-  margin-right: $small-spacing / 2;
+  margin-right: $small-spacing;
 }
 
 [type="file"] {
