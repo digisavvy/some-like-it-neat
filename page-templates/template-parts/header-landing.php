@@ -55,11 +55,7 @@
 
 	<?php tha_header_before(); ?>
 
-		<header id="masthead" class="site-header wrap" role="banner" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
-
 	<?php tha_header_top(); ?>
-
-		</header><!-- #masthead -->
 
 	<?php tha_header_after(); ?>
 
