@@ -31,6 +31,8 @@ html {
     font-feature-settings: "kern", "liga", "clig", "calt";
     font-kerning: normal;
     font-size: $base-font-size;
+    font-variant-ligatures: common-ligatures;
+    font-variant-numeric: proportional-nums;
     line-height: $base-line-height;
 }
 
