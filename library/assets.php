@@ -86,37 +86,19 @@ if ( ! function_exists( 'some_like_it_neat_styles' ) ) :
 		
 		if ( ! is_rtl() ) {
 
-			if ( SCRIPT_DEBUG || WP_DEBUG ) :
-				wp_register_style(
-					'some_like_it_neat-style', // handle name.
-					get_theme_file_uri( '/assets/css/style.css' ), array(), "$ctime", 'screen'
-				);
-				wp_enqueue_style( 'some_like_it_neat-style' );
-
-			else :
-				wp_register_style(
-					'some_like_it_neat-style', // handle name.
-					get_theme_file_uri( '/assets/css/style-min.css' ), array(), "$ctime", 'screen'
-				);
-				wp_enqueue_style( 'some_like_it_neat-style' );
-			endif;
+			wp_register_style(
+				'some_like_it_neat-style', // handle name.
+				get_theme_file_uri( '/assets/css/style.css' ), array(), "$ctime", 'screen'
+			);
+			wp_enqueue_style( 'some_like_it_neat-style' );
 
 		} else {
-
-			if ( SCRIPT_DEBUG || WP_DEBUG ) :
-				wp_register_style(
-					'some_like_it_neat-style', // handle name.
-					get_theme_file_uri( '/assets/css/rtl.css' ), array(), "$ctime", 'screen'
-				);
-				wp_enqueue_style( 'some_like_it_neat-style' );
-
-			else :
-				wp_register_style(
-					'some_like_it_neat-style', // handle name.
-					get_theme_file_uri( '/assets/css/rtl-min.css' ), array(), "$ctime", 'screen'
-				);
-				wp_enqueue_style( 'some_like_it_neat-style' );
-			endif;
+			
+			wp_register_style(
+				'some_like_it_neat-style', // handle name.
+				get_theme_file_uri( '/assets/css/rtl.css' ), array(), "$ctime", 'screen'
+			);
+			wp_enqueue_style( 'some_like_it_neat-style' );
 
 		}
 
