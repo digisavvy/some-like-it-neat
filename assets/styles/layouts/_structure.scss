@@ -2,7 +2,7 @@
 -------------------------------------------------------------- */
 html {
 	box-sizing: border-box;
-  }
+}
   
 *,
 *::before,
@@ -16,6 +16,10 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 	word-break: break-word;
+}
+
+body, html {
+	min-height: 100%;
 }
 
 .site-header,
