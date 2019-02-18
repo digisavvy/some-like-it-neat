@@ -9,7 +9,7 @@ const fs 				= require('fs');
 
 
 // Project specific naming. Change extension to suit your local setup
-let project = 'slintheme';
+let project = 'slin';
 let url = project+'.lndo.site';
 let themeBundle = 'release/'+project+'.zip';
 
