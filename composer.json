@@ -4,7 +4,13 @@
 	"type": "wordpress-theme",
 	"license": "GPL",
 	"require": {
-		"wpmetabox/meta-box": "4.*"
+		"wpmetabox/meta-box": "4.*",
+		"mnsami/composer-custom-directory-installer": "1.1.*"
+	},
+	"extra":{
+		"installer-paths":{
+		  "./library/vendors/wpmetabox": ["wpmetabox/meta-box"]
+		}
 	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "2.*",

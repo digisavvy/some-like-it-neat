@@ -13,7 +13,7 @@
  */
 function some_like_it_neat_crb_load() {
 
-	$autoload = TEMPLATEPATH . '/vendor/autoload.php';
+	$autoload = TEMPLATEPATH . '/library/vendors/wpmetabox/meta-box.php';
 	if ( file_exists( $autoload ) ) :
 
 		require_once( $autoload );
