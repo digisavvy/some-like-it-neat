@@ -131,5 +131,5 @@ wp-content/mu-plugins/wpengine-comm
 *.avi
 /dist
 /mix-manifest.json
-/assets/css
-/assets/js/app.js
+# /assets/css
+# /assets/js/app.js
